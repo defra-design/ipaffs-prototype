@@ -7,3 +7,5 @@ module.exports = router
 
 // Start folder specific route
 router.use('/v1', require('./views/v1/_routes'))
+
+router.use('/v2', require('./views/v2/_routes'))
