@@ -1,0 +1,86 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+    
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="confirmation-page">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-8">
+        <h1 class="govuk-panel__title">
+          Your import notification has been sent
+        </h1>
+        <div class="govuk-panel__body">
+          Your reference number<br>
+          <strong>
+            <span id="reference-number">CHEDPP.GB.2021.1015506</span>
+                <span id="cved-version-number"> - V1</span>
+          </strong>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">What happens next?</h2>
+      <p class="govuk-body">Your CHEDPP notification has been sent to the Border Control Post (BCP).</p>
+
+      <form action="/notification/vnet/protected/notifications" method="post" id="homeForm">
+        <input name="crumb" type="hidden" value="Ydm23FlnF8m6O6Bvn3Cnlpdf3GEtj0PtCyCKshnEUqa">
+        <input name="etag" type="hidden" value="&quot;000000000006F7C7&quot;">
+
+        <div>
+          <a rel="noopener noreferrer" href="/notification/vnet/protected/notifications/CHEDPP.GB.2021.1015506/certificate/pdf" class="govuk-button" id="view-certificate" target="_blank">
+            View or print certificate
+          </a>
+        </div>
+
+        <p class="govuk-body">You can raise another notification if you have more commodities to import.</p>
+
+        <div>
+          <a href="/notification/vnet/protected/notifications" class="govuk-link govuk-!-font-size-19" id="manage-notifications">
+            Return to your dashboard
+          </a>
+        </div>
+        <div>
+          <input class="link-button" type="submit" name="new-notification" value="Create a new import notification">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+{% endblock %}
