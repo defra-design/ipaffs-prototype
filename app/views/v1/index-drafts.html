@@ -31,19 +31,13 @@
 </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">
+    <h1 class="govuk-heading-xl">
         Your import notifications
         {# <span class="govuk-caption-xl">{{releaseVersion}}</span> #}
       </h1>{{releaseVersion | log }}
-      <form action="/notification/vnet/protected/notifications" method="post" id="homeForm">
-        <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
-        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
-          Create a new notification
-        </button>
-          <a class="govuk-button notification-button" id="search-to-clone" href="/notification/vnet/protected/notifications/cloning/search">Search to clone</a>
-      </form>
 
-      <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box" style="border: 5px solid #1d70b8; margin-top: 25px; margin-bottom: 30px; padding:  15px 10px; font-size: 1.1875rem;
+ 
+ <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box" style="border: 5px solid #1d70b8; margin-top: 10px; margin-bottom: 30px; padding:  15px 10px; font-size: 1.1875rem;
     line-height: 1.31579; ">
               {# <h2 class="govuk-heading-m alert-dashboard-summary-heading">My alerts</h2> #}
           <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list">
@@ -53,6 +47,16 @@
                   
           </ul>
       </div>
+      
+      <form action="/notification/vnet/protected/notifications" method="post" id="homeForm">
+        <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
+          Create a new notification
+        </button>
+          <a class="govuk-button notification-button" id="search-to-clone" href="/notification/vnet/protected/notifications/cloning/search">Search to clone</a>
+      </form>
+
+    
 
       <div id="existing-notifications">
         <form action="/notification/vnet/protected/notifications/search" method="post" id="searchAndFilterForm">
@@ -705,7 +709,7 @@
     <div class="notification-list">
         <p class="govuk-heading-s govuk-!-margin-bottom-2">
           <span id="notification-count">1524</span>
-            results
+            results &nbsp; &nbsp;<span class="govuk-body-s">  Drafts received from company your system &nbsp; <a href="#">Clear</span>
         </p>
       
           <div class="table-responsive">
@@ -2109,22 +2113,7 @@
       </div>
 
 
-            <nav class="pagination" aria-label="Pagination">
-              <ul class="pagination-list">
-                  <li class="pagination-item pagination-item-next">
-                      <a href="?page=2#existing-notifications" class="pagination-link" rel="next" id="next-page">
-                        <span class="pagination-link-title">
-                           Next page
-                          <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-                            <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                          </svg>
-                        </span>
-                        <span class="govuk-visually-hidden">:</span>
-                        <span class="pagination-link-label">2 of 2058</span>
-                      </a>
-                  </li>
-              </ul>
-            </nav>
+           
           
       </div>
     
