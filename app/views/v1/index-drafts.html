@@ -37,7 +37,7 @@
       </h1>{{releaseVersion | log }}
 
  
- <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box" style="border: 5px solid #1d70b8; margin-top: 10px; margin-bottom: 30px; padding:  15px 15px 0 15px; font-size: 1.1875rem;
+ {# <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box" style="border: 5px solid #1d70b8; margin-top: 10px; margin-bottom: 30px; padding:  15px 15px 0 15px; font-size: 1.1875rem;
     line-height: 1.31579; ">
               <h2 class="govuk-heading-m alert-dashboard-summary-heading">Transferred from company system</h2>
           <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list" style="display: block;
@@ -54,7 +54,7 @@
                   </li>
                   
           </ul>
-      </div>
+      </div> #}
       
       <form action="/notification/vnet/protected/notifications" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
@@ -72,10 +72,37 @@
           <div class="govuk-form-group search-panel">
             <input class="button search-hidden" type="submit" value="hidden-search">
             <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-third">
-                <h3 class="govuk-heading-m">Search certificates by</h3>
+              <div class="govuk-grid-column-full">
+                <h3 class="govuk-heading-l">Search certificates</h3>
               </div>
             </div>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+              <div class="govuk-grid-column-full ">
+                
+                <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    {# <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <label class="govuk-label govuk-label--s" for="certificate-number">hh</label>
+    </legend> #}
+    
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" style="appearance: none; background-color: red !important;">
+        <label class="govuk-label govuk-checkboxes__label govuk-label govuk-label--s" for="waste">
+          Transferred from your company system only
+        </label>
+      </div>
+     
+    </div>
+
+  </fieldset>
+</div>
+
+
+
+              </div>
+              </div>
       
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third ">
