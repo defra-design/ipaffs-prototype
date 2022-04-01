@@ -1,0 +1,192 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+    <a href="review-1" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+
+<div class="govuk-!-padding-top-6" style="margin-bottom: 30px;">
+    <span class="heading-tertiary">
+        <span id="reference-number">DRAFT.GB.2021.1042077</span>
+            <span> - CHEDPP</span>
+    </span>
+</div>
+
+
+
+      
+	
+      
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">File upload complete</h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">7 out of 10 rows uploaded successfully</p>
+      </div>
+    </div>
+		
+		<h1 class="govuk-heading-xl">Upload products and landings</h1><script>console.log("v9.12.1");</script>
+      
+    <h2 class="govuk-heading-l">Guidance</h2>
+      
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        To upload products and landings, you will need to read and understand the <a href="upload-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">upload guidance<span class="govuk-visually-hidden">(opens in new tab)</span></a>, and create your <a href="favourites.html" class="govuk-link" rel="noreferrer noopener" target="_blank">product favourites<span class="govuk-visually-hidden">(opens in new tab)</span></a> .
+      </strong>
+    </div>
+      
+    <h2 class="govuk-heading-l">File upload</h2>
+		
+		<div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">Upload the CSV file from your device</label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+      
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="clearData()">Clear the upload</button>
+      
+    <h2 class="govuk-heading-l">Upload results</h2>
+      
+      <p class="govuk-body">If any rows in your upload fail validation, you can:</p>
+      <ol class="govuk-list govuk-list--number">
+        <li>Correct the data in the original CSV file, clear the uploaded data then re-upload the updated CSV file, or</li>
+        <li>Make a note of the failed landings, click save and continue, then add products and landings manually or upload a new file.</li>
+      </ol>
+		
+		<table class="govuk-table" id="data-table">
+			<caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Upload results</caption>
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header">Row</th>
+					<th scope="col" class="govuk-table__header">Data</th>
+					<th scope="col" class="govuk-table__header">Result</th>
+				</tr>
+    		<tr class="govuk-table__row">
+      		<td class="govuk-table__cell">1</td>
+          <td class="govuk-table__cell">PRD047,19/07/2021,FAO27,J407,10.00</td>
+      		<td class="govuk-table__cell">
+            <strong>Product:</strong> European lobster (LBE), Frozen, Whole, 03061210<br>
+            <strong>Landing:</strong> 19/07/2021, FAO27, ABBA II (J407)<br>
+            <strong>Export weight:</strong> 10.00
+          </td>
+    		</tr>
+    		<tr class="govuk-table__row" style="color:#d4351c;">
+      		<td class="govuk-table__cell">2</td>
+          <td class="govuk-table__cell">PRD0477,19/07/2021,FAO27,BS501,20.00</td>
+      		<td class="govuk-table__cell"><strong>FAILED:</strong> Product ID does not exist</td>
+    		</tr>
+    		<tr class="govuk-table__row">
+      		<td class="govuk-table__cell">3</td>
+          <td class="govuk-table__cell">PRD047,19/07/2021,FAO27,BS16,30.00</td>
+      		<td class="govuk-table__cell">
+            <strong>Product:</strong> European lobster (LBE), Frozen, Whole, 03061210<br>
+            <strong>Landing:</strong> 19/07/2021, FAO27, CALAMARI (BS16)<br>
+            <strong>Export weight:</strong> 30.00
+          </td>
+    		</tr>
+    		<tr class="govuk-table__row">
+      		<td class="govuk-table__cell">4</td>
+          <td class="govuk-table__cell">PRD047,19/07/2021,FAO27,E146,40.00</td>
+      		<td class="govuk-table__cell">
+            <strong>Product:</strong> European lobster (LBE), Frozen, Whole, 03061210<br>
+            <strong>Landing:</strong> 19/07/2021, FAO27, DORADO (E146)<br>
+            <strong>Export weight:</strong> 40.00
+          </td>
+    		</tr>
+    		<tr class="govuk-table__row">
+      		<td class="govuk-table__cell">5</td>
+          <td class="govuk-table__cell">PRD612,19/07/2021,FAO27,E21,50.00</td>
+      		<td class="govuk-table__cell">
+            <strong>Product:</strong> Edible crab (CRE), Frozen, Whole, 03061430<br>
+            <strong>Landing:</strong> 19/07/2021, FAO27, EEL DO (E21)<br>
+            <strong>Export weight:</strong> 50.00
+          </td>
+    		</tr>
+    		<tr class="govuk-table__row" style="color:#d4351c;">
+      		<td class="govuk-table__cell">6</td>
+          <td class="govuk-table__cell">PRD612,19/17/2021,FAO27,FAITH (SC84),60.00</td>
+      		<td class="govuk-table__cell"><strong>FAILED:</strong> Date landed must be a real date</td>
+    		</tr>
+    		<tr class="govuk-table__row">
+      		<td class="govuk-table__cell">7</td>
+          <td class="govuk-table__cell">PRD612,19/07/2021,FAO27,GU64,70.00</td>
+      		<td class="govuk-table__cell">
+            <strong>Product:</strong> Edible crab (CRE), Frozen, Whole, 03061430<br>
+            <strong>Landing:</strong> 19/07/2021, FAO27, GREY DAWN (GU64)<br>
+            <strong>Export weight:</strong> 70.00
+          </td>
+    		</tr>
+    		<tr class="govuk-table__row">
+      		<td class="govuk-table__cell">8</td>
+          <td class="govuk-table__cell">PRD885,19/07/2021,FAO27,LI56,80.00</td>
+      		<td class="govuk-table__cell">
+            <strong>Product:</strong> Edible crab (CRE), Frozen, Claws only, 03061430<br>
+            <strong>Landing:</strong> 19/07/2021, FAO27, HANNA (LI56)<br>
+            <strong>Export weight:</strong> 80.00
+          </td>
+    		</tr>
+    		<tr class="govuk-table__row" style="color:#d4351c;">
+      		<td class="govuk-table__cell">9</td>
+          <td class="govuk-table__cell">PRD885,18/07/2021,FAO27,WIRON 5 (PH1100),90.00</td>
+      		<td class="govuk-table__cell"><strong>FAILED:</strong> Date landed must correspond to when the vessel was licensed</td>
+    		</tr>
+    		<tr class="govuk-table__row">
+      		<td class="govuk-table__cell">10</td>
+          <td class="govuk-table__cell">PRD885,9/07/2021,FAO27,PH1100,100.00</td>
+      		<td class="govuk-table__cell">
+            <strong>Product:</strong> Edible crab (CRE), Frozen, Claws only, 03061430<br>
+            <strong>Landing:</strong> 19/07/2021, FAO27, WIRON 5 (PH1100)<br>
+            <strong>Export weight:</strong> 100.00
+          </td>
+    		</tr>
+			</thead>
+		</table>
+		
+     <!-- Form controls -->
+			<div class="govuk-button-group">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.location = 'landings-options.html'">Cancel</button>&nbsp;
+		    <button class="govuk-button" data-module="govuk-button" onclick="window.location = 'add-products.html'">Save and continue</button>
+      </div>
+
+	
+
+
+
+
+
+          <input name="fromImporterReview" type="hidden" value="true">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-review-button" name="save-and-review-button" type="submit" value="Save and review" data-module="govuk-button">
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
