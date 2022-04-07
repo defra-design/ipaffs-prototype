@@ -15,7 +15,7 @@
 
 
 <div class="navigation-links">
-    <a href="review" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <a href="7-notification-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
   <div id="sign-out-section" class="information-banner">
     <p class="information-banner__content">
       <span>Percy Plants</span>
@@ -45,7 +45,7 @@
             There is a problem
           </h2>
           <h3 class="govuk-heading-s">
-            There are 198 errors in your file
+            There are 117 errors in your file
           </h3>
           <div class="govuk-error-summary__body">
             <ul class="govuk-list govuk-error-summary__list">
@@ -54,17 +54,22 @@
               </li>
             </ul>
             <ul class="govuk-list  govuk-list--bullet">
-              <li>The destination countries field is missing some information (60 lines)</li>
-              <li>The information in the variety field is too long (45 lines)</li>
-              <li>The quantity units field is missing some information (33 lines)</li>
-              <li>The information in the genus field is too long (24 lines)</li>
-              <li>The information in the country of origin field is not in the expected format (8 lines)</li>
-              <li>The quantity field is missing some information (8 lines)</li>
-              <li>The information in the quantity field is not in the expected format (27 lines)</li>
-              <li>The information in the quantity field is too long (42 lines)</li>
-              <li>The information in the number of packages field is not in the expected format (12 lines)</li>
+              <li class="govuk-!-margin-bottom-3"><strong>The Genus and species name is not recognised (61 lines)</strong>
+              <br>Affected lines: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
+              14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
+              16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17</li>
+              <li class="govuk-!-margin-bottom-3"><strong>The package types is not recognised (23 lines)</strong>
+              <br>Affected lines: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
+              14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
+              16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17</li>
+              <li class="govuk-!-margin-bottom-3"><strong>The Quantity type is missing (33 lines)</strong>
+              <br>Affected lines: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
+              14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
+              16, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+              </li>
+             
             </ul>
-            <details class="govuk-details" data-module="govuk-details">
+            {# <details class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
                   Further details of the errors
@@ -72,57 +77,32 @@
               </summary>
               <div class="govuk-details__text">
                 <ul class="govuk-list govuk-error-summary__list">
-                  <li>Line 2: Add at least one destination country</li>
-                  <li>Line 4: Add the quantity units</li>
-                  <li>Line 5: The information in the genus field is too long. It should be 50 characters or less</li>
-                  <li>Line 5: Add the quantity units</li>
-                  <li>Line 8: The information in the potato type field is not in the expected format. Make sure you have used either Ware or Seed.</li>
-                  <li>Line 9: The information in the potato type field is not in the expected format. Make sure you have used either Ware or Seed.</li>
-                  <li>Line 15: The information in the quantity field is not in the expected format</li>
-                  <li>Line 16: The information in the number of packages field is not in the expected format</li>
-                  <li>Line 29: Add at least one destination country</li>
-                  <li>Line 29: The information in the number of packages field is not in the expected format</li>
-                  <li>Line 32: Add at least one destination country</li>
-                  <li>Line 34: Add the quantity units</li>
-                  <li>Line 35: The information in the genus field is too long. It should be 50 characters or less</li>
-                  <li>Line 35: Add the quantity units</li>
-                  <li>Line 48: The information in the potato type field is not in the expected format. Make sure you have used either Ware or Seed.</li>
-                  <li>Line 49: The information in the potato type field is not in the expected format. Make sure you have used either Ware or Seed.</li>
-                  <li>Line 55: The information in the quantity field is not in the expected format</li>
-                  <li>Line 16: The information in the number of packages field is not in the expected format</li>
-                  <li>Line 59: Add at least one destination country</li>
-                  <li>Line 59: The information in the number of packages field is not in the expected format</li>
-                  <li>Line 6: Add at least one destination country</li>
-                  <li>Line 64: Add the quantity units</li>
-                  <li>Line 65: The information in the genus field is too long. It should be 50 characters or less</li>
-                  <li>Line 65: Add the quantity units</li>
-                  <li>Line 69: The information in the potato type field is not in the expected format. Make sure you have used either Ware or Seed.</li>
-                  <li>Line 75: The information in the quantity field is not in the expected format</li>
-                  <li>Line 76: The information in the number of packages field is not in the expected format</li>
-                  <li>Line 89: Add at least one destination country</li>
-                  <li>Line 89: The information in the number of packages field is not in the expected format</li>
+                  <li>The Genus and species name is not recognised. <br>Affected lines: 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17</li>
+                 
+                 
                 </ul>
               </div>
-            </details>
+            </details> #}
           </div>
 
         </div>
+         </div>
+          </div>
+
+         <div class="govuk-grid-row">
+         <div class="govuk-grid-column-three-quarters">
           <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Upload a CSV</h1>
       <form action="6-about" id="consignmentCountries" method="post">
 
           <p class="govuk-body">
-            <!--Use our <a href="/public/images/plant-product-commodity-template.csv" class="govuk-link govuk-link--no-visited-state" title="CSV template">csv template</a> to upload details for multiple products at the same time.-->
-          </p>
-          <!--<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-9"> <li>The file must be </li> <li>The file can't contain these</li> <li>The file can't be bigger than this</li> </ul>-->
-          <p class="govuk-body">
+          You may want to:</p>
+          <ul  class="govuk-list  govuk-list--bullet">
+<li> <a href="csv_template.csv" class="govuk-link govuk-link--no-visited-state" title="CSV template">download our notification CSV template (45kb)</a></li>
+<li><a href="guidance" class="govuk-link govuk-link--no-visited-state" >get help uploading commodity details using CSV spreadsheet</a></li>
+          </ul>
 
-            Download and fill in the
-            <a href="/public/images/APHA_phytosanitary_certificate_csv_template.csv" class="govuk-link govuk-link--no-visited-state" title="CSV template">csv template</a>. There are instructions in the template to show you what you need to include.
-
-            <!--The csv template shows you what details you will need to include.-->
-          </p>
-          <p class="govuk-body govuk-!-margin-bottom-6">
+          <p class="govuk-body govuk-!-margin-bottom-6  govuk-!-margin-top-6">
             <!--Find out more about <a href="#" class="govuk-link govuk-link--no-visited-state" title="Bulk upload specification document">uploading a csv file</a>.-->
             Open the csv file in Excel or whatever you use to edit spreadsheets. When you have finished, save the file and select Comma Separated Values (.csv) as the file format.
           </p>
