@@ -1,0 +1,1487 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+
+<div class="navigation-links">
+    <a href="7-notification-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+        <span id="reference-number">DRAFT.GB.2022.TEST</span>
+            <span> - CHEDPP</span>
+    </span>
+</div>
+<main class="govuk-main-wrapper commodity-details-bulk-chedpp-page" id="main-content">
+  <div class="govuk-grid-row" id="commodity-details-page">
+    <div class="govuk-grid-column-full">
+            <span class="govuk-caption-xl">Description of the goods</span>
+        <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
+
+      <form method="POST" action="9-additional-details">
+        <input class="js-hidden" type="submit" value="Keyboard submit">
+        <input name="crumb" type="hidden" value="IbS1nua9N2mVk6X3tBiwxs5VxpiAvUJoOVx9YyJVY-u">
+        <input name="etag" type="hidden" value="&quot;0000000002C9ACD7&quot;">
+        <input name="commodityDetailsPage" type="hidden" value="1">
+
+            <button type="submit" class="govuk-button govuk-!-display-block" value="add_commodity" name="add_commodity" id="add-commodity">Add commodity</button>
+
+          <p id="commodity-details-lines-remaining" class="commodity-details-lines-remaining govuk-body-l govuk-!-display-inline-block">
+              <strong class="bold">34</strong> Commodity lines remaining
+          </p>
+
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">Commodities</h2>
+            
+          </div>
+
+          <div class="govuk-!-margin-bottom-9 commodity-details-commodity-wrapper">
+            <h2 class="govuk-heading-m">Other</h2>
+            <h2 class="govuk-heading-m">0602109090</h2>
+            <table class="govuk-table commodity-details-table">
+              <caption class="govuk-visually-hidden">Commodity details</caption>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="1_1424389_547efe22-da20-4455-9b6c-d0434baaceda" id="remove-species-card-547efe22-da20-4455-9b6c-d0434baaceda">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Ceratophyllum submersum</td>
+                    <td class="commodity-variation-header govuk-table__cell">CEYSU</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="547efe22-da20-4455-9b6c-d0434baaceda.num-packages" name="547efe22-da20-4455-9b6c-d0434baaceda.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="547efe22-da20-4455-9b6c-d0434baaceda.package-type" name="547efe22-da20-4455-9b6c-d0434baaceda.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="547efe22-da20-4455-9b6c-d0434baaceda.quantity" name="547efe22-da20-4455-9b6c-d0434baaceda.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="547efe22-da20-4455-9b6c-d0434baaceda.quantity-type" name="547efe22-da20-4455-9b6c-d0434baaceda.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+                      <th scope="col" class="govuk-table__header">Finished or propagating</th>
+                    
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="547efe22-da20-4455-9b6c-d0434baaceda.net-weight" name="547efe22-da20-4455-9b6c-d0434baaceda.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="547efe22-da20-4455-9b6c-d0434baaceda.commodity-group" value="Plants for Planting">
+                      <td class="govuk-table__cell">
+                          <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                          
+                          
+                          
+                            
+                          
+                            <select class="govuk-select govuk-!-width-full" id="547efe22-da20-4455-9b6c-d0434baaceda.finished-or-propagated" name="547efe22-da20-4455-9b6c-d0434baaceda.finished-or-propagated" aria-label="Select finished or propagating">
+                                <option value="">Select finished or propagating</option>
+                                <option value="Finished">Finished</option>
+                                <option value="Propagated">Propagating</option>
+                            </select>
+                          </div>
+                      </td>
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="547efe22-da20-4455-9b6c-d0434baaceda.container" name="547efe22-da20-4455-9b6c-d0434baaceda.container" aria-label="Has container">
+                          <option value="1424389">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="14_1372490_e5d0af01-7a08-4b82-b847-c21a3359f3ee" id="remove-species-card-e5d0af01-7a08-4b82-b847-c21a3359f3ee">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Aponogeton distachyos</td>
+                    <td class="commodity-variation-header govuk-table__cell">APGDI</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="e5d0af01-7a08-4b82-b847-c21a3359f3ee.num-packages" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="e5d0af01-7a08-4b82-b847-c21a3359f3ee.package-type" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="e5d0af01-7a08-4b82-b847-c21a3359f3ee.quantity" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="e5d0af01-7a08-4b82-b847-c21a3359f3ee.quantity-type" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+                      <th scope="col" class="govuk-table__header">Finished or propagating</th>
+                    
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="e5d0af01-7a08-4b82-b847-c21a3359f3ee.net-weight" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.commodity-group" value="Plants for Planting">
+                      <td class="govuk-table__cell">
+                          <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                          
+                          
+                          
+                            
+                          
+                            <select class="govuk-select govuk-!-width-full" id="e5d0af01-7a08-4b82-b847-c21a3359f3ee.finished-or-propagated" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.finished-or-propagated" aria-label="Select finished or propagating">
+                                <option value="">Select finished or propagating</option>
+                                <option value="Finished">Finished</option>
+                                <option value="Propagated">Propagating</option>
+                            </select>
+                          </div>
+                      </td>
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="e5d0af01-7a08-4b82-b847-c21a3359f3ee.container" name="e5d0af01-7a08-4b82-b847-c21a3359f3ee.container" aria-label="Has container">
+                          <option value="1372490">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="15_1360530_ea62f26a-47b1-4360-8a1b-bc76c36d7ea2" id="remove-species-card-ea62f26a-47b1-4360-8a1b-bc76c36d7ea2">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Aponogeton sp.</td>
+                    <td class="commodity-variation-header govuk-table__cell">APGSS</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.num-packages" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.package-type" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.quantity" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.quantity-type" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+                      <th scope="col" class="govuk-table__header">Finished or propagating</th>
+                    
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.net-weight" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.commodity-group" value="Plants for Planting">
+                      <td class="govuk-table__cell">
+                          <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                          
+                          
+                          
+                            
+                          
+                            <select class="govuk-select govuk-!-width-full" id="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.finished-or-propagated" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.finished-or-propagated" aria-label="Select finished or propagating">
+                                <option value="">Select finished or propagating</option>
+                                <option value="Finished">Finished</option>
+                                <option value="Propagated">Propagating</option>
+                            </select>
+                          </div>
+                      </td>
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.container" name="ea62f26a-47b1-4360-8a1b-bc76c36d7ea2.container" aria-label="Has container">
+                          <option value="1360530">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="16_1345273_6485e117-c504-416b-81dd-74bd15f8f0cc" id="remove-species-card-6485e117-c504-416b-81dd-74bd15f8f0cc">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Aponogeton troupinii</td>
+                    <td class="commodity-variation-header govuk-table__cell">APGTR</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="6485e117-c504-416b-81dd-74bd15f8f0cc.num-packages" name="6485e117-c504-416b-81dd-74bd15f8f0cc.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="6485e117-c504-416b-81dd-74bd15f8f0cc.package-type" name="6485e117-c504-416b-81dd-74bd15f8f0cc.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="6485e117-c504-416b-81dd-74bd15f8f0cc.quantity" name="6485e117-c504-416b-81dd-74bd15f8f0cc.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="6485e117-c504-416b-81dd-74bd15f8f0cc.quantity-type" name="6485e117-c504-416b-81dd-74bd15f8f0cc.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+                      <th scope="col" class="govuk-table__header">Finished or propagating</th>
+                    
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="6485e117-c504-416b-81dd-74bd15f8f0cc.net-weight" name="6485e117-c504-416b-81dd-74bd15f8f0cc.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="6485e117-c504-416b-81dd-74bd15f8f0cc.commodity-group" value="Plants for Planting">
+                      <td class="govuk-table__cell">
+                          <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                          
+                          
+                          
+                            
+                          
+                            <select class="govuk-select govuk-!-width-full" id="6485e117-c504-416b-81dd-74bd15f8f0cc.finished-or-propagated" name="6485e117-c504-416b-81dd-74bd15f8f0cc.finished-or-propagated" aria-label="Select finished or propagating">
+                                <option value="">Select finished or propagating</option>
+                                <option value="Finished">Finished</option>
+                                <option value="Propagated">Propagating</option>
+                            </select>
+                          </div>
+                      </td>
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="6485e117-c504-416b-81dd-74bd15f8f0cc.container" name="6485e117-c504-416b-81dd-74bd15f8f0cc.container" aria-label="Has container">
+                          <option value="1345273">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="govuk-table__footer">
+                  <tr class="govuk-table__row">
+                    <th colspan="2" scope="row" class="govuk-table__header border-bottom-none govuk-!-padding-top-4">Subtotal Net weight (kg)</th>
+                    <td colspan="3" class="govuk-table__cell border-bottom-none govuk-!-padding-top-4">22</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th colspan="2" scope="row" class="govuk-table__header border-bottom-none">Subtotal Number of packages</th>
+                    <td colspan="3" class="govuk-table__cell border-bottom-none">200</td>
+                  </tr>
+                </tfoot>
+              </table>
+
+                  <button class="link-button" type="submit" name="add_species" value="0602109090">Add Genus (and Species)</button>
+
+            </div>
+          <div class="govuk-!-margin-bottom-9 commodity-details-commodity-wrapper">
+            <h2 class="govuk-heading-m">Other</h2>
+            <h2 class="govuk-heading-m">0603197090</h2>
+            <table class="govuk-table commodity-details-table">
+              <caption class="govuk-visually-hidden">Commodity details</caption>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="2_1405207_93e95609-5a80-470e-9a24-70995f16e243" id="remove-species-card-93e95609-5a80-470e-9a24-70995f16e243">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Nymphaea alba</td>
+                    <td class="commodity-variation-header govuk-table__cell">NYMAL</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="93e95609-5a80-470e-9a24-70995f16e243.num-packages" name="93e95609-5a80-470e-9a24-70995f16e243.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="93e95609-5a80-470e-9a24-70995f16e243.package-type" name="93e95609-5a80-470e-9a24-70995f16e243.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="93e95609-5a80-470e-9a24-70995f16e243.quantity" name="93e95609-5a80-470e-9a24-70995f16e243.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="93e95609-5a80-470e-9a24-70995f16e243.quantity-type" name="93e95609-5a80-470e-9a24-70995f16e243.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="93e95609-5a80-470e-9a24-70995f16e243.net-weight" name="93e95609-5a80-470e-9a24-70995f16e243.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="93e95609-5a80-470e-9a24-70995f16e243.commodity-group" value="Cut Flowers and flower buds">
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="93e95609-5a80-470e-9a24-70995f16e243.container" name="93e95609-5a80-470e-9a24-70995f16e243.container" aria-label="Has container">
+                          <option value="1405207">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="5_1322964_cb554388-2721-447b-921f-67032ea693d2" id="remove-species-card-cb554388-2721-447b-921f-67032ea693d2">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Nymphaea elegans</td>
+                    <td class="commodity-variation-header govuk-table__cell">NYMEL</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="cb554388-2721-447b-921f-67032ea693d2.num-packages" name="cb554388-2721-447b-921f-67032ea693d2.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="cb554388-2721-447b-921f-67032ea693d2.package-type" name="cb554388-2721-447b-921f-67032ea693d2.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="cb554388-2721-447b-921f-67032ea693d2.quantity" name="cb554388-2721-447b-921f-67032ea693d2.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="cb554388-2721-447b-921f-67032ea693d2.quantity-type" name="cb554388-2721-447b-921f-67032ea693d2.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="cb554388-2721-447b-921f-67032ea693d2.net-weight" name="cb554388-2721-447b-921f-67032ea693d2.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="cb554388-2721-447b-921f-67032ea693d2.commodity-group" value="Cut Flowers and flower buds">
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="cb554388-2721-447b-921f-67032ea693d2.container" name="cb554388-2721-447b-921f-67032ea693d2.container" aria-label="Has container">
+                          <option value="1322964">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="6_1421037_9211dd45-15a0-4119-b9e4-b1849e260875" id="remove-species-card-9211dd45-15a0-4119-b9e4-b1849e260875">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Nymphaea lotus</td>
+                    <td class="commodity-variation-header govuk-table__cell">NYMLO</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="9211dd45-15a0-4119-b9e4-b1849e260875.num-packages" name="9211dd45-15a0-4119-b9e4-b1849e260875.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="9211dd45-15a0-4119-b9e4-b1849e260875.package-type" name="9211dd45-15a0-4119-b9e4-b1849e260875.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="9211dd45-15a0-4119-b9e4-b1849e260875.quantity" name="9211dd45-15a0-4119-b9e4-b1849e260875.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="9211dd45-15a0-4119-b9e4-b1849e260875.quantity-type" name="9211dd45-15a0-4119-b9e4-b1849e260875.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="9211dd45-15a0-4119-b9e4-b1849e260875.net-weight" name="9211dd45-15a0-4119-b9e4-b1849e260875.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="9211dd45-15a0-4119-b9e4-b1849e260875.commodity-group" value="Cut Flowers and flower buds">
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="9211dd45-15a0-4119-b9e4-b1849e260875.container" name="9211dd45-15a0-4119-b9e4-b1849e260875.container" aria-label="Has container">
+                          <option value="1421037">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="7_1341833_f8edd64d-cc39-4172-a4c4-84713e6b2282" id="remove-species-card-f8edd64d-cc39-4172-a4c4-84713e6b2282">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Nymphaea mexicana</td>
+                    <td class="commodity-variation-header govuk-table__cell">NYMME</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="f8edd64d-cc39-4172-a4c4-84713e6b2282.num-packages" name="f8edd64d-cc39-4172-a4c4-84713e6b2282.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="f8edd64d-cc39-4172-a4c4-84713e6b2282.package-type" name="f8edd64d-cc39-4172-a4c4-84713e6b2282.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="f8edd64d-cc39-4172-a4c4-84713e6b2282.quantity" name="f8edd64d-cc39-4172-a4c4-84713e6b2282.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="f8edd64d-cc39-4172-a4c4-84713e6b2282.quantity-type" name="f8edd64d-cc39-4172-a4c4-84713e6b2282.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="f8edd64d-cc39-4172-a4c4-84713e6b2282.net-weight" name="f8edd64d-cc39-4172-a4c4-84713e6b2282.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="f8edd64d-cc39-4172-a4c4-84713e6b2282.commodity-group" value="Cut Flowers and flower buds">
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="f8edd64d-cc39-4172-a4c4-84713e6b2282.container" name="f8edd64d-cc39-4172-a4c4-84713e6b2282.container" aria-label="Has container">
+                          <option value="1341833">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="8_1374607_c56b799b-6808-4466-8a10-36d91276bc62" id="remove-species-card-c56b799b-6808-4466-8a10-36d91276bc62">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Nymphaea odorata</td>
+                    <td class="commodity-variation-header govuk-table__cell">NYMOR</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="c56b799b-6808-4466-8a10-36d91276bc62.num-packages" name="c56b799b-6808-4466-8a10-36d91276bc62.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="c56b799b-6808-4466-8a10-36d91276bc62.package-type" name="c56b799b-6808-4466-8a10-36d91276bc62.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="c56b799b-6808-4466-8a10-36d91276bc62.quantity" name="c56b799b-6808-4466-8a10-36d91276bc62.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="c56b799b-6808-4466-8a10-36d91276bc62.quantity-type" name="c56b799b-6808-4466-8a10-36d91276bc62.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="c56b799b-6808-4466-8a10-36d91276bc62.net-weight" name="c56b799b-6808-4466-8a10-36d91276bc62.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="c56b799b-6808-4466-8a10-36d91276bc62.commodity-group" value="Cut Flowers and flower buds">
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="c56b799b-6808-4466-8a10-36d91276bc62.container" name="c56b799b-6808-4466-8a10-36d91276bc62.container" aria-label="Has container">
+                          <option value="1374607">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header species">Genus, Species</th>
+                      <th scope="col" class="govuk-table__header eppo">EPPO code</th>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                      <td class="govuk-table__header"></td>
+                        <td class="govuk-table__cell text-align-right">
+                          <button class="link-button" type="submit" name="remove_species" value="9_1402206_967ac2c7-f79b-42c8-b56c-561e4c9509d4" id="remove-species-card-967ac2c7-f79b-42c8-b56c-561e4c9509d4">Remove</button>
+                        </td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <td class="commodity-variation-header govuk-table__cell">Nymphaea amazonum</td>
+                    <td class="commodity-variation-header govuk-table__cell">NYMAZ</td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                    <td class="commodity-variation-header govuk-table__cell"></td>
+                  </tr>
+                  <tr class="govuk-table__row ">
+                    <th scope="col" class="govuk-table__header">Number of packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <th scope="col" class="govuk-table__header">Quantity</th>
+                    <th scope="col" class="govuk-table__header">Quantity type</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="967ac2c7-f79b-42c8-b56c-561e4c9509d4.num-packages" name="967ac2c7-f79b-42c8-b56c-561e4c9509d4.num-packages" type="text" value="50" aria-label="Enter number of packages">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="967ac2c7-f79b-42c8-b56c-561e4c9509d4.package-type" name="967ac2c7-f79b-42c8-b56c-561e4c9509d4.package-type" aria-label="Select package type">
+                          <option value="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          <option>Bottle, flask and other glass packages</option>
+                          <option>Box</option>
+                          <option>Bulk</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option selected="">Container</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>Dunnage</option>
+                          <option>Jar</option>
+                          <option>Logs</option>
+                          <option>Lug</option>
+                          <option>Natural wood box with sift proof walls</option>
+                          <option>Natural wood ordinary box</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Personal luggage</option>
+                          <option>Plastic film</option>
+                          <option>Polystyrene Box</option>
+                          <option>Punnet</option>
+                          <option>Rednet</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                          <option>Wood bundle</option>
+                          <option>Wood crate</option>
+                          <option>Wood package display</option>
+                          <option>Wooden barrel</option>
+                          <option>Wooden barrel with removable head</option>
+                          <option>Wooden case with pallet base</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell border-bottom-none">
+                      <div class="">
+                        <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                        
+                        
+                        
+                          <input class="govuk-input  " id="967ac2c7-f79b-42c8-b56c-561e4c9509d4.quantity" name="967ac2c7-f79b-42c8-b56c-561e4c9509d4.quantity" type="text" value="12" aria-label="Enter quantity">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-tabgit border-bottom-none le__cell">
+                      <div class=" ">
+                        <select class="govuk-select govuk-!-width-full" id="967ac2c7-f79b-42c8-b56c-561e4c9509d4.quantity-type" name="967ac2c7-f79b-42c8-b56c-561e4c9509d4.quantity-type" aria-label="Enter quantity type">
+                          <option value="">Select quantity type</option>
+                          <option selected="">Stems</option>
+                          <option>Bulbs</option>
+                          <option>Corms and rhizomes</option>
+                          <option>Plants in tissue culture</option>
+                          <option>Seeds</option>
+                          <option>Kilograms</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header weight">Net weight</th>
+
+                    <th scope="col" colspan="10" class="govuk-table__header">Controlled Atmosphere Container</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                      
+                      
+                      
+                        <input class="govuk-input  " id="967ac2c7-f79b-42c8-b56c-561e4c9509d4.net-weight" name="967ac2c7-f79b-42c8-b56c-561e4c9509d4.net-weight" type="text" value="5.5" aria-label="Enter net weight">
+                      </div>
+                    </td>
+
+                      <input type="hidden" name="967ac2c7-f79b-42c8-b56c-561e4c9509d4.commodity-group" value="Cut Flowers and flower buds">
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select govuk-input--width-4" id="967ac2c7-f79b-42c8-b56c-561e4c9509d4.container" name="967ac2c7-f79b-42c8-b56c-561e4c9509d4.container" aria-label="Has container">
+                          <option value="1402206">Yes</option>
+                          <option value="" selected="">No</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="govuk-table__footer">
+                  <tr class="govuk-table__row">
+                    <th colspan="2" scope="row" class="govuk-table__header border-bottom-none govuk-!-padding-top-4">Subtotal Net weight (kg)</th>
+                    <td colspan="3" class="govuk-table__cell border-bottom-none govuk-!-padding-top-4">33</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th colspan="2" scope="row" class="govuk-table__header border-bottom-none">Subtotal Number of packages</th>
+                    <td colspan="3" class="govuk-table__cell border-bottom-none">300</td>
+                  </tr>
+                </tfoot>
+              </table>
+
+                  <button class="link-button" type="submit" name="add_species" value="0603197090">Add Genus (and Species)</button>
+
+            </div>
+
+          <div>
+            <h2 class="govuk-heading-m">Total</h2>
+            <div class="table-responsive">
+              <table class="govuk-table">
+                <caption class="govuk-visually-hidden">Commodity weight</caption>
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Net weight (kg)</th>
+                  <td class="govuk-table__cell">259</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Number of packages</th>
+                  <td class="govuk-table__cell">2300</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+              <nav class="pagination" aria-label="Pagination">
+                <ul class="pagination-list">
+                    <li class="pagination-item pagination-item-next">
+                      <button type="submit" class="link-button pagination-button-next" name="next-page" value="2" id="next-page">
+                        <span class="pagination-link-title">
+                           Next page
+                          <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                            <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                          </svg>
+                        </span>
+                        <span class="govuk-visually-hidden">:</span>
+                        <span class="pagination-link-label">2 of 2</span>
+                      </button>
+                    </li>
+                </ul>
+              </nav>
+            <input class="govuk-button" type="submit" value="Update total" name="update-total" id="update-total">
+          </div>
+
+            <input name="fromImporterReview" type="hidden" value="true">
+              <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
