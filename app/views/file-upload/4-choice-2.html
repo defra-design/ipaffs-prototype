@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+    <a href="index" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-full">
+          <span class="govuk-caption-xl">About the consignment</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">How would you like to input your information?</h1>
+      <form action="7-notification-hub" method="post" id="homeForm">
+        <input name="crumb" type="hidden" value="GI063Clvj4M4l7Qu1cuEA7bZfiUJFQoxCZz1FBwBknK">
+
+        <div class="govuk-form-group  ">
+          <fieldset class="govuk-fieldset">
+
+
+
+
+            <div class="govuk-radios ">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CVEDA">
+                  <label class="govuk-label govuk-radios__label " for="cert-type">
+                      add them using this online form
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="CVEDP">
+                  <label class="govuk-label govuk-radios__label " for="cert-type-2">
+                      upload a CSV spreadsheet
+                  </label>
+                </div>
+               
+            </div>
+          </fieldset>
+        </div>
+
+        <input class="govuk-button" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+      </form>
+    </div>
+  </div>
+
+
+{% endblock %}
