@@ -6,6 +6,12 @@
 
 {% block content %}
 
+
+
+
+
+
+
 <div class="govuk-phase-banner" style="margin-top: -46px;">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
@@ -57,7 +63,7 @@
          
         </span>
 
-         <form action="8-2i-manual-details-f-p" method="post" id="homeForm">
+         <form action="8-2-1-manual-details-f-p" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="GI063Clvj4M4l7Qu1cuEA7bZfiUJFQoxCZz1FBwBknK">
 
         <div class="govuk-form-group  ">
@@ -71,6 +77,11 @@
             <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">
+              {# <input type="checkbox" onclick="for(c in document.getElementsByName('rfile')) document.getElementsByName('rfile').item(c).checked = this.checked">
+
+<input type="checkbox" name="rfile" value="/cgi-bin/">
+<input type="checkbox" name="rfile" value="misc">
+<input type="checkbox" name="rfile" value="time"> #}
                 <noscript>
                   <button type="submit" class="link-button" name="disabled-js-checkboxes-button"
                           value="select-all" id="disabled-js-checkboxes-button">
@@ -78,9 +89,7 @@
                   </button>
                 </noscript>
                 <div class="govuk-checkboxes__item" id="hidden-select-all-checkbox-container">
-                    {# <input class="govuk-checkboxes__input" id="select-all-checkbox" data-target="hidden-select-all-checkbox" name="" type="checkbox" value="" aria-controls="select-all-checkbox-conditional">
-                    #}
-                      <input class="govuk-checkboxes__input" id="select-all-checkbox" data-target="hidden-select-all-checkbox" name="" type="checkbox" value="" aria-controls="select-all-checkbox-conditional" onclick="for(c in document.getElementsByName('rcheck')) document.getElementsByName('rcheck').item(c).checked = this.checked">
+                    <input class="govuk-checkboxes__input" id="select-all-checkbox" data-target="hidden-select-all-checkbox" name="" type="checkbox" value="" aria-controls="select-all-checkbox-conditional" onclick="for(c in document.getElementsByName('rcheck')) document.getElementsByName('rcheck').item(c).checked = this.checked" >
                     <label class="govuk-label govuk-checkboxes__label" for="select-all-checkbox">
                         <span class="govuk-visually-hidden">Select all</span>
                     </label>
@@ -94,10 +103,10 @@
                 <th scope="col" class="govuk-table__header govuk-!-padding-left-1  govuk-!-width-one-third">Finished or propagating</th>
 
             </tr>
-              <tr class="commodity-summary__row table__row--border-top">
+               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-1</span>
                       </label>
@@ -109,14 +118,14 @@
                 </td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-2</span>
                       </label>
@@ -129,14 +138,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-3</span>
                       </label>
@@ -150,6 +159,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                  <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -157,7 +167,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-4</span>
                       </label>
@@ -171,14 +181,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-5</span>
                       </label>
@@ -192,14 +202,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-6</span>
                       </label>
@@ -213,6 +223,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -220,7 +231,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-7</span>
                       </label>
@@ -234,14 +245,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-8</span>
                       </label>
@@ -255,14 +266,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-9</span>
                       </label>
@@ -276,6 +287,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                  <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -283,7 +295,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-10</span>
                       </label>
@@ -297,7 +309,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -305,7 +317,7 @@
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-1</span>
                       </label>
@@ -317,14 +329,14 @@
                 </td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-2</span>
                       </label>
@@ -337,14 +349,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-3</span>
                       </label>
@@ -358,6 +370,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                  <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -365,7 +378,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-4</span>
                       </label>
@@ -379,14 +392,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                     <strong>Finished</strong> 
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-5</span>
                       </label>
@@ -400,14 +413,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-6</span>
                       </label>
@@ -421,6 +434,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                  <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -428,7 +442,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-7</span>
                       </label>
@@ -442,14 +456,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-8</span>
                       </label>
@@ -463,14 +477,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-9</span>
                       </label>
@@ -484,6 +498,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -491,7 +506,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-10</span>
                       </label>
@@ -505,7 +520,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -513,7 +528,7 @@
                <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-1</span>
                       </label>
@@ -525,14 +540,14 @@
                 </td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-2</span>
                       </label>
@@ -545,14 +560,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-3</span>
                       </label>
@@ -566,6 +581,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -573,7 +589,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-4</span>
                       </label>
@@ -587,14 +603,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-5</span>
                       </label>
@@ -608,14 +624,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-6</span>
                       </label>
@@ -629,6 +645,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -636,7 +653,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-7</span>
                       </label>
@@ -650,14 +667,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                    <strong>Finished</strong>  
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-8</span>
                       </label>
@@ -671,14 +688,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-9</span>
                       </label>
@@ -692,6 +709,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -699,7 +717,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-10</span>
                       </label>
@@ -713,7 +731,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                    <strong>Finished</strong>  
                   </td>
 
               </tr>
@@ -721,7 +739,7 @@
                <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-1</span>
                       </label>
@@ -733,14 +751,14 @@
                 </td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                     <strong>Finished</strong> 
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-2</span>
                       </label>
@@ -753,14 +771,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-3</span>
                       </label>
@@ -774,6 +792,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -781,7 +800,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-4</span>
                       </label>
@@ -795,14 +814,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-5</span>
                       </label>
@@ -816,14 +835,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-6</span>
                       </label>
@@ -837,6 +856,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                  <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -844,7 +864,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-7</span>
                       </label>
@@ -858,14 +878,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                    <strong>Finished</strong>  
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-8</span>
                       </label>
@@ -879,14 +899,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-9</span>
                       </label>
@@ -900,6 +920,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -907,7 +928,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-10</span>
                       </label>
@@ -921,7 +942,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -929,7 +950,7 @@
                <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional"  checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-1</span>
                       </label>
@@ -941,14 +962,14 @@
                 </td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                    <strong>Finished</strong>  
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-2</span>
                       </label>
@@ -961,14 +982,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-3</span>
                       </label>
@@ -982,6 +1003,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                  <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -989,7 +1011,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-4</span>
                       </label>
@@ -1003,14 +1025,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-5</span>
                       </label>
@@ -1024,14 +1046,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-6</span>
                       </label>
@@ -1045,6 +1067,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                 <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -1052,7 +1075,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-7</span>
                       </label>
@@ -1066,14 +1089,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                      <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" name="rcheck" type="checkbox" value="ff28ab78-3e0e-4892-987c-9b0900f14d47" aria-controls="checkbox-2-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
                           <span class="govuk-visually-hidden">commodity-8</span>
                       </label>
@@ -1087,14 +1110,14 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-1">12 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-1">
-                    
+                    <strong>Finished</strong>
                   </td>
 
               </tr>
               <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" name="rcheck" type="checkbox" value="419c63e2-a8a0-4451-a53f-df1f766f44ed" aria-controls="checkbox-3-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
                           <span class="govuk-visually-hidden">commodity-9</span>
                       </label>
@@ -1108,6 +1131,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-2">30 x trays</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-2">
+                  <strong>Finished</strong>
                   </td>
 
               </tr>
@@ -1115,7 +1139,7 @@
                 <tr class="commodity-summary__row table__row--border-top">
                 <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
                   <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
-                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" name="rcheck" type="checkbox" value="70964714-4997-41ca-9e38-029c319c8ed5" aria-controls="checkbox-1-conditional" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
                           <span class="govuk-visually-hidden">commodity-10</span>
                       </label>
@@ -1129,7 +1153,7 @@
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="documentary-check-row-0">14 x container</td>
 
                   <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-1" id="identity-check-row-0">
-                      
+                    <strong>Finished</strong>  
                   </td>
 
               </tr>
@@ -1159,7 +1183,8 @@
                     </li>
                 </ul>
               </nav>
-        <div style="border: 5px solid #f3f2f1; padding:  20px;">
+       
+         <div style="border: 5px solid #f3f2f1; padding:  20px;">
         <h2 class="govuk-heading-m">Apply to selected commodity lines</h2>
          <div class="govuk-form-group  ">
           <fieldset class="govuk-fieldset">
@@ -1194,9 +1219,9 @@
       </div>
       
     </div>
-     {# <div class="govuk-grid-column-two-thirds govuk-!-padding-top-5 govuk-!-padding-left-0">
+     <div class="govuk-grid-column-two-thirds govuk-!-padding-top-5 govuk-!-padding-left-0">
    <input class="govuk-button govuk-!-marking-right-1 govuk-!-margin-bottom-4" id="button-submit-checks" name="record-and-select-more" type="submit" data-module="govuk-button" value="Save and continue">
-    </div> #}
+    </div>
   </main>
 
 {% endblock %}

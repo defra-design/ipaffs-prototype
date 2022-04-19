@@ -40,6 +40,13 @@
  <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="consignment-purpose-page">
     <div class="govuk-grid-column-two-thirds">
+    <div class="app-alert app-alert--info" style="background: #E7F5F9;
+    border-color: #0090C1; padding: 20px; border-style: solid;
+    border-width: 0 0 0 10px;
+    margin-bottom: 20px; display: block;">
+      <p class="govuk-body">File has been uploaded successfully</p>
+      
+    </div>
    
           <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">CSV missing some details</h1>
@@ -53,25 +60,26 @@
               
             </legend>
 <div>
-<div class="app-alert app-alert--info" style="background: #E7F5F9;
-    border-color: #0090C1; padding: 20px; border-style: solid;
-    border-width: 0 0 0 10px;
-    margin-bottom: 20px; display: block;">
-     <p class="govuk-body">16 rows need finished and propogating entered</p>
- <p class="govuk-body">52 rows need commodity group entered</p> 
+<div class="govuk-inset-text" >
+    <p class="govuk-body">2 commodities need variety and class entered</p> 
+    <p class="govuk-body">16 rows need commodity group entered</p> 
+     <p class="govuk-body">52 rows need finished and propogating entered</p>
+ 
     </div>
 
- <p class="govuk-body">If you're not sure which products require these entries, you can read the <a href="guidance" target="_blank" class="govuk-link govuk-link--no-visited-state" >guidance (opens in a new window)</a> or enter them manually.</p>
+ {# <p class="govuk-body">If you're not sure which products require these entries, you can read the <a href="guidance" target="_blank" class="govuk-link govuk-link--no-visited-state" >guidance (opens in a new window)</a> or enter them manually.</p>
 
 <p>&nbsp;</p>
 
  <p class="govuk-body"><a href="4-upload-3" class="govuk-link govuk-link--no-visited-state" >Upload new CSV</a></p>
  <p class="govuk-body"><a href="8-2-manual-details-f-p" class="govuk-link govuk-link--no-visited-state" >Enter missing information using the form</a></p>
 
-<p>&nbsp;</p>
+<p>&nbsp;</p> #}
 </div>
 
-            
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-top-5 govuk-!-padding-left-0">
+   <input class="govuk-button govuk-!-marking-right-1 govuk-!-margin-bottom-4" id="button-submit-checks" name="record-and-select-more" type="submit" data-module="govuk-button" value="Continue">
+    </div>       
  {# <p class="govuk-body"><a class="govuk-link" href="7-notification-hub">Cancel and return to hub</a></p> #}
       </form>
            
