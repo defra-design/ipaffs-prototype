@@ -1,0 +1,271 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+
+<div class="navigation-links">
+    <a href="7-notification-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="commodity-search-page">
+    <div class="govuk-grid-column-full">
+            <span class="govuk-caption-xl">Description of the goods</span>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4" id="page-primary-title">Commodity</h1>
+      <p class="govuk-caption-m govuk-!-margin-bottom-4">You can  add up to 500 commodity lines (commodity code and genus/species) to a notification. If you want to add more commodity lines, you can raise another notification.</p>
+
+      <form method="post" action="commodity-tree">
+        <input name="crumb" type="hidden" value="Izc0HkciTOKLhFkzxa4o8Kt8o7FD6Qk6rFupRmd2PFE">
+        <input name="etag" type="hidden" value="&quot;0000000002C9AD6A&quot;">
+        <input name="commodityDetailsPage" type="hidden" value="">
+
+      </form>
+
+      <form action="commodity-tree" method="post">
+        <input name="crumb" type="hidden" value="Izc0HkciTOKLhFkzxa4o8Kt8o7FD6Qk6rFupRmd2PFE">
+        <input name="etag" type="hidden" value="&quot;0000000002C9AD6A&quot;">
+        <input name="selectedCommodity" type="hidden" value="root">
+        <input name="commodityDetailsPage" type="hidden" value="">
+
+        <div class="govuk-form-group search-panel">
+          <fieldset class="govuk-fieldset govuk-!-margin-bottom-6">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">Search Commodities</h2>
+            </legend>
+
+            <div id="commodity-text-input" class="govuk-form-group ">
+              <label class="govuk-label" for="commodity-code-search">Enter commodity code</label>
+              
+              <input class="govuk-input govuk-!-width-one-third " id="commodity-code-search" name="commodity-text-input" type="text" inputmode="numeric">
+            </div>
+          </fieldset>
+
+          <input class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="search-button" type="submit" value="Search" data-module="govuk-button">
+        </div>
+
+        <h3 class="govuk-heading-m">Or</h3>
+
+        <div class="search-panel govuk-!-margin-bottom-6">
+          <div class="commodity-selection-breadcrumb">
+            <nav>
+                  <a class="govuk-link all-sections-link" href="/notification/tst/protected/notifications/DRAFT.GB.2022.3982629/consignment/commodity-tree">All commodities</a>
+                <ul class="mainUL">
+                    <li>
+                      <nav>
+                          <div id="details-content-06-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_06" value="06" class="link-button">06</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_06" value="06" class="link-button commodity-description-link">LIVE TREES AND OTHER PLANTS; BULBS, ROOTS AND THE LIKE; CUT FLOWERS AND ORNAMENTAL FOLIAGE</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-07-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_07" value="07" class="link-button">07</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_07" value="07" class="link-button commodity-description-link">EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-08-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_08" value="08" class="link-button">08</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_08" value="08" class="link-button commodity-description-link">EDIBLE FRUIT AND NUTS; PEEL OF CITRUS FRUIT OR MELONS</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-09-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_09" value="09" class="link-button">09</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_09" value="09" class="link-button commodity-description-link">COFFEE, TEA, MATÉ AND SPICES</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-10-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_10" value="10" class="link-button">10</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_10" value="10" class="link-button commodity-description-link">CEREALS</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-12-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_12" value="12" class="link-button">12</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_12" value="12" class="link-button commodity-description-link">OIL SEEDS AND OLEAGINOUS FRUITS; MISCELLANEOUS GRAINS, SEEDS AND FRUIT; INDUSTRIAL OR MEDICINAL PLANTS; STRAW AND FODDER</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-14-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_14" value="14" class="link-button">14</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_14" value="14" class="link-button commodity-description-link">VEGETABLE PLAITING MATERIALS; VEGETABLE PRODUCTS NOT ELSEWHERE SPECIFIED OR INCLUDED</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-25-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_25" value="25" class="link-button">25</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_25" value="25" class="link-button commodity-description-link">SALT; SULPHUR; EARTHS AND STONE; PLASTERING MATERIALS, LIME AND CEMENT</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-38-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_38" value="38" class="link-button">38</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_38" value="38" class="link-button commodity-description-link">MISCELLANEOUS CHEMICAL PRODUCTS</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-44-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_44" value="44" class="link-button">44</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_44" value="44" class="link-button commodity-description-link">WOOD AND ARTICLES OF WOOD; WOOD CHARCOAL</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-84-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_84" value="84" class="link-button">84</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_84" value="84" class="link-button commodity-description-link">NUCLEAR REACTORS, BOILERS, MACHINERY AND MECHANICAL APPLIANCES; PARTS THEREOF</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-87-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_87" value="87" class="link-button">87</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_87" value="87" class="link-button commodity-description-link">VEHICLES OTHER THAN RAILWAY OR TRAMWAY ROLLING STOCK, AND PARTS AND ACCESSORIES THEREOF</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                    <li>
+                      <nav>
+                          <div id="details-content-94-parent" aria-hidden="false">
+                            <p class="box-margin">
+                                <strong class="commodity-code-box">
+                                  <button type="submit" name="parent_94" value="94" class="link-button">94</button>
+                                </strong>
+                              <span class="commodity-description-links-container">
+                                    <button type="submit" name="parent_94" value="94" class="link-button commodity-description-link">FURNITURE; BEDDING, MATTRESSES, MATTRESS SUPPORTS, CUSHIONS AND SIMILAR STUFFED FURNISHINGS; LAMPS AND LIGHTING FITTINGS, NOT ELSEWHERE SPECIFIED OR INCLUDED; ILLUMINATED SIGNS, ILLUMINATED NAMEPLATES AND THE LIKE; PREFABRICATED BUILDINGS</button>
+                                  </span>
+                            </p>
+                          </div>
+                      </nav>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
+ 
+
+
+{% endblock %}

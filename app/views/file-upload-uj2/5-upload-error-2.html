@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+
+<div class="navigation-links">
+    <a href="7-notification-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+        <span id="reference-number">DRAFT.GB.2022.TEST</span>
+            <span> - CHEDPP</span>
+    </span>
+</div>
+ <main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="consignment-country-page">
+    <div class="govuk-grid-column-full">
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+          </h2>
+          <h3 class="govuk-heading-s">
+            There is 1 error in your file
+          </h3>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list govuk-!-padding-bottom-4">
+              <li>
+                <a href="#file-upload-1">Correct the problems with your file and then upload the file again.</a>
+              </li>
+            </ul>
+            <ul class="govuk-list  govuk-list--bullet">
+              <li class="govuk-!-margin-bottom-3"><strong>The Genus and species name is not recognised (1 line)</strong>
+              <br>Affected lines: 8</li>
+             
+             
+            </ul>
+            {# <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Further details of the errors
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <ul class="govuk-list govuk-error-summary__list">
+                  <li>The Genus and species name is not recognised. <br>Affected lines: 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17</li>
+                 
+                 
+                </ul>
+              </div>
+            </details> #}
+          </div>
+
+        </div>
+         </div>
+          </div>
+
+         <div class="govuk-grid-row">
+         <div class="govuk-grid-column-three-quarters">
+          <span class="govuk-caption-xl">Description of the goods</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Upload a CSV</h1>
+      <form action="6-extra-details" id="consignmentCountries" method="post">
+
+          <p class="govuk-body">
+          You may want to:</p>
+          <ul  class="govuk-list  govuk-list--bullet">
+<li> <a href="csv_template.csv" class="govuk-link govuk-link--no-visited-state" title="CSV template">download our notification CSV template (45kb)</a></li>
+<li><a href="guidance" class="govuk-link govuk-link--no-visited-state" >get help uploading commodity details using CSV spreadsheet</a></li>
+          </ul>
+
+          <p class="govuk-body govuk-!-margin-bottom-6  govuk-!-margin-top-6">
+            <!--Find out more about <a href="#" class="govuk-link govuk-link--no-visited-state" title="Bulk upload specification document">uploading a csv file</a>.-->
+            Open the csv file in Excel or whatever you use to edit spreadsheets. When you have finished, save the file and select Comma Separated Values (.csv) as the file format.
+          </p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="file-upload-1">
+             <strong>Upload your completed csv file</strong>
+            </label>
+
+            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+          </div>
+
+        {# </div> #}
+
+        <a href="6-extra-details" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Upload
+        </a>
+
+      </form>
+
+    </div>
+
+  </main>
+
+{% endblock %}

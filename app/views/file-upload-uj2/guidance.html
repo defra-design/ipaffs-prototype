@@ -1,0 +1,319 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+
+<div class="navigation-links">
+    <a href="7-notification-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+        <span id="reference-number">DRAFT.GB.2022.TEST</span>
+            <span> - CHEDPP</span>
+    </span>
+</div>
+ <main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="consignment-country-page">
+    <div class="govuk-grid-column-three-quarters">
+          <span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Help uploading commodity details using CSV spreadsheet</h1>
+      <form action="6-about" id="consignmentCountries" method="post">
+
+       
+          <!--<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-9"> <li>The file must be </li> <li>The file can't contain these</li> <li>The file can't be bigger than this</li> </ul>-->
+         <div class="govuk-inset-text">
+          <p class="govuk-body">
+        You can only upload a CSV file. Other spreadsheets files (such as xlsx) will not work. </p>
+          
+ <p class="govuk-body"><a href="/public/images/csv-template.csv"  target="_blank" class="govuk-link govuk-link--no-visited-state" title="CSV template">Download  notification CSV template (45kb)</a>
+ </p>
+
+        
+          </div>
+
+  <h2 class="govuk-heading-l " id="page-primary-title">Help for specific commodity details</h2>
+
+        
+
+ <h3 class="govuk-heading-m " id="page-primary-title">Commodity code</h3>
+
+
+ <p class="govuk-body">Required for all commodities. </p>
+
+ <p class="govuk-body">Enter a commodity code. <a href="commodity-tree" target="_blank">You can look up commodity codes(opens in new tab)</a> .</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+ <h3 class="govuk-heading-m " id="page-primary-title">EPPO code</h3>
+
+
+ <p class="govuk-body">Required for all commodities (unless you enter genus and species instead).
+
+ <p class="govuk-body">Enter an EPPO code. You can search for EPPO codes on the <a href="https://gd.eppo.int/" target="_blank">EPPO global database (opens in new tab)</a> .
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+ <h3 class="govuk-heading-m " id="page-primary-title">Genus and species</h3>
+
+
+
+ <p class="govuk-body">Required for all commodities (unless you enter an EPPO code instead).
+
+ <p class="govuk-body">A valid scientific name for the commodity, such as “Chamaecrista comosa var. capricorna”
+
+ <p class="govuk-body">It must match names in reference data for IPAFFS. 
+
+<div class="govuk-inset-text">
+    You can enter an EPPO code instead and leave genus and species blank
+
+</div>
+
+
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Variety</h3>
+
+
+
+ <p class="govuk-body">Required for Fruit and Vegetables (commodity codes starting with 07 and 08 ) which are HMI regulated.
+
+<p class="govuk-body">There are 286 varieties. You can check varieties when you 
+<a href="commodity-tree" target="_blank">look up commodity code</a> (opens in new tab).</p>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Class</h3>
+
+ <p class="govuk-body">
+
+Required for Fruit and Vegetables (commodity codes starting with 07 and 08) which are HMI regulated.
+
+ <p class="govuk-body">Your answer must match one of these values exactly (including spaces):
+ <ul  class="govuk-list  govuk-list--bullet">
+<li>	Class II </li>
+<li>	Class I </li>
+<li>	Extra Class</li>
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Number of packages</h3>
+
+
+
+ <p class="govuk-body">Required for all commodities.
+
+ <p class="govuk-body">Enter the number of packages for a commodity in your consignment. You must use digits.
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <p class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Do not use commas to separate parts of this number. For example: enter one thousand packages as 1000. 
+  </p>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Type of packages</h3>
+
+ <p class="govuk-body">
+
+Required for all commodities.
+
+ <p class="govuk-body">The type of packaging used to transport for this commodity. 
+
+ <p class="govuk-body">Your answer must match one of these values exactly (including spaces):
+ <ul  class="govuk-list  govuk-list--bullet">
+<li>	Bag
+<li>	Bale
+<li> Bottle and flask and other glass packages 
+<li>	Box
+<li>	Can
+<li>	Carton
+<li>	Case
+<li>	Cask
+<li>	Coffer
+<li>	Container
+<li>	Crate
+<li>	Drum
+<li> Jar
+<li>Logs 
+<li> Lug 
+<li> Natural wood box with sift proof walls
+
+<li>	Natural wood ordinary box
+<li> Other
+<li>	Package
+<li>	Pail
+<li>	Pallet
+<li>	Personal luggage
+<li> Plastic film 
+
+<li> Polystyrene box
+<li>	Punnet
+<li>	Rednet
+<li>	Tank
+<li>	Tote
+<li>	Tray
+<li>	Tube
+<li>	Vial
+<li>	Wood bundle
+<li>	Wood crate
+<li>	Wood package display
+<li>	Wood barrel
+<li>	Wood barrel with removable head
+<li>	Wood case with pallet base
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Quantity type</h3>
+
+
+
+ <p class="govuk-body">Required for all commodities.
+
+ <p class="govuk-body">This is the measurement used for the commodity you are importing. 
+
+ <p class="govuk-body">Your answer must match one of these values exactly (including spaces):
+ <ul  class="govuk-list  govuk-list--bullet">
+<li>	stems
+<li>	bulbs
+<li>	corms and rhizomes
+<li>	plants in tissue culture
+<li>	seeds
+<li>	kilograms
+</ul>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Quantity</h3>
+
+ <p class="govuk-body">
+
+Required for all commodities.
+
+ <p class="govuk-body">This number relates to the quantity type you entered. 
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <p class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Do not use commas to separate parts of this number. For example: enter one thousand bulbs as 1000. 
+  </p>
+</div>
+ 
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Net weight</h3>
+
+ <p class="govuk-body">
+
+Required for all commodities.
+
+ <p class="govuk-body">The net weight of this entire commodity line, measured in kilograms (KG).
+ <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <p class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Do not use commas to separate parts of this number. For example: enter one thousand kilograms as 1000. 
+  </p>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Controlled atmosphere container </h3>
+
+ <p class="govuk-body">
+
+Optional (leaving this field blank will default to “No” when uploaded to IPAFFs). 
+
+ <p class="govuk-body">Your answer must match one of these values exactly (including spaces):
+ <ul  class="govuk-list  govuk-list--bullet">
+<li>	Yes
+<li>	No
+</ul>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Commodity group</h3>
+
+ <p class="govuk-body">
+
+Mandatory.
+
+ <p class="govuk-body">Your answer must match one of these values exactly (including spaces):
+  <ul  class="govuk-list  govuk-list--bullet">
+<li>	Fruit and Nuts
+<li>	Vegetables
+<li>	Cut Flowers and flower buds
+<li>	Foliage and branches and other parts of plants
+<li>	Other vegetable products
+<li>	Seed & Tissue Culture
+<li>	Grain
+<li>	Wood and articles of wood
+<li>	Other
+<li>	Plants for Planting
+<li>	Machinery and vehicles which have been operated for agricultural or forestry purposes
+</ul>
+
+ <p class="govuk-body">If you are unsure what commodity group to use, you can leave this blank on the CSV and choose from a list of options within IPAFFS.
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Finished or propagating</h3>
+
+ <p class="govuk-body">
+
+Mandatory for specific commodities.
+
+ <p class="govuk-body">Your answer must match one of these values exactly (including spaces):
+  <ul  class="govuk-list  govuk-list--bullet">
+<li>	finished
+<li>	propagating
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<h3 class="govuk-heading-m " id="page-primary-title">Notes</h3>
+
+
+ <p class="govuk-body">This is for your reference only. The information in this column will not be brought into IPAFFS.
+
+
+ <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <p class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Do not use commas in your notes. They will cause an error when you submit the CSV spreadsheet. 
+  </p>
+</div>
+
+
+
+
+          
+          
+</p>
+       <p> <a href="7-notification-hub" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Return to notification
+        </a></p>
+
+      </form>
+
+    </div>
+
+  </main>
+
+{% endblock %}
