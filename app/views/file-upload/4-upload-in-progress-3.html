@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-
+<meta http-equiv="refresh" content="5; url='5-upload-success'" />
   <div class="govuk-phase-banner" style="margin-top: -46px;">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
@@ -40,13 +40,22 @@
  <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="consignment-country-page">
     <div class="govuk-grid-column-three-quarters">
+
+
+     <div class="app-alert app-alert--info" style="background: #E7F5F9;
+    border-color: #0090C1; padding: 20px; border-style: solid;
+    border-width: 0 0 0 10px;
+    margin-bottom: 20px; display: block;">
+     <h2 class="govuk-heading-m">Uploading CSV ...</h2>
+      
+    </div>
           <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Upload commodity details using a CSV spreadsheet</h1>
-      <form action="4-upload" id="consignmentCountries" method="post">
+      <form  id="consignmentCountries" method="post">
 
          
           <!--<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-9"> <li>The file must be </li> <li>The file can't contain these</li> <li>The file can't be bigger than this</li> </ul>-->
-          <h2 class="govuk-heading-m">
+            <h2 class="govuk-heading-m">
          How to do this</h2>
           <ol  class="govuk-list  govuk-list--number">
 <li> <a href="/public/images/csv-template.csv"  target="_blank" class="govuk-link govuk-link--no-visited-state" title="CSV template">Download our notification CSV template (45kb)</a></li>
@@ -65,10 +74,9 @@
 
             <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
           </div>
-
         {# </div> #}
 
-        <a href="4-upload-in-progress" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+        <a href="5-upload-success" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
           Upload
         </a>
 

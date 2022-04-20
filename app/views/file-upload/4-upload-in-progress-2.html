@@ -46,7 +46,7 @@
     border-color: #0090C1; padding: 20px; border-style: solid;
     border-width: 0 0 0 10px;
     margin-bottom: 20px; display: block;">
-      <p class="govuk-body">Your CSV upload is being processed...</p>
+     <h2 class="govuk-heading-m">Uploading CSV ...</h2>
       
     </div>
           <span class="govuk-caption-xl">Description of the goods</span>
@@ -55,26 +55,25 @@
 
          
           <!--<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-9"> <li>The file must be </li> <li>The file can't contain these</li> <li>The file can't be bigger than this</li> </ul>-->
-           <p class="govuk-body">
-          You may want to:</p>
-          <ul  class="govuk-list  govuk-list--bullet">
-<li> <a href="/public/images/csv-template.csv"  target="_blank" class="govuk-link govuk-link--no-visited-state" title="CSV template">download our notification CSV template (45kb)</a></li>
-<li><a href="guidance" class="govuk-link govuk-link--no-visited-state">get help uploading commodity details using CSV spreadsheet</a></li>
-          </ul>
+            <h2 class="govuk-heading-m">
+         How to do this</h2>
+          <ol  class="govuk-list  govuk-list--number">
+<li> <a href="/public/images/csv-template.csv"  target="_blank" class="govuk-link govuk-link--no-visited-state" title="CSV template">Download our notification CSV template (45kb)</a></li>
+<li>Open the CSV template using spreadsheet software (such as Excel, Numbers, OpenOffice Calc, Google Sheets or similar). </li>
+<li>Enter your information into the CSV (you can <a href="guidance" class="govuk-link govuk-link--no-visited-state">get help uploading commodity details using CSV spreadsheet</a>)</li>
+    <li>Save the file in CSV format.</li>
+    <li>Upload your completed CSV file</li>
+          </ol>
 
-          <p class="govuk-body govuk-!-margin-bottom-6  govuk-!-margin-top-6">
-            <!--Find out more about <a href="#" class="govuk-link govuk-link--no-visited-state" title="Bulk upload specification document">uploading a csv file</a>.-->
-            Open the csv file in Excel or whatever you use to edit spreadsheets. When you have finished, save the file and select Comma Separated Values (.csv) as the file format.
-          </p>
+         
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="file-upload-1">
-              <strong>Upload your completed csv file</strong>
+            <h2 class="govuk-heading-m govuk-!-margin-top-9">Upload your completed csv file</h2>
             </label>
 
             <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
           </div>
-
         {# </div> #}
 
         <a href="5-upload-error-2" role="button" draggable="false" class="govuk-button" data-module="govuk-button">

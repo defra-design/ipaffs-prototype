@@ -33,32 +33,29 @@
 
  <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="import-type-page">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-three-quarters">
           <span class="govuk-caption-xl">About the consignment</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">How would you like to input your information?</h1>
+      <h1 class="govuk-heading-xl " id="page-primary-title">How would you like to enter your information?</h1>
       <form action="4-upload" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="GI063Clvj4M4l7Qu1cuEA7bZfiUJFQoxCZz1FBwBknK">
 
         <div class="govuk-form-group  ">
           <fieldset class="govuk-fieldset">
-
-
-
-
             <div class="govuk-radios ">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CVEDA">
                   <label class="govuk-label govuk-radios__label " for="cert-type">
-                      add them using this online form
+                     <strong>Manual entry</strong>
+                     <p>Add one commodity line at a time. You cannot add more than 50 commodity lines manually.</p>
                   </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="CVEDP">
                   <label class="govuk-label govuk-radios__label " for="cert-type-2">
-                      upload a CSV spreadsheet
+                  <strong>Upload from a CSV spreadsheet</strong>
+                      <p>Enter all information at once. Recommended for larger consignments.</p>
                   </label>
                 </div>
-               
             </div>
           </fieldset>
         </div>
