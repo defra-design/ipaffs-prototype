@@ -36,7 +36,11 @@
     <div class="govuk-grid-column-three-quarters">
           <span class="govuk-caption-xl">About the consignment</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">How would you like to enter your information?</h1>
-      <form action="4-upload-3" method="post" id="homeForm">
+
+        <div class="govuk-inset-text">
+  500 is the maximum number of commodity lines in a notification.<br> You have entered 498 commodity lines. 
+</div>
+      <form action="4-choice-3" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="GI063Clvj4M4l7Qu1cuEA7bZfiUJFQoxCZz1FBwBknK">
 
         <div class="govuk-form-group  ">
@@ -46,7 +50,7 @@
                   <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CVEDA">
                   <label class="govuk-label govuk-radios__label " for="cert-type">
                      <strong>Manual entry</strong>
-                     <p>Add one commodity line at a time. You cannot add more than 50 commodity lines manually.</p>
+                     <p>Add one commodity line at a time. </p>
                   </label>
                 </div>
                 <div class="govuk-radios__item">
