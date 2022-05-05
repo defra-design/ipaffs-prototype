@@ -30,21 +30,50 @@
   </div>
 </div>
 
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+        <span id="reference-number">DRAFT.GB.2022.TEST</span>
+            <span> - CHEDPP</span>
+    </span>
+</div>
 
  <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="import-type-page">
     <div class="govuk-grid-column-three-quarters">
-          <span class="govuk-caption-xl">About the consignment</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">How would you like to enter your information?</h1>
 
-        <div class="govuk-inset-text">
-  500 is the maximum number of commodity lines that can be entered into an import notification.<br> You have entered 498 commodity lines. 
-</div>
-      <form action="4-upload-3" method="post" id="homeForm">
+
+
+ <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" data-gtm-vis-first-on-screen-10427495_18="48" data-gtm-vis-recent-on-screen-10427495_18="430436" data-gtm-vis-total-visible-time-10427495_18="100" data-gtm-vis-has-fired-10427495_18="1">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+                Please fix the following errors
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                  <li>
+                    <a id="error-description-10" href="#select-enter">Select how you want to enter your information</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <span class="govuk-caption-xl ">About the consignment</span>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4" id="page-primary-title">How would you like to enter your information?</h1>
+       {# <p class="govuk-hint govuk-!-padding-bottom-4">500 is the maximum number of commodity lines that can be entered into an import notification.</p>
+       
+        #}
+       
+       {# <div class="govuk-inset-text">
+  500 is the maximum number of commodity lines that can be entered into an import notification.
+</div> #}
+      <form action="4-upload" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="GI063Clvj4M4l7Qu1cuEA7bZfiUJFQoxCZz1FBwBknK">
 
-        <div class="govuk-form-group  ">
-          <fieldset class="govuk-fieldset">
+        <div class="govuk-form-group govuk-!-margin-top-6 govuk-!-padding-top-2 govuk-!-padding-bottom-0 govuk-form-group--error" id="select-enter">
+          <fieldset class="govuk-fieldset" >
+          <span id="select-enter-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select how you want to enter your information
+  </span>
             <div class="govuk-radios ">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CVEDA">
@@ -56,8 +85,8 @@
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="CVEDP">
                   <label class="govuk-label govuk-radios__label " for="cert-type-2">
-                  <strong>Replace your information by uploading a new CSV file</strong>
-                      {# <p>Enter all information at once. Recommended for larger consignments.</p> #}
+                  <strong>Upload from a CSV file</strong>
+                      <p>Enter all information at once. Recommended for consignments with many commodity lines.</p>
                   </label>
                 </div>
             </div>

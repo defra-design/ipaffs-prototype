@@ -14,7 +14,7 @@
 </div>
 
 <div class="navigation-links">
-    <a href="7-notification-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <a href="index" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
   <div id="sign-out-section" class="information-banner">
     <p class="information-banner__content">
       <span>Percy Plants</span>
@@ -36,6 +36,10 @@
     <div class="govuk-grid-column-three-quarters">
           <span class="govuk-caption-xl">About the consignment</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">How would you like to enter your information?</h1>
+
+        <div class="govuk-inset-text">
+  500 is the maximum number of commodity lines that can be entered into an import notification.<br> You have entered 498 commodity lines. 
+</div>
       <form action="4-upload-3" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="GI063Clvj4M4l7Qu1cuEA7bZfiUJFQoxCZz1FBwBknK">
 
@@ -46,14 +50,14 @@
                   <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CVEDA">
                   <label class="govuk-label govuk-radios__label " for="cert-type">
                      <strong>Manual entry</strong>
-                     <p>Add one commodity line at a time. You cannot add more than 50 commodity lines manually.</p>
+                     <p>Add one commodity line at a time. </p>
                   </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="CVEDP">
                   <label class="govuk-label govuk-radios__label " for="cert-type-2">
-                  <strong>Upload from a CSV spreadsheet</strong>
-                      <p>Enter all information at once. Recommended for larger consignments.</p>
+                  <strong>Replace your information by uploading a new CSV file</strong>
+                      {# <p>Enter all information at once. Recommended for larger consignments.</p> #}
                   </label>
                 </div>
             </div>
