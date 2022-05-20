@@ -52,847 +52,1017 @@
 </div>
  <main class="govuk-main-wrapper" id="main-content">
 
-    <div class="app-alert app-alert--success govuk-grid-column-two-thirds" style="background: #E7F5F9;
+    {# <div class="app-alert app-alert--success govuk-grid-column-two-thirds" style="background: #E7F5F9;
     border-color: #0090C1; padding: 20px ; border-style: solid;
     border-width: 0 0 0 10px;
     margin-bottom: 20px; display: block;">
      <h2 class="govuk-heading-m">Upload successful</h2>
       <p class="govuk-body">498 commodity lines added</p>
-    </div>
+    </div> #}
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Upload successful
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-!-margin-top-0 govuk-!-font-size-19" id="number-of-bulk-values-applied">498 commodity lines added</p>
+          </div>
+        </div>
  
   <div class="govuk-grid-row" id="cloning-commodities-summary">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl " id="page-primary-title">Check uploaded commodity details</h1>
-      <h2 class="govuk-heading-s ">Ordered by commodity code</h2>
-      <p class="cloning-grid-row govuk-!-margin-bottom-4">10 out of 498 commodity lines</p>
+      <p class="govuk-body">Ordered by commodity code</p>
+      <h2 class="govuk-heading-s cloning-grid-row">10 out of 498 commodity lines</h2>
     </div>
   </div>
-  
 
 
-{# plant module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
+  {# module 1b #}
+  <div class="commodity-details-commodity-wrapper">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">0608108090</span>
-        </div>
-      </div>
-
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header ">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value ">HELJA</span>
-         
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Genus and species</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Helebore japonica</span>
-         
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Plants for planting</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Finished or propagating</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Finished</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">5</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Bottle and flask and other glass packages</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">20</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Corms and rhizomes</span>
-          </div>
-      </div>
-
-      <div class="govuk-grid-row">     
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">24 kg/units</span>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <span class="commodity-header">Controlled atmosphere container</span>
-            <span class="commodity-value">No</span>
-          </div>
-        </div>
-      </div>
-      {# end wrapper #}
-
-{# fruit module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-value">0808108090</span>
         </div>
       </div>
-
-
-     
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
 
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header ">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value ">MASBD</span>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-header">Genus and species</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Malus domestica</span>  
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
         </div>
       </div>
-
 
        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Fruit and Nuts</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
         </div>
       </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Variety, Class</span> 
-          
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Variety and Class</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-value">Granny Smith, Class I</span>
         </div>
       </div>
 
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">2</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Crate</span>
-          </div>
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
           <div class="govuk-grid-column-one-quarter">
             <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">32</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Kilograms</span>
           </div>
       </div>
 
-      <div class="govuk-grid-row">     
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
           <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">32 kg/units</span>
+            <span class="commodity-value">20</span>
           </div>
-          <div class="govuk-grid-column-one-half">
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
             <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
             <span class="commodity-value">No</span>
           </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
         </div>
-      </div>
-      {# end wrapper #}
+    </div>
+    {# end #}
 
-      {# plant module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
+     {# module 1 #}
+  <div class="commodity-details-commodity-wrapper">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">0608108090</span>
-        </div>
-      </div>
-
-
-     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header ">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value ">HELJA</span>
-         
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">0808108090</span>
         </div>
       </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
 
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-header">Genus and species</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Helebore japonica</span>
-         
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
         </div>
       </div>
 
        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-value">Plants for planting</span>
         </div>
       </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Finished or propagating</span> 
-          
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Finished or propagating</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-value">Finished</span>
         </div>
       </div>
 
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">5</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Bottle and flask and other glass packages</span>
-          </div>
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
           <div class="govuk-grid-column-one-quarter">
             <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">20</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Corms and rhizomes</span>
           </div>
       </div>
 
-      <div class="govuk-grid-row">     
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
           <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">24 kg/units</span>
+            <span class="commodity-value">20</span>
           </div>
-          <div class="govuk-grid-column-one-half">
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
             <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
             <span class="commodity-value">No</span>
           </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
         </div>
-      </div>
-      {# end wrapper #}
+    </div>
+    {# end #}
 
-{# fruit module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
+
+
+{# When there is no variety/class or finished/ propagating info to display #}
+    <div class="commodity-details-commodity-wrapper">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-value">0808108090</span>
         </div>
       </div>
 
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Genus and species</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
+        </div>
+      </div>
+
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity</span>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">32 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">42</span>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+           <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Stems</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">No</span>
+          </div>
+        </div>
+    </div>
+
+
+{# module 1b #}
+  <div class="commodity-details-commodity-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">0808108090</span>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Genus and species</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
+        </div>
+      </div>
+
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
+        </div>
+      </div>
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Variety and Class</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Granny Smith, Class I</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity</span>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">20</span>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">No</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
+        </div>
+    </div>
+    {# end #}
+
+     {# module 1 #}
+  <div class="commodity-details-commodity-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">0808108090</span>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Genus and species</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
+        </div>
+      </div>
+
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
+        </div>
+      </div>
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Finished or propagating</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Finished</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity</span>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">20</span>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">No</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
+        </div>
+    </div>
+    {# end #}
+
+    {# module 1b #}
+  <div class="commodity-details-commodity-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">0808108090</span>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Genus and species</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
+        </div>
+      </div>
+
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
+        </div>
+      </div>
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Variety and Class</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Granny Smith, Class I</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity</span>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">20</span>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">No</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
+        </div>
+    </div>
+    {# end #}
+
+     {# module 1 #}
+  <div class="commodity-details-commodity-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">0808108090</span>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Genus and species</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
+        </div>
+      </div>
+
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
+        </div>
+      </div>
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Finished or propagating</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Finished</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity</span>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">20</span>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">No</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
+        </div>
+    </div>
+    {# end #}
+    {# module 1b #}
+  <div class="commodity-details-commodity-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">0808108090</span>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Genus and species</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
+        </div>
+      </div>
+
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
+        </div>
+      </div>
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Variety and Class</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Granny Smith, Class I</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity</span>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">20</span>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">No</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
+        </div>
+    </div>
+    {# end #}
+
+     {# module 1 #}
+  <div class="commodity-details-commodity-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">0808108090</span>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
+        </div>
+      </div>     
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Genus and species</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
+        </div>
+      </div>
+
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
+        </div>
+      </div>
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Finished or propagating</span>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Finished</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity</span>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">20 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">20</span>
+          </div>
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Finished or propagating</span>
+          </div> #}
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Kilograms</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">No</span>
+          </div>
+           {# <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Finished</span>
+          </div> #}
+        </div>
+    </div>
+    {# end #}
     
-
-       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">MASBD</span>
-        </div>
-      </div>
-
+{# When there is no variety/class or finished/ propagating info to display #}
+    <div class="commodity-details-commodity-wrapper">
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Genus and species</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity Code</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Malus domestica</span>  
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Fruit and Nuts</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Variety, Class</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Granny Smith, Class I</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">2</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Crate</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">32</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Kilograms</span>
-          </div>
-      </div>
-
-      <div class="govuk-grid-row">     
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">32 kg/units</span>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <span class="commodity-header">Controlled atmosphere container</span>
-            <span class="commodity-value">No</span>
-          </div>
-        </div>
-      </div>
-      {# end wrapper #}
-
-      {# plant module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">0608108090</span>
-        </div>
-      </div>
-
-   
-
-     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">HELJA</span>
-         
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Genus and species</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Helebore japonica</span>
-         
-        </div>
-      </div>
-
-       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Plants for planting</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Finished or propagating</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Finished</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">5</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Bottle and flask and other glass packages</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">20</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Corms and rhizomes</span>
-          </div>
-      </div>
-
-      <div class="govuk-grid-row">     
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">24 kg/units</span>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <span class="commodity-header">Controlled atmosphere container</span>
-            <span class="commodity-value">No</span>
-          </div>
-        </div>
-      </div>
-      {# end wrapper #}
-
-{# fruit module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">0808108090</span>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">MASBD</span>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Genus and species</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Malus domestica</span>  
-        </div>
-      </div>
-
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Fruit and Nuts</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Variety, Class</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Granny Smith, Class I</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">2</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Crate</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">32</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Kilograms</span>
-          </div>
-      </div>
-
-      <div class="govuk-grid-row">     
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">32 kg/units</span>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <span class="commodity-header">Controlled atmosphere container</span>
-            <span class="commodity-value">No</span>
-          </div>
-        </div>
-      </div>
-      {# end wrapper #}
-
-      {# plant module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">0608108090</span>
-        </div>
-      </div>
-
-     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">HELJA</span>
-         
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Genus and species</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Helebore japonica</span>
-         
-        </div>
-      </div>
-
-       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Plants for planting</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Finished or propagating</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Finished</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">5</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Bottle and flask and other glass packages</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">20</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Corms and rhizomes</span>
-          </div>
-      </div>
-
-      <div class="govuk-grid-row">     
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">24 kg/units</span>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <span class="commodity-header">Controlled atmosphere container</span>
-            <span class="commodity-value">No</span>
-          </div>
-        </div>
-      </div>
-      {# end wrapper #}
-
-{# fruit module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">0808108090</span>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">MASBD</span>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Genus and species</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Malus domestica</span>  
-        </div>
-      </div>
-
-       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Fruit and Nuts</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Variety, Class</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Granny Smith, Class I</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">2</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Crate</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">32</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Kilograms</span>
-          </div>
-      </div>
-
-      <div class="govuk-grid-row">     
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">32 kg/units</span>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <span class="commodity-header">Controlled atmosphere container</span>
-            <span class="commodity-value">No</span>
-          </div>
-        </div>
-      </div>
-      {# end wrapper #}
-
-      {# plant module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">0608108090</span>
-        </div>
-      </div>
-
-     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">EPPO code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">HELJA</span>
-         
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Genus and species</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Helebore japonica</span>
-         
-        </div>
-      </div>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Plants for planting</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Finished or propagating</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Finished</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">5</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Bottle and flask and other glass packages</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">20</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Corms and rhizomes</span>
-          </div>
-      </div>
-
-      <div class="govuk-grid-row">     
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">24 kg/units</span>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <span class="commodity-header">Controlled atmosphere container</span>
-            <span class="commodity-value">No</span>
-          </div>
-        </div>
-      </div>
-      {# end wrapper #}
-
-{# fruit module #}
- <div class="commodity-details-commodity-wrapper" style="border-top: solid 3px #b1b4b6 ">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity code</span>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-value">0808108090</span>
         </div>
       </div>
 
        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">EPPO code</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">EPPO</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">MASBD</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">MALDM</span>
         </div>
-      </div>
+      </div>     
 
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-one-half">
           <span class="commodity-header">Genus and species</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-         <span class="commodity-value">Malus domestica</span>  
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Malus domestica</span>
         </div>
       </div>
 
-          <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Commodity  group</span>
+       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-header">Commodity group</span>
         </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Fruit and Nuts</span>
-        </div>
-      </div>
-
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-        <div class="govuk-grid-column-one-third">
-          <span class="commodity-header">Variety, Class</span> 
-          
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <span class="commodity-value">Granny Smith, Class I</span>
+        <div class="govuk-grid-column-one-half">
+          <span class="commodity-value">Plants for planting</span>
         </div>
       </div>
 
-       <div class="govuk-grid-row cloning-grid-row" style="border-bottom: solid 3px #f3f2f1;">
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Number of packages</span>
-            <span class="commodity-value">2</span>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Type of package</span>
-            <span class="commodity-value">Crate</span>
-          </div>
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Net weight</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Packages</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-header">Package type</span>
+        </div>
           <div class="govuk-grid-column-one-quarter">
             <span class="commodity-header">Quantity</span>
-             <span class="commodity-value">32</span>
-          </div>
-         <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Quantity type</span>
-             <span class="commodity-value">Kilograms</span>
           </div>
       </div>
 
-      <div class="govuk-grid-row">     
+      <div class="govuk-grid-row cloning-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">32 kg/units</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">2</span>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <span class="commodity-value">Bag</span>
+        </div>
           <div class="govuk-grid-column-one-quarter">
-            <span class="commodity-header">Net weight</span>
-             <span class="commodity-value">32 kg/units</span>
+            <span class="commodity-value">42</span>
           </div>
-          <div class="govuk-grid-column-one-half">
+      </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-header">Quantity type</span>
+          </div>
+           <div class="govuk-grid-column-one-quarter">
             <span class="commodity-header">Controlled atmosphere container</span>
+          </div>
+        </div>
+
+        <div class="govuk-grid-row cloning-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <span class="commodity-value">Stems</span>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
             <span class="commodity-value">No</span>
           </div>
         </div>
-      </div>
-      {# end wrapper #}
-      
-      
-      
-
-  
+    </div>
 
     <nav class="pagination" aria-label="Pagination">
       <ul class="pagination-list">
