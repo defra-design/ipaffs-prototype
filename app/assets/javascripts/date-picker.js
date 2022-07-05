@@ -18,7 +18,7 @@ class DSDatePicker {
         this.currentDate = new Date();
         this.currentDate.setHours(0, 0, 0, 0);
         this.calendarDays = [];
-        this.imagePath = options.imagePath || 'public/images/icons/';
+        this.imagePath = options.imagePath || './assets/images/icons/';
 
         this.keycodes = {
             'tab': 9,
