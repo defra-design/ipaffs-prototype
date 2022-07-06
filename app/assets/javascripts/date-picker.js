@@ -133,7 +133,7 @@ class DSDatePicker {
     buttonTemplate() {
         return `<button class="ds_button  ds_button--icon-only  js-calendar-button">
             <span class="visually-hidden">Choose date</span>
-            <svg class="ds_icon" aria-hidden="true" role="img"><use href="${this.imagePath}icons.stack.svg#calendar_today"></use></svg>
+            <svg class="ds_icon" aria-hidden="true" role="img"><use href="http://localhost:3000/public/images/icons/icons.stack.svg#calendar_today"></use></svg>
         </button>
         `;
     }

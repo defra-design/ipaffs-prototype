@@ -18,7 +18,7 @@ class DSDatePicker {
         this.currentDate = new Date();
         this.currentDate.setHours(0, 0, 0, 0);
         this.calendarDays = [];
-        this.imagePath = options.imagePath || '/assets/images/icons/';
+        this.imagePath = options.imagePath || './assets/images/icons/';
 
         this.keycodes = {
             'tab': 9,
@@ -43,6 +43,7 @@ class DSDatePicker {
     }
 
     init() {
+        console.log(123);
         if (!this.inputElement || this.datePickerParent.classList.contains('js-initialised')) {
             return;
         }
@@ -108,8 +109,10 @@ class DSDatePicker {
 
         this.cancelButton = this.dialogElement.querySelector('.js-datepicker-cancel');
         this.okButton = this.dialogElement.querySelector('.js-datepicker-ok');
-        this.cancelButton.addEventListener('click', (event) => { event.preventDefault();
-            this.closeDialog(event); });
+        this.cancelButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            this.closeDialog(event);
+        });
         this.okButton.addEventListener('click', () => this.selectDate(this.currentDate));
 
         const dialogButtons = this.dialogElement.querySelectorAll('button:not([disabled="true"])');
@@ -131,7 +134,7 @@ class DSDatePicker {
     buttonTemplate() {
         return `<button class="ds_button  ds_button--icon-only  js-calendar-button">
             <span class="visually-hidden">Choose date</span>
-            <svg class="ds_icon" aria-hidden="true" role="img"><use href="${this.imagePath}icons.stack.svg#calendar_today"></use></svg>
+            <svg class="ds_icon" aria-hidden="true" role="img"><use href="http://localhost:3000/public/images/icons/icons.stack.svg#calendar_today"></use></svg>
         </button>
         `;
     }
