@@ -7,13 +7,5 @@ if (window.console && window.console.info) {
 
 $(document).ready(function() {
     window.GOVUKFrontend.initAll();
-    console.log(1234);
-    const myTimeout = setTimeout(runDatePicker, 5000);
 
 })
-
-function runDatePicker() {
-    const myelement = document.querySelector('#basic');
-
-    const myDatePicker = new DSDatePicker(myelement);
-}
