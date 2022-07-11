@@ -47,7 +47,7 @@
             <h2 class="info-summary__title" id="info-summary-title">
               My alerts
             </h2>
-        
+
           <div class="info-summary__body">
             <ul class="govuk-list info-summary__list">
                 <li>
@@ -635,7 +635,7 @@
 <div data-module="ds-datepicker" class="ds_datepicker">
   <label class="govuk-fieldset__legend govuk-fieldset__legend--s" for="start-date">Start date range</label>
   <div class="ds_input__wrapper">
-    <input id="start-date" data-maxdate="19/09/2020" data-mindate="09/08/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
+    <input id="start-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
   </div>
 </div>
 {# end scot datepicker #}
@@ -692,7 +692,13 @@
                 </div>
               <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group ">
-                  <fieldset class="govuk-fieldset" role="group">
+                  <div data-module="ds-datepicker" class="ds_datepicker">
+                    <label class="govuk-fieldset__legend govuk-fieldset__legend--s" for="start-date">End date range</label>
+                    <div class="ds_input__wrapper">
+                      <input id="end-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
+                    </div>
+                  </div>
+                  <!-- <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
                     <div class="govuk-date-input" id="end-date">
 
@@ -718,8 +724,8 @@
                       </div>
 
                     </div>
-                  </fieldset>
-                </div>        
+                  </fieldset>-->
+                </div>
                 </div>
             </div>
 
@@ -1626,7 +1632,7 @@
                   </form>
                   <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1001238" href="/notification/snd/protected/notifications/CHEDP.GB.2021.1001238/certificate/pdf" target="_blank">Show certificate</a>
                 </td>
-              </tr> 
+              </tr>
               <tr class="notification-list__data-row notification-list__row--padding-top">
                 <td>
                   <span class="notification-list__heading">Reference number</span>
@@ -1932,7 +1938,7 @@
                   </form>
                   <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1002887" href="/notification/snd/protected/notifications/CHEDP.GB.2021.1002887/certificate/pdf" target="_blank">Show certificate</a>
                 </td>
-              </tr> 
+              </tr>
               <tr class="notification-list__data-row notification-list__row--padding-top">
                 <td>
                   <span class="notification-list__heading">Reference number</span>
@@ -2191,7 +2197,7 @@
                   <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1001511" href="/notification/snd/protected/notifications/CHEDP.GB.2021.1001511/certificate/pdf" target="_blank">Show certificate</a>
                 </td>
               </tr> #}
-            
+
 
 
 
@@ -2777,7 +2783,7 @@
                   <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1037016" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1037016/certificate/pdf" target="_blank">Show certificate</a>
                 </td>
               </tr>
-             
+
               {# <tr class="notification-list__data-row notification-list__row--padding-top">
                 <td>
                   <span class="notification-list__heading">Reference number</span>
