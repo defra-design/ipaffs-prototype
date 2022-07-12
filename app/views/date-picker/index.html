@@ -632,12 +632,49 @@
 
 
 {# scot datepicker #}
-<div data-module="ds-datepicker" class="ds_datepicker">
-  <label class="govuk-fieldset__legend govuk-fieldset__legend--s" for="start-date">Start date range</label>
-  <div class="ds_input__wrapper">
-    <input id="start-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
-  </div>
-</div>
+
+                <div class="govuk-form-group ds-datepicker-3-fields-container">
+                  <fieldset data-module="ds-datepickerd" class="govuk-fieldset ds_datepicker" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
+                    <div class="govuk-date-input" id="start-date">
+                      <div data-module="ds-datepicker" class="ds_datepicker-3-fields">
+                        <label class="govuk-label govuk-date-input__label" for="invisible-date-input">&nbsp;</label>
+                        <div class="ds_input__wrapper">
+                          <input id="invisible-date-input" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" name="date-in-1-field" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
+                        </div>
+                      </div>
+                      <!--<input id="start-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />-->
+
+                      <div class="govuk-date-input__item date-input-day">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item date-input-month">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item date-input-year">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                      <!--<div data-module="ds-datepicker" class="ds_datepicker">
+                        <div class="ds_input__wrapper">
+                          <input id="start-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
+                        </div>
+                      </div>-->
+
+                    </div>
+                  </fieldset>
+                </div>
 {# end scot datepicker #}
 
 <div class="date-entry  ds_question">
@@ -691,14 +728,39 @@
                 </div>         #}
                 </div>
               <div class="govuk-grid-column-one-third">
-                <div class="govuk-form-group ">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
+                    <div class="govuk-date-input date-picker" data-module="accessible-datepicker" id="passport-issued">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric" />
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric" />
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" />
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!--<div class="govuk-form-group ">
                   <div data-module="ds-datepicker" class="ds_datepicker">
                     <label class="govuk-fieldset__legend govuk-fieldset__legend--s" for="start-date">End date range</label>
                     <div class="ds_input__wrapper">
                       <input id="end-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
                     </div>
                   </div>
-                  <!-- <fieldset class="govuk-fieldset" role="group">
+                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
                     <div class="govuk-date-input" id="end-date">
 
@@ -724,8 +786,8 @@
                       </div>
 
                     </div>
-                  </fieldset>-->
-                </div>
+                  </fieldset>
+                </div>-->
                 </div>
             </div>
 
