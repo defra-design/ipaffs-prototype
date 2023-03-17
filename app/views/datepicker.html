@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template app-html-class">
+
+<head>
+  <link href="stylesheets/application.css" rel="stylesheet">
+  <link href="stylesheets/datepicker.min.css" rel="stylesheet">
+
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/datepicker.min.js"></script>
+</head>
+
+<body class="govuk-template__body">
+
+<div class="govuk-date-input date-input--picker"
+     id="date-picker-test" data-module="accessible-datepicker">
+<div class="govuk-date-input__item date-input-day">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-date-input__label" for="date-picker-test-day">
+      Day
+    </label>
+    <input
+        class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day"
+        id="date-picker-test-day"
+        name="date-picker-test-day"
+        type="text"
+        inputmode="numeric"
+        maxlength="2"
+        aria-label="Day">
+  </div>
+</div>
+<div class="govuk-date-input__item date-input-month">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-date-input__label" for="date-picker-test-month">
+      Month
+    </label>
+    <input
+        class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month"
+        id="date-picker-test-month"
+        name="date-picker-test-month"
+        type="text"
+        inputmode="numeric"
+        maxlength="2"
+        aria-label="Month">
+  </div>
+</div>
+<div class="govuk-date-input__item date-input-year">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-date-input__label" for="date-picker-test-year">
+      Year
+    </label>
+    <input
+        class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year"
+        id="date-picker-test-year"
+        name="date-picker-test-year"
+        type="text"
+        inputmode="numeric"
+        maxlength="4"
+        aria-label="Year">
+  </div>
+</div>
+</div>
+
+<script src="javascripts/datepickers.js"></script>
+</body>
+
+</html>

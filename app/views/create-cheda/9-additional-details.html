@@ -1,0 +1,236 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+    <a href="review" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <div class="navigation-links__divider">|</div>
+<div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="index">Dashboard</a>
+        </li>
+      </ol>
+    </div>
+
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Pig</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5501422 </span>
+      <span> - CHEDA</span>
+    </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="consignment-details-page">
+    <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-xl">Description of the goods</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
+
+        <div>
+          <h2 class="govuk-heading-m">Total</h2>
+          <div class="table-responsive">
+            <table class="govuk-table presentation-table">
+              <tbody>
+              <tr>
+                <th class="govuk-table__header govuk-!-width-one-half" scope="row">Number of animals</th>
+                <td class="govuk-table__cell">3</td>
+              </tr>
+              <tr>
+                <th class="govuk-table__header govuk-!-width-one-half" scope="row">Number of packages</th>
+                <td class="govuk-table__cell">1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      <form method="POST">
+        <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
+        <input name="etag" type="hidden" value="&quot;0000000004C7A4DE&quot;">
+
+
+
+
+
+            <h2 class="govuk-heading-m">What are the animals certified for?</h2>
+          <div class="govuk-form-group animal-certified-as ">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <span class="govuk-visually-hidden">Choose from:</span>
+              </legend>
+              
+              <div class="govuk-radios">
+                    <div class="govuk-radios__item animal-certified-as">
+                      <input class="govuk-radios__input" id="animalCertifiedapproved" name="animal-certified-as" value="approved" type="radio">
+                      <label class="govuk-label govuk-radios__label" for="animalCertifiedapproved">
+                        Approved bodies
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item animal-certified-as">
+                      <input class="govuk-radios__input" id="animalCertifiedbreeding" name="animal-certified-as" value="breeding" type="radio">
+                      <label class="govuk-label govuk-radios__label" for="animalCertifiedbreeding">
+                        Breeding/production
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item animal-certified-as">
+                      <input class="govuk-radios__input" id="animalCertifiedpets" name="animal-certified-as" value="pets" type="radio">
+                      <label class="govuk-label govuk-radios__label" for="animalCertifiedpets">
+                        Pets
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item animal-certified-as">
+                      <input class="govuk-radios__input" id="animalCertifiedregistered" name="animal-certified-as" value="registered" type="radio">
+                      <label class="govuk-label govuk-radios__label" for="animalCertifiedregistered">
+                        Registered equidae
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item animal-certified-as">
+                      <input class="govuk-radios__input" id="animalCertifiedslaughter" name="animal-certified-as" value="slaughter" type="radio">
+                      <label class="govuk-label govuk-radios__label" for="animalCertifiedslaughter">
+                        Slaughter
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item animal-certified-as">
+                      <input class="govuk-radios__input" id="animalCertifiedother" name="animal-certified-as" value="other" type="radio">
+                      <label class="govuk-label govuk-radios__label" for="animalCertifiedother">
+                        Other
+                      </label>
+                    </div>
+              </div>
+            </fieldset>
+          </div>
+
+            <h2 class="govuk-heading-m">Does the consignment include any unweaned animals?</h2>
+        
+          <div class="govuk-form-group " id="checkbox-group-animals">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  <span class="govuk-visually-hidden">Check from below:</span>
+              </legend>
+              
+              <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="includingNonablacted" name="includingNonablacted" type="checkbox" value="on">
+                    <label class="govuk-label govuk-checkboxes__label" for="includingNonablacted">
+                      includes unweaned animals
+                    </label>
+                  </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading" id="containers-question">
+                  Will your goods be imported in shipping containers or road trailers?
+                </h2>
+              </legend>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="are-consignments-in-containers-yes" name="consignment-in-container" type="radio" value="true" aria-controls="conditional-how-contacted-conditional" aria-expanded="false">
+                  <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+                  <div class="govuk-form-group govuk-!-margin-bottom-0 " id="yes-response">
+                    <div class="table-responsive">
+                      <table class="govuk-table govuk-!-margin-bottom-2" id="containers-table">
+                        <thead class="govuk-table__head">
+                        <tr id="seal-and-containers">
+                          <th scope="col" class="govuk-table__header" id="th-containers-number">
+                            Container or trailer number
+                          </th>
+                          <th scope="col" class="govuk-table__header" id="th-containers-seal">Seal number</th>
+                          <th scope="col" class="govuk-table__header no-wrap" id="th-official-seal">Official Seal</th>
+                          <th scope="col" class="govuk-table__header" id="th-containers-remove"><span class="govuk-visually-hidden">Remove</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr id="container-1">
+                            <td class="govuk-table__cell" headers="th-containers-number">
+                                <div class="govuk-form-group  ">
+                                
+                                
+                                    
+                                
+                                  <input class="govuk-input  " id="container-number-1" name="container-number-1" type="text" value="" title="Container number 1">
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell break-word" headers="th-containers-seal">
+                                <div class="govuk-form-group  ">
+                                
+                                
+                                    
+                                
+                                  <input class="govuk-input  " id="seal-number-1" name="seal-number-1" type="text" value="" title="Seal number for container 1">
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" headers="th-official-seal">
+                              <div class="govuk-checkboxes " id="hidden-official-seal-1-container">
+                                <div class="govuk-checkboxes__item" data-target="hidden-official-seal-1">
+                                  <input class="govuk-checkboxes__input" id="official-seal-1" name="official-seal-1" type="checkbox" value="true">
+                                  <label class="govuk-label govuk-checkboxes__label" for="official-seal-1"><span class="govuk-visually-hidden">official-seal-1</span></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="govuk-table__cell table-small-text vertical-align-middle" headers="th-containers-remove">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                        <button type="submit" class="link-button" name="add-container" value="" id="add-container">
+                          Add another container or trailer
+                        </button>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="are-consignments-in-containers-no" name="consignment-in-container" type="radio" value="false" checked="">
+                  <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form action="10-animal-identifiers" method="post" id="homeForm2">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+           
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+            <p class="govuk-body"><a class="govuk-link" href="7-notification">Cancel and return to hub</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
