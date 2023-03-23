@@ -52,7 +52,7 @@
     <div class="govuk-grid-column-three-quarters">
           <span class="govuk-caption-xl">Purpose of the consignment</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">About the consignment</h1>
-      <form action="7-notification" method="post">
+      <form action="07-notification" method="post">
         <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
         <input name="etag" type="hidden" value="&quot;0000000004C79E90&quot;">
 
@@ -1124,7 +1124,7 @@
                   </label>
                 </div>
 
-                <div class="govuk-radios__item purpose">
+                <div class="govuk-radios__item purpose ">
                   <input class="govuk-radios__input" id="a_impadm3" name="purpose" type="radio" value="temporary" aria-controls="conditional-temporary-admission" aria-expanded="false">
                   <label class="govuk-label govuk-radios__label" for="a_impadm3">
                     Temporary admission horses
@@ -1133,7 +1133,7 @@
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-temporary-admission">
                   <div class="govuk-form-group ">
                     <div class="govuk-form-group  ">
-                      <fieldset class="govuk-fieldset" role="group" aria-describedby="exit-date-hint">
+                      <fieldset class="govuk-fieldset govuk-!-width-one-half" role="group" aria-describedby="exit-date-hint">
                           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                             
                             Exit date
@@ -1144,35 +1144,16 @@
                             For example: 01 03 2022
                           </span>
                     
-                    
-                        <div class="govuk-date-input date-input--picker " id="exit-date" data-module="accessible-datepicker">
-                          <div class="govuk-date-input__item date-input-day">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="exit-date-day">
-                                  Day
-                                </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="exit-date-day" name="exit-date-day" type="text" value="" inputmode="numeric" maxlength="2">
+                          {# scot datepicker #}
+                          <div data-module="ds-datepicker" class="ds_datepicker">
+                            
+                            <div class="ds_input__wrapper">
+                              <input id="start-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
                             </div>
                           </div>
-                          <div class="govuk-date-input__item date-input-month">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="exit-date-month">
-                                  Month
-                                </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="exit-date-month" name="exit-date-month" type="text" value="" inputmode="numeric" maxlength="2">
-                            </div>
-                          </div>
-                          <div class="govuk-date-input__item date-input-year">
-                            <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="exit-date-year">
-                                  Year
-                                </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="exit-date-year" name="exit-date-year" type="text" value="" inputmode="numeric" maxlength="4">
-                            </div>
-                          </div>
-                        <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-81" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-81"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
-                      </fieldset>
+                          {# end scot datepicker #}
+                     
+                        </fieldset>
                     </div>
                   </div>
 

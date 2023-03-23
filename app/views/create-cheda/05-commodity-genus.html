@@ -62,24 +62,36 @@
           </thead>
           <tbody>
           <tr>
-            <td class="govuk-table__cell" id="commodity-code-value">0101</td>
-            <td class="govuk-table__cell">Live horses, asses, mules and hinnies</td>
+            <td class="govuk-table__cell" id="commodity-code-value">0102</td>
+            <td class="govuk-table__cell">Live bovine animals</td>
           </tr>
           </tbody>
         </table>
       </div>
 
-      <form action="6-about-consignment" id="categories" method="get">
-        <input name="commodity-selected-code" type="hidden" value="0101">
+      <form action="page-4" id="categories" method="get">
+        <input name="commodity-selected-code" type="hidden" value="0102">
         <input name="commodityDetailsPage" type="hidden" value="">
 
-            <input type="hidden" name="type" id="type-select-hidden" value="2">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--m" for="type-select">
+                Type of commodity
+              </label>
+              <input type="hidden" id="typeButtonId">
+              <select class="govuk-select commodity-type govuk-!-width-one-half" id="type-select" name="type">
+                    <option selected="selected" value="16">Domestic</option>
+                    <option value="24">Game</option>
+              </select>
+              <noscript>
+                <input id="type-button" class="button" type="submit" name="typeButton" value="update">
+              </noscript>
+            </div>
 
-            <input type="hidden" name="class" id="class-select-hidden" value="502501">
+            <input type="hidden" name="class" id="class-select-hidden" value="473099">
 
       </form>
 
-      <form action="6-about-consignment" method="post">
+      <form action="06-about-consignment" method="post">
               <div class="govuk-form-group ">
                 <fieldset class="govuk-fieldset" id="species-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -92,21 +104,21 @@
               
                 <div class="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Equus asinus-checkbox" name="species" type="checkbox" value="502501">
-                      <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Equus asinus-checkbox">
-                        Equus asinus
+                      <input class="govuk-checkboxes__input" id="Bison bison-checkbox" name="species" type="checkbox" value="473099">
+                      <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Bison bison-checkbox">
+                        Bison bison
                       </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Equus caballus-checkbox" name="species" type="checkbox" value="681684">
-                      <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Equus caballus-checkbox">
-                        Equus caballus
+                      <input class="govuk-checkboxes__input" id="Bos taurus-checkbox" name="species" type="checkbox" value="467300">
+                      <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Bos taurus-checkbox">
+                        Bos taurus
                       </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Equus caballus*asinus-checkbox" name="species" type="checkbox" value="681683">
-                      <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Equus caballus*asinus-checkbox">
-                        Equus caballus*asinus
+                      <input class="govuk-checkboxes__input" id="Bubalus bubalis-checkbox" name="species" type="checkbox" value="512299">
+                      <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Bubalus bubalis-checkbox">
+                        Bubalus bubalis
                       </label>
                     </div>
                 </div>
@@ -118,13 +130,13 @@
             <input class="link-button" id="family-button" type="submit" name="familyButton" value="Add another commodity" data-module="govuk-button">
         </div>
 
-        <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
+        <input name="crumb" type="hidden" value="U71b9l39rEo3G3NiMprrccxYclb4_ZZVKf2AlP-Dv8n">
         <input name="commodityDetailsPage" type="hidden" value="">
-        <input name="etag" type="hidden" value="&quot;0000000004C79E8F&quot;">
+        <input name="etag" type="hidden" value="&quot;0000000004D0A76E&quot;">
         <input name="complement-id" type="hidden" value="">
-        <input name="commodity-selected-code" type="hidden" value="0101">
-        <input name="type-id" type="hidden" value="2">
-        <input name="class-id" type="hidden" value="502501">
+        <input name="commodity-selected-code" type="hidden" value="0102">
+        <input name="type-id" type="hidden" value="16">
+        <input name="class-id" type="hidden" value="473099">
         <input name="family-id" type="hidden" value="">
       </form>
     </div>
