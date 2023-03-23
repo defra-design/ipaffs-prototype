@@ -50,22 +50,22 @@
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="consignment-details-page">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
           <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
 
-        <div>
+        <div class="govuk-!-width-two-thirds">
           <h2 class="govuk-heading-m">Total</h2>
           <div class="table-responsive">
             <table class="govuk-table presentation-table">
               <tbody>
               <tr>
-                <th class="govuk-table__header govuk-!-width-one-half" scope="row">Number of animals</th>
-                <td class="govuk-table__cell">3</td>
+                <th class="govuk-table__header govuk-!-width-three-quarters" scope="row">Number of animals</th>
+                <td class="govuk-table__cell ">3</td>
               </tr>
               <tr>
-                <th class="govuk-table__header govuk-!-width-one-half" scope="row">Number of packages</th>
-                <td class="govuk-table__cell">1</td>
+                <th class="govuk-table__header govuk-!-width-three-quarters" scope="row">Number of packages</th>
+                <td class="govuk-table__cell ">1</td>
               </tr>
               </tbody>
             </table>
@@ -162,8 +162,52 @@
                   </label>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-                  <div class="govuk-form-group govuk-!-margin-bottom-0 " id="yes-response">
-                    <div class="table-responsive">
+                  <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-padding-bottom-4 " id="yes-response" >
+<!-- summary list code -->
+
+<dl class="govuk-summary-list govuk-summary-list--no-border" style="border-bottom: solid 2px lightgray;">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Container or trailer number
+      
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <div class="govuk-form-group  ">
+                           
+        <input class="govuk-input  " id="container-number-1" name="container-number-1" type="text" value="" title="Container number 1">
+      </div>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+       Seal number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <div class="govuk-form-group  ">
+
+        <input class="govuk-input  " id="seal-number-1" name="seal-number-1" type="text" value="" title="Seal number for container 1">
+      </div>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Official seal
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <div class="govuk-checkboxes " id="hidden-official-seal-1-container">
+        <div class="govuk-checkboxes__item" data-target="hidden-official-seal-1">
+          <input class="govuk-checkboxes__input" id="official-seal-1" name="official-seal-1" type="checkbox" value="true">
+          <label class="govuk-label govuk-checkboxes__label" for="official-seal-1"><span class="govuk-visually-hidden">official-seal-1</span></label>
+        </div>
+      </div>
+      
+    </dd>
+  </div>
+  
+</dl>
+
+
+                    <!-- <div class="table-responsive">
                       <table class="govuk-table govuk-!-margin-bottom-2" id="containers-table">
                         <thead class="govuk-table__head">
                         <tr id="seal-and-containers">
@@ -179,19 +223,13 @@
                           <tr id="container-1">
                             <td class="govuk-table__cell" headers="th-containers-number">
                                 <div class="govuk-form-group  ">
-                                
-                                
-                                    
-                                
+                           
                                   <input class="govuk-input  " id="container-number-1" name="container-number-1" type="text" value="" title="Container number 1">
                                 </div>
                             </td>
                             <td class="govuk-table__cell break-word" headers="th-containers-seal">
                                 <div class="govuk-form-group  ">
-                                
-                                
-                                    
-                                
+
                                   <input class="govuk-input  " id="seal-number-1" name="seal-number-1" type="text" value="" title="Seal number for container 1">
                                 </div>
                             </td>
@@ -207,8 +245,9 @@
                             </td>
                           </tr>
                         </tbody>
-                      </table>
-                    </div>
+                      </table> 
+                    </div>-->
+                    <span class="govuk-visually-hidden">Remove</span>
                         <button type="submit" class="link-button" name="add-container" value="" id="add-container">
                           Add another container or trailer
                         </button>
