@@ -93,7 +93,87 @@
           </div>
         </div>
 
+<div class="notification-list">
+  <dl class="notification-list__row">
+    <div class="additional-documents__caption govuk-heading-m">
+      Additional documents
+    </div>
+  </dl>
+  <dl class="notification-list__row">
+    <div class="notification-list__grid-row">
+      <div class="notification-list__grid-column-25">
+        <dt class="notification-list__heading govuk-!-margin-bottom-4">Document type </dt>
+        <dd class="notification-list__value" id="reference-number-0">
+          <select class="govuk-select " id="document-type" name="document-type" aria-label="Document type">
+                      <option value="">Select document type</option>
+                      <option value="commercialDocument">Commercial document</option>
+                      <option value="commercialInvoice">Commercial invoice</option>
+                      <option value="healthCertificate">Health certificate</option>
+                      <option value="journeyLog">Journey Log</option>
+                      <option value="licenseOrAuthorisation">Licence/authorisation</option>
+                      <option value="other">Other</option>
+                  </select>
+        </dd>
+      </div>
+      <div class="notification-list__grid-column-20">
+        <dt class="notification-list__heading govuk-!-margin-bottom-4">Document reference</dt>
+        <dd class="notification-list__value" id="commodity-id-0">
+          <input class="govuk-input  " id="document-reference" name="document-reference" type="text" value="" aria-label="Document reference">
+              
+        </dd>
+      </div>
+      <div class="notification-list__grid-column-30">
+        <dt class="notification-list__heading">Date of issue
+          <div class="additional-documents__date-of-issue-hint">
+            <span class="govuk-hint additional-documents__date-of-issue-hint__day" style="display: inline;">Day</span>
+            <span class="govuk-hint additional-documents__date-of-issue-hint__month" style="display: inline;">Month</span>
+            <span class="govuk-hint additional-documents__date-of-issue-hint__year" style="display: inline;">Year</span>
+          </div>
 
+        </dt>
+        <dd class="notification-list__value" id="arrival-date-0">   
+          <div class="govuk-date-input date-input--picker short-date-input" id="document-issue-date" data-module="accessible-datepicker">
+            <div class="govuk-date-input__item date-input-day">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day " id="document-issue-date-day" name="document-issue-date-day" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Day">
+              </div>
+            </div>
+            <div class="govuk-date-input__item date-input-month">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="document-issue-date-month" name="document-issue-date-month" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Month">
+              </div>
+            </div>
+            <div class="govuk-date-input__item date-input-year">
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="document-issue-date-year" name="document-issue-date-year" type="text" value="" inputmode="numeric" maxlength="4" aria-label="Year">
+              </div>
+            </div>
+          <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+    <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-41" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-41"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+       
+
+        </dd>
+      </div>
+      <div class="notification-list__grid-column-20">
+        <dt class="notification-list__heading">Attachments</dt>
+        <dd class="notification-list__value" id="status-0">
+          <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment  govuk-!-width-one-quarter govuk-!-margin-0  govuk-!-padding-left-0" >
+            <button type="submit" class="link-button no-wrap govuk-!-margin-top-4" id="add-attachment2" name="add-attachment" value="">
+              Add attachment
+            </button>
+          </div>
+        </dd>
+      </div>
+    </div>
+   
+   
+  </dl>
+
+  <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="add-additional-document" value="">
+    Add another document
+  </button>
+
+</div>
 
 
       <form action="14-traders" method="POST">
@@ -109,6 +189,7 @@
           <div class="additional-documents__grid-row additional-documents__headers govuk-!-margin-0 govuk-!-padding-0" >
             <div class="additional-documents__grid-column-15 additional-documents__table-header govuk-!-width-one-quarter govuk-!-margin-0 govuk-!-padding-left-0" style="border: solid 1px pink;">
               Document type
+              <p></p>
             </div>
             <div class="additional-documents__grid-column-15 additional-documents__table-header govuk-!-width-one-quarter govuk-!-margin-0 govuk-!-padding-left-0" style="border: solid 1px pink;">
               Document reference
@@ -131,7 +212,7 @@
                 <div class="govuk-form-group govuk-!-margin-bottom-0  govuk-!-margin-0 govuk-!-padding-left-0">
                 
                 
-                  <select class="govuk-select govuk-!-width-one-quarter" id="document-type" name="document-type" aria-label="Document type">
+                  <select class="govuk-select " id="document-type" name="document-type" aria-label="Document type">
                       <option value="">Select document type</option>
                       <option value="commercialDocument">Commercial document</option>
                       <option value="commercialInvoice">Commercial invoice</option>
@@ -182,7 +263,7 @@
               </div>
             </div>
             <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment  govuk-!-width-one-quarter govuk-!-margin-0  govuk-!-padding-left-0" style="border: solid 1px pink;">
-              <button type="submit" class="link-button no-wrap govuk-!-margin-top-4" id="add-attachment" name="add-attachment" value="">
+              <button type="submit" class="link-button no-wrap govuk-!-margin-top-4" id="add-attachment2" name="add-attachment" value="">
                 Add attachment
               </button>
             </div>
