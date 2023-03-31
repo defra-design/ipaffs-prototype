@@ -1,0 +1,154 @@
+@import "node_modules/govuk-frontend/govuk/helpers/colour";
+@import "node_modules/govuk-frontend/govuk/settings/typography-font";
+@import "node_modules/govuk-frontend/govuk/settings/media-queries";
+@import "../base/variables";
+
+$icon-size: 36px;
+$svg-size: 36px;
+
+$date-button-hover-colour: govuk-shade(govuk-colour("light-grey"), 20%);
+
+$icon-base-colour: govuk-colour("blue");
+$icon-hover-colour: govuk-shade($icon-base-colour, 20%);
+
+$keyboard-focus-colour: govuk-colour("yellow");
+
+// needs to be defined this way otherwise it isn't picked up for some reason
+.defra-datepicker.date-picker__container--icon {  /* stylelint-disable-line scss/selector-nest-combinators */
+  bottom: 6px;
+  margin-top: 15px;
+
+  // IE being IE (but sass lint won't let me)
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    bottom: -10px !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  @media screen and (min-width: map-get($govuk-breakpoints, "tablet")) {
+    bottom: 7px;
+  }
+}
+
+.search-filter-form {
+  .date-picker__dialog {
+    @media screen and (min-width: map-get($govuk-breakpoints, "tablet")) {
+      top: 50px;
+      right: -37px;
+    }
+  }
+}
+
+.defra-datepicker {
+  * {
+    font-family: $govuk-font-family !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  .date-picker {
+    &__dialog {
+      box-shadow: 1px 1px 4px $translucent-grey;
+      border: 0;
+      outline: 1px solid govuk-colour("mid-grey");
+    }
+
+    &__heading {
+      font-size: 1.1rem;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    &__date-table {
+      background-color: govuk-colour("white");
+
+      thead {
+        th {
+          font-size: 1rem;
+          color: govuk-colour("dark-grey");
+        }
+      }
+    }
+
+    &__button__previous-month,
+    &__button__next-month {
+      &:focus {
+        background-color: $keyboard-focus-colour;
+        outline: none;
+      }
+    }
+
+    &__reveal__icon {
+      color: govuk-colour("white");
+      background-color: $icon-base-colour;
+      height: $icon-size;
+      width: $icon-size;
+      box-shadow: 0 2px 0 govuk-shade($icon-base-colour, 60%);
+
+      svg {
+        fill: currentcolor;
+        top: 0;
+        padding: 2px;
+        height: $svg-size !important;
+        width: $svg-size !important;
+      }
+
+      &:hover {
+        background-color: $icon-hover-colour;
+        border-bottom: 0;
+
+        svg {
+          background-color: inherit;
+          border-bottom: inherit;
+        }
+      }
+
+      &:focus {
+        color: govuk-colour("black");
+        background-color: $keyboard-focus-colour;
+        box-shadow: 0 2px 0 govuk-shade($keyboard-focus-colour, 60%);
+
+        svg {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .date__button {
+    background-color: transparent;
+    border-width: 0;
+    color: govuk-colour("black");
+    font-weight: $font-weight-normal;
+    min-height: 40px;
+    padding: 0;
+    min-width: 40px;
+    font-size: 1rem;
+
+    &:focus {
+      background-color: $keyboard-focus-colour;
+      border: 0;
+      border-bottom: 3px solid govuk-colour("black");
+      box-shadow: none;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $date-button-hover-colour;
+    }
+
+    &--inactive {
+      display: none;
+
+      &:hover {
+        display: none;
+      }
+    }
+
+    &--today {
+      border-bottom: 0;
+    }
+  }
+}
+
+.hidden-icon {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
