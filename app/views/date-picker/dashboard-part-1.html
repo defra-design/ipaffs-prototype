@@ -629,104 +629,66 @@
                 </fieldset>
               </div>
               <div class="govuk-grid-column-one-third">
-
-
-{# scot datepicker #}
-<div data-module="ds-datepicker" class="ds_datepicker">
-  <label class="govuk-fieldset__legend govuk-fieldset__legend--s" for="start-date">Start date range</label>
-  <div class="ds_input__wrapper">
-    <input id="start-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
-  </div>
-</div>
-{# end scot datepicker #}
-
-{# <div class="date-entry  ds_question">
-    <label class="ds_label" for="first-payment-date">When will your tenant make this first payment?</label>
-    <div class="ds_hint-text">
-        <p>Use DD/MM/YYYY format.</p>
-    </div>
-
-    <div id="basic" data-module="ds-datepicker" class="ds_datepicker">
-        <div class="ds_input__wrapper">
-            <input class="ds_input  ds_input--fixed-10" type="text" placeholder="e.g. 01/12/2020" />
-        </div>
-    </div>
-</div> #}
-
-
-
-
-
-
-
-
-                {# <div class="govuk-form-group ">
+                <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
-                    <div class="govuk-date-input" id="start-date">
+                    <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
 
                       <div class="govuk-date-input__item date-input-day">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
                         </div>
                       </div>
 
                       <div class="govuk-date-input__item date-input-month">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
                         </div>
                       </div>
 
                       <div class="govuk-date-input__item date-input-year">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
                         </div>
                       </div>
 
                     </div>
                   </fieldset>
-                </div>         #}
                 </div>
+              </div>
               <div class="govuk-grid-column-one-third">
-                <div class="govuk-form-group ">
-                  <div data-module="ds-datepicker" class="ds_datepicker">
-                    <label class="govuk-fieldset__legend govuk-fieldset__legend--s" for="start-date">End date range</label>
-                    <div class="ds_input__wrapper">
-                      <input id="end-date" data-maxdate="31/12/2023" data-mindate="01/01/2020" placeholder="dd/mm/yyyy" type="text" class="govuk-input govuk-date-input__input ds_input  ds_input--fixed-8" />
-                    </div>
-                  </div>
-                  <!-- <fieldset class="govuk-fieldset" role="group">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
-                    <div class="govuk-date-input" id="end-date">
+                    <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="end-date">
 
                       <div class="govuk-date-input__item date-input-day">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-day" value="" name="end-date-day" type="text" inputmode="numeric">
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="end-date-day" value="" name="end-date-day" type="text" inputmode="numeric">
                         </div>
                       </div>
 
                       <div class="govuk-date-input__item date-input-month">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-month" value="" name="end-date-month" type="text" inputmode="numeric">
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="end-date-month" value="" name="end-date-month" type="text" inputmode="numeric">
                         </div>
                       </div>
 
                       <div class="govuk-date-input__item date-input-year">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-date-year" value="" name="end-date-year" type="text" inputmode="numeric">
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="end-date-year" value="" name="end-date-year" type="text" inputmode="numeric">
                         </div>
                       </div>
-
                     </div>
-                  </fieldset>-->
+                  </fieldset>
                 </div>
-                </div>
+              </div>
             </div>
 
             <div class="govuk-grid-row">
@@ -747,7 +709,7 @@
           <span id="notification-count">654</span>
             results
         </p>
-        
+
 
           <div class="table-responsive">
             <table id="notifications-table" class="govuk-!-width-full govuk-table">
