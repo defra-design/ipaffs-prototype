@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+      <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="navigation-links">
+    <a href="/index" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+
+    <div id="sign-out-section" class="information-banner">
+      <p class="information-banner__content">
+        <span>Percy-Inspector Tester</span>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="address-book-link"
+           href="/protected/notifications/address-book">
+          Address book
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="sign-out-link"
+           href="/protected/logout">
+          Sign out
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">About the consignment</span>
+
+      <form class="form" action="/IMPtoCHEDD/origin" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+                What are you importing?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="chedtype" type="radio" value="Live Animals">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  Live animals
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="chedtype" type="radio" value="Products of animal origin">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Products of animal origin
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="chedtype" type="radio" value="High risk food and feed of non-animal origin">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  High risk food and feed of non-animal origin
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="chedtype" type="radio" value="Plants, plant products and other objects">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  Plants, plant products and other objects
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
