@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+About the consignment – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+<span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEPP</span>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Purpose of the consignment</span>
+
+      <form class="form" action="check-answers" method="post">
+        <h1 class="govuk-heading-xl">About the consignment</h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                What is the purpose of the consignment?
+              </h2>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-of-consignment" name="consignment-purpose" type="radio" value="For internal market">
+                <label class="govuk-label govuk-radios__label" for="purpose-of-consignment">
+                  For internal market
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-of-consignment-2" name="consignment-purpose" type="radio" value="Transhipment / Onward travel">
+                <label class="govuk-label govuk-radios__label" for="purpose-of-consignment-2">
+                  Transhipment / Onward travel
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-of-consignment-3" name="consignment-purpose" type="radio" value="For re-entry">
+                <label class="govuk-label govuk-radios__label" for="purpose-of-consignment-3">
+                  For re-entry
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-of-consignment-4" name="consignment-purpose" type="radio" value="Transit">
+                <label class="govuk-label govuk-radios__label" for="purpose-of-consignment-4">
+                  Transit
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-of-consignment-5" name="consignment-purpose" type="radio" value="Private import">
+                <label class="govuk-label govuk-radios__label" for="purpose-of-consignment-5">
+                  Private import
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-of-consignment-6" name="consignment-purpose" type="radio" value="Transer to">
+                <label class="govuk-label govuk-radios__label" for="purpose-of-consignment-6">
+                  Transfer to
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="purpose-of-consignment-7" name="consignment-purpose" type="radio" value="For import re-conformity check">
+                <label class="govuk-label govuk-radios__label" for="purpose-of-consignment-7">
+                  For import re-conformity check
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
