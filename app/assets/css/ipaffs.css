@@ -7662,7 +7662,9 @@ only screen and (min-resolution: 2dppx) {
     position: relative;
     display: block;
     line-height: 25px;
-    padding-top: 5px;
+    /* padding-top: 5px; removed - millie */
+    /* new margin bottom css - millie */
+    margin-bottom: 0 !important;
     word-wrap: break-word
 }
 
@@ -7698,7 +7700,9 @@ only screen and (min-resolution: 2dppx) {
 }
 
 .commodity-selection-breadcrumb nav .commodity-list ul li span {
-    line-height: 38px
+    /* remove line height and added padding bottom - millie */
+    /* line-height: 38px */
+    padding-bottom: 15px;
 }
 
 .commodity-tree {
@@ -7709,6 +7713,7 @@ only screen and (min-resolution: 2dppx) {
 .commodity-tree details summary {
     display: inline-block;
     color: #005ea5;
+    
     cursor: pointer;
     position: relative;
     margin-bottom: 0
@@ -7760,15 +7765,20 @@ only screen and (min-resolution: 2dppx) {
 
 .commodity-code-box {
     display: inline-block;
-    margin: 0 2px;
-    padding: 8px 5px 5px;
+     /* changed marging from '0 2px' to '5px 2px' - millie */
+    margin: 5px 2px;
+     /* changed padding from '8px 5px 5px' to '3px 5px 5px' - millie */
+    padding: 3px 5px 5px;
     font-family: "nta", "Arial", sans-serif;
     font-weight: 700;
-    text-transform: uppercase;
+    /* changed text transform to capitalize - millie */
+    text-transform: lowercase !important;
     text-decoration: none;
     color: #fff;
-    background-color: #005ea5;
-    width: 25px;
+    /* background-color: #005ea5; - millie */
+    background-color: #5694ca;
+    /* changed width from 25px to 30px - millie */
+    width: 30px;
     text-align: center;
     vertical-align: top
 }
