@@ -2,34 +2,17 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-phase-banner" style="margin-top: -46px;">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
-    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
-  </p>
-</div>
 
-<div class="navigation-links">
-    <a href="index.html" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
-  <div id="sign-out-section" class="information-banner">
-    <p class="information-banner__content">
-      <span>Percy Plants</span>
-      <span>|</span>
-      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
-        Address book
-      </a>
-      <span>|</span>
-      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
-        Sign out
-      </a>
-    </p>
-  </div>
-</div>
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="import-type-page">
