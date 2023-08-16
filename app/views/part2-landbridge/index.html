@@ -1,0 +1,2702 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="notifications-page">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl" id="page-primary-title">Import notifications</h1>
+      <form action="/decision/tst/protected/bip-notifications" method="post" id="bip-dpe-filter-form">
+          <input name="crumb" type="hidden" value="kgU4TC7nPP_-2aB-8aFKnakm1Y9P_8qPdlMjvWXGt_6">
+          <input name="etag" type="hidden" value="">
+          <input name="selectedAlertType" type="hidden" value="">
+              <div class="govuk-!-display-block">
+                  <label for="bip-select" class="govuk-label display-inline-block govuk-!-margin-right-3">Select BCP:</label>
+                  <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="bip-select" name="bip">
+                      <option value="">All</option>
+                      <option value="GBBOH4PP">(Hurn) Bournemouth Airport (plants) (undesignated) - GBBOH4PP</option>
+                      <option value="Test070820">070820t1 tester ltd - Test070820</option>
+                      <option value="Test200820">200820t1 tester Ltd - Test200820</option>
+                      <option value="GBAHB4PP">Aberdeen Harbour Board (plants) - GBAHB4PP</option>
+                      <option value="LINKS182">AD links limited - LINKS182</option>
+                      <option value="beta">APHA - beta</option>
+                      <option value="GBABP4PP">Associated British Ports, Ayr (plants) (undesignated) - GBABP4PP</option>
+                      <option value="GBAVM4PP">Avonmouth (plants) (undesignated) - GBAVM4PP</option>
+                      <option value="B2CLTD">B2C Limited - B2CLTD</option>
+                      <option value="GBBCW4PP">Baltic Wharf (plants) (undesignated) - GBBCW4PP</option>
+                      <option value="REL136">Bananas - REL136</option>
+                      <option value="GBBEL1">Belfast Airport - GBBEL1</option>
+                      <option value="BelfPort2">Belfast Pharmaceuticals - BelfPort2</option>
+                      <option value="1">Belfast Pharmaceuticals - 1</option>
+                      <option value="0101">Belfast Pharmaceuticals - 0101</option>
+                      <option value="0102">Belfast Pharmaceuticals - 0102</option>
+                      <option value="33311">Belfast Pharmaceuticals - 33311</option>
+                      <option value="GBBEL4">Belfast Port - GBBEL4</option>
+                      <option value="BPTestAdd">Belfast Port - BPTestAdd</option>
+                      <option value="BhmAllIn1">Birmingham International Airport - BhmAllIn1</option>
+                      <option value="GBBXH4PP">Birmingham International Airport (plants) - GBBXH4PP</option>
+                      <option value="BSON123">Blackburn &amp; Sons - BSON123</option>
+                      <option value="BBS1456">Blackburn &amp; Sons - BBS1456</option>
+                      <option value="GBBRS1">Bristol - GBBRS1</option>
+                      <option value="TST92BCP">Bristol - TST92BCP</option>
+                      <option value="BSCHPDtmp">Bristol - BSCHPDtmp</option>
+                      <option value="DRIO">Bristol - DRIO</option>
+                      <option value="DRIP555">Bristol - DRIP555</option>
+                      <option value="GBCTM4PP">Chatham (plants) (undesignated) - GBCTM4PP</option>
+                      <option value="REL94">Chicken Solutions - REL94</option>
+                      <option value="CONPNT">Control Point - CONPNT</option>
+                      <option value="GBDSA4P">Doncaster Sheffield Airport - GBDSA4P</option>
+                      <option value="GBDOV2P">Dover Harbour (Deep Sea Terminal) - GBDOV2P</option>
+                      <option value="GBDOV1P">Dover Port - GBDOV1P</option>
+                      <option value="GBDOV1PP">Dover Port (plants) - GBDOV1PP</option>
+                      <option value="GBDND4PP">Dundee Port (plants) (undesignated) - GBDND4PP</option>
+                      <option value="GBEMA4">East Midlands Airport - GBEMA4</option>
+                      <option value="GBEMA4PP">East Midlands Airport (plants) - GBEMA4PP</option>
+                      <option value="GBNOTT1">EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - GBNOTT1</option>
+                      <option value="NOTTS0123">EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - NOTTS0123</option>
+                      <option value="GBEDI4TALL">Edinburgh Airport - GBEDI4TALL</option>
+                      <option value="GBEDI4">Edinburgh Airport (animals) - GBEDI4</option>
+                      <option value="GBEDI4PP">Edinburgh Airport (plants) - GBEDI4PP</option>
+                      <option value="GBFXT1">Felixstowe - GBFXT1</option>
+                      <option value="GBFSH4PP">Fishguard Harbour (plants) (undesignated) - GBFSH4PP</option>
+                      <option value="GBFOL4PP">Folkestone (plants) (undesignated) - GBFOL4PP</option>
+                      <option value="GBLGW1">Gatwick Airport - GBLGW1</option>
+                      <option value="GBLGW4">Gatwick Airport (animals) - GBLGW4</option>
+                      <option value="GBLGW4PP">Gatwick Airport (plants) - GBLGW4PP</option>
+                      <option value="GBGLA4PP">Glasgow Airport (plants) - GBGLA4PP</option>
+                      <option value="GBHUL1G">Goole - GBHUL1G</option>
+                      <option value="GBGOO4PP">Goole Port (plants) (undesignated) - GBGOO4PP</option>
+                      <option value="GBGRP4PP">Grangemouth Port (plants) - GBGRP4PP</option>
+                      <option value="GBGOT4PP">Greenock Ocean Terminal (Peel Ports) (plants) (undesignated) - GBGOT4PP</option>
+                      <option value="GBGSY1">Grimsby and Immingham - GBGSY1</option>
+                      <option value="GBGRM4PP">Grimsby Port (plants) (undesignated) - GBGRM4PP</option>
+                      <option value="GBHRT4PP">Hartlepool (plants) (undesignated) - GBHRT4PP</option>
+                      <option value="GBHRW1P">Harwich - GBHRW1P</option>
+                      <option value="GBHCH4PP">Harwich International Port (plants) - GBHCH4PP</option>
+                      <option value="GBLHR1P">Heathrow Airport - APH (products) - GBLHR1P</option>
+                      <option value="GBLHR4P">Heathrow Airport - Eurobip (products) - GBLHR4P</option>
+                      <option value="GBLHR4A">Heathrow Airport - HARC (animals) - GBLHR4A</option>
+                      <option value="GBLHR4PP">Heathrow Airport (plants) - GBLHR4PP</option>
+                      <option value="GBHBT1PP">HES Humber Bulk Terminal (Plant products, Other objects) - GBHBT1PP</option>
+                      <option value="GBHYS4PP">Heysham Port (plants) (undesignated) - GBHYS4PP</option>
+                      <option value="GBHLY4PP">Holyhead Port (plants) (undesignated) - GBHLY4PP</option>
+                      <option value="GBHUL1H">Hull - GBHUL1H</option>
+                      <option value="GBHLL4PP">Hull Port (plants) (undesignated) - GBHLL4PP</option>
+                      <option value="GBIMM4PP">Immingham Port (plants) (undesignated) - GBIMM4PP</option>
+                      <option value="GBIVG1">Invergordon - GBIVG1</option>
+                      <option value="GBIVG4PP">Invergordon (plants) (undesignated) - GBIVG4PP</option>
+                      <option value="GBIVN4PP">Inverness Harbour (plants) (undesignated) - GBIVN4PP</option>
+                      <option value="GBIPS1P">Ipswich - GBIPS1P</option>
+                      <option value="GBIPS4PP">Ipswich Port  (plants) (undesignated) - GBIPS4PP</option>
+                      <option value="TST89TEST">Jemma BIP - TST89TEST</option>
+                      <option value="R135">Kainos - R135</option>
+                      <option value="Kang101">KangarooRUs Limited - Kang101</option>
+                      <option value="GBKLG4PP">Killingholme Port (plants) (undesignated) - GBKLG4PP</option>
+                      <option value="GBKLP4PP">Kings Lynn Port (plants) - GBKLP4PP</option>
+                      <option value="GBKRK4PP">Kirkcaldy Port (plants) (undesignated) - GBKRK4PP</option>
+                      <option value="GBLBA4PP">Leeds Bradford Airport (plants) (undesignated) - GBLBA4PP</option>
+                      <option value="GBLTH4PP">Leith Port (plants) (undesignated) - GBLTH4PP</option>
+                      <option value="GBLIV1">Liverpool - GBLIV1</option>
+                      <option value="GBLPL4PP">Liverpool John Lennon Airport (plants) (undesignated) - GBLPL4PP</option>
+                      <option value="GBLIV1PP">Liverpool Port (plants) - GBLIV1PP</option>
+                      <option value="GBLGP1">London Gateway - GBLGP1</option>
+                      <option value="GBLGP1PP">London Gateway (plants) - GBLGP1PP</option>
+                      <option value="LtnCA111">London Luton Airport - LtnCA111</option>
+                      <option value="LtnCP111">London Luton Airport - LtnCP111</option>
+                      <option value="LtnCPP111">London Luton Airport - LtnCPP111</option>
+                      <option value="LtnCD111">London Luton Airport - LtnCD111</option>
+                      <option value="LTCH111tmp">London Luton Airport - LTCH111tmp</option>
+                      <option value="GBLSH1">London Sheerness - GBLSH1</option>
+                      <option value="GBTHP1">London Thamesport - GBTHP1</option>
+                      <option value="GBTHP1PP">London Thamesport (plants) - GBTHP1PP</option>
+                      <option value="GBTIL1">London Tilbury - GBTIL1</option>
+                      <option value="GBLTN4PP">Luton Airport (plants) - GBLTN4PP</option>
+                      <option value="GBMNC1">Manchester airport - GBMNC1</option>
+                      <option value="Y-RelT-UK">Manchester Airport - Y-RelT-UK</option>
+                      <option value="GBMNC4">Manchester Airport (animals) - GBMNC4</option>
+                      <option value="GBMNC4PP">Manchester Airport (plants) - GBMNC4PP</option>
+                      <option value="GBMEP1P">Manchester Ellesmere port - GBMEP1P</option>
+                      <option value="GBMTH4PP">Methil Port (plants) (undesignated) - GBMTH4PP</option>
+                      <option value="GBMIL4PP">Milford Haven (plants) (undesignated) - GBMIL4PP</option>
+                      <option value="REL130">Minty Green Tea - REL130</option>
+                      <option value="GBMTR4PP">Montrose Port  (plants) (undesignated) - GBMTR4PP</option>
+                      <option value="GBNCL4PP">Newcastle Airport (plants) (undesignated) - GBNCL4PP</option>
+                      <option value="GBNCP4PP">Newcastle Tyne Port (plants) (undesignated) - GBNCP4PP</option>
+                      <option value="GBNWH4PP">Newhaven Port (plants) (undesignated) - GBNWH4PP</option>
+                      <option value="34354">Non-BCP Heathrow - 34354</option>
+                      <option value="241">Non-BCP Heathrow - 241</option>
+                      <option value="rel98T">Org A+FishExport+sole - rel98T</option>
+                      <option value="GBPEM4PP">Pembroke Port (plants) (undesignated) - GBPEM4PP</option>
+                      <option value="Rel8.8">Performance Testing - Rel8.8</option>
+                      <option value="GBPHD1">Peterhead - GBPHD1</option>
+                      <option value="GBPLH4PP">Plymouth City Airport (plants) (undesignated) - GBPLH4PP</option>
+                      <option value="POP4321">PopCorn Christmas LTD - POP4321</option>
+                      <option value="POP987">PopCorn Christmas LTD - POP987</option>
+                      <option value="POP123">PopCorn Christmas LTD - POP123</option>
+                      <option value="POP1212">PopCorn Christmas LTD - POP1212</option>
+                      <option value="POP80">PopCorn Christmas LTD - POP80</option>
+                      <option value="POP82">PopCorn Christmas LTD - POP82</option>
+                      <option value="REL122">PopCorn Christmas LTD - REL122</option>
+                      <option value="POP124T">PopCorn Christmas LTD - POP124T</option>
+                      <option value="GBBOS4PP">Port of Boston (plants) (undesignated) - GBBOS4PP</option>
+                      <option value="GBFXT1PP">Port of Felixstowe (plants) - GBFXT1PP</option>
+                      <option value="GBPLP4PP">Port of Plymouth (plants) (undesignated) - GBPLP4PP</option>
+                      <option value="GBPOP4PP">Port of Poole  (plants) (undesignated) - GBPOP4PP</option>
+                      <option value="GBPOS4PP">Port of Silloth (plants) (undesignated) - GBPOS4PP</option>
+                      <option value="GBPME1P">Portsmouth - GBPME1P</option>
+                      <option value="GBPME1PP">Portsmouth (plants) - GBPME1PP</option>
+                      <option value="GBPIK4">Prestwick Airport (animals) - GBPIK4</option>
+                      <option value="GBPFP4PP">Purfeet Port (plants) (undesignated) - GBPFP4PP</option>
+                      <option value="Coffee123">Rooster Coffee Roasters - Coffee123</option>
+                      <option value="GBROS4PP">Rosyth Port (plants) (undesignated) - GBROS4PP</option>
+                      <option value="GBSNP4PP">Sheerness Port (plants) (undesignated) - GBSNP4PP</option>
+                      <option value="GBSHP4PP">Shoreham Port (plants) - GBSHP4PP</option>
+                      <option value="BCC123456">Sole Trader for R.MA.009 - BCC123456</option>
+                      <option value="5234128877">Sole Trader Number 3 - 5234128877</option>
+                      <option value="GBSOU1">Southampton - GBSOU1</option>
+                      <option value="GBSOU1PP">Southampton (plants) - GBSOU1PP</option>
+                      <option value="GBSTN4ATp">Stansted - GBSTN4ATp</option>
+                      <option value="GBSTNAPED">Stansted Airport - GBSTNAPED</option>
+                      <option value="GBSTN4A">Stansted Airport (animals) - GBSTN4A</option>
+                      <option value="GBSTN4PP">Stansted Airport (plants) - GBSTN4PP</option>
+                      <option value="GBSTN4P">Stansted Airport (products) - GBSTN4P</option>
+                      <option value="GBTEE1P">Teesport - GBTEE1P</option>
+                      <option value="GBTES4PP">Teesport (plants) (undesignated) - GBTES4PP</option>
+                      <option value="GBTEE4PP">Teesside International Airport Limited (plant products) - GBTEE4PP</option>
+                      <option value="BCP1342">Test TST Org - BCP1342</option>
+                      <option value="BCP3JUL23">Test TST Org - BCP3JUL23</option>
+                      <option value="GBTLB4PP">Tilbury 2 Ro-Ro Terminal (plants) (undesignated) - GBTLB4PP</option>
+                      <option value="GBTIL1PP">Tilbury Port (plants) - GBTIL1PP</option>
+                      <option value="BCCODE">tster - BCCODE</option>
+                      <option value="GBTYN4P">Tyne - GBTYN4P</option>
+                      <option value="TYNFRE">Tyneside Freeport - TYNFRE</option>
+                      <option value="GBDNU1">X Do Not Use X - GBDNU1</option>
+                  </select>
+                  <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" id="change-bip-filter">
+                      Apply
+                  </button>
+              </div>
+      </form>        <div class="govuk-notification-banner govuk-!-margin-bottom-6 govuk-!-margin-top-6">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              High priority tasks
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <strong>Check consignments from EU that have:</strong>
+            <ul class="high-priority-task-banner-list" id="high-priority-task-banner-list">
+              <li>
+                <strong>outstanding documentary checks to complete</strong>
+              </li>
+              <li>
+                <strong>Inspections in the next 24 hours, or should have been inspected recently</strong>
+              </li>
+            </ul>
+            <strong>
+              <a class="govuk-notification-banner__link" href="/decision/tst/protected/bip-notifications/high-priority-tasks-documentary" id="view-high-priority-tasks">View high priority tasks</a>
+            </strong>
+          </div>
+        </div>
+      <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box">
+              <h2 class="govuk-heading-m alert-dashboard-summary-heading">My alerts</h2>
+          <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list">
+                  <li>
+                          <a id="alert-description-ALL" href="/decision/tst/protected/bip-notifications/alerts?type=ALL">View all</a>
+                  </li>
+                  <li>
+                          <a id="alert-description-INSPECTION_REQUIRED" href="/decision/tst/protected/bip-notifications/alerts?type=INSPECTION_REQUIRED">636&nbsp;notifications require an inspection</a>
+                  </li>
+                  <li>
+                          <a id="alert-description-SUBMITTED" href="/decision/tst/protected/bip-notifications/alerts?type=SUBMITTED">96520&nbsp;notifications in New status</a>
+                  </li>
+                  <li>
+                          <a id="alert-description-REJECTED_FOR_DECISION" href="/decision/tst/protected/bip-notifications/alerts?type=REJECTED_FOR_DECISION">4&nbsp;notifications changed to Rejected status</a>
+                  </li>
+                  <li>
+                          <a id="alert-description-FOLLOW_UP_ACTION" href="/decision/tst/protected/bip-notifications/alerts?type=FOLLOW_UP_ACTION">81&nbsp;notifications have no follow-up action after 7 days</a>
+                  </li>
+                  <li>
+                          <a id="alert-description-PENDING_LAB_TESTS" href="/decision/tst/protected/bip-notifications/alerts?type=PENDING_LAB_TESTS">145&nbsp;notifications have no laboratory test conclusion after 7 days</a>
+                  </li>
+                  <li>
+                          <a id="alert-description-CONTROL_REQUIRED" href="/decision/tst/protected/bip-notifications/alerts?type=CONTROL_REQUIRED">68&nbsp;notifications require control as the Exit BCP</a>
+                  </li>
+          </ul>
+      </div>
+      <form action="/decision/tst/protected/bip-notifications" method="post" class="search-and-filter-form">
+        <input name="crumb" type="hidden" value="kgU4TC7nPP_-2aB-8aFKnakm1Y9P_8qPdlMjvWXGt_6">
+        <input name="filterButtonClicked" type="hidden" value="">
+        <input name="searchButtonClicked" type="hidden" value="">
+      
+        <div class="govuk-form-group search-panel">
+          <input class="button search-hidden" type="submit" value="HiddenSearch">
+      
+          <h4 class="govuk-heading-m">Search CHEDs by</h4>
+      
+          <div class="govuk-grid-row govuk-!-margin-bottom-5">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--s" for="keywords">
+                    Keywords or CHED number
+                  </label>
+                  
+              
+                  <span id="keywords-hint" class="govuk-hint">
+                    For example: reference, destination, consignor, transporter, documents
+                  </span>
+              
+                
+              
+                <input class="govuk-input  " id="keywords" name="keywords" type="text" value="" aria-describedby="keywords-hint">
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--s" for="commodity">
+                    Commodity
+                  </label>
+                  
+              
+                  <span id="commodity-hint" class="govuk-hint">
+                    Code or description
+                  </span>
+              
+                
+              
+                <input class="govuk-input  " id="commodity" name="commodity" type="text" value="" aria-describedby="commodity-hint">
+              </div>
+            </div>
+          </div>
+          <div class="govuk-grid-row govuk-!-margin-bottom-5">
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--s" for="certificateStatus">
+                    CHED status
+                  </label>
+                  
+              
+              
+                
+              
+                <select class="govuk-select govuk-!-width-full" id="certificateStatus" name="certificateStatus">
+                    <option value="">All</option>
+                    <option value="TO_PROCESS">To process</option>
+                    <option value="SUBMITTED">New</option>
+                    <option value="MODIFY">Modify</option>
+                    <option value="IN_PROGRESS">In progress</option>
+                    <option value="VALIDATED">Valid</option>
+                    <option value="REJECTED">Rejected</option>
+                    <option value="CANCELLED">Cancelled</option>
+                    <option value="REPLACED">Replaced</option>
+                    <option value="PARTIALLY_REJECTED">Partially Rejected</option>
+                    <option value="SPLIT_CONSIGNMENT">Split Consignment</option>
+                </select>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--s" for="certificateType">
+                    CHED type
+                  </label>
+                  
+              
+              
+                
+              
+                <select class="govuk-select govuk-!-width-full" id="certificateType" name="certificateType">
+                    <option value="">All</option>
+                    <option value="CVEDA">CHED-A</option>
+                    <option value="CVEDP">CHED-P</option>
+                    <option value="CHEDPP">CHED-PP</option>
+                    <option value="CED">CHED-D</option>
+                </select>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="country-select">Country of origin</label>
+                <select class="govuk-select govuk-!-width-full" id="country-select" name="countryOfOrigin">
+                    <optgroup label="Countries">
+                      <option value="">All</option>
+                      <option value="EEA">
+                        European Union/EEA and Northern Ireland
+                      </option>
+                      <option value="GB-CI">
+                        Great Britain and Channel Islands
+                      </option>
+                      <option value="ROW">
+                        Rest of World
+                      </option>
+                    </optgroup>
+                    <optgroup label="Country">
+                        <option value="AF">
+                          Afghanistan
+                        </option>
+                        <option value="AX">
+                          Aland Islands
+                        </option>
+                        <option value="AL">
+                          Albania
+                        </option>
+                        <option value="DZ">
+                          Algeria
+                        </option>
+                        <option value="AS">
+                          American Samoa
+                        </option>
+                        <option value="AD">
+                          Andorra
+                        </option>
+                        <option value="AO">
+                          Angola
+                        </option>
+                        <option value="AI">
+                          Anguilla
+                        </option>
+                        <option value="AQ">
+                          Antarctica
+                        </option>
+                        <option value="AG">
+                          Antigua and Barbuda
+                        </option>
+                        <option value="AR">
+                          Argentina
+                        </option>
+                        <option value="AM">
+                          Armenia
+                        </option>
+                        <option value="AW">
+                          Aruba
+                        </option>
+                        <option value="AU">
+                          Australia
+                        </option>
+                        <option value="AT">
+                          Austria
+                        </option>
+                        <option value="AZ">
+                          Azerbaijan
+                        </option>
+                        <option value="BS">
+                          Bahamas
+                        </option>
+                        <option value="BH">
+                          Bahrain
+                        </option>
+                        <option value="BD">
+                          Bangladesh
+                        </option>
+                        <option value="BB">
+                          Barbados
+                        </option>
+                        <option value="BY">
+                          Belarus
+                        </option>
+                        <option value="BE">
+                          Belgium
+                        </option>
+                        <option value="BZ">
+                          Belize
+                        </option>
+                        <option value="BJ">
+                          Benin
+                        </option>
+                        <option value="BM">
+                          Bermuda
+                        </option>
+                        <option value="BT">
+                          Bhutan
+                        </option>
+                        <option value="BO">
+                          Bolivia
+                        </option>
+                        <option value="BQ">
+                          Bonaire, Sint Eustatius and Saba
+                        </option>
+                        <option value="BA">
+                          Bosnia and Herzegovina
+                        </option>
+                        <option value="BW">
+                          Botswana
+                        </option>
+                        <option value="BV">
+                          Bouvet Island
+                        </option>
+                        <option value="BR">
+                          Brazil
+                        </option>
+                        <option value="IO">
+                          British Indian Ocean Territory
+                        </option>
+                        <option value="VG">
+                          British Virgin Islands
+                        </option>
+                        <option value="BN">
+                          Brunei
+                        </option>
+                        <option value="BG">
+                          Bulgaria
+                        </option>
+                        <option value="BF">
+                          Burkina Faso
+                        </option>
+                        <option value="BI">
+                          Burundi
+                        </option>
+                        <option value="KH">
+                          Cambodia
+                        </option>
+                        <option value="CM">
+                          Cameroon
+                        </option>
+                        <option value="CA">
+                          Canada
+                        </option>
+                        <option value="ES-CN">
+                          Canary Islands
+                        </option>
+                        <option value="CV">
+                          Cape Verde
+                        </option>
+                        <option value="KY">
+                          Cayman Islands
+                        </option>
+                        <option value="CF">
+                          Central African Republic
+                        </option>
+                        <option value="TD">
+                          Chad
+                        </option>
+                        <option value="CL">
+                          Chile
+                        </option>
+                        <option value="CN">
+                          China
+                        </option>
+                        <option value="CX">
+                          Christmas Island
+                        </option>
+                        <option value="CC">
+                          Cocos (Keeling) Islands
+                        </option>
+                        <option value="CO">
+                          Colombia
+                        </option>
+                        <option value="KM">
+                          Comoros
+                        </option>
+                        <option value="CG">
+                          Congo
+                        </option>
+                        <option value="CK">
+                          Cook Islands
+                        </option>
+                        <option value="CR">
+                          Costa Rica
+                        </option>
+                        <option value="CI">
+                          Côte d'Ivoire
+                        </option>
+                        <option value="HR">
+                          Croatia
+                        </option>
+                        <option value="CU">
+                          Cuba
+                        </option>
+                        <option value="CW">
+                          Curaçao
+                        </option>
+                        <option value="CY">
+                          Cyprus
+                        </option>
+                        <option value="CZ">
+                          Czech Republic
+                        </option>
+                        <option value="CD">
+                          Democratic Republic of the Congo
+                        </option>
+                        <option value="DK">
+                          Denmark
+                        </option>
+                        <option value="DJ">
+                          Djibouti
+                        </option>
+                        <option value="DM">
+                          Dominica
+                        </option>
+                        <option value="DO">
+                          Dominican Republic
+                        </option>
+                        <option value="EC">
+                          Ecuador
+                        </option>
+                        <option value="EG">
+                          Egypt
+                        </option>
+                        <option value="SV">
+                          El Salvador
+                        </option>
+                        <option value="GQ">
+                          Equatorial Guinea
+                        </option>
+                        <option value="ER">
+                          Eritrea
+                        </option>
+                        <option value="EE">
+                          Estonia
+                        </option>
+                        <option value="SZ">
+                          Eswatini
+                        </option>
+                        <option value="ET">
+                          Ethiopia
+                        </option>
+                        <option value="FK">
+                          Falkland Islands
+                        </option>
+                        <option value="FO">
+                          Faroe Islands
+                        </option>
+                        <option value="FJ">
+                          Fiji
+                        </option>
+                        <option value="FI">
+                          Finland
+                        </option>
+                        <option value="FR">
+                          France
+                        </option>
+                        <option value="GF">
+                          French Guiana
+                        </option>
+                        <option value="PF">
+                          French Polynesia
+                        </option>
+                        <option value="TF">
+                          French Southern Territories
+                        </option>
+                        <option value="GA">
+                          Gabon
+                        </option>
+                        <option value="GE">
+                          Georgia
+                        </option>
+                        <option value="DE">
+                          Germany
+                        </option>
+                        <option value="GH">
+                          Ghana
+                        </option>
+                        <option value="GI">
+                          Gibraltar
+                        </option>
+                        <option value="GR">
+                          Greece
+                        </option>
+                        <option value="GL">
+                          Greenland
+                        </option>
+                        <option value="GD">
+                          Grenada
+                        </option>
+                        <option value="GP">
+                          Guadeloupe
+                        </option>
+                        <option value="GU">
+                          Guam
+                        </option>
+                        <option value="GT">
+                          Guatemala
+                        </option>
+                        <option value="GG">
+                          Guernsey
+                        </option>
+                        <option value="GN">
+                          Guinea
+                        </option>
+                        <option value="GW">
+                          Guinea-Bissau
+                        </option>
+                        <option value="GY">
+                          Guyana
+                        </option>
+                        <option value="HT">
+                          Haiti
+                        </option>
+                        <option value="HM">
+                          Heard Island and McDonald Islands
+                        </option>
+                        <option value="VA">
+                          Holy See
+                        </option>
+                        <option value="HN">
+                          Honduras
+                        </option>
+                        <option value="HK">
+                          Hong Kong
+                        </option>
+                        <option value="HU">
+                          Hungary
+                        </option>
+                        <option value="IS">
+                          Iceland
+                        </option>
+                        <option value="IN">
+                          India
+                        </option>
+                        <option value="ID">
+                          Indonesia
+                        </option>
+                        <option value="IR">
+                          Iran
+                        </option>
+                        <option value="IQ">
+                          Iraq
+                        </option>
+                        <option value="IM">
+                          Isle of Man
+                        </option>
+                        <option value="IL">
+                          Israel
+                        </option>
+                        <option value="IT">
+                          Italy
+                        </option>
+                        <option value="JM">
+                          Jamaica
+                        </option>
+                        <option value="JP">
+                          Japan
+                        </option>
+                        <option value="JE">
+                          Jersey
+                        </option>
+                        <option value="JO">
+                          Jordan
+                        </option>
+                        <option value="KZ">
+                          Kazakhstan
+                        </option>
+                        <option value="KE">
+                          Kenya
+                        </option>
+                        <option value="KI">
+                          Kiribati
+                        </option>
+                        <option value="XK">
+                          Kosovo
+                        </option>
+                        <option value="KW">
+                          Kuwait
+                        </option>
+                        <option value="KG">
+                          Kyrgyzstan
+                        </option>
+                        <option value="LA">
+                          Laos
+                        </option>
+                        <option value="LV">
+                          Latvia
+                        </option>
+                        <option value="LB">
+                          Lebanon
+                        </option>
+                        <option value="LS">
+                          Lesotho
+                        </option>
+                        <option value="LR">
+                          Liberia
+                        </option>
+                        <option value="LY">
+                          Libya
+                        </option>
+                        <option value="LI">
+                          Liechtenstein
+                        </option>
+                        <option value="LT">
+                          Lithuania
+                        </option>
+                        <option value="LU">
+                          Luxembourg
+                        </option>
+                        <option value="MO">
+                          Macao
+                        </option>
+                        <option value="MG">
+                          Madagascar
+                        </option>
+                        <option value="MW">
+                          Malawi
+                        </option>
+                        <option value="MY">
+                          Malaysia
+                        </option>
+                        <option value="MV">
+                          Maldives
+                        </option>
+                        <option value="ML">
+                          Mali
+                        </option>
+                        <option value="MT">
+                          Malta
+                        </option>
+                        <option value="MH">
+                          Marshall Islands
+                        </option>
+                        <option value="MQ">
+                          Martinique
+                        </option>
+                        <option value="MR">
+                          Mauritania
+                        </option>
+                        <option value="MU">
+                          Mauritius
+                        </option>
+                        <option value="YT">
+                          Mayotte
+                        </option>
+                        <option value="MX">
+                          Mexico
+                        </option>
+                        <option value="FM">
+                          Micronesia
+                        </option>
+                        <option value="MD">
+                          Moldova
+                        </option>
+                        <option value="MC">
+                          Monaco
+                        </option>
+                        <option value="MN">
+                          Mongolia
+                        </option>
+                        <option value="ME">
+                          Montenegro
+                        </option>
+                        <option value="MS">
+                          Montserrat
+                        </option>
+                        <option value="MA">
+                          Morocco
+                        </option>
+                        <option value="MZ">
+                          Mozambique
+                        </option>
+                        <option value="MM">
+                          Myanmar
+                        </option>
+                        <option value="NA">
+                          Namibia
+                        </option>
+                        <option value="NR">
+                          Nauru
+                        </option>
+                        <option value="NP">
+                          Nepal
+                        </option>
+                        <option value="NL">
+                          Netherlands
+                        </option>
+                        <option value="NC">
+                          New Caledonia
+                        </option>
+                        <option value="NZ">
+                          New Zealand
+                        </option>
+                        <option value="NI">
+                          Nicaragua
+                        </option>
+                        <option value="NE">
+                          Niger
+                        </option>
+                        <option value="NG">
+                          Nigeria
+                        </option>
+                        <option value="NU">
+                          Niue
+                        </option>
+                        <option value="NF">
+                          Norfolk Island
+                        </option>
+                        <option value="KP">
+                          North Korea
+                        </option>
+                        <option value="MK">
+                          North Macedonia
+                        </option>
+                        <option value="MP">
+                          Northern Mariana Islands
+                        </option>
+                        <option value="NO">
+                          Norway
+                        </option>
+                        <option value="OM">
+                          Oman
+                        </option>
+                        <option value="PK">
+                          Pakistan
+                        </option>
+                        <option value="PW">
+                          Palau
+                        </option>
+                        <option value="PA">
+                          Panama
+                        </option>
+                        <option value="PG">
+                          Papua New Guinea
+                        </option>
+                        <option value="PY">
+                          Paraguay
+                        </option>
+                        <option value="PE">
+                          Peru
+                        </option>
+                        <option value="PH">
+                          Philippines
+                        </option>
+                        <option value="PN">
+                          Pitcairn
+                        </option>
+                        <option value="PL">
+                          Poland
+                        </option>
+                        <option value="PT">
+                          Portugal
+                        </option>
+                        <option value="PR">
+                          Puerto Rico
+                        </option>
+                        <option value="QA">
+                          Qatar
+                        </option>
+                        <option value="IE">
+                          Republic of Ireland
+                        </option>
+                        <option value="RE">
+                          Réunion
+                        </option>
+                        <option value="RO">
+                          Romania
+                        </option>
+                        <option value="RU">
+                          Russian Federation
+                        </option>
+                        <option value="RW">
+                          Rwanda
+                        </option>
+                        <option value="WS">
+                          Samoa
+                        </option>
+                        <option value="SM">
+                          San Marino
+                        </option>
+                        <option value="ST">
+                          Sao Tome and Principe
+                        </option>
+                        <option value="SA">
+                          Saudi Arabia
+                        </option>
+                        <option value="SN">
+                          Senegal
+                        </option>
+                        <option value="RS">
+                          Serbia
+                        </option>
+                        <option value="SC">
+                          Seychelles
+                        </option>
+                        <option value="SL">
+                          Sierra Leone
+                        </option>
+                        <option value="SG">
+                          Singapore
+                        </option>
+                        <option value="SK">
+                          Slovakia
+                        </option>
+                        <option value="SI">
+                          Slovenia
+                        </option>
+                        <option value="SB">
+                          Solomon Islands
+                        </option>
+                        <option value="SO">
+                          Somalia
+                        </option>
+                        <option value="ZA">
+                          South Africa
+                        </option>
+                        <option value="GS">
+                          South Georgia and the South Sandwich Islands
+                        </option>
+                        <option value="KR">
+                          South Korea
+                        </option>
+                        <option value="SS">
+                          South Sudan
+                        </option>
+                        <option value="ES">
+                          Spain
+                        </option>
+                        <option value="LK">
+                          Sri Lanka
+                        </option>
+                        <option value="BL">
+                          St Barthélemy
+                        </option>
+                        <option value="SH">
+                          St Helena, Ascension and Tristan da Cunha
+                        </option>
+                        <option value="KN">
+                          St Kitts and Nevis
+                        </option>
+                        <option value="LC">
+                          St Lucia
+                        </option>
+                        <option value="SX">
+                          St Maarten (Dutch)
+                        </option>
+                        <option value="MF">
+                          St Martin (French)
+                        </option>
+                        <option value="PM">
+                          St Pierre and Miquelon
+                        </option>
+                        <option value="VC">
+                          St Vincent and the Grenadines
+                        </option>
+                        <option value="SD">
+                          Sudan
+                        </option>
+                        <option value="SR">
+                          Suriname
+                        </option>
+                        <option value="SE">
+                          Sweden
+                        </option>
+                        <option value="CH">
+                          Switzerland
+                        </option>
+                        <option value="SY">
+                          Syria
+                        </option>
+                        <option value="TW">
+                          Taiwan
+                        </option>
+                        <option value="TJ">
+                          Tajikistan
+                        </option>
+                        <option value="TZ">
+                          Tanzania
+                        </option>
+                        <option value="TH">
+                          Thailand
+                        </option>
+                        <option value="GM">
+                          The Gambia
+                        </option>
+                        <option value="PS">
+                          The Occupied Palestinian Territories
+                        </option>
+                        <option value="TL">
+                          Timor-Leste
+                        </option>
+                        <option value="TG">
+                          Togo
+                        </option>
+                        <option value="TK">
+                          Tokelau
+                        </option>
+                        <option value="TO">
+                          Tonga
+                        </option>
+                        <option value="TT">
+                          Trinidad and Tobago
+                        </option>
+                        <option value="TN">
+                          Tunisia
+                        </option>
+                        <option value="TR">
+                          Turkey
+                        </option>
+                        <option value="TM">
+                          Turkmenistan
+                        </option>
+                        <option value="TC">
+                          Turks and Caicos Islands
+                        </option>
+                        <option value="TV">
+                          Tuvalu
+                        </option>
+                        <option value="UG">
+                          Uganda
+                        </option>
+                        <option value="UA">
+                          Ukraine
+                        </option>
+                        <option value="AE">
+                          United Arab Emirates
+                        </option>
+                        <option value="UM">
+                          United States Minor Outlying Islands
+                        </option>
+                        <option value="US">
+                          United States of America
+                        </option>
+                        <option value="UY">
+                          Uruguay
+                        </option>
+                        <option value="UZ">
+                          Uzbekistan
+                        </option>
+                        <option value="VU">
+                          Vanuatu
+                        </option>
+                        <option value="VE">
+                          Venezuela
+                        </option>
+                        <option value="VN">
+                          Viet Nam
+                        </option>
+                        <option value="VI">
+                          Virgin Islands of the United States
+                        </option>
+                        <option value="WF">
+                          Wallis and Futuna
+                        </option>
+                        <option value="EH">
+                          Western Sahara
+                        </option>
+                        <option value="YE">
+                          Yemen
+                        </option>
+                        <option value="ZM">
+                          Zambia
+                        </option>
+                        <option value="ZW">
+                          Zimbabwe
+                        </option>
+                    </optgroup>
+                    <optgroup label="United Kingdom of Great Britain and Northern Ireland">
+                        <option value="GB-ENG">
+                          England
+                        </option>
+                        <option value="GB-SCT">
+                          Scotland
+                        </option>
+                        <option value="GB-WLS">
+                          Wales
+                        </option>
+                        <option value="GB-NIR">
+                          Northern Ireland
+                        </option>
+                    </optgroup>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="govuk-grid-row govuk-!-margin-bottom-5">
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--s" for="consignee">
+                    Consignee
+                  </label>
+                  
+              
+              
+                
+              
+                <input class="govuk-input  " id="consignee" name="consignee" type="text" value="">
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--s" for="decision">
+                    Decision
+                  </label>
+                  
+              
+              
+                
+              
+                <select class="govuk-select govuk-!-width-full" id="decision" name="decision">
+                    <option value="">All</option>
+                    <option value="ACCEPTABLE_FOR_TRANSHIPMENT">Acceptable for transhipment</option>
+                    <option value="ACCEPTABLE_FOR_TRANSIT_PROCEDURE">Acceptable for transit procedure</option>
+                    <option value="ACCEPTABLE_FOR_DEFINITIVE_IMPORT">Acceptable for definitive import</option>
+                    <option value="ACCEPTABLE_FOR_TEMPORARY_ADMISSION">Acceptable for temporary admission</option>
+                    <option value="ACCEPTABLE_FOR_INTERNAL_MARKET">Acceptable for internal market</option>
+                    <option value="ACCEPTABLE_IF_CHANNELLED">Acceptable if channelled</option>
+                    <option value="ACCEPTABLE_FOR_SPECIFIC_WAREHOUSE_PROCEDURE">Acceptable for specific warehouse procedure</option>
+                    <option value="ACCEPTABLE_FOR_TRANSFER">Acceptable for transfer</option>
+                    <option value="ACCEPTABLE_FOR_RELEASE_AND_FREE_CIRCULATION">Acceptable for release and free circulation</option>
+                    <option value="NOT_ACCEPTABLE">Not acceptable</option>
+                </select>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label govuk-label--s" for="riskOutcome">
+                      Risk outcome
+                    </label>
+                    
+                
+                
+                  
+                
+                  <select class="govuk-select govuk-!-width-full" id="riskOutcome" name="riskOutcome">
+                      <option value="">All</option>
+                      <option value="Required">Inspect</option>
+                      <option value="Not required">No inspection</option>
+                      <option value="Inconclusive">Inconclusive</option>
+                  </select>
+                </div>
+            </div>
+          </div>
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label govuk-label--s" for="microchipNumber">
+                      Microchip number
+                    </label>
+                    
+                
+                
+                  
+                
+                  <input class="govuk-input  " id="microchipNumber" name="microchipNumber" type="text" value="">
+                </div>
+              </div>
+            </div>
+      
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <button class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" data-module="govuk-button" name="searchButton" value="true">
+                Search
+              </button>
+              <a href="/decision/tst/protected/bip-notifications?searchClear=true" class="govuk-link clear-link">
+                Clear
+              </a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="govuk-form-group search-panel">
+          <div class="form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Filter by arrival date and time
+                </legend>
+                <div class="govuk-link govuk-!-font-size-19 ">
+                  <button type="submit" class="link-button govuk-!-padding-right-5 govuk-!-padding-bottom-5" name="dateRange" value="today" id="Button-Today">Today
+                  </button>
+                  <button type="submit" class="link-button govuk-!-padding-right-5 govuk-!-padding-bottom-5" name="dateRange" value="tomorrow" id="Button-Tomorrow">Tomorrow
+                  </button>
+                  <button type="submit" class="link-button govuk-!-padding-right-5 govuk-!-padding-bottom-5" name="dateRange" value="nextSevenDays" id="Button-Next-Seven-Days">Next seven days
+                  </button>
+                </div>
+              </fieldset>
+        
+          </div>
+          <div class="govuk-grid-row govuk-!-margin-bottom-5">
+            <div class="govuk-grid-column-one-half">
+              <div class="form-group ">
+                <fieldset class="govuk-fieldset" role="group">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    Start date
+                    <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0">For example, 27 3 2022</span>
+                  </legend>
+                  <div class="govuk-date-input date-input--picker" id="start-date" data-module="accessible-datepicker">
+                    <div class="govuk-date-input__item date-input-day">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" maxlength="2" name="start-date-day" value="">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item date-input-month">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" maxlength="2" name="start-date-month" value="">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item date-input-year">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" maxlength="4" name="start-date-year" value="">
+                      </div>
+                    </div>
+                  <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                    <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-36" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-36"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <div class="form-group ">
+                <fieldset class="govuk-fieldset" role="group">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    End date
+                    <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0">For example, 27 3 2022</span>
+                  </legend>
+                  <div class="govuk-date-input date-input--picker" id="end-date" data-module="accessible-datepicker">
+                    <div class="govuk-date-input__item date-input-day">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="end-date-day" maxlength="2" name="end-date-day" value="">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item date-input-month">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="end-date-month" maxlength="2" name="end-date-month" value="">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item date-input-year">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="end-date-year" maxlength="4" name="end-date-year" value="">
+                      </div>
+                    </div>
+                  <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                    <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-3" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-3"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        
+          <div class="govuk-grid-row govuk-!-margin-bottom-5">
+            <div class="govuk-grid-column-one-half">
+              <div class="govuk-form-group " id="search-time">
+                  <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          Start time (optional)
+                          <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0">For example, 14 50</span>
+                      </legend>
+                      <span class="form-label-bold"></span>
+                      
+                      
+                      <div class="govuk-date-input" id="start-time">
+                          <div class="govuk-date-input__item date-input-hour">
+                              <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="start-time-hour">
+                                      Hour
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                              </div>
+                          </div>
+                          <div class="govuk-date-input__item date-input-minute">
+                              <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="start-time-minute">
+                                      Minutes
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
+                              </div>
+                          </div>
+                      </div>
+                  </fieldset>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <div class="govuk-form-group " id="search-time">
+                  <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          End time (optional)
+                          <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0">For example, 14 50</span>
+                      </legend>
+                      <span class="form-label-bold"></span>
+                      
+                      
+                      <div class="govuk-date-input" id="end-time">
+                          <div class="govuk-date-input__item date-input-hour">
+                              <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="end-time-hour">
+                                      Hour
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-hour" name="end-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                              </div>
+                          </div>
+                          <div class="govuk-date-input__item date-input-minute">
+                              <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="end-time-minute">
+                                      Minutes
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-minute" name="end-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
+                              </div>
+                          </div>
+                      </div>
+                  </fieldset>
+              </div>
+            </div>
+          </div>
+        
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <button class="govuk-button govuk-!-margin-0" id="filter-notifications" type="submit" data-module="govuk-button" name="filterButton" value="true">Filter
+              </button>
+              <button type="submit" class="link-button govuk-!-padding-left-2 govuk-!-padding-top-2" name="clearDateRange" value="clearRange" id="clear-date-range">Clear filter
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="govuk-!-margin-bottom-6">
+          <a id="archiveNotificationLink" href="/notification/tst/protected/notifications/archived-notifications" class="govuk-link link-button">
+            Recover notifications from archive
+          </a>
+        </div>
+      
+        <p class="govuk-heading-s govuk-!-margin-bottom-2">
+          <span id="notification-count">1703163</span>
+            <span id="results">results</span>
+        </p>
+      
+        <div class="govuk-!-margin-bottom-2">
+          <label for="orderBy" class="govuk-label govuk-!-display-inline-block">Sort by:</label>
+          <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="orderBy" name="orderBy">
+            <option value="arrivalDateTimeDesc">
+              Arrival (newest to oldest)
+            </option>
+            <option value="arrivalDateTimeAsc">
+              Arrival (oldest to newest)
+            </option>
+          </select>
+          <button id="sort-notifications" type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">
+            Update sort
+          </button>
+        </div>
+      </form>
+      
+      <div id="notification-list">
+            <dl class="notification-list__row" id="row-CHEDPP.GB.2022.3736832">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDPP.GB.2022.3736832" href="/decision/tst/protected/bip-notifications/CHEDPP.GB.2022.3736832/hub">CHEDPP.GB.2022.3736832</a>
+                                    </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0808108090
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-0">
+                    20 July 2025, 23:01
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--in-progress">
+                    IN PROGRESS
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Defra Test BIP</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">SSConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Afghanistan</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDPP.GB.2022.3736832/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2022.4540003">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2022.4540003" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.4540003/CHED-overview">CHEDP.GB.2022.4540003</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    121490
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-1">
+                    14 June 2025, 02:22
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--replaced">
+                    REPLACED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Tee Inc</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">MLConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Aland Islands</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.4540003/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2022.5107947">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2022.5107947" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.5107947/CHED-overview">CHEDP.GB.2022.5107947</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    121490
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-2">
+                    14 June 2025, 02:22
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--validated">
+                    VALID
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Tee Inc</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">MLConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Aland Islands</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.5107947/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2022.3665632">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2022.3665632" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3665632/CHED-overview">CHEDP.GB.2022.3665632</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    02063000
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-3">
+                    5 May 2025, 05:05
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--cancelled">
+                    CANCELLED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">IDConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">VGConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Afghanistan</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3665632/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2022.3665631">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2022.3665631" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3665631/CHED-overview">CHEDP.GB.2022.3665631</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    02063000
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-4">
+                    5 May 2025, 04:04
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--rejected">
+                    REJECTED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">IDConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">VGConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Afghanistan</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3665631/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDPP.GB.2022.3764924">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDPP.GB.2022.3764924" href="/decision/tst/protected/bip-notifications/CHEDPP.GB.2022.3764924/hub">CHEDPP.GB.2022.3764924</a>
+                                    </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    09109931
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-5">
+                    7 March 2025, 17:52
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--in-progress">
+                    IN PROGRESS
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Defra Test BIP</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">ZWConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Germany</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDPP.GB.2022.3764924/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDA.GB.2021.3397512">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDA.GB.2021.3397512" href="/decision/tst/protected/bip-notifications/CHEDA.GB.2021.3397512/CHED-overview">CHEDA.GB.2021.3397512</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0101
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-6">
+                    12 May 2024, 20:53
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--cancelled">
+                    CANCELLED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Tee Inc</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">KNConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Algeria</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDA.GB.2021.3397512/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDA.GB.2022.4535233">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDA.GB.2022.4535233" href="/decision/tst/protected/bip-notifications/CHEDA.GB.2022.4535233/CHED-overview">CHEDA.GB.2022.4535233</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    010410
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-7">
+                    3 May 2024, 02:22
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--validated">
+                    VALID
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Tes51</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Test</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Afghanistan</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDA.GB.2022.4535233/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDPP.GB.2023.5163479">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDPP.GB.2023.5163479" href="/decision/tst/protected/bip-notifications/CHEDPP.GB.2023.5163479/hub">CHEDPP.GB.2023.5163479</a>
+                                    </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    06011030
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-8">
+                    4 January 2024, 15:56
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--in-progress">
+                    IN PROGRESS
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Ahmad Test</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">John Smith</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Austria</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDPP.GB.2023.5163479/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5631583">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDP.GB.2023.5631583" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5631583/overview">CHEDP.GB.2023.5631583</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    020110
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-9">
+                    1 January 2024, 10:00
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--modify">
+                    MODIFY
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">COOPERATIVECa30 Ltd</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">COOPERATIVECa30 Ltd</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">New Zealand</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5631583/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDD.GB.2023.5816403">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDD.GB.2023.5816403" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2023.5816403/CHED-overview">CHEDD.GB.2023.5816403</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    05010000
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-10">
+                    22 December 2023, 03:08
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--replaced">
+                    REPLACED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Tee Inc</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">CUConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">American Samoa</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDD.GB.2023.5816403/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDD.GB.2023.5816501">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDD.GB.2023.5816501" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2023.5816501/CHED-overview">CHEDD.GB.2023.5816501</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    05010000
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-11">
+                    22 December 2023, 03:08
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--cancelled">
+                    CANCELLED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Tee Inc</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">CUConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">American Samoa</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDD.GB.2023.5816501/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDA.GB.2022.5060091">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDA.GB.2022.5060091" href="/decision/tst/protected/bip-notifications/CHEDA.GB.2022.5060091/CHED-overview">CHEDA.GB.2022.5060091</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0101
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-12">
+                    12 December 2023, 08:00
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--rejected">
+                    REJECTED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Spongebob</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">bob</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Northern Ireland</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">Risk outcome</dt>
+                    <dd class="notification-list__value" id="risk-outcome">
+                      <strong class="govuk-tag tag tag--fixed-width tag--inspection-pending">
+                        RISK PENDING
+                      </strong>
+                    </dd>
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDA.GB.2022.5060091/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5556170">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDP.GB.2023.5556170" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5556170/overview">CHEDP.GB.2023.5556170</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0403
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-13">
+                    4 December 2023, 08:10
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--modify">
+                    MODIFY
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Azalia Mullins</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Yessum</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Algeria</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5556170/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDA.GB.2023.5357427">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDA.GB.2023.5357427" href="/decision/tst/protected/bip-notifications/CHEDA.GB.2023.5357427/CHED-overview">CHEDA.GB.2023.5357427</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0103
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-14">
+                    28 November 2023, 02:08
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--cancelled">
+                    CANCELLED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">CKConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">STConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Afghanistan</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDA.GB.2023.5357427/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDPP.GB.2023.5271293">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDPP.GB.2023.5271293" href="/decision/tst/protected/bip-notifications/CHEDPP.GB.2023.5271293/hub">CHEDPP.GB.2023.5271293</a>
+                                    </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0808108090
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-15">
+                    25 November 2023, 10:10
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--in-progress">
+                    IN PROGRESS
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">COMPANY SEARCHES MADE SIMPLE LTD</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Consignee</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Bangladesh</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDPP.GB.2023.5271293/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5785915">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2023.5785915" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5785915/CHED-overview">CHEDP.GB.2023.5785915</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0404
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-16">
+                    25 November 2023, 01:10
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--validated">
+                    VALID
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Emerald Ellis</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Vanna Barr</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Aland Islands</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5785915/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDA.GB.2023.5926287">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDA.GB.2023.5926287" href="/decision/tst/protected/bip-notifications/CHEDA.GB.2023.5926287/hub">CHEDA.GB.2023.5926287</a>
+                                    </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0103
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-17">
+                    14 November 2023, 22:00
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--in-progress">
+                    IN PROGRESS
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Peck Harrison Co</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Maldonado Schroeder Trading</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Austria</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">Risk outcome</dt>
+                    <dd class="notification-list__value" id="risk-outcome">
+                      <strong class="govuk-tag tag tag--fixed-width tag--inspection-not-required">
+                        NO INSPECTION
+                      </strong>
+                    </dd>
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDA.GB.2023.5926287/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5816492">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDP.GB.2023.5816492" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5816492/overview">CHEDP.GB.2023.5816492</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0404
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-18">
+                    10 November 2023, 08:01
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--modify">
+                    MODIFY
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Tyler Blake</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Colton House</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Algeria</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5816492/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5430835">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2023.5430835" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5430835/CHED-overview">CHEDP.GB.2023.5430835</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    151710
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-19">
+                    7 November 2023, 02:10
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--validated">
+                    VALID
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">GNConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">DJConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Turkey</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5430835/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5556173">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                          <a class="govuk-link" id="view-details-CHEDP.GB.2023.5556173" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5556173/hub">CHEDP.GB.2023.5556173</a>
+                                    </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0402
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-20">
+                    6 November 2023, 02:07
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--in-progress">
+                    IN PROGRESS
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Blaine Stafford</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Brett Weaver</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">American Samoa</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5556173/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDD.GB.2023.5556151">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDD.GB.2023.5556151" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2023.5556151/CHED-overview">CHEDD.GB.2023.5556151</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    07020000
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-21">
+                    1 November 2023, 09:03
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--rejected">
+                    REJECTED
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Marvin Jennings</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">CDJ Enterprises</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Aland Islands</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDD.GB.2023.5556151/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5626951">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2023.5626951" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5626951/CHED-overview">CHEDP.GB.2023.5626951</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    0406
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-22">
+                    28 October 2023, 08:06
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--validated">
+                    VALID
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">Marvin Jennings</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">Yessum</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Albania</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5626951/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5430868">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2023.5430868" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5430868/CHED-overview">CHEDP.GB.2023.5430868</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    06029010
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-23">
+                    27 October 2023, 04:05
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--validated">
+                    VALID
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">MEConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">PNConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Macao</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5430868/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5849109">
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Reference Number</dt>
+                  <dd class="notification-list__value">
+                      <a class="govuk-link" id="view-details-CHEDP.GB.2023.5849109" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5849109/CHED-overview">CHEDP.GB.2023.5849109</a>
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Commodity</dt>
+                  <dd class="notification-list__value">
+                    03023110
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dd class="notification-list__value" id="arrival-date-24">
+                    16 October 2023, 21:21
+                  </dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                  <dt class="notification-list__heading">CHED status</dt>
+                  <dd class="notification-list__value">
+                  <strong class="govuk-tag tag tag--fixed-width tag--validated">
+                    VALID
+                  </strong>
+                  </dd>
+                </div>
+              </div>
+              <div class="notification-list__grid-row">
+                <div class="notification-list__grid-column-30">
+                  <dt class="notification-list__heading">Consignee</dt>
+                  <dd class="notification-list__value break-word">LSConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Consignor</dt>
+                  <dd class="notification-list__value break-word">PWConsignor</dd>
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Origin</dt>
+                  <dd class="notification-list__value">Austria</dd>
+                </div>
+                <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">Risk outcome</dt>
+                    <dd class="notification-list__value" id="risk-outcome">
+                      <strong class="govuk-tag tag tag--fixed-width tag--inspection-required">
+                        INSPECT
+                      </strong>
+                    </dd>
+                </div>
+              </div>
+              <div class="notification-list__links">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5849109/certificate/pdf" target="_blank">View CHED
+                </a>
+              </div>
+            </dl>
+          <nav class="pagination" aria-label="Pagination">
+            <ul class="pagination-list">
+              <li class="pagination-item pagination-item-next">
+                      <a href="/decision/tst/protected/bip-notifications?page=2" class="pagination-link" rel="next" id="next-page">
+                    <span class="pagination-link-title">
+                       Next page
+                      <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                      </svg>
+                    </span>
+                  <span class="govuk-visually-hidden">:</span>
+                  <span class="pagination-link-label">2 of 4000</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

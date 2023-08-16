@@ -12325,3 +12325,88 @@ only screen and (min-resolution: 2dppx) {
     padding: 5px;
     border: 2px solid #0b0c0c
 }
+
+/* inspector css */
+
+.alert-dashboard-summary {
+    color: #0b0c0c;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    border: 4px solid #1d70b8;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px 10px
+}
+
+@media print {
+    .alert-dashboard-summary {
+        color: #000
+    }
+}
+
+@media print {
+    .alert-dashboard-summary {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .alert-dashboard-summary {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579
+    }
+}
+
+@media print {
+    .alert-dashboard-summary {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .alert-dashboard-summary {
+        border: 5px solid #1d70b8;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px 15px 15px
+    }
+}
+
+.alert-dashboard-summary:focus {
+    outline: 3px solid #fd0
+}
+
+.alert-dashboard-summary .alert-dashboard-summary-heading {
+    margin-top: 0
+}
+
+.alert-dashboard-summary p {
+    margin-bottom: 10px
+}
+
+.alert-dashboard-summary .alert-dashboard-summary-list {
+    padding-left: 20px
+}
+
+.alert-dashboard-summary .alert-dashboard-summary-list li {
+    list-style: square !important
+}
+
+@media (min-width: 40.0625em) {
+    .alert-dashboard-summary .alert-dashboard-summary-list li {
+        margin-bottom: 5px
+    }
+}
+
+.alert-dashboard-summary .alert-dashboard-summary-list a {
+    color: #1d70b8;
+    font-weight: 700;
+    text-decoration: underline
+}
