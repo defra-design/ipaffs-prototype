@@ -165,7 +165,7 @@
             </div>
             
             <div class="govuk-grid-row">
-                <h2 class="govuk-heading-l govuk-!-margin-top-9 govuk-grid-column-one-half">Description of the goods</h2>
+                <h2 class="govuk-heading-l govuk-!-margin-top-9 govuk-grid-column-full">Description of the goods</h2>
             </div>
             
                 <div class="table-responsive">
@@ -400,25 +400,25 @@
                     </a>
                   </div>
                 <div class="table-responsive">
-                  <table class="govuk-table presentation-table" id="review-table-approved-establishments">
+                  <table class="govuk-table presentation-table" id="review-table-approved-establishments" >
                     <caption class="govuk-visually-hidden">
                       Approved establishment
                     </caption>
                     <thead class="govuk-table__head">
-                      <tr>
+                      <tr >
                         <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
-                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Country</th>
-                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Type</th>
-                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter no-wrap">
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Country</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" ">Type</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter no-wrap" >
                           Approval number
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                          <td class="govuk-table__cell">B/P Don Bartolo (Pesquera Atunes del Pacifico S.A. Atunpacificosa)</td>
-                          <td class="govuk-table__cell">Ecuador</td>
-                          <td class="govuk-table__cell">
+                        <tr >
+                          <td class="govuk-table__cell" >B/P Don Bartolo (Pesquera Atunes del Pacifico S.A. Atunpacificosa)</td>
+                          <td class="govuk-table__cell" >Ecuador</td>
+                          <td class="govuk-table__cell" style="padding-left: 10px" >
                               Freezing Vessel
                               
                           </td>
@@ -479,6 +479,7 @@
               </table>
             </div>
                 <h2 class="govuk-heading-l" style="border-bottom: 1px solid #b1b4b6; padding-bottom: 20px;">Transport</h2>
+                <h3 class="govuk-heading-m">Transport to the border control post (BCP)</h3>
                <!-- <div class="heading-with-change-link">
                    <h2 class="govuk-heading-s">Transport to the Border Control Post (BCP)</h2> -->
                   <!-- <a href="/notification/tst/protected/notifications/DRAFT.GB.2023.5925980/transport/before-bip?fromImporterReview=true" class="govuk-link" id="transport-to-bip-change-link">
@@ -493,8 +494,8 @@
                 <span class="govuk-error-message" id="partone/arrivaldate">Date of estimated arrival at BCP</span>
                 <span class="govuk-error-message" id="partone/arrivaltime">Time of estimated arrival at BCP</span>
                 
-                <div class="table-responsive govuk-!-margin-bottom-9">
-                  <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation">
+                <div class="table-responsive govuk-!-margin-bottom-9" >
+                  <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">
                     <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
                     <tbody>
                     <tr class="table-row--error">
@@ -528,12 +529,13 @@
                   </table>
                 <!-- </div>
                 <div class="table-responsive govuk-!-margin-bottom-9"> -->
+                  <h3 class="govuk-heading-m" >Transporter</h3>
                   <table class="govuk-table presentation-table review-table" id="review-table-transport" role="presentation">
                     <tbody>
                   <tr id="review-transporter-details" class="presentation-table__section ">
-                    <td class="govuk-table__header" style="border:0">Transporter name</td>
-                    <td class="govuk-table__cell" id="transporter-name" style="border:0">Matt Green</td>
-                    <td class="govuk-table__cell change" style="border:0">
+                    <td class="govuk-table__header" >Transporter name</td>
+                    <td class="govuk-table__cell" id="transporter-name" >Matt Green</td>
+                    <td class="govuk-table__cell change" >
                       <a href="/notification/tst/protected/notifications/DRAFT.GB.2023.5925980/transport?fromImporterReview=true" class="govuk-link" id="transporter-change-link">Change</a>
                     </td>
                   </tr>
@@ -557,17 +559,10 @@
                     <td class="govuk-table__cell" id="transporter-approval-number"></td>
                     <td class="govuk-table__cell"></td>
                   </tr>
-                
-                  <tr class="presentation-table__section">
-                    <td class="govuk-table__cell" colspan="3">
-                      
-                      
-                      
-                      
-                        
-                    </td>
-                  </tr>
-                
+                </table>
+                <h3 class="govuk-heading-m">Transport after the BCP</h3>
+                <table class="govuk-table presentation-table review-table" id="review-table-transport" role="presentation">
+                  <tbody>
                 <tr class="">
                   <th scope="row" class="govuk-table__header">Means of transport after the BCP
                   </th>

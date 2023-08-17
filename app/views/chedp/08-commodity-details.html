@@ -25,7 +25,7 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
           <span class="govuk-caption-xl">Description of the goods</span>
         <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
 
-      <form action="details" method="post">
+      <form action="09-catch-certificates" method="post">
         <input name="" id="" class="js-hidden" type="submit" value="Keyboard submit">
         <input name="crumb" type="hidden" value="rEHhaQ7CqBT7K9qfnh4G9EoWgxutj_fx40i-RQShsmD">
         <input name="etag" type="hidden" value="&quot;00000000053B49A0&quot;">
@@ -156,25 +156,27 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
               <input type="submit" name="add-species_03043100" value="Add species" class="link-button" id="add-species-03043100">
           </div>
 
-        <div>
-          <h2 class="govuk-heading-m">Total for this consignment</h2>
-
-          <div class="table-responsive">
-            <table class="govuk-table" role="presentation">
-              <tbody class="govuk-table__body">
+          <div>
+            <h2 class="govuk-heading-m">Total for this consignment</h2>
+          
+            <div class="table-responsive govuk-!-width-one-half">
+              <table class="govuk-table" role="presentation">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-full" id="net-weight-total-header">Net weight (kg/units)</th>
+                    <td class="govuk-table__cell">0</td>
+                  </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Net weight (kg/units)</th>
+                  <th scope="row" class="govuk-table__header govuk-!-width-full">Number of packages</th>
                   <td class="govuk-table__cell">0</td>
                 </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header govuk-!-width-one-third">Number of packages</th>
-                <td class="govuk-table__cell">0</td>
-              </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-!-margin-bottom-8">
+              <input class="govuk-button govuk-button--secondary" type="submit" value="Update total" name="update-total" id="update-total-desktop">
+            </div>
           </div>
-          <input class="govuk-button" type="submit" value="Update total" name="update-total" id="update-total">
-        </div>
 
             <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
             <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
