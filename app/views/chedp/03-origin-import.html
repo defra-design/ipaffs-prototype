@@ -30,13 +30,40 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="etag" type="hidden" value="&quot;000000000537DC3B&quot;">
 
           <input name="navigation-target-page" type="hidden" value="consignment/page-3">
-
-        <div class="govuk-form-group ">
           <label class="govuk-label govuk-label--m" for="origin-country">
             Country of origin
           </label>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group ">
+          <dl class="govuk-summary-list govuk-!-margin-bottom-7 govuk-!-margin-left-6">
+            <div class="govuk-summary-list__row1">
+              <!-- <dt class="govuk-summary-list__key">
+                <label class="govuk-label govuk-label--m" for="origin-country">
+                  Country of origin
+                </label>
+              </dt> -->
+              <dd class="govuk-summary-list__value govuk-body">
+                Algeria
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="02-consignment-origin">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+              </div>
+              </dl>
+            </div></div>
+         <!-- 
           
-          <select class="govuk-select govuk-!-width-one-half" id="origin-country" name="origin-country">
+          <label class="govuk-label govuk-label--m" for="origin-country">
+            Country of origin
+          </label>
+
+         
+         
+           <select class="govuk-select govuk-!-width-one-half" id="origin-country" name="origin-country">
             <option value="">Select a country</option>
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Aland Islands</option>
@@ -290,44 +317,10 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                         <option value="YE">Yemen</option>
                         <option value="ZM">Zambia</option>
                         <option value="ZW">Zimbabwe</option>
-          </select>
+          </select> -->
         </div>
 
-            <div class="govuk-form-group" id="region-code-field">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    Does your consignment require a region code?
-                </legend>
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="region-code-yes" name="region-code-option" type="radio" value="true" aria-controls="conditional-region-code-yes" aria-expanded="false">
-                    <label class="govuk-label govuk-radios__label" for="region-code-yes">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-region-code-yes">
-                    <div class="govuk-form-group ">
-                      <label class="govuk-label govuk-label--m" for="region-code">
-                          Enter the region code
-                      </label>
-                      
-                      <span class="region-code" id="region-code-input">
-                      <span id="region-code-box" class="region-code-box">DZ</span>
-                      <strong class="region-code-divider">-</strong>
-                    </span>
-                      <input class="govuk-input govuk-input--width-3 " id="region-code" name="region-code" type="text" maxlength="3" value="">
-                    </div>
-                  </div>
-
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="region-code-no" name="region-code-option" type="radio" value="false" checked="">
-                    <label class="govuk-label govuk-radios__label" for="region-code-no">
-                      No
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
+           
 
             <div class="govuk-form-group ">
               <label class="govuk-label govuk-label--m" for="consigned-country">
@@ -594,6 +587,42 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                             <option value="ZM">Zambia</option>
                             <option value="ZW">Zimbabwe</option>
               </select>
+            </div>
+
+            <div class="govuk-form-group" id="region-code-field">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    Does your consignment require a region code?
+                </legend>
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="region-code-yes" name="region-code-option" type="radio" value="true" aria-controls="conditional-region-code-yes" aria-expanded="false">
+                    <label class="govuk-label govuk-radios__label" for="region-code-yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-region-code-yes">
+                    <div class="govuk-form-group ">
+                      <label class="govuk-label govuk-label--m" for="region-code">
+                          Enter the region code
+                      </label>
+                      
+                      <span class="region-code" id="region-code-input">
+                      <span id="region-code-box" class="region-code-box">DZ</span>
+                      <strong class="region-code-divider">-</strong>
+                    </span>
+                      <input class="govuk-input govuk-input--width-3 " id="region-code" name="region-code" type="text" maxlength="3" value="">
+                    </div>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="region-code-no" name="region-code-option" type="radio" value="false" checked="">
+                    <label class="govuk-label govuk-radios__label" for="region-code-no">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
             </div>
 
             <div class="govuk-form-group conform-uk-regulations ">
