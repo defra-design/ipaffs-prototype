@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Main reason for importing the consignment – {{ serviceName }} – GOV.UK Prototype Kit
+What is the main reason for importing the consignment? – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -49,29 +49,36 @@ Main reason for importing the consignment – {{ serviceName }} – GOV.UK Proto
                     </div>
                   </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="internalmarket-conditional">
-                    <div class="govuk-form-group  govuk-!-margin-bottom-8">
-                      <fieldset class="govuk-fieldset">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                            
-                            Purpose in the internal market
-                            
-                          </legend>
-                    
-                    
-                        
-                    
-                        <div class="govuk-radios ">
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="internal-market" name="internal-market" type="radio" value="commercial" aria-describedby="internal-market-item-hint">
-                              <label class="govuk-label govuk-radios__label " for="internal-market">
-                                Human consumption
-                              </label>
-                               
-                            </div>
                           
-                        </div>
-                      </fieldset>
-                    </div>
+                          <div class="govuk-form-group govuk-!-margin-bottom-8">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                <h1 class="govuk-fieldset__heading">
+                                  Purpose in the internal market
+                                </h1>
+                              </legend>
+                              <div class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                    Animal feedingstuff
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                    Human consumption
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                    Other
+                                  </label>
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
                   </div>
 
                 <div class="govuk-radios__item purpose">
@@ -81,18 +88,18 @@ Main reason for importing the consignment – {{ serviceName }} – GOV.UK Proto
                   <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">Transhipment or onward travel</h2>
                 </label>
                 <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  For products intended for direct travel to a third county, that will stay only within the same port or airport in Great Britain while moving to another means of transport.
+                  For consignments intended for direct travel to a third county, that will stay only within the same port or airport in Great Britain while moving to another means of transport.
                 </div>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="tranship-conditional">
 
                   <div class="govuk-form-group">
                     <label class="govuk-label govuk-label--s" for="bcp-final">
-                        Exit border control post
+                        Exit Border Control Post
                     </label>
                     
                     <select class="govuk-select govuk-!-width-full-width" id="bcp-final" name="bcp-final">
-                        <option value="">Select border control post</option>
+                        <option value="">Select exit Border Control Post</option>
                         <option value="B2CLTD" data-country-code="GB">
                           B2C Limited - B2CLTD
                         </option>
@@ -418,21 +425,21 @@ Main reason for importing the consignment – {{ serviceName }} – GOV.UK Proto
                 <div class="govuk-radios__item purpose">
                   <input class="govuk-radios__input" id="radio-transit" name="purpose" type="radio" value="transit" aria-controls="conditional-transit" aria-expanded="false">
                   
-                  <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="a_impadm1">
+                  <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="radio-transit">
                     <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">Transit</h2>
                    </label>
                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                    For products moving through Great Britain for direct travel to a third country, that will enter Great Britain at one port or airport and leave from a different one within England, Scotland or Wales.
+                    For consignments moving through Great Britain for direct travel to a third country, that will enter Great Britain at one port or airport and leave from a different one within England, Scotland or Wales.
                    </div>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-transit">
                   <div class="govuk-form-group">
                     <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
-                        Exit border control post
+                        Exit Border Control Post
                     </label>
                     
                     <select class="govuk-select govuk-!-width-full-width" id="bcp-transit-third-country" name="bcp-transit-third-country">
-                        <option value="">Select border control post</option>
+                        <option value="">Select Exit Border Control Post</option>
                         <option value="B2CLTD" data-country-code="GB">
                           B2C Limited - B2CLTD
                         </option>
@@ -491,6 +498,59 @@ Main reason for importing the consignment – {{ serviceName }} – GOV.UK Proto
                           Tyneside Freeport - TYNFRE
                         </option>
                     </select>
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Estimated arrival at port of entry</legend>
+                      <div id="sign-in-hint" class="govuk-hint">
+                        For example, 27 3 2023
+                      </div>
+                      <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
+  
+                        <div class="govuk-date-input__item date-input-day">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+  
+                        <div class="govuk-date-input__item date-input-month">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+  
+                        <div class="govuk-date-input__item date-input-year">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                      <div id="passport-issued-hint" class="govuk-hint govuk-!-margin-top-3">
+                        24 hour format, for example, 14 50
+                      </div>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                              Hour
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                              Minutes
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        </div>
+                    </fieldset>
                   </div>
 
                   <div class="govuk-form-group">
@@ -1023,18 +1083,20 @@ Main reason for importing the consignment – {{ serviceName }} – GOV.UK Proto
                     </div>
                 </div>
 
-
-
                 <div class="govuk-radios__item purpose">
-                  <input class="govuk-radios__input" id="a_impadm2" name="purpose" type="radio" value="re-entry">
+                  <input class="govuk-radios__input" id="re-entry" name="purpose" type="radio" value="re-entry">
                   
-                  <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="a_impadm1">
+                  <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="re-entry">
                     <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">Re-entry</h2>
                    </label>
                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                    For products authorised for re-entry, or rejected exports re-entering Great Britain
+                    For consignments authorised for re-entry, or rejected exports re-entering Great Britain.
                    </div>
                 </div>
+
+
+
+                
 
               
 
