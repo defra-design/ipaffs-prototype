@@ -25,7 +25,7 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
           <span class="govuk-caption-xl">Description of the goods</span>
         <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
 
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-9" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Add a commodity" data-module="govuk-button">
+        <!-- <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-9" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Add a commodity" data-module="govuk-button"> -->
 
 
       <form action="10-additional-details" method="post">
@@ -667,6 +667,32 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
             <div class="govuk-!-margin-bottom-8">
               <input class="govuk-button govuk-button--secondary" type="submit" value="Update total" name="update-total" id="update-total-desktop">
             </div>
+          </div>
+
+
+          <div class="govuk-form-group govuk-!-margin-bottom-9">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Do you want to add another commodity?
+                </h1>
+              </legend>
+             
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
 
             <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
