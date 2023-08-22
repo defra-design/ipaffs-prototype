@@ -1,0 +1,386 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="#" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link govuk" href="/decision/tst/protected/bip-notifications" id="navigation-dashboard-link">Dashboard</a>
+      </li>
+    </ol>
+  </div></div>
+
+  <form action="hub" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  </form>
+
+
+
+  <main id="main-content" class="govuk-main-wrapper">
+    <div class="govuk-grid-row" id="checks-page">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">
+          <span class="heading-tertiary">
+            <span id="reference-number">CHEDP.GB.2023.5942705</span>
+              <span id="cved-version-number"> - V1</span>
+          </span>
+          Checks
+        </h1>
+        <div>
+          <h2 class="govuk-heading-l">Documentary check</h2>
+              <div class="govuk-form-group document-check-result  ">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend ">
+                      <span class="govuk-visually-hidden">Choose from:</span>
+                  </legend>
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                          <div class="govuk-radios__item document-check-result">
+                            <input id="documentaryCheck1" class="govuk-radios__input" type="radio" name="document-check-result" value="1">
+                            <label class="govuk-label govuk-radios__label" for="documentaryCheck1">Satisfactory</label>
+                          </div>
+                          <div class="govuk-radios__item document-check-result">
+                            <input id="documentaryCheck2" class="govuk-radios__input" type="radio" name="document-check-result" value="2">
+                            <label class="govuk-label govuk-radios__label" for="documentaryCheck2">Not satisfactory</label>
+                          </div>
+                  </div>
+                </fieldset>
+              </div>
+        </div>
+        <div>
+          <h2 class="govuk-heading-l">Identity check</h2>
+  <div class="govuk-form-group identity-check-type  ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend ">
+          <span class="govuk-visually-hidden">Choose from:</span>
+      </legend>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item identity-check-type" data-target="identyCheckFull5-seal-0">
+                <input id="identyCheckFull5" class="govuk-radios__input" type="radio" name="identity-check-type" value="5" aria-controls="identyCheckFull5-seal-0" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="identyCheckFull5">Seal check only</label>
+              </div>
+                            <div class="alert-info-white-bg
+                                          govuk-radios__conditional
+                                          govuk-radios__conditional--hidden govuk-!-margin-left-0
+                                          govuk-!-padding-left-3" id="identyCheckFull5-full-0">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck1-full-identyCheckFull5" type="radio" class="govuk-radios__input" name="identity-check-result-full-identyCheckFull5" value="1">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck1-full-identyCheckFull5">Satisfactory</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck2-full-identyCheckFull5" type="radio" class="govuk-radios__input" name="identity-check-result-full-identyCheckFull5" value="2">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck2-full-identyCheckFull5">Not satisfactory</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+                            <!-- Change ids to be from dataTargetMapping -->
+                            <div class="govuk-radios__conditional
+                                          govuk-radios__conditional--hidden
+                                          govuk-!-margin-left-0
+                                          govuk-!-padding-left-3" id="identyCheckFull5-seal-0">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck1-seal-identyCheckFull5" type="radio" class="govuk-radios__input" name="identity-check-result-seal-identyCheckFull5" value="1">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck1-seal-identyCheckFull5">Satisfactory</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck2-seal-identyCheckFull5" type="radio" class="govuk-radios__input" name="identity-check-result-seal-identyCheckFull5" value="2">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck2-seal-identyCheckFull5">Not satisfactory</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+              
+                            <div class="govuk-radios__conditional
+                                                govuk-radios__conditional--hidden
+                                                govuk-!-margin-left-0
+                                                govuk-!-padding-left-3" id="identyCheckFull5-notdone-0">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyChecknotDone8-notdone-identyCheckFull5" type="radio" class="govuk-radios__input" name="identity-check-result-notdone-identyCheckFull5" value="8">
+                                              <label class="govuk-label govuk-radios__label" for="identyChecknotDone8-notdone-identyCheckFull5">Reduced checks regime</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyChecknotDone9-notdone-identyCheckFull5" type="radio" class="govuk-radios__input" name="identity-check-result-notdone-identyCheckFull5" value="9">
+                                              <label class="govuk-label govuk-radios__label" for="identyChecknotDone9-notdone-identyCheckFull5">Not required</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+              <div class="govuk-radios__item identity-check-type" data-target="identyCheckFull6-full-1">
+                <input id="identyCheckFull6" class="govuk-radios__input" type="radio" name="identity-check-type" value="6" aria-controls="identyCheckFull6-full-1" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="identyCheckFull6">Full identity check</label>
+              </div>
+                            <div class="alert-info-white-bg
+                                          govuk-radios__conditional
+                                          govuk-radios__conditional--hidden govuk-!-margin-left-0
+                                          govuk-!-padding-left-3" id="identyCheckFull6-full-1">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck1-full-identyCheckFull6" type="radio" class="govuk-radios__input" name="identity-check-result-full-identyCheckFull6" value="1">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck1-full-identyCheckFull6">Satisfactory</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck2-full-identyCheckFull6" type="radio" class="govuk-radios__input" name="identity-check-result-full-identyCheckFull6" value="2">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck2-full-identyCheckFull6">Not satisfactory</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+                            <!-- Change ids to be from dataTargetMapping -->
+                            <div class="govuk-radios__conditional
+                                          govuk-radios__conditional--hidden
+                                          govuk-!-margin-left-0
+                                          govuk-!-padding-left-3" id="identyCheckFull6-seal-1">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck1-seal-identyCheckFull6" type="radio" class="govuk-radios__input" name="identity-check-result-seal-identyCheckFull6" value="1">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck1-seal-identyCheckFull6">Satisfactory</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck2-seal-identyCheckFull6" type="radio" class="govuk-radios__input" name="identity-check-result-seal-identyCheckFull6" value="2">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck2-seal-identyCheckFull6">Not satisfactory</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+              
+                            <div class="govuk-radios__conditional
+                                                govuk-radios__conditional--hidden
+                                                govuk-!-margin-left-0
+                                                govuk-!-padding-left-3" id="identyCheckFull6-notdone-1">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyChecknotDone8-notdone-identyCheckFull6" type="radio" class="govuk-radios__input" name="identity-check-result-notdone-identyCheckFull6" value="8">
+                                              <label class="govuk-label govuk-radios__label" for="identyChecknotDone8-notdone-identyCheckFull6">Reduced checks regime</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyChecknotDone9-notdone-identyCheckFull6" type="radio" class="govuk-radios__input" name="identity-check-result-notdone-identyCheckFull6" value="9">
+                                              <label class="govuk-label govuk-radios__label" for="identyChecknotDone9-notdone-identyCheckFull6">Not required</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+              <div class="govuk-radios__item identity-check-type" data-target="identyCheckFull7-notdone-2">
+                <input id="identyCheckFull7" class="govuk-radios__input" type="radio" name="identity-check-type" value="7" aria-controls="identyCheckFull7-notdone-2" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="identyCheckFull7">Not Done</label>
+              </div>
+                            <div class="alert-info-white-bg
+                                          govuk-radios__conditional
+                                          govuk-radios__conditional--hidden govuk-!-margin-left-0
+                                          govuk-!-padding-left-3" id="identyCheckFull7-full-2">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck1-full-identyCheckFull7" type="radio" class="govuk-radios__input" name="identity-check-result-full-identyCheckFull7" value="1">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck1-full-identyCheckFull7">Satisfactory</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck2-full-identyCheckFull7" type="radio" class="govuk-radios__input" name="identity-check-result-full-identyCheckFull7" value="2">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck2-full-identyCheckFull7">Not satisfactory</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+                            <!-- Change ids to be from dataTargetMapping -->
+                            <div class="govuk-radios__conditional
+                                          govuk-radios__conditional--hidden
+                                          govuk-!-margin-left-0
+                                          govuk-!-padding-left-3" id="identyCheckFull7-seal-2">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck1-seal-identyCheckFull7" type="radio" class="govuk-radios__input" name="identity-check-result-seal-identyCheckFull7" value="1">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck1-seal-identyCheckFull7">Satisfactory</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyCheck2-seal-identyCheckFull7" type="radio" class="govuk-radios__input" name="identity-check-result-seal-identyCheckFull7" value="2">
+                                              <label class="govuk-label govuk-radios__label" for="identyCheck2-seal-identyCheckFull7">Not satisfactory</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+              
+                            <div class="govuk-radios__conditional
+                                                govuk-radios__conditional--hidden
+                                                govuk-!-margin-left-0
+                                                govuk-!-padding-left-3" id="identyCheckFull7-notdone-2">
+                                <div class="govuk-form-group identity-check-result  ">
+                                  <fieldset class="govuk-fieldset">
+                                    <legend class="govuk-fieldset__legend ">
+                                        <span class="govuk-visually-hidden">Choose from:</span>
+                                    </legend>
+                                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                              <input id="identyChecknotDone8-notdone-identyCheckFull7" type="radio" class="govuk-radios__input" name="identity-check-result-notdone-identyCheckFull7" value="8">
+                                              <label class="govuk-label govuk-radios__label" for="identyChecknotDone8-notdone-identyCheckFull7">Reduced checks regime</label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                              <input id="identyChecknotDone9-notdone-identyCheckFull7" type="radio" class="govuk-radios__input" name="identity-check-result-notdone-identyCheckFull7" value="9">
+                                              <label class="govuk-label govuk-radios__label" for="identyChecknotDone9-notdone-identyCheckFull7">Not required</label>
+                                            </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
+                            </div>
+      </div>
+    </fieldset>
+  </div>
+        </div>
+        <h2 class="govuk-heading-l">Physical check</h2>
+
+  <div class="govuk-form-group physical-check-result  ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend ">
+          <span class="govuk-visually-hidden">Choose from:</span>
+      </legend>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item physical-check-result" data-target="physical-check">
+                <input id="physicalCheck7" class="govuk-radios__input" type="radio" name="physical-check-result" value="7" aria-controls="physical-check" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="physicalCheck7">Not Done</label>
+              </div>
+              
+                          <div class="govuk-radios__conditional
+                                        govuk-radios__conditional--hidden
+                                        govuk-!-margin-left-0
+                                        govuk-!-padding-left-3" id="physical-check">
+                <div class="govuk-form-group physical-check-not-done-reason  ">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend ">
+                        <span class="govuk-visually-hidden">Choose from:</span>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input id="physicalChecknotDone8-physicalCheck7" type="radio" class="govuk-radios__input" name="physical-check-not-done-reason-physicalCheck7" value="8">
+                              <label class="govuk-label govuk-radios__label" for="physicalChecknotDone8-physicalCheck7">Reduced checks regime</label>
+                            </div>
+                            <div class="govuk-radios__item" data-target="physical-check-other">
+                              <input id="physicalChecknotDone9-physicalCheck7" type="radio" class="govuk-radios__input" name="physical-check-not-done-reason-physicalCheck7" value="9" aria-controls="physical-check-other" aria-expanded="false">
+                              <label class="govuk-label govuk-radios__label" for="physicalChecknotDone9-physicalCheck7">Other</label>
+                            </div>
+                            
+                                            <div class="govuk-radios__conditional govuk-!-margin-left-0 govuk-!-padding-left-3 govuk-radios__conditional--hidden" id="physical-check-other">
+                                              <h3 class="govuk-heading-s"><label for="physical-check-other-reason">Reason</label></h3>
+                                              <div class="govuk-form-group">
+                                                <input class="govuk-input govuk-!-width-one-half form-control-1-2" id="physical-check-other-reason" name="physical-check-other-reason" type="text" maxlength="255" value="">
+                                              </div>
+                                            </div>
+                    </div>
+                  </fieldset>
+                </div>
+                          </div>
+              <div class="govuk-radios__item physical-check-result">
+                <input id="physicalCheck1" class="govuk-radios__input" type="radio" name="physical-check-result" value="1">
+                <label class="govuk-label govuk-radios__label" for="physicalCheck1">Satisfactory</label>
+              </div>
+              <div class="govuk-radios__item physical-check-result">
+                <input id="physicalCheck2" class="govuk-radios__input" type="radio" name="physical-check-result" value="2">
+                <label class="govuk-label govuk-radios__label" for="physicalCheck2">Not satisfactory</label>
+              </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+        <input class="govuk-button govuk-!-margin-top-6 govuk-!-margin-bottom-0 govuk-!-margin-right-1" name="save-button" type="submit" value="Save and return" id="button-save-and-return">
+        <input class="govuk-button govuk-!-margin-top-6 govuk-!-margin-bottom-0 govuk-!-margin-right-1" type="submit" name="save-button" value="Save and continue" id="button-save-and-continue">
+        <div>
+          <p class="govuk-!-margin-top-4 govuk-body"><a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/hub">Cancel</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

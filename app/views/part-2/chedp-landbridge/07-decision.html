@@ -1,0 +1,1265 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="#" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link govuk" href="/decision/tst/protected/bip-notifications" id="navigation-dashboard-link">Dashboard</a>
+      </li>
+    </ol>
+  </div></div>
+
+  <form action="hub" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  </form>
+
+  <main id="main-content" class="govuk-main-wrapper">
+    <div class="govuk-grid-row" id="acceptance-decision-page">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">
+          <span class="heading-tertiary">
+            <span id="reference-number">CHEDP.GB.2023.5942705</span>
+              <span id="cved-version-number"> - V1</span>
+          </span>
+          <span id="page-primary-title">Decision</span>
+        </h1>
+
+        <div class="govuk-form-group decision-acceptable-for">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Acceptable for
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item" data-target="transhipment">
+                    <input id="acceptability-transhipment" type="radio" class="govuk-radios__input" name="acceptability" value="tranship" aria-controls="transhipment" aria-expanded="false">
+                    <label class="govuk-label govuk-radios__label" for="acceptability-transhipment">Transhipment / Onward travel</label>
+                  </div>
+
+                  <div class="govuk-radios__conditional
+                          govuk-radios__conditional--hidden govuk-!-margin-left-0
+                          govuk-!-padding-left-3" id="transhipment">
+
+
+                        <div id="transhipment-country">
+                          <div class="govuk-form-group">
+                            <div class="govuk-form-group  ">
+                                
+                                <label class="govuk-label govuk-label--s" for="transhipmentBipUk">
+                                  Exit border control post
+                                </label>
+                                
+                            
+                            
+                              
+                            
+                              <select class="govuk-select govuk-!-width-one-half" id="transhipmentBipUk" name="transhipmentBipUk">
+                                  <option value="">Select border control post</option>
+                                  <option value="Test070820">070820t1 tester ltd</option>
+                                  <option value="Test200820">200820t1 tester Ltd</option>
+                                  <option value="beta">APHA</option>
+                                  <option value="GBBEL1">Belfast Airport</option>
+                                  <option value="BelfPort2">Belfast Pharmaceuticals</option>
+                                  <option value="GBBEL4">Belfast Port</option>
+                                  <option value="BPTestAdd">Belfast Port</option>
+                                  <option value="BhmAllIn1">Birmingham International Airport</option>
+                                  <option value="GBBRS1">Bristol</option>
+                                  <option value="TST92BCP">Bristol</option>
+                                  <option value="DRIO">Bristol</option>
+                                  <option value="DRIP555">Bristol</option>
+                                  <option value="REL94">Chicken Solutions</option>
+                                  <option value="GBEMA4">East Midlands Airport</option>
+                                  <option value="GBNOTT1">EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE)</option>
+                                  <option value="NOTTS0123">EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE)</option>
+                                  <option value="GBEDI4TALL">Edinburgh Airport</option>
+                                  <option value="GBFXT1">Felixstowe</option>
+                                  <option value="GBLGW1">Gatwick Airport</option>
+                                  <option value="GBGSY1">Grimsby and Immingham</option>
+                                  <option value="GBLHR1P">Heathrow Airport - APH (products)</option>
+                                  <option value="GBLHR4P">Heathrow Airport - Eurobip (products)</option>
+                                  <option value="GBIVG1">Invergordon</option>
+                                  <option value="TST89TEST">Jemma BIP</option>
+                                  <option value="R135">Kainos</option>
+                                  <option value="GBLIV1">Liverpool</option>
+                                  <option value="GBLGP1">London Gateway</option>
+                                  <option value="LtnCP111">London Luton Airport</option>
+                                  <option value="LTCH111tmp">London Luton Airport</option>
+                                  <option value="GBTHP1">London Thamesport</option>
+                                  <option value="GBTIL1">London Tilbury</option>
+                                  <option value="GBMNC1">Manchester airport</option>
+                                  <option value="Y-RelT-UK">Manchester Airport</option>
+                                  <option value="GBPHD1">Peterhead</option>
+                                  <option value="POP4321">PopCorn Christmas LTD</option>
+                                  <option value="POP987">PopCorn Christmas LTD</option>
+                                  <option value="POP82">PopCorn Christmas LTD</option>
+                                  <option value="POP124T">PopCorn Christmas LTD</option>
+                                  <option value="Coffee123">Rooster Coffee Roasters</option>
+                                  <option value="GBSOU1">Southampton</option>
+                                  <option value="GBSTN4P">Stansted Airport (products)</option>
+                                  <option value="BCCODE">tster</option>
+                                  <option value="TYNFRE">Tyneside Freeport</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="govuk-form-group">
+                            <div class="govuk-form-group  ">
+                                
+                                <label class="govuk-label govuk-label--s" for="transhipmentCountry">
+                                  Destination country
+                                </label>
+                                
+                            
+                            
+                              
+                            
+                              <select class="govuk-select govuk-!-width-one-half" id="transhipmentCountry" name="transhipmentCountry">
+                                  <option value="">Select destination country</option>
+                                  <option value="AF">Afghanistan</option>
+                                  <option value="AX">Aland Islands</option>
+                                  <option value="AL">Albania</option>
+                                  <option value="DZ">Algeria</option>
+                                  <option value="AS">American Samoa</option>
+                                  <option value="AD">Andorra</option>
+                                  <option value="AO">Angola</option>
+                                  <option value="AI">Anguilla</option>
+                                  <option value="AQ">Antarctica</option>
+                                  <option value="AG">Antigua and Barbuda</option>
+                                  <option value="AR">Argentina</option>
+                                  <option value="AM">Armenia</option>
+                                  <option value="AW">Aruba</option>
+                                  <option value="AU">Australia</option>
+                                  <option value="AT">Austria</option>
+                                  <option value="AZ">Azerbaijan</option>
+                                  <option value="BS">Bahamas</option>
+                                  <option value="BH">Bahrain</option>
+                                  <option value="BD">Bangladesh</option>
+                                  <option value="BB">Barbados</option>
+                                  <option value="BY">Belarus</option>
+                                  <option value="BE">Belgium</option>
+                                  <option value="BZ">Belize</option>
+                                  <option value="BJ">Benin</option>
+                                  <option value="BM">Bermuda</option>
+                                  <option value="BT">Bhutan</option>
+                                  <option value="BO">Bolivia</option>
+                                  <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                  <option value="BA">Bosnia and Herzegovina</option>
+                                  <option value="BW">Botswana</option>
+                                  <option value="BV">Bouvet Island</option>
+                                  <option value="BR">Brazil</option>
+                                  <option value="IO">British Indian Ocean Territory</option>
+                                  <option value="VG">British Virgin Islands</option>
+                                  <option value="BN">Brunei</option>
+                                  <option value="BG">Bulgaria</option>
+                                  <option value="BF">Burkina Faso</option>
+                                  <option value="BI">Burundi</option>
+                                  <option value="KH">Cambodia</option>
+                                  <option value="CM">Cameroon</option>
+                                  <option value="CA">Canada</option>
+                                  <option value="ES-CN">Canary Islands</option>
+                                  <option value="CV">Cape Verde</option>
+                                  <option value="KY">Cayman Islands</option>
+                                  <option value="CF">Central African Republic</option>
+                                  <option value="TD">Chad</option>
+                                  <option value="CL">Chile</option>
+                                  <option value="CN">China</option>
+                                  <option value="CX">Christmas Island</option>
+                                  <option value="CC">Cocos (Keeling) Islands</option>
+                                  <option value="CO">Colombia</option>
+                                  <option value="KM">Comoros</option>
+                                  <option value="CG">Congo</option>
+                                  <option value="CK">Cook Islands</option>
+                                  <option value="CR">Costa Rica</option>
+                                  <option value="CI">Côte d'Ivoire</option>
+                                  <option value="HR">Croatia</option>
+                                  <option value="CU">Cuba</option>
+                                  <option value="CW">Curaçao</option>
+                                  <option value="CY">Cyprus</option>
+                                  <option value="CZ">Czech Republic</option>
+                                  <option value="CD">Democratic Republic of the Congo</option>
+                                  <option value="DK">Denmark</option>
+                                  <option value="DJ">Djibouti</option>
+                                  <option value="DM">Dominica</option>
+                                  <option value="DO">Dominican Republic</option>
+                                  <option value="EC">Ecuador</option>
+                                  <option value="EG">Egypt</option>
+                                  <option value="SV">El Salvador</option>
+                                  <option value="GQ">Equatorial Guinea</option>
+                                  <option value="ER">Eritrea</option>
+                                  <option value="EE">Estonia</option>
+                                  <option value="SZ">Eswatini</option>
+                                  <option value="ET">Ethiopia</option>
+                                  <option value="FK">Falkland Islands</option>
+                                  <option value="FO">Faroe Islands</option>
+                                  <option value="FJ">Fiji</option>
+                                  <option value="FI">Finland</option>
+                                  <option value="FR">France</option>
+                                  <option value="GF">French Guiana</option>
+                                  <option value="PF">French Polynesia</option>
+                                  <option value="TF">French Southern Territories</option>
+                                  <option value="GA">Gabon</option>
+                                  <option value="GE">Georgia</option>
+                                  <option value="DE">Germany</option>
+                                  <option value="GH">Ghana</option>
+                                  <option value="GI">Gibraltar</option>
+                                  <option value="GR">Greece</option>
+                                  <option value="GL">Greenland</option>
+                                  <option value="GD">Grenada</option>
+                                  <option value="GP">Guadeloupe</option>
+                                  <option value="GU">Guam</option>
+                                  <option value="GT">Guatemala</option>
+                                  <option value="GG">Guernsey</option>
+                                  <option value="GN">Guinea</option>
+                                  <option value="GW">Guinea-Bissau</option>
+                                  <option value="GY">Guyana</option>
+                                  <option value="HT">Haiti</option>
+                                  <option value="HM">Heard Island and McDonald Islands</option>
+                                  <option value="VA">Holy See</option>
+                                  <option value="HN">Honduras</option>
+                                  <option value="HK">Hong Kong</option>
+                                  <option value="HU">Hungary</option>
+                                  <option value="IS">Iceland</option>
+                                  <option value="IN">India</option>
+                                  <option value="ID">Indonesia</option>
+                                  <option value="IR">Iran</option>
+                                  <option value="IQ">Iraq</option>
+                                  <option value="IM">Isle of Man</option>
+                                  <option value="IL">Israel</option>
+                                  <option value="IT">Italy</option>
+                                  <option value="JM">Jamaica</option>
+                                  <option value="JP">Japan</option>
+                                  <option value="JE">Jersey</option>
+                                  <option value="JO">Jordan</option>
+                                  <option value="KZ">Kazakhstan</option>
+                                  <option value="KE">Kenya</option>
+                                  <option value="KI">Kiribati</option>
+                                  <option value="XK">Kosovo</option>
+                                  <option value="KW">Kuwait</option>
+                                  <option value="KG">Kyrgyzstan</option>
+                                  <option value="LA">Laos</option>
+                                  <option value="LV">Latvia</option>
+                                  <option value="LB">Lebanon</option>
+                                  <option value="LS">Lesotho</option>
+                                  <option value="LR">Liberia</option>
+                                  <option value="LY">Libya</option>
+                                  <option value="LI">Liechtenstein</option>
+                                  <option value="LT">Lithuania</option>
+                                  <option value="LU">Luxembourg</option>
+                                  <option value="MO">Macao</option>
+                                  <option value="MG">Madagascar</option>
+                                  <option value="MW">Malawi</option>
+                                  <option value="MY">Malaysia</option>
+                                  <option value="MV">Maldives</option>
+                                  <option value="ML">Mali</option>
+                                  <option value="MT">Malta</option>
+                                  <option value="MH">Marshall Islands</option>
+                                  <option value="MQ">Martinique</option>
+                                  <option value="MR">Mauritania</option>
+                                  <option value="MU">Mauritius</option>
+                                  <option value="YT">Mayotte</option>
+                                  <option value="MX">Mexico</option>
+                                  <option value="FM">Micronesia</option>
+                                  <option value="MD">Moldova</option>
+                                  <option value="MC">Monaco</option>
+                                  <option value="MN">Mongolia</option>
+                                  <option value="ME">Montenegro</option>
+                                  <option value="MS">Montserrat</option>
+                                  <option value="MA">Morocco</option>
+                                  <option value="MZ">Mozambique</option>
+                                  <option value="MM">Myanmar</option>
+                                  <option value="NA">Namibia</option>
+                                  <option value="NR">Nauru</option>
+                                  <option value="NP">Nepal</option>
+                                  <option value="NL">Netherlands</option>
+                                  <option value="NC">New Caledonia</option>
+                                  <option value="NZ">New Zealand</option>
+                                  <option value="NI">Nicaragua</option>
+                                  <option value="NE">Niger</option>
+                                  <option value="NG">Nigeria</option>
+                                  <option value="NU">Niue</option>
+                                  <option value="NF">Norfolk Island</option>
+                                  <option value="KP">North Korea</option>
+                                  <option value="MK">North Macedonia</option>
+                                  <option value="MP">Northern Mariana Islands</option>
+                                  <option value="NO">Norway</option>
+                                  <option value="OM">Oman</option>
+                                  <option value="PK">Pakistan</option>
+                                  <option value="PW">Palau</option>
+                                  <option value="PA">Panama</option>
+                                  <option value="PG">Papua New Guinea</option>
+                                  <option value="PY">Paraguay</option>
+                                  <option value="PE">Peru</option>
+                                  <option value="PH">Philippines</option>
+                                  <option value="PN">Pitcairn</option>
+                                  <option value="PL">Poland</option>
+                                  <option value="PT">Portugal</option>
+                                  <option value="PR">Puerto Rico</option>
+                                  <option value="QA">Qatar</option>
+                                  <option value="IE">Republic of Ireland</option>
+                                  <option value="RE">Réunion</option>
+                                  <option value="RO">Romania</option>
+                                  <option value="RU">Russian Federation</option>
+                                  <option value="RW">Rwanda</option>
+                                  <option value="WS">Samoa</option>
+                                  <option value="SM">San Marino</option>
+                                  <option value="ST">Sao Tome and Principe</option>
+                                  <option value="SA">Saudi Arabia</option>
+                                  <option value="SN">Senegal</option>
+                                  <option value="RS">Serbia</option>
+                                  <option value="SC">Seychelles</option>
+                                  <option value="SL">Sierra Leone</option>
+                                  <option value="SG">Singapore</option>
+                                  <option value="SK">Slovakia</option>
+                                  <option value="SI">Slovenia</option>
+                                  <option value="SB">Solomon Islands</option>
+                                  <option value="SO">Somalia</option>
+                                  <option value="ZA">South Africa</option>
+                                  <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                  <option value="KR">South Korea</option>
+                                  <option value="SS">South Sudan</option>
+                                  <option value="ES">Spain</option>
+                                  <option value="LK">Sri Lanka</option>
+                                  <option value="BL">St Barthélemy</option>
+                                  <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                                  <option value="KN">St Kitts and Nevis</option>
+                                  <option value="LC">St Lucia</option>
+                                  <option value="SX">St Maarten (Dutch)</option>
+                                  <option value="MF">St Martin (French)</option>
+                                  <option value="PM">St Pierre and Miquelon</option>
+                                  <option value="VC">St Vincent and the Grenadines</option>
+                                  <option value="SD">Sudan</option>
+                                  <option value="SR">Suriname</option>
+                                  <option value="SE">Sweden</option>
+                                  <option value="CH">Switzerland</option>
+                                  <option value="SY">Syria</option>
+                                  <option value="TW">Taiwan</option>
+                                  <option value="TJ">Tajikistan</option>
+                                  <option value="TZ">Tanzania</option>
+                                  <option value="TH">Thailand</option>
+                                  <option value="GM">The Gambia</option>
+                                  <option value="PS">The Occupied Palestinian Territories</option>
+                                  <option value="TL">Timor-Leste</option>
+                                  <option value="TG">Togo</option>
+                                  <option value="TK">Tokelau</option>
+                                  <option value="TO">Tonga</option>
+                                  <option value="TT">Trinidad and Tobago</option>
+                                  <option value="TN">Tunisia</option>
+                                  <option value="TR">Turkey</option>
+                                  <option value="TM">Turkmenistan</option>
+                                  <option value="TC">Turks and Caicos Islands</option>
+                                  <option value="TV">Tuvalu</option>
+                                  <option value="UG">Uganda</option>
+                                  <option value="UA">Ukraine</option>
+                                  <option value="AE">United Arab Emirates</option>
+                                  <option value="GB">United Kingdom of Great Britain and Northern Ireland</option>
+                                  <option value="UM">United States Minor Outlying Islands</option>
+                                  <option value="US">United States of America</option>
+                                  <option value="UY">Uruguay</option>
+                                  <option value="UZ">Uzbekistan</option>
+                                  <option value="VU">Vanuatu</option>
+                                  <option value="VE">Venezuela</option>
+                                  <option value="VN">Viet Nam</option>
+                                  <option value="VI">Virgin Islands of the United States</option>
+                                  <option value="WF">Wallis and Futuna</option>
+                                  <option value="EH">Western Sahara</option>
+                                  <option value="YE">Yemen</option>
+                                  <option value="ZM">Zambia</option>
+                                  <option value="ZW">Zimbabwe</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                  </div>
+                  <div class="govuk-radios__item" data-target="transit">
+                    <input id="acceptability-transit" type="radio" class="govuk-radios__input" name="acceptability" value="transit" aria-controls="transit" aria-expanded="false">
+                    <label class="govuk-label govuk-radios__label" for="acceptability-transit">Transit</label>
+                  </div>
+
+                  <div class="govuk-radios__conditional
+                          govuk-radios__conditional--hidden govuk-!-margin-left-0
+                          govuk-!-padding-left-3" id="transit">
+
+
+                      <div id="transit-detail">
+                          <div class="govuk-form-group">
+                            <div class="govuk-form-group  ">
+                                
+                                <label class="govuk-label govuk-label--s" for="transitExitBipUk">
+                                  Exit border control post
+                                </label>
+                                
+                            
+                            
+                              
+                            
+                              <select class="govuk-select govuk-!-width-one-half" id="transitExitBipUk" name="transitExitBipUk">
+                                  <option value="">Select border control post</option>
+                                  <option value="Test070820">070820t1 tester ltd</option>
+                                  <option value="Test200820">200820t1 tester Ltd</option>
+                                  <option value="beta">APHA</option>
+                                  <option value="GBBEL1">Belfast Airport</option>
+                                  <option value="BelfPort2">Belfast Pharmaceuticals</option>
+                                  <option value="GBBEL4">Belfast Port</option>
+                                  <option value="BPTestAdd">Belfast Port</option>
+                                  <option value="BhmAllIn1">Birmingham International Airport</option>
+                                  <option value="GBBRS1">Bristol</option>
+                                  <option value="TST92BCP">Bristol</option>
+                                  <option value="DRIO">Bristol</option>
+                                  <option value="DRIP555">Bristol</option>
+                                  <option value="REL94">Chicken Solutions</option>
+                                  <option value="GBEMA4">East Midlands Airport</option>
+                                  <option value="GBNOTT1">EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE)</option>
+                                  <option value="NOTTS0123">EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE)</option>
+                                  <option value="GBEDI4TALL">Edinburgh Airport</option>
+                                  <option value="GBFXT1">Felixstowe</option>
+                                  <option value="GBLGW1">Gatwick Airport</option>
+                                  <option value="GBGSY1">Grimsby and Immingham</option>
+                                  <option value="GBLHR1P">Heathrow Airport - APH (products)</option>
+                                  <option value="GBLHR4P">Heathrow Airport - Eurobip (products)</option>
+                                  <option value="GBIVG1">Invergordon</option>
+                                  <option value="TST89TEST">Jemma BIP</option>
+                                  <option value="R135">Kainos</option>
+                                  <option value="GBLIV1">Liverpool</option>
+                                  <option value="GBLGP1">London Gateway</option>
+                                  <option value="LtnCP111">London Luton Airport</option>
+                                  <option value="LTCH111tmp">London Luton Airport</option>
+                                  <option value="GBTHP1">London Thamesport</option>
+                                  <option value="GBTIL1">London Tilbury</option>
+                                  <option value="GBMNC1">Manchester airport</option>
+                                  <option value="Y-RelT-UK">Manchester Airport</option>
+                                  <option value="GBPHD1">Peterhead</option>
+                                  <option value="POP4321">PopCorn Christmas LTD</option>
+                                  <option value="POP987">PopCorn Christmas LTD</option>
+                                  <option value="POP82">PopCorn Christmas LTD</option>
+                                  <option value="POP124T">PopCorn Christmas LTD</option>
+                                  <option value="Coffee123">Rooster Coffee Roasters</option>
+                                  <option value="GBSOU1">Southampton</option>
+                                  <option value="GBSTN4P">Stansted Airport (products)</option>
+                                  <option value="BCCODE">tster</option>
+                                  <option value="TYNFRE">Tyneside Freeport</option>
+                              </select>
+                            </div>
+                          </div>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-label--s" for="transitCountry">
+                            Transited country
+                          </label>
+                          <select class="govuk-select govuk-!-width-one-half" id="transitCountry" name="transitCountry">
+                            <option value="">Select transited country</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AX">Aland Islands</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">American Samoa</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AI">Anguilla</option>
+                                <option value="AQ">Antarctica</option>
+                                <option value="AG">Antigua and Barbuda</option>
+                                <option value="AR">Argentina</option>
+                                <option value="AM">Armenia</option>
+                                <option value="AW">Aruba</option>
+                                <option value="AU">Australia</option>
+                                <option value="AT">Austria</option>
+                                <option value="AZ">Azerbaijan</option>
+                                <option value="BS">Bahamas</option>
+                                <option value="BH">Bahrain</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="BB">Barbados</option>
+                                <option value="BY">Belarus</option>
+                                <option value="BE">Belgium</option>
+                                <option value="BZ">Belize</option>
+                                <option value="BJ">Benin</option>
+                                <option value="BM">Bermuda</option>
+                                <option value="BT">Bhutan</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                <option value="BA">Bosnia and Herzegovina</option>
+                                <option value="BW">Botswana</option>
+                                <option value="BV">Bouvet Island</option>
+                                <option value="BR">Brazil</option>
+                                <option value="IO">British Indian Ocean Territory</option>
+                                <option value="VG">British Virgin Islands</option>
+                                <option value="BN">Brunei</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="BF">Burkina Faso</option>
+                                <option value="BI">Burundi</option>
+                                <option value="KH">Cambodia</option>
+                                <option value="CM">Cameroon</option>
+                                <option value="CA">Canada</option>
+                                <option value="ES-CN">Canary Islands</option>
+                                <option value="CV">Cape Verde</option>
+                                <option value="KY">Cayman Islands</option>
+                                <option value="CF">Central African Republic</option>
+                                <option value="TD">Chad</option>
+                                <option value="CL">Chile</option>
+                                <option value="CN">China</option>
+                                <option value="CX">Christmas Island</option>
+                                <option value="CC">Cocos (Keeling) Islands</option>
+                                <option value="CO">Colombia</option>
+                                <option value="KM">Comoros</option>
+                                <option value="CG">Congo</option>
+                                <option value="CK">Cook Islands</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="CI">Côte d'Ivoire</option>
+                                <option value="HR">Croatia</option>
+                                <option value="CU">Cuba</option>
+                                <option value="CW">Curaçao</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="CD">Democratic Republic of the Congo</option>
+                                <option value="DK">Denmark</option>
+                                <option value="DJ">Djibouti</option>
+                                <option value="DM">Dominica</option>
+                                <option value="DO">Dominican Republic</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="EG">Egypt</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="GQ">Equatorial Guinea</option>
+                                <option value="ER">Eritrea</option>
+                                <option value="EE">Estonia</option>
+                                <option value="SZ">Eswatini</option>
+                                <option value="ET">Ethiopia</option>
+                                <option value="FK">Falkland Islands</option>
+                                <option value="FO">Faroe Islands</option>
+                                <option value="FJ">Fiji</option>
+                                <option value="FI">Finland</option>
+                                <option value="FR">France</option>
+                                <option value="GF">French Guiana</option>
+                                <option value="PF">French Polynesia</option>
+                                <option value="TF">French Southern Territories</option>
+                                <option value="GA">Gabon</option>
+                                <option value="GE">Georgia</option>
+                                <option value="DE">Germany</option>
+                                <option value="GH">Ghana</option>
+                                <option value="GI">Gibraltar</option>
+                                <option value="GR">Greece</option>
+                                <option value="GL">Greenland</option>
+                                <option value="GD">Grenada</option>
+                                <option value="GP">Guadeloupe</option>
+                                <option value="GU">Guam</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="GG">Guernsey</option>
+                                <option value="GN">Guinea</option>
+                                <option value="GW">Guinea-Bissau</option>
+                                <option value="GY">Guyana</option>
+                                <option value="HT">Haiti</option>
+                                <option value="HM">Heard Island and McDonald Islands</option>
+                                <option value="VA">Holy See</option>
+                                <option value="HN">Honduras</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="HU">Hungary</option>
+                                <option value="IS">Iceland</option>
+                                <option value="IN">India</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="IR">Iran</option>
+                                <option value="IQ">Iraq</option>
+                                <option value="IM">Isle of Man</option>
+                                <option value="IL">Israel</option>
+                                <option value="IT">Italy</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="JP">Japan</option>
+                                <option value="JE">Jersey</option>
+                                <option value="JO">Jordan</option>
+                                <option value="KZ">Kazakhstan</option>
+                                <option value="KE">Kenya</option>
+                                <option value="KI">Kiribati</option>
+                                <option value="XK">Kosovo</option>
+                                <option value="KW">Kuwait</option>
+                                <option value="KG">Kyrgyzstan</option>
+                                <option value="LA">Laos</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LB">Lebanon</option>
+                                <option value="LS">Lesotho</option>
+                                <option value="LR">Liberia</option>
+                                <option value="LY">Libya</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MO">Macao</option>
+                                <option value="MG">Madagascar</option>
+                                <option value="MW">Malawi</option>
+                                <option value="MY">Malaysia</option>
+                                <option value="MV">Maldives</option>
+                                <option value="ML">Mali</option>
+                                <option value="MT">Malta</option>
+                                <option value="MH">Marshall Islands</option>
+                                <option value="MQ">Martinique</option>
+                                <option value="MR">Mauritania</option>
+                                <option value="MU">Mauritius</option>
+                                <option value="YT">Mayotte</option>
+                                <option value="MX">Mexico</option>
+                                <option value="FM">Micronesia</option>
+                                <option value="MD">Moldova</option>
+                                <option value="MC">Monaco</option>
+                                <option value="MN">Mongolia</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="MS">Montserrat</option>
+                                <option value="MA">Morocco</option>
+                                <option value="MZ">Mozambique</option>
+                                <option value="MM">Myanmar</option>
+                                <option value="NA">Namibia</option>
+                                <option value="NR">Nauru</option>
+                                <option value="NP">Nepal</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="NC">New Caledonia</option>
+                                <option value="NZ">New Zealand</option>
+                                <option value="NI">Nicaragua</option>
+                                <option value="NE">Niger</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="NU">Niue</option>
+                                <option value="NF">Norfolk Island</option>
+                                <option value="KP">North Korea</option>
+                                <option value="MK">North Macedonia</option>
+                                <option value="MP">Northern Mariana Islands</option>
+                                <option value="NO">Norway</option>
+                                <option value="OM">Oman</option>
+                                <option value="PK">Pakistan</option>
+                                <option value="PW">Palau</option>
+                                <option value="PA">Panama</option>
+                                <option value="PG">Papua New Guinea</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="PH">Philippines</option>
+                                <option value="PN">Pitcairn</option>
+                                <option value="PL">Poland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PR">Puerto Rico</option>
+                                <option value="QA">Qatar</option>
+                                <option value="IE">Republic of Ireland</option>
+                                <option value="RE">Réunion</option>
+                                <option value="RO">Romania</option>
+                                <option value="RU">Russian Federation</option>
+                                <option value="RW">Rwanda</option>
+                                <option value="WS">Samoa</option>
+                                <option value="SM">San Marino</option>
+                                <option value="ST">Sao Tome and Principe</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="SN">Senegal</option>
+                                <option value="RS">Serbia</option>
+                                <option value="SC">Seychelles</option>
+                                <option value="SL">Sierra Leone</option>
+                                <option value="SG">Singapore</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="SB">Solomon Islands</option>
+                                <option value="SO">Somalia</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                <option value="KR">South Korea</option>
+                                <option value="SS">South Sudan</option>
+                                <option value="ES">Spain</option>
+                                <option value="LK">Sri Lanka</option>
+                                <option value="BL">St Barthélemy</option>
+                                <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                                <option value="KN">St Kitts and Nevis</option>
+                                <option value="LC">St Lucia</option>
+                                <option value="SX">St Maarten (Dutch)</option>
+                                <option value="MF">St Martin (French)</option>
+                                <option value="PM">St Pierre and Miquelon</option>
+                                <option value="VC">St Vincent and the Grenadines</option>
+                                <option value="SD">Sudan</option>
+                                <option value="SR">Suriname</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="SY">Syria</option>
+                                <option value="TW">Taiwan</option>
+                                <option value="TJ">Tajikistan</option>
+                                <option value="TZ">Tanzania</option>
+                                <option value="TH">Thailand</option>
+                                <option value="GM">The Gambia</option>
+                                <option value="PS">The Occupied Palestinian Territories</option>
+                                <option value="TL">Timor-Leste</option>
+                                <option value="TG">Togo</option>
+                                <option value="TK">Tokelau</option>
+                                <option value="TO">Tonga</option>
+                                <option value="TT">Trinidad and Tobago</option>
+                                <option value="TN">Tunisia</option>
+                                <option value="TR">Turkey</option>
+                                <option value="TM">Turkmenistan</option>
+                                <option value="TC">Turks and Caicos Islands</option>
+                                <option value="TV">Tuvalu</option>
+                                <option value="UG">Uganda</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <optgroup label="United Kingdom of Great Britain and Northern Ireland">
+                                    <option value="GB-ENG">England</option>
+                                    <option value="GB-NIR">Northern Ireland</option>
+                                    <option value="GB-SCT">Scotland</option>
+                                    <option value="GB-WLS">Wales</option>
+                                </optgroup>
+                                <option value="UM">United States Minor Outlying Islands</option>
+                                <option value="US">United States of America</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="UZ">Uzbekistan</option>
+                                <option value="VU">Vanuatu</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="VN">Viet Nam</option>
+                                <option value="VI">Virgin Islands of the United States</option>
+                                <option value="WF">Wallis and Futuna</option>
+                                <option value="EH">Western Sahara</option>
+                                <option value="YE">Yemen</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="ZW">Zimbabwe</option>
+                          </select>
+                        </div>
+
+                        <div class="govuk-form-group">
+                          <div class="govuk-form-group  ">
+                              
+                              <label class="govuk-label govuk-label--s" for="transitDestinationCountry">
+                                Destination country
+                              </label>
+                              
+                          
+                          
+                            
+                          
+                            <select class="govuk-select govuk-!-width-one-half" id="transitDestinationCountry" name="transitDestinationCountry">
+                                <option value="">Select destination country</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AX">Aland Islands</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">American Samoa</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AI">Anguilla</option>
+                                <option value="AQ">Antarctica</option>
+                                <option value="AG">Antigua and Barbuda</option>
+                                <option value="AR">Argentina</option>
+                                <option value="AM">Armenia</option>
+                                <option value="AW">Aruba</option>
+                                <option value="AU">Australia</option>
+                                <option value="AT">Austria</option>
+                                <option value="AZ">Azerbaijan</option>
+                                <option value="BS">Bahamas</option>
+                                <option value="BH">Bahrain</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="BB">Barbados</option>
+                                <option value="BY">Belarus</option>
+                                <option value="BE">Belgium</option>
+                                <option value="BZ">Belize</option>
+                                <option value="BJ">Benin</option>
+                                <option value="BM">Bermuda</option>
+                                <option value="BT">Bhutan</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                <option value="BA">Bosnia and Herzegovina</option>
+                                <option value="BW">Botswana</option>
+                                <option value="BV">Bouvet Island</option>
+                                <option value="BR">Brazil</option>
+                                <option value="IO">British Indian Ocean Territory</option>
+                                <option value="VG">British Virgin Islands</option>
+                                <option value="BN">Brunei</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="BF">Burkina Faso</option>
+                                <option value="BI">Burundi</option>
+                                <option value="KH">Cambodia</option>
+                                <option value="CM">Cameroon</option>
+                                <option value="CA">Canada</option>
+                                <option value="ES-CN">Canary Islands</option>
+                                <option value="CV">Cape Verde</option>
+                                <option value="KY">Cayman Islands</option>
+                                <option value="CF">Central African Republic</option>
+                                <option value="TD">Chad</option>
+                                <option value="CL">Chile</option>
+                                <option value="CN">China</option>
+                                <option value="CX">Christmas Island</option>
+                                <option value="CC">Cocos (Keeling) Islands</option>
+                                <option value="CO">Colombia</option>
+                                <option value="KM">Comoros</option>
+                                <option value="CG">Congo</option>
+                                <option value="CK">Cook Islands</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="CI">Côte d'Ivoire</option>
+                                <option value="HR">Croatia</option>
+                                <option value="CU">Cuba</option>
+                                <option value="CW">Curaçao</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="CD">Democratic Republic of the Congo</option>
+                                <option value="DK">Denmark</option>
+                                <option value="DJ">Djibouti</option>
+                                <option value="DM">Dominica</option>
+                                <option value="DO">Dominican Republic</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="EG">Egypt</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="GQ">Equatorial Guinea</option>
+                                <option value="ER">Eritrea</option>
+                                <option value="EE">Estonia</option>
+                                <option value="SZ">Eswatini</option>
+                                <option value="ET">Ethiopia</option>
+                                <option value="FK">Falkland Islands</option>
+                                <option value="FO">Faroe Islands</option>
+                                <option value="FJ">Fiji</option>
+                                <option value="FI">Finland</option>
+                                <option value="FR">France</option>
+                                <option value="GF">French Guiana</option>
+                                <option value="PF">French Polynesia</option>
+                                <option value="TF">French Southern Territories</option>
+                                <option value="GA">Gabon</option>
+                                <option value="GE">Georgia</option>
+                                <option value="DE">Germany</option>
+                                <option value="GH">Ghana</option>
+                                <option value="GI">Gibraltar</option>
+                                <option value="GR">Greece</option>
+                                <option value="GL">Greenland</option>
+                                <option value="GD">Grenada</option>
+                                <option value="GP">Guadeloupe</option>
+                                <option value="GU">Guam</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="GG">Guernsey</option>
+                                <option value="GN">Guinea</option>
+                                <option value="GW">Guinea-Bissau</option>
+                                <option value="GY">Guyana</option>
+                                <option value="HT">Haiti</option>
+                                <option value="HM">Heard Island and McDonald Islands</option>
+                                <option value="VA">Holy See</option>
+                                <option value="HN">Honduras</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="HU">Hungary</option>
+                                <option value="IS">Iceland</option>
+                                <option value="IN">India</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="IR">Iran</option>
+                                <option value="IQ">Iraq</option>
+                                <option value="IM">Isle of Man</option>
+                                <option value="IL">Israel</option>
+                                <option value="IT">Italy</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="JP">Japan</option>
+                                <option value="JE">Jersey</option>
+                                <option value="JO">Jordan</option>
+                                <option value="KZ">Kazakhstan</option>
+                                <option value="KE">Kenya</option>
+                                <option value="KI">Kiribati</option>
+                                <option value="XK">Kosovo</option>
+                                <option value="KW">Kuwait</option>
+                                <option value="KG">Kyrgyzstan</option>
+                                <option value="LA">Laos</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LB">Lebanon</option>
+                                <option value="LS">Lesotho</option>
+                                <option value="LR">Liberia</option>
+                                <option value="LY">Libya</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MO">Macao</option>
+                                <option value="MG">Madagascar</option>
+                                <option value="MW">Malawi</option>
+                                <option value="MY">Malaysia</option>
+                                <option value="MV">Maldives</option>
+                                <option value="ML">Mali</option>
+                                <option value="MT">Malta</option>
+                                <option value="MH">Marshall Islands</option>
+                                <option value="MQ">Martinique</option>
+                                <option value="MR">Mauritania</option>
+                                <option value="MU">Mauritius</option>
+                                <option value="YT">Mayotte</option>
+                                <option value="MX">Mexico</option>
+                                <option value="FM">Micronesia</option>
+                                <option value="MD">Moldova</option>
+                                <option value="MC">Monaco</option>
+                                <option value="MN">Mongolia</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="MS">Montserrat</option>
+                                <option value="MA">Morocco</option>
+                                <option value="MZ">Mozambique</option>
+                                <option value="MM">Myanmar</option>
+                                <option value="NA">Namibia</option>
+                                <option value="NR">Nauru</option>
+                                <option value="NP">Nepal</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="NC">New Caledonia</option>
+                                <option value="NZ">New Zealand</option>
+                                <option value="NI">Nicaragua</option>
+                                <option value="NE">Niger</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="NU">Niue</option>
+                                <option value="NF">Norfolk Island</option>
+                                <option value="KP">North Korea</option>
+                                <option value="MK">North Macedonia</option>
+                                <option value="MP">Northern Mariana Islands</option>
+                                <option value="NO">Norway</option>
+                                <option value="OM">Oman</option>
+                                <option value="PK">Pakistan</option>
+                                <option value="PW">Palau</option>
+                                <option value="PA">Panama</option>
+                                <option value="PG">Papua New Guinea</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="PH">Philippines</option>
+                                <option value="PN">Pitcairn</option>
+                                <option value="PL">Poland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PR">Puerto Rico</option>
+                                <option value="QA">Qatar</option>
+                                <option value="IE">Republic of Ireland</option>
+                                <option value="RE">Réunion</option>
+                                <option value="RO">Romania</option>
+                                <option value="RU">Russian Federation</option>
+                                <option value="RW">Rwanda</option>
+                                <option value="WS">Samoa</option>
+                                <option value="SM">San Marino</option>
+                                <option value="ST">Sao Tome and Principe</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="SN">Senegal</option>
+                                <option value="RS">Serbia</option>
+                                <option value="SC">Seychelles</option>
+                                <option value="SL">Sierra Leone</option>
+                                <option value="SG">Singapore</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="SB">Solomon Islands</option>
+                                <option value="SO">Somalia</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                <option value="KR">South Korea</option>
+                                <option value="SS">South Sudan</option>
+                                <option value="ES">Spain</option>
+                                <option value="LK">Sri Lanka</option>
+                                <option value="BL">St Barthélemy</option>
+                                <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                                <option value="KN">St Kitts and Nevis</option>
+                                <option value="LC">St Lucia</option>
+                                <option value="SX">St Maarten (Dutch)</option>
+                                <option value="MF">St Martin (French)</option>
+                                <option value="PM">St Pierre and Miquelon</option>
+                                <option value="VC">St Vincent and the Grenadines</option>
+                                <option value="SD">Sudan</option>
+                                <option value="SR">Suriname</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="SY">Syria</option>
+                                <option value="TW">Taiwan</option>
+                                <option value="TJ">Tajikistan</option>
+                                <option value="TZ">Tanzania</option>
+                                <option value="TH">Thailand</option>
+                                <option value="GM">The Gambia</option>
+                                <option value="PS">The Occupied Palestinian Territories</option>
+                                <option value="TL">Timor-Leste</option>
+                                <option value="TG">Togo</option>
+                                <option value="TK">Tokelau</option>
+                                <option value="TO">Tonga</option>
+                                <option value="TT">Trinidad and Tobago</option>
+                                <option value="TN">Tunisia</option>
+                                <option value="TR">Turkey</option>
+                                <option value="TM">Turkmenistan</option>
+                                <option value="TC">Turks and Caicos Islands</option>
+                                <option value="TV">Tuvalu</option>
+                                <option value="UG">Uganda</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="GB">United Kingdom of Great Britain and Northern Ireland</option>
+                                <option value="UM">United States Minor Outlying Islands</option>
+                                <option value="US">United States of America</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="UZ">Uzbekistan</option>
+                                <option value="VU">Vanuatu</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="VN">Viet Nam</option>
+                                <option value="VI">Virgin Islands of the United States</option>
+                                <option value="WF">Wallis and Futuna</option>
+                                <option value="EH">Western Sahara</option>
+                                <option value="YE">Yemen</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="ZW">Zimbabwe</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+
+                  </div>
+                  <div class="govuk-radios__item" data-target="channelled">
+                    <input id="acceptability-channelled" type="radio" class="govuk-radios__input" name="acceptability" value="channelled" aria-controls="channelled" aria-expanded="false">
+                    <label class="govuk-label govuk-radios__label" for="acceptability-channelled">Channelled</label>
+                  </div>
+
+                  <div class="govuk-radios__conditional
+                          govuk-radios__conditional--hidden govuk-!-margin-left-0
+                          govuk-!-padding-left-3" id="channelled">
+
+
+
+                      <div id="channelled">
+                        <div class="govuk-form-group acceptChannelledAction ">
+                          <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend">
+                              <span class="hidden govuk-visually-hidden">Choose from:</span>
+                            </legend>
+                            <div class="govuk-radios" data-module="govuk-radios">
+                              <div class="govuk-radios__item acceptChannelledAction">
+                                <input id="p_accchaarticle8" type="radio" name="acceptChannelledAction" value="article8" class="govuk-radios__input" checked="">
+                                <label class="govuk-label govuk-radios__label" for="p_accchaarticle8">Article 8 procedure</label>
+                              </div>
+                              <div class="govuk-radios__item acceptChannelledAction">
+                                  <input id="p_accchaarticle15" type="radio" name="acceptChannelledAction" class="govuk-radios__input" value="article15">
+                                <label class="govuk-label govuk-radios__label" for="p_accchaarticle15">Re-import of UK products (Article 15)</label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="govuk-radios__item" data-target="internal">
+                    <input id="acceptability-internalmarket" type="radio" class="govuk-radios__input" name="acceptability" value="internalmarket" checked="" aria-controls="internal" aria-expanded="true">
+                    <label class="govuk-label govuk-radios__label" for="acceptability-internalmarket">Internal market</label>
+                  </div>
+
+                  <div class="govuk-radios__conditional govuk-!-margin-left-0 govuk-!-padding-left-3" id="internal">
+  <div class="govuk-form-group acceptMarketFreeCirculation  ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend ">
+          <span class="govuk-visually-hidden">Choose from:</span>
+      </legend>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item acceptMarketFreeCirculation">
+                <input id="p_acfmcanimal" class="govuk-radios__input" type="radio" name="acceptMarketFreeCirculation" value="animal">
+                <label class="govuk-label govuk-radios__label" for="p_acfmcanimal">Animal feedingstuff</label>
+              </div>
+              <div class="govuk-radios__item acceptMarketFreeCirculation">
+                <input id="p_acfmchuman" class="govuk-radios__input" type="radio" name="acceptMarketFreeCirculation" value="human" checked="">
+                <label class="govuk-label govuk-radios__label" for="p_acfmchuman">Human consumption</label>
+              </div>
+              <div class="govuk-radios__item acceptMarketFreeCirculation">
+                <input id="p_acfmcother" class="govuk-radios__input" type="radio" name="acceptMarketFreeCirculation" value="other">
+                <label class="govuk-label govuk-radios__label" for="p_acfmcother">Other</label>
+              </div>
+              <div class="govuk-radios__item acceptMarketFreeCirculation">
+                <input id="p_acfmcpharma" class="govuk-radios__input" type="radio" name="acceptMarketFreeCirculation" value="pharma">
+                <label class="govuk-label govuk-radios__label" for="p_acfmcpharma">Pharmaceutical use</label>
+              </div>
+              <div class="govuk-radios__item acceptMarketFreeCirculation">
+                <input id="p_acfmctechnical" class="govuk-radios__input" type="radio" name="acceptMarketFreeCirculation" value="technical">
+                <label class="govuk-label govuk-radios__label" for="p_acfmctechnical">Technical use</label>
+              </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+                  </div>
+                  <div class="govuk-radios__item" data-target="warehouse">
+                    <input id="acceptability-nonconforming" type="radio" class="govuk-radios__input" name="acceptability" value="nonconforming" aria-controls="warehouse" aria-expanded="false">
+                    <label class="govuk-label govuk-radios__label" for="acceptability-nonconforming">Specific warehouse procedure</label>
+                  </div>
+
+                  <div class="govuk-radios__conditional
+                          govuk-radios__conditional--hidden govuk-!-margin-left-0
+                          govuk-!-padding-left-3" id="warehouse">
+  <div class="govuk-form-group acceptSpecificWarehouse  ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend ">
+          <span class="govuk-visually-hidden">Choose from:</span>
+      </legend>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item acceptSpecificWarehouse" data-target="custom-warehouse-registered-number">
+                <input id="p_aswcustoms" class="govuk-radios__input" type="radio" name="acceptSpecificWarehouse" value="customs" aria-controls="custom-warehouse-registered-number" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="p_aswcustoms">Customs warehouse</label>
+              </div>
+              
+                                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="custom-warehouse-registered-number">
+                                              <label class="govuk-label" for="customWarehouseRegisteredNumber">Registered Number</label>
+                                              <input class="govuk-input govuk-input--width-20" maxlength="255" id="customWarehouseRegisteredNumber" name="customWarehouseRegisteredNumber" value="">
+                                            </div>
+              
+              
+              <div class="govuk-radios__item acceptSpecificWarehouse" data-target="ship-name-and-port">
+                <input id="p_aswship" class="govuk-radios__input" type="radio" name="acceptSpecificWarehouse" value="ship" aria-controls="ship-name-and-port" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="p_aswship">Direct to a ship</label>
+              </div>
+              
+                                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="ship-name-and-port">
+                                              <div>
+                                                <label class="govuk-label" for="shipName">Name</label>
+                                                <input class="govuk-input govuk-input--width-20" maxlength="255" id="shipName" name="shipName" value="">
+                                              </div>
+                                              <div>
+                                                <label class="govuk-label" for="shipPortOfExit">Port of Exit</label>
+                                                <input class="govuk-input govuk-input--width-20" maxlength="255" id="shipPortOfExit" name="shipPortOfExit" value="">
+                                              </div>
+                                            </div>
+              
+              
+              <div class="govuk-radios__item acceptSpecificWarehouse" data-target="free-warehouse-registered-number">
+                <input id="p_aswfree" class="govuk-radios__input" type="radio" name="acceptSpecificWarehouse" value="free" aria-controls="free-warehouse-registered-number" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="p_aswfree">Free zone or Free warehouse</label>
+              </div>
+              
+                                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="free-warehouse-registered-number">
+                                              <label class="govuk-label" for="freeWarehouseRegisteredNumber">Registered Number</label>
+                                              <input class="govuk-input govuk-input--width-20" maxlength="255" id="freeWarehouseRegisteredNumber" name="freeWarehouseRegisteredNumber" value="">
+                                            </div>
+              
+              
+              <div class="govuk-radios__item acceptSpecificWarehouse" data-target="ship-supplier-registered-number">
+                <input id="p_aswsupplier" class="govuk-radios__input" type="radio" name="acceptSpecificWarehouse" value="supplier" aria-controls="ship-supplier-registered-number" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="p_aswsupplier">Ship supplier</label>
+              </div>
+              
+                                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="ship-supplier-registered-number">
+                                              <label class="govuk-label" for="shipSupplierRegisteredNumber">Registered Number</label>
+                                              <input class="govuk-input govuk-input--width-20" maxlength="255" id="shipSupplierRegisteredNumber" name="shipSupplierRegisteredNumber" value="">
+                                            </div>
+              
+              
+      </div>
+    </fieldset>
+  </div>
+
+
+
+
+                  </div>
+              <div class="govuk-radios__divider">or</div>
+                  <div class="govuk-radios__item" data-target="refusal">
+                    <input id="acceptability-refused" type="radio" name="acceptability" value="refused" class="govuk-radios__input" aria-controls="refusal" aria-expanded="false">
+                    <label class="govuk-label govuk-radios__label" for="acceptability-refused">Not acceptable</label>
+                  </div>
+                  <div class="govuk-radios__conditional
+                          govuk-radios__conditional--hidden alert-info-white-bg" id="refusal">
+                          <div class="govuk-form-group notAcceptAction">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend"></legend>
+                                <div class="govuk-radios__item notAcceptAction" data-target="not-acceptable-destruction-reason">
+                                  <input id="notAcceptAction-destruction" type="radio" name="notAcceptAction" value="destruction" class="govuk-radios__input" aria-controls="not-acceptable-destruction-reason" aria-expanded="false">
+                                  <label class="govuk-label govuk-radios__label" for="notAcceptAction-destruction">Destruction</label>
+                                </div>
+
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden alert-info-white-bg " id="not-acceptable-destruction-reason">
+                                      <label class="govuk-label" for="notAcceptableDestructionReason">Reason
+                                        </label>
+                                      <input class="form-control govuk-input govuk-!-width-one-half" id="notAcceptableDestructionReason" name="notAcceptableDestructionReason" value="">
+                                    </div>
+                                <div class="govuk-radios__item notAcceptAction">
+                                  <input id="notAcceptAction-reexport" type="radio" name="notAcceptAction" value="reexport" class="govuk-radios__input">
+                                  <label class="govuk-label govuk-radios__label" for="notAcceptAction-reexport">Re-dispatching</label>
+                                </div>
+
+                                <div class="govuk-radios__item notAcceptAction">
+                                  <input id="notAcceptAction-transformation" type="radio" name="notAcceptAction" value="transformation" class="govuk-radios__input">
+                                  <label class="govuk-label govuk-radios__label" for="notAcceptAction-transformation">Transformation</label>
+                                </div>
+
+                                <div class="govuk-radios__item notAcceptAction" data-target="not-acceptable-other-reason">
+                                  <input id="notAcceptAction-other" type="radio" name="notAcceptAction" value="other" class="govuk-radios__input" aria-controls="not-acceptable-other-reason" aria-expanded="false">
+                                  <label class="govuk-label govuk-radios__label" for="notAcceptAction-other">Other</label>
+                                </div>
+
+                                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden alert-info-white-bg" id="not-acceptable-other-reason">
+                                      <label class="govuk-label" for="notAcceptableActionOtherReason">Reason
+                                        </label>
+                                      <input class="form-control govuk-input govuk-!-width-one-half" id="notAcceptableActionOtherReason" name="notAcceptableActionOtherReason" value="">
+                                    </div>
+                            </fieldset>
+                          </div>
+
+
+                        <h2 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-7">By date</h2>
+                        <div class="govuk-form-group " id="not-acceptable-date">
+                          <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend">
+                              <span class="govuk-hint">For example, 31 8 2018</span>
+                            </legend>
+                            
+                            
+                            
+                            <div class="form-date govuk-date-input" id="not-acceptable-date" data-module="accessible-datepicker">
+                              <div class="govuk-date-input__item date-input-day">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="not-acceptable-day">Day</label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2
+                                  date-picker-day" type="text" pattern="[0-9]*" inputmode="numeric" id="not-acceptable-day" name="not-acceptable-day" maxlength="2" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item date-input-month">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="not-acceptable-month">Month</label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2
+                                  date-picker-month" type="text" pattern="[0-9]*" inputmode="numeric" id="not-acceptable-month" name="not-acceptable-month" maxlength="2" value="">
+                                </div>
+                              </div>
+                              <div class="govuk-date-input__item date-input-year">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="not-acceptable-year">Year</label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4
+                                  date-picker-year" type="text" pattern="[0-9]*" inputmode="numeric" id="not-acceptable-year" name="not-acceptable-year" maxlength="4" value="">
+                                </div>
+                              </div>
+                            <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-42" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-42"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                          </fieldset>
+                        </div>
+                  </div>
+            </div>
+          </fieldset>
+        </div>
+
+          <input class="govuk-button govuk-!-margin-bottom-4 govuk-!-margin-right-1" id="button-save-and-return" name="save-button" type="submit" value="Save and return">
+          <input class="govuk-button govuk-!-margin-bottom-4 govuk-!-margin-right-1" id="button-save-and-continue" name="save-button" type="submit" value="Save and continue">
+          <p class="govuk-body">
+            <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/hub">
+              Cancel
+            </a>
+          </p>
+      </div>
+    </div>
+  </main>
+
+ 
+
+{% endblock %}
