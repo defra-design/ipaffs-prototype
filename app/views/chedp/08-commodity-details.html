@@ -25,7 +25,7 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
           <span class="govuk-caption-xl">Description of the goods</span>
         <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
 
-        <!-- <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-9" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Add a commodity" data-module="govuk-button"> -->
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-9" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Add a commodity" data-module="govuk-button">
 
 
       <form action="10-additional-details" method="post">
@@ -62,11 +62,22 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-!-margin-bottom-8">
           <div class="table-responsive species-table-desktop">
             <table class="govuk-table species-table-cheda">
-              <caption class="govuk-table__caption">
-                <h2 class="govuk-heading-m">03032300 - Tilapia (Oreochromis|spp.)</h2>
-              </caption>
-    
               <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header species" style="border-bottom: solid 1px #b1b4b6;">Commodity code</th>
+                  <th scope="col" class="govuk-table__header" colspan="4" style="border-bottom: solid 1px #b1b4b6;">Description</th>
+              </tr>
+              <tr >
+                <td><h2 class="govuk-heading-m govuk-!-margin-top-3">03032300</h2</td>
+                <td colspan="3"><h2 class="govuk-heading-m govuk-!-margin-top-3">Tilapia (Oreochromis|spp.)</h2></td>
+                <td ><input type="submit" name="remove_03032300_393882" value="Remove commodity" class="link-button commodities-remove" id="remove-commodity1"></td>
+              </tr>
+            </thead>
+              <!-- <caption class="govuk-table__caption">
+                <h2 class="govuk-heading-m">03032300 - Tilapia (Oreochromis|spp.)</h2>
+              </caption> -->
+    
+             
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header species   ">Species, type,<br> class and family</th>
                   <th scope="col" class="govuk-table__header">Net weight (kg/units)</th>
@@ -74,7 +85,7 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
                   <th scope="col" class="govuk-table__header">Type of package</th>
                 <td class="govuk-table__header"></td>
               </tr>
-              </thead>
+              
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row" id="species-03032300-393882-desktop">
                   <td class="govuk-table__cell   " id="03032300-393882-desktop">Oreochromis mossambicus, Farmed stock</td>
@@ -338,11 +349,25 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-!-margin-bottom-8">
           <div class="table-responsive species-table-desktop">
             <table class="govuk-table species-table-cheda">
-              <caption class="govuk-table__caption">
+              <!-- <caption class="govuk-table__caption">
                 <h2 class="govuk-heading-m">03021110 - Of the species Oncorhynchus apache or Oncorhynchus chrysogaster</h2>
-              </caption>
-    
+              </caption> -->
               <thead class="govuk-table__head">
+              <tr style="border: 0;">
+                <th scope="col" class="govuk-table__header  govuk-!-margin-top-3" style="border: 0;">Description</th>
+               
+                <td colspan="3" class="govuk-table__header" style="border: 0;"><h2 class="govuk-heading-m govuk-!-margin-0" >Tilapia (Oreochromis|spp.)</h2></td>
+                <td class="govuk-table__header" style="border: 0;"><input type="submit" name="remove_03032300_393882" value="Remove commodity" class="link-button commodities-remove" id="remove-commodity1" ></td>
+              </tr>
+              </thead>
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header species govuk-!-padding-top-1" >Commodity code</th>
+                  <td scope="col" class="govuk-table__cell govuk-!-padding-top-1" colspan="4">03032300</td>
+                </tr>
+                
+             
+    
+              
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header species   ">Species, type,<br> class and family</th>
                   <th scope="col" class="govuk-table__header">Net weight (kg/units)</th>
@@ -350,7 +375,7 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
                   <th scope="col" class="govuk-table__header">Type of package</th>
                 <td class="govuk-table__header"></td>
               </tr>
-              </thead>
+             
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row" id="species-03021110-238188-desktop">
                   <td class="govuk-table__cell   " id="03021110-238188-desktop">Oncorhynchus chrysogaster, Farmed stock</td>
@@ -494,11 +519,26 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-!-margin-bottom-8">
           <div class="table-responsive species-table-desktop">
             <table class="govuk-table species-table-cheda">
-              <caption class="govuk-table__caption">
+              <!-- <caption class="govuk-table__caption">
                 <h2 class="govuk-heading-m">03031300 - Atlantic salmon (Salmo salar) and Danube salmon (Hucho hucho)</h2>
-              </caption>
+              </caption> -->
+
+              <thead>
+                <tr class="govuk-table__row" style="border-top: solid 1px grey;">
+                  <th scope="col" class="govuk-table__header species govuk-!-padding-top-3" style="border: 0; width: 25%;">Commodity code</th>
+                  <td scope="col" class="govuk-table__cell govuk-!-padding-top-3" colspan="3" style="border: 0;">03032300</td>
+                  <td class="govuk-table__cell" style="border: 0;"><input type="submit" name="remove_03032300_393882" value="Remove commodity" class="link-button commodities-remove" id="remove-commodity1" ></td>
+                 
+                </tr>
+                <tr style="border: 0;">
+                  <th scope="col" class="govuk-table__header  govuk-!-margin-top-3" style="border: 0;">Description</th>
+                 
+                  <td colspan="4" class="govuk-table__header" style="border: 0;"><h2 class="govuk-heading-m govuk-!-margin-0" >Tilapia (Oreochromis|spp.)</h2></td>
+                 
+                </tr>
+               </thead>
+                 
     
-              <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header species   ">Species, type,<br> class and family</th>
                   <th scope="col" class="govuk-table__header">Net weight (kg/units)</th>
@@ -506,7 +546,7 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
                   <th scope="col" class="govuk-table__header">Type of package</th>
                 <td class="govuk-table__header"></td>
               </tr>
-              </thead>
+             
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row" id="species-03031300-305679-desktop">
                   <td class="govuk-table__cell   " id="03031300-305679-desktop">Salmo salar, Farmed stock</td>
