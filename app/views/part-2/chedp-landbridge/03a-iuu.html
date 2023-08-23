@@ -36,7 +36,7 @@
   
 </div>
 
-  <form action="03a-iuu" method="POST">
+  <form action="04-checks" method="POST">
     <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
     <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
     <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
@@ -68,31 +68,17 @@
 
       <div class="govuk-form-group govuk-!-margin-bottom-0 iuu" id="iuu-check-options">
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">IUU check required?</legend>
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" data-target="container-iuu">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="radio-iuu-selected-yes" type="radio" name="iuuCheckRequired" value="true" aria-controls="container-iuu" aria-expanded="false">
-              <label class="govuk-label govuk-radios__label" for="radio-iuu-selected-yes">Yes</label>
+          <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">IUU check information</legend> -->
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--l" for="more-detail">
+                
+              </label>
+            </h1>
+            <div id="more-detail-hint" class="govuk-hint">
+              
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden alert-info-white-bg govuk-radios__item govuk-form-group govuk-!-width-two-thirds govuk-!-margin-top-4 panel panel-border-narrow" id="container-iuu">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-visually-hidden">Choose from</legend>
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="radio-iuu-na" type="radio" name="iuuStatus" value="IUUNA">
-                    <label class="govuk-label govuk-radios__label" aria-label="label-iuu-na" for="radio-iuu-na">IUU NA</label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="radio-iuu-ok" type="radio" name="iuuStatus" value="IUUOK">
-                    <label class="govuk-label govuk-radios__label" aria-label="label-iuu-ok" for="radio-iuu-ok">IUU OK</label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <div class="govuk-radios__item govuk-!-margin-top-4">
-              <input class="govuk-radios__input" id="radio-iuu-selected-no" type="radio" name="iuuCheckRequired" value="false" checked="">
-              <label class="govuk-label govuk-radios__label" for="radio-iuu-selected-no">No</label>
-            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
           </div>
         </fieldset>
         <div>
