@@ -1,0 +1,81 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+
+  
+
+</div>
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="confirmation-page">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-8">
+        
+        <h1 class="govuk-panel__title">Your checks have been submitted</h1>
+        <div class="govuk-panel__body">
+          <strong>
+            <span id="reference-number" class="highlight-color">CHEDP.GB.2023.5914693</span>
+            <span id="cved-version-number" class="highlight-color"> - V1</span>
+          </strong>
+          <p class="govuk-!-font-weight-regular">
+            <span id="cved-version-number"> Outcome: <br>
+            <strong id="decision-outcome" class="govuk-!-font-weight-bold">Acceptable for Internal Market</strong>
+          </span></p>
+        </div>
+      </div>
+
+        <h3 class="govuk-heading-m govuk-!-margin-top-7">What happens next?</h3>
+          <p class="govuk-body">The outcome of this check will be updated on the IPAFFS dashboard.</p>
+      <ul class="govuk-list">
+        <li class="govuk-!-margin-top-6">
+          <a rel="noopener noreferrer" class="govuk-button" id="print" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5914693/certificate/pdf" target="_blank">
+            View or print CHED
+          </a>
+        </li>
+        <li class="govuk-!-margin-bottom-0">
+          <a class="govuk-link govuk-!-margin-bottom-0" id="return-to-home-page" href="/decision/tst/protected/bip-notifications">
+            Return to your dashboard
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+ 
+
+{% endblock %}
