@@ -93,72 +93,7 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="tranship-conditional">
 
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-label--s" for="bcp-final">
-                        Exit Border Control Post
-                    </label>
-                    
-                    <select class="govuk-select govuk-!-width-full-width" id="bcp-final" name="bcp-final">
-                        <option value="">Select exit Border Control Post</option>
-                        <option value="B2CLTD" data-country-code="GB">
-                          B2C Limited - B2CLTD
-                        </option>
-                        <option value="BelfPort2" data-country-code="GB">
-                          Belfast Pharmaceuticals - BelfPort2
-                        </option>
-                        <option value="0102" data-country-code="GB">
-                          Belfast Pharmaceuticals - 0102
-                        </option>
-                        <option value="BhmAllIn1" data-country-code="GB">
-                          Birmingham International Airport - BhmAllIn1
-                        </option>
-                        <option value="DRIO" data-country-code="GB">
-                          Bristol - DRIO
-                        </option>
-                        <option value="DRIP555" data-country-code="GB">
-                          Bristol - DRIP555
-                        </option>
-                        <option value="GBNOTT1" data-country-code="GB">
-                          EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - GBNOTT1
-                        </option>
-                        <option value="GBEDI4" data-country-code="GB">
-                          Edinburgh Airport (animals) - GBEDI4
-                        </option>
-                        <option value="GBLGW4" data-country-code="GB">
-                          Gatwick Airport (animals) - GBLGW4
-                        </option>
-                        <option value="GBLHR4A" data-country-code="GB">
-                          Heathrow Airport (animals) - GBLHR4A
-                        </option>
-                        <option value="LtnCA111" data-country-code="GB">
-                          London Luton Airport - LtnCA111
-                        </option>
-                        <option value="Y-RelT-UK" data-country-code="GB">
-                          Manchester Airport - Y-RelT-UK
-                        </option>
-                        <option value="GBMNC4" data-country-code="GB">
-                          Manchester Airport (animals) - GBMNC4
-                        </option>
-                        <option value="34354" data-country-code="GB">
-                          Non-BCP Heathrow - 34354
-                        </option>
-                        <option value="GBPIK4" data-country-code="GB">
-                          Prestwick Airport (animals) - GBPIK4
-                        </option>
-                        <option value="BCC123456" data-country-code="GB">
-                          Sole Trader for R.MA.009 - BCC123456
-                        </option>
-                        <option value="5234128877" data-country-code="GB">
-                          Sole Trader Number 3 - 5234128877
-                        </option>
-                        <option value="GBSTN4A" data-country-code="GB">
-                          Stansted Airport (animals) - GBSTN4A
-                        </option>
-                        <option value="TYNFRE" data-country-code="GB">
-                          Tyneside Freeport - TYNFRE
-                        </option>
-                    </select>
-                  </div>
+                  
 
                     <div class="govuk-form-group govuk-!-margin-bottom-8">
                       <label class="govuk-label govuk-label--s" for="third-country-transhipment">
@@ -433,78 +368,31 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                    </div>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-transit">
+                  
                   <div class="govuk-form-group">
                     <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
-                        Exit Border Control Post
+                      Movement Reference Number (MRN)
+                    </label>
+                    <div id="sign-in-hint" class="govuk-hint">
+                      You’ll find this on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
+                    </div>
+                    
+                    <input class="govuk-input" id="event-name" name="event-name" type="text">
+                  </div>
+                  
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+                        Port of exit
                     </label>
                     
-                    <select class="govuk-select govuk-!-width-full-width" id="bcp-transit-third-country" name="bcp-transit-third-country">
-                        <option value="">Select Exit Border Control Post</option>
-                        <option value="B2CLTD" data-country-code="GB">
-                          B2C Limited - B2CLTD
-                        </option>
-                        <option value="BelfPort2" data-country-code="GB">
-                          Belfast Pharmaceuticals - BelfPort2
-                        </option>
-                        <option value="0102" data-country-code="GB">
-                          Belfast Pharmaceuticals - 0102
-                        </option>
-                        <option value="BhmAllIn1" data-country-code="GB">
-                          Birmingham International Airport - BhmAllIn1
-                        </option>
-                        <option value="DRIO" data-country-code="GB">
-                          Bristol - DRIO
-                        </option>
-                        <option value="DRIP555" data-country-code="GB">
-                          Bristol - DRIP555
-                        </option>
-                        <option value="GBNOTT1" data-country-code="GB">
-                          EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - GBNOTT1
-                        </option>
-                        <option value="GBEDI4" data-country-code="GB">
-                          Edinburgh Airport (animals) - GBEDI4
-                        </option>
-                        <option value="GBLGW4" data-country-code="GB">
-                          Gatwick Airport (animals) - GBLGW4
-                        </option>
-                        <option value="GBLHR4A" data-country-code="GB">
-                          Heathrow Airport (animals) - GBLHR4A
-                        </option>
-                        <option value="LtnCA111" data-country-code="GB">
-                          London Luton Airport - LtnCA111
-                        </option>
-                        <option value="Y-RelT-UK" data-country-code="GB">
-                          Manchester Airport - Y-RelT-UK
-                        </option>
-                        <option value="GBMNC4" data-country-code="GB">
-                          Manchester Airport (animals) - GBMNC4
-                        </option>
-                        <option value="34354" data-country-code="GB">
-                          Non-BCP Heathrow - 34354
-                        </option>
-                        <option value="GBPIK4" data-country-code="GB">
-                          Prestwick Airport (animals) - GBPIK4
-                        </option>
-                        <option value="BCC123456" data-country-code="GB">
-                          Sole Trader for R.MA.009 - BCC123456
-                        </option>
-                        <option value="5234128877" data-country-code="GB">
-                          Sole Trader Number 3 - 5234128877
-                        </option>
-                        <option value="GBSTN4A" data-country-code="GB">
-                          Stansted Airport (animals) - GBSTN4A
-                        </option>
-                        <option value="TYNFRE" data-country-code="GB">
-                          Tyneside Freeport - TYNFRE
-                        </option>
-                    </select>
+                    <input class="govuk-input" id="event-name" name="event-name" type="text">
                   </div>
 
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" role="group">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Estimated arrival at exit Border Control Post</legend>
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">When the consignment will leave Great Britain</legend>
                       <div id="sign-in-hint" class="govuk-hint">
-                        For example, 27 3 2023
+                        For example, 27 3 2023. This must be within 7 days of arrival in Great Britain.
                       </div>
                       <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
   
