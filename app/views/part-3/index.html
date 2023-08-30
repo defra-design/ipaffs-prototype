@@ -42,17 +42,15 @@
           <span id="reference-number"></span>
       </span>
       
-      Consignments requiring control
+      Consignments requiring control 
       </h1>    
       
       <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box">
         <h2 class="govuk-heading-m alert-dashboard-summary-heading">My alerts</h2>
     <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list">
+          
             <li>
-                    <a id="alert-description-ALL" href="/decision/tst/protected/bip-notifications/alerts?type=ALL">View all</a>
-            </li>
-            <li>
-                    <a id="alert-description-INSPECTION_REQUIRED" href="">36 &nbsp;notifications with missing documents or required information</a>
+                    <a id="alert-description-INSPECTION_REQUIRED" href="exit-inspections">36 notifications require inspection on exit</a>
             </li>
          
     </ul>
@@ -201,8 +199,10 @@
                 
                   <select class="govuk-select govuk-!-width-full" id="certificateStatus" name="certificateStatus">
                       <option value="">All</option>
+                   
                       <option value="VALIDATED">Valid</option>
                       <option value="REJECTED">Rejected</option>
+                     
                   </select>
                 </div>
               </div>
@@ -533,11 +533,7 @@
                     <label class="govuk-label govuk-label--s" for="decision">
                       Decision
                     </label>
-                    
-                
-                
-                  
-                
+
                   <select class="govuk-select govuk-!-width-full" id="decision" name="decision">
                       <option value="">All</option>
                       <option value="ACCEPTABLE_FOR_TRANSIT_PROCEDURE">Acceptable for transit procedure</option>
@@ -558,38 +554,78 @@
                   </select>
                 </div>
               </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label govuk-label--s" for="decision">
+                      Risk outcome
+                    </label>
+
+                  <select class="govuk-select govuk-!-width-full" id="decision" name="decision">
+                      <option value="">All</option>
+                      <option value="RISK_INSPECT">Inspect on exit</option>
+                      <option value="RISK_NOT_INSPECT">No inspection</option>
+                      
+                  </select>
+                </div>
+              </div>
             </div>
       
-            <div class="govuk-grid-row govuk-!-margin-bottom-5">
-              <div class="govuk-grid-column-one-third">
+            <div class="govuk-grid-row govuk-!-margin-bottom-4 govuk-!-margin-top-8">
+              <div class="govuk-grid-column-full ">
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    Arrival / Import date range
+                    Filter decision date range 
                   </legend>
+
+
+                  <!-- <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                     
+                      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+                          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                            Decision date
+                          </label>
+                        </div>
+
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="changed-name">
+                             Arrival or import date
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div> -->
+
                   <div class="govuk-form-group">
-                    <div class="govuk-link govuk-!-font-size-19">
+                    <div class="govuk-!-font-size-19">
                       <button type="submit" class="link-button" name="dateRange" value="today" id="Button-Today">
                         Today
                       </button>
-                    </div>
-                    <div class="govuk-link govuk-!-font-size-19">
+                      &nbsp;
                       <button type="submit" class="link-button" name="dateRange" value="yesterday" id="Button-Yesterday">
                         Yesterday
                       </button>
-                    </div>
-                    <div class="govuk-link govuk-!-font-size-19">
-                      <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">Last seven days</button>
-                    </div>
-                    <div class="govuk-link govuk-!-font-size-19">
-                      <button type="submit" class="link-button" name="dateRange" value="clearRange" id="clear-date-range">Clear date range</button>
+                      &nbsp;
+                      <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
+                        Last seven days
+                      </button>
+                      &nbsp;
+                     
                     </div>
                   </div>
                 </fieldset>
               </div>
-              <div class="govuk-grid-column-one-third">
+            </div>
+              <div class="govuk-grid-row govuk-!-margin-bottom-9">
+              <div class="govuk-grid-column-one-half">
                 <div class="govuk-form-group ">
                   <fieldset class="govuk-fieldset" role="group">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Decision start date range</legend>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
                     <div class="govuk-date-input" id="start-date" data-module="accessible-datepicker">
                       <div class="govuk-date-input__item">
                         <div class="govuk-form-group">
@@ -616,10 +652,10 @@
                   </fieldset>
                 </div>
               </div>
-              <div class="govuk-grid-column-one-third">
+              <div class="govuk-grid-column-one-half">
                 <div class="govuk-form-group ">
                   <fieldset class="govuk-fieldset" role="group">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Decision end date range</legend>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
                     <div class="govuk-date-input" id="end-date" data-module="accessible-datepicker">
                       <div class="govuk-date-input__item">
                         <div class="govuk-form-group">
@@ -647,11 +683,15 @@
                 </div>
               </div>
             </div>
+            
       
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <button class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" data-module="govuk-button">Search</button>
-                <a href="/control/tst/protected/ov-notifications?searchClear=true" class="govuk-link clear-link">Clear</a>
+                <a href="/control/tst/protected/ov-notifications?searchClear=true" class="govuk-link clear-link">Clear all</a>
+                <button type="submit" class="link-button" name="dateRange" value="clearRange" id="clear-date-range">
+                  Clear date range
+                </button>
               </div>
             </div>
           </div>
@@ -703,13 +743,13 @@
                 <div class="notification-list__grid-column-20">
                   <dt class="notification-list__heading">CHED status</dt>
                   <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-0">
+                    <!-- <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-0">
                       VALID
                     </strong>
                     <strong style="
                     color: #b10e1e;
                     font-size: 1rem; 
-                    ">Missing information</strong>
+                    ">Missing information</strong> -->
                   </dd>
                 </div>
               </div>
@@ -731,10 +771,10 @@
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
+                  <dt class="notification-list__heading">Risk outcome</dt>
                   <dd class="notification-list__value ">
                     <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-0">
-                      CONTROL REQUIRED
+                      Inspect on exit
                     </strong>
                   </dd>
                 </div>
@@ -832,9 +872,9 @@
                 <div class="notification-list__grid-column-20">
                   <dt class="notification-list__heading">CHED status</dt>
                   <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--rejected" id="certificate-status-2">
+                    <!-- <strong class="govuk-tag tag--fixed-width tag--rejected" id="certificate-status-2">
                       REJECTED
-                    </strong>
+                    </strong> -->
                   </dd>
                 </div>
               </div>
@@ -856,10 +896,10 @@
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
+                  <dt class="notification-list__heading">Risk outcome</dt>
                   <dd class="notification-list__value ">
                     <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-2">
-                      CONTROL REQUIRED
+                      Inspect on exit
                     </strong>
                   </dd>
                 </div>
