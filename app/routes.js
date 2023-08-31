@@ -15,19 +15,19 @@ module.exports = router
 
 
 
-// Run this code when a form is submitted to 'juggling-balls-answer'
-router.post('/part-2/iuu/06-laboratory', function (req, res) {
+// Part 2 laboratory tests question
+router.post('/laboratory-test', function (req, res) {
 
     // Make a variable and give it the value from 'how-many-balls'
-    var laboratoryTests = req.session.data['laboratory-tests']
+    var laboratoryTests = req.session.data['labTestsRequired']
   
     // Check whether the variable matches a condition
-    if (laboratoryTests == "Yes"){
+    if (laboratoryTests == "true"){
       // Send user to next page
       res.redirect('/part-2/iuu/06a-laboratory')
     } else {
       // Send user to ineligible page
-      res.redirect('/part-2/iuu/07a-decision')
+      res.redirect('/part-2/iuu/07-decision')
     }
   
   })
