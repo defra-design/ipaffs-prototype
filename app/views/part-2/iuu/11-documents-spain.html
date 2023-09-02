@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Decision hub
+Documents
 {% endblock %}
 
 {% block content %}
@@ -88,12 +88,12 @@ Decision hub
         <div class="govuk-grid-row  govuk-!-margin-bottom-8">
           <div class="govuk-grid-column-full">
 
-            <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/documents" class="govuk-button govuk-button--secondary action-button" id="attachments-link">
+            <!-- <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/documents" class="govuk-button govuk-button--secondary action-button" id="attachments-link">
               Download all documents
-            </a>
-                <!-- <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachments/download-all" class="govuk-link link-button" id="download-all" aria-label="Download all documents">
+            </a> -->
+                <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachments/download-all" class="govuk-link link-button" id="download-all" aria-label="Download all documents">
                   Download all documents
-                </a> -->
+                </a>
           </div>
         </div>
         <div class="govuk-grid-row">
@@ -104,25 +104,346 @@ Decision hub
           <div class="govuk-!-margin-bottom-6">
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
-                <h2 class="govuk-heading-m">Latest health certificate</h2>
+                <h3 class="govuk-heading-m">IUU documents</h3>
+
+                <h3 class="govuk-heading-s">Catch certificates</h3>
+
+                <div class="additional-documents__grid-row additional-documents__headers">
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Catch certificate reference
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Flag state
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-documents__table-header">
+                    Date of issue
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Attachments 
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-document-info">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Catch certificate reference
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                      CC-42524
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                      state
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                      Spain
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                      Date of issue
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                      31 August 2023
+                    </div>
+                
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                      Attachments
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                        <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                          CC-4373484.pdf
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-documents__content-links">
+                    <div class="additional-documents__grid-column-15">
+                      <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?dl=1" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                        Download
+                      </a>
+                    </div>
+                </div>
+
+                <div class="additional-documents__grid-row additional-document-info">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Catch certificate reference
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                      CC-42523
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                      state
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                      Spain
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                      Date of issue
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                      31 August 2023
+                    </div>
+                
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                      Attachments
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                        <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                          CC-4373484.pdf
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-documents__content-links">
+                    <div class="additional-documents__grid-column-15">
+                      <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?dl=1" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                        Download
+                      </a>
+                    </div>
+                </div>
+
+                <div class="additional-documents__grid-row additional-document-info">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Catch certificate reference
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                      CC-42522
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                      state
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                      Spain
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                      Date of issue
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                      31 August 2023
+                    </div>
+                
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                      Attachments
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                        <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                          CC-4373484.pdf
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-documents__content-links">
+                    <div class="additional-documents__grid-column-15">
+                      <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?dl=1" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                        Download
+                      </a>
+                    </div>
+                </div>
+
+                <div class="additional-documents__grid-row additional-document-info">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Catch certificate reference
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                      C-785644
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                      state
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                      Portugal
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                      Date of issue
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                      31 August 2023
+                    </div>
+                
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                      Attachments
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                        <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                          CC-4373484.pdf
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-documents__content-links">
+                    <div class="additional-documents__grid-column-15">
+                      <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?dl=1" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                        Download
+                      </a>
+                    </div>
+                </div>
+
+
+                <h4 class="govuk-heading-s govuk-!-margin-top-6">Processing statements</h4>
+                <div class="additional-documents__grid-row additional-documents__headers">
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Document type
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Document reference
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-documents__table-header">
+                    Date of issue
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Attachments 
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-document-info">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Document type
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                      Processing statement
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Document
+                      reference
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                      PS-4387474
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                      Date of issue
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                      31 August 2023
+                    </div>
+                
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                      Attachments
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                        <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                          PS-42524.pdf
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-documents__content-links">
+                    <div class="additional-documents__grid-column-15">
+                      <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?dl=1" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                        Download
+                      </a>
+                    </div>
+                </div>
+
+                <h4 class="govuk-heading-s govuk-!-margin-top-6">Proof of storage</h4>
+
+                <div class="additional-documents__grid-row additional-documents__headers">
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Document type
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Document reference
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-documents__table-header">
+                    Date of issue
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-documents__table-header">
+                    Attachments 
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-document-info">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Document type
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                      Proof of storage
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Document
+                      reference
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                      ST-535GALK
+                    </div>
+                  </div>
+                  <div class="additional-documents__grid-column-20 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                      Date of issue
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                      31 August 2023
+                    </div>
+                
+                  </div>
+                  <div class="additional-documents__grid-column-25 additional-document-content">
+                    <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                      Attachments
+                    </div>
+                    <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                        <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                          ST-535GALK.pdf
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="additional-documents__grid-row additional-documents__content-links">
+                    <div class="additional-documents__grid-column-15">
+                      <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?dl=1" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                        Download
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <h3 class="govuk-heading-m govuk-!-margin-top-9">Latest health certificate</h3>
               </div>
             </div>
             <div class="additional-documents__grid-row additional-documents__headers">
-              <div class="additional-documents__grid-column-15 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Document type
               </div>
-              <div class="additional-documents__grid-column-15 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Document reference
               </div>
-              <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
+              <div class="additional-documents__grid-column-20 additional-documents__table-header">
                 Date of issue
               </div>
-              <div class="additional-documents__grid-column-20 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Attachments 
               </div>
             </div>
               <div class="additional-documents__grid-row additional-document-info">
-                <div class="additional-documents__grid-column-15 additional-document-content">
+                <div class="additional-documents__grid-column-25 additional-document-content">
                   <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Document
                     type
                   </div>
@@ -130,7 +451,7 @@ Decision hub
                     Veterinary health certificate
                   </div>
                 </div>
-                <div class="additional-documents__grid-column-15 additional-document-content">
+                <div class="additional-documents__grid-column-25 additional-document-content">
                   <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Document
                     reference
                   </div>
@@ -138,7 +459,7 @@ Decision hub
                     4387942
                   </div>
                 </div>
-                <div class="additional-documents__grid-column-doc-date additional-document-content">
+                <div class="additional-documents__grid-column-20 additional-document-content">
                   <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
                     Date of issue
                   </div>
@@ -147,7 +468,7 @@ Decision hub
                   </div>
               
                 </div>
-                <div class="additional-documents__grid-column-20 additional-document-content">
+                <div class="additional-documents__grid-column-25 additional-document-content">
                   <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
                     Attachments
                   </div>
@@ -169,20 +490,20 @@ Decision hub
           <div class="govuk-!-margin-bottom-6">
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
-                <h2 class="govuk-heading-m">Cloned documents</h2>
+                <h3 class="govuk-heading-m govuk-!-margin-top-6">Cloned documents</h3>
               </div>
             </div>
             <div class="additional-documents__grid-row additional-documents__headers">
-              <div class="additional-documents__grid-column-15 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Document type
               </div>
-              <div class="additional-documents__grid-column-15 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Document reference
               </div>
-              <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
+              <div class="additional-documents__grid-column-20 additional-documents__table-header">
                 Date of issue
               </div>
-              <div class="additional-documents__grid-column-20 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Attachments 
               </div>
             </div>
@@ -195,56 +516,56 @@ Decision hub
           <div class="govuk-!-margin-bottom-6">
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
-                <h2 class="govuk-heading-m">5 additional documents</h2>
+                <h3 class="govuk-heading-m govuk-!-margin-top-6">4 additional documents</h3>
               </div>
             </div>
             <div class="additional-documents__grid-row additional-documents__headers">
-              <div class="additional-documents__grid-column-15 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Document type
               </div>
-              <div class="additional-documents__grid-column-15 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Document reference
               </div>
-              <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
+              <div class="additional-documents__grid-column-20 additional-documents__table-header">
                 Date of issue
               </div>
-              <div class="additional-documents__grid-column-20 additional-documents__table-header">
+              <div class="additional-documents__grid-column-25 additional-documents__table-header">
                 Attachments 
               </div>
             </div>
                 <div class="additional-documents__grid-row additional-document-info">
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-type-heading-0">Document
                       type
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-type-value-0">
-                      Catch certificate
+                      Seaway bill
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-reference-heading-0">Document
                       reference
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-reference-value-0">
-                      CC-4387474
+                      SWB-4387474
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-doc-date additional-document-content">
+                  <div class="additional-documents__grid-column-20 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-date-heading-0">
                       Date of issue
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-date-value-0">
-                      20 August 2023
+                      31 August 2023
                     </div>
                 
                   </div>
-                  <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-attachment-heading-0">
                       Attachments
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-attachment-value-0">
                         <a rel="noopener noreferrer" title="CC-4387474.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90" class="govuk-link ellipsis" id="importer-attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" target="_blank" aria-label="View CC-4387474.pdf">
-                          CC-4387474.pdf
+                          SWB-4387474.pdf
                         </a>
                     </div>
                   </div>
@@ -257,38 +578,38 @@ Decision hub
                     </div>
                 </div>
                 <div class="additional-documents__grid-row additional-document-info">
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-type-heading-1">Document
                       type
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-type-value-1">
-                      Catch certificate
+                      Seaway bill
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-reference-heading-1">Document
                       reference
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-reference-value-1">
-                      CC-4387475
+                      SWB-4387475
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-doc-date additional-document-content">
+                  <div class="additional-documents__grid-column-20 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-date-heading-1">
                       Date of issue
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-date-value-1">
-                      20 August 2023
+                      31 August 2023
                     </div>
                 
                   </div>
-                  <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-attachment-heading-1">
                       Attachments
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-attachment-value-1">
                         <a rel="noopener noreferrer" title="CC-4387475.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/1595c61f-40f2-447f-8578-7a2670cd06a0" class="govuk-link ellipsis" id="importer-attachment-view-1595c61f-40f2-447f-8578-7a2670cd06a0" target="_blank" aria-label="View CC-4387475.pdf">
-                          CC-4387475.pdf
+                          SWB-4387475.pdf
                         </a>
                     </div>
                   </div>
@@ -301,32 +622,32 @@ Decision hub
                     </div>
                 </div>
                 <div class="additional-documents__grid-row additional-document-info">
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-type-heading-2">Document
                       type
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-type-value-2">
-                      Catch certificate
+                      Commercial invoice
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-reference-heading-2">Document
                       reference
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-reference-value-2">
-                      CC-4387476
+                      INV-4387478
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-doc-date additional-document-content">
+                  <div class="additional-documents__grid-column-20 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-date-heading-2">
                       Date of issue
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-date-value-2">
-                      20 August 2023
+                      31 August 2023
                     </div>
                 
                   </div>
-                  <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-attachment-heading-2">
                       Attachments
                     </div>
@@ -345,38 +666,38 @@ Decision hub
                     </div>
                 </div>
                 <div class="additional-documents__grid-row additional-document-info">
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-type-heading-3">Document
                       type
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-type-value-3">
-                      Catch certificate
+                      Processing statement
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-15 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-reference-heading-3">Document
                       reference
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-reference-value-3">
-                      CC-4387477
+                      PS-4387477
                     </div>
                   </div>
-                  <div class="additional-documents__grid-column-doc-date additional-document-content">
+                  <div class="additional-documents__grid-column-20 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-date-heading-3">
                       Date of issue
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-date-value-3">
-                      21 August 2023
+                      31 August 2023
                     </div>
                 
                   </div>
-                  <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__grid-column-25 additional-document-content">
                     <div class="additional-documents__content-heading" id="additional-document-attachment-heading-3">
                       Attachments
                     </div>
                     <div class="additional-documents__content-value" id="additional-document-attachment-value-3">
                         <a rel="noopener noreferrer" title="CC-4387477.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/5fb6acd6-bdbd-42d6-80f9-f5fc94248c20" class="govuk-link ellipsis" id="importer-attachment-view-5fb6acd6-bdbd-42d6-80f9-f5fc94248c20" target="_blank" aria-label="View CC-4387477.pdf">
-                          CC-4387477.pdf
+                          PS-4387477.pdf
                         </a>
                     </div>
                   </div>
@@ -388,50 +709,7 @@ Decision hub
                       </a>
                     </div>
                 </div>
-                <div class="additional-documents__grid-row additional-document-info">
-                  <div class="additional-documents__grid-column-15 additional-document-content">
-                    <div class="additional-documents__content-heading" id="additional-document-type-heading-4">Document
-                      type
-                    </div>
-                    <div class="additional-documents__content-value" id="additional-document-type-value-4">
-                      Catch certificate
-                    </div>
-                  </div>
-                  <div class="additional-documents__grid-column-15 additional-document-content">
-                    <div class="additional-documents__content-heading" id="additional-document-reference-heading-4">Document
-                      reference
-                    </div>
-                    <div class="additional-documents__content-value" id="additional-document-reference-value-4">
-                      CC-4387478
-                    </div>
-                  </div>
-                  <div class="additional-documents__grid-column-doc-date additional-document-content">
-                    <div class="additional-documents__content-heading" id="additional-document-date-heading-4">
-                      Date of issue
-                    </div>
-                    <div class="additional-documents__content-value" id="additional-document-date-value-4">
-                      21 August 2023
-                    </div>
-                
-                  </div>
-                  <div class="additional-documents__grid-column-20 additional-document-content">
-                    <div class="additional-documents__content-heading" id="additional-document-attachment-heading-4">
-                      Attachments
-                    </div>
-                    <div class="additional-documents__content-value" id="additional-document-attachment-value-4">
-                        <a rel="noopener noreferrer" title="CC-4387478.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/646dd611-a639-4bc5-9ce8-06db81ad8bed" class="govuk-link ellipsis" id="importer-attachment-view-646dd611-a639-4bc5-9ce8-06db81ad8bed" target="_blank" aria-label="View CC-4387478.pdf">
-                          CC-4387478.pdf
-                        </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="additional-documents__grid-row additional-documents__content-links">
-                    <div class="additional-documents__grid-column-15">
-                      <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/646dd611-a639-4bc5-9ce8-06db81ad8bed?dl=1" class="govuk-link link-button" aria-label="Download CC-4387478.pdf">
-                        Download
-                      </a>
-                    </div>
-                </div>
+              
           </div>
       </div>
       <div id="inspector-documents-table" class="govuk-!-margin-bottom-6 additional-documents-table">
