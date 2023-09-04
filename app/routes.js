@@ -18,7 +18,7 @@ module.exports = router
 // Part 2 laboratory tests question
 router.post('/laboratory-test', function (req, res) {
 
-    // Make a variable and give it the value from 'how-many-balls'
+    // Make a variable and give it the value from name
     var laboratoryTests = req.session.data['labTestsRequired']
   
     // Check whether the variable matches a condition
@@ -34,10 +34,10 @@ router.post('/laboratory-test', function (req, res) {
 
 
 
-// Part 1 iuu docs page
+// Part 1 iuu docs page - first step with no docs added
 router.post('/iuu-doc-route', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
+  // Make a variable and give it the value from name
   var iuuDocRoute = req.session.data['iuuDocType']
 
   // Check whether the variable matches a condition
@@ -67,13 +67,13 @@ else if (iuuDocRoute == "Save and return to task list") {
 
 })
 
-// Part 1 docs entered page
+// Part 1 iuu - catch certs entered page
 router.post('/iuu-doc-route-entered', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
+  // Make a variable and give it the value from name
   var iuuRoute = req.session.data['iuuDocType']
   if (iuuRoute == "Save and continue"){
-    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
+    res.redirect('/part-1-chedp/iuu/09-catch-certificates')
   }
 
   if (iuuRoute == "Catch certificates"){
@@ -89,18 +89,18 @@ router.post('/iuu-doc-route-entered', function (req, res) {
 }
 
  else {
-    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
+    res.redirect('/part-1-chedp/iuu/07-check-answers')
   }
   
   })
 
-  // Part 1 docs entered page
+  // Part 1 iuu docs - catch certs and processing statements entered page
 router.post('/iuu-doc-route-entered2', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
+  // Make a variable and give it the value from name
   var iuuRoute2 = req.session.data['iuuDocType']
   if (iuuRoute2 == "Save and continue"){
-    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
+    res.redirect('/part-1-chedp/iuu/09-catch-certificates')
   }
 
   if (iuuRoute2 == "Catch certificates"){
@@ -116,7 +116,37 @@ router.post('/iuu-doc-route-entered2', function (req, res) {
 }
 
  else {
-    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
+    res.redirect('/part-1-chedp/iuu/07-check-answers')
+  }
+  
+  })
+
+ // Part 1 add more docs question
+ router.post('/09bb-iuu-doc-more', function (req, res) {
+
+  // Make a variable and give it the value from name
+  var iuuConfRoute = req.session.data['iuuConflink']
+  if (iuuConfRoute == "Yes"){
+    res.redirect('/part-1-chedp/iuu/09aa-multi-upload-catch')
+  }
+
+ else {
+    res.redirect('/part-1-chedp/iuu/09d-iuu-docs-details-entered')
+  }
+  
+  })
+
+  // Part 1 add more other docs question
+ router.post('/09b-iuu-doc-more', function (req, res) {
+
+  // Make a variable and give it the value from name
+  var iuuConfRoute = req.session.data['iuuConflink']
+  if (iuuConfRoute == "Yes"){
+    res.redirect('/part-1-chedp/iuu/09a-multi-upload')
+  }
+
+ else {
+    res.redirect('/part-1-chedp/iuu/09dd-iuu-docs-details-entered')
   }
   
   })

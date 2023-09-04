@@ -37,7 +37,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
         <span class="govuk-caption-xl">Documents</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Add document details</h1>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Add {{ data['iuuDocType'] }}</h1>
 
       <input name="crumb" type="hidden" value="2HCOId9w8mXxvcGKEPzilPT0p-Lc7NFVXwmWT7b-1T8">
       <input name="etag" type="hidden" value="&quot;000000000540B669&quot;">
@@ -53,10 +53,10 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-!-margin-bottom-6 additional-documents-table" id="additional-documents-table">
         <div class="additional-documents__grid-row additional-documents__headers">
           <div class="additional-documents__grid-column-20 additional-documents__table-header">
-            Document type
+            {{ data['iuuDocType'] }} reference 
           </div>
           <div class="additional-documents__grid-column-20 additional-documents__table-header">
-            Document reference
+            Flag state of vessel
           </div>
           <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
             Date of issue
@@ -72,12 +72,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
           <input name="document-id" type="hidden" value="0">
           <div class="additional-documents__grid-row additional-documents__add-document">
-            <div class="additional-documents__grid-column-20"><p class="govuk-body">Catch certificate</p></div>
-            <div class="additional-documents__grid-column-20">                <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-              
-              
-                  
-              
+            <div class="additional-documents__grid-column-20">
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+              <input class="govuk-input  " id="reference-input-1" name="reference-input-0" type="text" value="" aria-label="Document reference">
+            </div>
+          </div>
+            <div class="additional-documents__grid-column-20">                
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+
                 <input class="govuk-input  " id="reference-input-0" name="reference-input-0" type="text" value="" aria-label="Document reference">
               </div>
             </div>
@@ -119,17 +121,20 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <div class="additional-documents__grid-column-25 additional-documents__add-document-attachment">
                 <a rel="noopener noreferrer" title="CC-4387474.pdf" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90" class="govuk-link ellipsis" id="attachment-af6719e4-071e-4179-9ebd-d5c73b04bf90" target="_blank">
-                  CC-4387474.pdf</a>
+                  {{ data['iuuDocType'] }}-4387474.pdf</a>
             </div>
           </div>
           <input name="document-id" type="hidden" value="1">
           <div class="additional-documents__grid-row additional-documents__add-document">
-            <div class="additional-documents__grid-column-20"><p class="govuk-body">Catch certificate</p></div>
-            <div class="additional-documents__grid-column-20">                <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-              
-              
-                  
-              
+            <div class="additional-documents__grid-column-20">
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+  
+                <input class="govuk-input  " id="reference-input-1" name="reference-input-1" type="text" value="" aria-label="Document reference">
+              </div>
+            </div>
+            <div class="additional-documents__grid-column-20">                
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+  
                 <input class="govuk-input  " id="reference-input-1" name="reference-input-1" type="text" value="" aria-label="Document reference">
               </div>
             </div>
@@ -170,17 +175,18 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <div class="additional-documents__grid-column-25 additional-documents__add-document-attachment">
                 <a rel="noopener noreferrer" title="CC-4387475.pdf" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/1595c61f-40f2-447f-8578-7a2670cd06a0" class="govuk-link ellipsis" id="attachment-1595c61f-40f2-447f-8578-7a2670cd06a0" target="_blank">
-                  CC-4387475.pdf</a>
+                  {{ data['iuuDocType'] }}-387475.pdf</a>
             </div>
           </div>
           <input name="document-id" type="hidden" value="2">
           <div class="additional-documents__grid-row additional-documents__add-document">
-            <div class="additional-documents__grid-column-20"><p class="govuk-body">Catch certificate</p></div>
-            <div class="additional-documents__grid-column-20">                <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-              
-              
-                  
-              
+            <div class="additional-documents__grid-column-20">
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                <input class="govuk-input  " id="reference-input-1" name="reference-input-1" type="text" value="" aria-label="Document reference">
+              </div>
+            </div>
+            <div class="additional-documents__grid-column-20">                
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
                 <input class="govuk-input  " id="reference-input-2" name="reference-input-2" type="text" value="" aria-label="Document reference">
               </div>
             </div>
@@ -212,8 +218,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                         </div>
                       </div>
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-          <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+                     
           <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-72" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-72"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
@@ -226,7 +231,13 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <input name="document-id" type="hidden" value="3">
           <div class="additional-documents__grid-row additional-documents__add-document">
-            <div class="additional-documents__grid-column-20"><p class="govuk-body">Catch certificate</p></div>
+            <div class="additional-documents__grid-column-20">
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+  
+                <input class="govuk-input  " id="reference-input-1" name="reference-input-1" type="text" value="" aria-label="Document reference">
+              </div>
+            
+            </div>
             <div class="additional-documents__grid-column-20">                <div class="govuk-form-group govuk-!-margin-bottom-0 ">
               
               
@@ -263,8 +274,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                         </div>
                       </div>
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-          <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+                      
           <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-7" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-7"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
@@ -277,7 +287,12 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <input name="document-id" type="hidden" value="4">
           <div class="additional-documents__grid-row additional-documents__add-document">
-            <div class="additional-documents__grid-column-20"><p class="govuk-body">Catch certificate</p></div>
+            <div class="additional-documents__grid-column-20">
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+  
+                <input class="govuk-input  " id="reference-input-1" name="reference-input-1" type="text" value="" aria-label="Document reference">
+              </div>
+            </div>
             <div class="additional-documents__grid-column-20">                <div class="govuk-form-group govuk-!-margin-bottom-0 ">
               
               
@@ -314,8 +329,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                         </div>
                       </div>
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-          <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+                    
           <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-5" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-5"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
@@ -327,7 +341,32 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
           </div>
       </div>
-      <form action="12b-accompanying-docs">
+      <form action="/09bb-iuu-doc-more" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Do you need to add more catch certificates?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="iuuConflink" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="iuuConflink" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  No
+                </label>
+              </div>
+             
+            </div>
+          </fieldset>
+        </div>
+
       <input class="govuk-button" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
       <br>
       <input class="govuk-link cancel-button-link-text" id="button-cancel" name="buttonCancel" type="submit" value="Cancel upload" data-module="govuk-button">
