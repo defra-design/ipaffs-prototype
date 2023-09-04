@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Approved establishment of origin – {{ serviceName }} – GOV.UK Prototype Kit
+Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,16 +22,47 @@ Approved establishment of origin – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="establishment-of-origin">
     <div class="govuk-grid-column-two-thirds">
+      <form action="/iuu-doc-confirmation-route" method="POST">
         <span class="govuk-caption-xl">Documents</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Confirm if catch certificates are required</h1>
       <p class="govuk-body">You must upload catch certificates for all fish species unless they are exempt from illegal, unreported and unregulated (IUU) fishing controls.</p>
 
-        <p class="govuk-body"></p> You have not uploaded catch certificates for the following wild species in this consignment.</p>
+        <p class="govuk-body">You have not uploaded catch certificates for the following wild species in this consignment.</p>
+<ul>
+<li>03031300 - Atlantic salmon (Salmo salar) and Danube salmon (Hucho hucho), Hucho hucho, Wild stock</li>
+<li>03032300 - Tilapia (Oreochromis|spp.), Oreochromis mossambicus, Wild stock</li>
+</ul>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Do you need to add catch certificates for any of these species?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="iuuConflink" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="iuuConflink" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  No – these species are exempt from IUU fishing controls
+                </label>
+              </div>
+             
+            </div>
+          </fieldset>
+        </div>
 </div>
 </div>
+
       <div class="govuk-grid-row" >
         <div class="govuk-grid-column-full">
-      <form action="12-accompanying-docs" method="POST">
+    
         <input name="crumb" type="hidden" value="cPWIZj5dg7pqus4I6awnUoZI-bDJyiMAQcNYgDEYOWM">
         <input name="etag" type="hidden" value="&quot;00000000053B49C1&quot;">
         <div class="govuk-!-margin-bottom-6">

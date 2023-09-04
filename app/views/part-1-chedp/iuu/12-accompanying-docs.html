@@ -45,7 +45,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-      <form action="13-approved-est" method="POST">
+      <form action="/accom-docs-route" method="POST">
         <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
         <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
           <div class="govuk-!-margin-bottom-9 additional-documents-table" id="latest-vet-health-certificate-table">
@@ -169,6 +169,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             <p class="govuk-body">
                               Uploading documentary evidence can speed up checking.
               </p>
+              <p class="govuk-body">To upload catch certificates, processing statements and storage documents, go to  <a href="09-iuu-docs">illegal, unreported and unregulated (IUU) fishing documents</a>.</p>
             <details class="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
@@ -180,7 +181,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   <ul class="govuk-list govuk-list--bullet" id="supporting-details-accordion">
                     <li>an invoice for the consignment</li>
                       <li>travel documents or proof of travel, such as air, sea or railway bills</li>
-                      <li>other documents required for this consignment - this may include catch certificates, storage and processing documents</li>
+                      <!-- <li>other documents required for this consignment - this may include catch certificates, storage and processing documents</li> -->
                   </ul>
               </div>
             </details>
@@ -214,13 +215,13 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   
                   
                     
-                  <!-- tweaked class to get to work in proto -->
+                 
                     <select class="ipaffs-document-type govuk-!-margin-top-3" id="document-type" name="document-type" aria-label="Document type">
                         <option value="">Select document type</option>
                         <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
                         <option value="airWaybill">Air waybill</option>
                         <option value="billOfLading">Bill of lading</option>
-                        <option value="catchCertificate">Catch certificate</option>
+                        
                         <option value="commercialInvoice">Commercial invoice</option>
                         <option value="customsDeclaration">Customs declaration</option>
                         <option value="importPermit">Import permit</option>
@@ -271,10 +272,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                         </div>
                       </div>
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-                        <svg aria-hidden="true" role="img">
-                          <use href="#calendar"></use>
-                        </svg></button> -->
+                     
                       <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1">
                         <div class="date-picker__header govuk-clearfix"><button type="button"
                             class="date-picker__button__previous-month">Previous month</button>
@@ -308,21 +306,24 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </button>
               </div>
             </div>
+
+            
             <input name="is-additional-document-row-shown" type="hidden" value="true">
-            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="add-additional-document" value="">
+            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="accDocRoutelink" value="Add documents">
                 Add a document
             </button>
 
-            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="add-multiple-documents" value="">
+            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="accDocRoutelink" value="Add documents">
               Add multiple documents
             </button>
+            
         </div>
 
           
         <input name="current-page-number" type="hidden" value="1">
 
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button--secondary" id="button-save-and-continue-p" name="button-save-and-continue-p" type="submit" value="Save and return to task list" data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="accDocRoutelink" type="submit" value="Save and continue" data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button--secondary" id="button-save-and-continue-p" name="accDocRoutelink" type="submit" value="Save and return to task list" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="07-check-answers">Cancel and return to task list</a></p>
       </form>
     </div>

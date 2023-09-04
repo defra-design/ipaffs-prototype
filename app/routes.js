@@ -40,8 +40,6 @@ router.post('/iuu-doc-route', function (req, res) {
   // Make a variable and give it the value from 'how-many-balls'
   var iuuDocRoute = req.session.data['iuuDocType']
 
-  
-
   // Check whether the variable matches a condition
   if (iuuDocRoute == "Catch certificates"){
     // Send user to next page
@@ -50,40 +48,77 @@ router.post('/iuu-doc-route', function (req, res) {
     res.redirect('/part-1-chedp/iuu/09aa-multi-upload-catch')
   }
   else if (iuuDocRoute == "catchcert1") {
-    // Send user to ineligible page
     res.redirect('/part-1-chedp/iuu/09-iuu-docs-1entered')
   }
   
   else if (iuuDocRoute == "Processing statements") {
-    // Send user to ineligible page
     res.redirect('/part-1-chedp/iuu/09a-multi-upload')
   }
 
   else if (iuuDocRoute == "processingstatement1") {
-    // Send user to ineligible page
     res.redirect('/part-1-chedp/iuu/09-iuu-docs-1entered')
   }
 
  else if (iuuDocRoute == "Storage statements") {
-  // Send user to ineligible page
   res.redirect('/part-1-chedp/iuu/09a-multi-upload')
 }
 
 else if (iuuDocRoute == "storagedoc1") {
-  // Send user to ineligible page
   res.redirect('/part-1-chedp/iuu/09-iuu-docs-1entered')
 }
 
 else if (iuuDocRoute == "Save and return to task list") {
-  // Send user to ineligible page
   res.redirect('/part-1-chedp/iuu/07-check-answers')
 }
 
 
- else   {
-  // Send user to ineligible page
+ else if (iuuDocRoute == "Save and continue"){
   res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
 }
 
 })
 
+// Part 1 docs entered page
+router.post('/iuu-doc-route-entered', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var iuuRoute = req.session.data['iuuDocRoutelink']
+  if (iuuRoute == "Save and continue"){
+    res.redirect('/part-1-chedp/iuu/09-catch-certificates')
+  }
+
+ else {
+    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
+  }
+  
+  })
+
+  // Part 1 docs confirmation page
+router.post('/iuu-doc-confirmation-route', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var iuuConfRoute = req.session.data['iuuConflink']
+  if (iuuConfRoute == "Yes"){
+    res.redirect('/part-1-chedp/iuu/09d-iuu-docs-details-entered')
+  }
+
+ else {
+    res.redirect('/part-1-chedp/iuu/12-accompanying-docs')
+  }
+  
+  })
+
+// Part 1 ordinary accompanying docs page
+router.post('/accom-docs-route', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var accomDocRoute = req.session.data['accDocRoutelink']
+  if (accomDocRoute == "Add documents"){
+    res.redirect('/part-1-chedp/iuu/12a-accompanying-docs-upload')
+  }
+
+ else if (accomDocRoute == "Save and continue"){
+    res.redirect('/part-1-chedp/iuu/13-approved-est')
+  }
+  
+  })
