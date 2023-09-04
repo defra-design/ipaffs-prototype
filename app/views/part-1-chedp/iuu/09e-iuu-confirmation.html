@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Approved establishment of origin – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="establishment-of-origin">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">Documents</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Confirm if catch certificates are required</h1>
+      <p class="govuk-body">You must upload catch certificates for all fish species unless they are exempt from illegal, unreported and unregulated (IUU) fishing controls.</p>
+
+        <p class="govuk-body"></p> You have not uploaded catch certificates for the following wild species in this consignment.</p>
+</div>
+</div>
+      <div class="govuk-grid-row" >
+        <div class="govuk-grid-column-full">
+      <form action="12-accompanying-docs" method="POST">
+        <input name="crumb" type="hidden" value="cPWIZj5dg7pqus4I6awnUoZI-bDJyiMAQcNYgDEYOWM">
+        <input name="etag" type="hidden" value="&quot;00000000053B49C1&quot;">
+        <div class="govuk-!-margin-bottom-6">
+          <div class="table-responsive">
+            
+          </div>
+
+         
+        </div>
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button--secondary" id="button-save-and-continue-p" name="button-save-and-continue-p" type="submit" value="Save and return to task list" data-module="govuk-button">
+        <p class="govuk-body"><a class="govuk-link" href="07-check-answers">Cancel and return to task list</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
