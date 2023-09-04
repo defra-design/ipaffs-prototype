@@ -34,7 +34,7 @@ router.post('/laboratory-test', function (req, res) {
 
 
 
-// Part 1 iuu accompanying docs page
+// Part 1 iuu docs page
 router.post('/iuu-doc-route', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
@@ -47,24 +47,13 @@ router.post('/iuu-doc-route', function (req, res) {
 
     res.redirect('/part-1-chedp/iuu/09aa-multi-upload-catch')
   }
-  else if (iuuDocRoute == "catchcert1") {
-    res.redirect('/part-1-chedp/iuu/09-iuu-docs-1entered')
-  }
   
   else if (iuuDocRoute == "Processing statements") {
     res.redirect('/part-1-chedp/iuu/09a-multi-upload')
   }
 
-  else if (iuuDocRoute == "processingstatement1") {
-    res.redirect('/part-1-chedp/iuu/09-iuu-docs-1entered')
-  }
-
  else if (iuuDocRoute == "Storage statements") {
   res.redirect('/part-1-chedp/iuu/09a-multi-upload')
-}
-
-else if (iuuDocRoute == "storagedoc1") {
-  res.redirect('/part-1-chedp/iuu/09-iuu-docs-1entered')
 }
 
 else if (iuuDocRoute == "Save and return to task list") {
@@ -82,10 +71,49 @@ else if (iuuDocRoute == "Save and return to task list") {
 router.post('/iuu-doc-route-entered', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var iuuRoute = req.session.data['iuuDocRoutelink']
+  var iuuRoute = req.session.data['iuuDocType']
   if (iuuRoute == "Save and continue"){
-    res.redirect('/part-1-chedp/iuu/09-catch-certificates')
+    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
   }
+
+  if (iuuRoute == "Catch certificates"){
+    res.redirect('/part-1-chedp/iuu/09aa-multi-upload-catch')
+  }
+
+  else if (iuuRoute == "Processing statements") {
+    res.redirect('/part-1-chedp/iuu/09a-multi-upload')
+  }
+
+ else if (iuuRoute == "Storage statements") {
+  res.redirect('/part-1-chedp/iuu/09a-multi-upload')
+}
+
+ else {
+    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
+  }
+  
+  })
+
+  // Part 1 docs entered page
+router.post('/iuu-doc-route-entered2', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var iuuRoute2 = req.session.data['iuuDocType']
+  if (iuuRoute2 == "Save and continue"){
+    res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
+  }
+
+  if (iuuRoute2 == "Catch certificates"){
+    res.redirect('/part-1-chedp/iuu/09aa-multi-upload-catch')
+  }
+
+  else if (iuuRoute2 == "Processing statements") {
+    res.redirect('/part-1-chedp/iuu/09a-multi-upload')
+  }
+
+ else if (iuuRoute2 == "Storage statements") {
+  res.redirect('/part-1-chedp/iuu/09a-multi-upload')
+}
 
  else {
     res.redirect('/part-1-chedp/iuu/09e-iuu-confirmation')
