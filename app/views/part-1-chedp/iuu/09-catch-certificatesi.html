@@ -31,7 +31,7 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
       
 <div class="govuk-grid-row govuk-body" >
   <div class="govuk-grid-column-full">
-      <form method="POST" action="#">
+     
         <input name="crumb" type="hidden" value="dccSgkNKLFTcXs5OWLw09h1VDTA3JgwfVBBEnKxoT6K">
         <input name="etag" type="hidden" value="&quot;000000000540AB3C&quot;">
         <span class="govuk-caption-m govuk-!-margin-bottom-0">Catch certificate 1 of 5</span>
@@ -45,9 +45,75 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
               </button>
             </form>
         </div>
-        <div id="add-species" style="border-top: 1px solid grey;" class="govuk-!-margin-bottom-9 govuk-!-padding-top-3">
-          <a href="09-catch-certificatesi">Add species to this catch certificate
-          </a>
+
+        <div id="accompanying-documents-table" class="additional-documents-table iuu-docs-table govuk-!-margin-bottom-3" >
+          
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+
+        <div class="additional-documents__grid-row additional-documents__headers">
+          <div class="additional-documents__grid-column-50 additional-documents__table-header">
+            Commodity code, species
+          </div>
+          
+          <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Weight  in consignment (kg)
+          </div>
+          <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Total weight in catch certificate (kg)
+          </div>
+        </div>
+        <div class="additional-documents__grid-row additional-document-info govuk-!-padding-top-2">
+          <div class="additional-documents__grid-column-50 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Commodity code
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+              <label class="govuk-visually-hidden" for="catch-certificate-species-03032300">Species</label>
+                  <select class="govuk-select govuk-form-control form-control-full-width " name="catch-certificate-species-03032300" id="catch-certificate-species-03032300">
+                    <option value="393882">03032300 - Oreochromis mossambicus</option>
+                    <option value="433190">03032300 - Oreochromis spp</option>
+                    <option value="393882">03024400 - Scomber colias</option>
+                    <option value="433190">03024400 - Scomber spp</option>
+                    <option value="393882">03021400 - Hucho hucho</option>
+                    <option value="433190">03031490 - Oncorhynchus aguabonitap</option>
+                    <option value="393882">03031300 -  Salmo salar</option>
+                    <option value="433190">03031490 -  Salmo trutta</option>
+                    <option value="393882">03032300 - Oreochromis mossambicus</option>
+                    <option value="433190">03032300 - Oreochromis spp</option>
+                    <option value="393882">03032300 - Oreochromis mossambicus</option>
+                    <option value="433190">03032300 - Oreochromis spp</option>
+                    
+                  </select>
+            </div>
+          </div>
+          
+          <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Weight in consignment (kg)
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              <label class="govuk-visually-hidden" for="catch-certificate-weight-03032300">Weight (kg)</label>
+              <input type="text" name="catch-certificate-weight-03032300" id="catch-certificate-weight-03032300" class="govuk-input govuk-form-control form-control-full-width ">
+            </div>
+          </div>
+          <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+              Total weight in catch certificate (kg)
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+              <label class="govuk-visually-hidden" for="catch-certificate-weight-03032300">Weight (kg)</label>
+              <input type="text" name="catch-certificate-weight-03032300" id="catch-certificate-weight-03032300" class="govuk-input govuk-form-control form-control-full-width ">
+            </div>
+          </div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+
+        <div id="add-species"  class="govuk-!-margin-bottom-9 govuk-!-padding-top-0">
+          <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Add species to this catch certificate
+          </button>
         </div>
 
         <span class="govuk-caption-m govuk-!-margin-bottom-0">Catch certificate 2 of 5</span>
@@ -261,6 +327,7 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
               <input type="submit" name="add-03031300" id="add-03031300" value="Add another" class="link-button">
             </fieldset>
           </div> -->
+          <form  action="09e-iuu-confirmation">
         <p class="govuk-!-margin-top-9">   
           
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
