@@ -29,7 +29,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
       <h1 class="govuk-heading-xl" id="page-primary-title">Upload {{ data['iuuDocType'] }}</h1>
 
 
-      <form method="POST" action="09bb-multi-doc-details-catch">
+     
         <input type="hidden" name="crumb" value="2HCOId9w8mXxvcGKEPzilPT0p-Lc7NFVXwmWT7b-1T8">
         <input type="hidden" name="etag" value="&quot;000000000540B668&quot;">
         <input type="hidden" name="request-from" value="">
@@ -67,6 +67,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-body govuk-!-margin-top-6">
           <h2 class="govuk-heading-m">Select documents to upload</h2>
           <p id="guide-text">You can upload up to 10 documents at a time, and up to 100 in total.</p>
+          <p id="guide-text">Inform us if your <a href="09g-inform" name="">consignment has more than a 100 documents</a>.</p>
           <p id="guide-text-sub">The document must be:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>smaller than 10MB</li>
@@ -74,6 +75,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           </ul>
         </div>
 
+        <form method="POST" action="09bb-multi-doc-details-catch">
         <div class="govuk-!-margin-top-6">
           <div class="govuk-form-group ">
             <div >
@@ -96,7 +98,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="" type="submit" value="Continue" data-module="govuk-button">
           <div class="govuk-body">
-            <a class="govuk-link" href="12-accompanying-docs">Cancel</a>
+            <a class="govuk-link" href="09-iuu-docs">Cancel</a>
           </div>
         </div>
 

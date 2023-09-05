@@ -180,3 +180,19 @@ router.post('/accom-docs-route', function (req, res) {
   }
   
   })
+
+  // Part 1 ordinary accompanying docs page
+router.post('/09g-inform-choice', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var iuu100DocRoute = req.session.data['iuu100DocChoice']
+  if (iuu100DocRoute == "Yes"){
+    res.redirect('/part-1-chedp/iuu/12-accompanying-docs')
+  }
+
+ else if (iuu100DocRoute == "No"){
+    res.redirect('/part-1-chedp/iuu/09-iuu-docs')
+  }
+  
+  })
+
