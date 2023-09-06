@@ -154,7 +154,7 @@ router.post('/iuu-doc-route-entered2', function (req, res) {
   // Part 1 docs confirmation page
 router.post('/iuu-doc-confirmation-route', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
+  // Make a variable and give it the value from 'name'
   var iuuConfRoute = req.session.data['iuuConflink']
   if (iuuConfRoute == "Yes"){
     res.redirect('/part-1-chedp/iuu/09d-iuu-docs-details-entered')
@@ -169,7 +169,7 @@ router.post('/iuu-doc-confirmation-route', function (req, res) {
 // Part 1 ordinary accompanying docs page
 router.post('/accom-docs-route', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
+  // Make a variable and give it the value from name
   var accomDocRoute = req.session.data['accDocRoutelink']
   if (accomDocRoute == "Add documents"){
     res.redirect('/part-1-chedp/iuu/12a-accompanying-docs-upload')
@@ -184,7 +184,7 @@ router.post('/accom-docs-route', function (req, res) {
   // Part 1 ordinary accompanying docs page
 router.post('/09g-inform-choice', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
+  // Make a variable and give it the value from name
   var iuu100DocRoute = req.session.data['iuu100DocChoice']
   if (iuu100DocRoute == "Yes"){
     res.redirect('/part-1-chedp/iuu/12-accompanying-docs')

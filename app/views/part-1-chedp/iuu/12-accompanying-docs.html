@@ -50,7 +50,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
           <div class="govuk-!-margin-bottom-9 additional-documents-table" id="latest-vet-health-certificate-table">
               <div class="additional-documents__caption govuk-heading-m">
-                Add latest health certificate details (where required)
+                Add latest health certificate details 
               </div>
             <p class="govuk-body">
               This is the document that will be shown on the Common Health Entry Document (CHED).
@@ -169,7 +169,8 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             <p class="govuk-body">
                               Uploading documentary evidence can speed up checking.
               </p>
-              <p class="govuk-body">To upload catch certificates, processing statements and storage documents, go to  <a href="09-iuu-docs">illegal, unreported and unregulated (IUU) fishing documents</a>.</p>
+              <p class="govuk-body">Upload IUU related documents in the  <a href="09-iuu-docs">Illegal, unreported and unregulated (IUU) fishing documents</a> section of this notification.
+              </p>
             <details class="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
@@ -186,9 +187,9 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </details>
 
-            <p class="govuk-heading-s" id="additional-documents-number-of-documents-message">Showing 0 additional documents</p>
+            <!-- <p class="govuk-heading-s" id="additional-documents-number-of-documents-message">Showing 0 additional documents</p> -->
 
-          <div class="additional-documents__grid-row additional-documents__headers">
+          <!-- <div class="additional-documents__grid-row additional-documents__headers">
             <div class="additional-documents__grid-column-15 additional-documents__table-header">
               Document type
             </div>
@@ -206,16 +207,11 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             <div class="additional-documents__grid-column-20 additional-documents__table-header">
               Attachments 
             </div>
-          </div>
+          </div> -->
 
-            <div class="additional-documents__grid-row additional-documents__add-document">
+            <!-- <div class="additional-documents__grid-row additional-documents__add-document">
               <div class="additional-documents__grid-column-15">
                   <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                  
-                  
-                  
-                    
-                 
                     <select class="ipaffs-document-type govuk-!-margin-top-3" id="document-type" name="document-type" aria-label="Document type">
                         <option value="">Select document type</option>
                         <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
@@ -305,9 +301,9 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   Add attachment
                 </button>
               </div>
-            </div>
+            </div> -->
 
-            
+            <div style="border-top: 1px solid grey ;">
             <input name="is-additional-document-row-shown" type="hidden" value="true">
             <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="accDocRoutelink" value="Add documents">
                 Add a document
@@ -316,7 +312,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="accDocRoutelink" value="Add documents">
               Add multiple documents
             </button>
-            
+            </div>
         </div>
 
           
