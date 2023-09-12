@@ -19,7 +19,7 @@ router.post('/ae-route', function (req, res) {
 
 
 
-//  iuu docs page - question to if they need to add catch certs
+//  iuu docs page - question to if they need to add catch certs - 09-iuu-docs
 router.post('/iuu-doc-route', function (req, res) {
 
   // Make a variable and give it the value from name
@@ -36,7 +36,7 @@ router.post('/iuu-doc-route', function (req, res) {
   }
 })
 
-//  catch cert attachments  - question to if they need to add more catch certs
+//  catch cert attachments page -  add more catch certs or details - 09-catch-certificates
 router.post('/catchAttach-route', function (req, res) {
 
   // Make a variable and give it the value from name
@@ -49,6 +49,10 @@ router.post('/catchAttach-route', function (req, res) {
   }
   
   else if (iuuDocRoute == "no") {
+    res.redirect('09bb-multi-doc-details-catch')
+  }
+
+  else if (iuuDocRoute == "add-details") {
     res.redirect('09bb-multi-doc-details-catch')
   }
 })

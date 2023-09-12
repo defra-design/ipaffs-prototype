@@ -22,6 +22,18 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row govuk-body" id="catch-certificates-page">
     <div class="govuk-grid-column-three-quarters">
+      <div class="govuk-notification-banner govuk-notification-banner--success" id="upload-success-banner" role="region" aria-labelledby="upload-success-banner-title" data-label="" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="upload-success-banner-title">
+              Success
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+            <p class="govuk-body">
+              5 documents uploaded
+            </p>
+        </div>
+      </div>
         <span class="govuk-caption-xl">Documents</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Add catch certificate details</h1>
      
@@ -31,14 +43,14 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
       
 <div class="govuk-grid-row govuk-body" >
   <div class="govuk-grid-column-full">
-      
+    <form method="POST" action="catchAttach-route"> 
         <input name="crumb" type="hidden" value="dccSgkNKLFTcXs5OWLw09h1VDTA3JgwfVBBEnKxoT6K">
         <input name="etag" type="hidden" value="&quot;000000000540AB3C&quot;">
         <span class="govuk-caption-m govuk-!-margin-bottom-0">Attachment 1 of 5</span>
 
         <div class="heading-with-change-link">
           <h3 class="govuk-heading-s govuk-!-margin-bottom-1" id="latest-health-certificate-heading"><a href="catch-cert.pdf" target="_blank">CC-43834843879.pdf <span style="font-weight: 400;">(opens in a new window)</span> </a></h3>
-          <button type="submit" class="link-button" name="iuuCatchAddDetails" value="add-details" id="latest-health-certificate-change-link">Add details
+          <button type="submit" class="link-button" name="iuuCatchAttach" value="add-details" id="latest-health-certificate-change-link">Add details
           </button>
            
         </div>
@@ -53,7 +65,7 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
             <form action="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/overview" method="POST">
               <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
               <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-              <button type="submit" class="link-button" name="09-add-cc-route" value="add-details" id="latest-health-certificate-change-link">Add details
+              <button type="submit" class="link-button" name="iuuCatchAttach" value="add-details" id="latest-health-certificate-change-link">Add details
               </button>
             </form>
         </div>
@@ -107,7 +119,7 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
          </div>
   
       
-         <form method="POST" action="catchAttach-route">
+        
          <div class="govuk-form-group govuk-!-margin-bottom-9">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
