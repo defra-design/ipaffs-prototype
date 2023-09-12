@@ -22,15 +22,25 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row govuk-body" id="catch-certificates-page">
     <div class="govuk-grid-column-three-quarters">
-      <div class="govuk-notification-banner govuk-notification-banner--success" id="upload-success-banner" role="region" aria-labelledby="upload-success-banner-title" data-label="" data-module="govuk-notification-banner">
+      <!-- <div class="govuk-notification-banner govuk-notification-banner--success" id="upload-success-banner" role="region" aria-labelledby="upload-success-banner-title" data-label="" data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
           <h2 class="govuk-notification-banner__title" id="upload-success-banner-title">
-              Success
+              Note
           </h2>
         </div>
         <div class="govuk-notification-banner__content">
             <p class="govuk-body">
-              5 documents uploaded
+              5 catch certificate details added
+            </p>
+        </div>
+      </div> -->
+      <div class="govuk-notification-banner" id="missing-documents-info-banner">
+        <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading" id="missing-documents-title">
+              2 attachments are missing details 
+            </p>
+            <p class="govuk-body">
+             Although not compulsory, adding details may avoid delays at the border.
             </p>
         </div>
       </div>
@@ -48,12 +58,26 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="etag" type="hidden" value="&quot;000000000540AB3C&quot;">
         <span class="govuk-caption-m govuk-!-margin-bottom-0">Attachment 1 of 5</span>
 
+
         <div class="heading-with-change-link">
           <h3 class="govuk-heading-s govuk-!-margin-bottom-1" id="latest-health-certificate-heading"><a href="catch-cert.pdf" target="_blank">CC-43834843879.pdf <span style="font-weight: 400;">(opens in a new window)</span> </a></h3>
-          <button type="submit" class="link-button" name="iuuCatchAttach" value="add-details" id="latest-health-certificate-change-link">Add details
+          <button type="submit" class="link-button" name="iuuCatchAttach" value="add-details" id="latest-health-certificate-change-link">View or amend details
           </button>
            
         </div>
+        <h2 class="govuk-heading-s govuk-!-margin-top-0">9 catch certificates</h2>
+        <div class="govuk-grid-row govuk-!-margin-top-0">
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Flag states: <br>Spain, Portugal, Croatia</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Your species in catch certificates:<br>19 species</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Consignment species net weight: <br>340kg</p>
+          </div>
+        </div>
+        
         <div id="add-species" style="border-bottom: 1px solid #b1b4b6;" class="govuk-!-padding-bottom-3 govuk-!-margin-top-0 govuk-!-margin-bottom-6">
           <a href="#">Remove</a>
         </div>
@@ -65,9 +89,21 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
            
               <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
               <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-              <button type="submit" class="link-button" name="iuuCatchAttach" value="add-details" id="latest-health-certificate-change-link">Add details
+              <button type="submit" class="link-button" name="iuuCatchAttach" value="add-details" id="latest-health-certificate-change-link">View or amend details
               </button>
             
+        </div>
+        <h2 class="govuk-heading-s govuk-!-margin-top-0">Catch certificate number: CC-439478473474HGP_99787</h2>
+        <div class="govuk-grid-row govuk-!-margin-top-0">
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Flag state: <br>Portugal</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Your species in catch certificates:<br>9 species</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Consignment species net weight: <br>70kg</p>
+          </div>
         </div>
         <div id="add-species" style="border-bottom: 1px solid #b1b4b6;" class="govuk-!-padding-bottom-3 govuk-!-margin-top-0 govuk-!-margin-bottom-6">
          <a href="#">Remove</a>
@@ -114,13 +150,25 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
               </button>
             
         </div>
+        <h2 class="govuk-heading-s govuk-!-margin-top-0">Catch certificate number: CC-439478473474HGP_99787</h2>
+        <div class="govuk-grid-row govuk-!-margin-top-0">
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Flag state: <br>Romania</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Your species in catch certificates:<br>4 species</p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body-s">Consignment species net weight: <br>110kg</p>
+          </div>
+        </div>
         <div id="add-species" style="border-bottom: 1px solid #b1b4b6;" class="govuk-!-padding-bottom-3 govuk-!-margin-top-0 govuk-!-margin-bottom-7">
           <a href="#">Remove</a>
          </div>
   
       
         
-         <div class="govuk-form-group govuk-!-margin-bottom-9">
+         <!-- <div class="govuk-form-group govuk-!-margin-bottom-9">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
@@ -143,15 +191,15 @@ Catch certificate details – {{ serviceName }} – GOV.UK Prototype Kit
              
             </div>
           </fieldset>
-        </div>
+        </div> -->
 
 
         
         <p class="govuk-!-margin-top-9">   
           
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button--secondary" id="button-save-and-continue-p" name="button-save-and-continue-p" type="submit" value="Save and return to task list" data-module="govuk-button">
-          <p class="govuk-body"><a class="govuk-link" href="07-check-answers">Cancel and return to task list</a></p>
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="iuuCatchAttach" type="submit" value="Continue" data-module="govuk-button">
+          <!-- <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button--secondary" id="button-save-and-continue-p" name="button-save-and-continue-p" type="submit" value="Save and return to task list" data-module="govuk-button"> -->
+          <p class="govuk-body"><a class="govuk-link" href="07-check-answers">Return to task list</a></p>
 
       </form>
   </div>

@@ -55,6 +55,9 @@ router.post('/catchAttach-route', function (req, res) {
   else if (iuuDocRoute == "add-details") {
     res.redirect('09bb-multi-doc-details-catch')
   }
+  else if (iuuDocRoute == "Continue") {
+    res.redirect('09e-iuu-confirmation')
+  }
 })
 
 
@@ -162,17 +165,17 @@ router.post('/iuu-doc-route-entered2', function (req, res) {
   
   })
 
-  // Part 1 docs confirmation page
+  // Part 1 docs confirmation page - 09e-iuu
 router.post('/iuu-doc-confirmation-route', function (req, res) {
 
   // Make a variable and give it the value from 'name'
   var iuuConfRoute = req.session.data['iuuConflink']
   if (iuuConfRoute == "Yes"){
-    res.redirect('09d-iuu-docs-details-entered')
+    res.redirect('09-catch-certificates-complete')
   }
 
  else {
-    res.redirect('12-accompanying-docs')
+    res.redirect('14-addresses')
   }
   
   })
