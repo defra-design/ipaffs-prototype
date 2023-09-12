@@ -50,7 +50,7 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                   </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="internalmarket-conditional">
                           
-                          <div class="govuk-form-group govuk-!-margin-bottom-8">
+                          <div class="govuk-form-group govuk-!-margin-bottom-5">
                             <fieldset class="govuk-fieldset">
                               <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                                 <h1 class="govuk-fieldset__heading">
@@ -78,6 +78,16 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                                 </div>
                               </div>
                             </fieldset>
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+                              Movement Reference Number (MRN) (Optional)
+                            </label>
+                            <div id="sign-in-hint" class="govuk-hint">
+                              This applies only to goods moved under the Common Transit Convention (CTC) and will be on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
+                            </div>
+                            
+                            <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
                           </div>
                   </div>
 
@@ -377,7 +387,7 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                       You’ll find this on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
                     </div>
                     
-                    <input class="govuk-input" id="event-name" name="event-name" type="text">
+                    <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
                   </div>
                   
                   <div class="govuk-form-group">
@@ -385,7 +395,7 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                         Port of exit
                     </label>
                     
-                    <input class="govuk-input" id="event-name" name="event-name" type="text">
+                    <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
                   </div>
 
                   <div class="govuk-form-group">

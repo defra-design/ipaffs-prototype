@@ -52,43 +52,12 @@
           <span id="reference-number"></span>
       </span>
       
-      Consignments requiring exit inspection
+      My alerts
       </h1>   
       </div>
       </div> 
-      
-     
-      <div class="govuk-grid-row" id="notifications-page">
-        <div class="govuk-grid-column-full">
-      <!-- <div id="existing-notifications">
-        <form action="/control/tst/protected/ov-notifications" method="post" class="search-and-filter-form">
-          <input name="crumb" type="hidden" value="ynbUVDt-3GiajmqOzJbbP9dQiI8wbUJC33KvbJwoctk">
-          <input name="etag" type="hidden" value="">
-          
-      
-          <h3 class="govuk-heading-s govuk-!-margin-bottom-2" id="result-count">
-            <span id="notification-count">56</span>
-            results
-          </h3>
-      
-          <div class="govuk-!-margin-bottom-2">
-            <label for="orderBy" class="govuk-label govuk-!-display-inline-block">Sort results by:</label>
-            <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="orderBy" name="orderBy">
-              <option value="decisionDateDesc" selected="">
-                Arrival date (newest to oldest)
-              </option>
-              <option value="decisionDateAsc">
-                Arrival date (oldest to newest)
-              </option>
-            </select>
-            <button id="sort-notifications" type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">
-              Update sort
-            </button>
-          </div>
-        </form>
-      
-      </div>-->
-      <div class="govuk-!-display-block govuk-!-margin-bottom-7">
+
+      <div class="govuk-!-display-block">
         <label for="bip-select" class="govuk-label display-inline-block govuk-!-margin-right-3">Select BCP:</label>
         <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="bip-select" name="bip">
             <option value="">All</option>
@@ -213,19 +182,301 @@
             Apply
         </button>
     </div>
-      <!--<div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box">
-        <h2 class="govuk-heading-m alert-dashboard-summary-heading">My alerts</h2>
+      <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box">
         <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list">
               
                 <li>
-                        <a id="alert-description-INSPECTION_REQUIRED" href="exit-inspections">36 notifications require inspection on exit</a>
+                        <strong>36 notifications require inspection on exit</strong>
                 </li>
                 <li>
                   <a id="alert-description-INSPECTION_REQUIRED" href="#">47 notifications require control as the Exit BCP</a>
           </li>
             
         </ul>
-      </div>-->
+      </div>
+      
+     
+      <div class="govuk-grid-row" id="notifications-page">
+        <div class="govuk-grid-column-full">
+      <div id="existing-notifications">
+        <form action="/control/tst/protected/ov-notifications" method="post" class="search-and-filter-form">
+          <input name="crumb" type="hidden" value="ynbUVDt-3GiajmqOzJbbP9dQiI8wbUJC33KvbJwoctk">
+          <input name="etag" type="hidden" value="">
+          <div class="govuk-form-group search-panel">
+            <input class="button search-hidden" type="submit" value="hidden-search">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <h3 class="govuk-heading-m">Search CHEDs by</h3>
+              </div>
+            </div>
+      
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+              <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label govuk-label--s" for="keywords">
+                      Keywords or CHED number
+                    </label>
+                    
+                
+                    <span id="keywords-hint" class="govuk-hint">
+                      For example: reference, destination, consignor, transporter, documents
+                    </span>
+                
+                  
+                
+                  <input class="govuk-input  " id="keywords" name="keywords" type="text" value="" aria-describedby="keywords-hint">
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                  <label class="govuk-label govuk-label--s" for="certificateStatus">
+                    CHED status
+                  </label>
+                  <span id="keywords-hint" class="govuk-hint">
+                    &nbsp;
+                  </span>               
+              
+              
+                
+              
+                <select class="govuk-select govuk-!-width-full" id="certificateStatus" name="certificateStatus">
+                    <option value="">All</option>
+                 
+                    <option value="VALIDATED">Valid</option>
+                    <option value="REJECTED">Rejected</option>
+                   
+                </select>
+              </div>
+              </div>
+            </div>
+            
+            
+            
+      
+            
+              
+            
+      
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <button class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" data-module="govuk-button">Search</button>
+                <a href="/control/tst/protected/ov-notifications?searchClear=true" class="govuk-link clear-link">Clear</a>
+              </div>
+            </div>
+
+            
+
+          
+          </div>
+          
+          <div class="govuk-form-group search-panel">
+            <input class="button search-hidden" type="submit" value="hidden-search">
+            
+      
+            
+            
+            
+            
+      
+            <div class="govuk-grid-row govuk-!-margin-bottom-4 ">
+              <div class="govuk-grid-column-full ">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    Filter by arrival date and time
+                  </legend>
+
+
+                  <!-- <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                     
+                      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+                          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                            Decision date
+                          </label>
+                        </div>
+
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="changed-name">
+                             Arrival or import date
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div> -->
+
+                  <div class="govuk-form-group">
+                    <div class="govuk-!-font-size-19">
+                      <button type="submit" class="link-button" name="dateRange" value="today" id="Button-Today">
+                        Today
+                      </button>
+                      &nbsp;
+                      <button type="submit" class="link-button" name="dateRange" value="yesterday" id="Button-Yesterday">
+                        Tomorrow
+                      </button>
+                      &nbsp;
+                      <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
+                        Next 7 days
+                      </button>
+                      &nbsp;
+                     
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+              <div class="govuk-grid-row govuk-!-margin-bottom-9">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date</legend>
+                    <div class="govuk-date-input" id="start-date" data-module="accessible-datepicker">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-38" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-38"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date</legend>
+                    <div class="govuk-date-input" id="end-date" data-module="accessible-datepicker">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="end-date-day" value="" name="end-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="end-date-month" value="" name="end-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="end-date-year" value="" name="end-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-81" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-81"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-9">
+              <div class="govuk-grid-column-one-half">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start time (optional)</legend>
+                <div id="passport-issued-hint" class="govuk-hint govuk-!-margin-top-3">
+                  24 hour format, for example, 14 50
+                </div>
+                <div class="govuk-date-input" id="passport-issued">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Hour
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Minutes
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  </div>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End time (optional)</legend>
+                <div id="passport-issued-hint" class="govuk-hint govuk-!-margin-top-3">
+                  24 hour format, for example, 14 50
+                </div>
+                <div class="govuk-date-input" id="passport-issued">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Hour
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Minutes
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            
+      
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <button class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" data-module="govuk-button">Filter</button>
+                <a href="/control/tst/protected/ov-notifications?searchClear=true" class="govuk-link clear-link">Clear filter</a>
+              </div>
+            </div>
+          </div>
+
+          
+      
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-2" id="result-count">
+            <span id="notification-count">56</span>
+            results
+          </h3>
+      
+          <div class="govuk-!-margin-bottom-2">
+            <label for="orderBy" class="govuk-label govuk-!-display-inline-block">Sort results by:</label>
+            <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="orderBy" name="orderBy">
+              <option value="decisionDateDesc" selected="">
+                Arrival date (newest to oldest)
+              </option>
+              <option value="decisionDateAsc">
+                Arrival date (oldest to newest)
+              </option>
+            </select>
+            <button id="sort-notifications" type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">
+              Update sort
+            </button>
+          </div>
+        </form>
+      
+      </div>
       <div id="notification-list">
             <dl class="notification-list__row" id="row-CHEDP.GB.2023.5926300">
               <div class="notification-list__grid-row">
