@@ -61,22 +61,7 @@ router.post('/catchAttach-route', function (req, res) {
 })
 
 
-// add catch cert details  -  add  catch certs
-router.post('/09-add-cc-route', function (req, res) {
 
-  // Make a variable and give it the value from name
-  var iuuCcAddRoute = req.session.data['iuuCatchAddDetails']
-
-  // Check whether the variable matches a condition
-  if (iuuCcAddRoute == "add-details"){
-    // Send user to next page
-    res.redirect('09aa-multi-upload-catch')
-  }
-  
-  else if (iuuCcAddRoute == "no") {
-    res.redirect('09bb-multi-doc-details-catch')
-  }
-})
 
 
 
