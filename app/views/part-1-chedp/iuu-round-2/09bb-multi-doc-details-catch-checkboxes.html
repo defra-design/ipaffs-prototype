@@ -97,7 +97,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                             <!-- <label class="govuk-label" for="width-3">
                              Number of certificates
                             </label> -->
-                            <input class="govuk-input govuk-input--width-2 govuk-!-margin-top-2 govuk-!-margin-right-1" id="width-3" name="width3" type="text"> certificates <br><button class="govuk-button govuk-!-margin-top-3 govuk-!-margin-bottom-0" data-module="govuk-button">
+                            <input class="govuk-input govuk-input--width-3 govuk-!-margin-top-2 govuk-!-margin-right-4" id="width-3" name="width3" type="text"> <button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button">
                               Update
                             </button>
                           </div>
@@ -177,37 +177,110 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                
               </div>
             </div>
-            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Add the weights for species in your consignment covered by this catch certificate</h2>
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Add the species in your consignment</h2>
 
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-three-quarters">
-<div class="govuk-inset-text ">
- <p><strong>Only add the weights for species from your notification, that are listed in this catch certificate. Otherwise leave blank.</strong></p>
- <p>If you don't see the species you're looking for, you need to <a href="04-commodity">add the commodity</a> to this notification first</p>
+<div class="govuk-inset-text">
+ <p><strong>Only add the species from your notification, that are listed in this catch certificate.</strong></p>
+ <p>If you don't see the species you're looking for, you need to <a href="08-commodity-details">add the commodity</a> to this notification first</p>
 </div>
-</div></div>
-    
+
+        <!-- <div class="govuk-!-margin-top-4 additional-documents-table" id="additional-documents-table">
+          <div class="additional-documents__grid-row additional-documents__headers">
+            <div class="additional-documents__grid-column-25 additional-documents__table-header">
+              Catch certificate document number
+            </div>
+            <div class="additional-documents__grid-column-60 additional-documents__add-document-attachment govuk-!-margin-top-0">
+              <input class="govuk-input  " id="reference-input-1" name="reference-input-0" type="text" value=""
+                aria-label="Document reference">
+            </div>
+          </div>
+        </div>
+        <div class="govuk-!-margin-top-2 additional-documents-table" id="additional-documents-table">
+          <div class="additional-documents__grid-row additional-documents__headers">
+            <div class="additional-documents__grid-column-25 additional-documents__table-header">
+             Date
+            </div>
+            <div class="additional-documents__grid-column-60 additional-documents__add-document-attachment govuk-!-margin-top-0">
+              <div class="additional-documents__date-of-issue-hint">
+                <span class="additional-documents__date-of-issue-hint__day">Day</span>
+                <span class="additional-documents__date-of-issue-hint__month">Month</span>
+                <span class="additional-documents__date-of-issue-hint__year">Year</span>
+              </div>
+              <fieldset class="govuk-fieldset" role="group">
+                <legend class="govuk-fieldset__legend govuk-visually-hidden">
+                  
+                  Document issue date
+                  
+                </legend>
+          
+          
+          
+              <div class="govuk-date-input date-input--picker short-date-input" id="issue-date-0" data-module="accessible-datepicker">
+                <div class="govuk-date-input__item date-input-day">
+                  <div class="govuk-form-group">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="issue-date-0-day" name="issue-date-0-day" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Day">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item date-input-month">
+                  <div class="govuk-form-group">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="issue-date-0-month" name="issue-date-0-month" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Month">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item date-input-year">
+                  <div class="govuk-form-group">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="issue-date-0-year" name="issue-date-0-year" type="text" value="" inputmode="numeric" maxlength="4" aria-label="Year">
+                  </div>
+                </div>
+              <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+    <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg>
+  </button> 
+    <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-24" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-24"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+            </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-!-margin-top-2 additional-documents-table" id="additional-documents-table">
+          <div class="additional-documents__grid-row additional-documents__headers">
+            <div class="additional-documents__grid-column-25 additional-documents__table-header">
+              Flag state of vessel
+            </div>
+            <div class="additional-documents__grid-column-60 additional-documents__add-document-attachment govuk-!-margin-top-0">
+              <input class="govuk-input  " id="reference-input-1" name="reference-input-0" type="text" value=""
+                aria-label="Document reference">
+            </div>
+          </div>
+        </div> 
+         -->
     
 
       
         <div class="govuk-!-margin-bottom-6 additional-documents-table" id="additional-documents-table">
           <div class="additional-documents__grid-row additional-documents__headers">
-           
+            <div class="additional-documents__grid-column-15 additional-documents__table-header">
+               
+            </div>
             <div class="additional-documents__grid-column-20 additional-documents__table-header">
               Commodity code
             </div>
             <div class="additional-documents__grid-column-40 additional-documents__table-header">
-              Species 
-              <br><span style="font-weight: 400; color: #505a5f;">This list is drawn from your consignment</span>
+              Species in your consignment
               
             </div>
-            <div class="additional-documents__grid-column-30 additional-documents__table-header">
-              Net weight <br><span style="font-weight: 400; color: #505a5f;">The weight of the species you're bringing in within this catch certificate only</span>
+            <div class="additional-documents__grid-column-20 additional-documents__table-header">
+              Net weight in your consignment <span style="font-weight: 400; color: #505a5f;">(only within this catch certificate)</span>
             </div>
           </div>
             <input name="document-id" type="hidden" value="0">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-hucho">
-              
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -219,7 +292,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 <p class="govuk-body">Hucho hucho</p>
   
               </div>
-              <div class="additional-documents__grid-column-25 additional-documents__add-document-attachment govuk-!-margin-top-0">
+              <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment govuk-!-margin-top-0">
                 <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
                   <div class="govuk-input__suffix" aria-hidden="true">kg</div>
                 </div>
@@ -227,7 +300,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="1">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-salmo">
-             
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -247,7 +327,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="2">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-oreo-m">
-            
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -267,7 +354,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="3">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-Oreochromis-spp">
-              
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -287,7 +381,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="0">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-scomber-c">
-             
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -307,7 +408,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="0">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-scomber-sp">
-            
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -327,7 +435,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="0">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-salmonidae">
-             
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -347,7 +462,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="0">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-aguabonita">
-             
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -367,7 +489,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="0">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-onchy-c">
-             
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
@@ -387,7 +516,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <input name="document-id" type="hidden" value="0">
             <div class="additional-documents__grid-row additional-documents__add-document" id="checkbox-1-onchy-c-2">
-             
+              <div class="additional-documents__grid-column-15">
+                <div class="govuk-checkboxes " id="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f-container">
+                  <div class="govuk-checkboxes__item" data-target="hidden-commodity-2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <input class="govuk-checkboxes__input" id="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" name="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f" type="checkbox" value="2b7feea5-cc08-4386-8b7d-555601719b7f">
+                    <label class="govuk-label govuk-checkboxes__label" for="commodity-2b7feea5-cc08-4386-8b7d-555601719b7f"><span class="govuk-visually-hidden">commodity-2b7feea5-cc08-4386-8b7d-555601719b7f</span></label>
+                  </div>
+                </div>
+            </div>
               <div class="additional-documents__grid-column-20">                
                 
   
