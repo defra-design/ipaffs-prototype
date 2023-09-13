@@ -21,7 +21,7 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
       <h1 class="govuk-heading-xl govuk-!-width-three-quarters" id="page-primary-title">Select the highest risk category for the commodities in this consignment</h1>
       <p class="govuk-body govuk-!-width-three-quarters">We need to know this so we can collect the correct details for your notification.</p> 
       <p class="govuk-body govuk-!-width-three-quarters">You can <a>check the risk categories on GOV.UK (open in new tab)</a>.</p>
-      <form action="07-check-answers" method="post" id="homeForm">
+      <form action="risk-route" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="ap8RGD2HV43zQbawQzPRbIFdefUPgzdrYTdNHsFAUId">
 
         <div class="govuk-form-group  ">
@@ -29,13 +29,13 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
         
             <div class="govuk-radios ">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CHEDA">
+                  <input class="govuk-radios__input" id="cert-type" name="risk-category" type="radio" value="medium">
                   <label class="govuk-label govuk-radios__label " for="cert-type">
                       Medium risk
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="CVEDP">
+                  <input class="govuk-radios__input" id="cert-type-2" name="risk-category" type="radio" value="low">
                   <label class="govuk-label govuk-radios__label " for="cert-type-2">
                       Low risk
                   </label>

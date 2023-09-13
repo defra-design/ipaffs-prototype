@@ -2,7 +2,25 @@ const express = require('express')
 const router = express.Router()
 // Add your routes here - above the module.exports line
 
-//  - approved establishment qutesion
+
+//  - risk route question - 06a-risk-category
+router.post('/risk-route', function (req, res) {
+
+  // Make a variable and give it the value from name
+  var riskRoute = req.session.data['risk-category']
+  if (riskRoute == "medium"){
+    res.redirect('06b-risk-high')
+  }
+
+ else if (riskRoute == "low"){
+    res.redirect('07-check-answers')
+  }
+  
+  })
+
+
+
+//  - approved establishment question
 router.post('/ae-route', function (req, res) {
 
   // Make a variable and give it the value from name
