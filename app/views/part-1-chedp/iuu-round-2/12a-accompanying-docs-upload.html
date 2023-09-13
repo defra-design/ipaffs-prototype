@@ -35,6 +35,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-body">
           <h2 class="govuk-heading-m">Select the type of document to upload</h2>
         </div>
+        
         <div class="additional-documents__grid-column-15">
           <div class="govuk-form-group govuk-!-margin-bottom-0 ">
             
@@ -44,7 +45,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
                 <option value="airWaybill">Air waybill</option>
                 <option value="billOfLading">Bill of lading</option>
-                <option value="catchCertificate">Catch certificate</option>
+                <!-- <option value="catchCertificate">Catch certificate</option> -->
                 <option value="commercialInvoice">Commercial invoice</option>
                 <option value="customsDeclaration">Customs declaration</option>
                 <option value="importPermit">Import permit</option>
@@ -67,19 +68,31 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             <li>a DOC, JPEG, PDF, PNG, XLS or GIF file</li>
           </ul>
         </div>
-
+        <div class="govuk-body">You need to use a different section of this notification to <a href="09-iuu-docs">upload catch certificates</a>.</div>
         <div class="govuk-!-margin-top-6">
-          <div class="govuk-form-group ">
-            <div >
+          <div class="govuk-!-margin-top-6">
+            <div class="govuk-!-margin-top-6 govuk-!-width-two-thirds">
+              <div class="govuk-form-group ">
+                <div  style="border: 2px dashed #b1b4b6;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 30px 20px;"><p class="govuk-body">Drag and drop files here or</p>
+                  <label class="govuk-button govuk-button--secondary" for="fileUpload">Choose files</label>
               
-              <p class="govuk-body">Drag and drop files here or</p>
-              <!-- <label class="govuk-button govuk-button--secondary" for="fileUpload">Choose files</label> -->
-          
-          
-              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-              <!-- <input class="govuk-file-upload " id="fileUpload" name="fileUpload" type="file" multiple=""> -->
+              
+                    
+                  <!-- <input class="govuk-file-upload " id="fileUpload" name="fileUpload" type="file" multiple=""> -->
+                </div>
+              </div><div class="uploaded-files-list"></div>
+              <!-- <input class="govuk-button" id="next-button" name="next-button" type="submit" value="Continue"> -->
+    
+              
             </div>
-          </div>
+
+          
+        
           <!-- <div class="uploaded-files-list"><div class="uploaded-files-list-item">CC-4387474.pdf</div><div class="uploaded-files-list-item">CC-4387475.pdf</div><div class="uploaded-files-list-item">CC-4387476.pdf</div><div class="uploaded-files-list-item">CC-4387477.pdf</div><div class="uploaded-files-list-item">CC-4387478.pdf</div></div> -->
           <!-- <input class="govuk-button" id="next-button" name="next-button" type="submit" value="Continue"> -->
 
