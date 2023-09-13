@@ -34,7 +34,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
       <input name="requestOrigin" type="hidden" value="multiupload">
       <span class="govuk-caption-l">Attachment 1 of 5</span>
 
-      <h3 class="govuk-heading-m govuk-!-margin-bottom-9" id="latest-health-certificate-heading"><a href="catch-cert.pdf" target="_blank">CC-43834843879.pdf <span style="font-weight: 400;">(opens in a new window)</span> </a></h3>
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-9" id="latest-health-certificate-heading"><a href="catch-cert.pdf" target="_blank">CC-43834843879.pdf <span style="font-weight: 400;">(opens in new tab)</span> </a></h3>
 
       <!-- <div class="govuk-!-margin-top-6 additional-documents-table" id="additional-documents-table">
         <div class="additional-documents__grid-row additional-documents__headers" style="border: 0;">
@@ -71,7 +71,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 <dl class="govuk-summary-list govuk-!-margin-bottom-4">
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Number of catch certificates included in the attachment
+                      Number of catch certificates in this attachment
                     </dt>
                     <dd class="govuk-summary-list__value">
                       1 catch certificate
@@ -87,7 +87,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                              Number of certificates
                             </label> -->
                             <form action="09bb-multi-doc-details-catch-3">
-                            <input class="govuk-input govuk-input--width-2 govuk-!-margin-top-2 govuk-!-margin-right-1" id="width-3" name="width3" type="text"> certificates <br><button class="govuk-button govuk-!-margin-top-3 govuk-!-margin-bottom-0" data-module="govuk-button">
+                            <input class="govuk-input govuk-input--width-2 govuk-!-margin-top-2 govuk-!-margin-right-1" id="width-3" name="width3" type="text"> catch certificates <br><button class="govuk-button govuk-!-margin-top-3 govuk-!-margin-bottom-0" data-module="govuk-button">
                               Update
                             </button></form>
                           </div>
@@ -108,7 +108,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Date
+                      Date of issue
                     </dt>
                     <dd class="govuk-summary-list__value">
                       <div class="additional-documents__date-of-issue-hint">
@@ -119,7 +119,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                       <fieldset class="govuk-fieldset" role="group">
                         <legend class="govuk-fieldset__legend govuk-visually-hidden">
                           
-                          Document issue date
+                          Date of issue
                           
                         </legend>
                   
@@ -153,7 +153,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Flag state of vessels
+                      Flag state of catching vessel
                     </dt>
                     <dd class="govuk-summary-list__value">
                       <input class="govuk-input  govuk-!-width-one-half" id="reference-input-1" name="reference-input-0" type="text" value=""
@@ -167,13 +167,13 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                
               </div>
             </div>
-            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Add the weights for species in your consignment covered by this catch certificate</h2>
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Enter import net weight for this catch certificate</h2>
 
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-three-quarters">
 <div class="govuk-inset-text ">
- <p><strong>Only add the weights for species from your notification, that are listed in this catch certificate. Otherwise leave blank.</strong></p>
- <p>If you don't see the species you're looking for, you need to <a href="04-commodity">add the commodity</a> to this notification first</p>
+ <p><strong>Enter the net weight of the fish species being imported under this catch certificate. Leave the rest blank or zero.</strong></p>
+ <p>If a species is not shown, you need to first <a href="04-commodity">add the commodity</a>.</p>
 </div>
 </div></div>
     
@@ -187,12 +187,12 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               Commodity code
             </div>
             <div class="additional-documents__grid-column-40 additional-documents__table-header">
-              Your species in catch certificate 
-              <br><span style="font-weight: 400; color: #505a5f;">This list is drawn from the wild species in your consignment</span>
+              Species 
+              <br><span style="font-weight: 400; color: #505a5f;">This list shows wild species in your notification</span>
               
             </div>
             <div class="additional-documents__grid-column-40 additional-documents__table-header">
-              Net weight <br><span style="font-weight: 400; color: #505a5f;">Only give the weight for your species within this catch certificate</span>
+              Net weight of import <br><span style="font-weight: 400; color: #505a5f;">Required only for species being imported under this catch certificate</span>
             </div>
           </div>
             <input name="document-id" type="hidden" value="0">
@@ -699,7 +699,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
       <input class="govuk-button" id="button-save-and-continue" type="submit" value="Save and continue to next attachment" data-module="govuk-button">
       <br>
       <!-- <input class="govuk-link cancel-button-link-text" id="button-cancel" name="buttonCancel" type="submit" value="Cancel upload" data-module="govuk-button"> -->
-      <p class="govuk-body"><a class="govuk-link" href="09-catch-certificates-complete">Save and return to catch certificates attachments list</a></p>
+      <p class="govuk-body"><a class="govuk-link" href="09-catch-certificates-complete">Save and return to catch certificates list</a></p>
     </form>
     </div>
   </div>
