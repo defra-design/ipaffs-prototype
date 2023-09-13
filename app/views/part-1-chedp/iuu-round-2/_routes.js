@@ -2,6 +2,21 @@ const express = require('express')
 const router = express.Router()
 // Add your routes here - above the module.exports line
 
+//  - add more commodities question -05-commodity-genus
+router.post('/add-comm-route', function (req, res) {
+
+  // Make a variable and give it the value from name
+  var addCommRoute = req.session.data['add-commodity']
+  if (addCommRoute == "yes"){
+    res.redirect('04-commodity')
+  }
+
+ else if (addCommRoute == "no"){
+    res.redirect('06-about-consignment')
+  }
+  
+  })
+
 
 //  - risk route question - 06a-risk-category
 router.post('/risk-route', function (req, res) {

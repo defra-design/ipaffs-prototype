@@ -41,7 +41,7 @@ Commodity – {{ serviceName }} – GOV.UK Prototype Kit
         </table>
       </div>
 
-      <form action="06-about-consignment" id="categories" method="get">
+      <form action="add-comm-route" id="categories" method="get">
         <input name="commodity-selected-code" type="hidden" value="03031200">
         <input name="commodityDetailsPage" type="hidden" value="">
 
@@ -63,7 +63,7 @@ Commodity – {{ serviceName }} – GOV.UK Prototype Kit
 
       </form>
 
-      <form action="06-about-consignment" method="post">
+      <form action="add-comm-route" method="post">
               <div class="govuk-form-group ">
                 <fieldset class="govuk-fieldset" id="species-list">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -124,13 +124,13 @@ Commodity – {{ serviceName }} – GOV.UK Prototype Kit
               </legend>
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="whereDoYouLive" name="iuuCatchAttach" type="radio" value="yes">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="add-commodity" type="radio" value="yes">
                   <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="iuuCatchAttach" type="radio" value="no">
+                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="add-commodity" type="radio" value="no">
                   <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
                     No 
                   </label>
@@ -142,7 +142,7 @@ Commodity – {{ serviceName }} – GOV.UK Prototype Kit
 
         <div class="govuk-!-margin-top-6">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-            <input class="link-button" id="family-button" type="submit" name="familyButton" value="Save and add another commodity" data-module="govuk-button">
+            <!-- <input class="link-button" id="family-button" type="submit" name="familyButton" value="Save and add another commodity" data-module="govuk-button"> -->
         </div>
 
         <input name="crumb" type="hidden" value="XnVseX9p7oZgWaoYH_r9FJ5Jl0V0mvtmgI2L0GDadrU">
