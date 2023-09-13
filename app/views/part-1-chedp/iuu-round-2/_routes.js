@@ -55,6 +55,9 @@ router.post('/catchAttach-route', function (req, res) {
   else if (iuuDocRoute == "add-details") {
     res.redirect('09bb-multi-doc-details-catch')
   }
+  else if (iuuDocRoute == "add-details-2") {
+    res.redirect('09bb-multi-doc-details-catch-2')
+  }
   else if (iuuDocRoute == "Continue") {
     res.redirect('09e-iuu-confirmation')
   }
