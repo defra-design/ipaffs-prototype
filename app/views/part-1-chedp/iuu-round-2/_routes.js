@@ -61,6 +61,9 @@ router.post('/catchAttach-route', function (req, res) {
   else if (iuuDocRoute == "Continue") {
     res.redirect('09e-iuu-confirmation')
   }
+  else if (iuuDocRoute == "no-confirm") {
+    res.redirect('09e-iuu-confirmation')
+  }
 })
 
 
