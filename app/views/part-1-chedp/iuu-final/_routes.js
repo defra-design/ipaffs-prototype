@@ -45,7 +45,7 @@ router.post('/ae-route', function (req, res) {
   }
 
  else if (appEstRoute == "Save and continue"){
-    res.redirect('09-iuu-docs')
+    res.redirect('14-addresses')
   }
   
   })
@@ -65,7 +65,7 @@ router.post('/iuu-doc-route', function (req, res) {
   }
   
   else if (iuuDocRoute == "no") {
-    res.redirect('14-addresses')
+    res.redirect('12-accompanying-docs')
   }
 })
 
@@ -199,7 +199,7 @@ router.post('/iuu-doc-confirmation-route', function (req, res) {
   }
 
  else {
-    res.redirect('14-addresses')
+    res.redirect('12-accompanying-docs')
   }
   
   })
