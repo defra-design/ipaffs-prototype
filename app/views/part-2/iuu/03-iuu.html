@@ -36,7 +36,7 @@ Record
   
 </div>
 
-  <form action="03a-iuu" method="POST">
+  <form action="04-checks" method="POST">
     <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
     <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
     <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
@@ -68,23 +68,28 @@ Record
 
       <div class="govuk-form-group govuk-!-margin-bottom-0 iuu" id="iuu-check-options">
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">IUU check required?</legend>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Record IUU check?</legend>
           <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" data-target="container-iuu">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="radio-iuu-selected-yes" type="radio" name="iuuCheckRequired" value="true" aria-controls="container-iuu" aria-expanded="false">
               <label class="govuk-label govuk-radios__label" for="radio-iuu-selected-yes">Yes</label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden alert-info-white-bg govuk-radios__item govuk-form-group govuk-!-width-two-thirds govuk-!-margin-top-4 panel panel-border-narrow" id="container-iuu">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden alert-info-white-bg govuk-radios__item govuk-form-group govuk-!-width-full govuk-!-margin-top-4 panel panel-border-narrow" id="container-iuu">
               <fieldset class="govuk-fieldset">
+                <h3 class="govuk-heading-m">IUU check decision</h3>
                 <legend class="govuk-visually-hidden">Choose from</legend>
                 <div class="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="radio-iuu-na" type="radio" name="iuuStatus" value="IUUNA">
-                    <label class="govuk-label govuk-radios__label" aria-label="label-iuu-na" for="radio-iuu-na">IUU NA</label>
+                    <label class="govuk-label govuk-radios__label" aria-label="label-iuu-na" for="radio-iuu-na">Compliant</label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="radio-iuu-ok" type="radio" name="iuuStatus" value="IUUOK">
-                    <label class="govuk-label govuk-radios__label" aria-label="label-iuu-ok" for="radio-iuu-ok">IUU OK</label>
+                    <label class="govuk-label govuk-radios__label" aria-label="label-iuu-ok" for="radio-iuu-ok">Not compliant</label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="radio-iuu-ok" type="radio" name="iuuStatus" value="IUUOK">
+                    <label class="govuk-label govuk-radios__label" aria-label="label-iuu-ok" for="radio-iuu-ok">No need to inspect – exempt or not applicable</label>
                   </div>
                 </div>
               </fieldset>
@@ -95,6 +100,9 @@ Record
             </div>
           </div>
         </fieldset>
+ 
+        
+
         <div>
           <input class="govuk-button govuk-!-margin-top-6 govuk-!-margin-right-1" name="save-button" type="submit" value="Save and return" id="button-save-and-return">
           <input class="govuk-button govuk-!-margin-top-6 govuk-!-margin-right-1" type="submit" name="save-button" value="Save and continue" id="button-save-and-continue">
