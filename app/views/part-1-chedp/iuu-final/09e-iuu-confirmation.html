@@ -24,20 +24,21 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
     <div class="govuk-grid-column-two-thirds">
       <form action="iuu-doc-confirmation-route" method="POST">
         <span class="govuk-caption-xl">Documents</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Confirm if catch certificates are required</h1>
-      <p class="govuk-body">You must upload catch certificates for all fish species unless they are exempt from illegal, unreported and unregulated (IUU) fishing controls.</p>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Confirm xxx</h1>
 
-        <p class="govuk-body">You have not uploaded catch certificates for following wild species in this consignment:</p>
+      <!-- <p class="govuk-body">You must upload catch certificates for all fish species unless they are exempt from illegal, unreported and unregulated (IUU) fishing controls.</p> -->
+
+        <p class="govuk-body">The following wild species in this consignment aren't listed in any of the catch certificates.</p>
 <ul>
 <li>03031300 - Hucho hucho</li>
 <li>03032300 - Oreochromis mossambicus</li>
 </ul>
 
-        <div class="govuk-form-group">
+        <!-- <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-                Do you need to add or amend catch certificate details for any of these species?
+                Would you like to add or amend catch certificate details for any of these species?
               </h1>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -56,7 +57,209 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
              
             </div>
           </fieldset>
+
+
+
+        
+        </div> -->
+
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" id="purpose">
+
+
+          <div class="govuk-radios__item purpose">
+            <input class="govuk-radios__input" id="a_impadm1" name="purpose" type="radio" value="internalmarket" aria-controls="internalmarket-conditional" aria-expanded="false">
+            <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="a_impadm1">
+             <h2 class="govuk-fieldset__heading  ">No </h2>
+            </label>
+           
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="internalmarket-conditional">
+                  
+                  <div class="govuk-form-group govuk-!-margin-bottom-8">
+                    <fieldset class="govuk-fieldset">
+                     
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                            These species are exempt from IUU fishing controls
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                            Other reason
+                          </label>
+                        </div>
+                       
+                      </div>
+                    </fieldset>
+                  </div>
+          </div>
+
+        <div class="govuk-radios__item purpose">
+          <input class="govuk-radios__input" id="radio-tranship" name="purpose" type="radio" value="tranship" aria-controls="tranship-conditional" aria-expanded="false">
+          <label class="govuk-label govuk-radios__label" for="radio-tranship">
+            
+          <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">Transhipment or onward travel</h2>
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          For consignments intended for direct travel to a third county, that will stay only within the same port or airport in Great Britain while moving to another means of transport.
         </div>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="tranship-conditional">
+
+          
+
+            <div class="govuk-form-group govuk-!-margin-bottom-8">
+              <label class="govuk-label govuk-label--s" for="third-country-transhipment">
+                  Destination country
+              </label>
+              
+             
+            </div>
+        </div>
+
+
+
+        <div class="govuk-radios__item purpose">
+          <input class="govuk-radios__input" id="radio-transit" name="purpose" type="radio" value="transit" aria-controls="conditional-transit" aria-expanded="false">
+          
+          <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="radio-transit">
+            <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">Transit</h2>
+           </label>
+           <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            For consignments moving through Great Britain for direct travel to a third country, that will enter Great Britain at one port or airport and leave from a different one within England, Scotland or Wales.
+           </div>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-transit">
+          
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+              Movement Reference Number (MRN)
+            </label>
+            <div id="sign-in-hint" class="govuk-hint">
+              You’ll find this on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
+            </div>
+            
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+          </div>
+          
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+                Port of exit
+            </label>
+            
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">When the consignment will leave Great Britain</legend>
+              <div id="sign-in-hint" class="govuk-hint">
+                For example, 27 3 2023. This must be within 7 days of arrival in Great Britain.
+              </div>
+              <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
+
+                <div class="govuk-date-input__item date-input-day">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
+                  </div>
+                </div>
+
+                <div class="govuk-date-input__item date-input-month">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+
+                <div class="govuk-date-input__item date-input-year">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+              <div id="passport-issued-hint" class="govuk-hint govuk-!-margin-top-3">
+                24 hour format, for example, 14 50
+              </div>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Hour
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Minutes
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <span id="transit-third-countries" class="govuk-label govuk-label--s">Transited country</span>
+            <div id="transit-third-country-container">
+                <!-- <table class="govuk-table govuk-!-margin-bottom-0" role="presentation"> -->
+                        <!-- <tbody><tr>
+                            <td> -->
+                                <div class="govuk-form-group ">
+                              
+                                </div>
+                            <!-- </td><td>
+                            </td>
+                        </tr>
+                </tbody> -->
+              <!-- </table> -->
+            </div>
+                  <button class="link-button" id="add-another-country" type="submit" name="action" value="transit-third-countries-add">
+                    Add another country
+                  </button>
+          </div>
+            <div class="govuk-form-group govuk-!-margin-bottom-8 ">
+              <label class="govuk-label govuk-label--s" for="third-country-transit">
+                  Destination country
+              </label>
+              
+            
+            </div>
+        </div>
+
+        <div class="govuk-radios__item purpose">
+          <input class="govuk-radios__input" id="re-entry" name="purpose" type="radio" value="re-entry">
+          
+          <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="re-entry">
+            <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">Re-entry</h2>
+           </label>
+           <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            For consignments authorised for re-entry, or rejected exports re-entering Great Britain.
+           </div>
+        </div>
+
+
+
+        
+
+      
+
+
+    </div>
+
+        
+
+
+
+
+
 </div>
 </div>
 
