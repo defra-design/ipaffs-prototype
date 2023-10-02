@@ -30,11 +30,141 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
 
         <p class="govuk-body">The following wild species are not listed against any catch certificates. </p>
 
-          <p class="govuk-body"> </p>
+         
 
-
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Select the species that are exempt from IUU controls in this consignment
+              </h1>
+            </legend>
+    
+            <div class="govuk-checkboxes__item  govuk-!-margin-bottom-6 govuk-!-margin-top-4">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Select all species
+              </label>
+            </div>
+            </div>
+          <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col" id="select-all"></th>
+                <th class="govuk-table__header" scope="col">Commodity code</th>
+                <th class="govuk-table__header" scope="col">Species</th>
+               
+               
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row govuk-table__row--selected">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
+                    <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
+                      <span class="govuk-visually-hidden">Select </span>
+                    </label>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">03032300</td>
+                <td class="govuk-table__cell">Oreochromis mossambicus, Wild stock</td>
+               
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
+                    <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
+                      <span class="govuk-visually-hidden">Select 555</span>
+                    </label>
+                  </div>
+                </td>
+                </td>
+                <td class="govuk-table__cell">03032300</td>
+                <td class="govuk-table__cell">Oreochromis spp, Wild stock</td>
+              
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
+                    <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
+                      <span class="govuk-visually-hidden">Select Elbrus</span>
+                    </label>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">03032300</td>
+                <td class="govuk-table__cell">Oreochromis alf, Wild stock</td>
+                
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
+                    <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
+                      <span class="govuk-visually-hidden">Select Everest</span>
+                    </label>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">03032300</td>
+                <td class="govuk-table__cell">Scomber colias</td>
+               
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="mountain-kilimanjaro" value="kilimanjaro">
+                    <label class="govuk-label govuk-checkboxes__label" for="mountain-kilimanjaro">
+                      <span class="govuk-visually-hidden">Select Kilimanjaro</span>
+                    </label>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">03050690</td>
+                <td class="govuk-table__cell">Salmonidae</td>
+               
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="mountain-puncak-jaya" value="puncak-jaya">
+                    <label class="govuk-label govuk-checkboxes__label" for="mountain-puncak-jaya">
+                      <span class="govuk-visually-hidden">Select Puncak Jaya</span>
+                    </label>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">03032300</td>
+                <td class="govuk-table__cell">Onchychorus aguabonita</td>
+               
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="mountain-vinson" value="vinson">
+                    <label class="govuk-label govuk-checkboxes__label" for="mountain-vinson">
+                      <span class="govuk-visually-hidden">Select Vinson</span>
+                    </label>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">03050690</td>
+                <td class="govuk-table__cell">Onchychorus clarki</td>
+                
+              </tr>
+            </tbody>
+          </table>
+          <div class="govuk-checkboxes__divider">or</div>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+            <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+              None of the species are exempt
+            </label>
+          </div>
+          
+          
       
-
+<!-- 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -42,16 +172,15 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
                   Select the species that are exempt from IUU controls in this consignment
                 </h1>
               </legend>
+      
               <div class="govuk-checkboxes__item  govuk-!-margin-bottom-6 govuk-!-margin-top-4">
                 <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
                 <label class="govuk-label govuk-checkboxes__label" for="waste">
                   Select all species
                 </label>
               </div>
-              <!-- <div id="countries-hint" class="govuk-hint">
-                Select all species that apply
-              </div> -->
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+             
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox" value="france">
                   <label class="govuk-label govuk-checkboxes__label" for="countries">
@@ -71,15 +200,18 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
                   </label>
                 </div>
                 <div class="govuk-checkboxes__divider">or</div>
-                <div class="govuk-checkboxes__item">
+            </tbody>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item ">
                   <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
                   <label class="govuk-label govuk-checkboxes__label" for="countries-5">
                     None of the species are exempt
                   </label>
                 </div>
               </div>
+            </div>
             </fieldset>
-          </div>
+          </div> -->
 
         
 
