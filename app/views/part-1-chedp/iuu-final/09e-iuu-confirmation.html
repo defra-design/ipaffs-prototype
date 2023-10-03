@@ -20,7 +20,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
   </span>
 </div>
 <main class="govuk-main-wrapper" id="main-content">
-  <form action="iuu-doc-confirmation-route" method="POST"></form>
+  <form action="12-accompanying-docs" method="POST">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
@@ -29,7 +29,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
 
       <p class="govuk-body">You must upload catch certificates for all fish species unless they are exempt from illegal, unreported and unregulated (IUU) fishing controls.</p>
 
-        <p class="govuk-body">The following wild species are not listed against any catch certificates. </p>
+        <p class="govuk-body govuk-!-margin-bottom-9">The following wild species are not listed against any catch certificates. </p>
 
   
    </div>
@@ -47,7 +47,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
             </legend>
     
             <div class="govuk-checkboxes__item  govuk-!-margin-bottom-6 govuk-!-margin-top-4">
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes " data-module="govuk-checkboxes">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
                 Select all species
@@ -67,7 +67,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-table__row--selected">
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <div class="govuk-checkboxes__item  moj-multi-select__checkbox">
                     <input type="checkbox" class="govuk-checkboxes__input" id="mountain-aconcagua">
                     <label class="govuk-label govuk-checkboxes__label" for="mountain-aconcagua">
                       <span class="govuk-visually-hidden">Select </span>
@@ -80,7 +80,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <div class="govuk-checkboxes__item  moj-multi-select__checkbox">
                     <input type="checkbox" class="govuk-checkboxes__input" id="mountain-denali" value="denali">
                     <label class="govuk-label govuk-checkboxes__label" for="mountain-denali">
                       <span class="govuk-visually-hidden">Select 555</span>
@@ -94,7 +94,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <div class="govuk-checkboxes__item  moj-multi-select__checkbox">
                     <input type="checkbox" class="govuk-checkboxes__input" id="mountain-elbrus" value="elbrus">
                     <label class="govuk-label govuk-checkboxes__label" for="mountain-elbrus">
                       <span class="govuk-visually-hidden">Select Elbrus</span>
@@ -107,7 +107,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <div class="govuk-checkboxes__item  moj-multi-select__checkbox">
                     <input type="checkbox" class="govuk-checkboxes__input" id="mountain-everest" value="everest">
                     <label class="govuk-label govuk-checkboxes__label" for="mountain-everest">
                       <span class="govuk-visually-hidden">Select Everest</span>
@@ -120,7 +120,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <div class="govuk-checkboxes__item  moj-multi-select__checkbox">
                     <input type="checkbox" class="govuk-checkboxes__input" id="mountain-kilimanjaro" value="kilimanjaro">
                     <label class="govuk-label govuk-checkboxes__label" for="mountain-kilimanjaro">
                       <span class="govuk-visually-hidden">Select Kilimanjaro</span>
@@ -133,7 +133,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <div class="govuk-checkboxes__item  moj-multi-select__checkbox">
                     <input type="checkbox" class="govuk-checkboxes__input" id="mountain-puncak-jaya" value="puncak-jaya">
                     <label class="govuk-label govuk-checkboxes__label" for="mountain-puncak-jaya">
                       <span class="govuk-visually-hidden">Select Puncak Jaya</span>
@@ -146,7 +146,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                  <div class="govuk-checkboxes__item  moj-multi-select__checkbox">
                     <input type="checkbox" class="govuk-checkboxes__input" id="mountain-vinson" value="vinson">
                     <label class="govuk-label govuk-checkboxes__label" for="mountain-vinson">
                       <span class="govuk-visually-hidden">Select Vinson</span>
@@ -160,7 +160,7 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
             </tbody>
           </table>
           <div class="govuk-checkboxes__divider">or</div>
-          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes " data-module="govuk-checkboxes">
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
             <label class="govuk-label govuk-checkboxes__label" for="countries-5">
@@ -240,9 +240,11 @@ Confirm if catch certificates are required  – {{ serviceName }} – GOV.UK Pro
 
          
         </div>
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button" id="button-save-and-continue-p" name="button-save-and-continue-p" type="submit" value="Save and return to hub" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="07-check-answers">Cancel and return to hub</a></p>
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="button-save-and-continue-p" type="submit" value="Save and continue" data-module="govuk-button">
+        <!-- <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button" id="button-save-and-continue-p" name="button-save-and-continue-p" type="submit" value="Save and return to hub" data-module="govuk-button"> -->
+       
+        <p class="govuk-body"><a class="govuk-link" href="09-catch-certificates-complete">Cancel and return to manage catch certificates</a></p>
+        <!-- <p class="govuk-body"><a class="govuk-link" href="07-check-answers">Cancel and return to hub</a></p> -->
       </form>
     </div>
   </div>
