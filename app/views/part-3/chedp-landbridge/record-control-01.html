@@ -52,7 +52,7 @@
         <div class="govuk-form-group consignment-leave " id="consignment-leave">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h3 class="govuk-fieldset__heading">Record transit seal check?</h3>
+              <h3 class="govuk-fieldset__heading">Did the consignment leave the UK?</h3>
             </legend>
             
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -115,7 +115,1013 @@
                        
                       </div>
                     </fieldset>
-                  </div> 
+                  </div>
+                
+                <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--m" for="transport-type">
+                    Means of transport
+                  </label>
+                  
+                  <select class="govuk-select govuk-!-width-one-half" id="transport-type" name="transport-type">
+                  <option value="">Select means of transport</option>
+                  <option value="Airplane" data-country-code="">
+                      Airplane
+                  </option>
+                  <option value="Railway" data-country-code="">
+                      Railway
+                  </option>
+                  <option value="Road vehicle" data-country-code="">
+                      Road vehicle
+                  </option>
+                  <option value="Vessel" data-country-code="">
+                      Vessel
+                  </option>
+                  </select>
+                </div>
+
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label govuk-label--m" for="identification">
+                      Identification
+                    </label>
+                    
+                
+                    <span id="identification-hint" class="govuk-hint">
+                      Flight number, vessel name or vehicle registration
+                    </span>
+                
+                  
+                
+                  <input class="govuk-input govuk-!-width-one-half " id="identification" name="identification" type="text" value="" aria-describedby="identification-hint">
+                </div>
+
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label govuk-label--m" for="documentation">
+                      Documentation
+                    </label>
+                    
+                
+                    <span id="documentation-hint" class="govuk-hint">
+                      Air Waybill, Bill of lading or ship manifest
+                    </span>
+                
+                  
+                
+                  <input class="govuk-input govuk-!-width-one-half " id="documentation" name="documentation" type="text" value="" aria-describedby="documentation-hint">
+                </div>
+
+                <div class="govuk-form-group  ">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="leave-date-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        
+                        Date of departure
+                        
+                      </legend>
+                
+                      <span id="leave-date-hint" class="govuk-hint">
+                        For example: 01 03 2017
+                      </span>
+                
+                
+                    <div class="govuk-date-input date-input--picker " id="leave-date" data-module="accessible-datepicker">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="leave-date-day">
+                              Day
+                            </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="leave-date-day" name="leave-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="leave-date-month">
+                              Month
+                            </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="leave-date-month" name="leave-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="leave-date-year">
+                              Year
+                            </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="leave-date-year" name="leave-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+                        </div>
+                      </div>
+                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-80" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-80"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                  </fieldset>
+                </div>
+
+                <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--m" for="exitBIP">
+                    Exit BCP
+                  </label>
+                  
+                
+                
+                  
+                
+                  <select class="govuk-select govuk-!-width-one-half" id="exitBIP" name="exitBIP">
+                  <option value="">Select Exit BCP</option>
+                  <option value="Test070820" data-country-code="GB">
+                      070820t1 tester ltd - Test070820
+                  </option>
+                  <option value="Test200820" data-country-code="GB">
+                      200820t1 tester Ltd - Test200820
+                  </option>
+                  <option value="beta" data-country-code="GB">
+                      APHA - beta
+                  </option>
+                  <option value="GBBEL1" data-country-code="GB">
+                      Belfast Airport - GBBEL1
+                  </option>
+                  <option value="BelfPort2" data-country-code="GB">
+                      Belfast Pharmaceuticals - BelfPort2
+                  </option>
+                  <option value="GBBEL4" data-country-code="GB">
+                      Belfast Port - GBBEL4
+                  </option>
+                  <option value="BPTestAdd" data-country-code="GB">
+                      Belfast Port - BPTestAdd
+                  </option>
+                  <option value="BhmAllIn1" data-country-code="GB">
+                      Birmingham International Airport - BhmAllIn1
+                  </option>
+                  <option value="GBBRS1" data-country-code="GB">
+                      Bristol - GBBRS1
+                  </option>
+                  <option value="TST92BCP" data-country-code="GB">
+                      Bristol - TST92BCP
+                  </option>
+                  <option value="DRIO" data-country-code="GB">
+                      Bristol - DRIO
+                  </option>
+                  <option value="DRIP555" data-country-code="GB">
+                      Bristol - DRIP555
+                  </option>
+                  <option value="REL94" data-country-code="GB">
+                      Chicken Solutions - REL94
+                  </option>
+                  <option value="GBEMA4" data-country-code="GB">
+                      East Midlands Airport - GBEMA4
+                  </option>
+                  <option value="GBNOTT1" data-country-code="GB">
+                      EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - GBNOTT1
+                  </option>
+                  <option value="NOTTS0123" data-country-code="GB">
+                      EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - NOTTS0123
+                  </option>
+                  <option value="GBEDI4TALL" data-country-code="GB">
+                      Edinburgh Airport - GBEDI4TALL
+                  </option>
+                  <option value="GBFXT1" data-country-code="GB">
+                      Felixstowe - GBFXT1
+                  </option>
+                  <option value="GBLGW1" data-country-code="GB">
+                      Gatwick Airport - GBLGW1
+                  </option>
+                  <option value="GBGSY1" data-country-code="GB">
+                      Grimsby and Immingham - GBGSY1
+                  </option>
+                  <option value="GBLHR1P" data-country-code="GB">
+                      Heathrow Airport - APH (products) - GBLHR1P
+                  </option>
+                  <option value="GBLHR4P" data-country-code="GB">
+                      Heathrow Airport - Eurobip (products) - GBLHR4P
+                  </option>
+                  <option value="GBIVG1" data-country-code="GB">
+                      Invergordon - GBIVG1
+                  </option>
+                  <option value="TST89TEST" data-country-code="GB">
+                      Jemma BIP - TST89TEST
+                  </option>
+                  <option value="R135" data-country-code="GB">
+                      Kainos - R135
+                  </option>
+                  <option value="GBLIV1" data-country-code="GB">
+                      Liverpool - GBLIV1
+                  </option>
+                  <option value="GBLGP1" data-country-code="GB">
+                      London Gateway - GBLGP1
+                  </option>
+                  <option value="LtnCP111" data-country-code="GB">
+                      London Luton Airport - LtnCP111
+                  </option>
+                  <option value="LTCH111tmp" data-country-code="GB">
+                      London Luton Airport - LTCH111tmp
+                  </option>
+                  <option value="GBTHP1" data-country-code="GB">
+                      London Thamesport - GBTHP1
+                  </option>
+                  <option value="GBTIL1" data-country-code="GB">
+                      London Tilbury - GBTIL1
+                  </option>
+                  <option value="GBMNC1" data-country-code="GB">
+                      Manchester airport - GBMNC1
+                  </option>
+                  <option value="Y-RelT-UK" data-country-code="GB">
+                      Manchester Airport - Y-RelT-UK
+                  </option>
+                  <option value="GBPHD1" data-country-code="GB">
+                      Peterhead - GBPHD1
+                  </option>
+                  <option value="POP4321" data-country-code="GB">
+                      PopCorn Christmas LTD - POP4321
+                  </option>
+                  <option value="POP987" data-country-code="GB">
+                      PopCorn Christmas LTD - POP987
+                  </option>
+                  <option value="POP82" data-country-code="GB">
+                      PopCorn Christmas LTD - POP82
+                  </option>
+                  <option value="POP124T" data-country-code="GB">
+                      PopCorn Christmas LTD - POP124T
+                  </option>
+                  <option value="Coffee123" data-country-code="GB">
+                      Rooster Coffee Roasters - Coffee123
+                  </option>
+                  <option value="GBSOU1" data-country-code="GB">
+                      Southampton - GBSOU1
+                  </option>
+                  <option value="GBSTN4P" data-country-code="GB">
+                      Stansted Airport (products) - GBSTN4P
+                  </option>
+                  <option value="BCCODE" data-country-code="GB">
+                      tster - BCCODE
+                  </option>
+                  <option value="TYNFRE" data-country-code="GB">
+                      Tyneside Freeport - TYNFRE
+                  </option>
+                  </select>
+                </div>
+
+                <div class="govuk-form-group  ">
+                  
+                  <label class="govuk-label govuk-label--m" for="redispatching-country">
+                    Destination Country
+                  </label>
+                  
+                
+                
+                  
+                
+                  <select class="govuk-select govuk-!-width-one-half govuk-!-margin-bottom-6" id="redispatching-country" name="redispatching-country">
+                  <option value="">Select Destination Country</option>
+                  <option value="AF" data-country-code="">
+                      Afghanistan
+                  </option>
+                  <option value="AX" data-country-code="">
+                      Aland Islands
+                  </option>
+                  <option value="AL" data-country-code="">
+                      Albania
+                  </option>
+                  <option value="DZ" data-country-code="">
+                      Algeria
+                  </option>
+                  <option value="AS" data-country-code="">
+                      American Samoa
+                  </option>
+                  <option value="AD" data-country-code="">
+                      Andorra
+                  </option>
+                  <option value="AO" data-country-code="">
+                      Angola
+                  </option>
+                  <option value="AI" data-country-code="">
+                      Anguilla
+                  </option>
+                  <option value="AQ" data-country-code="">
+                      Antarctica
+                  </option>
+                  <option value="AG" data-country-code="">
+                      Antigua and Barbuda
+                  </option>
+                  <option value="AR" data-country-code="">
+                      Argentina
+                  </option>
+                  <option value="AM" data-country-code="">
+                      Armenia
+                  </option>
+                  <option value="AW" data-country-code="">
+                      Aruba
+                  </option>
+                  <option value="AU" data-country-code="">
+                      Australia
+                  </option>
+                  <option value="AT" data-country-code="">
+                      Austria
+                  </option>
+                  <option value="AZ" data-country-code="">
+                      Azerbaijan
+                  </option>
+                  <option value="BS" data-country-code="">
+                      Bahamas
+                  </option>
+                  <option value="BH" data-country-code="">
+                      Bahrain
+                  </option>
+                  <option value="BD" data-country-code="">
+                      Bangladesh
+                  </option>
+                  <option value="BB" data-country-code="">
+                      Barbados
+                  </option>
+                  <option value="BY" data-country-code="">
+                      Belarus
+                  </option>
+                  <option value="BE" data-country-code="">
+                      Belgium
+                  </option>
+                  <option value="BZ" data-country-code="">
+                      Belize
+                  </option>
+                  <option value="BJ" data-country-code="">
+                      Benin
+                  </option>
+                  <option value="BM" data-country-code="">
+                      Bermuda
+                  </option>
+                  <option value="BT" data-country-code="">
+                      Bhutan
+                  </option>
+                  <option value="BO" data-country-code="">
+                      Bolivia
+                  </option>
+                  <option value="BQ" data-country-code="">
+                      Bonaire, Sint Eustatius and Saba
+                  </option>
+                  <option value="BA" data-country-code="">
+                      Bosnia and Herzegovina
+                  </option>
+                  <option value="BW" data-country-code="">
+                      Botswana
+                  </option>
+                  <option value="BV" data-country-code="">
+                      Bouvet Island
+                  </option>
+                  <option value="BR" data-country-code="">
+                      Brazil
+                  </option>
+                  <option value="IO" data-country-code="">
+                      British Indian Ocean Territory
+                  </option>
+                  <option value="VG" data-country-code="">
+                      British Virgin Islands
+                  </option>
+                  <option value="BN" data-country-code="">
+                      Brunei
+                  </option>
+                  <option value="BG" data-country-code="">
+                      Bulgaria
+                  </option>
+                  <option value="BF" data-country-code="">
+                      Burkina Faso
+                  </option>
+                  <option value="BI" data-country-code="">
+                      Burundi
+                  </option>
+                  <option value="KH" data-country-code="">
+                      Cambodia
+                  </option>
+                  <option value="CM" data-country-code="">
+                      Cameroon
+                  </option>
+                  <option value="CA" data-country-code="">
+                      Canada
+                  </option>
+                  <option value="ES-CN" data-country-code="">
+                      Canary Islands
+                  </option>
+                  <option value="CV" data-country-code="">
+                      Cape Verde
+                  </option>
+                  <option value="KY" data-country-code="">
+                      Cayman Islands
+                  </option>
+                  <option value="CF" data-country-code="">
+                      Central African Republic
+                  </option>
+                  <option value="TD" data-country-code="">
+                      Chad
+                  </option>
+                  <option value="CL" data-country-code="">
+                      Chile
+                  </option>
+                  <option value="CN" data-country-code="">
+                      China
+                  </option>
+                  <option value="CX" data-country-code="">
+                      Christmas Island
+                  </option>
+                  <option value="CC" data-country-code="">
+                      Cocos (Keeling) Islands
+                  </option>
+                  <option value="CO" data-country-code="">
+                      Colombia
+                  </option>
+                  <option value="KM" data-country-code="">
+                      Comoros
+                  </option>
+                  <option value="CG" data-country-code="">
+                      Congo
+                  </option>
+                  <option value="CK" data-country-code="">
+                      Cook Islands
+                  </option>
+                  <option value="CR" data-country-code="">
+                      Costa Rica
+                  </option>
+                  <option value="CI" data-country-code="">
+                      Côte d'Ivoire
+                  </option>
+                  <option value="HR" data-country-code="">
+                      Croatia
+                  </option>
+                  <option value="CU" data-country-code="">
+                      Cuba
+                  </option>
+                  <option value="CW" data-country-code="">
+                      Curaçao
+                  </option>
+                  <option value="CY" data-country-code="">
+                      Cyprus
+                  </option>
+                  <option value="CZ" data-country-code="">
+                      Czech Republic
+                  </option>
+                  <option value="CD" data-country-code="">
+                      Democratic Republic of the Congo
+                  </option>
+                  <option value="DK" data-country-code="">
+                      Denmark
+                  </option>
+                  <option value="DJ" data-country-code="">
+                      Djibouti
+                  </option>
+                  <option value="DM" data-country-code="">
+                      Dominica
+                  </option>
+                  <option value="DO" data-country-code="">
+                      Dominican Republic
+                  </option>
+                  <option value="EC" data-country-code="">
+                      Ecuador
+                  </option>
+                  <option value="EG" data-country-code="">
+                      Egypt
+                  </option>
+                  <option value="SV" data-country-code="">
+                      El Salvador
+                  </option>
+                  <option value="GQ" data-country-code="">
+                      Equatorial Guinea
+                  </option>
+                  <option value="ER" data-country-code="">
+                      Eritrea
+                  </option>
+                  <option value="EE" data-country-code="">
+                      Estonia
+                  </option>
+                  <option value="SZ" data-country-code="">
+                      Eswatini
+                  </option>
+                  <option value="ET" data-country-code="">
+                      Ethiopia
+                  </option>
+                  <option value="FK" data-country-code="">
+                      Falkland Islands
+                  </option>
+                  <option value="FO" data-country-code="">
+                      Faroe Islands
+                  </option>
+                  <option value="FJ" data-country-code="">
+                      Fiji
+                  </option>
+                  <option value="FI" data-country-code="">
+                      Finland
+                  </option>
+                  <option value="FR" data-country-code="">
+                      France
+                  </option>
+                  <option value="GF" data-country-code="">
+                      French Guiana
+                  </option>
+                  <option value="PF" data-country-code="">
+                      French Polynesia
+                  </option>
+                  <option value="TF" data-country-code="">
+                      French Southern Territories
+                  </option>
+                  <option value="GA" data-country-code="">
+                      Gabon
+                  </option>
+                  <option value="GE" data-country-code="">
+                      Georgia
+                  </option>
+                  <option value="DE" data-country-code="">
+                      Germany
+                  </option>
+                  <option value="GH" data-country-code="">
+                      Ghana
+                  </option>
+                  <option value="GI" data-country-code="">
+                      Gibraltar
+                  </option>
+                  <option value="GR" data-country-code="">
+                      Greece
+                  </option>
+                  <option value="GL" data-country-code="">
+                      Greenland
+                  </option>
+                  <option value="GD" data-country-code="">
+                      Grenada
+                  </option>
+                  <option value="GP" data-country-code="">
+                      Guadeloupe
+                  </option>
+                  <option value="GU" data-country-code="">
+                      Guam
+                  </option>
+                  <option value="GT" data-country-code="">
+                      Guatemala
+                  </option>
+                  <option value="GG" data-country-code="">
+                      Guernsey
+                  </option>
+                  <option value="GN" data-country-code="">
+                      Guinea
+                  </option>
+                  <option value="GW" data-country-code="">
+                      Guinea-Bissau
+                  </option>
+                  <option value="GY" data-country-code="">
+                      Guyana
+                  </option>
+                  <option value="HT" data-country-code="">
+                      Haiti
+                  </option>
+                  <option value="HM" data-country-code="">
+                      Heard Island and McDonald Islands
+                  </option>
+                  <option value="VA" data-country-code="">
+                      Holy See
+                  </option>
+                  <option value="HN" data-country-code="">
+                      Honduras
+                  </option>
+                  <option value="HK" data-country-code="">
+                      Hong Kong
+                  </option>
+                  <option value="HU" data-country-code="">
+                      Hungary
+                  </option>
+                  <option value="IS" data-country-code="">
+                      Iceland
+                  </option>
+                  <option value="IN" data-country-code="">
+                      India
+                  </option>
+                  <option value="ID" data-country-code="">
+                      Indonesia
+                  </option>
+                  <option value="IR" data-country-code="">
+                      Iran
+                  </option>
+                  <option value="IQ" data-country-code="">
+                      Iraq
+                  </option>
+                  <option value="IM" data-country-code="">
+                      Isle of Man
+                  </option>
+                  <option value="IL" data-country-code="">
+                      Israel
+                  </option>
+                  <option value="IT" data-country-code="">
+                      Italy
+                  </option>
+                  <option value="JM" data-country-code="">
+                      Jamaica
+                  </option>
+                  <option value="JP" data-country-code="">
+                      Japan
+                  </option>
+                  <option value="JE" data-country-code="">
+                      Jersey
+                  </option>
+                  <option value="JO" data-country-code="">
+                      Jordan
+                  </option>
+                  <option value="KZ" data-country-code="">
+                      Kazakhstan
+                  </option>
+                  <option value="KE" data-country-code="">
+                      Kenya
+                  </option>
+                  <option value="KI" data-country-code="">
+                      Kiribati
+                  </option>
+                  <option value="XK" data-country-code="">
+                      Kosovo
+                  </option>
+                  <option value="KW" data-country-code="">
+                      Kuwait
+                  </option>
+                  <option value="KG" data-country-code="">
+                      Kyrgyzstan
+                  </option>
+                  <option value="LA" data-country-code="">
+                      Laos
+                  </option>
+                  <option value="LV" data-country-code="">
+                      Latvia
+                  </option>
+                  <option value="LB" data-country-code="">
+                      Lebanon
+                  </option>
+                  <option value="LS" data-country-code="">
+                      Lesotho
+                  </option>
+                  <option value="LR" data-country-code="">
+                      Liberia
+                  </option>
+                  <option value="LY" data-country-code="">
+                      Libya
+                  </option>
+                  <option value="LI" data-country-code="">
+                      Liechtenstein
+                  </option>
+                  <option value="LT" data-country-code="">
+                      Lithuania
+                  </option>
+                  <option value="LU" data-country-code="">
+                      Luxembourg
+                  </option>
+                  <option value="MO" data-country-code="">
+                      Macao
+                  </option>
+                  <option value="MG" data-country-code="">
+                      Madagascar
+                  </option>
+                  <option value="MW" data-country-code="">
+                      Malawi
+                  </option>
+                  <option value="MY" data-country-code="">
+                      Malaysia
+                  </option>
+                  <option value="MV" data-country-code="">
+                      Maldives
+                  </option>
+                  <option value="ML" data-country-code="">
+                      Mali
+                  </option>
+                  <option value="MT" data-country-code="">
+                      Malta
+                  </option>
+                  <option value="MH" data-country-code="">
+                      Marshall Islands
+                  </option>
+                  <option value="MQ" data-country-code="">
+                      Martinique
+                  </option>
+                  <option value="MR" data-country-code="">
+                      Mauritania
+                  </option>
+                  <option value="MU" data-country-code="">
+                      Mauritius
+                  </option>
+                  <option value="YT" data-country-code="">
+                      Mayotte
+                  </option>
+                  <option value="MX" data-country-code="">
+                      Mexico
+                  </option>
+                  <option value="FM" data-country-code="">
+                      Micronesia
+                  </option>
+                  <option value="MD" data-country-code="">
+                      Moldova
+                  </option>
+                  <option value="MC" data-country-code="">
+                      Monaco
+                  </option>
+                  <option value="MN" data-country-code="">
+                      Mongolia
+                  </option>
+                  <option value="ME" data-country-code="">
+                      Montenegro
+                  </option>
+                  <option value="MS" data-country-code="">
+                      Montserrat
+                  </option>
+                  <option value="MA" data-country-code="">
+                      Morocco
+                  </option>
+                  <option value="MZ" data-country-code="">
+                      Mozambique
+                  </option>
+                  <option value="MM" data-country-code="">
+                      Myanmar
+                  </option>
+                  <option value="NA" data-country-code="">
+                      Namibia
+                  </option>
+                  <option value="NR" data-country-code="">
+                      Nauru
+                  </option>
+                  <option value="NP" data-country-code="">
+                      Nepal
+                  </option>
+                  <option value="NL" data-country-code="">
+                      Netherlands
+                  </option>
+                  <option value="NC" data-country-code="">
+                      New Caledonia
+                  </option>
+                  <option value="NZ" data-country-code="">
+                      New Zealand
+                  </option>
+                  <option value="NI" data-country-code="">
+                      Nicaragua
+                  </option>
+                  <option value="NE" data-country-code="">
+                      Niger
+                  </option>
+                  <option value="NG" data-country-code="">
+                      Nigeria
+                  </option>
+                  <option value="NU" data-country-code="">
+                      Niue
+                  </option>
+                  <option value="NF" data-country-code="">
+                      Norfolk Island
+                  </option>
+                  <option value="KP" data-country-code="">
+                      North Korea
+                  </option>
+                  <option value="MK" data-country-code="">
+                      North Macedonia
+                  </option>
+                  <option value="MP" data-country-code="">
+                      Northern Mariana Islands
+                  </option>
+                  <option value="NO" data-country-code="">
+                      Norway
+                  </option>
+                  <option value="OM" data-country-code="">
+                      Oman
+                  </option>
+                  <option value="PK" data-country-code="">
+                      Pakistan
+                  </option>
+                  <option value="PW" data-country-code="">
+                      Palau
+                  </option>
+                  <option value="PA" data-country-code="">
+                      Panama
+                  </option>
+                  <option value="PG" data-country-code="">
+                      Papua New Guinea
+                  </option>
+                  <option value="PY" data-country-code="">
+                      Paraguay
+                  </option>
+                  <option value="PE" data-country-code="">
+                      Peru
+                  </option>
+                  <option value="PH" data-country-code="">
+                      Philippines
+                  </option>
+                  <option value="PN" data-country-code="">
+                      Pitcairn
+                  </option>
+                  <option value="PL" data-country-code="">
+                      Poland
+                  </option>
+                  <option value="PT" data-country-code="">
+                      Portugal
+                  </option>
+                  <option value="PR" data-country-code="">
+                      Puerto Rico
+                  </option>
+                  <option value="QA" data-country-code="">
+                      Qatar
+                  </option>
+                  <option value="IE" data-country-code="">
+                      Republic of Ireland
+                  </option>
+                  <option value="RE" data-country-code="">
+                      Réunion
+                  </option>
+                  <option value="RO" data-country-code="">
+                      Romania
+                  </option>
+                  <option value="RU" data-country-code="">
+                      Russian Federation
+                  </option>
+                  <option value="RW" data-country-code="">
+                      Rwanda
+                  </option>
+                  <option value="WS" data-country-code="">
+                      Samoa
+                  </option>
+                  <option value="SM" data-country-code="">
+                      San Marino
+                  </option>
+                  <option value="ST" data-country-code="">
+                      Sao Tome and Principe
+                  </option>
+                  <option value="SA" data-country-code="">
+                      Saudi Arabia
+                  </option>
+                  <option value="SN" data-country-code="">
+                      Senegal
+                  </option>
+                  <option value="RS" data-country-code="">
+                      Serbia
+                  </option>
+                  <option value="SC" data-country-code="">
+                      Seychelles
+                  </option>
+                  <option value="SL" data-country-code="">
+                      Sierra Leone
+                  </option>
+                  <option value="SG" data-country-code="">
+                      Singapore
+                  </option>
+                  <option value="SK" data-country-code="">
+                      Slovakia
+                  </option>
+                  <option value="SI" data-country-code="">
+                      Slovenia
+                  </option>
+                  <option value="SB" data-country-code="">
+                      Solomon Islands
+                  </option>
+                  <option value="SO" data-country-code="">
+                      Somalia
+                  </option>
+                  <option value="ZA" data-country-code="">
+                      South Africa
+                  </option>
+                  <option value="GS" data-country-code="">
+                      South Georgia and the South Sandwich Islands
+                  </option>
+                  <option value="KR" data-country-code="">
+                      South Korea
+                  </option>
+                  <option value="SS" data-country-code="">
+                      South Sudan
+                  </option>
+                  <option value="ES" data-country-code="">
+                      Spain
+                  </option>
+                  <option value="LK" data-country-code="">
+                      Sri Lanka
+                  </option>
+                  <option value="BL" data-country-code="">
+                      St Barthélemy
+                  </option>
+                  <option value="SH" data-country-code="">
+                      St Helena, Ascension and Tristan da Cunha
+                  </option>
+                  <option value="KN" data-country-code="">
+                      St Kitts and Nevis
+                  </option>
+                  <option value="LC" data-country-code="">
+                      St Lucia
+                  </option>
+                  <option value="SX" data-country-code="">
+                      St Maarten (Dutch)
+                  </option>
+                  <option value="MF" data-country-code="">
+                      St Martin (French)
+                  </option>
+                  <option value="PM" data-country-code="">
+                      St Pierre and Miquelon
+                  </option>
+                  <option value="VC" data-country-code="">
+                      St Vincent and the Grenadines
+                  </option>
+                  <option value="SD" data-country-code="">
+                      Sudan
+                  </option>
+                  <option value="SR" data-country-code="">
+                      Suriname
+                  </option>
+                  <option value="SE" data-country-code="">
+                      Sweden
+                  </option>
+                  <option value="CH" data-country-code="">
+                      Switzerland
+                  </option>
+                  <option value="SY" data-country-code="">
+                      Syria
+                  </option>
+                  <option value="TW" data-country-code="">
+                      Taiwan
+                  </option>
+                  <option value="TJ" data-country-code="">
+                      Tajikistan
+                  </option>
+                  <option value="TZ" data-country-code="">
+                      Tanzania
+                  </option>
+                  <option value="TH" data-country-code="">
+                      Thailand
+                  </option>
+                  <option value="GM" data-country-code="">
+                      The Gambia
+                  </option>
+                  <option value="PS" data-country-code="">
+                      The Occupied Palestinian Territories
+                  </option>
+                  <option value="TL" data-country-code="">
+                      Timor-Leste
+                  </option>
+                  <option value="TG" data-country-code="">
+                      Togo
+                  </option>
+                  <option value="TK" data-country-code="">
+                      Tokelau
+                  </option>
+                  <option value="TO" data-country-code="">
+                      Tonga
+                  </option>
+                  <option value="TT" data-country-code="">
+                      Trinidad and Tobago
+                  </option>
+                  <option value="TN" data-country-code="">
+                      Tunisia
+                  </option>
+                  <option value="TR" data-country-code="">
+                      Turkey
+                  </option>
+                  <option value="TM" data-country-code="">
+                      Turkmenistan
+                  </option>
+                  <option value="TC" data-country-code="">
+                      Turks and Caicos Islands
+                  </option>
+                  <option value="TV" data-country-code="">
+                      Tuvalu
+                  </option>
+                  <option value="UG" data-country-code="">
+                      Uganda
+                  </option>
+                  <option value="UA" data-country-code="">
+                      Ukraine
+                  </option>
+                  <option value="AE" data-country-code="">
+                      United Arab Emirates
+                  </option>
+                  <option value="UM" data-country-code="">
+                      United States Minor Outlying Islands
+                  </option>
+                  <option value="US" data-country-code="">
+                      United States of America
+                  </option>
+                  <option value="UY" data-country-code="">
+                      Uruguay
+                  </option>
+                  <option value="UZ" data-country-code="">
+                      Uzbekistan
+                  </option>
+                  <option value="VU" data-country-code="">
+                      Vanuatu
+                  </option>
+                  <option value="VE" data-country-code="">
+                      Venezuela
+                  </option>
+                  <option value="VN" data-country-code="">
+                      Viet Nam
+                  </option>
+                  <option value="VI" data-country-code="">
+                      Virgin Islands of the United States
+                  </option>
+                  <option value="WF" data-country-code="">
+                      Wallis and Futuna
+                  </option>
+                  <option value="EH" data-country-code="">
+                      Western Sahara
+                  </option>
+                  <option value="YE" data-country-code="">
+                      Yemen
+                  </option>
+                  <option value="ZM" data-country-code="">
+                      Zambia
+                  </option>
+                  <option value="ZW" data-country-code="">
+                      Zimbabwe
+                  </option>
+                  </select>
+                </div>
               </div>
 
               <div class="govuk-radios__item">
@@ -124,73 +1130,135 @@
                   No
                 </label>
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="consignment-leave-conditional-3" name="consignment-leave" type="radio" value="no" aria-controls="conditional-consignment-leave-conditional-3" aria-expanded="false">
-                <label class="govuk-label govuk-radios__label" for="consignment-leave-conditional-3">
-                  Not applicable
-                </label>
-              </div>  
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-consignment-leave-conditional-2">
+                <div class="govuk-form-group consignment-arrival ">
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading govuk-label--m">
+                                Transit seal number matches CHED?
+                            </h1>
+                          </legend>
+                          <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="transit-seal-intact" name="transit-seal-intact" type="radio" value="england">
+                              <label class="govuk-label govuk-radios__label" for="transit-seal-intact">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="transit-seal-intact-2" name="transit-seal-intact" type="radio" value="scotland">
+                              <label class="govuk-label govuk-radios__label" for="transit-seal-intact-2">
+                                No
+                              </label>
+                            </div>
+                          
+                           
+                          </div>
+                        </fieldset>
+                      </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h1 class="govuk-fieldset__heading">
+                              Transit seal intact?
+                            </h1>
+                          </legend>
+                          <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                              <label class="govuk-label govuk-radios__label" for="contact">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                              <label class="govuk-label govuk-radios__label" for="contact-2">
+                                No
+                              </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                        <h1 class="govuk-fieldset__heading">
+                                            Has the consignment been destroyed?
+                                        </h1>
+                                      </legend>
+                                      <div class="govuk-radios" data-module="govuk-radios">
+                                        <div class="govuk-radios__item">
+                                          <input class="govuk-radios__input" id="beenDestroyed" name="beenDestroyed" type="radio" value="england" data-aria-controls="conditional-beenDestroyed">
+                                          <label class="govuk-label govuk-radios__label" for="beenDestroyed">
+                                            Yes
+                                          </label>
+                                        </div>
+                                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-beenDestroyed">
+                                            <div class="govuk-form-group  ">
+                                                <fieldset class="govuk-fieldset" role="group" aria-describedby="destruction-date-hint">
+                                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                                      
+                                                      Destruction date
+                                                      
+                                                    </legend>
+                                              
+                                                    <span id="destruction-date-hint" class="govuk-hint">
+                                                      For example: 01 03 2017
+                                                    </span>
+                                              
+                                              
+                                                  <div class="govuk-date-input date-input--picker " id="destruction-date" data-module="accessible-datepicker">
+                                                    <div class="govuk-date-input__item">
+                                                      <div class="govuk-form-group">
+                                                          <label class="govuk-label govuk-date-input__label" for="destruction-date-day">
+                                                            Day
+                                                          </label>
+                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="destruction-date-day" name="destruction-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                                                      </div>
+                                                    </div>
+                                                    <div class="govuk-date-input__item">
+                                                      <div class="govuk-form-group">
+                                                          <label class="govuk-label govuk-date-input__label" for="destruction-date-month">
+                                                            Month
+                                                          </label>
+                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="destruction-date-month" name="destruction-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                                                      </div>
+                                                    </div>
+                                                    <div class="govuk-date-input__item">
+                                                      <div class="govuk-form-group">
+                                                          <label class="govuk-label govuk-date-input__label" for="destruction-date-year">
+                                                            Year
+                                                          </label>
+                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="destruction-date-year" name="destruction-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+                                                      </div>
+                                                    </div>
+                                                  <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                                                    <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+                                          <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+                                          <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-34" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-34"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                                                </fieldset>
+                                              </div>
+                                        </div>
+                                        <div class="govuk-radios__item">
+                                          <input class="govuk-radios__input" id="beenDestroyed-2" name="beenDestroyed" type="radio" value="scotland">
+                                          <label class="govuk-label govuk-radios__label" for="beenDestroyed-2">
+                                            No
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </fieldset>
+                                  </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                </div>
+              </div>
+
+
+              
             </div>
           </fieldset>
         </div>
-        <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-                  <label class="govuk-label govuk-checkboxes__label" for="contact">
-                    Select if the consignment has been destroyed
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" role="group" aria-describedby="destruction-date-hint">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                          
-                          Destruction date
-                          
-                        </legend>
-                  
-                        <span id="destruction-date-hint" class="govuk-hint">
-                          For example: 01 03 2017
-                        </span>
-                  
-                  
-                      <div class="govuk-date-input date-input--picker " id="destruction-date" data-module="accessible-datepicker">
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="destruction-date-day">
-                                Day
-                              </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="destruction-date-day" name="destruction-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="destruction-date-month">
-                                Month
-                              </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="destruction-date-month" name="destruction-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="destruction-date-year">
-                                Year
-                              </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="destruction-date-year" name="destruction-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
-                          </div>
-                        </div>
-                      <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                        <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-              <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-              <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-34" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-34"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
-                    </fieldset>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </div>
 
         <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Declaration</h1>
         <p class="govuk-body">To the best of my knowledge, the details provided are correct.</p>
