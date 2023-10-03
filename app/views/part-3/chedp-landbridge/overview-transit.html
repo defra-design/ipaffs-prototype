@@ -38,7 +38,7 @@
 <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
   <tbody><tr class="divider-bottom govuk-table__row">
     <td class="govuk-table__cell">
-        <strong class="govuk-tag tag tag--rejected status-label" id="Status-Label">Rejected</strong>
+      <strong class="govuk-tag tag tag--validated status-label" id="Status-Label">Valid</strong>
     </td>
   </tr>
 </tbody></table>
@@ -52,6 +52,9 @@
           <input name="etag" type="hidden" value="&quot;0000000004433CAC&quot;">
           <a rel="noopener noreferrer" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3665632/certificate/pdf" target="_blank" class="govuk-button govuk-button--secondary button-small govuk-!-margin-right-1" id="show-certificate">
             <span>Show CHED</span>
+          </a>
+          <a href="record-control-01" class="govuk-button govuk-button--secondary button-small govuk-!-margin-right-1" id="replace-certificate">
+            <span>Record control</span>
           </a>
         </form>
       </div>
@@ -841,16 +844,12 @@
                   <td class="check-status govuk-table__cell">Yes</td>
                 </tr>
               <tr class="divider-top govuk-table__row">
-                <td class="check-type govuk-table__header">Has consignment left the UK?</td>
+                <td class="check-type govuk-table__header">Consignment destroyed</td>
                 <td class="check-status govuk-table__cell">Yes</td>
               </tr>
                 <tr class="govuk-table__row">
-                  <td class="check-type govuk-table__header">Did the consignment reach the controlled destination?</td>
-                  <td class="check-status govuk-table__cell" id="control-consignmentArrivedToControlledDestination">No</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <td class="check-type govuk-table__header">Why did the consignment not reach the controlled destination?</td>
-                  <td class="check-status govuk-table__cell" id="control-consignmentArrivedToControlledDestination">Example text</td>
+                  <td class="check-type govuk-table__header">Destruction date</td>
+                  <td class="check-status govuk-table__cell" id="control-consignmentArrivedToControlledDestination">30 September 2023</td>
                 </tr>
               </tbody>
             </table>
