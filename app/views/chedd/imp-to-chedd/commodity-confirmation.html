@@ -5,35 +5,10 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
-      <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
-    </p>
-  </div>
-
-  <div class="navigation-links">
-    <a href="/IMPtoCHEDD/origin" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
-
-    <div id="sign-out-section" class="information-banner">
-      <p class="information-banner__content">
-        <span>Percy-Inspector Tester</span>
-        <span>|</span>
-        <a class="govuk-link govuk-link--no-visited-state"
-           id="address-book-link"
-           href="/protected/notifications/address-book">
-          Address book
-        </a>
-        <span>|</span>
-        <a class="govuk-link govuk-link--no-visited-state"
-           id="sign-out-link"
-           href="/protected/logout">
-          Sign out
-        </a>
-      </p>
-    </div>
-  </div>
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
 {% endblock %}
+
 
 {% block content %}
 
@@ -44,7 +19,7 @@
 
       <span class="govuk-caption-xl">Description of the goods</span>
 
-      <form class="form" action="/IMPtoCHEDD/reason-for-import" method="post">
+      <form class="form" action="reason-for-import" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
