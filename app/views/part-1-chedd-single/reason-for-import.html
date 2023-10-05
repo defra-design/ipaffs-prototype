@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+      <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="navigation-links">
+    <a href="/IMPtoCHEDD/origin-import" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+
+    <div id="sign-out-section" class="information-banner">
+      <p class="information-banner__content">
+        <span>Percy-Inspector Tester</span>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="address-book-link"
+           href="/protected/notifications/address-book">
+          Address book
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="sign-out-link"
+           href="/protected/logout">
+          Sign out
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
+
+      <span class="govuk-caption-xl">About the consignment</span>
+
+      <form class="form" action="/IMPtoCHEDD/check-answers" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is the main reason for importing the commodities?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="are-consignments-in-containers-no" name="consignment-in-container" type="radio" value="For internal market" checked="">
+                <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-no">
+                  For internal market
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="are-consignments-in-containers-yes" name="consignment-in-container" type="radio" value="For transfer to" aria-controls="conditional-for-transfer-to-dpe" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-yes">
+                  For transfer to
+                </label>
+              </div>
+              <div class="govuk-radios__conditional" id="conditional-for-transfer-to-dpe">
+                <div class="govuk-form-group ">
+                  <label class="govuk-label govuk-label--s" for="bcp-transfer-to">
+                    Exit border control post
+                  </label>
+
+                  <select class="govuk-select govuk-!-width-full" id="bcp-transfer-to" name="bcp-transfer-to">
+                    <option value="">Select border control post</option>
+                    <option value="GBBEL4" data-country-code="GB">
+                      Belfast Port - GBBEL4
+                    </option>
+                    <option value="GBBRS1" data-country-code="GB">
+                      Bristol - GBBRS1
+                    </option>
+                    <option value="GBDSA4P" data-country-code="GB">
+                      Doncaster Sheffield Airport - GBDSA4P
+                    </option>
+                    <option value="GBDOV2P" data-country-code="GB">
+                      Dover Harbour (Deep Sea Terminal) - GBDOV2P
+                    </option>
+                    <option value="GBDOV1P" data-country-code="GB">
+                      Dover Port - GBDOV1P
+                    </option>
+                    <option value="GBEMA4" data-country-code="GB">
+                      East Midlands Airport - GBEMA4
+                    </option>
+                    <option value="GBFXT1" data-country-code="GB">
+                      Felixstowe - GBFXT1
+                    </option>
+                    <option value="GBLGW1" data-country-code="GB">
+                      Gatwick Airport - GBLGW1
+                    </option>
+                    <option value="GBHUL1G" data-country-code="GB">
+                      Goole - GBHUL1G
+                    </option>
+                    <option value="GBGSY1" data-country-code="GB">
+                      Grimsby and Immingham - GBGSY1
+                    </option>
+                    <option value="GBHRW1P" data-country-code="GB">
+                      Harwich - GBHRW1P
+                    </option>
+                    <option value="GBLHR1P" data-country-code="GB">
+                      Heathrow Airport - APH (products) - GBLHR1P
+                    </option>
+                    <option value="GBLHR4P" data-country-code="GB">
+                      Heathrow Airport - Eurobip (products) - GBLHR4P
+                    </option>
+                    <option value="GBHUL1H" data-country-code="GB">
+                      Hull - GBHUL1H
+                    </option>
+                    <option value="GBIPS1P" data-country-code="GB">
+                      Ipswich - GBIPS1P
+                    </option>
+                    <option value="GBLIV1" data-country-code="GB">
+                      Liverpool - GBLIV1
+                    </option>
+                    <option value="GBLGP1" data-country-code="GB">
+                      London Gateway - GBLGP1
+                    </option>
+                    <option value="GBLSH1" data-country-code="GB">
+                      London Sheerness - GBLSH1
+                    </option>
+                    <option value="GBTHP1" data-country-code="GB">
+                      London Thamesport - GBTHP1
+                    </option>
+                    <option value="GBTIL1" data-country-code="GB">
+                      London Tilbury - GBTIL1
+                    </option>
+                    <option value="GBMNC1" data-country-code="GB">
+                      Manchester airport - GBMNC1
+                    </option>
+                    <option value="GBMEP1P" data-country-code="GB">
+                      Manchester Ellesmere port - GBMEP1P
+                    </option>
+                    <option value="GBPME1P" data-country-code="GB">
+                      Portsmouth - GBPME1P
+                    </option>
+                    <option value="GBSOU1" data-country-code="GB">
+                      Southampton - GBSOU1
+                    </option>
+                    <option value="GBSTN4P" data-country-code="GB">
+                      Stansted Airport (products) - GBSTN4P
+                    </option>
+                    <option value="GBTEE1P" data-country-code="GB">
+                      Teesport - GBTEE1P
+                    </option>
+                    <option value="GBTYN4P" data-country-code="GB">
+                      Tyne - GBTYN4P
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="save-and-submit-buttons">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

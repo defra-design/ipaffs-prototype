@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+      <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+
+  <div class="navigation-links">
+    <a href="/IMPtoCHEDD/check-answers" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+
+    <div id="sign-out-section" class="information-banner">
+      <p class="information-banner__content">
+        <span>Percy-Inspector Tester</span>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="address-book-link"
+           href="/protected/notifications/address-book">
+          Address book
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="sign-out-link"
+           href="/protected/logout">
+          Sign out
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
+
+<div class="govuk-grid-row">
+      <form class="form" action="/IMPtoCHEDD/additional-details" method="post">
+        <div class="govuk-grid-column-full">
+          <span class="govuk-caption-xl">Description of the goods</span>
+          <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
+
+          <form action="details" method="post">
+            <div class="govuk-!-margin-bottom-8">
+              <h2 class="govuk-heading-m">Commodities</h2>
+              <div class="table-responsive">
+                <table class="govuk-table commodity-overview govuk-!-margin-bottom-1" id="commodity-table">
+                  <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Commodity code</th>
+                    <th scope="col" class="govuk-table__header" colspan="2">Description</th>
+                  </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell " id="commodity-11090000">11090000</td>
+                    <td class="govuk-table__cell" id="commodity-description-11090000">Wheat gluten, whether or not dried</td>
+                    <td class="govuk-table__cell remove">
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <input class="link-button" id="add-commodity" name="add-commodity" value="Add commodity" type="submit" aria-label="Add commodity">
+
+            </div>
+
+            <div class="govuk-!-margin-bottom-8">
+              <div class="table-responsive">
+                <table class="govuk-table species-table govuk-!-margin-bottom-1">
+                  <caption class="govuk-table__caption">
+                    <h2 class="govuk-heading-m">Wheat gluten, whether or not dried</h2>
+                  </caption>
+
+                  <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header species ">Species, type,<br>class and family</th>
+                    <th scope="col" class="govuk-table__header">Net weight<br>(kg/units)</th>
+                    <th scope="col" class="govuk-table__header">Number of<br>packages</th>
+                    <th scope="col" class="govuk-table__header">Type of package</th>
+                    <td class="govuk-table__header"></td>
+                  </tr>
+                  </thead>
+
+                  <tbody class="govuk-table__body">
+                  <tr id="species-11090000">
+                    <td class="govuk-table__cell" id="11090000"></td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                        <input class="govuk-input net-weight " id="11090000-.net-weight" name="11090000-.net-weight" type="text" value="2" aria-label="Net weight 1">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                        <input class="govuk-input number-of-packages " id="11090000-.num-packages" name="11090000-.num-packages" type="text" value="2" aria-label="Number of packages 1">
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                      <div class="">
+                        <select class="govuk-select govuk-!-width-full type-of-package" id="11090000-.package-type" name="11090000-.package-type" aria-label="Package type input 1">
+                          <option value="">Select type of package</option>
+                          <option selected="">Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+
+                  <tfoot>
+                  <tr>
+                    <td class="govuk-table__header ">Subtotal</td>
+                    <td class="govuk-table__cell">
+                      2
+                    </td>
+                    <td class="govuk-table__cell">
+                      2
+                    </td>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+
+            </div>
+
+            <div>
+              <h2 class="govuk-heading-m">Total for this consignment</h2>
+
+              <div class="table-responsive">
+                <table class="govuk-table" role="presentation">
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Net weight (kg/units)</th>
+                    <td class="govuk-table__cell">2</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Number of packages</th>
+                    <td class="govuk-table__cell">2</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <input class="govuk-button" type="submit" value="Update total" name="update-total" id="update-total">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--m" for="gross-weight">
+                Total gross weight (kg/units)
+              </label>
+              <input class="govuk-input govuk-!-width-one-half" id="gross-weight" name="gross-weight" type="text" maxlength="16" value="">
+            </div>
+            <div class="save-and-submit-buttons">
+              <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" href="/IMPtoCHEDD/check-answers" value="Save and return to hub" data-module="govuk-button">
+              <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" href="/IMPtoCHEDD/check-answers" value="Save and continue" data-module="govuk-button">
+              <p class="govuk-body"><a class="govuk-link" href="/IMPtoCHEDD/check-answers">Cancel and return to hub</a></p>
+            </div>
+          </form>
+        </div>
+      </form>
+</div>
+{% endblock %}
