@@ -5,10 +5,35 @@
 {% endblock %}
 
 {% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
-{% endblock %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+      <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
 
+  <div class="navigation-links">
+    <a href="/index" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+
+    <div id="sign-out-section" class="information-banner">
+      <p class="information-banner__content">
+        <span>Percy-Inspector Tester</span>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="address-book-link"
+           href="/protected/notifications/address-book">
+          Address book
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="sign-out-link"
+           href="/protected/logout">
+          Sign out
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
 
 {% block content %}
 
@@ -42,7 +67,7 @@
             <td class="govuk-table__header">Country of origin</td>
             <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}</td>
             <td class="govuk-table__cell change">
-              <a href="origin-import" class="govuk-link" id="country-of-origin-change-link">
+              <a href="/IMPtoCHEDD/origin-import" class="govuk-link" id="country-of-origin-change-link">
                 Change
               </a>
             </td>
@@ -66,7 +91,7 @@
               {{ data['consignment-in-container'] }}
             </td>
             <td class="govuk-table__cell change">
-              <a href="reason-for-import" class="govuk-link" id="consignment-purpose-change-link">
+              <a href="/IMPtoCHEDD/reason-for-import" class="govuk-link" id="consignment-purpose-change-link">
                 Change
               </a>
             </td>
@@ -86,7 +111,7 @@
             <th scope="row" class="govuk-table__header ">Commodity code</th>
             <td class="govuk-table__cell">05119190</td>
             <td class="govuk-table__cell change">
-              <a href="commodity-details" class="govuk-link" id="commodity-change-link-0">Change</a>
+              <a href="/IMPtoCHEDD/commodity-details" class="govuk-link" id="commodity-change-link-0">Change</a>
             </td>
           </tr>
           <tr></tr>
@@ -143,7 +168,7 @@
 
       <div class="heading-with-change-link">
         <h2 class="govuk-heading-m">Additional details</h2>
-        <a href="additional-details" class="govuk-link" id="responsible-person-contact-details-change-link">
+        <a href="/IMPtoCHEDD/additional-details" class="govuk-link" id="responsible-person-contact-details-change-link">
           Change
         </a>
       </div>
@@ -171,7 +196,7 @@
 
       <div class="heading-with-change-link">
         <h2 class="govuk-heading-m">Contact details</h2>
-        <a href="contact-details" class="govuk-link" id="responsible-person-contact-details-change-link">
+        <a href="/IMPtoCHEDD/contact-details" class="govuk-link" id="responsible-person-contact-details-change-link">
           Change
         </a>
       </div>
@@ -212,7 +237,7 @@
 
         <div class="heading-with-change-link">
           <h3 class="govuk-heading-s">Accompanying documents</h3>
-          <a class="govuk-link" id="documents-change-link" href="accompanying-documents">
+          <a class="govuk-link" id="documents-change-link" href="/IMPtoCHEDD/accompanying-documents">
             Change
           </a>
         </div>
@@ -261,7 +286,7 @@
               703 Odessa Common, Suite 446, Michigan, Patiencestad, 18245, Germany, 01615555555, ukoperator@email.com
             </td>
             <td class="govuk-table__cell change">
-              <a href="addresses" class="govuk-link" id="traders-change-link">
+              <a href="/IMPtoCHEDD/addresses" class="govuk-link" id="traders-change-link">
                 Change
               </a>
             </td>
@@ -297,7 +322,7 @@
 
       <div class="heading-with-change-link" >
         <h2 class="govuk-heading-m">Transport to the port of entry</h2>
-        <a href="poe-transport" class="govuk-link" id="transport-to-bip-change-link">
+        <a href="/IMPtoCHEDD/poe-transport" class="govuk-link" id="transport-to-bip-change-link">
           Change
         </a>
       </div>
@@ -347,14 +372,14 @@
             <td class="govuk-table__header">Contact address</td>
             <td class="govuk-table__cell" id="organisation-branch-address-address">{{ data['ad'] }}</td>
             <td class="govuk-table__cell change">
-              <a href="contact-address" class="govuk-link" id="organisation-branch-address-change-link">Change</a>
+              <a href="/IMPtoCHEDD/contact-address" class="govuk-link" id="organisation-branch-address-change-link">Change</a>
             </td>
           </tr>
           </tbody>
         </table>
       </div>
 
-      <form action="declaration" method="POST">
+      <form action="/IMPtoCHEDD/declaration" method="POST">
         <input class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue">
         <input name="crumb" type="hidden" value="den9SmnQcRgS6O5bslS43uMBmg-nKVqnETuDt1goK4D">
         <input name="etag" type="hidden" value="&quot;00000000001CDA16&quot;">

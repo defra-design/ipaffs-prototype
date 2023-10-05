@@ -5,10 +5,35 @@
 {% endblock %}
 
 {% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
-{% endblock %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+      <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
 
+  <div class="navigation-links">
+    <a href="/IMPtoCHEDD/origin" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+
+    <div id="sign-out-section" class="information-banner">
+      <p class="information-banner__content">
+        <span>Percy-Inspector Tester</span>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="address-book-link"
+           href="/protected/notifications/address-book">
+          Address book
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="sign-out-link"
+           href="/protected/logout">
+          Sign out
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row" id="declaration-page">
@@ -28,7 +53,7 @@
       Date of declaration: <span id="date-of-declaration">16 July 2023</span>
     </p>
 
-    <form class="review-form" id="declaration-form" method="POST" action="confirmation">
+    <form class="review-form" id="declaration-form" method="POST" action="/IMPtoCHEDD/confirmation">
       <input name="crumb" type="hidden" value="w4ED1WtIX1Ebvknho4SuSdmxQCda0whOhDh3w3Sj6M5">
       <input name="etag" type="hidden" value="&quot;00000000001CDA17&quot;">
       <input name="submissionDate" type="hidden" value="16 July 2023">

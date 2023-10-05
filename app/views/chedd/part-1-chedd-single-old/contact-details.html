@@ -5,16 +5,41 @@
 {% endblock %}
 
 {% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
-{% endblock %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+      <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
 
+  <div class="navigation-links">
+    <a href="/index" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+
+    <div id="sign-out-section" class="information-banner">
+      <p class="information-banner__content">
+        <span>Percy-Inspector Tester</span>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="address-book-link"
+           href="/protected/notifications/address-book">
+          Address book
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state"
+           id="sign-out-link"
+           href="/protected/logout">
+          Sign out
+        </a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
 
 {% block content %}
 
 <span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
 <div class="govuk-grid-row">
-  <form class="form" action="accompanying-documents" method="post">
+  <form class="form" action="/IMPtoCHEDD/accompanying-documents" method="post">
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Contact details</h1>
@@ -40,7 +65,7 @@
       <div class="save-and-submit-buttons">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="check-answers">Cancel and return to hub</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="/IMPtoCHEDD/check-answers">Cancel and return to hub</a></p>
       </div>
     </div>
   </form>
