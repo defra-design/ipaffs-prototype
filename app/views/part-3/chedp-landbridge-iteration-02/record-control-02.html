@@ -1,0 +1,219 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper govuk-!-padding-top-0" id="main-content">
+  <div class="govuk-grid-row" id="consignment-leave-page">
+    <div class="govuk-grid-column-full">
+      <div>
+        <h1 class="govuk-heading-xl ">
+        <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-margin-top-4 govuk-!-font-size-27">
+            <span id="reference-number">CHEDP.GB.2023.5790850</span>
+            <span id="cved-version-number"> - V1</span>
+        </span>
+        
+        Record control
+        </h1>      </div>
+
+      <form action="submitted-consignment-destroyed" method="POST">
+        <div class="govuk-form-group consignment-leave " id="consignment-leave">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">Record transit seal check?</h3>
+            </legend>
+            
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="consignment-leave-conditional" name="consignment-leave" type="radio" value="yes" aria-controls="conditional-consignment-leave-conditional" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="consignment-leave-conditional">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-consignment-leave-conditional">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h1 class="govuk-fieldset__heading govuk-label--m">
+                          Transit seal number matches CHED?
+                        </h1>
+                      </legend>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="transit-match" name="transit-match" type="radio" value="england">
+                          <label class="govuk-label govuk-radios__label" for="transit-match">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="transit-match-2" name="transit-match" type="radio" value="scotland">
+                          <label class="govuk-label govuk-radios__label" for="transit-match-2">
+                            No
+                          </label>
+                        </div>
+                      
+                       
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h1 class="govuk-fieldset__heading govuk-label--m">
+                          Transit seal intact?
+                        </h1>
+                      </legend>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="transit-seal-intact" name="transit-seal-intact" type="radio" value="england">
+                          <label class="govuk-label govuk-radios__label" for="transit-seal-intact">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="transit-seal-intact-2" name="transit-seal-intact" type="radio" value="scotland">
+                          <label class="govuk-label govuk-radios__label" for="transit-seal-intact-2">
+                            No
+                          </label>
+                        </div>
+                        
+                      
+                       
+                      </div>
+                    </fieldset>
+                  </div> 
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="consignment-leave-conditional-2" name="consignment-leave" type="radio" value="no" aria-controls="conditional-consignment-leave-conditional-2" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="consignment-leave-conditional-2">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="consignment-leave-conditional-3" name="consignment-leave" type="radio" value="no" aria-controls="conditional-consignment-leave-conditional-3" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="consignment-leave-conditional-3">
+                  Not applicable
+                </label>
+              </div>  
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    Select if the consignment has been destroyed
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="destruction-date-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                          
+                          Destruction date
+                          
+                        </legend>
+                  
+                        <span id="destruction-date-hint" class="govuk-hint">
+                          For example: 01 03 2017
+                        </span>
+                  
+                  
+                      <div class="govuk-date-input date-input--picker " id="destruction-date" data-module="accessible-datepicker">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="destruction-date-day">
+                                Day
+                              </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="destruction-date-day" name="destruction-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="destruction-date-month">
+                                Month
+                              </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="destruction-date-month" name="destruction-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="destruction-date-year">
+                                Year
+                              </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="destruction-date-year" name="destruction-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
+                          </div>
+                        </div>
+                      <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                        <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+              <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+              <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-34" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-34"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Declaration</h1>
+        <p class="govuk-body">To the best of my knowledge, the details provided are correct.</p>
+        <div class="govuk-!-margin-bottom-4">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Name</h3>
+          <span class="govuk-body">Andrew Inspector-Tester</span>
+        </div>
+        <div class="govuk-!-margin-bottom-4">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Registered location</h3>
+          <span class="govuk-body" id="registered-location-address">Animal and Plant Health Agency, New Haw, Woodham Lane, Addlestone, KT15 3NB, GB</span>
+        </div>
+        <div>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Date control added</h3>
+          <span class="govuk-body">30 August 2023</span>
+        </div>
+        <div class="govuk-form-group">
+          <input class="govuk-button govuk-!-margin-top-6" type="submit" id="button-save-and-continue" value="Submit control">
+          <input name="crumb" type="hidden" value="QJhSQ4L4sOfFM-_rK0Jt0FN1a62io3LUtAl5UH_BTYx">
+          <input name="etag" type="hidden" value="&quot;00000000051460EA&quot;">
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

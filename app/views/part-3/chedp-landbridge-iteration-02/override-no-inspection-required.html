@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Record
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  
+</div>
+
+  <form action="notification-no-inspection-required-overriden" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  
+
+
+
+<main id="main-content" class="govuk-main-wrapper">
+  <div class="govuk-grid-row" id="iuu-status-page">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        <span class="heading-tertiary">
+          <span id="reference-number">CHEDP.GB.2023.5942705</span>
+            <span id="cved-version-number"> - V1</span>
+        </span>
+        Are you sure you want to override this risk decision?
+      </h1>
+
+      <div class="govuk-form-group govuk-!-margin-bottom-0 iuu" id="iuu-check-options">
+        <fieldset class="govuk-fieldset">
+
+          <p class="govuk-body-l">You cannot undo this action.</p>
+
+          <p class="govuk-body">If you override this risk decision:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>it will change to <strong>inspection required on exit</strong></li>
+            <li>the responsible person will be notified</li>
+            <li>the consignment will not be brought to the BCP for inspection</li>
+          </ul>
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" data-target="container-iuu">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="radio-iuu-selected-yes" type="radio" name="iuuCheckRequired" value="true" aria-controls="container-iuu" aria-expanded="false">
+              <label class="govuk-label govuk-radios__label" for="radio-iuu-selected-yes">Yes I'm sure – override the risk decision</label>
+            </div>
+            <!--<div class="govuk-radios__conditional govuk-radios__conditional--hidden alert-info-white-bg govuk-radios__item govuk-form-group govuk-!-width-two-thirds govuk-!-margin-top-4 panel panel-border-narrow" id="container-iuu">
+              <fieldset class="govuk-fieldset">
+                <h3 class="govuk-heading-m">Enter a reason (optional)</h3>
+                <legend class="govuk-visually-hidden">Enter a reason (optional)</legend>
+                <div class="govuk-radios">
+                    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+              </fieldset>
+            </div>-->
+            <div class="govuk-radios__item govuk-!-margin-top-4">
+              <input class="govuk-radios__input" id="radio-iuu-selected-no" type="radio" name="iuuCheckRequired" value="false" >
+              <label class="govuk-label govuk-radios__label" for="radio-iuu-selected-no">No</label>
+            </div>
+          </div>
+        </fieldset>
+        <div>
+          <input class="govuk-button govuk-!-margin-top-6 govuk-!-margin-right-1" type="submit" name="save-button" value="Save and continue" id="button-save-and-continue">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+</form>
+
+{% endblock %}

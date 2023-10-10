@@ -1,0 +1,76 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+ 
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper govuk-!-padding-top-0" id="main-content">
+    <div class="govuk-grid-row" id="confirmation-page">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-8">
+          <h1 class="govuk-panel__title">Your control has been recorded</h1>
+          <div class="govuk-panel__body">
+            Your reference number is <br>
+            <strong class="bold">
+              CHEDP.GB.2023.5790850 - V1
+            </strong>
+  
+            <p class="govuk-!-font-weight-regular govuk-!-margin-top-6" style="color: white; font-size: 2rem;">
+              Outcome: <br>
+              <strong class="govuk-!-font-weight-bold">
+                <span id="control-outcome">Consignment did not leave the UK</span>
+              </strong>
+            </p>
+            <p class="govuk-!-font-weight-regular govuk-!-margin-top-6" style="color: white; font-size: 2rem;">
+              Reason: <br>
+              Vehicle malfunction
+            </p>
+          </div>
+        </div>
+  
+        <!--<a rel="noopener noreferrer" class="govuk-button" id="view-certificate" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5790850/certificate/pdf" target="_blank">View or print CHED</a>-->
+  
+
+        <p>
+            <a class="govuk-link govuk-!-font-size-19 govuk-!-margin-top-10" id="manage-notifications" href="exit-inspections">View consignments requiring exit inspection</a>
+          </p>
+        <!--<p>
+          <a class="govuk-link govuk-!-font-size-19 govuk-!-margin-top-10" id="manage-notifications" href="dashboard">Return to main dashboard</a>
+        </p>-->
+      </div>
+    </div>
+  
+  </main>
+
+{% endblock %}
