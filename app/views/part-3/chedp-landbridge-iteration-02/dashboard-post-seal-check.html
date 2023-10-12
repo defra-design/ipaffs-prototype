@@ -50,7 +50,7 @@
         <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list">
               
                 <li>
-                        <a id="alert-description-INSPECTION_REQUIRED" href="seal-checks">36 notifications require a seal check</a>
+                        <a id="alert-description-INSPECTION_REQUIRED" href="seal-checks">35 notifications require a seal check</a>
                 </li>
             
         </ul>
@@ -520,9 +520,9 @@
                 
                   <select class="govuk-select govuk-!-width-full" id="controlStatus" name="controlStatus">
                       <option value="">All</option>
-                      <option value="SELA-CHECK-REQUIRED">Seal check required</option>
-                      <option value="CONTROl-REQUIRED">Control required</option>
-                      <option value="CONTROL-COMPLETE">Control complete</option>
+                      <option value="REQUIRED">Required</option>
+                      <option value="REQUIRED">Seal check required</option>
+                      <option value="COMPLETED">Complete</option>
                   </select>
                 </div>
               </div>
@@ -711,12 +711,6 @@
               <option value="decisionDateAsc">
                 Date of decision (oldest to newest)
               </option>
-              <option value="decisionDateDesc" selected="">
-                Arrival date (newest to oldest)
-              </option>
-              <option value="decisionDateAsc">
-                Arrival date (oldest to newest)
-              </option>
             </select>
             <button id="sort-notifications" type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">
               Update sort
@@ -732,7 +726,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-1">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5887759" href="notification-seal-check-required">CHEDP.GB.2023.5887759
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5887759" href="notification-seal-check-submitted-satisfactory-yes">CHEDP.GB.2023.5887759
                     </a>
                   </dd>
                 </div>
@@ -752,8 +746,8 @@
                 <div class="notification-list__grid-column-20">
                   <dt class="notification-list__heading">CHED status</dt>
                   <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-4">
-                      VALID
+                    <strong class="govuk-tag tag--fixed-width tag--rejected" id="certificate-status-1">
+                      REJECTED
                     </strong>
                   </dd>
                 </div>
@@ -764,9 +758,9 @@
                   <dd class="notification-list__value">CKConsignor</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dt class="notification-list__heading">&nbsp;</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    31 August 2023, 14:50
+                    &nbsp
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
@@ -778,8 +772,8 @@
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
                   <dt class="notification-list__heading">Control status</dt>
                   <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width govuk-tag--yellow" id="control-status-1">
-                      Seal check required
+                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-4">
+                      CONTROL REQUIRED
                     </strong>
                   </dd>
                 </div>
@@ -788,9 +782,9 @@
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19 govuk-!-margin-right-4" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5887759/certificate/pdf" target="_blank">
                   Show CHED
                 </a>
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="record-seal-check">
+                <!--<a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="record-seal-check">
                   Record seal check
-                </a>
+                </a>-->
               </div>
             </dl>
            
@@ -799,7 +793,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-3">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5490118" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5490118/overview">CHEDP.GB.2023.5490118
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5490118" href="notification-seal-check-submitted-satisfactory-yes">CHEDP.GB.2023.5490118
                     </a>
                   </dd>
                 </div>
@@ -861,7 +855,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-4">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5849148" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5849148/overview">CHEDP.GB.2023.5849148
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5849148" href="notification-seal-check-submitted-satisfactory-yes">CHEDP.GB.2023.5849148
                     </a>
                   </dd>
                 </div>
@@ -956,9 +950,9 @@
                   <dd class="notification-list__value">LSConsignor</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dt class="notification-list__heading">&nbsp;</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    12 September 2023, 10:20
+                    &nbsp
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
@@ -1145,9 +1139,9 @@
                   <dd class="notification-list__value">Blaine Stafford</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Estimated arrival time</dt>
+                  <dt class="notification-list__heading">&nbsp;</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    11 October 2023, 13:10
+                    &nbsp;
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">

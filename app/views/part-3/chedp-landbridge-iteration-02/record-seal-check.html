@@ -50,7 +50,7 @@
         <p class="govuk-body govuk-!-margin-bottom-5">If you need to, you can <a href="override-seal-check" class="govuk-link">override the seal check</a>.</p>  
       </div>
 
-      <form action="submitted-consignment-destroyed" method="POST">
+      <form action="submitted-seal-check" method="POST">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -77,7 +77,7 @@
                   <label class="govuk-label" for="contact-by-phone">
                     Reason (optional)
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                  <textarea class="govuk-textarea govuk-!-width-one-half " id="consignment-no-arrival-reason" name="consignment-no-arrival-reason" rows="3"></textarea>
                 </div>
               </div>
             </div>
@@ -98,10 +98,13 @@
           <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Date seal check added</h3>
           <span class="govuk-body">30 August 2023</span>
         </div>
-        <div class="govuk-form-group">
+        <div class="govuk-form-group govuk-!-margin-bottom-2">
           <input class="govuk-button govuk-!-margin-top-6" type="submit" id="button-save-and-continue" value="Submit seal check">
           <input name="crumb" type="hidden" value="QJhSQ4L4sOfFM-_rK0Jt0FN1a62io3LUtAl5UH_BTYx">
           <input name="etag" type="hidden" value="&quot;00000000051460EA&quot;">
+        </div>
+        <div>
+          <a href="javascript:history.back()" class="govuk-link">Cancel and go back</a>
         </div>
       </form>
     </div>
