@@ -19,7 +19,7 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#event-name-hint">Date must include a day</a>
+          <a href="#event-name-hint">Movement Reference Number (MRN) must be 18 characters</a>
         </li>
       </ul>
     </div>
@@ -94,15 +94,19 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                               </div>
                             </fieldset>
                           </div>
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
-                              Movement Reference Number (MRN) (Optional)
-                            </label>
-                            <div id="sign-in-hint" class="govuk-hint">
-                              You’ll find this on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
+                          <div class="govuk-form-group govuk-form-group--error">
+                            <h1 class="govuk-label-wrapper">
+                              <label class="govuk-label govuk-label--s" for="event-name">
+                                Movement Reference Number (MRN) (Optional)
+                              </label>
+                            </h1>
+                            <div id="event-name-hint" class="govuk-hint">
+                              This applies only to goods moved under the Common Transit Convention (CTC) and will be on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
                             </div>
-                            
-                            <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
+                            <p id="event-name-error" class="govuk-error-message">
+                              <span class="govuk-visually-hidden">Error:</span> Movement Reference Number (MRN) must be 18 characters
+                            </p>
+                            <input class="govuk-input govuk-input--width-20 govuk-input--error" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint event-name-error">
                           </div>
                   </div>
 
@@ -395,15 +399,14 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-transit">
                   
                   <div class="govuk-form-group">
-                    <h1 class="govuk-label-wrapper">
-                      <label class="govuk-label govuk-label--s" for="event-name">
-                        Movement Reference Number (MRN) (Optional)
-                      </label>
-                    </h1>
-                    <div id="event-name-hint" class="govuk-hint">
-                      This applies only to goods moved under the Common Transit Convention (CTC) and will be on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
+                    <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+                      Movement Reference Number (MRN)
+                    </label>
+                    <div id="sign-in-hint" class="govuk-hint">
+                      You’ll find this on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
                     </div>
-                    <input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint event-name-error">
+                    
+                    <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
                   </div>
                   
                   <div class="govuk-form-group">
@@ -414,17 +417,12 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                     <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
                   </div>
 
-                  
-
-                  <div class="govuk-form-group govuk-form-group--error">
-                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">When the consignment will leave Great Britain</legend>
                       <div id="sign-in-hint" class="govuk-hint">
                         For example, 27 3 2023. This must be within 7 days of arrival in Great Britain.
                       </div>
-                      <p id="passport-issued-error" class="govuk-error-message">
-                        <span class="govuk-visually-hidden">Error:</span> Date must include a day
-                      </p>
                       <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
   
                         <div class="govuk-date-input__item date-input-day">
