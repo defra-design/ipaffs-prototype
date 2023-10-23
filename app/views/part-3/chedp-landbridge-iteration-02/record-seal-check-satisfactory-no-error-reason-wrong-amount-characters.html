@@ -1,0 +1,134 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper govuk-!-padding-top-4" id="main-content">
+  
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+    <div role="alert">
+      <h2 class="govuk-error-summary__title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#event-name-hint">Reason must be 200 characters or less</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row" id="consignment-leave-page">
+    <div class="govuk-grid-column-full">
+      <div>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
+        <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-margin-top-4 govuk-!-font-size-27">
+            <span id="reference-number">CHEDP.GB.2023.5790850</span>
+            <span id="cved-version-number"> - V1</span>
+        </span>
+        
+        Record seal check
+        </h1>    
+        <p class="govuk-body govuk-!-margin-bottom-5">If you need to, you can <a href="override-seal-check" class="govuk-link">override the seal check</a>.</p>  
+      </div>
+
+      <form action="submitted-seal-check" method="POST">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Is the seal check satisfactory?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group govuk-form-group--error">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Reason (optional)
+                  </label>
+                  <p id="event-name-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Reason must be 200 characters or less
+                  </p>
+                  <textarea class="govuk-textarea govuk-!-width-one-half " id="consignment-no-arrival-reason" name="consignment-no-arrival-reason" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <h1 class="govuk-heading-m govuk-!-margin-bottom-4">Declaration</h1>
+        <p class="govuk-body">To the best of my knowledge, the details provided are correct.</p>
+        <div class="govuk-!-margin-bottom-4">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Name</h3>
+          <span class="govuk-body">Andrew Inspector-Tester</span>
+        </div>
+        <div class="govuk-!-margin-bottom-4">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Registered location</h3>
+          <span class="govuk-body" id="registered-location-address">Animal and Plant Health Agency, New Haw, Woodham Lane, Addlestone, KT15 3NB, GB</span>
+        </div>
+        <div>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Date seal check added</h3>
+          <span class="govuk-body">30 August 2023</span>
+        </div>
+        <div class="govuk-form-group govuk-!-margin-bottom-2">
+          <input class="govuk-button govuk-!-margin-top-6" type="submit" id="button-save-and-continue" value="Submit seal check">
+          <input name="crumb" type="hidden" value="QJhSQ4L4sOfFM-_rK0Jt0FN1a62io3LUtAl5UH_BTYx">
+          <input name="etag" type="hidden" value="&quot;00000000051460EA&quot;">
+        </div>
+        <div>
+          <a href="javascript:history.back()" class="govuk-link">Cancel and go back</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
