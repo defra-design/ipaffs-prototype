@@ -17,6 +17,23 @@ router.post('/add-comm-route', function (req, res) {
   
   })
 
+  // - Do you have an existing health certificate?
+  router.post('/creation-route', function (req, res) {
+
+    var exisingHealthCertificate = req.session.data['existing-certificate']
+
+    // if YES redirect to eCert path
+    if (exisingHealthCertificate == "yes"){
+      res.redirect('new-page')
+    }
+
+    // if NO redirect to manual creation path
+    else if (exisingHealthCertificate == "no"){
+      res.redirect('04-commodity')
+    }
+
+  })
+
 
 //  - risk route question - 06a-risk-category
 router.post('/risk-route', function (req, res) {
