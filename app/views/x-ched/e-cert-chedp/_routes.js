@@ -24,12 +24,29 @@ router.post('/add-comm-route', function (req, res) {
 
     // if YES redirect to eCert path
     if (exisingHealthCertificate == "yes"){
-      res.redirect('03-certificate-reference')
+      res.redirect('03a-certificate-reference')
     }
 
     // if NO redirect to manual creation path
     else if (exisingHealthCertificate == "no"){
       res.redirect('04-commodity')
+    }
+
+  })
+
+  // - certificate reference number look up
+  router.post('/certificate-lookup', function (req, res) {
+
+    var certificateReferenceNumber = req.session.data['certificate-reference']
+
+    // if certificate found redirect to certificate details page
+    if (certificateReferenceNumber == "NZL2021/PPCS2/999999"){
+      res.redirect('03aa-certificate-details')
+    }
+
+    // if certificate not found redirect to page saying it is not found
+    else {
+      res.redirect('03ab-certificate-not-found')
     }
 
   })
