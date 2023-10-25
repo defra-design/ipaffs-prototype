@@ -9,6 +9,7 @@ const router = express.Router()
 // Start folder specific route
 // router.use('/v1', require('./views/v1/_routes'))
 
+router.use('/x-ched/e-cert-chedp', require('./views/x-ched/e-cert-chedp/_routes'))
 router.use('/cheda/create-cheda', require('./views/cheda/create-cheda/_routes'))
 router.use('/part-1-chedp/iuu-round-2', require('./views/part-1-chedp/iuu-round-2/_routes'))
 router.use('/part-1-chedp/iuu', require('./views/part-1-chedp/iuu/_routes'))
@@ -17,6 +18,9 @@ router.use('/part-1-chedp/iuu-final', require('./views/part-1-chedp/iuu-final/_r
 router.use('/chedd/part-1-chedd-single', require('./views/chedd/part-1-chedd-single/_routes'))
 
 // Start folder specific routes
+
+
+
 
 // Part 2 laboratory tests question
 router.post('/laboratory-test', function (req, res) {
