@@ -24,7 +24,7 @@ router.post('/add-comm-route', function (req, res) {
 
     // if YES redirect to eCert path
     if (exisingHealthCertificate == "yes"){
-      res.redirect('new-page')
+      res.redirect('03-certificate-reference')
     }
 
     // if NO redirect to manual creation path

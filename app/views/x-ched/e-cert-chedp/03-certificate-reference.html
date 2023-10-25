@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Origin of the animal or product – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-full">
+
+      <form action="certificate-lookup" id="certificate-lookup" method="post">
+        <span class="govuk-caption-xl">About the consignment</span>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--xl" for="certificate-reference">
+              Enter the health certificate's reference number
+            </label>
+          </h1>
+          <div class="govuk-hint">
+            We'll use this to check if we can automatically fill in part of your notification.
+          </div>
+          <input class="govuk-input govuk-!-width-one-half " id="certificate-reference" name="certificate-reference" type="text" value="" autocomplete="certificate-reference">
+        </div>
+        <input class="govuk-button" id="button-search" type="submit" value="Search" data-module="govuk-button">
+      </form>
+      
+    </div>
+  </div>
+</main>
+
+{% endblock %}
