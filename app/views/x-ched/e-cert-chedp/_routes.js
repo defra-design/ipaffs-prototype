@@ -53,6 +53,26 @@ router.post('/add-comm-route', function (req, res) {
 
   })
 
+  //  - correct HC? 03aa-certificate-details
+router.post('/correct-hc-route', function (req, res) {
+
+  // Make a variable and give it the value from name
+  var correctHCRoute = req.session.data['correctHC']
+  var notCorrectHCRoute = req.session.data['notCorrectHC']
+  if (correctHCRoute == "yes"){
+    res.redirect('18-review-errors')
+  }
+
+ else if (notCorrectHCRoute == "reenter"){
+    res.redirect('03a-certificate-reference')
+  }
+
+  else if (notCorrectHCRoute == "continue-manual"){
+    res.redirect('04-commodity')
+  }
+  
+  })
+
 
 //  - risk route question - 06a-risk-category
 router.post('/risk-route', function (req, res) {
