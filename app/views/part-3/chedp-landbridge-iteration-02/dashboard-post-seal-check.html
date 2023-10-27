@@ -50,7 +50,7 @@
         <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list">
               
                 <li>
-                        <a id="alert-description-INSPECTION_REQUIRED" href="seal-checks">35 notifications require a seal check</a>
+                        <a id="alert-description-INSPECTION_REQUIRED" href="seal-checks">36 notifications require a seal check</a>
                 </li>
             
         </ul>
@@ -520,9 +520,8 @@
                 
                   <select class="govuk-select govuk-!-width-full" id="controlStatus" name="controlStatus">
                       <option value="">All</option>
-                      <option value="REQUIRED">Required</option>
-                      <option value="REQUIRED">Seal check required</option>
-                      <option value="COMPLETED">Complete</option>
+                      <option value="CONTROl-REQUIRED">Required</option>
+                      <option value="CONTROL-COMPLETE">Complete</option>
                   </select>
                 </div>
               </div>
@@ -558,9 +557,9 @@
               <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group  ">
                     
-                  <label class="govuk-label govuk-label--s" for="decision">
-                    Seal check required
-                  </label>
+                    <label class="govuk-label govuk-label--s" for="decision">
+                      Seal check required
+                    </label>
 
                   <select class="govuk-select govuk-!-width-full" id="decision" name="decision">
                       <option value="">All</option>
@@ -571,262 +570,125 @@
               </div>
             </div>
       
-            <div class="govuk-grid-row govuk-!-margin-bottom-6 govuk-!-margin-top-6">
+            <div class="govuk-grid-row govuk-!-margin-top-8">
               <div class="govuk-grid-column-full ">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                      <h3 class="govuk-fieldset__heading">
-                        Filter by:
-                      </h3>
-                    </legend>
-                    <div class="govuk-radios" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                        <label class="govuk-label govuk-radios__label" for="contact">
-                          Decision date
-                        </label>
-                      </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                        <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset govuk-!-margin-bottom-4">
-                              <div class="govuk-!-font-size-19">
-                                <button type="submit" class="link-button" name="dateRange" value="today" id="Button-Today">
-                                  Today
-                                </button>
-                                &nbsp;
-                                <button type="submit" class="link-button" name="dateRange" value="yesterday" id="Button-Yesterday">
-                                  Yesterday
-                                </button>
-                                &nbsp;
-                                <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
-                                  Last 7 days
-                                </button>
-                                &nbsp;
-                            </div>
-                          </fieldset>
-                          <fieldset class="govuk-fieldset govuk-!-margin-bottom-4" role="group" aria-describedby="leave-date-hint">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                Start date range
-                              </legend>                     
-                        
-                            <div class="govuk-date-input date-input--picker " id="leave-date" data-module="accessible-datepicker">
-                              <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="leave-date-day">
-                                      Day
-                                    </label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="leave-date-day" name="leave-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                                </div>
-                              </div>
-                              <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="leave-date-month">
-                                      Month
-                                    </label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="leave-date-month" name="leave-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                                </div>
-                              </div>
-                              <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="leave-date-year">
-                                      Year
-                                    </label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="leave-date-year" name="leave-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
-                                </div>
-                              </div>
-                            <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                              <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-                    <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-                    <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-80" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-80"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
-                          </fieldset>
-                          <fieldset class="govuk-fieldset" role="group" aria-describedby="leave-date-hint">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                              End date range
-                            </legend>                     
-                      
-                          <div class="govuk-date-input date-input--picker " id="leave-date" data-module="accessible-datepicker">
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="leave-date-day">
-                                    Day
-                                  </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="leave-date-day" name="leave-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="leave-date-month">
-                                    Month
-                                  </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="leave-date-month" name="leave-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="leave-date-year">
-                                    Year
-                                  </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="leave-date-year" name="leave-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
-                              </div>
-                            </div>
-                          <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                            <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-                  <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-                  <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-80" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-80"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
-                        </fieldset>
-                        </div>                     
-                      </div>
-
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-                        <label class="govuk-label govuk-radios__label" for="contact-2">
-                          Arrival date and time
-                        </label>
-                      </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                        <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset govuk-!-margin-bottom-4">
-                              <div class="govuk-!-font-size-19">
-                                <button type="submit" class="link-button" name="dateRange" value="today" id="Button-Today">
-                                  Today
-                                </button>
-                                &nbsp;
-                                <button type="submit" class="link-button" name="dateRange" value="yesterday" id="Button-Yesterday">
-                                  Tomorrow
-                                </button>
-                                &nbsp;
-                                <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
-                                  Next 7 days
-                                </button>
-                                &nbsp;
-                            </div>
-                          </fieldset>
-                          <fieldset class="govuk-fieldset govuk-!-margin-bottom-4" role="group" aria-describedby="leave-date-hint">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                Start date
-                              </legend>                     
-                        
-                            <div class="govuk-date-input date-input--picker " id="leave-date" data-module="accessible-datepicker">
-                              <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="leave-date-day">
-                                      Day
-                                    </label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="leave-date-day" name="leave-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                                </div>
-                              </div>
-                              <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="leave-date-month">
-                                      Month
-                                    </label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="leave-date-month" name="leave-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                                </div>
-                              </div>
-                              <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="leave-date-year">
-                                      Year
-                                    </label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="leave-date-year" name="leave-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
-                                </div>
-                              </div>
-                            <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                              <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-                    <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-                    <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-80" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-80"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
-                          </fieldset>
-
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-top-4">
-                            Start time (optional)
-                          </legend>  
-                          <div id="passport-issued-hint" class="govuk-hint">
-                            24 hour format, for example, 14 50
-                          </div>
-                          <div class="govuk-date-input govuk-!-margin-bottom-4" id="passport-issued">
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                                  Hour
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                                  Minutes
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                              </div>
-                            </div>
-                            </div>
-
-
-
-                          <fieldset class="govuk-fieldset" role="group" aria-describedby="leave-date-hint">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                              End date
-                            </legend>                     
-                      
-                          <div class="govuk-date-input date-input--picker " id="leave-date" data-module="accessible-datepicker">
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="leave-date-day">
-                                    Day
-                                  </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="leave-date-day" name="leave-date-day" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="leave-date-month">
-                                    Month
-                                  </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="leave-date-month" name="leave-date-month" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="2">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="leave-date-year">
-                                    Year
-                                  </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="leave-date-year" name="leave-date-year" type="text" value="" pattern="[0-9]*" inputmode="numeric" maxlength="4">
-                              </div>
-                            </div>
-                          <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                            <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-                  <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-                  <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-80" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-80"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
-                        </fieldset>
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-top-4">
-                          End time (optional)
-                        </legend>  
-                        <div id="passport-issued-hint" class="govuk-hint">
-                          24 hour format, for example, 14 50
-                        </div>
-                        <div class="govuk-date-input" id="passport-issued">
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                                Hour
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                            </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                                Minutes
-                              </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                            </div>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    Filter by date range
+                  </legend> 
+                  <div class="govuk-form-group govuk-!-margin-bottom-5">
+                    <div class="govuk-!-font-size-19">
+                      <button type="submit" class="link-button" name="dateRange" value="today" id="Button-Today">
+                        Today
+                      </button>
+                      &nbsp;
+                      <button type="submit" class="link-button" name="dateRange" value="yesterday" id="Button-Yesterday">
+                        Yesterday
+                      </button>
+                      &nbsp;
+                      <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
+                        Last 7 days
+                      </button> 
+                      &nbsp;
+                      <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
+                        Tomorrow
+                      </button> 
+                      &nbsp;
+                      <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
+                        Next 7 days
+                      </button>                      
                     </div>
+              </div>
+              </div>
+              
+            </div>
+              <div class="govuk-grid-row govuk-!-margin-bottom-9">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date</legend>
+                    <!--<div class="govuk-form-group govuk-!-margin-bottom-3">
+                      <div class="govuk-!-font-size-19">
+                        <button type="submit" class="link-button" name="dateRange" value="today" id="Button-Today">
+                          Today
+                        </button>
+                        &nbsp;
+                        <button type="submit" class="link-button" name="dateRange" value="yesterday" id="Button-Yesterday">
+                          Yesterday
+                        </button>
+                        &nbsp;
+                        <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
+                          Last 7 days
+                        </button>                       
+                      </div>
+                    </div>-->
+                    <div class="govuk-date-input" id="start-date" data-module="accessible-datepicker">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-38" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-38"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date</legend>
+                    <!--<div class="govuk-form-group govuk-!-margin-bottom-3">
+                      <div class="govuk-!-font-size-19">
+                        <button type="submit" class="link-button" name="dateRange" value="today" id="Button-Today">
+                          Today
+                        </button>
+                        &nbsp;
+                        <button type="submit" class="link-button" name="dateRange" value="yesterday" id="Button-Yesterday">
+                          Tomorrow
+                        </button>
+                        &nbsp;
+                        <button type="submit" class="link-button" name="dateRange" value="lastSevenDays" id="Button-Last-Seven-Days">
+                          Next 7 days
+                        </button>                       
+                      </div>
+                    </div>-->
+                    <div class="govuk-date-input" id="end-date" data-module="accessible-datepicker">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="end-date-day" value="" name="end-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="end-date-month" value="" name="end-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="end-date-year" value="" name="end-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-81" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-81"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
               </div>
@@ -852,11 +714,23 @@
           <div class="govuk-!-margin-bottom-2">
             <label for="orderBy" class="govuk-label govuk-!-display-inline-block">Sort by:</label>
             <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="orderBy" name="orderBy">
-              <option value="decisionDateDesc" selected="">
-                Date of decision (newest to oldest)
+              <option value="decisionDateDesc" selected>
+                Decision date (newest to oldest)
               </option>
               <option value="decisionDateAsc">
-                Date of decision (oldest to newest)
+                Decision date (oldest to newest)
+              </option>
+              <option value="decisionDateDesc">
+                Entry arrival (newest to oldest)
+              </option>
+              <option value="decisionDateAsc">
+                Entry arrival (oldest to newest)
+              </option>
+              <option value="decisionDateDesc">
+                Exit arrival (newest to oldest)
+              </option>
+              <option value="decisionDateAsc">
+                Exit arrival (oldest to newest)
               </option>
             </select>
             <button id="sort-notifications" type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">
@@ -893,7 +767,7 @@
                 <div class="notification-list__grid-column-20">
                   <dt class="notification-list__heading">CHED status</dt>
                   <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-1">
+                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-4">
                       VALID
                     </strong>
                   </dd>
@@ -905,28 +779,28 @@
                   <dd class="notification-list__value">CKConsignor</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
                   <dt class="notification-list__heading">Control status</dt>
                   <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-4">
-                      CONTROL REQUIRED
+                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-1">
+                      Control required
                     </strong>
                   </dd>
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19 govuk-!-margin-right-4" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5887759/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19 govuk-!-margin-right-4">
                   Show CHED
                 </a>
                 <!--<a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="record-seal-check">
@@ -940,7 +814,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-3">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5490118" href="notification-seal-check-submitted-satisfactory-yes">CHEDP.GB.2023.5490118
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5490118">CHEDP.GB.2023.5490118
                     </a>
                   </dd>
                 </div>
@@ -971,28 +845,28 @@
                   <dd class="notification-list__value">Marvin Jennings</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
                   <dt class="notification-list__heading">Control status</dt>
                   <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-3">
-                      CONTROL COMPLETE
+                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-4">
+                      CONTROL REQUIRED
                     </strong>
                   </dd>
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5490118/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1002,7 +876,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-4">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5849148" href="notification-seal-check-submitted-satisfactory-yes">CHEDP.GB.2023.5849148
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5849148"  >CHEDP.GB.2023.5849148
                     </a>
                   </dd>
                 </div>
@@ -1034,15 +908,15 @@
                   <dd class="notification-list__value">LSConsignor</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading"><!--Exit arrival time--></dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    <!--21 October 2023, 12:30-->
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1055,7 +929,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5849148/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1065,7 +939,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-5">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5849109" href="notification-seal-check-required">CHEDP.GB.2023.5849109
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5849109"  >CHEDP.GB.2023.5849109
                     </a>
                   </dd>
                 </div>
@@ -1097,15 +971,15 @@
                   <dd class="notification-list__value">LSConsignor</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1118,10 +992,10 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19 govuk-!-margin-right-4" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5887759/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19 govuk-!-margin-right-4"  >
                   Show CHED
                 </a>
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="record-seal-check">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19">
                   Record seal check
                 </a>
               </div>
@@ -1131,7 +1005,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-6">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5786024" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5786024/overview">CHEDP.GB.2023.5786024
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5786024"  >CHEDP.GB.2023.5786024
                     </a>
                   </dd>
                 </div>
@@ -1162,28 +1036,28 @@
                   <dd class="notification-list__value">BAConsignor</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
                   <dt class="notification-list__heading">Control status</dt>
                   <dd class="notification-list__value ">
                     <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-6">
-                      CONTROL REQUIRED
+                      CONTROL COMPLETE
                     </strong>
                   </dd>
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5786024/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1193,7 +1067,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-7">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5760364" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5760364/overview">CHEDP.GB.2023.5760364
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5760364"  >CHEDP.GB.2023.5760364
                     </a>
                   </dd>
                 </div>
@@ -1224,15 +1098,15 @@
                   <dd class="notification-list__value">ATG Destination</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading"><!--Exit arrival time--></dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    <!--21 October 2023, 12:30-->
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1245,7 +1119,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5760364/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1255,7 +1129,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-8">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5727803" href="notification-seal-check-required">CHEDP.GB.2023.5727803
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5727803">CHEDP.GB.2023.5727803
                     </a>
                   </dd>
                 </div>
@@ -1286,15 +1160,15 @@
                   <dd class="notification-list__value">Blaine Stafford</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1307,10 +1181,10 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19 govuk-!-margin-right-4" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5887759/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19 govuk-!-margin-right-4"  >
                   Show CHED
                 </a>
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="record-seal-check">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19">
                   Record seal check
                 </a>
               </div>
@@ -1320,7 +1194,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-9">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5715730" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5715730/overview">CHEDP.GB.2023.5715730
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5715730"  >CHEDP.GB.2023.5715730
                     </a>
                   </dd>
                 </div>
@@ -1351,15 +1225,15 @@
                   <dd class="notification-list__value">Armitage Group Ltd</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1372,7 +1246,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5715730/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1382,7 +1256,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-10">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5490122" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5490122/overview">CHEDP.GB.2023.5490122
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5490122"  >CHEDP.GB.2023.5490122
                     </a>
                   </dd>
                 </div>
@@ -1413,15 +1287,15 @@
                   <dd class="notification-list__value">Marvin Jennings</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1434,7 +1308,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5490122/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1444,7 +1318,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-11">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5370217" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5370217/overview">CHEDP.GB.2023.5370217
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5370217"  >CHEDP.GB.2023.5370217
                     </a>
                   </dd>
                 </div>
@@ -1475,15 +1349,15 @@
                   <dd class="notification-list__value">BHConsignor</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1496,7 +1370,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5370217/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1506,7 +1380,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-12">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5163478" href="/control/tst/protected/ov-notifications/CHEDP.GB.2023.5163478/overview">CHEDP.GB.2023.5163478
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2023.5163478"  >CHEDP.GB.2023.5163478
                     </a>
                   </dd>
                 </div>
@@ -1537,15 +1411,15 @@
                   <dd class="notification-list__value">ATG-IMPORTER-001</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1558,7 +1432,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5163478/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1568,7 +1442,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-13">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.4703920" href="/control/tst/protected/ov-notifications/CHEDP.GB.2022.4703920/overview">CHEDP.GB.2022.4703920
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.4703920"  >CHEDP.GB.2022.4703920
                     </a>
                   </dd>
                 </div>
@@ -1599,15 +1473,15 @@
                   <dd class="notification-list__value">Armitage Group</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1620,7 +1494,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.4703920/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1630,7 +1504,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-14">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3900951" href="/control/tst/protected/ov-notifications/CHEDP.GB.2022.3900951/overview">CHEDP.GB.2022.3900951
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3900951"  >CHEDP.GB.2022.3900951
                     </a>
                   </dd>
                 </div>
@@ -1662,15 +1536,15 @@
                 </div>
                 
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1683,7 +1557,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3900951/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1693,7 +1567,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-15">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3888939" href="/control/tst/protected/ov-notifications/CHEDP.GB.2022.3888939/overview">CHEDP.GB.2022.3888939
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3888939"  >CHEDP.GB.2022.3888939
                     </a>
                   </dd>
                 </div>
@@ -1724,15 +1598,15 @@
                   <dd class="notification-list__value">Test</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading"><!--Exit arrival time--></dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    <!--21 October 2023, 12:30-->
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1745,7 +1619,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3888939/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
@@ -1755,7 +1629,7 @@
                 <div class="notification-list__grid-column-30">
                   <dt class="notification-list__heading">Reference Number</dt>
                   <dd class="notification-list__value" id="reference-number-16">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3748456" href="/control/tst/protected/ov-notifications/CHEDP.GB.2022.3748456/overview">CHEDP.GB.2022.3748456
+                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3748456"  >CHEDP.GB.2022.3748456
                     </a>
                   </dd>
                 </div>
@@ -1786,15 +1660,15 @@
                   <dd class="notification-list__value">Consignee name</dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Entry arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    15 October 2023, 14:50
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
+                  <dt class="notification-list__heading">Exit arrival time</dt>
                   <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
+                    21 October 2023, 12:30
                   </dd>
                 </div>
                 <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
@@ -1807,504 +1681,7 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3748456/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2022.3880537">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-17">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3880537" href="/control/tst/protected/ov-notifications/CHEDP.GB.2022.3880537/overview">CHEDP.GB.2022.3880537
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-17">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-17">
-                    030342
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-17">
-                    20 March 2022
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-17">
-                      VALID
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">Test</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-17">
-                      CONTROL REQUIRED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3880537/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2022.3880534">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-18">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3880534" href="/control/tst/protected/ov-notifications/CHEDP.GB.2022.3880534/overview">CHEDP.GB.2022.3880534
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-18">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-18">
-                    030342
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-18">
-                    20 March 2022
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-18">
-                      VALID
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">Test</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-18">
-                      CONTROL REQUIRED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3880534/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2022.3880533">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-19">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2022.3880533" href="/control/tst/protected/ov-notifications/CHEDP.GB.2022.3880533/overview">CHEDP.GB.2022.3880533
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-19">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-19">
-                    030342
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-19">
-                    20 March 2022
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-19">
-                      VALID
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">Test</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-19">
-                      CONTROL REQUIRED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3880533/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2021.3484470">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-20">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2021.3484470" href="/control/tst/protected/ov-notifications/CHEDP.GB.2021.3484470/overview">CHEDP.GB.2021.3484470
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-20">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-20">
-                    03061990
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-20">
-                    14 December 2021
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--validated" id="certificate-status-20">
-                      VALID
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">CKConsignor</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-20">
-                      CONTROL REQUIRED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2021.3484470/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2021.3269160">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-21">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2021.3269160" href="/control/tst/protected/ov-notifications/CHEDP.GB.2021.3269160/overview">CHEDP.GB.2021.3269160
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-21">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-21">
-                    051000
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-21">
-                    12 October 2021
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--rejected" id="certificate-status-21">
-                      REJECTED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">Armitage Group Ltd</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-21">
-                      CONTROL COMPLETE
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2021.3269160/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2021.3269157">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-22">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2021.3269157" href="/control/tst/protected/ov-notifications/CHEDP.GB.2021.3269157/overview">CHEDP.GB.2021.3269157
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-22">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-22">
-                    051000
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-22">
-                    12 October 2021
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--rejected" id="certificate-status-22">
-                      REJECTED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">Armitage Group Ltd</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-               
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-22">
-                      CONTROL REQUIRED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2021.3269157/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2021.2715780">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-23">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2021.2715780" href="/control/tst/protected/ov-notifications/CHEDP.GB.2021.2715780/overview">CHEDP.GB.2021.2715780
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-23">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-23">
-                    020110
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-23">
-                    3 June 2021
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--rejected" id="certificate-status-23">
-                      REJECTED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">ATG IMPORTER - Number 2</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp;
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--required-control" id="control-status-23">
-                      CONTROL REQUIRED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2021.2715780/certificate/pdf" target="_blank">
-                  Show CHED
-                </a>
-              </div>
-            </dl>
-            <dl class="notification-list__row" id="row-CHEDP.GB.2021.2264845">
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Reference Number</dt>
-                  <dd class="notification-list__value" id="reference-number-24">
-                    <a class="govuk-link" id="view-details-CHEDP.GB.2021.2264845" href="/control/tst/protected/ov-notifications/CHEDP.GB.2021.2264845/overview">CHEDP.GB.2021.2264845
-                    </a>
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading" id="commodity-header-24">Commodity</dt>
-                  <dd class="notification-list__value" id="commodity-id-24">
-                    06029010
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">Date of decision</dt>
-                  <dd class="notification-list__value" id="decision-date-24">
-                    9 March 2021
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20">
-                  <dt class="notification-list__heading">CHED status</dt>
-                  <dd class="notification-list__value">
-                    <strong class="govuk-tag tag--fixed-width tag--rejected" id="certificate-status-24">
-                      REJECTED
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__grid-row">
-                <div class="notification-list__grid-column-30">
-                  <dt class="notification-list__heading">Consignee</dt>
-                  <dd class="notification-list__value">fsdafs</dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-25">
-                  <dt class="notification-list__heading">&nbsp;</dt>
-                  <dd class="notification-list__value" id="decision-date-0">
-                    &nbsp
-                  </dd>
-                </div>
-                <div class="notification-list__grid-column-20 notification-list__grid-column--control-status">
-                  <dt class="notification-list__heading">Control status</dt>
-                  <dd class="notification-list__value ">
-                    <strong class="govuk-tag tag--fixed-width tag--completed-control" id="control-status-24">
-                      CONTROL COMPLETE
-                    </strong>
-                  </dd>
-                </div>
-              </div>
-              <div class="notification-list__links">
-                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2021.2264845/certificate/pdf" target="_blank">
+                <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19"  >
                   Show CHED
                 </a>
               </div>
