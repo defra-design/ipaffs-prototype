@@ -143,8 +143,8 @@
             
             <select class="govuk-select govuk-!-width-one-half" id="transport-means-before" name="transport-means-before">
                 <option value="">Select means of transport to port of entry</option>
-                  <option value="plane">Airplane</option>
-                  <option value="rail" selected="">Railway</option>
+                  <option value="plane" selected="">Airplane</option>
+                  <option value="rail">Railway</option>
                   <option value="road">Road vehicle</option>
                   <option value="ship">Vessel</option>
             </select>
@@ -157,9 +157,15 @@
               </label>
               
           
-              <span id="identification-hint" class="govuk-hint">
-                Flight number, vessel name or vehicle registration
-              </span>
+              <div id="identification-hint" class="govuk-hint">
+                <p class="govuk-hint">Enter the following to identify:</p>
+                <ul class="govuk-!-width-two-thirds">
+                  <li>airplanes – flight number</li>
+                  <li>railways – train number</li>
+                  <li>road vehicles – vehicle registration number</li>
+                  <li>vessels – vessel name (for ferries, also include the road vehicle's registration number)</li>
+                </ul>
+              </div>
           
               
           
@@ -169,12 +175,12 @@
           <div class="govuk-form-group  ">
               
               <label class="govuk-label govuk-label--m" for="document">
-                Document
+                Transport document reference
               </label>
               
           
-              <span id="document-hint" class="govuk-hint">
-                Air Waybill, Bill of lading or ship manifest
+              <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">
+                Enter the reference number on the air waybill, bill of lading, sea waybill, road consignment note (CMR) or other transport document.
               </span>
           
               
