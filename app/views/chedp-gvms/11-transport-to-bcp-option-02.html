@@ -223,6 +223,29 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="train-number" name="train-number" type="text">
                 </div>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Is the transport using the Goods Vehicle Movement Service (GVMS)?
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="changedName">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="transport-road-vehicle" name="means-of-transport" type="radio" value="vehicle" data-aria-controls="conditional-vehicle-registration-number">
@@ -237,6 +260,29 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="vehicle-registration-number" name="vehicle-registration-number" type="text">
                 </div>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Is the transport using the Goods Vehicle Movement Service (GVMS)?
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="changedName">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="transport-vessel" name="means-of-transport" type="radio" value="vessel" data-aria-controls="conditional-vessel-name">
@@ -250,6 +296,29 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                     Vessel name (for ferries, also the road vehicle registration number)
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
+                </div>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h1 class="govuk-fieldset__heading">
+                        Is the transport using the Goods Vehicle Movement Service (GVMS)?
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="changedName">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
                 </div>
               </div>
             </div>
@@ -270,39 +339,6 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
             
         
           <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
-        </div>
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
-                Will the transport use the Goods Vehicle Movement Service (GVMS)?
-              </h1>
-            </legend>
-            <div id="signIn-hint" class="govuk-hint">
-              If you don't know, check if you need to <a href="https://www.gov.uk/guidance/register-for-the-goods-vehicle-movement-service" class="govuk-link" target="_blank">register for and use the GVMS (opens in new tab)</a>
-            </div>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-                <label class="govuk-label govuk-radios__label" for="signIn">
-                  Yes
-                </label>
-                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                  Text explaining the consequences of select yes - tbd
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="signIn-2">
-                  No
-                </label>
-                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
-                  Text explaining the consequences of select no - tbd
-                </div>
-              </div>
-            </div>
-          </fieldset>
         </div>
 
           
