@@ -274,8 +274,8 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-width-two-thirds">
+              <h1 class="govuk-fieldset__heading ">
                 Will the transport use the Goods Vehicle Movement Service (GVMS)?
               </h1>
             </legend>
@@ -288,24 +288,23 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                 <label class="govuk-label govuk-radios__label" for="signIn">
                   Yes
                 </label>
-                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                  Text explaining the consequences of select yes - tbd
-                </div>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
                 <label class="govuk-label govuk-radios__label" for="signIn-2">
                   No
                 </label>
-                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
-                  Text explaining the consequences of select no - tbd
-                </div>
               </div>
             </div>
           </fieldset>
+          <div class="govuk-warning-text govuk-!-margin-top-2 govuk-!-width-two-thirds">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              You can be fined up to £2,500 if your transport fails to attend a&nbsp;required inspection.
+            </strong>
+          </div>
         </div>
-
-          
 
         <div class="" id="estimated-arrival-at-bcp">
           
