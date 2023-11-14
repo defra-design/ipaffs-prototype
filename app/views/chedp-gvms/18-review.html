@@ -571,7 +571,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <tr >
                         <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
                         <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Country</th>
-                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" ">Type</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Type</th>
                         <th scope="col" class="govuk-table__header govuk-!-width-one-quarter no-wrap" >
                           Approval number
                         </th>
@@ -666,7 +666,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <span class="govuk-error-message" id="partone/arrivaldate">Date of estimated arrival at BCP</span>
                 <span class="govuk-error-message" id="partone/arrivaltime">Time of estimated arrival at BCP</span> -->
                 
-                <div class="table-responsive govuk-!-margin-bottom-9" >
+                <div class="table-responsive govuk-!-margin-bottom-9">
                   <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">
                     <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
 
@@ -681,7 +681,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       </tr>
                       <tr class="">
                         <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)</th>
-                        <td class="govuk-table__cell">Yes</td>
+                        <td class="govuk-table__cell">{{ data['gvms'] }}</td>
                       </tr>
                       <tr class="">
                         <th scope="row" class="govuk-table__header">Identification</th>
