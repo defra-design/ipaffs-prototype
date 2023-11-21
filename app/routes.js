@@ -18,6 +18,7 @@ router.use('/part-1-chedp/iuu-final', require('./views/part-1-chedp/iuu-final/_r
 // router.use('/chedd/imp-to-chedd', require('./views/chedd/imp-to-chedd/_routes'))
 router.use('/chedd/part-1-chedd-single', require('./views/chedd/part-1-chedd-single/_routes'))
 router.use('/chedp-gvms', require('./views/chedp-gvms/_routes'))
+router.use('/chedp-gvms-iteration-02', require('./views/chedp-gvms-iteration-02/_routes'))
 
 // Start folder specific routes
 
