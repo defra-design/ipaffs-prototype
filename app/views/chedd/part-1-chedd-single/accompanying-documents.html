@@ -13,16 +13,19 @@
 {% block content %}
 
 <span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
+<div class="govuk-hint govuk-!-margin-bottom-6"></div>
 <div class="govuk-grid-row">
   <form class="form" action="addresses" method="post">
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl">Documents</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Accompanying documents</h1>
       <p class="govuk-hint"> Upload any required documents, for example:</p>
-      <ul>
+      <div id="signIn-hint" class="govuk-hint">
         <li>if applicable, a health or phytosanitary certificate (also known as the ‘official certificate’) and laboratory sample results</li>
         <li>transport documents, such as a road consignment (CMR) note or air, sea or rail waybills</li>
         <li>commercial documents, such as bill of lading, invoice and packing list</li>
+      </div>
+      
         </ul>
       
 
@@ -50,31 +53,7 @@
             </div>
           </div>
 
-          <div class="additional-documents__grid-row additional-document-info">
-            <div class="additional-documents__grid-column-15 additional-document-content">
-              <div class="additional-documents__content-heading" id="additional-document-type-heading-0">Document type</div>
-              <div class="additional-documents__content-value" id="additional-document-type-value-0">
-                Sea Waybill
-              </div>
-            </div>
-            <div class="additional-documents__grid-column-15 additional-document-content">
-              <div class="additional-documents__content-heading" id="additional-document-reference-heading-0">Document reference</div>
-              <div class="additional-documents__content-value" id="additional-document-reference-value-0">
-                DOC-11921
-              </div>
-            </div>
-            <div class="additional-documents__grid-column-doc-date additional-document-content">
-              <div class="additional-documents__content-heading" id="additional-document-date-heading-0">
-                Date of issue
-                <div class="additional-documents__date-of-issue-hint">
-                  <span class="additional-documents__date-of-issue-hint__day">Day</span>
-                  <span class="additional-documents__date-of-issue-hint__month">Month</span>
-                  <span class="additional-documents__date-of-issue-hint__year">Year</span>
-                </div>
-              </div>
-              <div class="additional-documents__content-value" id="additional-document-date-value-0">
-                26 March 2022
-              </div>
+          
 
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
@@ -91,81 +70,146 @@
           <div class="additional-documents__grid-row additional-documents__content-links">
             <div class="additional-documents__grid-column-50">
               <button type="submit" class="link-button" id="button-remove-additional-document-0" name="remove-additional-document" value="0">
-                Remove
-              </button>
-            </div>
-          </div>
-          <div class="additional-documents__grid-row additional-documents__add-document">
-            <div class="additional-documents__grid-column-15">
-              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                <select class="custom-select" id="document-type" name="document-type" aria-label="Document type">
-                  <option value="">Select document type</option>
-                  <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
-                  <option value="airWaybill">Air Waybill</option>
-                  <option value="importPermit">Import permit</option>
-                  <option value="letterOfAuthority">Letter of authority (Directive 2008/61/EC)</option>
-                  <option value="commercialInvoice">Commercial invoice</option>
-                  <option value="seaWaybill">Sea Waybill</option>
-                  <option value="railwayBill">Railway bill</option>
-                  <option value="customsDeclaration">Customs declaration</option>
-                  <option value="billOfLading">Bill of lading</option>
-                  <option value="catchCertificate">Catch certificate</option>
-                  <option value="laboratorySamplingResultsForAflatoxin">Laboratory Sampling results for Aflatoxin (Reg 2019/1793)</option>
-                  <option value="healthCertificate">Health certificate</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="additional-documents__grid-column-15">
-              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                <input class="govuk-input  " id="document-reference" name="document-reference" type="text" value="" aria-label="Document reference">
-              </div>
-            </div>
-            <div class="additional-documents__grid-column-doc-date">
-              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                <fieldset class="govuk-fieldset" role="group">
-                  <legend class="govuk-fieldset__legend govuk-visually-hidden">
-                    Document issue date
-                  </legend>
-
-                    <div class="govuk-date-input__item date-input-day">
-                      <div class="govuk-form-group">
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="document-issue-date-day" name="document-issue-date-day" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Day">
-                      </div>
-                    </div>
-                    <div class="govuk-date-input__item date-input-month">
-                      <div class="govuk-form-group">
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="document-issue-date-month" name="document-issue-date-month" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Month">
-                      </div>
-                    </div>
-                    <div class="govuk-date-input__item date-input-year">
-                      <div class="govuk-form-group">
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="document-issue-date-year" name="document-issue-date-year" type="text" value="" inputmode="numeric" maxlength="4" aria-label="Year">
-                      </div>
-                    </div>
-<!--                  <svg aria-hidden="true" role="img">-->
-<!--                    <use href="#calendar">-->
-<!--                      <svg viewBox="0 0 24 24" id="calendar" xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M0 0h24v24H0z" fill="none"></path>-->
-<!--                        <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"></path>-->
-<!--                      </svg>-->
-<!--                    </use>-->
-<!--                  </svg>-->
+                Remove>
                 </fieldset>
-              </div>
-            </div>
-            <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment">
-              <button type="submit" class="link-button no-wrap" id="add-attachment" name="add-attachment" value="">
-                Add attachment
-              </button>
-            </div>
-          </div>
-          <input name="is-additional-document-row-shown" type="hidden" value="true">
-          <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="add-additional-document" value="">
-            Add another document
+              </div><div></div>
           </button>
         </div>
+        <div class="govuk-!-margin-bottom-9 additional-documents-table" id="additional-documents-table">
+        
 
+              
+                 
+          </div>
+        </details>
+
+        <p class="govuk-heading-s" id="additional-documents-number-of-documents-message">Showing 0 additional documents</p>
+
+      <div class="additional-documents__grid-row additional-documents__headers">
+        <div class="additional-documents__grid-column-20 additional-documents__table-header">
+          Document type
+        </div>
+        <div class="additional-documents__grid-column-20 additional-documents__table-header">
+          Document reference
+        </div>
+        <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
+          Date of issue
+          <div class="additional-documents__date-of-issue-hint">
+            <span class="additional-documents__date-of-issue-hint__day">Day</span>
+            <span class="additional-documents__date-of-issue-hint__month">Month</span>
+            <span class="additional-documents__date-of-issue-hint__year">Year</span>
+          </div>
+        </div>
+        <div class="additional-documents__grid-column-20 additional-documents__table-header">
+          Attachments 
+        </div>
+      </div>
+
+        <div class="additional-documents__grid-row additional-documents__add-document">
+          <div class="additional-documents__grid-column-20">
+              <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                <select class="ipaffs-document-type govuk-!-margin-top-3" id="document-type" name="document-type" aria-label="Document type">
+                    <option value="">Select document type</option>
+                    <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
+                    <option value="airWaybill">Air waybill</option>
+                    <option value="billOfLading">Bill of lading</option>
+                    
+                    <option value="commercialInvoice">Commercial invoice</option>
+                    <option value="customsDeclaration">Customs declaration</option>
+                    <option value="importPermit">Import permit</option>
+                    <option value="laboratorySamplingResultsForAflatoxin">Laboratory Sampling results for Aflatoxin (Reg 2019/1793)</option>
+                    <option value="letterOfAuthority">Letter of authority (Directive 2008/61/EC)</option>
+                    <option value="processingStatement">Processing statement</option>
+                    <option value="proofOfStorage">Proof of storage</option>
+                    <option value="railwayBill">Rail waybill</option>
+                    <option value="seaWaybill">Sea waybill</option>
+                    <option value="other">Other</option>
+                </select>
+              </div>
+          </div>
+          <div class="additional-documents__grid-column-20">
+            <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+            
+            
+                
+            
+              <input class="govuk-input  " id="document-reference" name="document-reference" type="text" value="" aria-label="Document reference">
+            </div>
+          </div>
+          <div class="additional-documents__grid-column-doc-date">
+            <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+              <fieldset class="govuk-fieldset" role="group">
+                  <legend class="govuk-fieldset__legend govuk-visually-hidden">
+                    
+                    Document issue date
+                    
+                  </legend>
+            
+            
+            
+                <div class="govuk-date-input date-input--picker short-date-input" id="document-issue-date" data-module="accessible-datepicker">
+                  <div class="govuk-date-input__item date-input-day">
+                    <div class="govuk-form-group">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="document-issue-date-day" name="document-issue-date-day" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Day">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item date-input-month">
+                    <div class="govuk-form-group">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="document-issue-date-month" name="document-issue-date-month" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Month">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item date-input-year">
+                    <div class="govuk-form-group">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="document-issue-date-year" name="document-issue-date-year" type="text" value="" inputmode="numeric" maxlength="4" aria-label="Year">
+                    </div>
+                  </div>
+                <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                 
+                  <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1">
+                    <div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button>
+                      <h2 id="date-picker-label-68" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2>
+                      <button type="button" class="date-picker__button__next-month">Next month</button>
+                    </div>
+                    <table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-68">
+                      <thead>
+                        <tr>
+                          <th scope="col" abbr="Sunday" aria-label="Sunday">Su</th>
+                          <th scope="col" abbr="Monday" aria-label="Monday">Mo</th>
+                          <th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th>
+                          <th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th>
+                          <th scope="col" abbr="Thursday" aria-label="Thursday">Th</th>
+                          <th scope="col" abbr="Friday" aria-label="Friday">Fr</th>
+                          <th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table><button class="date-picker__button__close" type="button" value="close">Cancel</button>
+                    <p class="aria-live-message sr-only" aria-live="assertive"></p>
+                  </div>
+                  </div>
+                  <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+        <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-14" class="date-picker__heading" aria-live="assertive" aria-atomic="true">November 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-14"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                  </fieldset>
+            </div>
+          </div>
+          <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment">
+            <button type="submit" class="link-button no-wrap" id="add-attachment" name="add-attachment" value="">
+              Add attachment
+            </button>
+          </div>
+        </div>
+
+        <div>
+        <input name="is-additional-document-row-shown" type="hidden" value="true">
+        <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="accDocRoutelink" value="Add documents">
+            Add a document
+        </button>
+
+        <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="accDocRoutelink" value="Add documents">
+          Add multiple documents
+        </button>
+        </div>
+    </div>
       <div class="save-and-submit-buttons">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
