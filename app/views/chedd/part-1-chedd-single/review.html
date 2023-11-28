@@ -137,12 +137,14 @@
           Change
         </a>
       </div>
+      <div class="table-responsive">
+        
       <div class="govuk-!-margin-bottom-9 table-responsive">
-        <table class="govuk-table presentation-table govuk-!-margin-0" id="responsible-person-contact-details-table">
+        <table class="govuk-table presentation-table review-table" id="responsible-person-contact-details-table">
           <caption class="govuk-visually-hidden">Commodity intended for</caption>
           <tr>
             <td class="govuk-table__header">Commodity intended for</td>
-            <td class="govuk-table__cell" colspan="2">
+            <td class="govuk-table__cell">Other</td>
               
               {{ data['commodity-intended-for'] }}
             </td>
@@ -276,32 +278,32 @@
       </div>
 
       <div class="table-responsive govuk-!-margin-bottom-9">
-        <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation">
+        <table class="govuk-table presentation-table review-table" id="review-table-bip-details" role="presentation">
           <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
           <tbody>
           <tr class="">
             <th scope="row" class="govuk-table__header">Port of entry</th>
-            <td class="govuk-table__cell">{{ data['port-name'] }}</td>
+            <td class="govuk-table__cell">Birmingham International Airport</td>
           </tr>
           <tr class="">
             <th scope="row" class="govuk-table__header">Means of transport to port of entry</th>
-            <td class="govuk-table__cell">{{ data['means'] }}</td>
+            <td class="govuk-table__cell">Airplane</td>
           </tr>
           <tr class="">
             <th scope="row" class="govuk-table__header">Identification</th>
-            <td class="govuk-table__cell">{{ data['id'] }}</td>
+            <td class="govuk-table__cell">123</td>
           </tr>
           <tr class="">
             <th scope="row" class="govuk-table__header">Document</th>
-            <td class="govuk-table__cell">{{ data['manifest'] }}</td>
+            <td class="govuk-table__cell">airWaybill</td>
           </tr>
           <tr class="">
             <th scope="row" class="govuk-table__header">Estimated arrival date at port of entry</th>
-            <td class="govuk-table__cell">{{ data['departure-date-day'] }}</td>
+            <td class="govuk-table__cell">22 March 2023</td>
           </tr>
           <tr class="">
             <th scope="row" class="govuk-table__header">Estimated arrival time at port of entry</th>
-            <td class="govuk-table__cell">
+            <td class="govuk-table__cell">14:25<td></td>
               {{ data['departure-issue-date-day'] }}
               {{ data['departure-issue-date-month'] }}
               {{ data['departure-issue-date-year'] }}
@@ -324,21 +326,21 @@
                       ">
             <td class="govuk-table__header govuk-table__header--half">Name</td>
             <td class="govuk-table__cell" id="responsible-contact-name">
-              {{ data['contact-name'] }}
+              Gary Admin-Tester</td>
             </td>
           </tr>
           <tr class="
                       ">
             <td class="govuk-table__header govuk-table__header--half">Email address</td>
             <td class="govuk-table__cell break-word" id="responsible-contact-email">
-              {{ data['contact-email'] }}
+              defratestbip@anthunt3.33mail.com</td>
             </td>
           </tr>
           <tr class="
                       ">
             <td class="govuk-table__header govuk-table__header--half">Phone number</td>
             <td class="govuk-table__cell" id="responsible-contact-telephone">
-              {{ data['contact-mobile'] }}
+              020 8225 7295</td>
             </td>
           </tr>
           </tbody>
@@ -351,7 +353,9 @@
           <tbody>
           <tr>
             <td class="govuk-table__header">Contact address</td>
-            <td class="govuk-table__cell" id="organisation-branch-address-address">{{ data['ad'] }}</td>
+            <td class="govuk-table__cell" id="organisation-branch-address-address">6 Wharncliffe Court,
+             <p>Carlton,Barnsley,S71 3BY</p>
+      
             <td class="govuk-table__cell change">
               <a href="contact-address" class="govuk-link" id="organisation-branch-address-change-link">Change</a>
             </td>
