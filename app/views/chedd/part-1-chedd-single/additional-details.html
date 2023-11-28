@@ -21,6 +21,9 @@
       <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
         <h2 class="govuk-heading-m">Commodity intended for</h2>
         <div class="govuk-form-group commodity-intended-for ">
+          <p class="govuk-body">
+            You’ll find this on the health or phytosanitary certificate (also known as the ‘official certificate’) if you have one.
+          </p>
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <span class="govuk-visually-hidden">Choose from:</span>
@@ -31,18 +34,28 @@
                 <input class="govuk-radios__input" id="internalMarketfeedingstuff" name="commodity-intended-for" value="feedingstuff" type="radio">
                 <label class="govuk-label govuk-radios__label" for="internalMarketfeedingstuff">
                   Feedingstuff
+                  <p class="govuk-body">
+                    Intended for oral feeding to animals.
+                  </p>
                 </label>
               </div>
+              
               <div class="govuk-radios__item commodity-intended-for">
                 <input class="govuk-radios__input" id="internalMarketfurther" name="commodity-intended-for" value="Further process" type="radio">
-                <label class="govuk-label govuk-radios__label" for="internalMarketfurther">
+                <label class="govuk-label govuk-!-font-weight-bold govuk-radios__label" for="internalMarketfurther">
                   Further process
+                  <p class="govuk-body">
+                    For human consumption after further treatment.
+                  </p>
                 </label>
               </div>
               <div class="govuk-radios__item commodity-intended-for">
                 <input class="govuk-radios__input" id="internalMarkethuman" name="commodity-intended-for" value="Human consumption" type="radio" checked="">
                 <label class="govuk-label govuk-radios__label" for="internalMarkethuman">
                   Human consumption
+                  <p class="govuk-body">
+                    For direct human consumption without further treatment.
+                  </p>
                 </label>
               </div>
               <div class="govuk-radios__item commodity-intended-for">
@@ -50,6 +63,38 @@
                 <label class="govuk-label govuk-radios__label" for="internalMarketother">
                   Other
                 </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How do you want to sign in?
+              </h1>
+            </legend>
+            <div id="signIn-hint" class="govuk-hint">
+              You’ll need an account to prove your identity and complete your Self Assessment.
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn">
+                  Sign in with Government Gateway
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="signIn-2">
+                  Sign in with GOV.UK One Login
+                </label>
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  If you don’t have a GOV.UK One Login, you can create one.
+                </div>
               </div>
             </div>
           </fieldset>
