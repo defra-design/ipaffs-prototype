@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+Confirmation – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -35,41 +35,39 @@
   <div class="govuk-grid-row" id="confirmation-page">
     <div class="govuk-grid-column-two-thirds">
 
-      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-8">
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
         <h1 class="govuk-panel__title">
-          Your import notification has been sent
+          Your notification has been submitted
         </h1>
         <div class="govuk-panel__body">
           Your reference number<br>
           <strong>
-            <span id="reference-number">CHEDPP.GB.2023.5501422</span>
+            <span id="reference-number">CHEDA.GB.2023.5501422</span>
                 <span id="cved-version-number"> - V1</span>
           </strong>
         </div>
       </div>
+      <input class="govuk-button govuk-button--secondary govuk-!-margin-right-1 govuk-!-margin-bottom-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Copy reference number" data-module="govuk-button">
 
-      <h2 class="govuk-heading-m">What happens next?</h2>
-      <p class="govuk-body">Your CHEDPP notification has been sent to the Border Control Post (BCP).</p>
-
-      <form action="/notification/vnet/protected/notifications" method="post" id="homeForm">
-        <input name="crumb" type="hidden" value="Ydm23FlnF8m6O6Bvn3Cnlpdf3GEtj0PtCyCKshnEUqa">
-        <input name="etag" type="hidden" value="&quot;000000000006F7C7&quot;">
-
-        <div>
-          <a rel="noopener noreferrer" href="/notification/vnet/protected/notifications/CHEDPP.GB.2021.1015506/certificate/pdf" class="govuk-button" id="view-certificate" target="_blank">
-            View or print certificate
-          </a>
-        </div>
-
-        <p class="govuk-body">You can raise another notification if you have more commodities to import.</p>
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <div class="govuk-warning-text govuk-!-margin-bottom-2">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          The GVMS will notify the driver about all inspections needed for your goods.
+        </strong>
+      </div>
+      <p class="govuk-body">The driver must check the GVMS if an inspection is required before they disembark.</p>
 
         <div>
-          <a href="/notification/vnet/protected/notifications" class="govuk-link govuk-!-font-size-19" id="manage-notifications">
+          <a href="0-index-post-submit" class="govuk-link govuk-!-font-size-19" id="manage-notifications">
             Return to your dashboard
           </a>
         </div>
         <div>
+          <form action="01-ched-type" method="post" id="homeForm">
           <input class="link-button" type="submit" name="new-notification" value="Create a new import notification">
+          </form>
         </div>
 
       </form>
