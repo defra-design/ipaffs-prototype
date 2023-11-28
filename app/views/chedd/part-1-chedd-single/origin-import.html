@@ -32,7 +32,7 @@
               <label class="govuk-label govuk-label--m" for="origin-country-1">
                 Country of origin
               </label>
-            <select class="govuk-select govuk-!-width-one-half  govuk-!-margin-bottom-5" id="origin-country-1" name="origin-country">
+            <select class="govuk-select govuk-!-width-one-half  govuk-!-margin-bottom-1" id="origin-country-1" name="origin-country">
               <option value="">Select a country</option>
               <option value="AF">Afghanistan</option>
               <option value="AX">Aland Islands</option>
@@ -292,26 +292,10 @@
             </select>
 
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h2 class="govuk-fieldset__heading">
-                    Does the consignment require a region of origin code?
+
                   </h2>
                 </legend>
-                <div id="sign-in-hint" class="govuk-hint">
-                  The code will be on the health certificate if required. You can skip this for now if unsure and add later if needed.
-                </div>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
-                    <label class="govuk-label govuk-radios__label" for="sign-in">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item  govuk-!-margin-bottom-5">
-                    <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-                    <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                      No
-                    </label>
-                  </div>
+              
                 </div>
 
             <label class="govuk-label govuk-label--m" for="origin-country">
@@ -586,12 +570,14 @@
                 Enter any internal reference number you want to use to identify this consignment, or leave blank.
               </div>
               <input class="govuk-input" id="event-name" name="ref-number" type="text" aria-describedby="event-name-hint">
+              </select>   
             </div>
-
+          
           </fieldset>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      
 
       </form>
 
