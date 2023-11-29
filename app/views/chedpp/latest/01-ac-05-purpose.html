@@ -1,0 +1,1302 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+About the consignment – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+<span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEPP</span>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="consignment-purpose-page">
+    <div class="govuk-grid-column-three-quarters">
+        <span class="govuk-caption-xl" id="page-secondary-title">Purpose of the consignment</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">About the consignment</h1>
+      <form action="01-no-check-answers" method="post">
+        <input name="crumb" type="hidden" value="IZnreMZdNimd3v1fq03M2JhLIDsA2hh38-bDNwZWsHw">
+        <input name="etag" type="hidden" value="&quot;0000000000224C45&quot;">
+
+        <div class="govuk-form-group ">
+          <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                What is the purpose of the consignment?
+              </legend>
+            
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" id="purpose">
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-internalmarket" name="purpose" type="radio" value="internalmarket">
+                  <label class="govuk-label govuk-radios__label" for="radio-internalmarket">
+                    For internal market
+                  </label>
+                </div>
+
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-tranship" name="purpose" type="radio" value="tranship" aria-controls="tranship-conditional" aria-expanded="true">
+                    <label class="govuk-label govuk-radios__label" for="radio-tranship">
+                      Transhipment / Onward travel
+                    </label>
+                </div>
+                <div class="govuk-radios__conditional" id="tranship-conditional">
+                    <div class="govuk-form-group ">
+                      <label class="govuk-label govuk-label--s" for="bcp-final">
+                          Exit border control post
+                      </label>
+                      
+                      <select class="govuk-select govuk-!-width-full" id="bcp-final" name="bcp-final">
+                          <option value="">Select border control post</option>
+                          <option value="GBBOH4PP" data-country-code="GB">
+                            (Hurn) Bournemouth Airport (plants) (undesignated) - GBBOH4PP
+                          </option>
+                          <option value="GBAHB4PP" data-country-code="GB">
+                            Aberdeen Harbour Board (plants) - GBAHB4PP
+                          </option>
+                          <option value="GBABP4PP" data-country-code="GB">
+                            Associated British Ports, Ayr (plants) (undesignated) - GBABP4PP
+                          </option>
+                          <option value="GBAVM4PP" data-country-code="GB">
+                            Avonmouth (plants) (undesignated) - GBAVM4PP
+                          </option>
+                          <option value="GBBCW4PP" data-country-code="GB">
+                            Baltic Wharf (plants) (undesignated) - GBBCW4PP
+                          </option>
+                          <option value="GBBXH4PP" data-country-code="GB">
+                            Birmingham International Airport (plants) - GBBXH4PP
+                          </option>
+                          <option value="GBCTM4PP" data-country-code="GB">
+                            Chatham (plants) (undesignated) - GBCTM4PP
+                          </option>
+                          <option value="CONPNT" data-country-code="GB">
+                            Control Point - CONPNT
+                          </option>
+                          <option value="GBDOV1PP" data-country-code="GB">
+                            Dover Port (plants) - GBDOV1PP
+                          </option>
+                          <option value="GBDND4PP" data-country-code="GB">
+                            Dundee Port (plants) (undesignated) - GBDND4PP
+                          </option>
+                          <option value="GBEMA4PP" data-country-code="GB">
+                            East Midlands Airport (plants) - GBEMA4PP
+                          </option>
+                          <option value="GBEDI4PP" data-country-code="GB">
+                            Edinburgh Airport (plants) - GBEDI4PP
+                          </option>
+                          <option value="GBFSH4PP" data-country-code="GB">
+                            Fishguard Harbour (plants) (undesignated) - GBFSH4PP
+                          </option>
+                          <option value="GBFOL4PP" data-country-code="GB">
+                            Folkestone (plants) (undesignated) - GBFOL4PP
+                          </option>
+                          <option value="GBLGW4PP" data-country-code="GB">
+                            Gatwick Airport (plants) - GBLGW4PP
+                          </option>
+                          <option value="GBGLA4PP" data-country-code="GB">
+                            Glasgow Airport (plants) - GBGLA4PP
+                          </option>
+                          <option value="GBGOO4PP" data-country-code="GB">
+                            Goole Port (plants) (undesignated) - GBGOO4PP
+                          </option>
+                          <option value="GBGRP4PP" data-country-code="GB">
+                            Grangemouth Port (plants) - GBGRP4PP
+                          </option>
+                          <option value="GBGOT4PP" data-country-code="GB">
+                            Greenock Ocean Terminal (Peel Ports) (plants) (undesignated) - GBGOT4PP
+                          </option>
+                          <option value="GBGRM4PP" data-country-code="GB">
+                            Grimsby Port (plants) (undesignated) - GBGRM4PP
+                          </option>
+                          <option value="GBHRT4PP" data-country-code="GB">
+                            Hartlepool (plants) (undesignated) - GBHRT4PP
+                          </option>
+                          <option value="GBHCH4PP" data-country-code="GB">
+                            Harwich International Port (plants) - GBHCH4PP
+                          </option>
+                          <option value="GBLHR4PP" data-country-code="GB">
+                            Heathrow Airport (plants) - GBLHR4PP
+                          </option>
+                          <option value="GBHBT1PP" data-country-code="GB">
+                            HES Humber Bulk Terminal (Plant products, Other objects) - GBHBT1PP
+                          </option>
+                          <option value="GBHYS4PP" data-country-code="GB">
+                            Heysham Port (plants) (undesignated) - GBHYS4PP
+                          </option>
+                          <option value="GBHLY4PP" data-country-code="GB">
+                            Holyhead Port (plants) (undesignated) - GBHLY4PP
+                          </option>
+                          <option value="GBHLL4PP" data-country-code="GB">
+                            Hull Port (plants) (undesignated) - GBHLL4PP
+                          </option>
+                          <option value="GBIMM4PP" data-country-code="GB">
+                            Immingham Port (plants) (undesignated) - GBIMM4PP
+                          </option>
+                          <option value="GBIVG4PP" data-country-code="GB">
+                            Invergordon (plants) (undesignated) - GBIVG4PP
+                          </option>
+                          <option value="GBIVN4PP" data-country-code="GB">
+                            Inverness Harbour (plants) (undesignated) - GBIVN4PP
+                          </option>
+                          <option value="GBIPS4PP" data-country-code="GB">
+                            Ipswich Port  (plants) (undesignated) - GBIPS4PP
+                          </option>
+                          <option value="GBKLG4PP" data-country-code="GB">
+                            Killingholme Port (plants) (undesignated) - GBKLG4PP
+                          </option>
+                          <option value="GBKLP4PP" data-country-code="GB">
+                            Kings Lynn Port (plants) - GBKLP4PP
+                          </option>
+                          <option value="GBKRK4PP" data-country-code="GB">
+                            Kirkcaldy Port (plants) (undesignated) - GBKRK4PP
+                          </option>
+                          <option value="GBLBA4PP" data-country-code="GB">
+                            Leeds Bradford Airport (plants) (undesignated) - GBLBA4PP
+                          </option>
+                          <option value="GBLTH4PP" data-country-code="GB">
+                            Leith Port (plants) (undesignated) - GBLTH4PP
+                          </option>
+                          <option value="GBLPL4PP" data-country-code="GB">
+                            Liverpool John Lennon Airport (plants) (undesignated) - GBLPL4PP
+                          </option>
+                          <option value="GBLIV1PP" data-country-code="GB">
+                            Liverpool Port (plants) - GBLIV1PP
+                          </option>
+                          <option value="GBLGP1PP" data-country-code="GB">
+                            London Gateway (plants) - GBLGP1PP
+                          </option>
+                          <option value="GBTHP1PP" data-country-code="GB">
+                            London Thamesport (plants) - GBTHP1PP
+                          </option>
+                          <option value="GBLTN4PP" data-country-code="GB">
+                            Luton Airport (plants) - GBLTN4PP
+                          </option>
+                          <option value="GBMNC4PP" data-country-code="GB">
+                            Manchester Airport (plants) - GBMNC4PP
+                          </option>
+                          <option value="GBMTH4PP" data-country-code="GB">
+                            Methil Port (plants) (undesignated) - GBMTH4PP
+                          </option>
+                          <option value="GBMIL4PP" data-country-code="GB">
+                            Milford Haven (plants) (undesignated) - GBMIL4PP
+                          </option>
+                          <option value="GBMTR4PP" data-country-code="GB">
+                            Montrose Port  (plants) (undesignated) - GBMTR4PP
+                          </option>
+                          <option value="GBNCL4PP" data-country-code="GB">
+                            Newcastle Airport (plants) (undesignated) - GBNCL4PP
+                          </option>
+                          <option value="GBNCP4PP" data-country-code="GB">
+                            Newcastle Tyne Port (plants) (undesignated) - GBNCP4PP
+                          </option>
+                          <option value="GBNWH4PP" data-country-code="GB">
+                            Newhaven Port (plants) (undesignated) - GBNWH4PP
+                          </option>
+                          <option value="GBPEM4PP" data-country-code="GB">
+                            Pembroke Port (plants) (undesignated) - GBPEM4PP
+                          </option>
+                          <option value="GBPLH4PP" data-country-code="GB">
+                            Plymouth City Airport (plants) (undesignated) - GBPLH4PP
+                          </option>
+                          <option value="GBBOS4PP" data-country-code="GB">
+                            Port of Boston (plants) (undesignated) - GBBOS4PP
+                          </option>
+                          <option value="GBFXT1PP" data-country-code="GB">
+                            Port of Felixstowe (plants) - GBFXT1PP
+                          </option>
+                          <option value="GBPLP4PP" data-country-code="GB">
+                            Port of Plymouth (plants) (undesignated) - GBPLP4PP
+                          </option>
+                          <option value="GBPOP4PP" data-country-code="GB">
+                            Port of Poole  (Plants) - GBPOP4PP
+                          </option>
+                          <option value="GBPOS4PP" data-country-code="GB">
+                            Port of Silloth (plants) (undesignated) - GBPOS4PP
+                          </option>
+                          <option value="GBPME1PP" data-country-code="GB">
+                            Portsmouth (plants) - GBPME1PP
+                          </option>
+                          <option value="GBPFP4PP" data-country-code="GB">
+                            Purfeet Port (plants) (undesignated) - GBPFP4PP
+                          </option>
+                          <option value="GBROS4PP" data-country-code="GB">
+                            Rosyth Port (plants) (undesignated) - GBROS4PP
+                          </option>
+                          <option value="GBSNP4PP" data-country-code="GB">
+                            Sheerness Port (plants) (undesignated) - GBSNP4PP
+                          </option>
+                          <option value="GBSHP4PP" data-country-code="GB">
+                            Shoreham Port (plants) - GBSHP4PP
+                          </option>
+                          <option value="GBSOU1PP" data-country-code="GB">
+                            Southampton (plants) - GBSOU1PP
+                          </option>
+                          <option value="GBSTN4PP" data-country-code="GB">
+                            Stansted Airport (plants) - GBSTN4PP
+                          </option>
+                          <option value="GBTES4PP" data-country-code="GB">
+                            Teesport (plants) (undesignated) - GBTES4PP
+                          </option>
+                          <option value="GBTEE4PP" data-country-code="GB">
+                            Teesside International Airport Limited (plant products) - GBTEE4PP
+                          </option>
+                          <option value="GBTLB4PP" data-country-code="GB">
+                            Tilbury 2 Ro-Ro Terminal (plants) (undesignated) - GBTLB4PP
+                          </option>
+                          <option value="GBTIL1PP" data-country-code="GB">
+                            Tilbury Port (plants) - GBTIL1PP
+                          </option>
+                          <option value="GBDNU1" data-country-code="GB">
+                            X Do Not Use X - GBDNU1
+                          </option>
+                      </select>
+                    </div>
+                    <div class="govuk-form-group  ">
+                      <label class="govuk-label govuk-label--s" for="third-country-transhipment">
+                          Destination country
+                      </label>
+                      
+                      <select class="govuk-select govuk-!-width-full" id="third-country-transhipment" name="third-country-transhipment">
+                          <option value="">Select destination country</option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="AX">Aland Islands</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="AD">Andorra</option>
+                            <option value="AO">Angola</option>
+                            <option value="AI">Anguilla</option>
+                            <option value="AQ">Antarctica</option>
+                            <option value="AG">Antigua and Barbuda</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AM">Armenia</option>
+                            <option value="AW">Aruba</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="AZ">Azerbaijan</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="BH">Bahrain</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BB">Barbados</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BZ">Belize</option>
+                            <option value="BJ">Benin</option>
+                            <option value="BM">Bermuda</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                            <option value="BA">Bosnia and Herzegovina</option>
+                            <option value="BW">Botswana</option>
+                            <option value="BV">Bouvet Island</option>
+                            <option value="BR">Brazil</option>
+                            <option value="IO">British Indian Ocean Territory</option>
+                            <option value="VG">British Virgin Islands</option>
+                            <option value="BN">Brunei</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="BI">Burundi</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="CM">Cameroon</option>
+                            <option value="CA">Canada</option>
+                            <option value="ES-CN">Canary Islands</option>
+                            <option value="CV">Cape Verde</option>
+                            <option value="KY">Cayman Islands</option>
+                            <option value="CF">Central African Republic</option>
+                            <option value="TD">Chad</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CX">Christmas Island</option>
+                            <option value="CC">Cocos (Keeling) Islands</option>
+                            <option value="CO">Colombia</option>
+                            <option value="KM">Comoros</option>
+                            <option value="CG">Congo</option>
+                            <option value="CK">Cook Islands</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="CI">Côte d'Ivoire</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CW">Curaçao</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czech Republic</option>
+                            <option value="CD">Democratic Republic of the Congo</option>
+                            <option value="DK">Denmark</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="DM">Dominica</option>
+                            <option value="DO">Dominican Republic</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="EG">Egypt</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="GQ">Equatorial Guinea</option>
+                            <option value="ER">Eritrea</option>
+                            <option value="EE">Estonia</option>
+                            <option value="SZ">Eswatini</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="FK">Falkland Islands</option>
+                            <option value="FO">Faroe Islands</option>
+                            <option value="FJ">Fiji</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GF">French Guiana</option>
+                            <option value="PF">French Polynesia</option>
+                            <option value="TF">French Southern Territories</option>
+                            <option value="GA">Gabon</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GH">Ghana</option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GR">Greece</option>
+                            <option value="GL">Greenland</option>
+                            <option value="GD">Grenada</option>
+                            <option value="GP">Guadeloupe</option>
+                            <option value="GU">Guam</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="GG">Guernsey</option>
+                            <option value="GN">Guinea</option>
+                            <option value="GW">Guinea-Bissau</option>
+                            <option value="GY">Guyana</option>
+                            <option value="HT">Haiti</option>
+                            <option value="HM">Heard Island and McDonald Islands</option>
+                            <option value="VA">Holy See</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong Kong</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IR">Iran</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IM">Isle of Man</option>
+                            <option value="IL">Israel</option>
+                            <option value="IT">Italy</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JP">Japan</option>
+                            <option value="JE">Jersey</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="KI">Kiribati</option>
+                            <option value="XK">Kosovo</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LA">Laos</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LS">Lesotho</option>
+                            <option value="LR">Liberia</option>
+                            <option value="LY">Libya</option>
+                            <option value="LI">Liechtenstein</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MO">Macao</option>
+                            <option value="MG">Madagascar</option>
+                            <option value="MW">Malawi</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MV">Maldives</option>
+                            <option value="ML">Mali</option>
+                            <option value="MT">Malta</option>
+                            <option value="MH">Marshall Islands</option>
+                            <option value="MQ">Martinique</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MU">Mauritius</option>
+                            <option value="YT">Mayotte</option>
+                            <option value="MX">Mexico</option>
+                            <option value="FM">Micronesia</option>
+                            <option value="MD">Moldova</option>
+                            <option value="MC">Monaco</option>
+                            <option value="MN">Mongolia</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MS">Montserrat</option>
+                            <option value="MA">Morocco</option>
+                            <option value="MZ">Mozambique</option>
+                            <option value="MM">Myanmar</option>
+                            <option value="NA">Namibia</option>
+                            <option value="NR">Nauru</option>
+                            <option value="NP">Nepal</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NC">New Caledonia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NE">Niger</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="NU">Niue</option>
+                            <option value="NF">Norfolk Island</option>
+                            <option value="KP">North Korea</option>
+                            <option value="MK">North Macedonia</option>
+                            <option value="MP">Northern Mariana Islands</option>
+                            <option value="NO">Norway</option>
+                            <option value="OM">Oman</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PW">Palau</option>
+                            <option value="PA">Panama</option>
+                            <option value="PG">Papua New Guinea</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PN">Pitcairn</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="IE">Republic of Ireland</option>
+                            <option value="RE">Réunion</option>
+                            <option value="RO">Romania</option>
+                            <option value="RU">Russian Federation</option>
+                            <option value="RW">Rwanda</option>
+                            <option value="WS">Samoa</option>
+                            <option value="SM">San Marino</option>
+                            <option value="ST">Sao Tome and Principe</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="SN">Senegal</option>
+                            <option value="RS">Serbia</option>
+                            <option value="SC">Seychelles</option>
+                            <option value="SL">Sierra Leone</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="SB">Solomon Islands</option>
+                            <option value="SO">Somalia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="GS">South Georgia and the South Sandwich Islands</option>
+                            <option value="KR">South Korea</option>
+                            <option value="SS">South Sudan</option>
+                            <option value="ES">Spain</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="BL">St Barthélemy</option>
+                            <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                            <option value="KN">St Kitts and Nevis</option>
+                            <option value="LC">St Lucia</option>
+                            <option value="SX">St Maarten (Dutch)</option>
+                            <option value="MF">St Martin (French)</option>
+                            <option value="PM">St Pierre and Miquelon</option>
+                            <option value="VC">St Vincent and the Grenadines</option>
+                            <option value="SD">Sudan</option>
+                            <option value="SR">Suriname</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SY">Syria</option>
+                            <option value="TW">Taiwan</option>
+                            <option value="TJ">Tajikistan</option>
+                            <option value="TZ">Tanzania</option>
+                            <option value="TH">Thailand</option>
+                            <option value="GM">The Gambia</option>
+                            <option value="PS">The Occupied Palestinian Territories</option>
+                            <option value="TL">Timor-Leste</option>
+                            <option value="TG">Togo</option>
+                            <option value="TK">Tokelau</option>
+                            <option value="TO">Tonga</option>
+                            <option value="TT">Trinidad and Tobago</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TR">Turkey</option>
+                            <option value="TM">Turkmenistan</option>
+                            <option value="TC">Turks and Caicos Islands</option>
+                            <option value="TV">Tuvalu</option>
+                            <option value="UG">Uganda</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="UM">United States Minor Outlying Islands</option>
+                            <option value="US">United States of America</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VU">Vanuatu</option>
+                            <option value="VE">Venezuela</option>
+                            <option value="VN">Viet Nam</option>
+                            <option value="VI">Virgin Islands of the United States</option>
+                            <option value="WF">Wallis and Futuna</option>
+                            <option value="EH">Western Sahara</option>
+                            <option value="YE">Yemen</option>
+                            <option value="ZM">Zambia</option>
+                            <option value="ZW">Zimbabwe</option>
+                      </select>
+                    </div>
+                </div>
+
+
+                  <div class="govuk-radios__item purpose">
+                    <input class="govuk-radios__input" id="radio-reimport" name="purpose" type="radio" value="import">
+                    <label class="govuk-label govuk-radios__label" for="radio-reimport">
+                      For re-entry
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item purpose">
+                    <input class="govuk-radios__input" id="radio-transit" name="purpose" type="radio" value="transit" aria-controls="conditional-transit" aria-expanded="false">
+                      <label class="govuk-label govuk-radios__label" for="radio-transit">
+                        Transit
+                      </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-transit">
+                    <input type="hidden" id="is-high-risk-eu-cveda" value="false">
+
+                      <div class="govuk-form-group ">
+                        <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+                            Exit border control post
+                        </label>
+                        
+                        <select class="govuk-select govuk-!-width-full" id="bcp-transit-third-country" name="bcp-transit-third-country">
+                            <option value="">Select border control post</option>
+                            <option value="GBBOH4PP" data-country-code="GB">
+                              (Hurn) Bournemouth Airport (plants) (undesignated) - GBBOH4PP
+                            </option>
+                            <option value="GBAHB4PP" data-country-code="GB">
+                              Aberdeen Harbour Board (plants) - GBAHB4PP
+                            </option>
+                            <option value="GBABP4PP" data-country-code="GB">
+                              Associated British Ports, Ayr (plants) (undesignated) - GBABP4PP
+                            </option>
+                            <option value="GBAVM4PP" data-country-code="GB">
+                              Avonmouth (plants) (undesignated) - GBAVM4PP
+                            </option>
+                            <option value="GBBCW4PP" data-country-code="GB">
+                              Baltic Wharf (plants) (undesignated) - GBBCW4PP
+                            </option>
+                            <option value="GBBXH4PP" data-country-code="GB">
+                              Birmingham International Airport (plants) - GBBXH4PP
+                            </option>
+                            <option value="GBCTM4PP" data-country-code="GB">
+                              Chatham (plants) (undesignated) - GBCTM4PP
+                            </option>
+                            <option value="CONPNT" data-country-code="GB">
+                              Control Point - CONPNT
+                            </option>
+                            <option value="GBDOV1PP" data-country-code="GB">
+                              Dover Port (plants) - GBDOV1PP
+                            </option>
+                            <option value="GBDND4PP" data-country-code="GB">
+                              Dundee Port (plants) (undesignated) - GBDND4PP
+                            </option>
+                            <option value="GBEMA4PP" data-country-code="GB">
+                              East Midlands Airport (plants) - GBEMA4PP
+                            </option>
+                            <option value="GBEDI4PP" data-country-code="GB">
+                              Edinburgh Airport (plants) - GBEDI4PP
+                            </option>
+                            <option value="GBFSH4PP" data-country-code="GB">
+                              Fishguard Harbour (plants) (undesignated) - GBFSH4PP
+                            </option>
+                            <option value="GBFOL4PP" data-country-code="GB">
+                              Folkestone (plants) (undesignated) - GBFOL4PP
+                            </option>
+                            <option value="GBLGW4PP" data-country-code="GB">
+                              Gatwick Airport (plants) - GBLGW4PP
+                            </option>
+                            <option value="GBGLA4PP" data-country-code="GB">
+                              Glasgow Airport (plants) - GBGLA4PP
+                            </option>
+                            <option value="GBGOO4PP" data-country-code="GB">
+                              Goole Port (plants) (undesignated) - GBGOO4PP
+                            </option>
+                            <option value="GBGRP4PP" data-country-code="GB">
+                              Grangemouth Port (plants) - GBGRP4PP
+                            </option>
+                            <option value="GBGOT4PP" data-country-code="GB">
+                              Greenock Ocean Terminal (Peel Ports) (plants) (undesignated) - GBGOT4PP
+                            </option>
+                            <option value="GBGRM4PP" data-country-code="GB">
+                              Grimsby Port (plants) (undesignated) - GBGRM4PP
+                            </option>
+                            <option value="GBHRT4PP" data-country-code="GB">
+                              Hartlepool (plants) (undesignated) - GBHRT4PP
+                            </option>
+                            <option value="GBHCH4PP" data-country-code="GB">
+                              Harwich International Port (plants) - GBHCH4PP
+                            </option>
+                            <option value="GBLHR4PP" data-country-code="GB">
+                              Heathrow Airport (plants) - GBLHR4PP
+                            </option>
+                            <option value="GBHBT1PP" data-country-code="GB">
+                              HES Humber Bulk Terminal (Plant products, Other objects) - GBHBT1PP
+                            </option>
+                            <option value="GBHYS4PP" data-country-code="GB">
+                              Heysham Port (plants) (undesignated) - GBHYS4PP
+                            </option>
+                            <option value="GBHLY4PP" data-country-code="GB">
+                              Holyhead Port (plants) (undesignated) - GBHLY4PP
+                            </option>
+                            <option value="GBHLL4PP" data-country-code="GB">
+                              Hull Port (plants) (undesignated) - GBHLL4PP
+                            </option>
+                            <option value="GBIMM4PP" data-country-code="GB">
+                              Immingham Port (plants) (undesignated) - GBIMM4PP
+                            </option>
+                            <option value="GBIVG4PP" data-country-code="GB">
+                              Invergordon (plants) (undesignated) - GBIVG4PP
+                            </option>
+                            <option value="GBIVN4PP" data-country-code="GB">
+                              Inverness Harbour (plants) (undesignated) - GBIVN4PP
+                            </option>
+                            <option value="GBIPS4PP" data-country-code="GB">
+                              Ipswich Port  (plants) (undesignated) - GBIPS4PP
+                            </option>
+                            <option value="GBKLG4PP" data-country-code="GB">
+                              Killingholme Port (plants) (undesignated) - GBKLG4PP
+                            </option>
+                            <option value="GBKLP4PP" data-country-code="GB">
+                              Kings Lynn Port (plants) - GBKLP4PP
+                            </option>
+                            <option value="GBKRK4PP" data-country-code="GB">
+                              Kirkcaldy Port (plants) (undesignated) - GBKRK4PP
+                            </option>
+                            <option value="GBLBA4PP" data-country-code="GB">
+                              Leeds Bradford Airport (plants) (undesignated) - GBLBA4PP
+                            </option>
+                            <option value="GBLTH4PP" data-country-code="GB">
+                              Leith Port (plants) (undesignated) - GBLTH4PP
+                            </option>
+                            <option value="GBLPL4PP" data-country-code="GB">
+                              Liverpool John Lennon Airport (plants) (undesignated) - GBLPL4PP
+                            </option>
+                            <option value="GBLIV1PP" data-country-code="GB">
+                              Liverpool Port (plants) - GBLIV1PP
+                            </option>
+                            <option value="GBLGP1PP" data-country-code="GB">
+                              London Gateway (plants) - GBLGP1PP
+                            </option>
+                            <option value="GBTHP1PP" data-country-code="GB">
+                              London Thamesport (plants) - GBTHP1PP
+                            </option>
+                            <option value="GBLTN4PP" data-country-code="GB">
+                              Luton Airport (plants) - GBLTN4PP
+                            </option>
+                            <option value="GBMNC4PP" data-country-code="GB">
+                              Manchester Airport (plants) - GBMNC4PP
+                            </option>
+                            <option value="GBMTH4PP" data-country-code="GB">
+                              Methil Port (plants) (undesignated) - GBMTH4PP
+                            </option>
+                            <option value="GBMIL4PP" data-country-code="GB">
+                              Milford Haven (plants) (undesignated) - GBMIL4PP
+                            </option>
+                            <option value="GBMTR4PP" data-country-code="GB">
+                              Montrose Port  (plants) (undesignated) - GBMTR4PP
+                            </option>
+                            <option value="GBNCL4PP" data-country-code="GB">
+                              Newcastle Airport (plants) (undesignated) - GBNCL4PP
+                            </option>
+                            <option value="GBNCP4PP" data-country-code="GB">
+                              Newcastle Tyne Port (plants) (undesignated) - GBNCP4PP
+                            </option>
+                            <option value="GBNWH4PP" data-country-code="GB">
+                              Newhaven Port (plants) (undesignated) - GBNWH4PP
+                            </option>
+                            <option value="GBPEM4PP" data-country-code="GB">
+                              Pembroke Port (plants) (undesignated) - GBPEM4PP
+                            </option>
+                            <option value="GBPLH4PP" data-country-code="GB">
+                              Plymouth City Airport (plants) (undesignated) - GBPLH4PP
+                            </option>
+                            <option value="GBBOS4PP" data-country-code="GB">
+                              Port of Boston (plants) (undesignated) - GBBOS4PP
+                            </option>
+                            <option value="GBFXT1PP" data-country-code="GB">
+                              Port of Felixstowe (plants) - GBFXT1PP
+                            </option>
+                            <option value="GBPLP4PP" data-country-code="GB">
+                              Port of Plymouth (plants) (undesignated) - GBPLP4PP
+                            </option>
+                            <option value="GBPOP4PP" data-country-code="GB">
+                              Port of Poole  (Plants) - GBPOP4PP
+                            </option>
+                            <option value="GBPOS4PP" data-country-code="GB">
+                              Port of Silloth (plants) (undesignated) - GBPOS4PP
+                            </option>
+                            <option value="GBPME1PP" data-country-code="GB">
+                              Portsmouth (plants) - GBPME1PP
+                            </option>
+                            <option value="GBPFP4PP" data-country-code="GB">
+                              Purfeet Port (plants) (undesignated) - GBPFP4PP
+                            </option>
+                            <option value="GBROS4PP" data-country-code="GB">
+                              Rosyth Port (plants) (undesignated) - GBROS4PP
+                            </option>
+                            <option value="GBSNP4PP" data-country-code="GB">
+                              Sheerness Port (plants) (undesignated) - GBSNP4PP
+                            </option>
+                            <option value="GBSHP4PP" data-country-code="GB">
+                              Shoreham Port (plants) - GBSHP4PP
+                            </option>
+                            <option value="GBSOU1PP" data-country-code="GB">
+                              Southampton (plants) - GBSOU1PP
+                            </option>
+                            <option value="GBSTN4PP" data-country-code="GB">
+                              Stansted Airport (plants) - GBSTN4PP
+                            </option>
+                            <option value="GBTES4PP" data-country-code="GB">
+                              Teesport (plants) (undesignated) - GBTES4PP
+                            </option>
+                            <option value="GBTEE4PP" data-country-code="GB">
+                              Teesside International Airport Limited (plant products) - GBTEE4PP
+                            </option>
+                            <option value="GBTLB4PP" data-country-code="GB">
+                              Tilbury 2 Ro-Ro Terminal (plants) (undesignated) - GBTLB4PP
+                            </option>
+                            <option value="GBTIL1PP" data-country-code="GB">
+                              Tilbury Port (plants) - GBTIL1PP
+                            </option>
+                            <option value="GBDNU1" data-country-code="GB">
+                              X Do Not Use X - GBDNU1
+                            </option>
+                        </select>
+                      </div>
+
+                    <div class="govuk-form-group">
+                      <span id="transit-third-countries" class="govuk-label govuk-label--s">Transited country</span>
+                      <div id="transit-third-country-container">
+                          <div class="govuk-form-group ">
+                            <select class="govuk-select govuk-!-width-full" id="transit-third-countries-last" name="transit-third-countries">
+                              <option value="">Select transited country</option>
+                                          <option value="AF">Afghanistan</option>
+                                          <option value="AX">Aland Islands</option>
+                                          <option value="AL">Albania</option>
+                                          <option value="DZ">Algeria</option>
+                                          <option value="AS">American Samoa</option>
+                                          <option value="AD">Andorra</option>
+                                          <option value="AO">Angola</option>
+                                          <option value="AI">Anguilla</option>
+                                          <option value="AQ">Antarctica</option>
+                                          <option value="AG">Antigua and Barbuda</option>
+                                          <option value="AR">Argentina</option>
+                                          <option value="AM">Armenia</option>
+                                          <option value="AW">Aruba</option>
+                                          <option value="AU">Australia</option>
+                                          <option value="AT">Austria</option>
+                                          <option value="AZ">Azerbaijan</option>
+                                          <option value="BS">Bahamas</option>
+                                          <option value="BH">Bahrain</option>
+                                          <option value="BD">Bangladesh</option>
+                                          <option value="BB">Barbados</option>
+                                          <option value="BY">Belarus</option>
+                                          <option value="BE">Belgium</option>
+                                          <option value="BZ">Belize</option>
+                                          <option value="BJ">Benin</option>
+                                          <option value="BM">Bermuda</option>
+                                          <option value="BT">Bhutan</option>
+                                          <option value="BO">Bolivia</option>
+                                          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                          <option value="BA">Bosnia and Herzegovina</option>
+                                          <option value="BW">Botswana</option>
+                                          <option value="BV">Bouvet Island</option>
+                                          <option value="BR">Brazil</option>
+                                          <option value="IO">British Indian Ocean Territory</option>
+                                          <option value="VG">British Virgin Islands</option>
+                                          <option value="BN">Brunei</option>
+                                          <option value="BG">Bulgaria</option>
+                                          <option value="BF">Burkina Faso</option>
+                                          <option value="BI">Burundi</option>
+                                          <option value="KH">Cambodia</option>
+                                          <option value="CM">Cameroon</option>
+                                          <option value="CA">Canada</option>
+                                          <option value="ES-CN">Canary Islands</option>
+                                          <option value="CV">Cape Verde</option>
+                                          <option value="KY">Cayman Islands</option>
+                                          <option value="CF">Central African Republic</option>
+                                          <option value="TD">Chad</option>
+                                          <option value="CL">Chile</option>
+                                          <option value="CN">China</option>
+                                          <option value="CX">Christmas Island</option>
+                                          <option value="CC">Cocos (Keeling) Islands</option>
+                                          <option value="CO">Colombia</option>
+                                          <option value="KM">Comoros</option>
+                                          <option value="CG">Congo</option>
+                                          <option value="CK">Cook Islands</option>
+                                          <option value="CR">Costa Rica</option>
+                                          <option value="CI">Côte d'Ivoire</option>
+                                          <option value="HR">Croatia</option>
+                                          <option value="CU">Cuba</option>
+                                          <option value="CW">Curaçao</option>
+                                          <option value="CY">Cyprus</option>
+                                          <option value="CZ">Czech Republic</option>
+                                          <option value="CD">Democratic Republic of the Congo</option>
+                                          <option value="DK">Denmark</option>
+                                          <option value="DJ">Djibouti</option>
+                                          <option value="DM">Dominica</option>
+                                          <option value="DO">Dominican Republic</option>
+                                          <option value="EC">Ecuador</option>
+                                          <option value="EG">Egypt</option>
+                                          <option value="SV">El Salvador</option>
+                                          <option value="GQ">Equatorial Guinea</option>
+                                          <option value="ER">Eritrea</option>
+                                          <option value="EE">Estonia</option>
+                                          <option value="SZ">Eswatini</option>
+                                          <option value="ET">Ethiopia</option>
+                                          <option value="FK">Falkland Islands</option>
+                                          <option value="FO">Faroe Islands</option>
+                                          <option value="FJ">Fiji</option>
+                                          <option value="FI">Finland</option>
+                                          <option value="FR">France</option>
+                                          <option value="GF">French Guiana</option>
+                                          <option value="PF">French Polynesia</option>
+                                          <option value="TF">French Southern Territories</option>
+                                          <option value="GA">Gabon</option>
+                                          <option value="GE">Georgia</option>
+                                          <option value="DE">Germany</option>
+                                          <option value="GH">Ghana</option>
+                                          <option value="GI">Gibraltar</option>
+                                          <option value="GR">Greece</option>
+                                          <option value="GL">Greenland</option>
+                                          <option value="GD">Grenada</option>
+                                          <option value="GP">Guadeloupe</option>
+                                          <option value="GU">Guam</option>
+                                          <option value="GT">Guatemala</option>
+                                          <option value="GG">Guernsey</option>
+                                          <option value="GN">Guinea</option>
+                                          <option value="GW">Guinea-Bissau</option>
+                                          <option value="GY">Guyana</option>
+                                          <option value="HT">Haiti</option>
+                                          <option value="HM">Heard Island and McDonald Islands</option>
+                                          <option value="VA">Holy See</option>
+                                          <option value="HN">Honduras</option>
+                                          <option value="HK">Hong Kong</option>
+                                          <option value="HU">Hungary</option>
+                                          <option value="IS">Iceland</option>
+                                          <option value="IN">India</option>
+                                          <option value="ID">Indonesia</option>
+                                          <option value="IR">Iran</option>
+                                          <option value="IQ">Iraq</option>
+                                          <option value="IM">Isle of Man</option>
+                                          <option value="IL">Israel</option>
+                                          <option value="IT">Italy</option>
+                                          <option value="JM">Jamaica</option>
+                                          <option value="JP">Japan</option>
+                                          <option value="JE">Jersey</option>
+                                          <option value="JO">Jordan</option>
+                                          <option value="KZ">Kazakhstan</option>
+                                          <option value="KE">Kenya</option>
+                                          <option value="KI">Kiribati</option>
+                                          <option value="XK">Kosovo</option>
+                                          <option value="KW">Kuwait</option>
+                                          <option value="KG">Kyrgyzstan</option>
+                                          <option value="LA">Laos</option>
+                                          <option value="LV">Latvia</option>
+                                          <option value="LB">Lebanon</option>
+                                          <option value="LS">Lesotho</option>
+                                          <option value="LR">Liberia</option>
+                                          <option value="LY">Libya</option>
+                                          <option value="LI">Liechtenstein</option>
+                                          <option value="LT">Lithuania</option>
+                                          <option value="LU">Luxembourg</option>
+                                          <option value="MO">Macao</option>
+                                          <option value="MG">Madagascar</option>
+                                          <option value="MW">Malawi</option>
+                                          <option value="MY">Malaysia</option>
+                                          <option value="MV">Maldives</option>
+                                          <option value="ML">Mali</option>
+                                          <option value="MT">Malta</option>
+                                          <option value="MH">Marshall Islands</option>
+                                          <option value="MQ">Martinique</option>
+                                          <option value="MR">Mauritania</option>
+                                          <option value="MU">Mauritius</option>
+                                          <option value="YT">Mayotte</option>
+                                          <option value="MX">Mexico</option>
+                                          <option value="FM">Micronesia</option>
+                                          <option value="MD">Moldova</option>
+                                          <option value="MC">Monaco</option>
+                                          <option value="MN">Mongolia</option>
+                                          <option value="ME">Montenegro</option>
+                                          <option value="MS">Montserrat</option>
+                                          <option value="MA">Morocco</option>
+                                          <option value="MZ">Mozambique</option>
+                                          <option value="MM">Myanmar</option>
+                                          <option value="NA">Namibia</option>
+                                          <option value="NR">Nauru</option>
+                                          <option value="NP">Nepal</option>
+                                          <option value="NL">Netherlands</option>
+                                          <option value="NC">New Caledonia</option>
+                                          <option value="NZ">New Zealand</option>
+                                          <option value="NI">Nicaragua</option>
+                                          <option value="NE">Niger</option>
+                                          <option value="NG">Nigeria</option>
+                                          <option value="NU">Niue</option>
+                                          <option value="NF">Norfolk Island</option>
+                                          <option value="KP">North Korea</option>
+                                          <option value="MK">North Macedonia</option>
+                                          <option value="MP">Northern Mariana Islands</option>
+                                          <option value="NO">Norway</option>
+                                          <option value="OM">Oman</option>
+                                          <option value="PK">Pakistan</option>
+                                          <option value="PW">Palau</option>
+                                          <option value="PA">Panama</option>
+                                          <option value="PG">Papua New Guinea</option>
+                                          <option value="PY">Paraguay</option>
+                                          <option value="PE">Peru</option>
+                                          <option value="PH">Philippines</option>
+                                          <option value="PN">Pitcairn</option>
+                                          <option value="PL">Poland</option>
+                                          <option value="PT">Portugal</option>
+                                          <option value="PR">Puerto Rico</option>
+                                          <option value="QA">Qatar</option>
+                                          <option value="IE">Republic of Ireland</option>
+                                          <option value="RE">Réunion</option>
+                                          <option value="RO">Romania</option>
+                                          <option value="RU">Russian Federation</option>
+                                          <option value="RW">Rwanda</option>
+                                          <option value="WS">Samoa</option>
+                                          <option value="SM">San Marino</option>
+                                          <option value="ST">Sao Tome and Principe</option>
+                                          <option value="SA">Saudi Arabia</option>
+                                          <option value="SN">Senegal</option>
+                                          <option value="RS">Serbia</option>
+                                          <option value="SC">Seychelles</option>
+                                          <option value="SL">Sierra Leone</option>
+                                          <option value="SG">Singapore</option>
+                                          <option value="SK">Slovakia</option>
+                                          <option value="SI">Slovenia</option>
+                                          <option value="SB">Solomon Islands</option>
+                                          <option value="SO">Somalia</option>
+                                          <option value="ZA">South Africa</option>
+                                          <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                          <option value="KR">South Korea</option>
+                                          <option value="SS">South Sudan</option>
+                                          <option value="ES">Spain</option>
+                                          <option value="LK">Sri Lanka</option>
+                                          <option value="BL">St Barthélemy</option>
+                                          <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                                          <option value="KN">St Kitts and Nevis</option>
+                                          <option value="LC">St Lucia</option>
+                                          <option value="SX">St Maarten (Dutch)</option>
+                                          <option value="MF">St Martin (French)</option>
+                                          <option value="PM">St Pierre and Miquelon</option>
+                                          <option value="VC">St Vincent and the Grenadines</option>
+                                          <option value="SD">Sudan</option>
+                                          <option value="SR">Suriname</option>
+                                          <option value="SE">Sweden</option>
+                                          <option value="CH">Switzerland</option>
+                                          <option value="SY">Syria</option>
+                                          <option value="TW">Taiwan</option>
+                                          <option value="TJ">Tajikistan</option>
+                                          <option value="TZ">Tanzania</option>
+                                          <option value="TH">Thailand</option>
+                                          <option value="GM">The Gambia</option>
+                                          <option value="PS">The Occupied Palestinian Territories</option>
+                                          <option value="TL">Timor-Leste</option>
+                                          <option value="TG">Togo</option>
+                                          <option value="TK">Tokelau</option>
+                                          <option value="TO">Tonga</option>
+                                          <option value="TT">Trinidad and Tobago</option>
+                                          <option value="TN">Tunisia</option>
+                                          <option value="TR">Turkey</option>
+                                          <option value="TM">Turkmenistan</option>
+                                          <option value="TC">Turks and Caicos Islands</option>
+                                          <option value="TV">Tuvalu</option>
+                                          <option value="UG">Uganda</option>
+                                          <option value="UA">Ukraine</option>
+                                          <option value="AE">United Arab Emirates</option>
+                                          <option value="UM">United States Minor Outlying Islands</option>
+                                          <option value="US">United States of America</option>
+                                          <option value="UY">Uruguay</option>
+                                          <option value="UZ">Uzbekistan</option>
+                                          <option value="VU">Vanuatu</option>
+                                          <option value="VE">Venezuela</option>
+                                          <option value="VN">Viet Nam</option>
+                                          <option value="VI">Virgin Islands of the United States</option>
+                                          <option value="WF">Wallis and Futuna</option>
+                                          <option value="EH">Western Sahara</option>
+                                          <option value="YE">Yemen</option>
+                                          <option value="ZM">Zambia</option>
+                                          <option value="ZW">Zimbabwe</option>
+                            </select>
+                          </div>
+                      </div>
+                          <button class="link-button" id="add-another-country" type="submit" name="action" value="transit-third-countries-add">
+                            Add another country
+                          </button>
+                    </div>
+                      <div class="govuk-form-group  ">
+                        <label class="govuk-label govuk-label--s" for="third-country-transit">
+                            Destination country
+                        </label>
+                        
+                        <select class="govuk-select govuk-!-width-full" id="third-country-transit" name="third-country-transit">
+                            <option value="">Select destination country</option>
+                              <option value="AF">Afghanistan</option>
+                              <option value="AX">Aland Islands</option>
+                              <option value="AL">Albania</option>
+                              <option value="DZ">Algeria</option>
+                              <option value="AS">American Samoa</option>
+                              <option value="AD">Andorra</option>
+                              <option value="AO">Angola</option>
+                              <option value="AI">Anguilla</option>
+                              <option value="AQ">Antarctica</option>
+                              <option value="AG">Antigua and Barbuda</option>
+                              <option value="AR">Argentina</option>
+                              <option value="AM">Armenia</option>
+                              <option value="AW">Aruba</option>
+                              <option value="AU">Australia</option>
+                              <option value="AT">Austria</option>
+                              <option value="AZ">Azerbaijan</option>
+                              <option value="BS">Bahamas</option>
+                              <option value="BH">Bahrain</option>
+                              <option value="BD">Bangladesh</option>
+                              <option value="BB">Barbados</option>
+                              <option value="BY">Belarus</option>
+                              <option value="BE">Belgium</option>
+                              <option value="BZ">Belize</option>
+                              <option value="BJ">Benin</option>
+                              <option value="BM">Bermuda</option>
+                              <option value="BT">Bhutan</option>
+                              <option value="BO">Bolivia</option>
+                              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                              <option value="BA">Bosnia and Herzegovina</option>
+                              <option value="BW">Botswana</option>
+                              <option value="BV">Bouvet Island</option>
+                              <option value="BR">Brazil</option>
+                              <option value="IO">British Indian Ocean Territory</option>
+                              <option value="VG">British Virgin Islands</option>
+                              <option value="BN">Brunei</option>
+                              <option value="BG">Bulgaria</option>
+                              <option value="BF">Burkina Faso</option>
+                              <option value="BI">Burundi</option>
+                              <option value="KH">Cambodia</option>
+                              <option value="CM">Cameroon</option>
+                              <option value="CA">Canada</option>
+                              <option value="ES-CN">Canary Islands</option>
+                              <option value="CV">Cape Verde</option>
+                              <option value="KY">Cayman Islands</option>
+                              <option value="CF">Central African Republic</option>
+                              <option value="TD">Chad</option>
+                              <option value="CL">Chile</option>
+                              <option value="CN">China</option>
+                              <option value="CX">Christmas Island</option>
+                              <option value="CC">Cocos (Keeling) Islands</option>
+                              <option value="CO">Colombia</option>
+                              <option value="KM">Comoros</option>
+                              <option value="CG">Congo</option>
+                              <option value="CK">Cook Islands</option>
+                              <option value="CR">Costa Rica</option>
+                              <option value="CI">Côte d'Ivoire</option>
+                              <option value="HR">Croatia</option>
+                              <option value="CU">Cuba</option>
+                              <option value="CW">Curaçao</option>
+                              <option value="CY">Cyprus</option>
+                              <option value="CZ">Czech Republic</option>
+                              <option value="CD">Democratic Republic of the Congo</option>
+                              <option value="DK">Denmark</option>
+                              <option value="DJ">Djibouti</option>
+                              <option value="DM">Dominica</option>
+                              <option value="DO">Dominican Republic</option>
+                              <option value="EC">Ecuador</option>
+                              <option value="EG">Egypt</option>
+                              <option value="SV">El Salvador</option>
+                              <option value="GQ">Equatorial Guinea</option>
+                              <option value="ER">Eritrea</option>
+                              <option value="EE">Estonia</option>
+                              <option value="SZ">Eswatini</option>
+                              <option value="ET">Ethiopia</option>
+                              <option value="FK">Falkland Islands</option>
+                              <option value="FO">Faroe Islands</option>
+                              <option value="FJ">Fiji</option>
+                              <option value="FI">Finland</option>
+                              <option value="FR">France</option>
+                              <option value="GF">French Guiana</option>
+                              <option value="PF">French Polynesia</option>
+                              <option value="TF">French Southern Territories</option>
+                              <option value="GA">Gabon</option>
+                              <option value="GE">Georgia</option>
+                              <option value="DE">Germany</option>
+                              <option value="GH">Ghana</option>
+                              <option value="GI">Gibraltar</option>
+                              <option value="GR">Greece</option>
+                              <option value="GL">Greenland</option>
+                              <option value="GD">Grenada</option>
+                              <option value="GP">Guadeloupe</option>
+                              <option value="GU">Guam</option>
+                              <option value="GT">Guatemala</option>
+                              <option value="GG">Guernsey</option>
+                              <option value="GN">Guinea</option>
+                              <option value="GW">Guinea-Bissau</option>
+                              <option value="GY">Guyana</option>
+                              <option value="HT">Haiti</option>
+                              <option value="HM">Heard Island and McDonald Islands</option>
+                              <option value="VA">Holy See</option>
+                              <option value="HN">Honduras</option>
+                              <option value="HK">Hong Kong</option>
+                              <option value="HU">Hungary</option>
+                              <option value="IS">Iceland</option>
+                              <option value="IN">India</option>
+                              <option value="ID">Indonesia</option>
+                              <option value="IR">Iran</option>
+                              <option value="IQ">Iraq</option>
+                              <option value="IM">Isle of Man</option>
+                              <option value="IL">Israel</option>
+                              <option value="IT">Italy</option>
+                              <option value="JM">Jamaica</option>
+                              <option value="JP">Japan</option>
+                              <option value="JE">Jersey</option>
+                              <option value="JO">Jordan</option>
+                              <option value="KZ">Kazakhstan</option>
+                              <option value="KE">Kenya</option>
+                              <option value="KI">Kiribati</option>
+                              <option value="XK">Kosovo</option>
+                              <option value="KW">Kuwait</option>
+                              <option value="KG">Kyrgyzstan</option>
+                              <option value="LA">Laos</option>
+                              <option value="LV">Latvia</option>
+                              <option value="LB">Lebanon</option>
+                              <option value="LS">Lesotho</option>
+                              <option value="LR">Liberia</option>
+                              <option value="LY">Libya</option>
+                              <option value="LI">Liechtenstein</option>
+                              <option value="LT">Lithuania</option>
+                              <option value="LU">Luxembourg</option>
+                              <option value="MO">Macao</option>
+                              <option value="MG">Madagascar</option>
+                              <option value="MW">Malawi</option>
+                              <option value="MY">Malaysia</option>
+                              <option value="MV">Maldives</option>
+                              <option value="ML">Mali</option>
+                              <option value="MT">Malta</option>
+                              <option value="MH">Marshall Islands</option>
+                              <option value="MQ">Martinique</option>
+                              <option value="MR">Mauritania</option>
+                              <option value="MU">Mauritius</option>
+                              <option value="YT">Mayotte</option>
+                              <option value="MX">Mexico</option>
+                              <option value="FM">Micronesia</option>
+                              <option value="MD">Moldova</option>
+                              <option value="MC">Monaco</option>
+                              <option value="MN">Mongolia</option>
+                              <option value="ME">Montenegro</option>
+                              <option value="MS">Montserrat</option>
+                              <option value="MA">Morocco</option>
+                              <option value="MZ">Mozambique</option>
+                              <option value="MM">Myanmar</option>
+                              <option value="NA">Namibia</option>
+                              <option value="NR">Nauru</option>
+                              <option value="NP">Nepal</option>
+                              <option value="NL">Netherlands</option>
+                              <option value="NC">New Caledonia</option>
+                              <option value="NZ">New Zealand</option>
+                              <option value="NI">Nicaragua</option>
+                              <option value="NE">Niger</option>
+                              <option value="NG">Nigeria</option>
+                              <option value="NU">Niue</option>
+                              <option value="NF">Norfolk Island</option>
+                              <option value="KP">North Korea</option>
+                              <option value="MK">North Macedonia</option>
+                              <option value="MP">Northern Mariana Islands</option>
+                              <option value="NO">Norway</option>
+                              <option value="OM">Oman</option>
+                              <option value="PK">Pakistan</option>
+                              <option value="PW">Palau</option>
+                              <option value="PA">Panama</option>
+                              <option value="PG">Papua New Guinea</option>
+                              <option value="PY">Paraguay</option>
+                              <option value="PE">Peru</option>
+                              <option value="PH">Philippines</option>
+                              <option value="PN">Pitcairn</option>
+                              <option value="PL">Poland</option>
+                              <option value="PT">Portugal</option>
+                              <option value="PR">Puerto Rico</option>
+                              <option value="QA">Qatar</option>
+                              <option value="IE">Republic of Ireland</option>
+                              <option value="RE">Réunion</option>
+                              <option value="RO">Romania</option>
+                              <option value="RU">Russian Federation</option>
+                              <option value="RW">Rwanda</option>
+                              <option value="WS">Samoa</option>
+                              <option value="SM">San Marino</option>
+                              <option value="ST">Sao Tome and Principe</option>
+                              <option value="SA">Saudi Arabia</option>
+                              <option value="SN">Senegal</option>
+                              <option value="RS">Serbia</option>
+                              <option value="SC">Seychelles</option>
+                              <option value="SL">Sierra Leone</option>
+                              <option value="SG">Singapore</option>
+                              <option value="SK">Slovakia</option>
+                              <option value="SI">Slovenia</option>
+                              <option value="SB">Solomon Islands</option>
+                              <option value="SO">Somalia</option>
+                              <option value="ZA">South Africa</option>
+                              <option value="GS">South Georgia and the South Sandwich Islands</option>
+                              <option value="KR">South Korea</option>
+                              <option value="SS">South Sudan</option>
+                              <option value="ES">Spain</option>
+                              <option value="LK">Sri Lanka</option>
+                              <option value="BL">St Barthélemy</option>
+                              <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                              <option value="KN">St Kitts and Nevis</option>
+                              <option value="LC">St Lucia</option>
+                              <option value="SX">St Maarten (Dutch)</option>
+                              <option value="MF">St Martin (French)</option>
+                              <option value="PM">St Pierre and Miquelon</option>
+                              <option value="VC">St Vincent and the Grenadines</option>
+                              <option value="SD">Sudan</option>
+                              <option value="SR">Suriname</option>
+                              <option value="SE">Sweden</option>
+                              <option value="CH">Switzerland</option>
+                              <option value="SY">Syria</option>
+                              <option value="TW">Taiwan</option>
+                              <option value="TJ">Tajikistan</option>
+                              <option value="TZ">Tanzania</option>
+                              <option value="TH">Thailand</option>
+                              <option value="GM">The Gambia</option>
+                              <option value="PS">The Occupied Palestinian Territories</option>
+                              <option value="TL">Timor-Leste</option>
+                              <option value="TG">Togo</option>
+                              <option value="TK">Tokelau</option>
+                              <option value="TO">Tonga</option>
+                              <option value="TT">Trinidad and Tobago</option>
+                              <option value="TN">Tunisia</option>
+                              <option value="TR">Turkey</option>
+                              <option value="TM">Turkmenistan</option>
+                              <option value="TC">Turks and Caicos Islands</option>
+                              <option value="TV">Tuvalu</option>
+                              <option value="UG">Uganda</option>
+                              <option value="UA">Ukraine</option>
+                              <option value="AE">United Arab Emirates</option>
+                              <option value="UM">United States Minor Outlying Islands</option>
+                              <option value="US">United States of America</option>
+                              <option value="UY">Uruguay</option>
+                              <option value="UZ">Uzbekistan</option>
+                              <option value="VU">Vanuatu</option>
+                              <option value="VE">Venezuela</option>
+                              <option value="VN">Viet Nam</option>
+                              <option value="VI">Virgin Islands of the United States</option>
+                              <option value="WF">Wallis and Futuna</option>
+                              <option value="EH">Western Sahara</option>
+                              <option value="YE">Yemen</option>
+                              <option value="ZM">Zambia</option>
+                              <option value="ZW">Zimbabwe</option>
+                        </select>
+                      </div>
+                  </div>
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-private-import" name="purpose" type="radio" value="private-import">
+                  <label class="govuk-label govuk-radios__label" for="radio-private-import">
+                    Private import
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-transfer" name="purpose" type="radio" value="transfer">
+                  <label class="govuk-label govuk-radios__label" for="radio-transfer">
+                    Transfer to
+                  </label>
+                </div>
+
+
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-reconformity" name="purpose" type="radio" value="reconformity">
+                  <label class="govuk-label govuk-radios__label" for="radio-reconformity">
+                    For import re-conformity check
+                  </label>
+                </div>
+            </div>
+          </fieldset>
+        </div>
+
+            <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+      </form>
+    </div>
+  </div>
+  <script src="/notification/vnet/public/javascripts/consignment_purpose.js?v=1.0.2945"></script>
+</main>
+
+{% endblock %}
