@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy-Inspector Tester</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state"
+         id="address-book-link"
+         href="/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state"
+         id="sign-out-link"
+         href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" id="confirmation-page">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="importing" method="post" id="homeForm">
+      <input name="crumb" type="hidden" value="w4ED1WtIX1Ebvknho4SuSdmxQCda0whOhDh3w3Sj6M5">
+      <input name="etag" type="hidden" value="&quot;00000000001CDA23&quot;">
+
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6" id="eu-cheda-confirmation-panel">
+        <h1 class="govuk-panel__title">Your notification has been submitted</h1>
+        <div class="govuk-panel__body">
+          Your reference number<br>
+          <strong class="bold">
+            <span id="reference-number">CHEDD.GB.2023.2987635</span>
+            <span id="version-number"> - V1</span>
+          </strong>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">What you need to do next</h2>
+      <p class="govuk-body">
+        Make sure the consignment goes directly to the place of destination on arriving in Great Britain.
+      </p>
+
+      <h2 class="govuk-heading-m">How to view or amend this notification</h2>
+      <p class="govuk-body">
+        You can access or amend this notification from your dashboard.
+      </p>
+
+      <div>
+        <a href="0-index" class="govuk-link govuk-!-font-size-19" id="manage-notifications">
+          Return to your dashboard
+        </a>
+      </div>
+      <div>
+        <input class="link-button" type="submit" name="new-notification" value="Create a new import notification">
+      </div>
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}

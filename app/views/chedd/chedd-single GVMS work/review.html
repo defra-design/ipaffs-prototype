@@ -1,0 +1,375 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+
+{% block content %}
+
+  <span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
+  <div class="govuk-hint govuk-!-margin-bottom-6"></div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+      <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>
+
+
+      <div class="audit-flag">
+        <div id="last-submission-date">Submitted on: </div>
+        <div id="submitted-by">Submitted by: </div>
+        <div id="last-updated-date">Last updated: 16 July 2023, 19:17</div>
+        <div id="last-updated-by">Last updated by: Andrew Inspector-Tester</div>
+      </div>
+
+      <h2 class="govuk-heading-m">About the consignment</h2>
+
+
+      <div class="table-responsive">
+        <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
+          <tbody>
+          <tr class="presentation-table__section">
+            <td class="govuk-table__header">Import type</td>
+            <td class="govuk-table__cell">High risk food of non-animal origin</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="presentation-table__section">
+            <td class="govuk-table__header">Country of origin</td>
+            <td class="govuk-table__cell">Spain</td>
+            <td class="govuk-table__cell change">
+              <a href="origin-import" class="govuk-link" id="country-of-origin-change-link">
+                Change
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="govuk-table__header">Country from where consigned</td>
+            <td class="govuk-table__cell">Spain</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr>
+            <td class="govuk-table__header">Consignment reference number</td>
+            <td class="govuk-table__cell">REF123456</td>
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+
+        
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="govuk-grid-row">
+        <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-grid-column-one-half">Description of the goods</h2>
+      </div>
+
+      <div class="table-responsive">
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-0" role="presentation">
+          <tbody class="govuk-table__head">
+          <tr class="presentation-table__section">
+            <th scope="row" class="govuk-table__header ">Commodity code</th>
+            <td class="govuk-table__cell">05119190</td>
+            <td class="govuk-table__cell change">
+              <a href="commodity-details" class="govuk-link" id="commodity-change-link-0">Change</a>
+            </td>
+          </tr>
+          <tr></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="govuk-table presentation-table data-table-commodities" id="review-table-consignment-0">
+          <thead class="govuk-table__head">
+          <tr>
+            <th scope="col" class="govuk-table__header weight">Net weight</th>
+            <th scope="col" class="govuk-table__header packages">Packages</th>
+            <th scope="col" class="govuk-table__header package-type">Package type</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class=" ">
+            <td class="govuk-table__cell">45 kg/units</td>
+            </td>
+            <td class="govuk-table__cell">5</td>
+            <td class="govuk-table__cell">Bag</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <div class="table-responsive govuk-!-margin-bottom-9">
+        <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
+          <tbody>
+          <tr class="presentation-table__row--no-border ">
+            <td class="govuk-table__header">Total net weight</td>
+            <td class="govuk-table__cell">45 kg/units</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="govuk-table__header">Total packages</td>
+            <td class="govuk-table__cell">5</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="govuk-table__header">Total gross weight (kg/units)</td>
+            <td class="govuk-table__cell">45 kg/units</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="heading-with-change-link">
+        <h2 class="govuk-heading-m">Additional details</h2>
+        <a href="additional-details" class="govuk-link" id="responsible-person-contact-details-change-link">
+          Change
+        </a>
+      </div>
+      <div class="table-responsive">
+        
+      <div class="govuk-!-margin-bottom-9 table-responsive">
+        <table class="govuk-table presentation-table review-table" id="responsible-person-contact-details-table">
+          <caption class="govuk-visually-hidden">Commodity intended for</caption>
+          <tr>
+            <td class="govuk-table__header">Commodity intended for</td>
+            <td class="govuk-table__cell">Other</td>
+              
+              {{ data['commodity-intended-for'] }}
+            </td>
+          </tr>
+          <tr class="">
+            <td class="govuk-table__header">Temperature</td>
+            <td class="govuk-table__cell" colspan="2">{{ data['temperature'] }}</td>
+          </tr>
+          <tr>
+            <td class="govuk-table__header">Will your goods be imported in shipping containers?</td>
+            <td class="govuk-table__cell" id="imported-in-containers" colspan="2">
+              {{ data['consignment-in-container'] }}
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      
+
+
+      <div class="govuk-!-margin-bottom-9" id="accompanying-documents-section">
+        <h2 class="govuk-heading-m" id="accompanying-documents-heading">Documents</h2>
+
+
+
+        <div class="heading-with-change-link">
+          <h3 class="govuk-heading-s">Accompanying documents</h3>
+          <a class="govuk-link" id="documents-change-link" href="accompanying-documents">
+            Change
+          </a>
+        </div>
+
+        <div class="table-responsive">
+          <table id="additional-documents-table" class="govuk-table presentation-table review-additional-documents-table">
+            <thead class="govuk-table__head">
+            <tr>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tr>
+          </thead>
+          <tbody>
+          <tr class=" ">
+            <td class="govuk-table__cell">airWaybill</td>
+            </td>
+            <td class="govuk-table__cell">AIR123</td>
+            <td class="govuk-table__cell">1 November 2023</td>
+            <td class="govuk-table__cell">airWaybill</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+            <tr class="presentation-table__section ">
+              <td class="govuk-table__cell" id="veterinary-document-type-1">
+                {{ data['document-type'] }}
+              </td>
+              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
+                {{ data['document-reference'] }}
+              </td>
+              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
+                {{ data['document-issue-date-day'] }}
+                {{ data['document-issue-date-month'] }}
+                {{ data['document-issue-date-year'] }}
+              </td>
+              <td class="govuk-table__cell">
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      
+
+      
+         <h2 class="govuk-heading-m">Traders</h2>
+
+        <div class="table-responsive govuk-!-margin-bottom-9">
+        <table class="govuk-table presentation-table review-table" id="review-table-traders" role="presentation">
+          <tbody>
+          <tr class="">
+            <td class="govuk-table__header govuk-!-width-one-half">Consignor or exporter</td>
+            <td class="govuk-table__cell" id="consignor">
+              1b51c36ae48e489e9009a7e71c77e25a<br>
+              703 Odessa Common, Suite 446, Michigan, Patiencestad, 18245, Germany, 01615555555, ukoperator@email.com
+            </td>
+            <td class="govuk-table__cell change">
+              <a href="addresses" class="govuk-link" id="traders-change-link">
+                Change
+              </a>
+            </td>
+          </tr>
+          <tr class="">
+            <td class="govuk-table__header govuk-!-width-one-half">Consignee</td>
+            <td class="govuk-table__cell" id="consignee">
+              9107b07292cd42c7a983441b38ae6f73<br>
+              79791 Morton Branch, Apt. 848, Maryland, West Gavinburgh, 05368, United Kingdom of Great Britain and Northern Ireland, 01615555555, ukoperator@email.com
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="">
+            <td class="govuk-table__header govuk-!-width-one-half">Importer</td>
+            <td class="govuk-table__cell" id="importer">
+              9107b07292cd42c7a983441b38ae6f73<br>
+              79791 Morton Branch, Apt. 848, Maryland, West Gavinburgh, 05368, United Kingdom of Great Britain and Northern Ireland, 01615555555, ukoperator@email.com</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="">
+            <td class="govuk-table__header govuk-!-width-one-half">
+              Place of Destination
+            </td>
+            <td class="govuk-table__cell" id="final-destination">
+              9107b07292cd42c7a983441b38ae6f73<br>
+              79791 Morton Branch, Apt. 848, Maryland, West Gavinburgh, 05368, United Kingdom of Great Britain and Northern Ireland, 01615555555, ukoperator@email.com
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="heading-with-change-link" >
+        <h2 class="govuk-heading-m">Transport to the port of entry</h2>
+        <a href="poe-transport" class="govuk-link" id="transport-to-bip-change-link">
+          Change
+        </a>
+      </div>
+
+      <div class="table-responsive govuk-!-margin-bottom-9">
+        <table class="govuk-table presentation-table review-table" id="review-table-bip-details" role="presentation">
+          <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
+          <tbody>
+          <tr class="">
+            <th scope="row" class="govuk-table__header">Port of entry</th>
+            <td class="govuk-table__cell">Birmingham International Airport</td>
+          </tr>
+          <tr class="">
+            <th scope="row" class="govuk-table__header">Means of transport to port of entry</th>
+            <td class="govuk-table__cell">Airplane</td>
+          </tr>
+          <tr class="">
+            <th scope="row" class="govuk-table__header">Identification</th>
+            <td class="govuk-table__cell">123</td>
+          </tr>
+          <tr class="">
+            <th scope="row" class="govuk-table__header">Document</th>
+            <td class="govuk-table__cell">airWaybill</td>
+          </tr>
+          <tr class="">
+            <th scope="row" class="govuk-table__header">Estimated arrival date at port of entry</th>
+            <td class="govuk-table__cell">22 March 2023</td>
+          </tr>
+          <tr class="">
+            <th scope="row" class="govuk-table__header">Estimated arrival time at port of entry</th>
+            <td class="govuk-table__cell">14:25<td></td>
+              {{ data['departure-issue-date-day'] }}
+              {{ data['departure-issue-date-month'] }}
+              {{ data['departure-issue-date-year'] }}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="heading-with-change-link">
+        <h2 class="govuk-heading-m">Contact details</h2>
+        <a href="contact-details" class="govuk-link" id="responsible-person-contact-details-change-link">
+          Change
+        </a>
+      </div>
+      <div class="govuk-!-margin-bottom-9 table-responsive">
+        <table class="govuk-table presentation-table govuk-!-margin-0" id="responsible-person-contact-details-table">
+          <caption class="govuk-visually-hidden">Summary of responsible person's contact details</caption>
+          <tbody>
+          <tr class="
+                      ">
+            <td class="govuk-table__header govuk-table__header--half">Name</td>
+            <td class="govuk-table__cell" id="responsible-contact-name">
+              Gary Admin-Tester</td>
+            </td>
+          </tr>
+          <tr class="
+                      ">
+            <td class="govuk-table__header govuk-table__header--half">Email address</td>
+            <td class="govuk-table__cell break-word" id="responsible-contact-email">
+              defratestbip@anthunt3.33mail.com</td>
+            </td>
+          </tr>
+          <tr class="
+                      ">
+            <td class="govuk-table__header govuk-table__header--half">Phone number</td>
+            <td class="govuk-table__cell" id="responsible-contact-telephone">
+              020 8225 7295</td>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+      <h2 class="govuk-heading-m">Contact address for consignment</h2>
+
+      <div class="table-responsive govuk-!-margin-bottom-9">
+        <table class="govuk-table presentation-table review-table" id="review-table-organisation-address" role="presentation">
+          <tbody>
+          <tr>
+            <td class="govuk-table__header">Contact address</td>
+            <td class="govuk-table__cell" id="organisation-branch-address-address">6 Wharncliffe Court,
+             <p>Carlton,Barnsley,S71 3BY</p>
+      
+            <td class="govuk-table__cell change">
+              <a href="contact-address" class="govuk-link" id="organisation-branch-address-change-link">Change</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <form action="declaration" method="POST">
+        <input class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue">
+        <input name="crumb" type="hidden" value="den9SmnQcRgS6O5bslS43uMBmg-nKVqnETuDt1goK4D">
+        <input name="etag" type="hidden" value="&quot;00000000001CDA16&quot;">
+      </form>
+    </div>
+  </div>
+{% endblock %}
