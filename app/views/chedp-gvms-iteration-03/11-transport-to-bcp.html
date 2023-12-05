@@ -187,11 +187,28 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
         
         <script src="/notification/tst/public/javascripts/transport_to_bip_poe.js?v=1.0.2710"></script>
 
+        <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0">
+          Means of transport to the BCP
+        </h2>
+          <div class="govuk-form-group  ">
+            <label class="govuk-label govuk-label--s" for="transport-means-before">
+                <span class="govuk-visually-hidden">Choose from:</span>
+            </label>
+            
+            <select class="govuk-select govuk-!-width-one-half" id="transport-means-before" name="transport-means-before">
+                <option value="">Select means of transport to the BCP</option>
+                  <option value="plane">Airplane</option>
+                  <option value="rail">Railway</option>
+                  <option value="road">Road vehicle</option>
+                  <option value="ship">Vessel</option>
+            </select>
+          </div>
+
         
         <div class="govuk-form-group ">
             
           <label class="govuk-label govuk-label--m" for="document">
-            Means of transport to the BCP
+            Transport identification
           </label>
           
       
