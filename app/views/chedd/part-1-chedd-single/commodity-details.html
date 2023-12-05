@@ -126,23 +126,26 @@
 
             <div>
               <h2 class="govuk-heading-m">Total for this consignment</h2>
-
-              <div class="table-responsive">
+              <div class="table-responsive govuk-!-width-one-half">
                 <table class="govuk-table" role="presentation">
                   <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-width-full" id="net-weight-total-header">Net weight (kg/units)</th>
+                      <td class="govuk-table__cell">0</td>
+                    </tr>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Net weight (kg/units)</th>
-                    <td class="govuk-table__cell">2</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Number of packages</th>
-                    <td class="govuk-table__cell">2</td>
+                    <th scope="row" class="govuk-table__header govuk-!-width-full">Number of packages</th>
+                    <td class="govuk-table__cell">0</td>
                   </tr>
                   </tbody>
                 </table>
               </div>
+              <div class="table-responsive">
+             
+              </div>
              <input class="govuk-button govuk-button--secondary" type="submit" value="Update total" name="update-total" id="update-total-desktop">
             </div>
+          
 
             <div class="govuk-form-group">
               <div class="govuk-hint govuk-!-margin-bottom-6"></div>
@@ -150,7 +153,9 @@
                 Total gross weight (kg/units)
               </label>
               <input class="govuk-input govuk-!-width-one-half" id="gross-weight" name="gross-weight" type="text" maxlength="16" value="">
-            </div>
+            <div class="govuk-!-margin-bottom-2"></div>
+
+            <div class="govuk-!-margin-bottom-9"></div>
             <div class="save-and-submit-buttons">
               <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button-d" type="submit" href="check-answers" value="Save and return to hub" data-module="govuk-button">
               <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" href="check-answers" value="Save and continue" data-module="govuk-button">
