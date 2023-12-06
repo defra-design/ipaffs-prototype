@@ -32,10 +32,22 @@ About the consignment – {{ serviceName }} – GOV.UK Prototype Kit
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" id="purpose">
 
                 <div class="govuk-radios__item purpose">
-                  <input class="govuk-radios__input" id="radio-internalmarket" name="purpose" type="radio" value="internalmarket">
+                  <input class="govuk-radios__input" id="radio-internalmarket" name="purpose" type="radio" value="internalmarket" aria-controls="internalmarket-conditional" aria-expanded="true">
                   <label class="govuk-label govuk-radios__label" for="radio-internalmarket">
                     For internal market
                   </label>
+                </div>
+                <div class="govuk-radios__conditional" id="internalmarket-conditional">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+                      Movement Reference Number (MRN) (Optional)
+                    </label>
+                    <div id="sign-in-hint" class="govuk-hint">
+                      This applies only to goods moved under the Common Transit Convention (CTC) and will be on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
+                    </div>
+                    
+                    <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
+                  </div>
                 </div>
 
 
