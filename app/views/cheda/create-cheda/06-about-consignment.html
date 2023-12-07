@@ -50,17 +50,17 @@
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="consignment-purpose-page">
     <div class="govuk-grid-column-three-quarters">
-          <span class="govuk-caption-xl">Purpose of the consignment</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">About the consignment</h1>
+          <span class="govuk-caption-xl">About the consignment</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">What is the main reason for importing the animals?</h1>
       <form action="07-notification" method="post">
         <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
         <input name="etag" type="hidden" value="&quot;0000000004C79E90&quot;">
 
         <div class="govuk-form-group ">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               What is the purpose of the consignment?
-            </legend>
+            </legend>-->
 
             
 
@@ -172,6 +172,17 @@
                             </div>
                         </div>
                       </fieldset>
+                      
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s" for="bcp-transit-third-country">
+                        Movement Reference Number (MRN) (Optional)
+                      </label>
+                      <div id="sign-in-hint" class="govuk-hint">
+                        This applies only to goods moved under the Common Transit Convention (CTC) and will be on the transit declaration. This is 18 characters and made up of numbers and letters, for example, 23GB1234567890ABCD.
+                      </div>
+                      
+                      <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
                     </div>
                   </div>
 
@@ -1258,7 +1269,6 @@
                   </div>
 
                 </div>
-
 
             </div>
           </fieldset>

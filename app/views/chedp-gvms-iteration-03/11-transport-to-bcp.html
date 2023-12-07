@@ -187,11 +187,28 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
         
         <script src="/notification/tst/public/javascripts/transport_to_bip_poe.js?v=1.0.2710"></script>
 
+        <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0">
+          Means of transport to the BCP
+        </h2>
+          <div class="govuk-form-group  ">
+            <label class="govuk-label govuk-label--s" for="transport-means-before">
+                <span class="govuk-visually-hidden">Choose from:</span>
+            </label>
+            
+            <select class="govuk-select govuk-!-width-one-half" id="transport-means-before" name="transport-means-before">
+                <option value="">Select means of transport to the BCP</option>
+                  <option value="plane">Airplane</option>
+                  <option value="rail">Railway</option>
+                  <option value="road">Road vehicle</option>
+                  <option value="ship">Vessel</option>
+            </select>
+          </div>
+
         
         <div class="govuk-form-group ">
             
           <label class="govuk-label govuk-label--m" for="document">
-            Means of transport to the BCP
+            Transport identification
           </label>
           
       
@@ -237,13 +254,13 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="gvms-yes" name="gvms" type="radio" value="Yes" aria-describedby="gvms-yes-hint"  {{ checked('gvms','Yes') }}>
                 <label class="govuk-label govuk-radios__label" for="gvms-yes">
-                  Yes &ndash; GVMS will notify the driver about all inspections
+                  Yes &ndash; the GVMS will notify the driver about all inspections
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="gvms-no" name="gvms" type="radio" value="No" aria-describedby="gvms-no-hint" {{ checked('gvms','No') }}>
                 <label class="govuk-label govuk-radios__label" for="gvms-no">
-                  No &ndash; IPAFFS will notify you about all inspections
+                  No &ndash; you must notify the haulier or driver about all inspections
                 </label>
               </div>
             </div>
@@ -263,7 +280,7 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                 <li><a href="https://www.gov.uk/guidance/get-a-goods-movement-reference" target="_blank">Get a goods movement reference (GMR) (opens in new tab)</a></li>
               </ol>
               <p class="govuk-body">The GMR is a single reference that brings together multiple declarations. Without it, you cannot move your goods through UK ports which use the GVMS and you may face delays.</p>
-              <p class="govuk-body">The driver must check the GVMS if an inspection is required before they disembark.</p>
+              <p class="govuk-body">The driver must check the GVMS to find out if an inspection is required before they disembark.</p>
             </div>
           </details>
         </div>
