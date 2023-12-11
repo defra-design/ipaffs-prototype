@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Additional details – {{ serviceName }} – GOV.UK Prototype Kit
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,22 +11,32 @@
 
 
 {% block content %}
-
-<span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
+<!-- the main wrapper should be the outside div - but the form is outside of it -->
+<form class="form" action="contact-details" method="post">
+  <!-- form in wrong place -->
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="consignment-details-page">
     <div class="govuk-grid-column-two-thirds">
-  
-      
+      <span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
+      <!-- the below div has no content -->
+      <div class="govuk-hint govuk-!-margin-bottom-6"></div>
+      <!-- above div -->
       <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
-      <form class="form" action="contact-details" method="post">
+        <h2 class="govuk-heading-m">Commodity intended for</h2>
+        <div class="govuk-form-group commodity-intended-for ">
+      <div>
 
-      <div class="govuk-form-group commodity-intended-for ">           
-        <fieldset class="govuk-fieldset">
-        <legend class="govuk-heading-m">Commodity intended for</legend>
-           
-            <div class="govuk-hint govuk-radios__hint">
+      </div>
+      <!-- ending divs - in wrong place -->
+              
+    
+              <!-- legend tag ending but no beginning -->
+            </legend>
+             <!-- the below div has no content -->
+            <div class="govuk-hint govuk-!-margin-bottom-6"></div>
+             <!-- above div -->
+            <div id="signIn-hint" class="govuk-hint">
               You’ll find this on the health or phytosanitary certificate (also known as the ‘official certificate’) if you have one.
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -35,7 +45,7 @@
                 <label class="govuk-label govuk-radios__label" for="signIn">
                   Feedingstuff
                 </label>
-                <div  class="govuk-hint govuk-radios__hint">
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
                   Intended for oral feeding to animals.
                 </div>
               </div>
@@ -44,7 +54,7 @@
                 <label class="govuk-label govuk-radios__label" for="signIn-2">
                   Further process
                 </label>
-                <div class="govuk-hint govuk-radios__hint">
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
                   For human consumption after further treatment.
                 </div>
               </div>
@@ -53,7 +63,7 @@
                 <label class="govuk-label govuk-radios__label" for="signIn-2">
                   Human consumption
                 </label>
-                <div class="govuk-hint govuk-radios__hint">
+                <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
                   For direct human consumption without further treatment.
             </div>
           </div>
@@ -63,8 +73,9 @@
               Other
             </label>
           </fieldset>
+          <!-- fieldset ending tag, but no start tag -->
         </div>
-      
+        <div class="govuk-hint govuk-!-margin-bottom-9"></div>
         <div class="govuk-form-group temperature ">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -92,7 +103,7 @@
             </div>
           </fieldset>
         </div>
-        
+        <div class="govuk-hint govuk-!-margin-bottom-6"></div>
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -164,18 +175,15 @@
             </div>
           </fieldset>
         </div>
-        
+        <div class="govuk-!-margin-bottom-9"></div>
       <div class="save-and-submit-buttons">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="check-answers">Cancel and return to hub</a></p>
       </div>
     </div>
-  </form>
   </div>
-  </div>
-  
 </main>
-
+</form>
 
 {% endblock %}
