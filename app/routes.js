@@ -21,8 +21,6 @@ router.use('/chedp-gvms', require('./views/chedp-gvms/_routes'))
 router.use('/chedp-gvms-iteration-02', require('./views/chedp-gvms-iteration-02/_routes'))
 router.use('/chedp-gvms-iteration-03', require('./views/chedp-gvms-iteration-03/_routes'))
 router.use('/chedp-gvms-iteration-04', require('./views/chedp-gvms-iteration-04/_routes'))
-router.use('/chedp/2023-12-single-chedp', require('./views/chedp/2023-12-single-chedp/_routes'))
-
 
 // Start folder specific routes
 
