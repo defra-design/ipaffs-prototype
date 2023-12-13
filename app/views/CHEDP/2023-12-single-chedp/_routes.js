@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 // Add your routes here - above the module.exports line
 
-/*
+
 //  - add more commodities question - 05-commodity-genus
 router.post('/add-comm-route', function (req, res) {
 
@@ -68,7 +68,7 @@ router.post('/submit-notification', function (req, res) {
     res.redirect('20-submitted-inspection-not-required')
   }
 
-}) */
+})
 
 
 module.exports = router
