@@ -9,7 +9,7 @@ const router = express.Router()
 // Start folder specific route
 // router.use('/v1', require('./views/v1/_routes'))
 
-router.use('/chedp/2023-12-single-chedp', require('./views/chedp/2023-12-single-chedp/_routes'))
+router.use('/chedp/2023-12-single-chedp', require('./views/CHEDP/2023-12-single-chedp/_routes'))
 router.use('/chedpp/latest', require('./views/chedpp/latest/_routes'))
 router.use('/x-ched/e-cert-chedp', require('./views/x-ched/e-cert-chedp/_routes'))
 router.use('/cheda/create-cheda', require('./views/cheda/create-cheda/_routes'))
