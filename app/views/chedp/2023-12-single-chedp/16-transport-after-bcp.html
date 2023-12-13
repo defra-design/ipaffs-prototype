@@ -32,7 +32,7 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="crumb" type="hidden" value="GhnRlYhYaV4zCfwfqik109EM7N9iRMsexXIg2qUpS1A">
         <input name="etag" type="hidden" value="&quot;00000000053B8345&quot;">
 
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
           Means of transport after the BCP
         </h2>
 
@@ -53,13 +53,19 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-form-group  ">
               
               <label class="govuk-label govuk-label--m" for="identification">
-                Identification
+                Transport identification
               </label>
               
           
-              <span id="identification-hint" class="govuk-hint">
-                Flight number, vessel name or vehicle registration
-              </span>
+              <div id="document-hint" class="govuk-hint govuk-!-width-two-thirds">
+                <p class="govuk-hint">To identify the means of transport, enter (one of the following):</p>
+                <ul>
+                  <li>flight number</li>
+                  <li>train number</li>
+                  <li>road vehicle registration number</li>
+                  <li>vessel name (for ferries, also the road vehicle registration number)</li>
+                </ul>
+              </div>
           
               
           
@@ -69,12 +75,12 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-form-group  ">
               
               <label class="govuk-label govuk-label--m" for="document">
-                Document
+                Transport document reference
               </label>
               
           
               <span id="document-hint" class="govuk-hint">
-                Air Waybill, Bill of lading or ship manifest
+                Enter the reference number on the air waybill, bill of lading, sea waybill, road consignment note (CMR) or other transport document.
               </span>
           
               
