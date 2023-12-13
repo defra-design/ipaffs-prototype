@@ -18,7 +18,7 @@ router.post('/add-comm-route', function (req, res) {
   
   })
 
-
+/* 
 //  - risk route question - 06a-risk-category
 router.post('/risk-route', function (req, res) {
 
@@ -68,7 +68,7 @@ router.post('/submit-notification', function (req, res) {
     res.redirect('20-submitted-inspection-not-required')
   }
 
-})
+}) */
 
 
 module.exports = router
