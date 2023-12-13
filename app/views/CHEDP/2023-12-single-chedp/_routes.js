@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 // Add your routes here - above the module.exports line
 
-
+/*
 //  - add more commodities question - 05-commodity-genus
 router.post('/add-comm-route', function (req, res) {
 
@@ -18,7 +18,7 @@ router.post('/add-comm-route', function (req, res) {
   
   })
 
-/* 
+
 //  - risk route question - 06a-risk-category
 router.post('/risk-route', function (req, res) {
 
