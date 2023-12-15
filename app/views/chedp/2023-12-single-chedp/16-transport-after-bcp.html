@@ -21,14 +21,17 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="transport-details-page">
     <div class="govuk-grid-column-two-thirds">
         <span class="govuk-caption-xl">Transport</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Means of transport after Border Control Post (BCP)</h1>
-</div>
-</div>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Transport after the Border Control Post (BCP)</h1>
+    </div>
+  </div>
 
       <div class="govuk-grid-row" id="transport-details-page">
         <div class="govuk-grid-column-full">
 
-      <form action="17a-contact" method="POST">
+      <form action="15-transporter" method="post">
+        <p>
+          We need these details in the event that the consignment is choosen for inspection.
+        </p>
         <input name="crumb" type="hidden" value="GhnRlYhYaV4zCfwfqik109EM7N9iRMsexXIg2qUpS1A">
         <input name="etag" type="hidden" value="&quot;00000000053B8345&quot;">
 
@@ -50,7 +53,7 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
             </select>
           </div>
 
-          <div class="govuk-form-group  ">
+          <div class="govuk-form-group">
               
               <label class="govuk-label govuk-label--m" for="identification">
                 Transport identification
@@ -79,7 +82,7 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
               </label>
               
           
-              <span id="document-hint" class="govuk-hint">
+              <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">
                 Enter the reference number on the air waybill, bill of lading, sea waybill, road consignment note (CMR) or other transport document.
               </span>
           
@@ -90,11 +93,11 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
 
 
         
-            <h2 class="govuk-heading-m">Date and time of departure</h2>
+            <h2 class="govuk-heading-m">Date and time of departure from BCP</h2>
           <div class="govuk-form-group ">
             <fieldset class="govuk-fieldset">
               <legend class="hidden govuk-visually-hidden">Date entry:</legend>
-                <span class="govuk-hint">For example, 15 8 2020</span>
+                <span class="govuk-hint">For example, 27 3 2023</span>
         
               <div class="govuk-date-input" id="departure-date" data-module="accessible-datepicker">
                 <div class="govuk-date-input__item date-input-day">
@@ -157,7 +160,7 @@ Transport after  BCP – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="govuk-form-group ">
             <fieldset class="govuk-fieldset">
               <legend class="hidden govuk-visually-hidden">Time entry:</legend>
-              <span class="govuk-hint">24 hour format</span>
+              <span class="govuk-hint">24 hour format, for example, 14 50</span>
         
               <div class="govuk-date-input" id="departure-time">
                 <div class="govuk-date-input__item date-input-hour">
