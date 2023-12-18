@@ -12,7 +12,7 @@ router.post('/add-comm-route', function (req, res) {
     res.redirect('04-commodity')
   }
 
- else if (addCommRoute == "no"){
+ else {
     res.redirect('06-about-consignment')
   }
   
@@ -35,7 +35,7 @@ router.post('/risk-route', function (req, res) {
   })
 
 
-  // Part 1 ordinary accompanying docs page
+// Part 1 ordinary accompanying docs page
 router.post('/accom-docs-route', function (req, res) {
 
   // Make a variable and give it the value from name
@@ -50,7 +50,20 @@ router.post('/accom-docs-route', function (req, res) {
   
   })
 
+//  - approved establishment question
+router.post('/ae-route', function (req, res) {
 
+  // Make a variable and give it the value from name
+  var appEstRoute = req.session.data['add-establishment']
+  if (appEstRoute == "add"){
+    res.redirect('13a-approved-est-search')
+  }
+
+ else if (appEstRoute == "Save and continue"){
+    res.redirect('14-addresses')
+  }
+  
+  })
 
 // Run this code when a form is submitted to 'submit-notification'
 router.post('/submit-notification', function (req, res) {
