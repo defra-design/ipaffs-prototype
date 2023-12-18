@@ -24,11 +24,11 @@ router.post('/risk-route', function (req, res) {
 
   // Make a variable and give it the value from name
   var riskRoute = req.session.data['risk-category']
-  if (riskRoute == "medium"){
+  if (riskRoute == "Medium risk"){
     res.redirect('06b-risk-high')
   }
 
- else if (riskRoute == "low"){
+ else if (riskRoute == "Low risk"){
     res.redirect('07-check-answers')
   }
   
@@ -76,7 +76,7 @@ router.post('/submit-notification', function (req, res) {
     // Send user to 20-submitted-gvms-yes page
     res.redirect('20-submitted-gvms-yes')
   } 
-  else if (gvmsAnswer == "No"){
+  else {
     // Send user to 20-submitted-inspection-not-required page
     res.redirect('20-submitted-inspection-not-required')
   }
