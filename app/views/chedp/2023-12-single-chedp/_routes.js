@@ -3,20 +3,29 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-//  - add more commodities question - 05-commodity-genus
-router.post('/add-comm-route', function (req, res) {
-
-  // Make a variable and give it the value from name
-  var addCommRoute = req.session.data['add-commodity']
-  if (addCommRoute == "yes"){
+/* Run this when submitting the form on 05-commodity-genus page
+    to check if user wants to add more commodities,
+    and if not,
+      then check if importing conforming or non conforming goods,
+        and redirect to appropriate Main reason for importing page
+*/
+router.post('/add-commodity-route', function (req, res) {
+  var addCommodity = req.session.data['add-commodity']
+  var conformUKRegulations = req.session.data['conform-uk-regulations']
+  // if user wants to add more commodities, redirect back to Commodity page
+  if (addCommodity == "Yes"){
     res.redirect('04-commodity')
   }
-
- else {
-    res.redirect('06-about-consignment')
-  }
-  
-  })
+  // if user doesn't want to add more commodities or no answer is given, 
+    // and is importing non conforming goods, redirect to Main reason for importing non conforming goods
+    else if (conformUKRegulations == "No"){
+      res.redirect('06-about-consignment-ncg')
+    } 
+    // and is importing conforming goods, or no answer is given, redirect to Main reason for importing conforming goods
+    else {
+      res.redirect('06-about-consignment')
+    }
+})
 
 
 //  - risk route question - 06a-risk-category
@@ -32,7 +41,7 @@ router.post('/risk-route', function (req, res) {
     res.redirect('07-check-answers')
   }
   
-  })
+})
 
 
 // Part 1 ordinary accompanying docs page
@@ -48,7 +57,7 @@ router.post('/accom-docs-route', function (req, res) {
     res.redirect('13-approved-est')
   }
   
-  })
+})
 
 //  - approved establishment question
 router.post('/ae-route', function (req, res) {
@@ -63,7 +72,7 @@ router.post('/ae-route', function (req, res) {
     res.redirect('14-addresses')
   }
   
-  })
+})
 
 // Run this code when a form is submitted to 'submit-notification'
 router.post('/submit-notification', function (req, res) {
