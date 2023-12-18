@@ -18,12 +18,12 @@ router.post('/add-commodity-route', function (req, res) {
   }
   // if user doesn't want to add more commodities or no answer is given, 
     // and is importing non conforming goods, redirect to Main reason for importing non conforming goods
-    else if (conformUKRegulations == "No"){
+    else if (conformUKRegulations == "ncg"){
       res.redirect('06-about-consignment-ncg')
     } 
     // and is importing conforming goods, or no answer is given, redirect to Main reason for importing conforming goods
     else {
-      res.redirect('06-about-consignment')
+      res.redirect('06-about-consignment-cg')
     }
 })
 
