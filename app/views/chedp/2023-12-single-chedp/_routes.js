@@ -33,11 +33,11 @@ router.post('/risk-route', function (req, res) {
 
   // Make a variable and give it the value from name
   var riskRoute = req.session.data['risk-category']
-  if (riskRoute == "Medium risk"){
-    res.redirect('06b-risk-high')
+  if (riskRoute == "medium"){
+    res.redirect('06b-risk-high-or-medium')
   }
 
- else if (riskRoute == "Low risk"){
+ else if (riskRoute == "low"){
     res.redirect('07-check-answers')
   }
   
