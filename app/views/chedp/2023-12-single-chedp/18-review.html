@@ -99,38 +99,33 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
   
   
   
-            <h2 class="govuk-heading-l">About the consignment</h2>
+            <h2 class="govuk-heading-m">About the consignment</h2>
             
             
             <div class="table-responsive">
               <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
                 <tbody>
                   <tr class="presentation-table__section">
-                    <td class="govuk-table__header">What are you importing?</td>
+                    <td class="govuk-table__header">Import type</td>
                     <td class="govuk-table__cell" id="importing">Products of animal origin</td>
                     <td class="govuk-table__cell"></td>
                   </tr>
                     <tr class="presentation-table__section">
-                      <td class="govuk-table__header">Add a reference number for this consignment</td>
-                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__header">Country of origin</td>
+                      <td class="govuk-table__cell" id="country-of-origin">Argentina</td>
                       <td class="govuk-table__cell change">
-                            <a href="03-origin-import" class="govuk-link" id="country-of-origin-change-link">
-                              Change
-                            </a>
+                        <a href="03-origin-import" class="govuk-link" id="country-of-origin-change-link">
+                          Change
+                        </a>
                       </td>
                     </tr>
                     <tr>
-                      <td class="govuk-table__header">Country of origin</td>
-                      <td class="govuk-table__cell" id="country-of-origin">Algeria</td>
-                      <td class="govuk-table__cell"></td>
-                    </tr>
-                    <tr>
                       <td class="govuk-table__header">Country from where consigned</td>
-                      <td class="govuk-table__cell">Algeria</td>
+                      <td class="govuk-table__cell">Argentina</td>
                       <td class="govuk-table__cell"></td>
                     </tr>
                     <tr>
-                      <td class="govuk-table__header">Region code</td>
+                      <td class="govuk-table__header">Region of origin code</td>
                       <td class="govuk-table__cell" id="region-of-consignment-value">
                         
                       </td>
@@ -138,7 +133,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     </tr>
                     <tr>
                       <td class="govuk-table__header">
-                        Does this consignment conform to regulatory requirements?
+                        Consignment conforms to regulatory requirements
                       </td>
                       <td class="govuk-table__cell">
                         {% if (data['conform-uk-regulations'] == "ncg") %}
@@ -146,6 +141,13 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         {% elseif (data['conform-uk-regulations'] == "cg") %}
                           Yes
                         {% endif %}
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__header">Consignment reference number</td>
+                      <td class="govuk-table__cell" id="region-of-consignment-value">
+                        
                       </td>
                       <td class="govuk-table__cell"></td>
                     </tr>
@@ -215,7 +217,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             
             <div class="govuk-grid-row">
-                <h2 class="govuk-heading-l govuk-!-margin-top-9 govuk-grid-column-full">Description of the goods</h2>
+                <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-grid-column-full">Description of the goods</h2>
             </div>
             
                 <div class="table-responsive">
@@ -383,13 +385,13 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             
             
             <div class="govuk-!-margin-bottom-9" id="accompanying-documents-section">
-                <h2 class="govuk-heading-l" id="documents-section-heading">Documents</h2>
+                <h2 class="govuk-heading-m" id="documents-section-heading">Documents</h2>
                 <hr>
                 <div class="table-responsive">
                   
                   {% if (data['risk-category'] != "low") %}
                   <div class="heading-with-change-link">
-                    <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
+                    <h3 class="govuk-heading-s" id="latest-health-certificate-heading">Latest health certificate</h3>
                         <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] or "medium" }}">
                           Change
                         </a>
@@ -428,7 +430,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   {% endif %}
                   
                   <div class="heading-with-change-link">
-                      <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
+                      <h3 class="govuk-heading-s" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
                         {% if (data['risk-category'] == "low") %}
                           <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] }}">
                         {% else %}
@@ -589,7 +591,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             
             
-            <h2 class="govuk-heading-l">Traders</h2>
+            <h2 class="govuk-heading-m">Traders</h2>
             
             
             
@@ -637,10 +639,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 </tbody>
               </table>
             </div>
-                <h2 class="govuk-heading-l" style="border-bottom: 1px solid #b1b4b6; padding-bottom: 20px;">Transport</h2>
+                
 
                 <div class="heading-with-change-link">
-                  <h3 id="approved-establishment-header" class="govuk-heading-m">Transport to the port of entry</h3>
+                  <h2 id="approved-establishment-header" class="govuk-heading-m">Transport to the port of entry</h2>
                   <a href="11-transport-to-poe" class="govuk-link" id="establishment-of-origin-change-link">
                     Change
                   </a>
@@ -729,38 +731,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </table>
                 <!-- </div>
                 <div class="table-responsive govuk-!-margin-bottom-9"> -->
-                  <h3 class="govuk-heading-m" >Transporter</h3>
-                  <table class="govuk-table presentation-table review-table" id="review-table-transport" role="presentation">
-                    <tbody>
-                  <tr id="review-transporter-details" class="presentation-table__section ">
-                    <td class="govuk-table__header" >Transporter name</td>
-                    <td class="govuk-table__cell" id="transporter-name" >Matt Green</td>
-                    <td class="govuk-table__cell change" >
-                      <a href="15b-transporter-entered" class="govuk-link" id="transporter-change-link">Change</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="govuk-table__header">Type</td>
-                    <td class="govuk-table__cell" id="transporter-type">private transporter</td>
-                    <td class="govuk-table__cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="govuk-table__header">Address</td>
-                    <td class="govuk-table__cell" id="transporter-address">Blazer Street, Blaze city, ME13 7DR, 035326578329, boker@getnada.com</td>
-                    <td class="govuk-table__cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="govuk-table__header">Country</td>
-                    <td class="govuk-table__cell" id="transporter-country">United Kingdom of Great Britain and Northern Ireland</td>
-                    <td class="govuk-table__cell"></td>
-                  </tr>
-                  <tr>
-                    <td class="govuk-table__header">Approval number</td>
-                    <td class="govuk-table__cell" id="transporter-approval-number"></td>
-                    <td class="govuk-table__cell"></td>
-                  </tr>
-                </table>
-                <h3 class="govuk-heading-m">Transport after the BCP</h3>
+                <h2 class="govuk-heading-m">Transport after the BCP</h2>
                 <table class="govuk-table presentation-table review-table" id="review-table-transport" role="presentation">
                   <tbody>
                 <tr class="">
@@ -793,11 +764,42 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                     </tbody>
                   </table>
+                  <h2 class="govuk-heading-m" >Transporter</h2>
+                  <table class="govuk-table presentation-table review-table" id="review-table-transport" role="presentation">
+                    <tbody>
+                  <tr id="review-transporter-details" class="presentation-table__section ">
+                    <td class="govuk-table__header" >Transporter name</td>
+                    <td class="govuk-table__cell" id="transporter-name" >Matt Green</td>
+                    <td class="govuk-table__cell change" >
+                      <a href="15b-transporter-entered" class="govuk-link" id="transporter-change-link">Change</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__header">Type</td>
+                    <td class="govuk-table__cell" id="transporter-type">private transporter</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__header">Address</td>
+                    <td class="govuk-table__cell" id="transporter-address">Blazer Street, Blaze city, ME13 7DR, 035326578329, boker@getnada.com</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__header">Country</td>
+                    <td class="govuk-table__cell" id="transporter-country">United Kingdom of Great Britain and Northern Ireland</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__header">Approval number</td>
+                    <td class="govuk-table__cell" id="transporter-approval-number"></td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                </table>
                 </div>
 
-              <h2 class="govuk-heading-l">Contacts</h2>
+              
               <div class="heading-with-change-link">
-                <h3 class="govuk-heading-m">Contact details</h3>
+                <h2 class="govuk-heading-m">Contact details</h2>
                     <a href="17a-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
                     Change
                     </a>
@@ -831,7 +833,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 </table>
               </div>
               <div class="heading-with-change-link">
-                <h3 class="govuk-heading-m">Nominated contacts</h3>
+                <h2 class="govuk-heading-m">Nominated contacts</h2>
                     <a href="17b-nominated-contacts-entered.html" class="govuk-link" id="nominated-contact-change-link">
                     Change
                     </a>
@@ -861,7 +863,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </table>
               
               <div class="heading-with-change-link">
-                <h3 class="govuk-heading-m">Contact address for consignment</h3>
+                <h2 class="govuk-heading-m">Contact address for consignment</h2>
                     <a href="17c-contact-consignment" class="govuk-link" id="responsible-person-contact-details-change-link">
                     Change
                     </a>
