@@ -44,21 +44,6 @@ router.post('/risk-route', function (req, res) {
 })
 
 
-// Part 1 ordinary accompanying docs page
-router.post('/accom-docs-route', function (req, res) {
-
-  // Make a variable and give it the value from name
-  var accomDocRoute = req.session.data['accDocRoutelink']
-  if (accomDocRoute == "Add documents"){
-    res.redirect('12a-accompanying-docs-upload')
-  }
-
- else if (accomDocRoute == "Save and continue"){
-    res.redirect('13-approved-est')
-  }
-  
-})
-
 //  - approved establishment question
 router.post('/ae-route', function (req, res) {
 
@@ -74,21 +59,29 @@ router.post('/ae-route', function (req, res) {
   
 })
 
-// Run this code when a form is submitted to 'submit-notification'
+// 
+/* Run this code when the notification is submitted on 19-declaration
+    to check if GVMS is used,
+    and if not,
+      then check risk-category is medium,
+        and redirect to appropriate Confirmation page
+*/
 router.post('/submit-notification', function (req, res) {
-
-  // Make a variable and give it the value from 'gvms'
   var gvmsAnswer = req.session.data['gvms']
-
-  // Check whether the variable matches a condition
+  var riskRoute = req.session.data['risk-category']
+  // if GVMS is yes, redirect to GVMS confrimation page
   if (gvmsAnswer == "Yes"){
-    // Send user to 20-submitted-gvms-yes page
     res.redirect('20-submitted-gvms-yes')
   } 
-  else {
-    // Send user to 20-submitted-inspection-not-required page
-    res.redirect('20-submitted-inspection-not-required')
-  }
+  // if GVMS is no or no answer is given,
+    // and risk category is medium, redirect to Inspection required confirmation page
+    else if (riskRoute == "medium"){
+      res.redirect('20-submitted-inspection-required')
+    }
+    // and risk category is low, or no answer is given, redirect to Inspection not required page
+    else {
+      res.redirect('20-submitted-inspection-not-required')
+    }
 
 })
 

@@ -28,7 +28,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
     </ol>
   </div>  <div id="sign-out-section" class="information-banner">
     <p class="information-banner__content">
-      <span>Percy Plants</span>
+      <span>Percy Hyseni</span>
       <span>|</span>
       <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
         Address book
@@ -387,10 +387,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <hr>
                 <div class="table-responsive">
                   
-                  
+                  {% if (data['risk-category'] == "medium") %}
                   <div class="heading-with-change-link">
                     <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
-                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs">
+                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] }}">
                           Change
                         </a>
                   </div>
@@ -405,13 +405,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
                         </tr>
                       </thead>
-                      <!-- <tbody>
-                        <tr class="presentation-table__section">
-                          <td class="govuk-table__cell" colspan="100%" id="latest-health-document-none-attached">
-                            No health certificate attached
-                          </td>
-                        </tr>
-                      </tbody> -->
                       <tbody>
                         <tr class="presentation-table__section ">
                           <td class="govuk-table__cell" id="latest-health-document-type">
@@ -432,11 +425,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       </tbody>
                     </table>
                   </div>
-                  
+                  {% endif %}
                   
                   <div class="heading-with-change-link">
                       <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
-                        <a class="govuk-link" id="documents-change-link" href="12b-accompanying-docs">
+                        {% if (data['risk-category'] == "medium") %}
+                          <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] }}#add-additional-documents-header">
+                        {% elseif (data['risk-category'] == "low") %}
+                          <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] }}">
+                        {% endif %}
                           Change
                         </a>
                   </div>
