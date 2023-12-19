@@ -387,10 +387,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <hr>
                 <div class="table-responsive">
                   
-                  {% if (data['risk-category'] == "medium") %}
+                  {% if (data['risk-category'] != "low") %}
                   <div class="heading-with-change-link">
                     <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
-                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] }}">
+                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] or "medium" }}">
                           Change
                         </a>
                   </div>
@@ -429,10 +429,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   
                   <div class="heading-with-change-link">
                       <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
-                        {% if (data['risk-category'] == "medium") %}
-                          <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] }}#add-additional-documents-header">
-                        {% elseif (data['risk-category'] == "low") %}
+                        {% if (data['risk-category'] == "low") %}
                           <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] }}">
+                        {% else %}
+                          <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-{{ data['risk-category'] or "medium" }}#add-additional-documents-header">
                         {% endif %}
                           Change
                         </a>

@@ -27,7 +27,7 @@ Additional details – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-      <form action="12-accompanying-docs-{{ data['risk-category'] }}" method="post">
+      <form action="12-accompanying-docs-{{ data['risk-category'] or "medium" }}" method="post">
         <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
         <input name="etag" type="hidden" value="&quot;00000000053B49D8&quot;">
 

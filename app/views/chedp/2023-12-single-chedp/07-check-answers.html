@@ -50,7 +50,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
             <tr>
               <td class="govuk-table__cell" id="purpose-of-consignment">
-                <a href="06-about-consignment-{{ data['conform-uk-regulations'] }}" class="govuk-link">
+                <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "cg" }}" class="govuk-link">
                   Main reason for importing the consignment
                 </a>
               </td>
@@ -110,7 +110,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
             <tbody>
             <tr class="table__row--border-top">
               <td class="govuk-table__cell">
-                <a href="12-accompanying-docs-{{ data['risk-category'] }}" class="govuk-link">
+                <a href="12-accompanying-docs-{{ data['risk-category'] or "medium" }}" class="govuk-link">
                   Accompanying documents
                 </a>
               </td>
