@@ -36,7 +36,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
       <form action="13-approved-est" method="POST">
         <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
         <input name="etag" type="hidden" value="&quot;000000000537DB02&quot;">
-          <div class="govuk-!-margin-bottom-9 additional-documents-table" id="latest-vet-health-certificate-table">
+          <!-- <div class="govuk-!-margin-bottom-9 additional-documents-table" id="latest-vet-health-certificate-table">
               <div class="additional-documents__caption govuk-heading-m">
                 Add latest health certificate details 
               </div>
@@ -114,15 +114,21 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                         </a>
                       </div>
               </div>
-          </div>
+          </div> -->
 
           <div class="govuk-!-margin-bottom-6 additional-documents-table" id="additional-documents-table">
-            <div class="additional-documents__caption govuk-heading-m" id="add-additional-documents-header">
+            <!-- <div class="additional-documents__caption govuk-heading-m" id="add-additional-documents-header">
               Add additional documents
-            </div>
+            </div> -->
           <p class="govuk-body">
                             Uploading documentary evidence can speed up checking.
             </p>
+
+            {% if (data['risk-category'] == "low") %}
+            <p class="govuk-body">
+              You do not need to upload a health certificate for this consignment.
+            </p>
+            {% endif %}
 
            
             <details class="govuk-details  govuk-!-width-three-quarters">

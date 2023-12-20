@@ -43,6 +43,18 @@ router.post('/risk-route', function (req, res) {
   
 })
 
+//  - documents - 10-additional-details
+router.post('/add-documents', function (req, res) {
+  var riskRoute = req.session.data['risk-category']
+  if (riskRoute == "low"){
+    res.redirect('12-accompanying-docs')
+  }
+ else {
+    res.redirect('12-health-certificate')
+  }
+  
+})
+
 
 //  - approved establishment question
 router.post('/ae-route', function (req, res) {
