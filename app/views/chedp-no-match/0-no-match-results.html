@@ -1,0 +1,251 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-xl " id="page-primary-title">Consignments where notification details and customs declarations do not match</h1>
+    </div>
+    <div class="govuk-grid-column-full">
+      <div class="notification-list">
+        <dl class="notification-list__row">
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Reference number</dt>
+              <dd class="notification-list__value" id="reference-number-0">
+                CHEDP.GB.2023.2001123
+              </dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Commodity</dt>
+              <dd class="notification-list__value" id="commodity-id-0">0808108090</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Arrival at BCP or POE</dt>
+              <dd class="notification-list__value" id="arrival-date-0">15 February 2025</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">CHED status</dt>
+              <dd class="notification-list__value" id="status-0">
+                  <strong class="govuk-tag tag--fixed-width tag--in-progress">In progress</strong>
+              </dd>
+            </div>
+          </div>
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Consignee</dt>
+              <dd class="notification-list__value" id="consignee-0">Defra Test BIP</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Consignor</dt>
+              <dd class="notification-list__value" id="consignor-0">BHConsignor</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Origin</dt>
+              <dd class="notification-list__value" id="origin-0">El Salvador</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">Inspection</dt>
+              <dd class="notification-list__value">
+                <strong class="govuk-tag tag--fixed-width tag--rejected">Required</strong></dd>
+            </div>
+          </div>
+          <div class="notification-list__links">
+              <form method="post" action="#" class="govuk-!-display-inline">
+                <button class="govuk-link">Copy as new</button>
+              </form>
+            <form action="review-double-no-match" method="post" class="govuk-!-display-inline">
+                <button class="govuk-link">View details</button>
+            </form>
+            <form action="check-answers" method="post" class="govuk-!-display-inline">
+                <button class="govuk-link">Amend</button>
+            </form>
+              <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="#" target="_blank">Show notification</a>
+          </div>
+        </dl>
+        <dl class="notification-list__row">
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Reference number</dt>
+              <dd class="notification-list__value" id="reference-number-1">
+                CHEDP.GB.2023.2001123
+              </dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Commodity</dt>
+              <dd class="notification-list__value" id="commodity-id-1">0808108090</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Arrival at BCP or POE</dt>
+              <dd class="notification-list__value" id="arrival-date-1">20 July 2025</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">CHED status</dt>
+              <dd class="notification-list__value" id="status-1">
+                  <strong class="govuk-tag tag--fixed-width tag--new">New</strong>
+              </dd>
+            </div>
+          </div>
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Consignee</dt>
+              <dd class="notification-list__value" id="consignee-1">Defra Test BIP</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Consignor</dt>
+              <dd class="notification-list__value" id="consignor-1">SSConsignor</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Origin</dt>
+              <dd class="notification-list__value" id="origin-1">Afghanistan</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">Inspection</dt>
+              <dd class="notification-list__value">
+                <strong class="govuk-tag tag--fixed-width tag--validated">Not required</strong></dd>
+            </div>
+          </div>
+          <div class="notification-list__links">
+            <form method="post" action="#" class="govuk-!-display-inline">
+              <button class="govuk-link">Copy as new</button>
+            </form>
+          <form action="review-double-no-match" method="post" class="govuk-!-display-inline">
+              <button class="govuk-link">View details</button>
+          </form>
+          <form action="check-answers" method="post" class="govuk-!-display-inline">
+              <button class="govuk-link">Amend</button>
+          </form>
+            <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="#" target="_blank">Show notification</a>
+        </div>
+        </dl>
+        <dl class="notification-list__row">
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Reference number</dt>
+              <dd class="notification-list__value" id="reference-number-0">
+                CHEDP.GB.2023.2001123
+              </dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Commodity</dt>
+              <dd class="notification-list__value" id="commodity-id-0">0808108090</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Arrival at BCP or POE</dt>
+              <dd class="notification-list__value" id="arrival-date-0">15 February 2025</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">CHED status</dt>
+              <dd class="notification-list__value" id="status-0">
+                  <strong class="govuk-tag tag--fixed-width tag--new">New</strong>
+              </dd>
+            </div>
+          </div>
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Consignee</dt>
+              <dd class="notification-list__value" id="consignee-0">Defra Test BIP</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Consignor</dt>
+              <dd class="notification-list__value" id="consignor-0">BHConsignor</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Origin</dt>
+              <dd class="notification-list__value" id="origin-0">El Salvador</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">Inspection</dt>
+              <dd class="notification-list__value">
+                <strong class="govuk-tag tag--fixed-width tag--rejected">Required</strong></dd>
+            </div>
+          </div>
+          <div class="notification-list__links">
+            <form method="post" action="#" class="govuk-!-display-inline">
+              <button class="govuk-link">Copy as new</button>
+            </form>
+          <form action="review-double-no-match" method="post" class="govuk-!-display-inline">
+              <button class="govuk-link">View details</button>
+          </form>
+          <form action="check-answers" method="post" class="govuk-!-display-inline">
+              <button class="govuk-link">Amend</button>
+          </form>
+            <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="#" target="_blank">Show notification</a>
+        </div>
+        </dl>
+        <dl class="notification-list__row">
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Reference number</dt>
+              <dd class="notification-list__value" id="reference-number-1">
+                CHEDP.GB.2023.2001123
+              </dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Commodity</dt>
+              <dd class="notification-list__value" id="commodity-id-1">0808108090</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Arrival at BCP or POE</dt>
+              <dd class="notification-list__value" id="arrival-date-1">20 July 2025</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">CHED status</dt>
+              <dd class="notification-list__value" id="status-1">
+                  <strong class="govuk-tag tag--fixed-width tag--in-progress">IN PROGRESS</strong>
+              </dd>
+            </div>
+          </div>
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Consignee</dt>
+              <dd class="notification-list__value" id="consignee-1">Defra Test BIP</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Consignor</dt>
+              <dd class="notification-list__value" id="consignor-1">SSConsignor</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Origin</dt>
+              <dd class="notification-list__value" id="origin-1">Afghanistan</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">Inspection</dt>
+              <dd class="notification-list__value">
+                <strong class="govuk-tag tag--fixed-width tag--validated">Not required</strong></dd>
+            </div>
+          </div>
+          <div class="notification-list__links">
+            <form method="post" action="#" class="govuk-!-display-inline">
+              <button class="govuk-link">Copy as new</button>
+            </form>
+          <form action="review-double-no-match" method="post" class="govuk-!-display-inline">
+              <button class="govuk-link">View details</button>
+          </form>
+          <form action="check-answers" method="post" class="govuk-!-display-inline">
+              <button class="govuk-link">Amend</button>
+          </form>
+            <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="#" target="_blank">Show notification</a>
+        </div>
+        </dl>
+      </div>
+    </div>
+    
+
+  </div>
+</main>
+
+{% endblock %}
