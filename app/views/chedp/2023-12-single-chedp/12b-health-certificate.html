@@ -36,7 +36,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
       <form action="13-approved-est" method="POST">
         <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
         <input name="etag" type="hidden" value="&quot;000000000537DB02&quot;">
-          <div class="govuk-!-margin-bottom-9 additional-documents-table" id="latest-vet-health-certificate-table">
+          <div class="govuk-!-margin-bottom-8 additional-documents-table" id="latest-vet-health-certificate-table">
               <div class="additional-documents__caption govuk-heading-m">
                 Add latest health certificate details 
               </div>
@@ -115,6 +115,42 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                       </div>
               </div>
           </div>
+
+            <div class="govuk-form-group govuk-!-margin-bottom-8" id="region-code-field">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    Does your health certificate have a region code?
+                </legend>
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="region-code-yes" name="region-code-option" type="radio" value="true" aria-controls="conditional-region-code-yes" aria-expanded="false">
+                    <label class="govuk-label govuk-radios__label" for="region-code-yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-region-code-yes">
+                    <div class="govuk-form-group ">
+                      <label class="govuk-label" for="region-code">
+                          Enter the region code
+                      </label>
+                      
+                      <span class="region-code" id="region-code-input">
+                      <span id="region-code-box" class="region-code-box">AR</span>
+                      <strong class="region-code-divider">-</strong>
+                    </span>
+                      <input class="govuk-input govuk-input--width-3 " id="region-code" name="region-code" type="text" maxlength="3" value="">
+                    </div>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="region-code-no" name="region-code-option" type="radio" value="false" checked="checked">
+                    <label class="govuk-label govuk-radios__label" for="region-code-no">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
 
           
         <input name="current-page-number" type="hidden" value="1">
