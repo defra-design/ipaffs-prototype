@@ -295,29 +295,31 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    Is the consignment country the same as the country of origin?
+                    Is the country of consignment the same as the country of origin?
                 </legend>
+                <span id="local-reference-number-hint" class="govuk-hint">
+                  The country of consignment is where the goods are shipped from.
+                </span>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="consigned-country-same" name="consigned-country" type="radio" value="same">
                     <label class="govuk-label govuk-radios__label" for="consigned-country-same">
-                      Yes, it is the same country
+                      Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="consigned-country-different" name="consigned-country" type="radio" value="different" data-aria-controls="consigned-country-select-list">
                     <label class="govuk-label govuk-radios__label" for="consigned-country-different">
-                      No, it’s a different country
+                      No
                     </label>
                   </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="consigned-country-select-list">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="consigned-country-selected">
-                        Country from where consigned
+                        Country of consignment
                       </label>
                       <select class="govuk-select govuk-!-width-one-half" id="consigned-country-selected" name="consigned-country-selected">
-                            <option value="">Select
-                              country from where consigned
+                            <option value="">Select country of consignment
                             </option>
                             <option value="AF">Afghanistan</option>
                             <option value="AX">Aland Islands</option>
