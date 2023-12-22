@@ -3,7 +3,8 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 
-/* Run this when submitting the form on 05-commodity-genus page
+/* 
+  Run this when submitting the form on 05-commodity-genus page
     to check if user wants to add more commodities,
     and if not,
       then check if importing conforming or non conforming goods,
@@ -21,7 +22,7 @@ router.post('/add-commodity-route', function (req, res) {
     else if (conformUKRegulations == "ncg"){
       res.redirect('06-about-consignment-ncg')
     } 
-    // and is importing conforming goods, or no answer is given, redirect to Main reason for importing conforming goods
+    // in any other case, redirect to Main reason for importing conforming goods
     else {
       res.redirect('06-about-consignment-cg')
     }
@@ -72,7 +73,8 @@ router.post('/ae-route', function (req, res) {
 })
 
 // 
-/* Run this code when the notification is submitted on 19-declaration
+/* 
+  Run this code when the notification is submitted on 19-declaration
     to check if GVMS is used,
     and if not,
       then check risk-category is medium,
@@ -90,7 +92,7 @@ router.post('/submit-notification', function (req, res) {
     else if (riskRoute == "medium"){
       res.redirect('20-submitted-inspection-required')
     }
-    // and risk category is low, or no answer is given, redirect to Inspection not required page
+    // in any other case, redirect to Inspection not required page
     else {
       res.redirect('20-submitted-inspection-not-required')
     }
