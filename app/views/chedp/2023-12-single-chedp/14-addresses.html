@@ -70,7 +70,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignor" name="addressType" value="consignor or exporter">
             Add a consignor or exporter
         </button>
-          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignor-old" name="addressType" value="consignor or exporter">Add a consignor or exporter</a> -->
+         
           {% endif %}
         </div>
 
@@ -79,9 +79,43 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignee
           </h2>
           <p class="govuk-hint">This is the receiver or buyer of the consignment being shipped or transported.</p>
+
+          {% if (data['consignee-page'] == "yes") %}
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
+              <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header col-name" id="consignee-name">Name</th>
+                <th class="govuk-table__header col-address" id="consignee-address">Address</th>
+                <th class="govuk-table__header col-country" id="consignee-country">Country</th>
+                <th class="govuk-table__header col-edit" id="consignee-edit">
+                  <span class="govuk-visually-hidden">Change link</span>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="govuk-table__cell col-name" headers="consignee-name">
+                  ABC goods Ltd
+                </td>
+                <td class="govuk-table__cell col-address" headers="consignee-address">
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                </td>
+                <td class="govuk-table__cell col-country" headers="consignee-country">
+                  United Kingdom of Great Britain and Northern Ireland
+                </td>
+                <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignee/search" class="govuk-link" id="edit-consignee">Change</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          {% else %}
           <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignee" name="addressType" value="consignee">
             Add a consignee
         </button>
+        {% endif %}
        
           <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignee">Add a consignee </a> -->
         </div>
