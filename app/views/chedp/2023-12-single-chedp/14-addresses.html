@@ -23,7 +23,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       <span class="govuk-caption-xl">Traders</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Addresses</h1>
 
-      <form action="" method="POST">
+      <form action="14a-address-search" method="POST">
         <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
         <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
         <input name="14-addresses" type="hidden" value="visited">
@@ -33,7 +33,8 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignor or exporter
           </h2>
           <p class="govuk-hint">This is the sender of the consignment.</p>
-          <!-- <div class="table-responsive">
+          {% if (data['14a-address-search'] == "visited") %}
+          <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
               <thead class="govuk-table__head">
               <tr>
@@ -48,22 +49,29 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               <tbody>
               <tr>
                 <td class="govuk-table__cell col-name" headers="consignor-name">
-                  &nbsp;
+                  Produkty Mięsne Fm
                 </td>
                 <td class="govuk-table__cell col-address" headers="consignor-address">
-                  &nbsp;
+                  90 Bazar Ulica , Apt. 924, Wroclaw, 48721
                 </td>
                 <td class="govuk-table__cell col-country" headers="consignor-country">
-                  &nbsp;
+                  Poland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
-                  &nbsp;
+                  <a href="14a-address-search?consignor" class="govuk-link" id="edit-consignor">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
-          </div> -->
-          <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
+          </div> 
+          
+          {% else %}
+
+          <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignor" name="addressType" value="consignor or exporter">
+            Add a consignor or exporter
+        </button>
+          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignor-old" name="addressType" value="consignor or exporter">Add a consignor or exporter</a> -->
+          {% endif %}
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -71,37 +79,11 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignee
           </h2>
           <p class="govuk-hint">This is the receiver or buyer of the consignment being shipped or transported.</p>
-          <!-- <div class="table-responsive">
-            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
-              <thead class="govuk-table__head">
-              <tr>
-                <th class="govuk-table__header col-name" id="consignee-name">Name</th>
-                <th class="govuk-table__header col-address" id="consignee-address">Address</th>
-                <th class="govuk-table__header col-country" id="consignee-country">Country</th>
-                <th class="govuk-table__header col-edit" id="consignee-edit">
-                  <span class="govuk-visually-hidden">Change link</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="govuk-table__cell col-name" headers="consignee-name">
-                  &nbsp;
-                </td>
-                <td class="govuk-table__cell col-address" headers="consignee-address">
-                  &nbsp;
-                </td>
-                <td class="govuk-table__cell col-country" headers="consignee-country">
-                  &nbsp;
-                </td>
-                <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
-                  &nbsp;
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div> -->
-          <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignee">Add a consignee </a>
+          <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignee" name="addressType" value="consignee">
+            Add a consignee
+        </button>
+       
+          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignee">Add a consignee </a> -->
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -139,7 +121,10 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
           </div> -->
-          <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-importer">Add an importer </a>
+          <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
+            Add an importer
+        </button>
+          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-importer">Add an importer </a> -->
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -187,8 +172,13 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
           </div> -->
-          <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a>
+          <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
+            Add a place of destination
+        </button>
+          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a> -->
         </div>
+        </form>
+        <form action="11-transport-to-poe" method="post">
         <div class="save-and-submit-buttons">
           <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">

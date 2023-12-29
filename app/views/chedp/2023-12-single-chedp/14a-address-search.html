@@ -23,12 +23,14 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="search-economic-operators-page">
     <div class="govuk-grid-column-full">
           <span class="govuk-caption-xl">Traders</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1>
+          <h1 class="govuk-heading-xl" id="page-primary-title">Add a {{ data['addressType'] }}</h1>
+      <!-- <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1> -->
       <form class="govuk-!-margin-bottom-6" action="search" method="GET">
+
         <div class="form-group search-panel">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Search
+              Search for an existing {{ data['addressType'] }}
             </legend>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
@@ -327,9 +329,10 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </form>
 
-      <form action="14b-addresses-chosen" method="POST">
+      <form action="14-addresses" method="POST">
         <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
         <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
+        <input name="14a-address-search" type="hidden" value="visited"> 
 
         <div class="table-responsive">
           <table class="govuk-table traders-search-results" id="Table-SearchResults">
@@ -1029,14 +1032,14 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </form>
 
-      <a href="/notification/tst/protected/notifications/DRAFT.GB.2023.5501422/traders/consignor/new" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
-        Create a new consignor or exporter
+      <a href="#" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
+        Create a new {{ data['addressType'] }}
       </a>
 
         <nav class="pagination" aria-label="Pagination">
           <ul class="pagination-list">
               <li class="pagination-item pagination-item-next">
-                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                  <a href="#" class="pagination-link" rel="next" id="next-page">
                     <span class="pagination-link-title">
                        Next page
                       <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
