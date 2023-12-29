@@ -332,14 +332,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       <form action="14-addresses" method="POST">
         <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
         <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
-        <input name="14a-address-search" type="hidden" value="visited"> 
+        <!-- <input name="14a-address-search" type="hidden" value="visited">  -->
+        {% if (data['addressType'] == "consignor or exporter") %}
+        <input name="consignor-page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
 
         {% if (data['addressType'] == "consignee") %}
         <input name="consignee-page" type="hidden" value="yes"> 
         {% else %}
         {% endif %}
-        <input name="importer" type="hidden" value="visited"> 
-        <input name="place-of-destination" type="hidden" value="visited"> 
+        <!-- <input name="importer-page" type="hidden" value="visited"> 
+        <input name="place-of-destination-page" type="hidden" value="visited">  -->
 
         <div class="table-responsive">
           <table class="govuk-table traders-search-results" id="Table-SearchResults">

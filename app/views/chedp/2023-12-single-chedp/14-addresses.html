@@ -33,7 +33,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignor or exporter
           </h2>
           <p class="govuk-hint">This is the sender of the consignment.</p>
-          {% if (data['14a-address-search'] == "visited") %}
+          {% if (data['consignor-page'] == "yes") %}
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
               <thead class="govuk-table__head">
@@ -105,7 +105,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
-                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignee/search" class="govuk-link" id="edit-consignee">Change</a>
+                  <a href="14a-address-search?consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
                 </td>
               </tr>
               </tbody>
@@ -125,38 +125,45 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Importer
           </h2>
           <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
-          <!-- <div class="table-responsive">
-            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-importer">
-              <thead class="govuk-table__head">
-              <tr>
-                <th class="govuk-table__header col-name" id="importer-name">Name</th>
-                <th class="govuk-table__header col-address" id="importer-address">Address</th>
-                <th class="govuk-table__header col-country" id="importer-country">Country</th>
-                <th class="govuk-table__header col-edit" id="importer-edit">
-                  <span class="govuk-visually-hidden">Change link</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="govuk-table__cell col-name" headers="importer-name">
-                  &nbsp;
-                </td>
-                <td class="govuk-table__cell col-address" headers="importer-address">
-                  &nbsp;
-                </td>
-                <td class="govuk-table__cell col-country" headers="importer-country">
-                  &nbsp;
-                </td>
-                <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
-                  &nbsp;
-                </td>
-              </tr>
-              </tbody>
-            </table>
+         
+          <!-- <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+               
+              </legend>
+             
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    The importer is the same as the consignee
+                  </label>
+                </div>
+              
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    The importer is different to the consignee
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                  <div class="govuk-form-group">
+                    <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
+                      Add an importer
+                  </button>
+                   
+                  </div>
+                </div>
+                
+              </div>
+            </fieldset>
           </div> -->
+
           <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
-            Add an importer
+            Set the consignee as the importer
+        </button><br/>
+          <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
+            Add a different importer
         </button>
           <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-importer">Add an importer </a> -->
         </div>
