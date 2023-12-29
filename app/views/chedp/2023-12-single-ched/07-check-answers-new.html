@@ -29,7 +29,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
       </p>
 
       <form action="overview-p" method="POST">
-
+        
        
           
                 <h2 class="govuk-heading-m">About</h2>
@@ -76,9 +76,13 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                       <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/10-additional-details" aria-describedby="prepare-application-2-status">Additional details</a>
                     </div>
                     <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      <strong class="govuk-tag-new govuk-tag--blue">
-                        Incomplete
+                      {% if (data['10-additional-details'] == "visited") %}
+                      Completed
+                    {% else %}
+                      <strong class="govuk-tag-new govuk-tag--grey">
+                        Not started
                       </strong>
+                      {% endif %}
                     </div>
                   </li>
                
