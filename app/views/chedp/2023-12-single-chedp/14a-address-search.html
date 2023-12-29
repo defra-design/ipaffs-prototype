@@ -342,8 +342,14 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="consignee-page" type="hidden" value="yes"> 
         {% else %}
         {% endif %}
-        <!-- <input name="importer-page" type="hidden" value="visited"> 
-        <input name="place-of-destination-page" type="hidden" value="visited">  -->
+        {% if (data['addressType'] == "importer") %}
+         <input name="importer-page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
+        {% if (data['addressType'] == "place of destination") %}
+       <input name="place-of-destination-page" type="hidden" value="yes"> 
+       {% else %}
+        {% endif %}
 
         <div class="table-responsive">
           <table class="govuk-table traders-search-results" id="Table-SearchResults">

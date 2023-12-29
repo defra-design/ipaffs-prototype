@@ -117,7 +117,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         </button>
         {% endif %}
        
-          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignee">Add a consignee </a> -->
+         
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -125,47 +125,42 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Importer
           </h2>
           <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
-         
-          <!-- <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-               
-              </legend>
-             
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                  <label class="govuk-label govuk-radios__label" for="contact">
-                    The importer is the same as the consignee
-                  </label>
-                </div>
-              
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-                  <label class="govuk-label govuk-radios__label" for="contact-2">
-                    The importer is different to the consignee
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                  <div class="govuk-form-group">
-                    <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
-                      Add an importer
-                  </button>
-                   
-                  </div>
-                </div>
-                
-              </div>
-            </fieldset>
-          </div> -->
-
+          {% if (data['importer-page'] == "yes") %}
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-importer">
+              <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header col-name" id="importer-name">Name</th>
+                <th class="govuk-table__header col-address" id="importer-address">Address</th>
+                <th class="govuk-table__header col-country" id="importer-country">Country</th>
+                <th class="govuk-table__header col-edit" id="importer-edit">
+                  <span class="govuk-visually-hidden">Change link</span>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="govuk-table__cell col-name" headers="importer-name">
+                  ABC goods Ltd
+                </td>
+                <td class="govuk-table__cell col-address" headers="importer-address">
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                </td>
+                <td class="govuk-table__cell col-country" headers="importer-country">
+                  United Kingdom of Great Britain and Northern Ireland
+                </td>
+                <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
+                  <a href="14a-address-search?importer" class="govuk-link" id="edit-importer">Change</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          {% else %}
           <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
-            Set the consignee as the importer
-        </button><br/>
-          <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
-            Add a different importer
+            Add an importer
         </button>
-          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-importer">Add an importer </a> -->
+        {% endif %}
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -183,7 +178,8 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             <div class="govuk-grid-column-three-quarters">
           <p class="govuk-hint">This is where the consignment will be sent for final unloading, and must be in Great Britain. If this is not the same as the consignee or importer, select a different address.</p>
           </div></div>
-          <!-- <div class="table-responsive">
+          {% if (data['place-of-destination-page'] == "yes") %}
+          <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-place-of-destination">
               <thead class="govuk-table__head">
               <tr>
@@ -198,24 +194,26 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               <tbody>
               <tr>
                 <td class="govuk-table__cell col-name" headers="place-of-destination-name">
-                  &nbsp;
+                  ABC goods Ltd
                 </td>
                 <td class="govuk-table__cell col-address" headers="place-of-destination-address">
-                  &nbsp;
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
                 </td>
                 <td class="govuk-table__cell col-country" headers="place-of-destination-country">
-                 &nbsp;
+                  United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="place-of-destination-edit">
-                  &nbsp;
+                  <a href="14a-address-search?pod" class="govuk-link" id="edit-place-of-destination">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
-          </div> -->
+          </div>
+          {% else %}
           <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
             Add a place of destination
         </button>
+        {% endif %}
           <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a> -->
         </div>
         </form>
