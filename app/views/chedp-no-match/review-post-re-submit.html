@@ -22,9 +22,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="index-no-match">Dashboard</a>
       </li>
-          <li class="govuk-breadcrumbs__list-item">
+          <!--<li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="check-answers">Notification Hub</a>
-          </li>
+          </li>-->
     </ol>
   </div>  <div id="sign-out-section" class="information-banner">
     <p class="information-banner__content">
@@ -40,23 +40,38 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
     </p>
   </div>
 </div>
+<div class="action-button-container">
+  <form method="get" action="#" target="_blank" class="govuk-!-display-inline">
+    <button type="submit" value="Show notification" id="show-notification" class="govuk-button govuk-button--secondary button-small action-button" data-prevent-double-click="true">Show notification</button>
+  </form>
+
+  <form method="post" action="#" class="govuk-!-display-inline">
+    <input name="crumb" type="hidden" value="EorDkU1t8LUfJ7d5uR4rqOjYi3FeiUN_xnG9rD2BJ9L">
+    <input name="etag" type="hidden" value="&quot;00000000059A6FA2&quot;">
+    <button type="submit" name="submit_param" value="Copy as new" class="govuk-button govuk-button--secondary button-small action-button" data-prevent-double-click="true">Copy as new</button>
+  </form>
+
+    <form action="review-amend" method="post" class="govuk-!-display-inline">
+      <input name="crumb" type="hidden" value="EorDkU1t8LUfJ7d5uR4rqOjYi3FeiUN_xnG9rD2BJ9L">
+      <input name="etag" type="hidden" value="&quot;00000000059A6FA2&quot;">
+      <button type="submit" name="amend" id="amend-certificate-CHEDP.GB.2023.6243452" value="CHEDP.GB.2023.6243452" class="govuk-button govuk-button--secondary button-small action-button" data-prevent-double-click="true">
+        Amend
+      </button>
+    </form>
+
+    <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/delete" id="delete-notification" class="govuk-button govuk-button--warning button-small action-button">
+      Delete notification
+    </a>
+</div>
+
+
+
+  
+
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Important
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <h3 class="govuk-notification-banner__heading">
-            Your notification details and customs declaration must match or your consignment will be delayed.</h3>
-            <p class="govuk-body"><a class="govuk-notification-banner__link" href="commodity-details">Check or update commodity details</a> and resubmit any changes.</p>
-        </div>
-      </div>
-
 
       <span class="heading-tertiary">
         <span id="reference-number">CHEDP.GB.2023.6244839</span>
@@ -150,9 +165,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__header" id="local-reference-number-header">Add a reference number for this consignment</td>
                     <td class="govuk-table__cell" id="local-reference-number"></td>
                     <td class="govuk-table__cell change">
-                          <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/consignment/page-2?fromImporterReview=true" class="govuk-link" id="country-of-origin-change-link">
-                            Change
-                          </a>
                     </td>
                   </tr>
                   <tr class="">
@@ -188,9 +200,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       For internal market
                             </td>
                   <td class="govuk-table__cell change">
-                        <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/consignment/page-5?fromImporterReview=true" class="govuk-link" id="consignment-purpose-change-link">
-                          Change
-                        </a>
                   </td>
                 </tr>
                     <tr>
@@ -203,20 +212,383 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           
           <div class="govuk-grid-row">
-              <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-grid-column-one-half">Description of the goods</h2>
+              <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-grid-column-one-half" id="description">Description of the goods</h2>
+              <span class="govuk-heading-s govuk-grid-column-one-half govuk-!-margin-top-9 text-align-right">10 of 10</span>
           </div>
           
-            <div class="govuk-!-margin-bottom-6 update-commodity-details-link ">
-              <a href="commodity-details" class="govuk-link govuk-!-font-size-19" id="commodity-details-link">
-                Check or update commodity details
-              </a>
-            </div>
+              <div class="table-responsive">
+                <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-0" role="presentation">
+                  <tbody class="govuk-table__head">
+                    <tr id="020110/expired" class="presentation-table__section ">
+                  </tr><tr>
+                    <td class="govuk-table__header">Commodity code</td>
+                    <td class="govuk-table__cell">
+                      020110
+                      
+                    </td>
+                      <td class="govuk-table__cell change">
+                      </td>
+                  </tr>
+                      <tr class="presentation-table__row--no-border">
+                        <td class="govuk-table__header">Type of commodity</td>
+                        <td class="govuk-table__cell">Domestic</td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                  <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+                <div class="table-responsive">
+                  <table class="govuk-table review-table" id="review-table-consignment-0" role="presentation">
+                    <thead class="govuk-table__head">
+                      <tr>
+                        <td class="govuk-table__header species">
+                          Species
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric weight">
+                          Net weight
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric packages">
+                          Packages
+                        </td>
+                        <td class="govuk-table__header package-type">Package type</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bison bison
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bos taurus
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bubalus bubalis
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="govuk-table__header">
+                          Subtotal
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          3 kg/units
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          3
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+          
+              <div class="table-responsive">
+                <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-1" role="presentation">
+                  <tbody class="govuk-table__head">
+                    <tr id="020120/expired" class="presentation-table__row--no-border ">
+                  </tr><tr>
+                    <td class="govuk-table__header">Commodity code</td>
+                    <td class="govuk-table__cell">
+                      020120
+                      
+                    </td>
+                      <td class="govuk-table__cell change">
+                      </td>
+                  </tr>
+                      <tr class="presentation-table__row--no-border">
+                        <td class="govuk-table__header">Type of commodity</td>
+                        <td class="govuk-table__cell">Domestic</td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                  <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+                <div class="table-responsive">
+                  <table class="govuk-table review-table" id="review-table-consignment-1" role="presentation">
+                    <thead class="govuk-table__head">
+                      <tr>
+                        <td class="govuk-table__header species">
+                          Species
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric weight">
+                          Net weight
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric packages">
+                          Packages
+                        </td>
+                        <td class="govuk-table__header package-type">Package type</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bison bison
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bos taurus
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bubalus bubalis
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="govuk-table__header">
+                          Subtotal
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          3 kg/units
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          3
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+          
+              <div class="table-responsive">
+                <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-2" role="presentation">
+                  <tbody class="govuk-table__head">
+                    <tr id="020130/expired" class="presentation-table__row--no-border ">
+                  </tr><tr>
+                    <td class="govuk-table__header">Commodity code</td>
+                    <td class="govuk-table__cell">
+                      020130
+                      
+                    </td>
+                      <td class="govuk-table__cell change">
+                      </td>
+                  </tr>
+                      <tr class="presentation-table__row--no-border">
+                        <td class="govuk-table__header">Type of commodity</td>
+                        <td class="govuk-table__cell">Domestic</td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                  <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+                <div class="table-responsive">
+                  <table class="govuk-table review-table" id="review-table-consignment-2" role="presentation">
+                    <thead class="govuk-table__head">
+                      <tr>
+                        <td class="govuk-table__header species">
+                          Species
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric weight">
+                          Net weight
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric packages">
+                          Packages
+                        </td>
+                        <td class="govuk-table__header package-type">Package type</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bison bison
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bos taurus
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bubalus bubalis
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="govuk-table__header">
+                          Subtotal
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          3 kg/units
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          3
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+          
+              <div class="table-responsive">
+                <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-3" role="presentation">
+                  <tbody class="govuk-table__head">
+                    <tr id="020210/expired" class="presentation-table__row--no-border ">
+                  </tr><tr>
+                    <td class="govuk-table__header">Commodity code</td>
+                    <td class="govuk-table__cell">
+                      020210
+                      
+                    </td>
+                      <td class="govuk-table__cell change">
+                      </td>
+                  </tr>
+                      <tr class="presentation-table__row--no-border">
+                        <td class="govuk-table__header">Type of commodity</td>
+                        <td class="govuk-table__cell">Domestic</td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                  <tr></tr>
+                  </tbody>
+                </table>
+              </div>
+                <div class="table-responsive">
+                  <table class="govuk-table review-table" id="review-table-consignment-3" role="presentation">
+                    <thead class="govuk-table__head">
+                      <tr>
+                        <td class="govuk-table__header species">
+                          Species
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric weight">
+                          Net weight
+                        </td>
+                        <td class="govuk-table__header govuk-table__header--numeric packages">
+                          Packages
+                        </td>
+                        <td class="govuk-table__header package-type">Package type</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="
+                                   
+                                   ">
+                          <td class="govuk-table__cell">
+                            Bison bison
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                            1 kg/units
+                          </td>
+                          <td class="govuk-table__cell govuk-table__cell--numeric">
+                            1
+                          </td>
+                          <td class="govuk-table__cell">Carton</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="govuk-table__header">
+                          Subtotal
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          1 kg/units
+                        </td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">
+                          1
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+          
+          
+          
           
             <div class="heading-with-change-link govuk-!-margin-top-8">
               <h3 class="govuk-heading-s">Additional details</h3>
-                <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/consignment/details?fromImporterReview=true" class="govuk-link" id="consignment-details-change-link">
-                  Change
-                </a>
             </div>
           
           <div class="table-responsive govuk-!-margin-bottom-9">
@@ -227,7 +599,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <tr class="presentation-table__row--no-border ">
                   <td class="govuk-table__header">Total net weight</td>
                   <td class="govuk-table__cell" colspan="2">
-                    11 kg/units
+                    10 kg/units
                   </td>
                 </tr>
           
@@ -243,7 +615,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         
                         ">
                   <td class="govuk-table__header" id="gross-weight-header">Total gross weight (kg/units)</td>
-                  <td class="govuk-table__cell" id="gross-weight">12 kg/units</td>
+                  <td class="govuk-table__cell" id="gross-weight">11 kg/units</td>
                 </tr>
           
           
@@ -397,9 +769,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           
             <div class="heading-with-change-link">
               <h2 class="govuk-heading-m">Transport to the Border Control Post (BCP)</h2>
-              <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/transport/before-bip?fromImporterReview=true" class="govuk-link" id="transport-to-bip-change-link">
-                Change
-              </a>
             </div>
             
             
@@ -456,9 +825,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   
                   <div class="heading-with-change-link">
                     <h3 class="govuk-heading-s" id="latest-health-certificate-heading">Latest health certificate</h3>
-                        <a class="govuk-link" id="latest-health-certificate-change-link" href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/documents/page-1?fromImporterReview=true">
-                          Change
-                        </a>
                   </div>
                   
                   <div class="table-responsive">
@@ -526,9 +892,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 
                 <div class="heading-with-change-link">
                     <h3 class="govuk-heading-s" id="additional-documents-sub-heading">Showing 1 additional document</h3>
-                      <a class="govuk-link" id="documents-change-link" href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/documents/page-1?fromImporterReview=true">
-                        Change
-                      </a>
                 </div>
                 
                   <div class="table-responsive">
@@ -551,15 +914,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     </table>
                   </div>
               </div>
-                <div class="heading-with-change-link">
-                  <h2 id="approved-establishment-header" class="govuk-heading-m">Approved establishment</h2>
-                  <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/establishment-of-origin?fromImporterReview=true" class="govuk-link" id="establishment-of-origin-change-link">
-                    Change
-                  </a>
-                </div>
               <div class="table-responsive">
                 <table class="govuk-table presentation-table" id="review-table-approved-establishments">
-                  <caption class="govuk-visually-hidden">
+                  <caption class="govuk-table__caption">
                     Approved establishment
                   </caption>
                   <thead class="govuk-table__head">
@@ -603,9 +960,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     Isle of Man Government Office of Human Resources, Learning Education and Development, The Lodge Education and Training Centre, Braddan Road, Strang, Vienna, 1030, Austria, Not specified, not@specified.com
                   </td>
                   <td class="govuk-table__cell change">
-                        <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/traders?fromImporterReview=true" class="govuk-link" id="traders-change-link">
-                          Change
-                        </a>
                   </td>
                 </tr>
                 <tr class="">
@@ -644,7 +998,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__header">Name</td>
                   <td class="govuk-table__cell" id="transporter-name">COOPERATIVECa30 Ltd</td>
                   <td class="govuk-table__cell change">
-                    <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/transport?fromImporterReview=true" class="govuk-link" id="transporter-change-link">Change</a>
                   </td>
                 </tr>
                 <tr>
@@ -673,7 +1026,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 </th>
                 <td>Airplane</td>
                 <td class="change">
-                      <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/transport/details?fromImporterReview=true" class="govuk-link" id="transport-details-change-link">Change</a>
                 </td>
               </tr>
                 <tr>
@@ -707,7 +1059,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__header" id="organisation-address-header">Head office / branch address</td>
                     <td class="govuk-table__cell" id="organisation-branch-address-address">Animal and Plant Health Agency, Woodham Lane, New Haw, Surrey, Addlestone, KT15 3NB</td>
                     <td class="govuk-table__cell change">
-                          <a href="/notification/tst/protected/notifications/CHEDP.GB.2023.6243452/organisation-branch-address?fromImporterReview=true" class="govuk-link" id="organisation-branch-address-change-link">Change</a>
                     </td>
                   </tr>
                 </tbody>
@@ -733,11 +1084,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
 
-        <form action="review" method="POST">
-          <button class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue" data-prevent-double-click="true">Save and continue</button>
-          <input name="crumb" type="hidden" value="EorDkU1t8LUfJ7d5uR4rqOjYi3FeiUN_xnG9rD2BJ9L">
-          <input name="etag" type="hidden" value="&quot;00000000059BA71C&quot;">
-        </form>
     </div>
   </div>
 </main>
