@@ -1,20 +1,60 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="index-no-match">Dashboard</a>
+      </li>
+          <!--<li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="check-answers">Notification Hub</a>
+          </li>-->
+    </ol>
+  </div>  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
 <div class="govuk-!-padding-top-6">
+  <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        No match found
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        Your notification details and customs declaration must match or your consignment will be delayed.</h3>
+      <p class="govuk-body"><a class="govuk-notification-banner__link" href="commodity-details">Check or update commodity details</a> and resubmit any changes.</p>
+    </div>
+  </div>
   <span class="heading-tertiary">
-      <span id="reference-number">DRAFT.GB.2023.5925980</span>
-          <span> - CHEDP</span>
+      <span id="reference-number">CHEDP.GB.2023.6244839</span>
   </span>
 </div>
 
@@ -37,7 +77,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         <tbody>
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="03-origin-import" class="govuk-link" id="origin-of-the-import">
+            <a class="govuk-link" id="origin-of-the-import">
               Origin of the import
             </a>
           </td>
@@ -49,7 +89,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
         <tr>
           <td class="govuk-table__cell" id="purpose-of-consignment">
-            <a href="06-about-consignment" class="govuk-link">
+            <a class="govuk-link">
               Main reason for importing the consignment
             </a>
           </td>
@@ -71,27 +111,27 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         <tbody>
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="08-commodity-details" class="govuk-link" id="commodity-details-link">
+            <a href="commodity-details" class="govuk-link" id="commodity-details-link">
               Commodity
             </a>
           </td>
 
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
        
         <tr>
           <td class="govuk-table__cell">
-            <a href="10-additional-details" class="govuk-link">
+            <a class="govuk-link">
               Additional details
             </a>
           </td>
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
@@ -109,40 +149,40 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         <tbody>
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="12-accompanying-docs" class="govuk-link">
+            <a class="govuk-link">
               Accompanying documents
             </a>
           </td>
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
 
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="09-catch-certificates" class="govuk-link" id="commodity-details-link">
+            <a class="govuk-link" id="commodity-details-link">
               Catch certificates
             </a>
           </td>
 
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
 
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="13-approved-est" class="govuk-link">
+            <a class="govuk-link">
               Approved establishment of origin (where required)
             </a>
           </td>
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
@@ -161,13 +201,13 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         <tbody>
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="14-addresses" class="govuk-link">
+            <a class="govuk-link">
               Addresses
             </a>
           </td>
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
@@ -183,37 +223,37 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         <tbody>
           <tr>
             <td class="govuk-table__cell">
-              <a href="11-transport-to-bcp" class="govuk-link">
+              <a class="govuk-link">
                 Transport to the port of entry
               </a>
             </td>
             <td class="govuk-table__cell badge-right">
-              <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                TO DO
+              <strong class="govuk-tag phase-tag " id="origin-of-import">
+                STARTED
               </strong>
             </td>
           </tr>
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="15-transporter" class="govuk-link">
+            <a class="govuk-link">
               Transporter 
             </a>
           </td>
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="16-transport-after-bcp" class="govuk-link">
+            <a class="govuk-link">
               Means of transport after Border Control Post (BCP) 
             </a> 
           </td>
           <td class="govuk-table__cell badge-right">
-            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-              TO DO
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
             </strong>
           </td>
         </tr>
@@ -229,43 +269,43 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         <tbody class="table__row--border-top">
           <tr>
             <td class="govuk-table__cell">
-              <a href="17a-contact" class="govuk-link" id="review-link">
+              <a class="govuk-link" id="review-link">
                 Contact details
               </a>
             </td>
             <td class="govuk-table__cell badge-right">
-              <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                TO DO
+              <strong class="govuk-tag phase-tag " id="origin-of-import">
+                STARTED
               </strong>
             </td>
           </tr>
           <tr>
             <td class="govuk-table__cell">
-              <a href="17b-nominated-contacts" class="govuk-link" id="review-link">
+              <a class="govuk-link" id="review-link">
                 Nominated contacts (optional)
               </a>
             </td>
             <td class="govuk-table__cell badge-right">
-              <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                TO DO
+              <strong class="govuk-tag phase-tag " id="origin-of-import">
+                STARTED
               </strong>
             </td>
           </tr>
           <tr>
             <td class="govuk-table__cell">
-              <a href="17c-contact-consignment" class="govuk-link" id="review-link">
+              <a class="govuk-link" id="review-link">
                 Contact address for consignment
               </a>
             </td>
             <td class="govuk-table__cell badge-right">
-              <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                TO DO
+              <strong class="govuk-tag phase-tag " id="origin-of-import">
+                STARTED
               </strong>
             </td>
           </tr>
         <tr>
           <td class="govuk-table__cell">
-            <a href="18-review" class="govuk-link" id="review-link">
+            <a href="review-amend" class="govuk-link" id="review-link">
               Review and submit
             </a>
           </td>

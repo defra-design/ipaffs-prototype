@@ -39,15 +39,35 @@ Confirmation – {{ serviceName }} – GOV.UK Prototype Kit
         <h1 class="govuk-panel__title">
           Your notification has been submitted
         </h1>
-        <div class="govuk-panel__body">
-          Your reference number<br>
-          <strong>
-            <span id="reference-number">CHEDP.GB.2023.5925980</span>
-                <span id="cved-version-number"> - V1</span>
-          </strong>
-        </div>
       </div>
-      <input class="govuk-button govuk-button--secondary govuk-!-margin-right-1 govuk-!-margin-bottom-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Copy reference number" data-module="govuk-button">
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            CHED reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            CHEDP.GB.2023.6244839
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy
+            </button>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            CHED reference to use on your customs declaration
+          </dt>
+          <dd class="govuk-summary-list__value">
+            GBCHD2023.6244839
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy
+            </button>
+          </dd>
+        </div>
+      </dl>
 
       <h2 class="govuk-heading-m">What happens next</h2>
       <div class="govuk-warning-text govuk-!-margin-bottom-2">
@@ -58,6 +78,7 @@ Confirmation – {{ serviceName }} – GOV.UK Prototype Kit
         </strong>
       </div>
       <p class="govuk-body">The driver must check the GVMS if an inspection is required before they disembark.</p>
+      <p class="govuk-body">Check that your notification details and customs declaration match or your consignment will be delayed.</p>
 
         <div>
           <a href="0-index-post-submit" class="govuk-link govuk-!-font-size-19" id="manage-notifications">
