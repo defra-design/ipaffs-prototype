@@ -18,7 +18,14 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="import-type-page">
     <div class="govuk-grid-column-three-quarters">
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6" id="page-primary-title">Check that notification details and customs declarations match</h1>
-      <p class="govuk-body govuk-!-margin-bottom-6">If you update a customs declaration, the notification will not be removed from this list immediately. Check again later.</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          If you update a customs declaration, it may take several minutes for the notification to be removed from this list.
+        </strong>
+      </div>
+      
     </div>
     <div class="govuk-grid-column-full">
       <div class="notification-list">
