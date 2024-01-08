@@ -48,7 +48,7 @@ Initial risk assessment – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </div>
 
-      <dl class="govuk-summary-list">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-1">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">
             CHED reference number
@@ -62,6 +62,8 @@ Initial risk assessment – {{ serviceName }} – GOV.UK Prototype Kit
             </button>
           </dd>
         </div>
+      </dl> 
+      <dl class="govuk-summary-list--no-border govuk-!-margin-bottom-1">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">
             CHED reference to use on your customs declaration
@@ -76,19 +78,23 @@ Initial risk assessment – {{ serviceName }} – GOV.UK Prototype Kit
           </dd>
         </div>
       </dl>
+      
 
-      <div class="govuk-warning-text">
+      <div class="govuk-warning-text govuk-!-margin-bottom-1">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-warning-text__assistive">Warning</span>
-          Initial risk assessments can change.
+          You must use this reference on the customs declaration or your consignment will be delayed.
         </strong>
       </div>
+      <hr class="govuk-!-margin-top-2">
 
       <h2 class="govuk-heading-m">What you need to do</h2>
       <p class="govuk-body">Tell the driver that this consignment does not require an inspection.</p>
 
-      <p class="govuk-body">Check that your notification details and customs declaration match or your consignment will be delayed.</p>
+      <div class="govuk-inset-text">
+        Initial risk assessments can change.
+      </div>
       
       <h2 class="govuk-heading-m">What happens next</h2>
       <p class="govuk-body">An inspector may update the risk assessment.</p>
