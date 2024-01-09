@@ -89,7 +89,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="audit-flag">
           <div id="last-submission-date">Submitted on: </div>
           <div id="submitted-by">Submitted by: </div>
-          <div id="last-updated-date">Last updated: 15 August 2023, 14:57</div>
+          <div id="last-updated-date">Last updated: 12 January 2024, 10:27</div>
           <div id="last-updated-by">Last updated by: Percy Hyseni </div>
         </div>
   
@@ -114,7 +114,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <td class="govuk-table__header">Country of origin</td>
                       <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}</td>
                       <td class="govuk-table__cell change">
-                        <a href="03b-origin-import" class="govuk-link" id="country-of-origin-change-link">
+                        <a href="03-origin-import?from=review" class="govuk-link" id="country-of-origin-change-link">
                           Change
                         </a>
                       </td>
@@ -124,7 +124,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <td class="govuk-table__cell">
                         {% if (data['consigned-country'] == "same") %}
                           {{ data['origin-country'] }}
-                        {% elseif (data['consigned-country'] == "different") %}
+                        {% elif (data['consigned-country'] == "different") %}
                           {{ data['consigned-country-selected'] }}
                         {% endif %}
                       </td>
