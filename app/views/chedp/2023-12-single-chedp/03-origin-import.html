@@ -302,13 +302,13 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                 </span>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="consigned-country-same" name="consigned-country" type="radio" value="same">
+                    <input class="govuk-radios__input" id="consigned-country-same" name="consigned-country" type="radio" value="same" {{ checked('consigned-country','same') }}>
                     <label class="govuk-label govuk-radios__label" for="consigned-country-same">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="consigned-country-different" name="consigned-country" type="radio" value="different" data-aria-controls="consigned-country-select-list">
+                    <input class="govuk-radios__input" id="consigned-country-different" name="consigned-country" type="radio" value="different" data-aria-controls="consigned-country-select-list" {{ checked('consigned-country','different') }}>
                     <label class="govuk-label govuk-radios__label" for="consigned-country-different">
                       No
                     </label>
