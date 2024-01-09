@@ -1,0 +1,169 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-error-summary govuk-!-margin-top-3 govuk-!-margin-bottom-0" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+        <li>
+          <a href="#anchor">Your notification details and customs declaration must match. Check both and submit any changes.</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-three-quarters">
+      
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6" id="page-primary-title">Check that these notification details and the customs declaration match</h1>
+      <p class="govuk-body">Review and update either your notificaton details or the customs declaration to avoid a delay with these consignments.</p>
+
+      <p class="govuk-body">The details that do not match are (one of the following):</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Commodity code</li>
+        <li>Net weight</li>
+        <li>Number of animals</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        If you update the notification, it will be removed from this list immediately. If you update the customs declaration, it may take a few minutes.
+      </div>
+      
+    </div>
+    <div class="govuk-grid-column-full">
+      <div class="notification-list">
+        <dl class="notification-list__row govuk-form-group--error">
+          <div class="notification-list__grid-row ">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading" id="anchor">Reference number</dt>
+              <dd class="notification-list__value" id="reference-number-1">
+                CHEDP.GB.2022.3736832
+              </dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Commodity</dt>
+              <dd class="notification-list__value" id="commodity-id-1">0808108090</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Arrival at BCP or POE</dt>
+              <dd class="notification-list__value" id="arrival-date-1">20 February 2024</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading"></dt>
+              <dd class="notification-list__value" id="status-1">
+              </dd>
+            </div>
+          </div>
+          <div class="notification-list__links">
+            <p id="nationality-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Your notification details and the customs declaration must match.
+            </p>
+          </div>
+          <div class="notification-list__links">
+              <form method="post" action="" class="govuk-!-display-inline">
+                <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
+                <button class="govuk-link govuk-!-margin-bottom-3" id="copy-as-new-CHEDPP.GB.2022.3736832" name="submit-param" value="CHEDPP.GB.2022.3736832">
+                  Check and update details
+                </button>
+              </form>
+          </div>
+        </dl> 
+        <dl class="notification-list__row govuk-form-group--error govuk-!-margin-top-3">
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Reference number</dt>
+              <dd class="notification-list__value" id="reference-number-0">
+                CHEDP.GB.2023.6244839
+              </dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Commodity</dt>
+              <dd class="notification-list__value" id="commodity-id-0">020110</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Arrival at BCP or POE</dt>
+              <dd class="notification-list__value" id="arrival-date-0">26 January 2024</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading"></dt>
+              <dd class="notification-list__value" id="status-0">
+              </dd>
+            </div>
+          </div>
+          <div class="notification-list__links">
+            <p id="nationality-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Your notification details and the customs declaration must match.
+            </p>
+          </div>
+          <div class="notification-list__links">
+              <form method="post" action="review" class="govuk-!-display-inline">
+                <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
+                <button class="govuk-link govuk-!-margin-bottom-3" id="copy-as-new-CHEDPP.GB.2021.3476228" name="submit-param" value="CHEDPP.GB.2021.3476228">
+                  Check and update details
+                </button>
+              </form>
+          </div>
+        </dl>
+        <dl class="notification-list__row govuk-form-group--error govuk-!-margin-top-3">
+          <div class="notification-list__grid-row">
+            <div class="notification-list__grid-column-30">
+              <dt class="notification-list__heading">Reference number</dt>
+              <dd class="notification-list__value" id="reference-number-0">
+                CHEDP.GB.2023.3476228
+              </dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Commodity</dt>
+              <dd class="notification-list__value" id="commodity-id-0">0808108090</dd>
+            </div>
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Arrival at BCP or POE</dt>
+              <dd class="notification-list__value" id="arrival-date-0">21 January 2024</dd>
+            </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading"></dt>
+              <dd class="notification-list__value" id="status-0">
+                 
+              </dd>
+            </div>
+          </div>
+          <div class="notification-list__links">
+            <p id="nationality-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Your notification details and the customs declaration must match.
+            </p>
+          </div>
+          <div class="notification-list__links">
+              <form method="post" action="" class="govuk-!-display-inline">
+                <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
+                <button class="govuk-link govuk-!-margin-bottom-3" id="copy-as-new-CHEDPP.GB.2021.3476228" name="submit-param" value="CHEDPP.GB.2021.3476228">
+                  Check and update details
+                </button>
+              </form>
+          </div>
+          
+        </dl>
+      </div>
+    </div>
+    
+
+  </div>
+</main>
+
+{% endblock %}

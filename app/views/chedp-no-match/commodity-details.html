@@ -1,0 +1,887 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+<main class="govuk-main-wrapper govuk-!-padding-top-3" id="main-content">
+  <div class="govuk-grid-row" id="commodity-details-page">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-error-summary govuk-!-margin-top-3 govuk-!-margin-bottom-6" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+              <li>
+                <a href="#boneless">The net weight on the notification and customs declaration do not match. Check both and update the one that is incorrect.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <span class="heading-tertiary">
+          <span id="reference-number">CHEDP.GB.2023.6244839</span>
+        </span>
+        <h1 class="govuk-heading-xl " id="page-primary-title">Check or update commodity details</h1>
+
+        <p class="govuk-body">These details were cloned from the health certificate.</p>
+
+        <h2 class="govuk-heading-m" id="commodities">Commodities</h2>
+
+        <table class="govuk-table govuk-!-margin-bottom-4">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">
+                Commodity code</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">020110</td>
+              <td class="govuk-table__cell">Carcases and half-carcases</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a  class="govuk-link">Remove</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">020120</td>
+              <td class="govuk-table__cell">Other cuts with bone in</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a  class="govuk-link">Remove</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">020130</td>
+              <td class="govuk-table__cell">Boneless</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a  class="govuk-link">Remove</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">020210</td>
+              <td class="govuk-table__cell">Carcases and half-carcases</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link">Remove</a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p class="govuk-body govuk-!-margin-bottom-6"><a href="" class="govuk-link">Add commodity</a></p>
+
+
+      <form action="declaration" method="post">
+        <input name="" id="" class="js-hidden" type="submit" value="Keyboard submit">
+        <input name="crumb" type="hidden" value="0">
+        <input name="etag" type="hidden" value="&quot;00000000053B49A0&quot;">
+        <input name="commodityDetailsPage" type="hidden" value="1">
+
+        <div class="govuk-!-margin-bottom-8">
+          <div class="table-responsive species-table-desktop">
+            <h2 class="govuk-heading-m">Carcases and half-carcases</h2>
+            <table class="govuk-table species-table-cheda govuk-!-margin-bottom-2">
+              
+              <!-- <caption class="govuk-table__caption">
+                <h2 class="govuk-heading-m">03032300 - Tilapia (Oreochromis|spp.)</h2>
+              </caption> -->
+    
+             
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header species   ">Species, type,<br> class and family</th>
+                  <th scope="col" class="govuk-table__header">Net weight (kg/units)</th>
+                <th scope="col" class="govuk-table__header">Number of packages</th>
+                  <th scope="col" class="govuk-table__header">Type of package</th>
+                <td class="govuk-table__header"></td>
+              </tr>
+              
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bison bison, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bos taurus, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bubalus bubalis, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                
+              </tbody>
+              <tfoot>
+                <tr id="subtotals-03032300-desktop" class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header border-bottom-none   ">Subtotal</th>
+                    <td class="govuk-table__cell subtotal border-bottom-none">
+                      3
+                    </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none">
+                    3
+                  </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none"></td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="govuk-body govuk-!-margin-bottom-6"><a class="govuk-link">Add species</a></p>
+          </div>
+        </div>
+        <div class="govuk-!-margin-bottom-8">
+          <div class="table-responsive species-table-desktop">
+            <h2 class="govuk-heading-m">Other cuts with bone in</h2>
+            <table class="govuk-table species-table-cheda govuk-!-margin-bottom-2">
+              
+              <!-- <caption class="govuk-table__caption">
+                <h2 class="govuk-heading-m">03032300 - Tilapia (Oreochromis|spp.)</h2>
+              </caption> -->
+    
+             
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header species   ">Species, type,<br> class and family</th>
+                  <th scope="col" class="govuk-table__header">Net weight (kg/units)</th>
+                <th scope="col" class="govuk-table__header">Number of packages</th>
+                  <th scope="col" class="govuk-table__header">Type of package</th>
+                <td class="govuk-table__header"></td>
+              </tr>
+              
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bison bison, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bos taurus, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bubalus bubalis, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                
+              </tbody>
+              <tfoot>
+                <tr id="subtotals-03032300-desktop" class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header border-bottom-none   ">Subtotal</th>
+                    <td class="govuk-table__cell subtotal border-bottom-none">
+                      3
+                    </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none">
+                    3
+                  </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none"></td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="govuk-body govuk-!-margin-bottom-6"><a class="govuk-link">Add species</a></p>
+          </div>
+        </div>
+
+        <div class="govuk-!-margin-bottom-8 govuk-form-group--error">
+          <div class="table-responsive species-table-desktop">
+            <h2 class="govuk-heading-m" id="boneless">Boneless</h2>
+            <p id="passport-issued-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Commodity code 020130 Boneless has a net weight of 3kgs entered on the customs declaration that does not match this notification.</p>
+            <table class="govuk-table species-table-cheda govuk-!-margin-bottom-2">
+              
+              <!-- <caption class="govuk-table__caption">
+                <h2 class="govuk-heading-m">03032300 - Tilapia (Oreochromis|spp.)</h2>
+              </caption> -->
+    
+             
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header species   ">Species, type,<br> class and family</th>
+                  <th scope="col" class="govuk-table__header">Net weight (kg/units)</th>
+                <th scope="col" class="govuk-table__header">Number of packages</th>
+                  <th scope="col" class="govuk-table__header">Type of package</th>
+                <td class="govuk-table__header"></td>
+              </tr>
+              
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bison bison, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.5" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bos taurus, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bubalus bubalis, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.5" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>
+                
+              </tbody>
+              <tfoot>
+                <tr id="subtotals-03032300-desktop" class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header border-bottom-none   ">Subtotal</th>
+                    <td class="govuk-table__cell subtotal border-bottom-none">
+                      4
+                    </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none">
+                    4
+                  </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none"></td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="govuk-body govuk-!-margin-bottom-6"><a class="govuk-link">Add species</a></p>
+          </div>
+        </div>
+
+        <div class="govuk-!-margin-bottom-8">
+          <div class="table-responsive species-table-desktop">
+            <h2 class="govuk-heading-m">Carcases and half-carcases</h2>
+            <table class="govuk-table species-table-cheda govuk-!-margin-bottom-2">
+              
+              <!-- <caption class="govuk-table__caption">
+                <h2 class="govuk-heading-m">03032300 - Tilapia (Oreochromis|spp.)</h2>
+              </caption> -->
+    
+             
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header species   ">Species, type,<br> class and family</th>
+                  <th scope="col" class="govuk-table__header">Net weight (kg/units)</th>
+                <th scope="col" class="govuk-table__header">Number of packages</th>
+                  <th scope="col" class="govuk-table__header">Type of package</th>
+                <td class="govuk-table__header"></td>
+              </tr>
+              
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row" id="species-03032300-393882-desktop">
+                  <td class="govuk-table__cell   " id="03032300-393882-desktop">Bison bison, Domestic</td>
+                  <td class="govuk-table__cell">
+                         <div class="govuk-form-group govuk-!-margin-bottom-0  ">
+                         
+                         
+                         
+                           <input class="govuk-input net-weight " id="03032300-393882.net-weight" name="03032300-393882.net-weight" type="[object Object]" value="1.0" aria-label="Net weight for Oreochromis mossambicus 1-1">
+                         </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                      <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      
+                      
+                      
+                        <input class="govuk-input number-of-packages " id="03032300-393882.num-packages-desktop" name="03032300-393882.num-packages" type="[object Object]" value="1" aria-label="Number of packages for Oreochromis mossambicus 1-1">
+                      </div>
+                  </td>
+                    <td class="govuk-table__cell">
+                      <div class=" ">
+                        <select class="govuk-select type-of-package govuk-!-width-full" aria-label="Package type for Oreochromis mossambicus 1-1" name="03032300-393882.package-type" id="03032300-393882.package-type">
+    
+                          <option value="" selected="">Select type of package</option>
+                          <option>Bag</option>
+                          <option>Bale</option>
+                          
+                            <option>Balloon Protected</option>
+                          
+                          <option>Block</option>
+                          <option>Box</option>
+                          <option>Can</option>
+                          <option selected>Carton</option>
+                          <option>Case</option>
+                          <option>Cask</option>
+                          <option>Coffer</option>
+                          <option>Container, not otherwise specified as transport equipment</option>
+                          <option>Crate</option>
+                          <option>Drum</option>
+                          <option>In Bulk</option>
+                          <option>Jar</option>
+                          <option>Other</option>
+                          <option>Package</option>
+                          <option>Pail</option>
+                          <option>Pallet</option>
+                          
+                            <option>Pallet Box</option>
+                          
+                          <option>Polystyrene Box</option>
+                          <option>Tank</option>
+                          <option>Tote</option>
+                          <option>Tray</option>
+                          <option>Tube</option>
+                          <option>Vial</option>
+                        </select>
+                      </div>
+                    </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6">
+                    <a class="govuk-link">Remove</a>
+                  </td>
+                </tr>                
+              </tbody>
+              <tfoot>
+                <tr id="subtotals-03032300-desktop" class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header border-bottom-none   ">Subtotal</th>
+                    <td class="govuk-table__cell subtotal border-bottom-none">
+                      1
+                    </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none">
+                    1
+                  </td>
+                  <td class="govuk-table__cell subtotal border-bottom-none"></td>
+                </tr>
+              </tfoot>
+            </table>
+            <p class="govuk-body govuk-!-margin-bottom-6"><a class="govuk-link">Add species</a></p>
+          </div>
+        </div>
+
+        
+
+          <div>
+            <h2 class="govuk-heading-m">Total for this consignment</h2>
+          
+            <div class="table-responsive govuk-!-width-one-half">
+              <table class="govuk-table" role="presentation">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-full" id="net-weight-total-header">Net weight (kg/units)</th>
+                    <td class="govuk-table__cell">11</td>
+                  </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-full">Number of packages</th>
+                  <td class="govuk-table__cell">10</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="govuk-!-margin-bottom-8">
+              <input class="govuk-button govuk-button--secondary" type="submit" value="Update total" name="update-total" id="update-total-desktop">
+            </div>
+          </div>
+
+
+          
+
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
+            <!--<input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button--secondary" id="button-save-and-continue-p" name="button-save-and-continue-p" type="submit" value="Save and return to task list" data-module="govuk-button">
+            <p class="govuk-body"><a class="govuk-link">Cancel and return to task list</a></p>-->
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
