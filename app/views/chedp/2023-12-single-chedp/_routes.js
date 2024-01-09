@@ -77,7 +77,7 @@ router.post('/ae-route', function (req, res) {
   Run this code when the notification is submitted on 19-declaration
     to check if GVMS is used,
     and if not,
-      then check risk-category is medium,
+      then check risk-category is low,
         and redirect to appropriate Confirmation page
 */
 router.post('/submit-notification', function (req, res) {
@@ -88,13 +88,13 @@ router.post('/submit-notification', function (req, res) {
     res.redirect('20-submitted-gvms-yes')
   } 
   // if GVMS is no or no answer is given,
-    // and risk category is medium, redirect to Inspection required confirmation page
-    else if (riskRoute == "medium"){
-      res.redirect('20-submitted-inspection-required')
-    }
-    // in any other case, redirect to Inspection not required page
-    else {
+    // and risk category is low, redirect to Inspection not required confirmation page
+    else if (riskRoute == "low"){
       res.redirect('20-submitted-inspection-not-required')
+    }
+    // in any other case, redirect to Inspection required page
+    else {
+      res.redirect('20-submitted-inspection-required')
     }
 
 })

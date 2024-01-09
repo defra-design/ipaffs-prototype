@@ -89,7 +89,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="audit-flag">
           <div id="last-submission-date">Submitted on: </div>
           <div id="submitted-by">Submitted by: </div>
-          <div id="last-updated-date">Last updated: 15 August 2023, 14:57</div>
+          <div id="last-updated-date">Last updated: 12 January 2024, 10:27</div>
           <div id="last-updated-by">Last updated by: Percy Hyseni </div>
         </div>
   
@@ -112,16 +112,22 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                     <tr class="presentation-table__section">
                       <td class="govuk-table__header">Country of origin</td>
-                      <td class="govuk-table__cell" id="country-of-origin">Argentina</td>
+                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}</td>
                       <td class="govuk-table__cell change">
-                        <a href="03-origin-import" class="govuk-link" id="country-of-origin-change-link">
+                        <a href="03-origin-import?from=review" class="govuk-link" id="country-of-origin-change-link">
                           Change
                         </a>
                       </td>
                     </tr>
                     <tr>
                       <td class="govuk-table__header">Country of consignment</td>
-                      <td class="govuk-table__cell">Argentina</td>
+                      <td class="govuk-table__cell">
+                        {% if (data['consigned-country'] == "same") %}
+                          {{ data['origin-country'] }}
+                        {% elif (data['consigned-country'] == "different") %}
+                          {{ data['consigned-country-selected'] }}
+                        {% endif %}
+                      </td>
                       <td class="govuk-table__cell"></td>
                     </tr>
                     <tr>
@@ -155,7 +161,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <tr class="presentation-table__section ">
                     <td class="govuk-table__header">Main reason for importing the consignment</td>
                     <td class="govuk-table__cell" id="purpose-of-consignment-value">
-                        Transit
+                        For internal market
                               </td>
                     <td class="govuk-table__cell change">
                           <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "cg" }}" class="govuk-link" id="consignment-purpose-change-link">
@@ -163,11 +169,11 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           </a>
                     </td>
                   </tr>
-                      <!--<tr>
+                      <tr>
                         <td class="govuk-table__header">Purpose in the internal market</td>
                         <td>Human Consumption</td>
                         <td></td>
-                      </tr>-->
+                      </tr>
                       <tr>
                         <td class="govuk-table__header">
                           Movement Reference Number (MRN)
@@ -175,6 +181,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         <td class="govuk-table__cell">23GB1234567890ABCD</td>
                         <td class="govuk-table__cell"></td>
                       </tr>
+                      <!-- IF TRANSIT 
                       <tr>
                         <td class="govuk-table__header">
                          Port of exit
@@ -202,7 +209,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         </td>
                         <td class="govuk-table__cell">Republic of Ireland</td>
                         <td class="govuk-table__cell"></td>
-                      </tr>
+                      </tr> -->
                       <tr class="presentation-table__section">
                       <td class="govuk-table__header" id="import-risk-header">Import risk category</td>
                         <td>{{ data['risk-category'] | capitalize }} risk</td>
@@ -287,7 +294,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       </tfoot>
                     </table>
                   </div>
-                                <div class="table-responsive">
+                  
+                  <!-- SECOND COMMODITY
+                  <div class="table-responsive">
                   <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-0" role="presentation">
                     <tbody class="govuk-table__head">
                         <tr class="presentation-table__section">
@@ -351,7 +360,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         </tr>
                       </tfoot>
                     </table>
-                  </div>
+                  </div> -->
             
             <div class="table-responsive govuk-!-margin-bottom-9">
               <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
