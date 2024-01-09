@@ -112,16 +112,22 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                     <tr class="presentation-table__section">
                       <td class="govuk-table__header">Country of origin</td>
-                      <td class="govuk-table__cell" id="country-of-origin">Argentina</td>
+                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}</td>
                       <td class="govuk-table__cell change">
-                        <a href="03-origin-import" class="govuk-link" id="country-of-origin-change-link">
+                        <a href="03b-origin-import" class="govuk-link" id="country-of-origin-change-link">
                           Change
                         </a>
                       </td>
                     </tr>
                     <tr>
                       <td class="govuk-table__header">Country of consignment</td>
-                      <td class="govuk-table__cell">Argentina</td>
+                      <td class="govuk-table__cell">
+                        {% if (data['consigned-country'] == "same") %}
+                          {{ data['origin-country'] }}
+                        {% elseif (data['consigned-country'] == "different") %}
+                          {{ data['consigned-country-selected'] }}
+                        {% endif %}
+                      </td>
                       <td class="govuk-table__cell"></td>
                     </tr>
                     <tr>

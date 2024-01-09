@@ -29,13 +29,13 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
         
             <div class="govuk-radios ">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cert-type" name="risk-category" type="radio" value="medium">
+                  <input class="govuk-radios__input" id="cert-type" name="risk-category" type="radio" value="medium" {{ checked('risk-category','medium') }}>
                   <label class="govuk-label govuk-radios__label " for="cert-type">
                       Medium risk
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cert-type-2" name="risk-category" type="radio" value="low">
+                  <input class="govuk-radios__input" id="cert-type-2" name="risk-category" type="radio" value="low" {{ checked('risk-category','low') }}>
                   <label class="govuk-label govuk-radios__label " for="cert-type-2">
                       Low risk
                   </label>
