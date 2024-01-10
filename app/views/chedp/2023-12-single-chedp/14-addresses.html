@@ -23,7 +23,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       <span class="govuk-caption-xl">Traders</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Addresses</h1>
 
-      <form action="14a-address-search" method="POST">
+      <form action="14-addresses" method="POST">
         <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
         <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
         <input name="14-addresses" type="hidden" value="visited">
@@ -125,24 +125,23 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
 
         <div class="govuk-!-margin-bottom-8">
-          <h2 class="govuk-heading-m">
+          <h2 class="govuk-heading-m" id="importer-heading">
             Importer
           </h2>
           <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
          
           {% if (data['importer-page'] != "yes") and (data['consignee-page'] == "yes") %}
-          <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
+          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignee-to-importer" name="addConsigee" value="consignee">
             Same as consignee
-        </button>
+        </button> -->
+
+        <a href="14-addresses?importer-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
+        
         &nbsp;
         <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
-          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
-            Add an importer
-        </button> -->
+         
         {% elif (data['importer-page'] != "yes") %}
-        <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-importer" name="addressType" value="importer">
-          Add an importer
-      </button> -->
+       
       <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
 
           {% elif (data['importer-page'] == "yes") %}
@@ -195,9 +194,13 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           <p class="govuk-hint">This is where the consignment will be sent for final unloading, and must be in Great Britain. If this is not the same as the consignee or importer, select a different address.</p>
           </div></div>
           {% if (data['place-of-destination-page'] != "yes") and (data['consignee-page'] == "yes") %}
-          <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
+
+          <a href="14-addresses?place-of-destination-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
+        
+
+          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
             Same as consignee
-        </button>
+        </button> -->
         &nbsp;
         <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
         <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
