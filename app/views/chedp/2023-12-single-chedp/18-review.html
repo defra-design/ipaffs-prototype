@@ -128,11 +128,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           {{ data['consigned-country-selected'] }}
                         {% endif %}
                       </td>
-                      <td class="govuk-table__cell"></td>
-                    </tr>
-                    <tr>
-                      <td class="govuk-table__header">Region of origin code</td>
-                      <td class="govuk-table__cell" id="region-of-consignment-value">
+                      
                         
                       </td>
                       <td class="govuk-table__cell"></td>
@@ -431,7 +427,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   
                   {% if (data['risk-category'] != "low") %}
                   <div class="heading-with-change-link">
-                    <h3 class="govuk-heading-s" id="latest-health-certificate-heading">Latest health certificate</h3>
+                    <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
                         <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-health-certificate">
                           Change
                         </a>
@@ -467,10 +463,31 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       </tbody>
                     </table>
                   </div>
+                  <div class="table-responsive govuk-!-margin-bottom-9">
+                    <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
+                      <tbody>
+                  
+                        <h3 class="govuk-heading-s" id="latest-health-certificate-heading">Region of origin code</h3>
+                
+                        <tr class="presentation-table__section ">
+                          <td class="govuk-table__cell" id="region-code">
+                            Region of origin code
+                          </td>
+                          <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                            IT1415B
+                          </td>
+                          </td>
+                        </tr>
+                  
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                   {% endif %}
                   
                   <div class="heading-with-change-link">
-                      <h3 class="govuk-heading-s" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
+                      <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
                         <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs">
                           Change
                         </a>
@@ -613,13 +630,13 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     </thead>
                     <tbody>
                         <tr >
-                          <td class="govuk-table__cell" >B/P Don Bartolo (Pesquera Atunes del Pacifico S.A. Atunpacificosa)</td>
-                          <td class="govuk-table__cell" >Ecuador</td>
+                          <td class="govuk-table__cell" >Agropur, inc. (Pesquera Atunes del Pacifico S.A. Atunpacificosa)</td>
+                          <td class="govuk-table__cell" >Argentina</td>
                           <td class="govuk-table__cell" style="padding-left: 10px" >
-                              Freezing Vessel
+                            raw milk or dairy products or colostrum and colostrum-based products
                               
                           </td>
-                          <td class="govuk-table__cell">INP-004-09</td>
+                          <td class="govuk-table__cell">2116532</td>
                         </tr>
                     </tbody>
                   </table>
@@ -639,7 +656,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__header govuk-!-width-one-half">Consignor or exporter</td>
                     <td class="govuk-table__cell" id="consignor">
                       Produkty Mięsne Fm<br>
-                      90 Bazar Ulica , Apt. 924, Wroclaw, Poland PM@gmail.com
+                      San Martin 230, Piso 5 Dpto 8, Y0000HGH Villa Maria, Argentina
                     </td>
                     <td class="govuk-table__cell change">
                           <a href="14-addresses" class="govuk-link" id="traders-change-link">
