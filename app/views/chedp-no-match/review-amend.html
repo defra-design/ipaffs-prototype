@@ -44,15 +44,18 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <div class="govuk-error-summary govuk-!-margin-top-3 govuk-!-margin-bottom-6" data-module="govuk-error-summary">
-        <div role="alert">
-          <h2 class="govuk-error-summary__title">
-            There is a problem
+      <div class="govuk-notification-banner" style="border-color: #d4351c;"  role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header" style="background-color: #d4351c;">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
           </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
           <div class="govuk-error-summary__body">
-            <p id="passport-issued-error" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span> Commodity code 020130 Boneless has a net weight of 3kgs entered on the customs declaration that does not match this notification. Check both and submit any changes.
-            </p>
+            <p><strong>Check this notification and your customs declaration as they do not match, then submit any changes:</strong></p>
+            <ul class="govuk-list govuk-list--bullet" style="color: #d4351c;">
+              <li><a href="commodity-details" style="color: #d4351c;"><strong>Commodity code 020130 Boneless has a net weight of 3kgs entered on the customs declaration</strong></a></li>
+            </ul>
           </div>
         </div>
       </div>

@@ -13,16 +13,18 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
 {% block content %}
 
 
-<div class="govuk-notification-banner govuk-!-margin-bottom-0" style="border-color: #d4351c;"  role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header" style="background-color: #d4351c;">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      Important
+<div class="govuk-error-summary govuk-!-margin-top-3 govuk-!-margin-bottom-0" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
     </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <p class="govuk-notification-banner__heading">
-      Your notification details and customs declarations must match. Check both and submit any changes.
-    </p>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+        <li>
+          <a href="#anchor">Your notification details and customs declaration must match. Check both and submit any changes.</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <main class="govuk-main-wrapper" id="main-content">
@@ -75,9 +77,12 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
             </p>
           </div>
           <div class="notification-list__links">
+              <form method="post" action="" class="govuk-!-display-inline">
+                <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
                 <button class="govuk-link govuk-!-margin-bottom-3" id="copy-as-new-CHEDPP.GB.2022.3736832" name="submit-param" value="CHEDPP.GB.2022.3736832">
                   Check and update details
                 </button>
+              </form>
           </div>
         </dl> 
         <dl class="notification-list__row govuk-form-group--error govuk-!-margin-top-3">
@@ -108,7 +113,7 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
             </p>
           </div>
           <div class="notification-list__links">
-              <form method="post" action="commodity-details" class="govuk-!-display-inline">
+              <form method="post" action="review" class="govuk-!-display-inline">
                 <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
                 <button class="govuk-link govuk-!-margin-bottom-3" id="copy-as-new-CHEDPP.GB.2021.3476228" name="submit-param" value="CHEDPP.GB.2021.3476228">
                   Check and update details
@@ -145,9 +150,12 @@ What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
             </p>
           </div>
           <div class="notification-list__links">
-            <button class="govuk-link govuk-!-margin-bottom-3" id="copy-as-new-CHEDPP.GB.2021.3476228" name="submit-param" value="CHEDPP.GB.2021.3476228">
+              <form method="post" action="" class="govuk-!-display-inline">
+                <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
+                <button class="govuk-link govuk-!-margin-bottom-3" id="copy-as-new-CHEDPP.GB.2021.3476228" name="submit-param" value="CHEDPP.GB.2021.3476228">
                   Check and update details
                 </button>
+              </form>
           </div>
           
         </dl>
