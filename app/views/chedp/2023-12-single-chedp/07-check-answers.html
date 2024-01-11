@@ -270,13 +270,9 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                 <ul class="govuk-task-list">
                 <li class="govuk-task-list__item">
                   <div class="govuk-task-list__name-and-hint">
-                    {% if (data['17c-contact-consignment'] == "visited") %}
-                   
-                    
                     <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/18-review" aria-describedby="prepare-application-2-status">Review and submit</a>
-                    {% else %}
-                    <div>Review and submit</div>
-                    {% endif %}
+                   
+                  
                   </div> 
                   {% if (data['17c-contact-consignment'] == "visited") %}
                   <div class="govuk-task-list__status" id="prepare-application-2-status">
@@ -284,7 +280,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                 {% else %}
                   <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-                    Cannot submit yet
+                    Not ready to submit
                   </div>
                   {% endif %}
                 </li>
