@@ -631,28 +631,29 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
                     Does this consignment conform to regulatory requirements?
-                  </lable>
-                  <p></p>
-                  <span id="local-reference-number-hint" class="govuk-hint">
-                    Enter any internal reference number you want to use to identify this consignment, or leave blank.
-                  </span>
+                  </legend>
+      
                 <div class="govuk-radios ">
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="conform-uk-regulations" name="conform-uk-regulations" type="radio" value="cg" {{ checked('conform-uk-regulations','cg') }}>
                       <label class="govuk-label govuk-radios__label " for="conform-uk-regulations">
                         Yes
                       </label>
+                      <p class="govuk-hint govuk-radios__hint">
+                        It conforms to the <a href="https://www.legislation.gov.uk/eur/2017/625/article/1" class="govuk-link">regulatory requirements.</a>
+                      </p>
                     </div>
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="conform-uk-regulations-2" name="conform-uk-regulations" type="radio" value="ncg" {{ checked('conform-uk-regulations','ncg') }}>
                       <label class="govuk-label govuk-radios__label " for="conform-uk-regulations-2">
                         No
                       </label>
+                      <div class="govuk-hint govuk-radios__hint"> It is not destined for the UK market. </div>
                     </div>
                 </div>
               </fieldset>
             </div>
-
+           
             <div class="govuk-form-group  ">
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
