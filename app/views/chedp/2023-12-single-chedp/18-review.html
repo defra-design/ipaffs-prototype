@@ -132,11 +132,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         
                       </td>
                       <td class="govuk-table__cell"></td>
-                    </tr>
-                    <tr>
-                      <td class="govuk-table__header">
-                        Consignment conforms to regulatory requirements
-                      </td>
+                    
+                    
                       <td class="govuk-table__cell">
                         {% if (data['conform-uk-regulations'] == "ncg") %}
                           No
@@ -155,16 +152,21 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     </tr>
             
                   <tr class="presentation-table__section ">
-                    <td class="govuk-table__header">Main reason for importing the consignment</td>
+                    <td class="govuk-table__header">Consignment conforms to regulatory requirements</td>
                     <td class="govuk-table__cell" id="purpose-of-consignment-value">
-                        For internal market
+                        Yes
                               </td>
                     <td class="govuk-table__cell change">
-                          <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "cg" }}" class="govuk-link" id="consignment-purpose-change-link">
+                          <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "both" }}" class="govuk-link" id="consignment-purpose-change-link">
                             Change
                           </a>
                     </td>
                   </tr>
+                  <td class="govuk-table__header">Main reason for importing the consignment</td>
+                    <td class="govuk-table__cell" id="purpose-of-consignment-value">
+                        For internal market
+                              </td>
+                      
                       <tr>
                         <td class="govuk-table__header">Purpose in the internal market</td>
                         <td>Human Consumption</td>
@@ -177,6 +179,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         <td class="govuk-table__cell">23GB1234567890ABCD</td>
                         <td class="govuk-table__cell"></td>
                       </tr>
+                      
                       <!-- IF TRANSIT 
                       <tr>
                         <td class="govuk-table__header">
@@ -465,7 +468,13 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </div>
                   <div class="heading-with-change-link" id="additional-details-section">
                     <h2 class="govuk-heading-s">Region of origin code</h2>
-                  
+                    <td class="govuk-table__cell">
+                      {% if (data['region-of-orgin-code'] == "yes") %}
+                        {{ data['region-code-added'] }}
+                      {% elif (data['region-of-orgin-code'] == "no") %}
+                        {{ data['region-code-noselected'] }}
+                      {% endif %}
+                    </td>
                     </a>
                   </div>
                   <div class="govuk-!-margin-bottom-9">
