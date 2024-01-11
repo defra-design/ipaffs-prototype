@@ -631,7 +631,11 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
                     Does this consignment conform to regulatory requirements?
-                  </legend>
+                  </lable>
+                  <p></p>
+                  <span id="local-reference-number-hint" class="govuk-hint">
+                    Enter any internal reference number you want to use to identify this consignment, or leave blank.
+                  </span>
                 <div class="govuk-radios ">
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="conform-uk-regulations" name="conform-uk-regulations" type="radio" value="cg" {{ checked('conform-uk-regulations','cg') }}>
