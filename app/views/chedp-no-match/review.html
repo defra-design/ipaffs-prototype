@@ -118,9 +118,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <div id="last-updated-date">Last updated: 29 December 2023, 09:56</div>
         <div id="last-updated-by">Last updated by: Percy Plants</div>
       </div>
+      
 
       <div class="table-responsive">
-        <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-about-notification" role="presentation">
           <tbody>
             <tr class="presentation-table__section ">
               <td class="govuk-table__header">CHED reference number</td>
@@ -134,17 +135,35 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </td>
             </tr>
             <tr class="presentation-table__section ">
-              <td class="govuk-table__header">CHED reference to use on your customs declaration</td>
-              <td class="govuk-table__cell" id="purpose-of-consignment-value">
+              <td class="govuk-table__header" style="border-bottom: none;">CHED reference to use on your customs declaration</td>
+              <td class="govuk-table__cell" style="border-bottom: none;" id="purpose-of-consignment-value">
                 GBCHD2023.6244839
                         </td>
-              <td class="govuk-table__cell change">
+              <td class="govuk-table__cell change" style="border-bottom: none;">
                 <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
                   Copy
                 </button>
               </td>
             </tr>
-          </tbody>
+        </table>
+        <div class="govuk-warning-text govuk-!-margin-bottom-3">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You must use this reference on the customs declaration or your consignment will be delayed.
+          </strong>
+        </div>
+
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-about-notification" role="presentation">
+          <tbody>
+            <tr class="presentation-table__section ">
+              <td class="govuk-table__header">CDS document code</td>
+              <td class="govuk-table__cell" id="purpose-of-consignment-value">
+                C640
+                        </td>
+              <td class="govuk-table__cell change">
+              </td>
+            </tr>
         </table>
       </div>
 
