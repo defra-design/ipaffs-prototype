@@ -30,17 +30,20 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
     </p>
   </div>
 </div>
-<main class="govuk-main-wrapper govuk-!-padding-top-7" id="main-content">
+<main class="govuk-main-wrapper govuk-!-padding-top-3" id="main-content">
   <div class="govuk-grid-row" id="commodity-details-page">
     <div class="govuk-grid-column-full">
-      <div class="govuk-error-summary" data-module="govuk-error-summary">
+      <div class="govuk-error-summary govuk-!-margin-top-3 govuk-!-margin-bottom-6" data-module="govuk-error-summary">
         <div role="alert">
           <h2 class="govuk-error-summary__title">
             There is a problem
           </h2>
           <div class="govuk-error-summary__body">
-            <p class="govuk-body govuk-!-width-two-thirds"><strong>The commodity details in your notification and customs declaration do not match. This consignment may be delayed.</strong></p>
-            <p class="govuk-body govuk-!-width-two-thirds"><strong>Check both and submit any changes.</strong></p>
+            <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+              <li>
+                <a href="#boneless">The net weight on the notification and customs declaration do not match. Check both and update the one that is incorrect.</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -530,10 +533,11 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         </div>
 
-        <div class="govuk-!-margin-bottom-8">
+        <div class="govuk-!-margin-bottom-8 govuk-form-group--error">
           <div class="table-responsive species-table-desktop">
             <h2 class="govuk-heading-m" id="boneless">Boneless</h2>
-            
+            <p id="passport-issued-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Commodity code 020130 Boneless has a net weight of 3kgs entered on the customs declaration that does not match this notification.</p>
             <table class="govuk-table species-table-cheda govuk-!-margin-bottom-2">
               
               <!-- <caption class="govuk-table__caption">

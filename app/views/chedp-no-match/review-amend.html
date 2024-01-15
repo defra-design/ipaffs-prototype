@@ -44,17 +44,17 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <div class="govuk-notification-banner" style="border-color: #d4351c;"  role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header" style="background-color: #d4351c;">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Important
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
           </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
           <div class="govuk-error-summary__body">
-            <p><strong>Check this notification and your customs declaration as they do not match, then submit any changes:</strong></p>
-            <ul class="govuk-list govuk-list--bullet" style="color: #d4351c;">
-              <li><a href="commodity-details" style="color: #d4351c;"><strong>Commodity code 020130 Boneless has a net weight of 3kgs entered on the customs declaration</strong></a></li>
+            <p class="govuk-body govuk-!-width-three-quarters"><strong>Check your notification details and customs declaration. This consignment may be delayed.</strong></p>
+            <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-three-quarters">
+              <li>
+                <a href="commodity-details.html">Commodity details do not match</a>
+              </li>
             </ul>
           </div>
         </div>

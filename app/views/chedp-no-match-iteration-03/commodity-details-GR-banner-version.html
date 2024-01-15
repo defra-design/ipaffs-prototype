@@ -30,18 +30,25 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
     </p>
   </div>
 </div>
-<main class="govuk-main-wrapper govuk-!-padding-top-7" id="main-content">
+
+
+<main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="commodity-details-page">
     <div class="govuk-grid-column-full">
-      <div class="govuk-error-summary" data-module="govuk-error-summary">
-        <div role="alert">
-          <h2 class="govuk-error-summary__title">
-            There is a problem
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
           </h2>
-          <div class="govuk-error-summary__body">
-            <p class="govuk-body govuk-!-width-two-thirds"><strong>The commodity details in your notification and customs declaration do not match. This consignment may be delayed.</strong></p>
-            <p class="govuk-body govuk-!-width-two-thirds"><strong>Check both and submit any changes.</strong></p>
-          </div>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            Information entered on the customs declaration does not match this notification.</h3>
+            <p class="govuk-body">Check and update the following information so that it matches, then re-submit. You can do this on this notification or on the customs declaration:</p>
+          <p class="govuk-body">
+            <a class="govuk-notification-banner__link" href="#commodities">Commodity code 020210<br>
+            <a class="govuk-notification-banner__link" href="#boneless">Net weight of commodity 020130</a>
+          </p>
         </div>
       </div>
         <span class="heading-tertiary">
@@ -533,7 +540,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-!-margin-bottom-8">
           <div class="table-responsive species-table-desktop">
             <h2 class="govuk-heading-m" id="boneless">Boneless</h2>
-            
             <table class="govuk-table species-table-cheda govuk-!-margin-bottom-2">
               
               <!-- <caption class="govuk-table__caption">
