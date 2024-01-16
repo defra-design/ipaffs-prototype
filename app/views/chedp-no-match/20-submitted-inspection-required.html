@@ -48,10 +48,10 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </div>
 
-      <dl class="govuk-summary-list">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-1">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">
-            CHED reference number
+            CHED reference
           </dt>
           <dd class="govuk-summary-list__value">
             CHEDP.GB.2023.6244839
@@ -62,9 +62,9 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             </button>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">
-            CHED reference to use on your customs declaration
+            Customs declaration reference
           </dt>
           <dd class="govuk-summary-list__value">
             GBCHD2023.6244839
@@ -75,28 +75,38 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             </button>
           </dd>
         </div>
-      </dl>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            Customs document code
+          </dt>
+          <dd class="govuk-summary-list__value">
+            C640
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy
+            </button>
+          </dd>
+        </div>
+      </dl>      
 
-      <div class="govuk-warning-text">
+      <div class="govuk-warning-text govuk-!-margin-bottom-1">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-warning-text__assistive">Warning</span>
-          Initial risk assessments can change.
+          You must use the correct reference and code on the customs declaration or your consignment will be delayed.
         </strong>
       </div>
+      <hr class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
 
       <h2 class="govuk-heading-m">What you need to do</h2>
       <p class="govuk-body">Tell the driver to go directly to [Inspection premises] with this consignment on arrival in Great Britain.</p>
 
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          If the consignment does not arrive in Great Britain at the entry point stated in this notification, it must go directly to the Border Control Post where it first arrives in Great Britain.
-        </strong>
+      <p class="govuk-body">If the consignment does not arrive in Great Britain at the entry point stated in this notification, it must go directly to the Border Control Post where it first arrives in Great Britain.</p>
+
+      <div class="govuk-inset-text">
+        Initial risk assessments can change.
       </div>
-      
-      <p class="govuk-body">Check that your notification details and customs declaration match or your consignment will be delayed.</p>
       
       <h2 class="govuk-heading-m">What happens next</h2>
       <p class="govuk-body">An inspector may update the risk assessment.</p>
