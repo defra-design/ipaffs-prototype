@@ -22,31 +22,25 @@ Additional details – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-xl">Billing details</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">What is the billing address postcode?</h1>
 
       <form action="04-select-billing-address" method="post">
-        <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
-        <input name="etag" type="hidden" value="&quot;00000000053B49D8&quot;">
         <input name="" type="hidden" value="visited">
 
-        <p>
-          This must be a UK postcode. If you cannot find the correct address, <a href="03b-billing-address">you can add it manually</a>.
-        </p>
-        <p>
-          Postcode lookup
-        </p>
-        
+        <span class="govuk-caption-xl">Billing details</span>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--xl" for="billing-address-postcode">
+              What is the billing address postcode?
+            </label>
+          </h1>
 
+          <div id="billing-address-postcode-hint" class="govuk-hint">
+            This must be a UK postcode. If you cannot find the correct address, <a href="03b-billing-address">you can add it manually</a>.
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" aria-describedby="billing-address-postcode-hint">
+        </div>
 
-
-
-
-
-
- 
-
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Find the address" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="01a-add-billing-details">Cancel and return to notification</a></p>
       </form>
     </div>
