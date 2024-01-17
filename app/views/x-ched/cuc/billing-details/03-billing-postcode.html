@@ -22,10 +22,8 @@ Additional details – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="">
     <div class="govuk-grid-column-two-thirds">
-
       <form action="04a-select-billing-address" method="post">
         <input name="" type="hidden" value="visited">
-
         <span class="govuk-caption-xl">Billing details</span>
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
@@ -33,13 +31,11 @@ Additional details – {{ serviceName }} – GOV.UK Prototype Kit
               What is the billing address postcode?
             </label>
           </h1>
-
           <div id="billing-address-postcode-hint" class="govuk-hint">
             This must be a UK postcode. If you cannot find the correct address, <a href="04b-enter-billing-address">you can add it manually</a>.
           </div>
           <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" aria-describedby="billing-address-postcode-hint">
         </div>
-
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Find address" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="01a-add-billing-details">Cancel and return to notification</a></p>
       </form>
