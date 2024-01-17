@@ -37,7 +37,7 @@ Decision hub
   <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link govuk" href="dashboard" id="navigation-dashboard-link">Dashboard</a>
+        <a class="govuk-breadcrumbs__link govuk" href="/chedp/2024-part-2-single-chedp/00-dashboard">Dashboard</a>
       </li>
     </ol>
   </div></div>
@@ -57,178 +57,36 @@ Decision hub
     </tbody></table>
   </form>
 
-  <div class="action-button-container">
-    <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/override" class="govuk-button govuk-button--secondary action-button" id="override-person-responsible">
-      Override Responsible Person
-    </a>
-  <a href="11-documents-spain" class="govuk-button govuk-button--secondary action-button" id="attachments-link">
-    Attachments
-  </a>
-</div>
-
-
-
 
 <main class="govuk-main-wrapper" id="main-content">
-  <div class="govuk-grid-row" id="hub-page">
+  <div class="govuk-grid-row" id="override-risk-decision-page">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
         <span class="heading-tertiary">
           <span id="reference-number">CHEDP.GB.2024.6279126</span>
             <span id="cved-version-number"> - V2</span>
         </span>
-        <span id="page-primary-title">Decision Hub</span>
+        <span id="page-primary-title">Override risk decision</span>
       </h1>
 
-
-      <div class="govuk-notification-banner notification-banner--inspection-required" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
-          <div class="govuk-notification-banner__header">
-              <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title">
-                  Inspection required
-              </h2>
-          </div>
-          <div class="govuk-notification-banner__content notification-banner__content--full-width">
-                        <div class="govuk-!-margin-bottom-4">
-                      
-                          <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/risk-overview" class="govuk-link govuk-!-font-size-19" id="view-risk-overview">
-                            View full risk assessment
-                          </a>
-                        </div>
-                        <p class="govuk-body govuk-!-margin-bottom-2">
-                          You can <a class="govuk-link" id="override-risk-decision-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/override-risk-decision?source=hub">
-                          override the risk decision</a> if you need to.
-                        </p>
-          </div>
-      </div>
-
-
-        <div class="govuk-body govuk-!-margin-bottom-6">
-          These sections can be completed in any order. You can save your progress and return at any
-          time.
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">Are you sure you want to override this risk decision?</h2>
+            <input name="override-decision" type="hidden" value="Not required">
+            <p class="govuk-body">
+              By overriding this risk decision the responsible person will be notified and the
+              consignment will not be brought to the BCP.
+            </p>
+          <p class="govuk-body">
+            If you override this risk decision you will be unable to change this at a later
+            date.
+          </p>
         </div>
-
-        <div class="govuk-body govuk-!-margin-bottom-8">
-          <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/overview" class="govuk-button govuk-!-margin-bottom-0" id="view-notification">
-            View notification of consignment
-          </a>
-        </div>
-
-      <table id="validate-import-notification-table" role="presentation" class="govuk-table">
-        <thead>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__header">
-            <h2 class="govuk-heading-m">Record checks</h2>
-          </td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-        </thead>
-        <tbody>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/local-reference-number" class="govuk-link">
-                Local reference number
-              </a>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="reference-number-status" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/iuu-status?source=hub" class="govuk-link">
-                  IUU
-                </a>
-              </td>
-              <td class="govuk-table__header badge-right">
-                <strong id="iuu-status" class="govuk-tag tag tag--to-do">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/documentary-check?source=hub" class="govuk-link">
-                  Documentary check
-                </a>
-              </td>
-              <td class="govuk-table__header badge-right">
-                <strong id="doc-check-status" class="govuk-tag tag tag--to-do">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">
-                  <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/identity-physical-checks?source=hub" class="govuk-link">
-                    Identity and physical checks
-                  </a>
-                </td>
-                <td class="govuk-table__header badge-right">
-                  <strong id="id-physical-checks-status" class="govuk-tag tag tag--to-do">
-                    TO DO
-                  </strong>
-                </td>
-              </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/seals" class="govuk-link">
-                Seal numbers
-              </a>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="seal-numbers" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6279126/lab-tests-required" class="govuk-link">
-                Laboratory tests
-              </a>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="lab-tests" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <form action="hub" method="POST">
-                <input name="crumb" type="hidden" value="CyPHD8IrsTuL0qSmbPUXrxELZ9XJpxD3T5wfxBJl-EQ">
-                <input name="etag" type="hidden" value="&quot;0000000005A6E26D&quot;">
-                <button type="submit" class="govuk-link link-button" name="decisionNotification" value="decision-notification" id="button-decision-notification">
-                  Decision
-                </button>
-              </form>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="decision-status" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <form action="hub" method="POST">
-                <input name="crumb" type="hidden" value="CyPHD8IrsTuL0qSmbPUXrxELZ9XJpxD3T5wfxBJl-EQ">
-                <input name="etag" type="hidden" value="&quot;0000000005A6E26D&quot;">
-                <button type="submit" class="govuk-link link-button" name="reviewNotification" value="review-notification" id="button-review-notification">
-                  Review and submit
-                </button>
-              </form>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="review-status" class="govuk-tag tag tag--to-do">
-                To do
-              </strong>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <button type="submit" value="Yes, override risk decision" id="submit-button" class="govuk-button govuk-!-display-block" data-prevent-double-click="true">
+        Yes, override risk decision
+      </button>
+      <a href="/chedp/2024-part-2-single-chedp/01-dh-when-overright-inspection-required" class="govuk-link govuk-!-font-size-19">
+        No, don't override risk decision
+      </a>
     </div>
   </div>
 </main>
