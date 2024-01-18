@@ -23,12 +23,22 @@ Confirm the billing details – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Contacts and billing</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Confirm the billing details</h1>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Confirm billing details</h1>
       <form action="18-review" method="post">
         <input name="" type="hidden" value="visited">
         <p>
-          Your notification may be chargeable and we need the billing details to send the invoice.
+          Your notification may be chargeable. If so, we need some billing details for the invoice.
         </p>
+        <p>
+          For further information, <a href="">read about our charges</a>.
+        </p>
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            The billing address will be liable for any charges for this notification. Additional fees may apply if you use an incorrect address.
+          </strong>
+        </div>
         <h2 class="govuk-heading-m">Billing details</h2>
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
@@ -44,7 +54,7 @@ Confirm the billing details – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
             <dt class="govuk-summary-list__key">
-              Contact name
+              Business name
             </dt>
             <dd class="govuk-summary-list__value">
               XYZ Limited

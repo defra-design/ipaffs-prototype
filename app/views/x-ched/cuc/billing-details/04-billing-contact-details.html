@@ -28,15 +28,15 @@ What are the billing contact details? – {{ serviceName }} – GOV.UK Prototype
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading ">
-              What are the billing contact details?
+              Add billing contact details
             </h1>
           </legend>
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--s" for="billing-contact-name">
-              Contact name
+              Business name
             </label>
             <div id="billing-contact-name-hint" class="govuk-hint">
-              The name that will be displayed on the invoice. It can be a business or personal name.
+              We'll display this on the invoice
             </div>
             <input class="govuk-input govuk-!-width-three-quarters" id="billing-contact-name" name="billing-contact-name" type="text" aria-describedby="billing-contact-name-hint" spellcheck="false" autocomplete="name">
           </div>
@@ -45,7 +45,7 @@ What are the billing contact details? – {{ serviceName }} – GOV.UK Prototype
               Telephone number
             </label>
             <div id="billing-telephone-number-hint" class="govuk-hint">
-              This can be a phone for the finance team
+              For example, the payments team
             </div>
             <input class="govuk-input govuk-!-width-three-quarters" id="billing-telephone-number" name="billing-telephone-number" type="tel" aria-describedby="billing-telephone-number-hint" autocomplete="tel">
           </div>
@@ -54,13 +54,13 @@ What are the billing contact details? – {{ serviceName }} – GOV.UK Prototype
               Email address
             </label>
             <div id="billing-email-hint" class="govuk-hint">
-              This email will be used to send invoices to
+              We'll send the invoice to this email address
             </div>
             <input class="govuk-input govuk-!-width-three-quarters" id="billing-email" name="billing-email" type="email" spellcheck="false" aria-describedby="billing-email-hint" autocomplete="email">
           </div>
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
+          <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
         </fieldset>
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
       </form>
     </div>
   </div>
