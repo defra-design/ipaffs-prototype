@@ -36,7 +36,7 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
           </div>
         </div>
       </div>
-      <form action="04a-select-billing-address" method="post">
+      <form action="03-select-billing-address" method="post">
         <input name="" type="hidden" value="visited">
         <div class="govuk-form-group govuk-form-group--error">
           <span class="govuk-caption-xl">Billing details</span>
@@ -46,7 +46,7 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
             </label>
           </h1>
           <div id="billing-address-postcode-hint" class="govuk-hint">
-            This must be a UK postcode. If you cannot find the correct address, <a href="04b-enter-billing-address">you can add it manually</a>.
+            This must be a UK postcode. If you cannot find the correct address, <a href="03b-enter-billing-address">you can add it manually</a>.
           </div>
           <p id="billing-address-postcode-error" class="govuk-error-message">
             <span class="govuk-visually-hidden">Error:</span> Postcode not found, try again or enter your address manually
@@ -54,7 +54,7 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
           <input class="govuk-input govuk-input--width-10 govuk-input--error" id="billing-address-postcode" name="billing-address-postcode" type="text" aria-describedby="billing-address-postcode-hint">
         </div>
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Find address" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="01a-add-billing-details">Cancel and return to notification</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
       </form>
     </div>
   </div>
