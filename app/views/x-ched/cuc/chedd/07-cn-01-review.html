@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Review – {{ serviceName }} – GOV.UK Prototype Kit
+  Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -395,13 +395,10 @@
 
                   <div class="heading-with-change-link">
                     <h2 class="govuk-heading-m">Billing details</h2>
-                        <a href="../billing-details/05-confirm-billing-details" class="govuk-link" id="billing-details-change-link">
-                        Change
-                        </a>
+                    <a href="../billing-details/05-confirm-billing-details" class="govuk-link" id="billing-details-change-link">
+                      Change
+                    </a>
                   </div>
-                  
-                  
-                  
                   <div class="govuk-!-margin-bottom-9 table-responsive">
                     <table class="govuk-table presentation-table govuk-!-margin-0" id="billing-details-table">
                       <caption class="govuk-visually-hidden">Summary of billing details</caption>
@@ -434,7 +431,7 @@
                     </table>
                   </div>
       
-              <form action="07-cn-02-declaration" method="POST">
+              <form action="07-cn-02-declaration" method="post">
                 <button class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue" data-prevent-double-click="true">Save and continue</button>
                 <input name="crumb" type="hidden" value="L-ls6BgJOBc9Cvv8KRvLSPAXGRg_-wJwaecxegzpSE-">
                 <input name="etag" type="hidden" value="&quot;000000000022681B&quot;">

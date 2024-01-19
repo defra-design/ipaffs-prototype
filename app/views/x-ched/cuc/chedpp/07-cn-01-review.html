@@ -5,6 +5,7 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
+
 {% block content %}
 
 <div class="govuk-phase-banner" style="margin-top: -46px;">
@@ -454,6 +455,45 @@
               </tbody>
             </table>
           </div>
+
+          <div class="heading-with-change-link">
+            <h2 class="govuk-heading-m">Billing details</h2>
+            <a href="../billing-details/05-confirm-billing-details" class="govuk-link" id="billing-details-change-link">
+              Change
+            </a>
+          </div>
+
+          <div div class="govuk-!-margin-bottom-9 table-responsive">
+            <table class="govuk-table presentation-table govuk-!-margin-0" id="billing-details-table">
+              <caption class="govuk-visually-hidden">Summary of billing details</caption>
+              <tbody>
+                <tr class="">
+                  <td class="govuk-table__header govuk-table__header--half">Address</td>
+                  <td class="govuk-table__cell" id="responsible-contact-name">
+                  	3 Bakers Lane<br>Lichfield<br>WS13 6NF
+                  </td>
+                </tr>
+                <tr class="">
+                  <td class="govuk-table__header govuk-table__header--half">Business name</td>
+                  <td class="govuk-table__cell break-word" id="responsible-contact-email">
+                    XYZ Limited
+                  </td>
+                </tr>
+                <tr class="">
+                  <td class="govuk-table__header govuk-table__header--half">Email address</td>
+                  <td class="govuk-table__cell" id="responsible-contact-telephone">
+                    payments@xyz.ltd.uk
+                  </td>
+                </tr>
+                <tr class="">
+                  <td class="govuk-table__header govuk-table__header--half">Phone number</td>
+                  <td class="govuk-table__cell break-word" id="responsible-contact-email">
+                    07700 900457
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>          
           
 
         <form action="07-cn-02-declaration" method="POST">
