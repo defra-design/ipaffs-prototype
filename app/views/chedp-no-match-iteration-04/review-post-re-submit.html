@@ -73,38 +73,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-      <div class="govuk-error-summary" data-module="govuk-error-summary">
-        <div role="alert">
-          <h2 class="govuk-error-summary__title">
-            There is a problem
-          </h2>
-          <div class="govuk-error-summary__body">
-            <p class="govuk-body govuk-!-width-three-quarters"><strong>The commodity details on this notification and your customs declaration do not match. Check both and submit any changes.</strong></p>
-            <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-three-quarters">
-              <li>
-                <a href="commodity-details.html">Check and update commodity details</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--<div class="govuk-error-summary govuk-!-margin-top-0 govuk-!-margin-bottom-8" data-module="govuk-error-summary">
-        <div role="alert">
-          <h2 class="govuk-error-summary__title">
-            There is a problem
-          </h2>
-          <div class="govuk-error-summary__body">
-            <p style="color: #d4351c;"><strong>Check this notification and your customs declaration as they do not match, then submit any changes:</strong></p>
-            <ul class="govuk-list govuk-list--bullet" style="color: #d4351c;">
-              <li><a href="commodity-details" style="color: #d4351c;"><strong>Commodity code 020130 Boneless has a net weight of 3kgs entered on the customs declaration</strong></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>-->
-      
-
-
       <span class="heading-tertiary">
         <span id="reference-number">CHEDP.GB.2023.6244839</span>
       </span>
@@ -118,13 +86,12 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <div id="last-updated-date">Last updated: 29 December 2023, 09:56</div>
         <div id="last-updated-by">Last updated by: Percy Plants</div>
       </div>
-      
 
       <div class="table-responsive">
-        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-about-notification" role="presentation">
+        <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
           <tbody>
             <tr class="presentation-table__section ">
-              <td class="govuk-table__header">CHED reference</td>
+              <td class="govuk-table__header">CHED reference number</td>
               <td class="govuk-table__cell" id="purpose-of-consignment-value">
                 CHEDP.GB.2023.6244839
                         </td>
@@ -135,7 +102,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </td>
             </tr>
             <tr class="presentation-table__section ">
-              <td class="govuk-table__header" style="border-bottom: none;">Customs declaration reference</td>
+              <td class="govuk-table__header">CHED reference to use on your customs declaration</td>
               <td class="govuk-table__cell" id="purpose-of-consignment-value">
                 GBCHD2023.6244839
                         </td>
@@ -145,27 +112,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 </button>
               </td>
             </tr>
-            <tr class="presentation-table__section ">
-              <td class="govuk-table__header" style="border-bottom: none; border-top: none;">Customs document code</td>
-              <td class="govuk-table__cell" style="border-bottom: none; border-top: none;" id="purpose-of-consignment-value">
-                C640
-                        </td>
-              <td class="govuk-table__cell change" style="border-bottom: none; border-top: none;">
-                <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
-                  Copy
-                </button>
-              </td>
-            </tr>
+          </tbody>
         </table>
-        <div class="govuk-warning-text govuk-!-margin-bottom-3 govuk-!-width-three-quarters">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-warning-text__assistive">Warning</span>
-            You must use the correct reference and code on the customs declaration or your consignment will be delayed.
-          </strong>
-        </div>
       </div>
-      <hr class="govuk-!-margin-top-0 govuk-!-margin-bottom-0">
 
 
 
@@ -511,7 +460,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                             Bison bison
                           </td>
                           <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
-                            1.5 kg/units
+                            1 kg/units
                           </td>
                           <td class="govuk-table__cell govuk-table__cell--numeric">
                             1
@@ -539,7 +488,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                             Bubalus bubalis
                           </td>
                           <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
-                            1.5 kg/units
+                            1 kg/units
                           </td>
                           <td class="govuk-table__cell govuk-table__cell--numeric">
                             1
@@ -553,7 +502,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           Subtotal
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
-                          4 kg/units
+                          3 kg/units
                         </td>
                         <td class="govuk-table__cell govuk-table__cell--numeric">
                           3
@@ -650,7 +599,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <tr class="presentation-table__row--no-border ">
                   <td class="govuk-table__header">Total net weight</td>
                   <td class="govuk-table__cell" colspan="2">
-                    11 kg/units
+                    10 kg/units
                   </td>
                 </tr>
           
@@ -666,7 +615,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         
                         ">
                   <td class="govuk-table__header" id="gross-weight-header">Total gross weight (kg/units)</td>
-                  <td class="govuk-table__cell" id="gross-weight">12 kg/units</td>
+                  <td class="govuk-table__cell" id="gross-weight">11 kg/units</td>
                 </tr>
           
           

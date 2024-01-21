@@ -50,10 +50,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             There is a problem
           </h2>
           <div class="govuk-error-summary__body">
-            <p class="govuk-body govuk-!-width-three-quarters"><strong>Check your notification details and customs declaration. This consignment may be delayed.</strong></p>
+            <p class="govuk-body govuk-!-width-three-quarters"><strong>The commodity details on this notification and your customs declaration do not match. Check both and submit any changes.</strong></p>
             <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-three-quarters">
               <li>
-                <a href="commodity-details.html">Commodity details do not match</a>
+                <a href="commodity-details.html">Check and update commodity details</a>
               </li>
             </ul>
           </div>
@@ -227,18 +227,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-grid-column-one-half">Description of the goods</h2>
           </div>
 
-          <div class="table-responsive">
-            <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
-              <tbody>
-                <tr class="presentation-table__section">
-                  <td class="govuk-table__header" id="importing-header">Commodity details</td>
-                  <td class="govuk-table__cell" id="importing"></td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="commodity-details" class="govuk-link">
-                    Change
-                  </a></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="govuk-!-margin-bottom-6 update-commodity-details-link ">
+            <a href="commodity-details" class="govuk-link govuk-!-font-size-19" id="commodity-details-link">
+              Check or update commodity details
+            </a>
           </div>
           
             <div class="heading-with-change-link govuk-!-margin-top-8">
