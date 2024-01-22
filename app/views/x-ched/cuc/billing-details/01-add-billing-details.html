@@ -25,7 +25,7 @@ Add the billing details – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Billing</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Add billing details</h1>
-      <form action="18-review" method="post">
+      <form action="../{{ data['ched-type'] or "chedp" }}/07-cn-01-review-errors" method="post">
         <input name="" type="hidden" value="visited">
         <p>
           Your notification may be chargeable. If so, we need some billing details for the invoice.
