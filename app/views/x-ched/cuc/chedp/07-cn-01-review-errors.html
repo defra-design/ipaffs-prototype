@@ -54,33 +54,18 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
   <main class="govuk-main-wrapper" id="main-content">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-            <!-- <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" data-gtm-vis-first-on-screen-10427495_18="48" data-gtm-vis-recent-on-screen-10427495_18="35723" data-gtm-vis-total-visible-time-10427495_18="100" data-gtm-vis-has-fired-10427495_18="1">
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" data-gtm-vis-first-on-screen-10427495_18="48" data-gtm-vis-recent-on-screen-10427495_18="35723" data-gtm-vis-total-visible-time-10427495_18="100" data-gtm-vis-has-fired-10427495_18="1">
               <h2 class="govuk-error-summary__title" id="error-summary-title">
                   Please fix the following errors
               </h2>
               <div class="govuk-error-summary__body">
                 <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
                     <li>
-                      <a id="error-description-0" href="#partone/arrivaldate">Date of estimated arrival at BCP</a>
-                    </li>
-                    <li>
-                      <a id="error-description-1" href="#partone/arrivaltime">Time of estimated arrival at BCP</a>
-                    </li>
-                    <li>
-                      <a id="error-description-2" href="#meansoftransportfromentrypoint/document">Document</a>
-                    </li>
-                    <li>
-                      <a id="error-description-3" href="#meansoftransportfromentrypoint/id">Identification</a>
-                    </li>
-                    <li>
-                      <a id="error-description-4" href="#meansoftransportfromentrypoint/type">Means of transport to the BCP</a>
-                    </li>
-                    <li>
-                      <a id="error-description-5" href="#partone/pointofentry">Border control post</a>
+                      <a id="error-description-0" href="#partone/billingdetails">Add billing details</a>
                     </li>
                 </ul>
               </div>
-            </div> -->
+            </div>
   
   
         <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>
@@ -917,32 +902,33 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   Change
                 </a>
               </div>
+              <span class="govuk-error-message" id="partone/billingdetails">Add billing details</span>
               <div div class="govuk-!-margin-bottom-9 table-responsive">
                 <table class="govuk-table presentation-table govuk-!-margin-0" id="billing-details-table">
                   <caption class="govuk-visually-hidden">Summary of billing details</caption>
                   <tbody>
-                    <tr class="">
+                    <tr class="table-row--error">
                       <td class="govuk-table__header govuk-table__header--half">Address</td>
                       <td class="govuk-table__cell" id="responsible-contact-name">
-                        3 Bakers Lane<br>Lichfield<br>WS13 6NF
+                        
                       </td>
                     </tr>
-                    <tr class="">
+                    <tr class="table-row--error">
                       <td class="govuk-table__header govuk-table__header--half">Business name</td>
                       <td class="govuk-table__cell break-word" id="responsible-contact-email">
-                        XYZ Limited
+                        
                       </td>
                     </tr>
-                    <tr class="">
+                    <tr class="table-row--error">
                       <td class="govuk-table__header govuk-table__header--half">Email address</td>
                       <td class="govuk-table__cell" id="responsible-contact-telephone">
-                        payments@xyz.ltd.uk
+                        
                       </td>
                     </tr>
-                    <tr class="">
+                    <tr class="table-row--error">
                       <td class="govuk-table__header govuk-table__header--half">Phone number</td>
                       <td class="govuk-table__cell break-word" id="responsible-contact-email">
-                        07700 900457
+                        
                       </td>
                     </tr>
                   </tbody>
