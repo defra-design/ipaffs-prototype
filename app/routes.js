@@ -11,6 +11,8 @@ const router = express.Router()
 
 // x ched routes
 router.use('/x-ched/e-cert-chedp', require('./views/x-ched/e-cert-chedp/_routes'))
+router.use('/x-ched/cuc/billing-details', require('./views/x-ched/cuc/billing-details/_routes'))
+
 
 // ched p rotes
 router.use('/chedp-gvms', require('./views/chedp-gvms/_routes'))
