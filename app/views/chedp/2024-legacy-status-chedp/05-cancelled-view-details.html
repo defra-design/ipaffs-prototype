@@ -46,17 +46,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
     <button type="submit" value="Show notification" id="show-notification" class="govuk-button govuk-button--secondary button-small action-button" data-prevent-double-click="true">Show notification</button>
   </form>
 
-    <form action="/notification/vnet/protected/notifications/DRAFT.GB.2024.1097478/review" method="post" class="govuk-!-display-inline">
-      <input name="crumb" type="hidden" value="FV6GuJhNwlp3IV5jEAKnpt52vjuWbhKwzIAJ4ZJrZ0i">
-      <input name="etag" type="hidden" value="&quot;000000000023A086&quot;">
-      <button type="submit" name="amend" id="amend-certificate-DRAFT.GB.2024.1097478" value="DRAFT.GB.2024.1097478" class="govuk-button govuk-button--secondary button-small action-button" data-prevent-double-click="true">
-        Amend
-      </button>
-    </form>
-
-    <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1097478/delete" id="delete-notification" class="govuk-button govuk-button--warning button-small action-button">
-      Delete notification
-    </a>
 </div>
 
 
@@ -98,14 +87,14 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                     <tr class="presentation-table__section">
                       <td class="govuk-table__header">Country of origin</td>
-                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}</td>
+                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}Afghanistan</td>
                       <td class="govuk-table__cell change">
                         
                       </td>
                     </tr>
                     <tr>
                       <td class="govuk-table__header">Country from where consigned</td>
-                      <td class="govuk-table__cell">
+                      <td class="govuk-table__cell">Afghanistan
                         {% if (data['consigned-country'] == "same") %}
                           {{ data['origin-country'] }}
                         {% elif (data['consigned-country'] == "different") %}
