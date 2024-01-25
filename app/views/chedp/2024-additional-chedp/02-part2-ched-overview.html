@@ -46,7 +46,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
     <button type="submit" value="Show notification" id="show-notification" class="govuk-button govuk-button--secondary button-small action-button" data-prevent-double-click="true">Show notification</button>
   </form>
 
+ 
 
+    <form action="/notification/vnet/protected/notifications/DRAFT.GB.2024.1097478/review" method="post" class="govuk-!-display-inline">
+      <input name="crumb" type="hidden" value="FV6GuJhNwlp3IV5jEAKnpt52vjuWbhKwzIAJ4ZJrZ0i">
+      <input name="etag" type="hidden" value="&quot;000000000023A086&quot;">
+      <button type="submit" name="amend" id="amend-certificate-DRAFT.GB.2024.1097478" value="DRAFT.GB.2024.1097478" class="govuk-button govuk-button--secondary button-small action-button" data-prevent-double-click="true">
+        Amend
+      </button>
+    </form>
 
     <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1097478/delete" id="delete-notification" class="govuk-button govuk-button--warning button-small action-button">
       Delete notification
@@ -56,19 +64,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 
   <div class="govuk-!-padding-top-6 govuk-!-margin-bottom-3">
     <span class="heading-tertiary">
-        <span id="reference-number">DRAFT.GB.2023.5925980</span>
+        <span id="reference-number">DRAFT.GB.2024.3476228</span>
             <span> - CHEDP</span>
     </span>
   </div>
-
-  <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box">
-    <h2 class="govuk-heading-m alert-dashboard-summary-heading">You can no longer submit or amend this draft notification</h2>
-    <h2 class="govuk-body alert-dashboard-summary-heading"> Our import notification process has now changed, and this draft notification is no longer valid.
-      If you still want to import this consignment, you'll need to <a href="#" class="govuk-link">create a new notification</a>.       
-</ul>
-</div>
-
-
 
 
   <main class="govuk-main-wrapper" id="main-content">
@@ -101,14 +100,16 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                     <tr class="presentation-table__section">
                       <td class="govuk-table__header">Country of origin</td>
-                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}Afghanistan</td>
+                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }} Spain</td>
                       <td class="govuk-table__cell change">
-                        
+                        <a href="03-origin-import?from=review" class="govuk-link" id="country-of-origin-change-link">
+                          Change
+                        </a>
                       </td>
                     </tr>
                     <tr>
                       <td class="govuk-table__header">Country from where consigned</td>
-                      <td class="govuk-table__cell">Afghanistan
+                      <td class="govuk-table__cell">Spain
                         {% if (data['consigned-country'] == "same") %}
                           {{ data['origin-country'] }}
                         {% elif (data['consigned-country'] == "different") %}
@@ -132,7 +133,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     </tr>
                     <tr>
                       <td class="govuk-table__header">Consignment reference number</td>
-                      <td class="govuk-table__cell" id="region-of-consignment-value">
+                      <td class="govuk-table__cell" id="region-of-consignment-value">RN12461
                         
                       </td>
                       <td class="govuk-table__cell"></td>
@@ -144,7 +145,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         Yes
                               </td>
                     <td class="govuk-table__cell change">
-                          
+                          <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "both" }}" class="govuk-link" id="consignment-purpose-change-link">
+                            Change
+                          </a>
                     </td>
                   </tr>
                   <td class="govuk-table__header">Main reason for importing the consignment</td>
@@ -196,7 +199,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <form action="08-commodity-details" method="POST">
                   <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                   <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                 
+                  <button type="submit" class="link-button" name="change-link" value="change-commodity-details" id="commodity-change-link-0">Change</button>
                 </form>
           </td>
         </tr>
@@ -300,7 +303,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <form action="08-commodity-details" method="POST">
                   <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                   <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                  
+                  <button type="submit" class="link-button" name="change-link" value="change-commodity-details" id="commodity-change-link-1">Change</button>
                 </form>
           </td>
         </tr>
@@ -442,7 +445,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <form action="08-commodity-details" method="POST">
                   <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                   <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                 
+                  <button type="submit" class="link-button" name="change-link" value="change-commodity-details" id="commodity-change-link-2">Change</button>
                 </form>
           </td>
         </tr>
@@ -584,7 +587,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <form action="08-commodity-details" method="POST">
                   <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                   <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                  
+                  <button type="submit" class="link-button" name="change-link" value="change-commodity-details" id="commodity-change-link-3">Change</button>
                 </form>
           </td>
         </tr>
@@ -808,7 +811,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <form action="08-commodity-details" method="POST">
                   <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                   <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                 
+                  <button type="submit" class="link-button" name="change-link" value="change-commodity-details" id="commodity-change-link-4">Change</button>
                 </form>
           </td>
         </tr>
@@ -910,6 +913,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <form action="08-commodity-details" method="POST">
                   <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                   <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
+                  <button type="submit" class="link-button" name="change-link" value="change-commodity-details" id="commodity-change-link-5">Change</button>
                 </form>
           </td>
         </tr>
@@ -1075,7 +1079,11 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     ">
               <td class="govuk-table__header">Total gross weight (kg/units)</td>
               <td class="govuk-table__cell" id="gross-weight">350 kg/units</td>
-                
+                <td class="govuk-table__cell change">
+                    <a href="10-additional-details" class="govuk-link" id="consignment-details-change-link-weight">
+                      Change
+                    </a>
+                </td>
             </tr>
       
       
@@ -1093,7 +1101,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 
             <div class="heading-with-change-link" id="additional-details-section">
               <h2 class="govuk-heading-m">Additonal details</h2>
-              
+              <a href="10-additional-details" class="govuk-link" id="establishment-of-origin-change-link">
+                    Change
+              </a>
             </div>
             <div class="govuk-!-margin-bottom-9">
               
@@ -1128,7 +1138,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <form action="09-catch-certificates-complete" method="POST">
                     <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                     <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                    <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">
+                    <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
                     </button>
                   </form>
               </div>
@@ -1349,7 +1359,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <form action="09bb-multi-doc-details-catch" method="POST">
                   <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                   <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                  <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">
+                  <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
                   </button>
                 </form>
             </div>
@@ -1367,7 +1377,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <div class="additional-documents__grid-column-35 additional-documents__table-header">
                   Species, description
                 </div>
-               
+                <!-- <div class="additional-documents__grid-column-20 additional-documents__table-header">
+                  Net weight of import
+                </div> -->
                
               </div>
               <div class="additional-documents__grid-row additional-document-info">
@@ -1385,7 +1397,14 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     Oncorhynchus mykiss, Wild stock
                   </div>
                 </div>
-           
+                <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                    Net weight of import
+                  </div>
+                  <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                    270 kg
+                  </div>
+                </div> -->
                
               </div>
               <div class="additional-documents__grid-row additional-document-info">
@@ -1404,7 +1423,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     Scomber colias, Wild stock
                   </div>
                 </div>
+                <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                    Net weight of import
+                  </div>
+                  <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                    200 kg
+                  </div>
               
+                </div> -->
               
               </div>
               <div class="additional-documents__grid-row additional-document-info">
@@ -1422,7 +1449,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     Scomber spp, Wild stock
                   </div>
                 </div>
-               
+                <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                    Net weight of import
+                  </div>
+                  <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                   180 kg
+                  </div>
+              
+                </div> -->
                
               </div>
               <div class="additional-documents__grid-row additional-document-info">
@@ -1440,7 +1475,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     Oncorhynchus aguabonita, Wild stock
                   </div>
                 </div>
-               
+                <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+                  <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                    Net weight of import
+                  </div>
+                  <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                    220 kg
+                  </div>
+              
+                </div> -->
                
               </div>
       
@@ -1455,7 +1498,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <form action="09bb-multi-doc-details-catch-2" method="POST">
             <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
             <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link"> 
+            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
             </button>
           </form>
       </div>
@@ -1473,7 +1516,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="additional-documents__grid-column-35 additional-documents__table-header">
             Species
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Net weight of import
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1491,7 +1536,14 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Oncorhynchus clarcki, Wild stock
             </div>
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              330 kg
+            </div>
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1510,7 +1562,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmo trutta, Wild stock
             </div>
           </div>
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              180 kg
+            </div>
         
+          </div> -->
          
           </div> 
         
@@ -1530,7 +1590,14 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmonidae, Wild stock
             </div>
           </div>
-      
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+             220 kg
+            </div>
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1548,7 +1615,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Hucho hucho, Wild stock
             </div>
           </div>
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              270 kg
+            </div>
         
+          </div> -->
          
         </div>
       
@@ -1564,7 +1639,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <form action="09bb-multi-doc-details-catch-3" method="POST">
             <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
             <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">
+            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
             </button>
           </form>
       </div>
@@ -1582,7 +1657,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="additional-documents__grid-column-35 additional-documents__table-header">
             Species, description
           </div>
-       
+          <!-- <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Net weight of import
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1600,7 +1677,14 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmo sala, Wild stock
             </div>
           </div>
-       
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              320 kg
+            </div>
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1619,7 +1703,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Oncorhynchus aguabonita, Wild stock
             </div>
           </div>
-       
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              280 kg
+            </div>
+        
+          </div> -->
          
           </div>
         
@@ -1639,7 +1731,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Scomber colias, Wild stock
             </div>
           </div>
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+             150 kg
+            </div>
         
+          </div> -->
          
         </div>
        
@@ -1656,7 +1756,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <form action="09bb-multi-doc-details-catch" method="POST">
             <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
             <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">
+            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
             </button>
           </form>
       </div>
@@ -1674,7 +1774,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="additional-documents__grid-column-35 additional-documents__table-header">
             Species, description
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Net weight of import
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1692,7 +1794,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmo salar, Wild stock
             </div>
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              140 kg
+            </div>
+        
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1710,7 +1820,14 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Scomber colias, Wild stock
             </div>
           </div>
-          
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              200 kg
+            </div>
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1729,7 +1846,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmo trutta, Wild stock
             </div>
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              100 kg
+            </div>
+        
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1748,8 +1873,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmonidae, Wild stock
             </div>
           </div>
-         
-          
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+             180 kg
+            </div>
+        
+          </div> -->
         
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1767,7 +1899,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Scomber spp, Wild stock
             </div>
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              100 kg
+            </div>
+        
+          </div> -->
         
         </div>
       
@@ -1784,7 +1924,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <form action="09bb-multi-doc-details-catch" method="POST">
             <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
             <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">
+            <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
             </button>
           </form>
       </div>
@@ -1802,7 +1942,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="additional-documents__grid-column-35 additional-documents__table-header">
             Species, description
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Net weight of import
+          </div> -->
          
         </div>
        
@@ -1822,7 +1964,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmo trutta, Wild stock
             </div>
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              100 kg
+            </div>
+        
+          </div> -->
          
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1841,7 +1991,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Salmonidae, Wild stock
             </div>
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+             180 kg
+            </div>
+        
+          </div> -->
         
         </div>
         <div class="additional-documents__grid-row additional-document-info">
@@ -1859,7 +2017,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               Scomber spp, Wild stock
             </div>
           </div>
-         
+          <!-- <div class="additional-documents__grid-column-20 additional-document-content">
+            <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+              Net weight of import
+            </div>
+            <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+              100 kg
+            </div>
+        
+          </div> -->
         
         </div>
       
@@ -1873,7 +2039,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <form action="09e-iuu-confirmation" method="POST">
                     <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
                     <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
-                    <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">
+                    <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
                     </button>
                   </form>
               </div>
@@ -1893,7 +2059,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               <div class="table-responsive">
                 <div class="heading-with-change-link">
                   <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
-                      
+                      <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs-vhc">
+                        Change
+                      </a>
                 </div>
                 
                 <div class="table-responsive">
@@ -1906,7 +2074,13 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
                       </tr>
                     </thead>
-                   
+                    <!-- <tbody>
+                      <tr class="presentation-table__section">
+                        <td class="govuk-table__cell" colspan="100%" id="latest-health-document-none-attached">
+                          No health certificate attached
+                        </td>
+                      </tr>
+                    </tbody> -->
                     <tbody>
                       <tr class="presentation-table__section ">
                         <td class="govuk-table__cell" id="latest-health-document-type">
@@ -1931,7 +2105,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 
                 <div class="heading-with-change-link">
                     <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
-                      
+                      <a class="govuk-link" id="documents-change-link" href="12b-accompanying-docs">
+                        Change
+                      </a>
                 </div>
                 
                 <div class="table-responsive">
@@ -2020,7 +2196,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
                 <div class="heading-with-change-link">
                   <h2 id="approved-establishment-header" class="govuk-heading-m">Approved establishment</h2>
-                  
+                  <a href="13b-approved-est-chosen" class="govuk-link" id="establishment-of-origin-change-link">
+                    Change
+                  </a>
                 </div>
               <div class="table-responsive">
                 <table class="govuk-table presentation-table" id="review-table-approved-establishments" >
@@ -2067,7 +2245,11 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       Produkty Mięsne Fm<br>
                       San Martin 230, Piso 5 Dpto 8, Y0000HGH Villa Maria, Argentina
                     </td>
-                    
+                    <td class="govuk-table__cell change">
+                          <a href="14-addresses" class="govuk-link" id="traders-change-link">
+                            Change
+                          </a>
+                    </td>
                   </tr>
                   <tr class="">
                     <td class="govuk-table__header govuk-!-width-one-half">Consignee</td>
@@ -2101,9 +2283,26 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             <h2 class="govuk-heading-l">Transport</h2>
                 <div class="heading-with-change-link">
                   <h2 id="approved-establishment-header" class="govuk-heading-m">Transport to the port of entry</h2>
-                 
+                  <a href="11-transport-to-poe" class="govuk-link" id="establishment-of-origin-change-link">
+                    Change
+                  </a>
                 </div>
-               
+                <!-- <h3 class="govuk-heading-m">Transport to the border control post (BCP)</h3> -->
+               <!-- <div class="heading-with-change-link">
+                   <h2 class="govuk-heading-s">Transport to the Border Control Post (BCP)</h2> -->
+                  <!-- <a href="/notification/tst/protected/notifications/DRAFT.GB.2023.5925980/transport/before-bip?fromImporterReview=true" class="govuk-link" id="transport-to-bip-change-link">
+                    Change
+                  </a>
+                </div> -->
+
+
+
+                <!-- <span class="govuk-error-message" id="partone/pointofentry">Entry border control post</span>
+                <span class="govuk-error-message" id="meansoftransportfromentrypoint/type">Means of transport to the BCP</span>
+                <span class="govuk-error-message" id="meansoftransportfromentrypoint/id">Identification</span>
+                <span class="govuk-error-message" id="meansoftransportfromentrypoint/document">Document</span>
+                <span class="govuk-error-message" id="partone/arrivaldate">Date of estimated arrival at BCP</span>
+                <span class="govuk-error-message" id="partone/arrivaltime">Time of estimated arrival at BCP</span> -->
                 
                 <div class="table-responsive govuk-!-margin-bottom-9">
                   <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">
@@ -2139,9 +2338,39 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           <td class="govuk-table__cell">11:00</td>
                         </tr>
                       </tbody>
+                    <!-- <tbody>
+                      <tr>
+                   
+                      <th scope="row" class="govuk-table__header">Entry border Control Post</th>
                     
+                      <td class="govuk-table__cell change"> <a href="11-transport-to-poe" class="govuk-link" id="transport-to-bip-change-link">
+                        Change
+                      </a></td>
+                    </tr>
+                    <tr >
+                      <th scope="row" class="govuk-table__header">Means of transport to the BCP</th>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr >
+                      <th scope="row" class="govuk-table__header">Identification</th>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="govuk-table__header">Document</th>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr >
+                      <th scope="row" class="govuk-table__header">Estimated arrival date at BCP</th>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                      <tr >
+                        <th scope="row" class="govuk-table__header">Estimated arrival time at BCP</th>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                    </tbody> -->
                   </table>
-                
+                <!-- </div>
+                <div class="table-responsive govuk-!-margin-bottom-9"> -->
                 <h2 class="govuk-heading-m">Transport after the BCP</h2>
                 <table class="govuk-table presentation-table review-table" id="review-table-transport" role="presentation">
                   <tbody>
@@ -2149,7 +2378,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <th scope="row" class="govuk-table__header">Means of transport after the BCP
                   </th>
                   <td>Road vehicle</td>
-                  
+                  <td class="change">
+                        <a href="16-transport-after-bcp" class="govuk-link" id="transport-details-change-link">Change</a>
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row" class="govuk-table__header">Date of departure</th>
@@ -2179,7 +2410,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <tr id="review-transporter-details" class="presentation-table__section ">
                     <td class="govuk-table__header" >Transporter name</td>
                     <td class="govuk-table__cell" id="transporter-name" >Matt Green</td>
-                    
+                    <td class="govuk-table__cell change" >
+                      <a href="15b-transporter-entered" class="govuk-link" id="transporter-change-link">Change</a>
+                    </td>
                   </tr>
                   <tr>
                     <td class="govuk-table__header">Type</td>
@@ -2207,7 +2440,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <h2 class="govuk-heading-l">Contact</h2>
               <div class="heading-with-change-link">
                 <h2 class="govuk-heading-m">Contact details</h2>
-                   
+                    <a href="17a-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
+                    Change
+                    </a>
               </div>
               <div class="govuk-!-margin-bottom-6 table-responsive">
                 <table class="govuk-table presentation-table govuk-!-margin-0" id="responsible-person-contact-details-table">
@@ -2236,7 +2471,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
               <div class="heading-with-change-link">
                 <h2 class="govuk-heading-m">Nominated contacts</h2>
-                    
+                    <a href="17b-nominated-contacts-entered.html" class="govuk-link" id="nominated-contact-change-link">
+                    Change
+                    </a>
               </div>
               <table class="govuk-table presentation-table govuk-!-margin-0 govuk-!-margin-bottom-6" id="nominated-contacts-table">
                 <caption class="govuk-visually-hidden">Summary of nominated contacts</caption>
@@ -2264,7 +2501,9 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               
               <div class="heading-with-change-link">
                 <h2 class="govuk-heading-m">Contact address for consignment</h2>
-                  
+                    <a href="17c-contact-consignment" class="govuk-link" id="responsible-person-contact-details-change-link">
+                    Change
+                    </a>
               </div>
               <div class="table-responsive govuk-!-margin-bottom-9">
                 <table class="govuk-table presentation-table review-table" id="review-table-organisation-address" role="presentation">
@@ -2281,10 +2520,11 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 </table>
               </div>
   
-
-           
-
-          
+          <form action="19-declaration" method="POST">
+            <input class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue-p">
+            <input name="crumb" type="hidden" value="GhnRlYhYaV4zCfwfqik109EM7N9iRMsexXIg2qUpS1A">
+            <input name="etag" type="hidden" value="&quot;00000000053B836D&quot;">
+          </form>
       </div>
     </div>
   </main>

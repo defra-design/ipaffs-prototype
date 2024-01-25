@@ -103,13 +103,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             
             
             <div class="table-responsive">
-              <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
-                <tbody>
-                  <tr class="presentation-table__section">
-                    <td class="govuk-table__header">Import type</td>
-                    <td class="govuk-table__cell" id="importing">Products of animal origin</td>
-                    <td class="govuk-table__cell"></td>
-                              <div class="table-responsive">
+              
               <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
                 <tbody>
                   <tr class="presentation-table__section">
@@ -187,35 +181,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         <td class="govuk-table__cell"></td>
                       </tr>
                       
-                      <!-- IF TRANSIT 
-                      <tr>
-                        <td class="govuk-table__header">
-                         Port of exit
-                        </td>
-                        <td class="govuk-table__cell">Holyhead</td>
-                        <td class="govuk-table__cell"></td>
-                      </tr>
-                      <tr>
-                        <td class="govuk-table__header">
-                          When the consignment will leave Great Britain
-                        </td>
-                        <td class="govuk-table__cell">13 August 2023, 14:50</td>
-                        <td class="govuk-table__cell"></td>
-                      </tr>
-                      <tr>
-                        <td class="govuk-table__header">
-                          Transited country
-                        </td>
-                        <td class="govuk-table__cell">United Kingdom</td>
-                        <td class="govuk-table__cell"></td>
-                      </tr>
-                      <tr>
-                        <td class="govuk-table__header">
-                          Destination country
-                        </td>
-                        <td class="govuk-table__cell">Republic of Ireland</td>
-                        <td class="govuk-table__cell"></td>
-                      </tr> -->
+                      
                       <tr class="presentation-table__section">
                       <td class="govuk-table__header" id="import-risk-header">Import risk category</td>
                         <td>{{ data['risk-category'] | capitalize }} risk</td>
@@ -258,18 +224,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         <td class="govuk-table__cell">Republic of Ireland</td>
                         <td class="govuk-table__cell"></td>
                       </tr> -->
-                      <tr class="presentation-table__section">
-                      <td class="govuk-table__header" id="import-risk-header">Import risk category</td>
-                        <td>{{ data['risk-category'] | capitalize }} risk</td>
-                          <td class="govuk-table__cell change">
-                            <a href="06a-risk-category" class="govuk-link">
-                              Change
-                            </a>
-                      </td>
-                    </tr>
-                </tbody>
-              </table>
-            </div>
+                   
+             
             
             <div class="govuk-grid-row">
                 <h2 class="govuk-heading-l govuk-!-margin-top-9 govuk-grid-column-full">Description of the goods</h2>
