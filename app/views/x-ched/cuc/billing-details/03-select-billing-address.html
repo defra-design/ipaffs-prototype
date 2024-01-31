@@ -23,7 +23,13 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="">
     <div class="govuk-grid-column-two-thirds">
+      
+      {% if (data['action'] == "change") %}
+      <form action="05-confirm-billing-details" method="post">
+      {% else %}
       <form action="04-billing-contact-details" method="post">
+      {% endif %}
+
         <input name="" type="hidden" value="visited">
           <div class="govuk-form-group">
             <span class="govuk-caption-xl">Billing</span>
@@ -66,7 +72,13 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
               <a href="03b-enter-billing-address">I cannot find the address in the list</a>
             </p>
           </div>
+        
+        {% if (data['action'] == "change") %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save" data-module="govuk-button">
+        {% else %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
+        {% endif %}
+
         <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
       </form>
     </div>
