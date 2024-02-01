@@ -77,7 +77,7 @@ Decision hub
   
           <ul class="govuk-tabs__list" role="tablist">
             <li class="govuk-tabs__list-item" role="presentation">
-              <a class="govuk-tabs__tab" href="/chedp/2024-part-2-single-chedp/01-hp-outstanding-documentry-check" id="tab_" role="tab" aria-controls="" aria-selected="false" tabindex="-1">
+              <a class="govuk-tabs__tab" href="01-hp-outstanding-documentry-check" id="tab_" role="tab" aria-controls="" aria-selected="false" tabindex="-1">
                 Outstanding documentary checks
               </a>
             </li>
@@ -620,7 +620,58 @@ Decision hub
                                                 X Do Not Use X - GBDNU1
                                             </option>
                                     </select>
+                                    
+                                    
                                 </div>
+                                
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <div class="govuk-form-group">
+                                <div class="govuk-form-group " id="search-time">
+                                    <fieldset class="govuk-fieldset">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            Start time range (optional)
+                                            <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
+                                        </legend>
+                                        <span class="form-label-bold"></span>
+                                        
+                                        
+                                        <div class="govuk-date-input" id="start-time">
+                                            <div class="govuk-date-input__item date-input-hour">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="start-time-hour">
+                                                        Hour
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item date-input-minute">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="start-time-minute">
+                                                        Minutes
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-label--s" for="bipSelect">Risk catgory(CHED P only)</label>
+                                <select class="govuk-select govuk-!-width-full" id="bipSelect" name="selectedBcp">
+                                    <option value="">All</option>
+                                        <option id="bip-select-option" value="GBBOH4PP">
+                                            High
+                                        </option>
+                                        <option id="bip-select-option" value="Test070820">
+                                            Medium
+                                        </option>
+                                        
+                                </select>
+                                
+                                
+                            </div>
                         </div>
                         <div class="govuk-grid-column-one-third">
                             <div class="govuk-form-group">
@@ -655,41 +706,14 @@ Decision hub
                                 </div>
                             </div>
                         </div>
-                        <div class="govuk-grid-column-one-third">
-                            <div class="govuk-form-group">
-                                <div class="govuk-form-group " id="search-time">
-                                    <fieldset class="govuk-fieldset">
-                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                            End time range (optional)
-                                            <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
-                                        </legend>
-                                        <span class="form-label-bold"></span>
-                                        
-                                        
-                                        <div class="govuk-date-input" id="end-time">
-                                            <div class="govuk-date-input__item date-input-hour">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-date-input__label" for="end-time-hour">
-                                                        Hour
-                                                    </label>
-                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-hour" name="end-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
-                                                </div>
-                                            </div>
-                                            <div class="govuk-date-input__item date-input-minute">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-date-input__label" for="end-time-minute">
-                                                        Minutes
-                                                    </label>
-                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-minute" name="end-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
+
+                       
+
+
+
+                        
                     </div>
-            
+                   
                     <div class="govuk-grid-row">
                         <div class="govuk-grid-column-full">
                             <button class="govuk-button govuk-!-margin-0" id="search-consignments" type="submit" data-module="govuk-button" data-prevent-double-click="true">Search</button>
@@ -712,6 +736,7 @@ Decision hub
                       <th class="govuk-table__header" scope="col">Estimated arrival time at BCP</th>
                       <th class="govuk-table__header" scope="col">Updated arrival time at BCP</th>
                       <th class="govuk-table__header" scope="col">Documentary check status</th>
+                      <th class="govuk-table__header" scope="col">Risk category</th>
                     </tr>
                   </thead>
                   <tbody class="govuk-table__body">
@@ -728,6 +753,7 @@ Decision hub
                             <strong class="govuk-tag tag tag--to-do">
                               TO DO
                             </strong>
+                        <td class="govuk-table__cell">High</td>
                         </td>
                       </tr>
                       <tr class="govuk-table__row">
@@ -742,6 +768,7 @@ Decision hub
                         <td class="govuk-table__cell">
                             <strong class="govuk-tag tag tag--to-do">To Do</strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                   </tbody>
                 </table>

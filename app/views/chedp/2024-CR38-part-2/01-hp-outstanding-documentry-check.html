@@ -83,7 +83,7 @@ Decision hub
               </a>
             </li>
             <li class="govuk-tabs__list-item" role="presentation">
-              <a class="govuk-tabs__tab" href="/chedp/2024-part-2-single-chedp/01-hp-consignments-to-inspect" id="consignments-to-inspect">
+              <a class="govuk-tabs__tab" href="/chedp/2024-cr38-part-2/01-hp-consignments-to-inspect" id="consignments-to-inspect">
                 Consignments to inspect
               </a>
             </li>
@@ -197,6 +197,7 @@ Decision hub
                             </div>
                         </fieldset>
                     </div>
+                  
                   </div>
                   <div class="govuk-grid-column-one-half">
                     <div class="govuk-form-group " id="search-time">
@@ -228,9 +229,30 @@ Decision hub
                             </div>
                         </fieldset>
                     </div>
+                    
                   </div>
+                  
+                  <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label govuk-label--s" for="riskcategory">
+                        Risk category (CHED P only)
+                      </label>
+                      <select class="govuk-select govuk-!-width-full" id="riskOutcome" name="riskOutcome">
+                        <option value="">All</option>
+                        <option value="Required">High</option>
+                        <option value="Not required">Medium</option>
+                        <option value="Inconclusive">Low</option>
+                        
+                    </select>
+                  </div>
+                  </div>
+                  
                 </div>
+                
+              
             
+          
                 <div class="govuk-grid-row">
                   <div class="govuk-grid-column-full">
                     <button class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" data-module="govuk-button" data-prevent-double-click="true">Search</button>
@@ -253,6 +275,7 @@ Decision hub
                       <th class="govuk-table__header" scope="col">Estimated arrival time at BCP or POE</th>
                       <th class="govuk-table__header" scope="col">Updated arrival time at BCP or POE</th>
                       <th class="govuk-table__header" scope="col">Risk outcome</th>
+                      <th class="govuk-table__header" scope="col">Risk category</th>
                     </tr>
                   </thead>
                   <tbody class="govuk-table__body">
@@ -268,8 +291,9 @@ Decision hub
                         <td class="govuk-table__cell">
                           <strong class="govuk-tag tag tag--inspection-required">
                             INSPECT
-                          </strong>
-                        </td>
+                          </strong></td>
+                        <td class="govuk-table__cell">High</td>
+  
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -285,6 +309,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -300,6 +325,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">Medium</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -315,6 +341,7 @@ Decision hub
                             NO INSPECTION
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -330,11 +357,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3438760" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3438760/hub" target="_self">
-                            CHEDD.GB.2021.3438760
+                            CHEDP.GB.2021.3438760
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -345,6 +373,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">Medium</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -360,6 +389,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -375,6 +405,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -390,6 +421,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -405,11 +437,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3079337" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3079337/hub" target="_self">
-                            CHEDD.GB.2021.3079337
+                            CHEDP.GB.2021.3079337
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -420,11 +453,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3082727" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3082727/hub" target="_self">
-                            CHEDD.GB.2021.3082727
+                            CHEDP.GB.2021.3082727
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -435,11 +469,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">Medium</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3091820" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3091820/hub" target="_self">
-                            CHEDD.GB.2021.3091820
+                            CHEDP.GB.2021.3091820
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -450,11 +485,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3094848" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3094848/hub" target="_self">
-                            CHEDD.GB.2021.3094848
+                            CHEDP.GB.2021.3094848
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -465,11 +501,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3100998" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3100998/hub" target="_self">
-                            CHEDD.GB.2021.3100998
+                            CHEDP.GB.2021.3100998
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -480,11 +517,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">Medium</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3103971" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3103971/hub" target="_self">
-                            CHEDD.GB.2021.3103971
+                            CHEDP.GB.2021.3103971
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -495,11 +533,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3106140" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3106140/hub" target="_self">
-                            CHEDD.GB.2021.3106140
+                            CHEDP.GB.2021.3106140
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -510,11 +549,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3134891" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3134891/hub" target="_self">
-                            CHEDD.GB.2021.3134891
+                            CHEDP.GB.2021.3134891
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -525,11 +565,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3138076" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3138076/hub" target="_self">
-                            CHEDD.GB.2021.3138076
+                            CHEDP.GB.2021.3138076
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -540,6 +581,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
@@ -555,11 +597,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">Medium</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3156159" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3156159/hub" target="_self">
-                            CHEDD.GB.2021.3156159
+                            CHEDP.GB.2021.3156159
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -570,11 +613,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">Medium</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3190412" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3190412/hub" target="_self">
-                            CHEDD.GB.2021.3190412
+                            CHEDP.GB.2021.3190412
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -585,11 +629,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2022.4690865" href="/decision/tst/protected/bip-notifications/CHEDA.GB.2022.4690865/hub" target="_self">
-                            CHEDA.GB.2022.4690865
+                            CHEDP.GB.2022.4690865
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -600,11 +645,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3229966" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3229966/hub" target="_self">
-                            CHEDD.GB.2021.3229966
+                            CHEDP.GB.2021.3229966
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -615,11 +661,12 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">High</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell reference-number-cell">
                           <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2021.3229819" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2021.3229819/hub" target="_self">
-                            CHEDD.GB.2021.3229819
+                            CHEDP.GB.2021.3229819
                           </a>
                         </td>
                         <td class="govuk-table__cell"></td>
@@ -630,6 +677,7 @@ Decision hub
                             INSPECT
                           </strong>
                         </td>
+                        <td class="govuk-table__cell">Medium</td>
                       </tr>
                   </tbody>
                 </table>

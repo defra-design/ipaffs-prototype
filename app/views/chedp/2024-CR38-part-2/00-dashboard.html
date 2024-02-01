@@ -225,7 +225,7 @@
               </li>
             </ul>
             <strong>
-              <a class="govuk-notification-banner__link" href="/chedp/2024-part-2-single-chedp/01-hp-outstanding-documentry-check" id="view-high-priority-tasks">View high priority tasks</a>
+              <a class="govuk-notification-banner__link" href="01-hp-outstanding-documentry-check" id="view-high-priority-tasks">View high priority tasks</a>
             </strong>
           </div>
         </div>
@@ -1210,7 +1210,24 @@
                   <input class="govuk-input  " id="microchipNumber" name="microchipNumber" type="text" value="">
                 </div>
               </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label govuk-label--s" for="microchipNumber">
+                      Risk category (CHED P only)
+                    </label>
+                    <select class="govuk-select govuk-!-width-full" id="riskOutcome" name="riskOutcome">
+                      <option value="">All</option>
+                      <option value="Required">High</option>
+                      <option value="Not required">Medium</option>
+                      <option value="Inconclusive">Low</option>
+                  </select>
+               
+                 
+                </div>
+              </div>
             </div>
+           
       
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
@@ -1523,8 +1540,11 @@
                 </strong>
               </dd>
           </div>
-              
-            </div>
+          <div class="notification-list__grid-column-25">
+            <dt class="notification-list__heading">Risk category</dt>
+            <dd class="notification-list__value">High</dd>
+          </div>
+          
           </div>
           <div class="notification-list__links">
             <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="#" target="_blank">View CHED
@@ -1584,6 +1604,11 @@
               </dd>
           </div>
 
+          <div class="notification-list__grid-column-25">
+            <dt class="notification-list__heading">Risk category</dt>
+            <dd class="notification-list__value">Low</dd>
+          </div>
+
           </div>
           <div class="notification-list__links">
             <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5942705/certificate/pdf" target="_blank">View CHED
@@ -1633,7 +1658,10 @@
               <dd class="notification-list__value">Bulgaria</dd>
             </div>
             
-            
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Risk category</dt>
+              <dd class="notification-list__value">Low</dd>
+            </div>
 
           </div>
           <div class="notification-list__links">
@@ -1689,6 +1717,12 @@
               font-size: 1rem; 
               ">No catch certificate</strong>
             </div>
+
+            <div class="notification-list__grid-column-25">
+              <dt class="notification-list__heading">Risk category</dt>
+              <dd class="notification-list__value">Low</dd>
+            </div>
+
           </div>
           <div class="notification-list__links">
             <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5942705/certificate/pdf" target="_blank">View CHED
@@ -1737,6 +1771,18 @@
               <dt class="notification-list__heading">Origin</dt>
               <dd class="notification-list__value">Algeria</dd>
             </div>
+            <div class="notification-list__grid-column-20">
+              <dt class="notification-list__heading">Inspection</dt>
+              <dd class="notification-list__value" id="risk-outcome">
+                <strong class="govuk-tag tag tag--inspection-inconclusive">
+                  INCONCLUSIVE
+                </strong>
+              </dd>
+          </div>
+          <div class="notification-list__grid-column-25">
+            <dt class="notification-list__heading">Risk category</dt>
+            <dd class="notification-list__value">Medium</dd>
+          </div>
             <div class="notification-list__grid-column-20">
             </div>
           </div>
@@ -1787,9 +1833,14 @@
                   <dt class="notification-list__heading">Origin</dt>
                   <dd class="notification-list__value">Cameroon</dd>
                 </div>
-                <div class="notification-list__grid-column-20">
-                  
+                <div class="notification-list__grid-column-20"> 
                 </div>
+
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Low</dd>
+                </div>
+
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDPP.GB.2022.3736832/certificate/pdf" target="_blank">View CHED
@@ -1824,6 +1875,7 @@
                   </strong>
                   </dd>
                 </div>
+                
               </div>
               <div class="notification-list__grid-row">
                 <div class="notification-list__grid-column-30">
@@ -1839,6 +1891,10 @@
                   <dd class="notification-list__value">Aland Islands</dd>
                 </div>
                 <div class="notification-list__grid-column-20">
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Medium</dd>
                 </div>
               </div>
               <div class="notification-list__links">
@@ -1890,6 +1946,11 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">High</dd>
+                </div>
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.5107947/certificate/pdf" target="_blank">View CHED
@@ -1940,6 +2001,11 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Medium</dd>
+                </div>
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2022.3665632/certificate/pdf" target="_blank">View CHED
@@ -1989,6 +2055,10 @@
                   <dd class="notification-list__value">Afghanistan</dd>
                 </div>
                 <div class="notification-list__grid-column-20">
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">High</dd>
                 </div>
               </div>
               <div class="notification-list__links">
@@ -2240,7 +2310,13 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Medium</dd>
+                </div>
               </div>
+
+              
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5631583/certificate/pdf" target="_blank">View CHED
                 </a>
@@ -2439,6 +2515,10 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Low</dd>
+                </div>
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5556170/certificate/pdf" target="_blank">View CHED
@@ -2589,6 +2669,10 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">High</dd>
+                </div>
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5785915/certificate/pdf" target="_blank">View CHED
@@ -2688,6 +2772,10 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Medium</dd>
+                </div>
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5816492/certificate/pdf" target="_blank">View CHED
@@ -2737,6 +2825,10 @@
                   <dd class="notification-list__value">Turkey</dd>
                 </div>
                 <div class="notification-list__grid-column-20">
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">High</dd>
                 </div>
               </div>
               <div class="notification-list__links">
@@ -2788,6 +2880,10 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Medium</dd>
+                </div>
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5556173/certificate/pdf" target="_blank">View CHED
@@ -2838,6 +2934,7 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+                
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDD.GB.2023.5556151/certificate/pdf" target="_blank">View CHED
@@ -2888,6 +2985,10 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                 </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Low</dd>
+                </div>
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5626951/certificate/pdf" target="_blank">View CHED
@@ -2937,6 +3038,10 @@
                   <dd class="notification-list__value">Macao</dd>
                 </div>
                 <div class="notification-list__grid-column-20">
+                </div>
+                <div class="notification-list__grid-column-25">
+                  <dt class="notification-list__heading">Risk category</dt>
+                  <dd class="notification-list__value">Medium</dd>
                 </div>
               </div>
               <div class="notification-list__links">
@@ -2994,6 +3099,7 @@
                       </strong>
                     </dd>
                 </div>
+                
               </div>
               <div class="notification-list__links">
                 <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5849109/certificate/pdf" target="_blank">View CHED
