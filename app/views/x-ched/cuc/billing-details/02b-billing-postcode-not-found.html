@@ -43,7 +43,11 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
+              {% if (data['action'] == "change") %}
+              Change billing address
+              {% else %}
               Add billing address
+              {% endif %}
             </h1>
           </legend>
           <p class="govuk-body">

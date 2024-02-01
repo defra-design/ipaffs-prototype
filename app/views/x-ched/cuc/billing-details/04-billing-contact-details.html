@@ -29,7 +29,11 @@ What are the billing contact details? – {{ serviceName }} – GOV.UK Prototype
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading ">
+              {% if (data['action'] == "change") %}
+              Change billing contact details
+              {% else %}
               Add billing contact details
+              {% endif %}
             </h1>
           </legend>
           <div class="govuk-form-group">
@@ -59,7 +63,13 @@ What are the billing contact details? – {{ serviceName }} – GOV.UK Prototype
             </div>
             <input class="govuk-input govuk-!-width-three-quarters" id="billing-telephone-number" name="billing-telephone-number" type="tel" aria-describedby="billing-telephone-number-hint" autocomplete="tel">
           </div>
+
+          {% if (data['action'] == "change") %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save" data-module="govuk-button">
+          {% else %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
+          {% endif %}
+
           <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
         </fieldset>
       </form>

@@ -23,13 +23,23 @@ What is the billing address? – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="">
     <div class="govuk-grid-column-two-thirds"> 
+
+      {% if (data['action'] == "change") %}
+      <form action="05-confirm-billing-details" method="post">
+      {% else %}
       <form action="04-billing-contact-details" method="post">
+      {% endif %}
+
         <input name="" type="hidden" value="visited">    
         <span class="govuk-caption-xl">Billing</span>
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
+              {% if (data['action'] == "change") %}
+              Change billing address
+              {% else %}
               Add billing address
+              {% endif %}
             </h1>
           </legend>
           <p class="govuk-body">
@@ -69,7 +79,13 @@ What is the billing address? – {{ serviceName }} – GOV.UK Prototype Kit
             </label>
             <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" autocomplete="postal-code">
           </div>
+          
+          {% if (data['action'] == "change") %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save" data-module="govuk-button">
+          {% else %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
+          {% endif %}
+          
           <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
         </fieldset>
       </form>
