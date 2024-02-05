@@ -562,6 +562,7 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
 
 
+
             <div class="govuk-form-group conform-uk-regulations ">
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
@@ -621,13 +622,13 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                 </label>
                 
             
-                <span id="local-reference-number-hint" class="govuk-hint">
+                <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
                   Enter any internal reference number you want to use to identify this consignment, or leave blank.
                 </span>
             
                 
             
-              <input class="govuk-input govuk-!-width-one-half " id="local-reference-number" name="local-reference-number" type="text" value="" aria-describedby="local-reference-number-hint">
+              <input class="govuk-input govuk-!-width-one-half" id="local-reference-number" name="local-reference-number" type="text" value="" aria-describedby="local-reference-number-hint">
             </div>
 
             {% if (data['from'] == "review") %}
