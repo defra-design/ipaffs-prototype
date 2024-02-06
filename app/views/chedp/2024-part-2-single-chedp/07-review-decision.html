@@ -609,11 +609,51 @@ Review decision
                 </tr>
               </thead>
               <tbody>
-                <tr class="presentation-table__section">
-                  <td class="govuk-table__cell" colspan="4" id="latest-health-document-none-attached">
-                    No health certificate attached
+                <tr class="presentation-table__section ">
+                  <td class="govuk-table__cell" id="latest-health-document-type">
+                    Veterinary health certificate
+                  </td>
+                  <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                    4387942
+                  </td>
+                  <td class="govuk-table__cell" id="latest-health-document-issue-date">
+                    20 August 2023
+                  </td>
+                  <td class="govuk-table__cell">
+                    <a class="govuk-link ellipsis" id="attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" title="VHC-4373484.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?source=review">
+                      VHC-4373484.pdf
+                    </a>
                   </td>
                 </tr>
+               
+              </tbody>
+            </table>
+            <div class="heading-with-change-link" id="additional-details-section">
+              <h2 class="govuk-heading-s">Region of origin code</h2>
+              <td class="govuk-table__cell">
+                {% if (data['region-of-orgin-code'] == "yes") %}
+                  {{ data['region-code-added'] }}
+                {% elif (data['region-of-orgin-code'] == "no") %}
+                  {{ data['region-code-noselected'] }}
+                {% endif %}
+              </td>
+              </a>
+            </div>
+          </div>
+          <div class="govuk-!-margin-bottom-9">
+              
+            <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
+              <tbody>
+                <tr class="">
+                  <td class="govuk-table__header">Health certificate has region code?</td>
+                  <td class="govuk-table__cell" colspan="2">Yes</td>
+                </tr>      
+              <tr class="">
+                <td class="govuk-table__header">Region of origin code</td>
+                <td class="govuk-table__cell" id="imported-in-containers" colspan="2">
+                  EA1
+                </td>
+              </tr>
               </tbody>
             </table>
           </div>
