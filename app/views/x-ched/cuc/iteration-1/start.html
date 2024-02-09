@@ -1,0 +1,187 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+   
+    <a  href="/index" id="back-link" class="govuk-!-margin-top-0 govuk-!-margin-bottom-6 govuk-back-link back-link--next-to-breadcrumbs">Back to prototypes home</a>
+    </div> </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
+    <span class="govuk-caption-xl">Prototypes</span>
+    <h1 class="govuk-heading-xl">Common user charge: Iteration 1</h1>
+
+   
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#part-1">
+            Part 1 - Importer
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#part-2">
+            Part 2  - Inspector
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#part-3">
+            Part 3 - Control
+          </a>
+        </li>
+       
+      </ul>
+      <div class="govuk-tabs__panel" id="part-1">
+        <h2 class="govuk-heading-l">Part 1 - Importer</h2>
+        
+   
+        <div class="govuk-!-padding-bottom-4">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Adding and changing billing details</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+                <th scope="col" class="govuk-table__header">Add billing details</th>
+                <th scope="col" class="govuk-table__header">Change billing details</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Add billing details</td>
+                <td class="govuk-table__cell"><a href="billing-details/01-add-billing-details?action=add">Done</a></td>
+                <td class="govuk-table__cell">N/A</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Postcode lookup</td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Postcode not found</td>
+                <td class="govuk-table__cell"><a href="billing-details/02b-billing-postcode-not-found?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/02b-billing-postcode-not-found?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Select address</td>
+                <td class="govuk-table__cell"><a href="billing-details/03-select-billing-address?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/03-select-billing-address?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Enter address manually</td>
+                <td class="govuk-table__cell"><a href="billing-details/03b-enter-billing-address?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/03b-enter-billing-address?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Billing contact details</td>
+                <td class="govuk-table__cell"><a href="billing-details/04-billing-contact-details?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/04-billing-contact-details?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Confirm billing details</td>
+                <td class="govuk-table__cell"><a href="billing-details/05-confirm-billing-details">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/05-confirm-billing-details">Done</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Other notifciation journey screens</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+                <th scope="col" class="govuk-table__header">All</th>
+                <th scope="col" class="govuk-table__header">CHED P</th>
+                <th scope="col" class="govuk-table__header">CHED A</th>
+                <th scope="col" class="govuk-table__header">CHED D</th>
+                <th scope="col" class="govuk-table__header">CHED PP</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Notification hub – no Billing section</th>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="chedp/01-no-check-answers-no-billing">Done</a></td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell"><a href="chedd/01-no-check-answers-no-billing">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/01-no-check-answers-no-billing">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Notification hub – with Billing section</th>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="chedp/01-no-check-answers">Done</a></td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell"><a href="chedd/01-no-check-answers">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/01-no-check-answers">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Review your notification</th>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review">Done</a></td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Review your notification – with error message</th>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review-errors">Done</a></td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review-errors">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review-errors">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Confirmation</th>
+                <td class="govuk-table__cell"><a href="common/20-submitted-inspection-required">Done<br>P, D, PP</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+    
+     
+    
+      
+    
+  
+ 
+
+
+ <!-- tabs end -->
+
+</div>
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="part-2">
+  <h2 class="govuk-heading-l">Part 2 -  Inspector</h2>
+  <div class="govuk-!-padding-bottom-4">
+    
+  </div>
+</div>
+
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="part-3">
+  <h2 class="govuk-heading-l">Part 3 - Control</h2>
+  <div class="govuk-!-padding-bottom-4">
+    
+  </div>
+ 
+ 
+</div>
+
+</div>
+   
+{% endblock %}

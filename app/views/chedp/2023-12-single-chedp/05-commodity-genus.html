@@ -17,7 +17,7 @@ Commodity – {{ serviceName }} – GOV.UK Prototype Kit
           <span> - CHEDP</span>
   </span>
 </div>
-<form action="06-about-consignment-both" method="post">
+<form action="06-about-consignment-cg" method="post">
   <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
   <input name="etag" type="hidden" value="&quot;00000000053B49D9&quot;">
   <input name="11-transport-to-poe" type="hidden" value="visited">
@@ -50,35 +50,19 @@ Commodity – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="commodity-selected-code" type="hidden" value="03031200">
         <input name="commodityDetailsPage" type="hidden" value="">
 
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--m" for="type-select">
-                Type of commodity
-              </label>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn">
-                    <strong>Meat products</strong> 
-                  </label>
-                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                    Foods containing meat that may contain multiple ingredients. For example, a chicken and mushroom pie.
-                  </div>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn-2">
-                    <strong>Meat preparations</strong> 
-                  </label>
-                  <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
-                    Foods made from fresh meat that may have other foods, additives and seasonings added to them.
-                  </div>
-                </div>
-          </div>
-              </select>
-              <noscript>
-                <input id="type-button" class="button" type="submit" name="typeButton" value="update">
-              </noscript>
-            </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="type-select">
+            Type of commodity
+          </label>
+          <input type="hidden" id="typeButtonId">
+          <select class="govuk-select commodity-type govuk-!-width-one-half" id="type-select" name="type">
+                <option selected="selected" value="20">Meat products</option>
+                <option value="61">Meat preparations</option>
+          </select>
+          <noscript>
+            <input id="type-button" class="button" type="submit" name="typeButton" value="update">
+          </noscript>
+        </div>
 
             <input type="hidden" name="class" id="class-select-hidden" value="147118">
 

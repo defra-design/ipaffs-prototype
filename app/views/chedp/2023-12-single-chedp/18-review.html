@@ -15,7 +15,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
 
 <div class="navigation-links">
-    <a href="07-check-answers" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <a href="07-check-answers-orig" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
   <div class="navigation-links__divider">|</div>
   <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
     <ol class="govuk-breadcrumbs__list">
@@ -23,7 +23,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <a class="govuk-breadcrumbs__link" href="0-index">Dashboard</a>
       </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="07-check-answers">Notification Hub</a>
+            <a class="govuk-breadcrumbs__link" href="07-check-answers-orig">Notification Hub</a>
           </li>
     </ol>
   </div>  <div id="sign-out-section" class="information-banner">
@@ -143,19 +143,27 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         {% endif %}
                       </td>
                       <td class="govuk-table__cell"></td>
+                  
+                    
+                      <td class="govuk-table__cell"></td>
                     </tr>
                     <tr>
-                      <td class="govuk-table__header">Consignment reference number</td>
+                      <td class="govuk-table__header">Consignment conforms to regulatory requirements</td>
                       <td class="govuk-table__cell" id="region-of-consignment-value">
                         
                       </td>
+                      <tr>
+                        <td class="govuk-table__header">Consignment reference number</td>
+                        <td class="govuk-table__cell" id="region-of-consignment-value">
+                          
+                        </td>
                       <td class="govuk-table__cell"></td>
                     </tr>
             
                   <tr class="presentation-table__section ">
-                    <td class="govuk-table__header">Consignment conforms to regulatory requirements</td>
+                    <td class="govuk-table__header">Main reason for importing the consignment</td>
                     <td class="govuk-table__cell" id="purpose-of-consignment-value">
-                        Yes
+                      For internal market
                               </td>
                     <td class="govuk-table__cell change">
                           <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "both" }}" class="govuk-link" id="consignment-purpose-change-link">
@@ -163,10 +171,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           </a>
                     </td>
                   </tr>
-                  <td class="govuk-table__header">Main reason for importing the consignment</td>
-                    <td class="govuk-table__cell" id="purpose-of-consignment-value">
-                        For internal market
-                              </td>
+                  
                       
                       <tr>
                         <td class="govuk-table__header">Purpose in the internal market</td>

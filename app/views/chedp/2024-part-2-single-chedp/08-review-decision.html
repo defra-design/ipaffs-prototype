@@ -1,0 +1,830 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Review decision
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link govuk" href="dashboard" id="navigation-dashboard-link">Dashboard</a>
+      </li>
+    </ol>
+  </div></div>
+
+  <form action="hub" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  </form>
+
+  <div role="main" class="govuk-main-wrapper">
+    <div class="govuk-grid-row" id="bip-review-checks-page">
+      <form action="review" method="POST">
+    <div class="govuk-grid-column-full">
+        <input name="crumb" type="hidden" value="9jQLoFnZki3PWpIjqD4vcfOTxkaVpHuVwolt9T775Yg">
+        <input name="etag" type="hidden" value="&quot;000000000540F194&quot;">
+        <h1 class=" govuk-heading-xl heading-with-help">
+            <span class="heading-tertiary">
+              <span id="reference-number">CHEDP.GB.2023.5914693</span>
+                <span id="cved-version-number"> - V1</span>
+            </span>
+            <span class="govuk-caption-xl"></span>
+            Review outcome decision
+        </h1>      <div class="govuk-!-margin-top-6">
+          <div class="audit-flag govuk-body">
+            <div id="last-submission-date">Submitted on: 22 August 2023, 23:59</div>
+            <div id="submitted-by">Submitted by: Andrew Inspector-Tester</div>
+            <div id="last-updated-date">Last updated: 23 August 2023, 00:19</div>
+            <div id="last-updated-by">Last updated by: Andrew Inspector-Tester</div>
+          </div>
+        </div>
+  
+        <table class="govuk-table review-table govuk-!-margin-top-6" id="reference-table">
+          <caption class="govuk-visually-hidden">
+            Border Control Post reference number table
+          </caption>
+          <tbody>
+          <tr class="divider-top divider-bottom govuk-table__row" id="reference-row-1">
+            <th scope="row" class="check-type govuk-table__header">Border Control Post reference number</th>
+            <td class="check-status govuk-table__cell">PHA-FXstw</td>
+            <td class="change govuk-table__cell">
+                <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/local-reference-number" id="change-reference">Change</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+  
+          <h2 class="govuk-heading-m">Illegal, unreported and unregulated (IUU) fishing</h2>
+          <table class="govuk-table review-table govuk-!-margin-top-4" id="iuu-status-table">
+            <caption class="govuk-visually-hidden">IUU table</caption>
+            <tbody>
+            <tr class="divider-top divider-bottom govuk-table__row" id="iuu-status-row-1">
+              <th scope="row" class="check-type govuk-table__header">IUU checks</th>
+              <td class="check-status govuk-table__cell">Compliant</td>
+              <td class="change govuk-table__cell">
+                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/iuu-status" id="change-iuu-status">Change</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+  
+          <h2 class="govuk-heading-m">Checks</h2>
+          <table class="review-table govuk-table govuk-!-margin-top-4" id="checks-table">
+            <caption class="govuk-visually-hidden">
+              Checks table
+            </caption>
+            <tbody>
+                  <tr class="govuk-table__row divider-top checks-row-0 " id="parttwo/consignmentcheck">
+                  <th scope="col" class="check-type govuk-table__header">Documentary check</th>
+                  <td class="check-status govuk-table__cell">Satisfactory</td>
+                  <td class="govuk-table__cell"></td>
+                    <td class="change govuk-table__cell">
+                        <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/checks" id="change-checks">Change</a>
+                    </td>
+                </tr>
+                    <tr class="govuk-table__row checks-row-1 " id="consignmentcheck/identitycheckdone">
+                  <th scope="col" class="check-type govuk-table__header">Full identity check</th>
+                  <td class="check-status govuk-table__cell">Satisfactory</td>
+                  <td class="govuk-table__cell"></td>
+                    <td></td>
+                </tr>
+                    <tr class="govuk-table__row checks-row-3 " id="consignmentcheck/physicalcheckdone">
+                  <th scope="col" class="check-type govuk-table__header">Physical check</th>
+                  <td class="check-status govuk-table__cell">Satisfactory</td>
+                  <td class="govuk-table__cell"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+          </table>
+  
+        <table class="review-table govuk-table govuk-!-margin-top-4" id="seal-numbers-table">
+          <caption class="govuk-visually-hidden">seal numbers table</caption>
+          <tbody><tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><p class="govuk-heading-m">Seal numbers</p></th>
+            <td class="change govuk-table__cell">
+                <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/seals" id="change-seal-numbers">Change</a>
+            </td>
+          </tr>
+        </tbody></table>
+  
+          <p class="govuk-body divider-top divider-bottom govuk-!-margin-bottom-5 govuk-!-padding-top-2 govuk-!-padding-bottom-2" id="notifications-not-found">
+            No new seal numbers have been entered
+          </p>
+  
+        
+        <h2 class="govuk-heading-m">Laboratory tests</h2>
+        <table class="govuk-table review-table govuk-!-margin-top-4" id="review-table-lab-tests" role="presentation">
+          <tbody>
+                <tr class="govuk-table__row divider-top divider-bottom lab-test-required " id="parttwo/laboratorytestsrequired">
+                  <td class="govuk-table__header check-type">Required</td>
+                  <td class="govuk-table__cell check-status">No</td>
+                    <td class="govuk-table__cell change">
+                        <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/lab-tests-required" id="change-lab-test-required">Change</a>
+                    </td>
+                </tr>
+          </tbody>
+        </table>
+  
+          <!-- <h2 class="govuk-heading-m">Documents</h2>
+<h3>Importer</h3> -->
+
+<h2 class="govuk-heading-m" id="documents-section-heading">Accompanying documents</h2>
+
+<div class="govuk-grid-row" >
+  <div class="govuk-grid-column-full" >
+    <h3 class="govuk-heading-m">Importer</h3>
+
+    <h4 class="govuk-heading-s">Catch certificate summary</h4>
+</div>
+</div>
+    
+        <div class="govuk-grid-row" >
+          <div class="govuk-grid-column-one-half">
+    Flag state of catching vessel(s) 
+   </div> 
+   <div class="govuk-grid-column-one-half">
+    <ul class="govuk-list">
+      <li>France (2)</li>
+      <li>Portugal (1)</li>
+      <li>Spain (3)</li>
+    </ul>
+   </div> 
+      </div>
+
+      <div class="govuk-grid-row" >
+        <div class="govuk-grid-column-full" style="border-bottom: 1px solid #b1b4b6;">
+          <p>1 out of the 3 wild species in consignment are NOT listed in any catch certificates
+          (but the weights of all may need to be checked)</p>
+          <p class="govuk-!-margin-bottom-2">Notifier marked 1 of 3 wild species as exempt from catch certificates</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>03021120 – Oncorhynchus mykiss, wild stock</li>
+           
+          </ul>
+          </div>
+          </div>
+
+
+     
+ 
+
+<div class="heading-with-change-link govuk-!-margin-top-6">
+  <h3 class="govuk-heading-s" id="latest-health-certificate-heading">6 catch certificates</h3>
+    <form action="#" method="POST">
+      <input name="crumb" type="hidden" value="ZUivo0owQQjIccnnldF_C2PBX42WUQQ8yQw1-b4T8eI">
+      <input name="etag" type="hidden" value="&quot;00000000054245C8&quot;">
+      <button type="submit" class="link-button" name="change-link" value="change-vet-documents" id="latest-health-certificate-change-link">Change
+      </button>
+    </form>
+</div>
+
+<div id="accompanying-documents-table" class="additional-documents-table">
+  <div class="govuk-grid-row  govuk-!-margin-bottom-8">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-!-margin-bottom-0">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+           
+
+            
+
+            <div class="additional-documents__grid-row additional-documents__headers">
+              <div class="additional-documents__grid-column-35 additional-documents__table-header">
+                Commodity code and species
+              </div>
+              
+              <div class="additional-documents__grid-column-20 additional-documents__table-header">
+                Flag state and date of issue
+              </div>
+              <div class="additional-documents__grid-column-40 additional-documents__table-header">
+                Document reference and attachment 
+              </div>
+            </div>
+            <div class="additional-documents__grid-row additional-document-info">
+              <div class="additional-documents__grid-column-35 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Commodity code and species
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">03030200</p>
+                  <p class="govuk-!-margin-bottom-0">Oncorhynchus aguabonita</p>
+
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-20 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                  state and date of issue
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">Spain</p>
+                  <p class="govuk-!-margin-bottom-0">31 August 2023</p>
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-40 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                  Document reference and attachment 
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">CC-DFAKAFDK43097352072035970</p>
+                  <p class="govuk-!-margin-bottom-0"><a class="govuk-link link-button" rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                    CC-dfajdsfklajfl.pdf</a> 
+                    <!-- <span class="govuk-!-margin-2">&nbsp;|</span> <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download </a> -->
+                </p>
+                </div>
+            
+              </div>
+              <!-- <div class="additional-documents__grid-column-25 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                  Attachments
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                    <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                      CC-4373484.pdf
+                    </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="additional-documents__grid-row ">
+               <div class="additional-documents__grid-column-35" ></div>
+             <!-- <div class="additional-documents__grid-column-20" ></div> -->
+                <div class="additional-documents__grid-column-60 additional-documents__content-links" >
+                  <!-- <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download
+                  </a> -->
+                </div>
+            </div>
+
+            <div class="additional-documents__grid-row additional-document-info">
+              <div class="additional-documents__grid-column-35 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Commodity code and species
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                  <!-- <p class="govuk-!-margin-bottom-1">03030200</p>
+                  <p class="govuk-!-margin-bottom-0">Oncorhynchus aguabonita</p> -->
+
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-20 additional-document-content" >
+                <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                  state and date of issue
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert" >
+                  <p class="govuk-!-margin-bottom-1">France</p>
+                  <p class="govuk-!-margin-bottom-0">31 September 2023</p>
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-40 additional-document-content" >
+                <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                  Document reference and attachment 
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">CC-DFAKAFDK43097352072035970</p>
+                  <p class="govuk-!-margin-bottom-0"><a class="govuk-link link-button" rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                    CC-dfajdsfklajfl.pdf</a> 
+                    <!-- <span class="govuk-!-margin-2">&nbsp;|</span> <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download </a> -->
+                </p>
+                </div>
+            
+              </div>
+              <!-- <div class="additional-documents__grid-column-25 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                  Attachments
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                    <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                      CC-4373484.pdf
+                    </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="additional-documents__grid-row ">
+               <div class="additional-documents__grid-column-35" ></div>
+             <!-- <div class="additional-documents__grid-column-20"></div> -->
+                <div class="additional-documents__grid-column-60 additional-documents__content-links">
+                  <!-- <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download
+                  </a> -->
+                </div>
+            </div>
+
+
+            <div class="additional-documents__grid-row additional-document-info">
+              <div class="additional-documents__grid-column-35 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Commodity code and species
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                  <!-- <p class="govuk-!-margin-bottom-1">03030200</p>
+                  <p class="govuk-!-margin-bottom-0">Oncorhynchus aguabonita</p> -->
+
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-20 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                  state and date of issue
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">Portugal</p>
+                  <p class="govuk-!-margin-bottom-0">31 August 2023</p>
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-40 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                  Document reference and attachment 
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">CC-DFAKAFDK43097352072035970</p>
+                  <p class="govuk-!-margin-bottom-0"><a class="govuk-link link-button" rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                    CC-dfajdsfklajfl.pdf</a> 
+                    <!-- <span class="govuk-!-margin-2">&nbsp;|</span> <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download </a> -->
+                </p>
+                </div>
+            
+              </div>
+              <!-- <div class="additional-documents__grid-column-25 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                  Attachments
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                    <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                      CC-4373484.pdf
+                    </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="additional-documents__grid-row additional-documents__content-links">
+              <div class="additional-documents__grid-column-35" ></div>
+             <!--  <div class="additional-documents__grid-column-20"></div> -->
+                <div class="additional-documents__grid-column-60">
+                  <!-- <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download
+                  </a> -->
+                </div>
+            </div>
+
+            <div class="additional-documents__grid-row additional-document-info">
+              <div class="additional-documents__grid-column-35 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Commodity code and species
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">03030200</p>
+                  <p class="govuk-!-margin-bottom-0">Salmo trutta</p>
+
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-20 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                  state and date of issue
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">Spain</p>
+                  <p class="govuk-!-margin-bottom-0">31 August 2023</p>
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-40 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                  Document reference and attachment 
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">CC-DFAKAFDK43097352072035970</p>
+                  <p class="govuk-!-margin-bottom-0"><a class="govuk-link link-button" rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                    CC-dfajdsfklajfl.pdf</a> 
+                    <!-- <span class="govuk-!-margin-2">&nbsp;|</span> <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download </a> -->
+                </p>
+                </div>
+            
+              </div>
+              <!-- <div class="additional-documents__grid-column-25 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                  Attachments
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                    <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                      CC-4373484.pdf
+                    </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="additional-documents__grid-row additional-documents__content-links">
+              <div class="additional-documents__grid-column-35" ></div>
+              <!-- <div class="additional-documents__grid-column-20"></div> -->
+                <div class="additional-documents__grid-column-40">
+                  <!-- <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download
+                  </a> -->
+                </div>
+            </div>
+
+
+            <div class="additional-documents__grid-row additional-document-info">
+              <div class="additional-documents__grid-column-35 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Commodity code and species
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">03030200</p>
+                  <p class="govuk-!-margin-bottom-0">Salmonidae</p>
+
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-20 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                  state and date of issue
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">France</p>
+                  <p class="govuk-!-margin-bottom-0">30 August 2023</p>
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-40 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                  Document reference and attachment 
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">CC-DFAKAFDK43097352072035970</p>
+                  <p class="govuk-!-margin-bottom-0"><a class="govuk-link link-button" rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                    CC-dfajdsfklajfl.pdf</a> 
+                    <!-- <span class="govuk-!-margin-2">&nbsp;|</span> <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download </a> -->
+                </p>
+                </div>
+            
+              </div>
+              <!-- <div class="additional-documents__grid-column-25 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                  Attachments
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                    <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                      CC-4373484.pdf
+                    </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="additional-documents__grid-row ">
+               <div class="additional-documents__grid-column-35" ></div>
+             <!-- <div class="additional-documents__grid-column-20"></div> -->
+                <div class="additional-documents__grid-column-60 additional-documents__content-links">
+                  <!-- <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download
+                  </a> -->
+                </div>
+            </div>
+
+            <div class="additional-documents__grid-row additional-document-info">
+              <div class="additional-documents__grid-column-35 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-type-heading-latest-health-cert">Commodity code and species
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-type-value-latest-health-cert">
+                  <!-- <p class="govuk-!-margin-bottom-1">03030200</p>
+                  <p class="govuk-!-margin-bottom-0">Salmonidae</p> -->
+
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-20 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-reference-heading-latest-health-cert">Flag
+                  state and date of issue
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-reference-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">Spain</p>
+                  <p class="govuk-!-margin-bottom-0">31 August 2023</p>
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-40 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-date-heading-latest-health-cert">
+                  Document reference and attachment 
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-date-value-latest-health-cert">
+                  <p class="govuk-!-margin-bottom-1">CC-DFAKAFDK43097352072035970</p>
+                  <p class="govuk-!-margin-bottom-0"><a class="govuk-link link-button" rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                    CC-dfajdsfklajfl.pdf</a> 
+                    <!-- <span class="govuk-!-margin-2">&nbsp;|</span> <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download </a> -->
+                </p>
+                </div>
+            
+              </div>
+              <!-- <div class="additional-documents__grid-column-25 additional-document-content">
+                <div class="additional-documents__content-heading" id="additional-document-attachment-heading-latest-health-cert">
+                  Attachments
+                </div>
+                <div class="additional-documents__content-value" id="additional-document-attachment-value-latest-health-cert">
+                    <a rel="noopener noreferrer" title="VHC-4373484.pdf" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" class="govuk-link ellipsis" id="importer-attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" target="_blank" aria-label="View VHC-4373484.pdf">
+                      CC-4373484.pdf
+                    </a>
+                </div>
+              </div> -->
+            </div>
+            <div class="additional-documents__grid-row additional-documents__content-links">
+               <div class="additional-documents__grid-column-35" ></div>
+             <!-- <div class="additional-documents__grid-column-20"></div> -->
+                <div class="additional-documents__grid-column-40">
+                  <!-- <a href="#" class="govuk-link link-button" aria-label="Download VHC-4373484.pdf">
+                    Download
+                  </a> -->
+                </div>
+            </div>
+
+            
+          </div>
+        </div>
+
+
+
+
+      
+      </div>
+
+
+      </div>
+      </div>
+      </div>
+
+
+
+          <table class="govuk-table govuk-!-margin-top-6 review-table">
+            <!-- <caption class="govuk-table__caption">Importer</caption> -->
+            <tbody><tr class="govuk-table__row table--presentation">
+
+
+
+
+              <th scope="row" class="govuk-table__header">Latest health certificate</th>
+                <td class="change govuk-table__cell badge-right">
+                  <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/documents" class="govuk-link" id="documents-change-link">Change</a>
+                </td>
+            </tr>
+          </tbody></table>
+          <div class="overflow-x-auto">
+            <table class="govuk-table table--fixed review-additional-documents-table" id="latest-health-document-table">
+              <caption class="govuk-table__caption govuk-visually-hidden">veterinary health certificate
+                table
+              </caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header">Document type</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header">Document reference</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header">Date of issue</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header">Attachments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="presentation-table__section ">
+                  <td class="govuk-table__cell" id="latest-health-document-type">
+                    Veterinary health certificate
+                  </td>
+                  <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                    4387942
+                  </td>
+                  <td class="govuk-table__cell" id="latest-health-document-issue-date">
+                    20 August 2023
+                  </td>
+                  <td class="govuk-table__cell">
+                    <a class="govuk-link ellipsis" id="attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" title="VHC-4373484.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?source=review">
+                      VHC-4373484.pdf
+                    </a>
+                  </td>
+                </tr>
+               
+              </tbody>
+            </table>
+            <div class="heading-with-change-link" id="additional-details-section">
+              <h2 class="govuk-heading-s">Region of origin code</h2>
+              <td class="govuk-table__cell">
+                {% if (data['region-of-orgin-code'] == "yes") %}
+                  {{ data['region-code-added'] }}
+                {% elif (data['region-of-orgin-code'] == "no") %}
+                  {{ data['region-code-noselected'] }}
+                {% endif %}
+              </td>
+              </a>
+            </div>
+          </div>
+          <div class="govuk-!-margin-bottom-9">
+              
+            <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
+              <tbody>
+                <tr class="">
+                  <td class="govuk-table__header">Health certificate has region code?</td>
+                  <td class="govuk-table__cell" colspan="2">Yes</td>
+                </tr>      
+              <tr class="">
+                <td class="govuk-table__header">Region of origin code</td>
+                <td class="govuk-table__cell" id="imported-in-containers" colspan="2">
+                  EA1
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        <div class="govuk-!-margin-bottom-6 " id="parttwo/documents">
+          <table class="govuk-table govuk-!-margin-top-4 govuk-!-margin-bottom-0">
+        
+              <caption class="govuk-table__caption govuk-heading-m govuk-visually-hidden">
+                Documents
+              </caption>
+        
+            <tbody><tr class="govuk-table__row table--presentation">
+                <th scope="row" class="govuk-table__header" id="additional-documents-header">0 additional documents</th>
+                <td class="change govuk-table__cell badge-right">
+                  <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/documents" class="govuk-link" id="documents-change-link">Change</a>
+                </td>
+            </tr>
+          </tbody></table>
+            <div class="overflow-x-auto">
+              <table class="govuk-table table--fixed review-additional-documents-table" id="accompanying-documents-table">
+                <thead>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-type">Document type</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-reference">Document reference</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-date-of-issue">Date of issue</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-attachments">Attachments</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" colspan="4" id="accompanying-documents-none-attached">
+                        No documents attached
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        
+          <div class="overflow-x-auto">
+            <table class="govuk-table table--fixed review-additional-documents-table govuk-!-margin-bottom-0" id="inspector-review-table-documents">
+                <caption class="govuk-table__caption">Inspector</caption>
+              <thead>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-type">Document type</th>
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-reference">Document reference</th>
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-date-of-issue">Date of issue</th>
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-attachments">Attachments</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell" colspan="4" id="accompanying-documents-none-attached">
+                    No documents attached
+                  </td>
+                </tr>
+            </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <table class="govuk-table presentation-table review-table" id="decision-table">
+          <caption class="govuk-table__caption govuk-heading-m">
+            Decision information
+          </caption>
+          <tbody>
+          <tr class="govuk-table__row divider-top" id="decision-row-1">
+            <th id="decision-result" scope="row" class="govuk-table__header check-type"></th>
+            <td class="govuk-table__cell check-status" id="acceptance-decision">Acceptable for internal market</td>
+            <td class="govuk-table__cell change">
+                <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5914693/decisions" id="change-decision">Change</a>
+            </td>
+          </tr>
+                <tr class="govuk-table__row divider-bottom " id="decision/consignmentacceptable">
+                  <td class="govuk-table__header check-type">Consignment use</td>
+                  <td class="govuk-table__cell check-status">Human consumption</td>
+                  <td></td>
+                </tr>
+          </tbody>
+        </table>
+        
+  
+  
+          <div>
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-0" id="review-declaration-heading">Now
+              submit your decision</h2>
+            <fieldset class="govuk-fieldset ">
+              <legend class="hidden govuk-visually-hidden">Choose from:</legend>
+              <span class="govuk-error-message"></span>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input id="signed-by-official" class="govuk-radios__input" value="signed-by-official" type="radio" name="signAndSubmit" checked="">
+                    <label class="govuk-label govuk-radios__label" for="signed-by-official">I, the
+                      undersigned official inspector for the entry point, certify that the checks on
+                      the consignment have been carried out in accordance with EU retained
+                      law.</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+  
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-6">Date and time of checks</h3>
+  
+            <div class="govuk-form-group  ">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-checks-hint">
+                  <legend class="hidden govuk-visually-hidden">Date entry:</legend>
+            
+                  <span id="date-of-checks-hint" class="govuk-hint">
+                    For example, 31 03 2018
+                  </span>
+            
+                  <div class="govuk-date-input date-input--picker " id="date-of-checks" data-module="accessible-datepicker">
+                  <div class="govuk-date-input__item date-input-day">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="date-of-checks-day">
+                          Day
+                        </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="date-of-checks-day" name="date-of-checks-day" type="text" value="" inputmode="numeric" maxlength="2">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item date-input-month">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="date-of-checks-month">
+                          Month
+                        </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="date-of-checks-month" name="date-of-checks-month" type="text" value="" inputmode="numeric" maxlength="2">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item date-input-year">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="date-of-checks-year">
+                          Year
+                        </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="date-of-checks-year" name="date-of-checks-year" type="text" value="" inputmode="numeric" maxlength="4">
+                    </div>
+                  </div>
+                <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                  <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+          <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+          <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month" tabindex="0">Previous month</button><h2 id="date-picker-label-37" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month" tabindex="0">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-37"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody><tr><td class="dateCell"><button type="button" tabindex="-1" data-test-id="30/07/2023" aria-label="Sunday, 30 July 2023" class="date__button date__button--inactive">30</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="31/07/2023" aria-label="Monday, 31 July 2023" class="date__button date__button--inactive">31</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="01/08/2023" aria-label="Tuesday, 1 August 2023" class="date__button">1</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="02/08/2023" aria-label="Wednesday, 2 August 2023" class="date__button">2</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="03/08/2023" aria-label="Thursday, 3 August 2023" class="date__button">3</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="04/08/2023" aria-label="Friday, 4 August 2023" class="date__button">4</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="05/08/2023" aria-label="Saturday, 5 August 2023" class="date__button">5</button></td></tr><tr><td class="dateCell"><button type="button" tabindex="-1" data-test-id="06/08/2023" aria-label="Sunday, 6 August 2023" class="date__button">6</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="07/08/2023" aria-label="Monday, 7 August 2023" class="date__button">7</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="08/08/2023" aria-label="Tuesday, 8 August 2023" class="date__button">8</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="09/08/2023" aria-label="Wednesday, 9 August 2023" class="date__button">9</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="10/08/2023" aria-label="Thursday, 10 August 2023" class="date__button">10</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="11/08/2023" aria-label="Friday, 11 August 2023" class="date__button">11</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="12/08/2023" aria-label="Saturday, 12 August 2023" class="date__button">12</button></td></tr><tr><td class="dateCell"><button type="button" tabindex="-1" data-test-id="13/08/2023" aria-label="Sunday, 13 August 2023" class="date__button">13</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="14/08/2023" aria-label="Monday, 14 August 2023" class="date__button">14</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="15/08/2023" aria-label="Tuesday, 15 August 2023" class="date__button">15</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="16/08/2023" aria-label="Wednesday, 16 August 2023" class="date__button">16</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="17/08/2023" aria-label="Thursday, 17 August 2023" class="date__button">17</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="18/08/2023" aria-label="Friday, 18 August 2023" class="date__button">18</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="19/08/2023" aria-label="Saturday, 19 August 2023" class="date__button">19</button></td></tr><tr><td class="dateCell"><button type="button" tabindex="-1" data-test-id="20/08/2023" aria-label="Sunday, 20 August 2023" class="date__button">20</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="21/08/2023" aria-label="Monday, 21 August 2023" class="date__button">21</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="22/08/2023" aria-label="Tuesday, 22 August 2023" class="date__button">22</button></td><td class="dateCell"><button type="button" tabindex="0" data-test-id="23/08/2023" aria-label="Wednesday, 23 August 2023" class="date__button date__button--today">23</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="24/08/2023" aria-label="Thursday, 24 August 2023" class="date__button">24</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="25/08/2023" aria-label="Friday, 25 August 2023" class="date__button">25</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="26/08/2023" aria-label="Saturday, 26 August 2023" class="date__button">26</button></td></tr><tr><td class="dateCell"><button type="button" tabindex="-1" data-test-id="27/08/2023" aria-label="Sunday, 27 August 2023" class="date__button">27</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="28/08/2023" aria-label="Monday, 28 August 2023" class="date__button">28</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="29/08/2023" aria-label="Tuesday, 29 August 2023" class="date__button">29</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="30/08/2023" aria-label="Wednesday, 30 August 2023" class="date__button">30</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="31/08/2023" aria-label="Thursday, 31 August 2023" class="date__button">31</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="01/09/2023" aria-label="Friday, 1 September 2023" class="date__button date__button--inactive">1</button></td><td class="dateCell"><button type="button" tabindex="-1" data-test-id="02/09/2023" aria-label="Saturday, 2 September 2023" class="date__button date__button--inactive">2</button></td></tr><tr></tr></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button></div></div></div>
+              </fieldset>
+            </div>
+  
+          <div class="govuk-form-group " id="time-of-checks">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-!-margin-bottom-0">
+                <span class="govuk-hint govuk-!-margin-bottom-0">24 hour format</span>
+              </legend>
+              <div class="govuk-date-input">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="time-of-checks-hour">Hour</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="time-of-checks-hour" maxlength="2" name="time-of-checks-hour" value="">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="time-of-checks-minute">Minutes</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="time-of-checks-minute" maxlength="2" name="time-of-checks-minute" value="">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <form action="09-submitted">
+            <input class="govuk-button govuk-!-margin-top-6 submit-button" type="submit" value="Submit decision" id="submit-decision">
+          </form>
+          </div>
+      </div>
+  
+      
+    </div>
+  </div>
+
+ 
+
+{% endblock %}

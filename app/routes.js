@@ -11,7 +11,8 @@ const router = express.Router()
 
 // x ched routes
 router.use('/x-ched/e-cert-chedp', require('./views/x-ched/e-cert-chedp/_routes'))
-router.use('/x-ched/cuc/billing-details', require('./views/x-ched/cuc/billing-details/_routes'))
+router.use('/x-ched/cuc/latest/billing-details', require('./views/x-ched/cuc/latest/billing-details/_routes'))
+router.use('/x-ched/cuc/iteration-1/billing-details', require('./views/x-ched/cuc/iteration-1/billing-details/_routes'))
 
 
 // ched p rotes

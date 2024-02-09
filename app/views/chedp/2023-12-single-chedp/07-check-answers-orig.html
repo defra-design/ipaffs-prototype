@@ -72,7 +72,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
             <tbody>
             <tr class="table__row--border-top">
               <td class="govuk-table__cell">
-                <a href="08-commodity-details" class="govuk-link" id="commodity-details-link">
+                <a href="08-addgoods-weights-packaging" class="govuk-link" id="commodity-details-link">
                   Commodity
                 </a>
               </td>
@@ -237,14 +237,14 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
 
         <div class="table-responsive">
-          <table class="govuk-table" id="review-table" role="presentation">
+          <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
             <caption class="govuk-table__caption govuk-heading-m">
-              Complete notification
+              Contact
             </caption>
-            <tbody class="table__row--border-top">
+            <tbody>
               <tr>
                 <td class="govuk-table__cell">
-                  <a href="17a-contact" class="govuk-link" id="review-link">
+                  <a href="17a-contact" class="govuk-link">
                     Contact details
                   </a>
                 </td>
@@ -254,11 +254,11 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                   </strong>
                 </td>
               </tr>
-              <tr>
+                <tr class="table__row--border-top">
                 <td class="govuk-table__cell">
-                  <a href="17b-nominated-contacts" class="govuk-link" id="review-link">
+                  <a href="17b-nominated-contacts" class="govuk-link">
                     Nominated contacts (optional)
-                  </a>
+                  </a> 
                 </td>
                 <td class="govuk-table__cell badge-right">
                   <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
@@ -266,9 +266,9 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                   </strong>
                 </td>
               </tr>
-              <tr>
+              <tr class="table__row--border-top">
                 <td class="govuk-table__cell">
-                  <a href="17c-contact-consignment" class="govuk-link" id="review-link">
+                  <a href="17c-contact-consignment" class="govuk-link">
                     Contact address for consignment
                   </a>
                 </td>
@@ -278,6 +278,17 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                   </strong>
                 </td>
               </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="govuk-table" id="review-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              Complete notification
+            </caption>
+            <tbody class="table__row--border-top">
+            
             <tr>
               <td class="govuk-table__cell">
                 <a href="18-review" class="govuk-link" id="review-link">
