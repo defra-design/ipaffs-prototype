@@ -186,19 +186,19 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h2 class="govuk-fieldset__heading" id="containers-question">
           <!--Do you want to use the EHC to complete the rest of this notification?-->
-          <!--Do you have a health certificate reference number?-->
           <!--Do you want copy the export health certificate into this noficiation?-->
           <!--Do you want to use the export health certificate to auto-complete this notification?-->
-          Do you want to use the export health certificate to complete parts of this notification?
+          Do you want to use the export health certificate to populate the notification?
       </h2>
-      <p class="govuk-hint">We'll copy details from the export health certificate to complete the remaining parts of the notification. The data you've entered will not be overwritten.
+      <p class="govuk-hint">You'll have the option to use data or documents from the export health certificate to populate the notification. The data you've entered will be overwritten by EHC data.
+</p>
+
       <!--  <ul class="govuk-hint">
           <li>x bits of information</li>
           <li>y details</li>
           <li>z other stuff</li>
         </ul>
         -->
-      </p>
     </legend>
     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
@@ -238,7 +238,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="are-consignments-in-containers-no" name="consignment-in-container" type="radio" value="false" checked="">
+        <input class="govuk-radios__input" id="are-consignments-in-containers-no" name="consignment-in-container" type="radio" value="false" >
         <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-no">
           No - I'll add it manually
         </label>
