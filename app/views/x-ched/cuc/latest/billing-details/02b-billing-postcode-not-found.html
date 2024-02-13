@@ -51,12 +51,19 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
             </h1>
           </legend>
           <p class="govuk-body">
-            The billing address must be (one of the following):
+            You must use a UK address.
           </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>a UK-based business</li>
-            <li>an import agent with a UK address</li>
-          </ul>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help for non-UK businesses
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>You must employ a UK-based import agent to complete your notifications.</p>
+              <p>Import agents must use their own address for non-UK customers. The agents will receive any invoices.</p>
+            </div>
+          </details>
           <div class="govuk-form-group govuk-form-group--error">
             <label class="govuk-label govuk-label--s" for="billing-address-postcode">
               Postcode
