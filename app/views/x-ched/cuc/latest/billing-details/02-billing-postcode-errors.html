@@ -31,8 +31,14 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
           <div class="govuk-error-summary__body">
             <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
               <li>
-                <a href="#billing-address-postcode">Postcode not found, try again or enter your address manually</a>
+                <a href="#billing-address-postcode">Enter postcode or enter address manually</a>
               </li>
+              <li>
+                <a href="#billing-address-postcode">Enter a full UK postcode</a>
+              </li>
+              <li>
+                <a href="#billing-address-postcode">Postcode not found, try again or enter address manually</a>
+              </li> 
             </ul>
           </div>
         </div>
@@ -72,7 +78,9 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
               For example, AA3 1AB
             </div>
             <p id="billing-address-postcode-error" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span> Postcode not found, try again or enter your address manually
+              <span class="govuk-visually-hidden">Error:</span> Enter postcode or enter address manually<br>
+              <span class="govuk-visually-hidden">Error:</span> Enter a full UK postcode<br>
+              <span class="govuk-visually-hidden">Error:</span> Postcode not found, try again or enter address manually
             </p>
             <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" aria-describedby="billing-address-postcode-hint">
           </div>

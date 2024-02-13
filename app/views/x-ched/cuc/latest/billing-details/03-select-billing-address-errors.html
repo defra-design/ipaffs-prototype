@@ -23,6 +23,20 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="">
     <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+              <li>
+                <a href="#addresses-found">Select address from the list</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       
       {% if (data['action'] == "change") %}
       <form action="05-confirm-billing-details" method="post">
@@ -32,7 +46,7 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
 
         <input name="" type="hidden" value="visited">
           <span class="govuk-caption-xl">Billing</span>
-          <div class="govuk-form-group">    
+          <div class="govuk-form-group govuk-form-group--error">
             <h1 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--xl" for="addresses-found">
                 Select the address
@@ -40,6 +54,9 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
             </h1>
             <p>
               Postcode: <strong>WS13 6NF</strong> <a class="govuk-!-margin-left-2" href="02-billing-postcode">Change</a>
+            </p>
+            <p id="addresses-found-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Select address from the list
             </p>
             <select class="govuk-select govuk-!-width-full" id="addresses-found" name="addresses-found">
               <option value="-1" selected="">24 addresses found</option>
