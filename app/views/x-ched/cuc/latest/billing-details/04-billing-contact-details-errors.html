@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What are the billing contact details? – {{ serviceName }} – GOV.UK Prototype Kit
+    {% if (data['action'] == "change") %}
+    Change billing contact details
+    {% else %}
+    Add billing contact details
+    {% endif %} – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -96,7 +100,13 @@ What are the billing contact details? – {{ serviceName }} – GOV.UK Prototype
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
           {% endif %}
 
-          <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
+          <p class="govuk-body">
+            {% if (data['action'] == "change") %}
+            <a class="govuk-link" href="05-confirm-billing-details">Cancel and return to notification</a>
+            {% else %}
+            <a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a>
+            {% endif %}
+          </p>
         </fieldset>
       </form>
     </div>

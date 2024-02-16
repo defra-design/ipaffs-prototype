@@ -1,7 +1,12 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype Kit
+    {% if (data['action'] == "change") %}
+    Change billing address
+    {% else %}
+    Add billing address
+    {% endif %}
+    – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -61,7 +66,13 @@ What is the billing address postcode? – {{ serviceName }} – GOV.UK Prototype
           </div>
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Find address" data-module="govuk-button">
           <p class="govuk-body"><a class="govuk-link" href="03b-enter-billing-address">Enter address manually</a></p>
-          <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
+          <p class="govuk-body">
+            {% if (data['action'] == "change") %}
+            <a class="govuk-link" href="05-confirm-billing-details">Cancel and return to notification</a>
+            {% else %}
+            <a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a>
+            {% endif %}
+          </p>
         </fieldset>
       </form>
     </div>
