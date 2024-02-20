@@ -7,7 +7,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block beforeContent %}
     {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %}
+    {% include "includes/back.html" %} 
 {% endblock %}
 
 {% block content %}
@@ -40,13 +40,21 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="veterinary-health-certificate">
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-xl">Documents</span>
-      <h1 class="govuk-heading-xl" id="page-primary-title">Accompanying documents</h1>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Accompanying documents</h1>
 
 
+
+
+      <form action="04-tr-01-trader-addresses" method="POST">
+        <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
+        <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
+         
+       
+       
 
 
         <div class="govuk-!-margin-bottom-9 additional-documents-table" id="additional-documents-table">
-
+             
           <div class="additional-documents__caption govuk-heading-m" id="additional-documents-header">
             Additional documents
         </div>
@@ -59,7 +67,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
               Date of issue
-
+              
               <div class="additional-documents__date-of-issue-hint" style="font-weight: 400; color: #505a5f; display: block;">
                 <span class="additional-documents__date-of-issue-hint__day govuk-!-margin-right-5" style="font-weight: 400; color: #505a5f; ">Day</span>
                 <span class="additional-documents__date-of-issue-hint__month govuk-!-margin-right-3" style="font-weight: 400; color: #505a5f; ">Month</span>
@@ -67,7 +75,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </div>
             <div class="additional-documents__grid-column-20 additional-documents__table-header">
-              Attachments
+              Attachments 
             </div>
           </div>
 
@@ -79,7 +87,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                         <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
                         <option value="airWaybill">Air waybill</option>
                         <option value="billOfLading">Bill of lading</option>
-
+                        
                         <option value="commercialInvoice">Commercial invoice</option>
                         <option value="customsDeclaration">Customs declaration</option>
                         <option value="importPermit">Import permit</option>
@@ -95,10 +103,10 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
               <div class="additional-documents__grid-column-15">
                 <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-
-
-
-
+                
+                
+                    
+                
                   <input class="govuk-input  " id="document-reference" name="document-reference" type="text" value="" aria-label="Document reference">
                 </div>
               </div>
@@ -106,13 +114,13 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 <div class="govuk-form-group govuk-!-margin-bottom-0 ">
                   <fieldset class="govuk-fieldset" role="group">
                       <legend class="govuk-fieldset__legend govuk-visually-hidden">
-
+                        
                         Document issue date
-
+                        
                       </legend>
-
-
-
+                
+                
+                
                     <div class="govuk-date-input date-input--picker short-date-input" id="document-issue-date" data-module="accessible-datepicker">
                       <div class="govuk-date-input__item date-input-day">
                         <div class="govuk-form-group">
@@ -130,7 +138,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                         </div>
                       </div>
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
-
+                     
                       <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1">
                         <div class="date-picker__header govuk-clearfix"><button type="button"
                             class="date-picker__button__previous-month">Previous month</button>
@@ -165,7 +173,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </div>
 
-            <div style="border-top: 0px solid grey ;">
+            <div style="border-top: 1px solid grey ;">
             <input name="is-additional-document-row-shown" type="hidden" value="true">
             <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="accDocRoutelink" value="Add documents">
                 Add a document
@@ -174,95 +182,16 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="accDocRoutelink" value="Add documents">
               Add multiple documents
             </button>
-</div>
-</div>
-
-
-
-<! yes/no -->
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      <h2 class="govuk-fieldset__heading" id="containers-question">
-          <!--Do you want to use the EHC to complete the rest of this notification?-->
-          <!--Do you want copy the export health certificate into this noficiation?-->
-          <!--Do you want to use the export health certificate to auto-complete this notification?-->
-          Do you want to use the export health certificate to populate the notification?
-      </h2>
-      <p class="govuk-hint">You'll have the option to use data or documents from the export health certificate to populate the notification. The data you've entered will be overwritten by EHC data.
-</p>
-
-      <!--  <ul class="govuk-hint">
-          <li>x bits of information</li>
-          <li>y details</li>
-          <li>z other stuff</li>
-        </ul>
-        -->
-    </legend>
-    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="are-consignments-in-containers-yes" name="consignment-in-container" type="radio" value="true" aria-controls="conditional-how-contacted-conditional" aria-expanded="false">
-        <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-        <div class="govuk-form-group govuk-!-margin-bottom-0 " id="yes-response">
-            <div class="containers-grid">
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full govuk-!-margin-bottom-2">
-                    <label class="govuk-label govuk-label--s" for="container-number-1">Health certificate reference number</label>
-                    <p class="govuk-hint">
-                    </p>
-
-                    <!--      <span class="govuk-hint">Enter the container's identification number, or the trailer's<br> registration number or number plate.</span> -->
-                  <div class="govuk-form-group  ">
-                       <input class="govuk-input govuk-input--width-20" id="ehc" name="ehc" type="text" autocomplete="export health certificate">
-                  </div>
-                </div>
-              </div>
-              <form action="04-do-01-health-certificate" method="post" >
-                <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  Search
-                </button>
-              </form>
-
-          </div>
-
-          <!--  <button type="submit" class="link-button" name="add-container" value="" id="add-container">
-                Add another container
-            </button>
-            -->
+            </div>
         </div>
-      </div>
 
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="are-consignments-in-containers-no" name="consignment-in-container" type="radio" value="false" >
-        <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-no">
-          No - I'll add it manually
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+          
+        <input name="current-page-number" type="hidden" value="1">
 
-<!-- yes/no -->
-
-      <input name="current-page-number" type="hidden" value="1">
-
-<div class="govuk-button-group">
-      <form action="0-index" method="post" >
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="accDocRoutelink" type="submit" value="Save and return to hub" data-module="govuk-button" display="inline">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="accDocRoutelink" type="submit" value="Save and return to hub" data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 " id="button-save-and-continue-p" name="accDocRoutelink" type="submit" value="Save and continue" data-module="govuk-button">
+        <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
       </form>
-
-      <form action="04-do-01-health-certificate" method="post">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 " id="button-save-and-continue-p" name="accDocRoutelink" type="submit" value="Save and continue" data-module="govuk-button" display="inline">
-      </form>
-</div>
-
-      <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
-
     </div>
   </div>
 </main>

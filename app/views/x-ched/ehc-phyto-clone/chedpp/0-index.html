@@ -66,7 +66,7 @@
                 <h3 class="govuk-heading-m">Search notifications by</h3>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-two-thirds">
                 <div class="govuk-form-group">
@@ -88,7 +88,7 @@
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group">
@@ -1298,7 +1298,7 @@
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third ">
                 <div class="govuk-form-group">
@@ -1349,7 +1349,7 @@
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third">
                 <fieldset class="govuk-fieldset">
@@ -1424,7 +1424,7 @@
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <input class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" value="Search" data-module="govuk-button">
@@ -1434,18 +1434,18 @@
               </div>
             </div>
           </div>
-
+      
             <div id="archiveNotificationLink" class="govuk-!-margin-bottom-6">
               <a href="/notification/tst/protected/notifications/archived-notifications" class="govuk-link link-button">
                 Recover notifications from archive
               </a>
             </div>
-
+      
           <p class="govuk-heading-s govuk-!-margin-bottom-2">
             <span id="notification-count">1284197</span>
               <span id="results">results</span>
           </p>
-
+      
           <div class="govuk-!-margin-bottom-2">
             <label for="orderBy" class="govuk-label govuk-!-display-inline-block">Sort by:</label>
             <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="orderBy" name="orderBy">
@@ -1481,8 +1481,8 @@
                 </div>
                 <div class="notification-list__grid-column-20">
                   <dt class="notification-list__heading">Status</dt>
-                  <dd class="notification-list__value" id="status-1">
-                      <strong class="govuk-tag tag--fixed-width tag--draft">DRAFT</strong>
+                  <dd class="notification-list__value" id="status-0">
+                      <strong class="govuk-tag tag--fixed-width tag--amend">AMEND</strong>
                   </dd>
                 </div>
               </div>
@@ -1515,10 +1515,10 @@
                     <button class="govuk-link" id="amend-details-CHEDPP.GB.2021.3476228" name="amend" value="CHEDPP.GB.2021.3476228">
                       Amend
                     </button>
-                    <button class="govuk-link" id="amend-details-CHEDPP.GB.2021.3476228" name="addhealthcert" value="CHEDPP.GB.2021.3476228" formaction="01-add-health-certificate">
-                    Add health certificate
-                </button>
-                  </form>
+                </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDPP.GB.2021.3476228" href="/notification/tst/protected/notifications/CHEDPP.GB.2021.3476228/certificate/pdf" target="_blank">
+                    Show notification
+                  </a>
               </div>
             </dl>
             <dl class="notification-list__row">
@@ -1540,7 +1540,7 @@
                 <div class="notification-list__grid-column-20">
                   <dt class="notification-list__heading">Status</dt>
                   <dd class="notification-list__value" id="status-1">
-                      <strong class="govuk-tag tag--fixed-width tag--valid">VALID</strong>
+                      <strong class="govuk-tag tag--fixed-width tag--in-progress">IN PROGRESS</strong>
                   </dd>
                 </div>
               </div>
@@ -2899,12 +2899,12 @@
                 </li>
             </ul>
           </nav>
-
+        
     </div>
   </div>
 </main>
 
-<!-- old-dashboard
+<!-- old-dashboard 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="notifications-page">
     <div class="govuk-grid-column-full">
@@ -2933,7 +2933,7 @@
                 <h3 class="govuk-heading-m">Search notifications by</h3>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-two-thirds">
                 <div class="govuk-form-group">
@@ -2955,7 +2955,7 @@
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group">
@@ -4162,7 +4162,7 @@
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third ">
                 <div class="govuk-form-group">
@@ -4213,7 +4213,7 @@
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third">
                 <fieldset class="govuk-fieldset">
@@ -4241,28 +4241,28 @@
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
                     <div class="govuk-date-input" id="start-date" data-module="accessible-datepicker">
-
+                
                       <div class="govuk-date-input__item date-input-day">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
                         </div>
                       </div>
-
+                
                       <div class="govuk-date-input__item date-input-month">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
                         </div>
                       </div>
-
+                
                       <div class="govuk-date-input__item date-input-year">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
                         </div>
                       </div>
-
+                
                     <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
             <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-55" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-55"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
@@ -4273,35 +4273,35 @@
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
                     <div class="govuk-date-input" id="end-date" data-module="accessible-datepicker">
-
+                
                       <div class="govuk-date-input__item date-input-day">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="end-date-day" value="" name="end-date-day" type="text" inputmode="numeric">
                         </div>
                       </div>
-
+                
                       <div class="govuk-date-input__item date-input-month">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="end-date-month" value="" name="end-date-month" type="text" inputmode="numeric">
                         </div>
                       </div>
-
+                
                       <div class="govuk-date-input__item date-input-year">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="end-date-year" value="" name="end-date-year" type="text" inputmode="numeric">
                         </div>
                       </div>
-
+                
                     <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
             <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-33" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-33"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
               </div>
             </div>
-
+      
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <input class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" value="Search" data-module="govuk-button">
@@ -4311,18 +4311,18 @@
               </div>
             </div>
           </div>
-
+      
             <div id="archiveNotificationLink" class="govuk-!-margin-bottom-6">
               <a href="/notification/tst/protected/notifications/archived-notifications" class="govuk-link link-button">
                 Recover notifications from archive
               </a>
             </div>
-
+      
           <p class="govuk-heading-s govuk-!-margin-bottom-2">
             <span id="notification-count">2075047</span>
               <span id="results">results</span>
           </p>
-
+      
           <div class="govuk-!-margin-bottom-2">
             <label for="orderBy" class="govuk-label govuk-!-display-inline-block">Sort by:</label>
             <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="orderBy" name="orderBy">
@@ -5793,7 +5793,7 @@
                 </li>
             </ul>
           </nav>
-
+        
     </div>
   </div>
 </main>

@@ -1,0 +1,177 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5501422 </span>
+      <span> - CHEDA</span>
+    </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="traders-page">
+    <div class="govuk-grid-column-full">
+          <span class="govuk-caption-xl">Traders</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Addresses</h1>
+      <form action="traders" method="POST">
+        <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
+        <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
+
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Consignor or exporter 
+            </h2>
+            <p class="govuk-hint">This is the sender of the consignment.</p>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                    <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                      <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="consignor-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell" headers="consignor-name">&nbsp;</td>
+                        <td class="govuk-table__cell" headers="consignor-address"></td>
+                        <td class="govuk-table__cell" headers="consignor-country"></td>
+                        <td class="govuk-table__cell" headers="consignor-edit"></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+              <a href="14a-trader-search.html" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
+          </div>
+          
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Consignee 
+            </h2>
+            <p class="govuk-hint">This is the receiver or buyer of the consignment being shipped or transported.</p>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="consignee-name">Name</th>
+                    <th class="govuk-table__header col-address" id="consignee-address">Address</th>
+                      <th class="govuk-table__header col-country" id="consignee-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="consignee-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell" headers="consignee-name">&nbsp;</td>
+                        <td class="govuk-table__cell" headers="consignee-address"></td>
+                        <td class="govuk-table__cell" headers="consignee-country"></td>
+                        <td class="govuk-table__cell" headers="consignee-edit"></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+              <a href="/notification/tst/protected/notifications/DRAFT.GB.2023.5501422/traders/consignee/search" class="govuk-link govuk-!-font-size-19" id="add-consignee">Add a consignee </a>
+          </div>
+          
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Importer 
+            </h2>
+            <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-importer">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="importer-name">Name</th>
+                    <th class="govuk-table__header col-address" id="importer-address">Address</th>
+                      <th class="govuk-table__header col-country" id="importer-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="importer-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell" headers="importer-name">&nbsp;</td>
+                        <td class="govuk-table__cell" headers="importer-address"></td>
+                        <td class="govuk-table__cell" headers="importer-country"></td>
+                        <td class="govuk-table__cell" headers="importer-edit"></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+              <a href="/notification/tst/protected/notifications/DRAFT.GB.2023.5501422/traders/importer/search" class="govuk-link govuk-!-font-size-19" id="add-importer">Add an importer </a>
+          </div>
+          
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Place of destination 
+            </h2>
+              <div class="govuk-warning-text" id="high-risk-eu-cveda-fraud-warning">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Providing a false address is an act of fraud.
+                </strong>
+                
+              </div>
+              <div class="govuk-body">
+                This is where the animals will be unloaded and accommodated for at least 48 hours. If a health certificate is required, it will show this address.
+      
+            </div>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-place-of-destination">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="place-of-destination-name">Name</th>
+                    <th class="govuk-table__header col-address" id="place-of-destination-address">Address</th>
+                      <th class="govuk-table__header col-country" id="place-of-destination-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="place-of-destination-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell" headers="place-of-destination-name">&nbsp;</td>
+                        <td class="govuk-table__cell" headers="place-of-destination-address"></td>
+                        <td class="govuk-table__cell" headers="place-of-destination-country"></td>
+                        <td class="govuk-table__cell" headers="place-of-destination-edit"></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+              <a href="/notification/tst/protected/notifications/DRAFT.GB.2023.5501422/traders/final-destination/search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a>
+          </div>
+          
+        
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+            <p class="govuk-body"><a class="govuk-link" href="7-notification">Cancel and return to hub</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

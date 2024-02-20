@@ -10,6 +10,9 @@ const router = express.Router()
 // router.use('/v1', require('./views/v1/_routes'))
 
 // x ched routes
+router.use('/x-ched/ehc-phyto-clone/chedpp', require('./views/x-ched/ehc-phyto-clone/chedpp/_routes'))
+router.use('/x-ched/ehc-phyto-clone/chedp', require('./views/x-ched/ehc-phyto-clone/chedp/_routes'))
+router.use('/x-ched/ehc-phyto-clone/cheda', require('./views/x-ched/ehc-phyto-clone/cheda/_routes'))
 router.use('/x-ched/e-cert-chedp', require('./views/x-ched/e-cert-chedp/_routes'))
 router.use('/x-ched/cuc/latest/billing-details', require('./views/x-ched/cuc/latest/billing-details/_routes'))
 router.use('/x-ched/cuc/iteration-1/billing-details', require('./views/x-ched/cuc/iteration-1/billing-details/_routes'))
@@ -26,7 +29,7 @@ router.use('/part-1-chedp/iuu', require('./views/part-1-chedp/iuu/_routes'))
 router.use('/part-1-chedp/iuu-final', require('./views/part-1-chedp/iuu-final/_routes'))
 
 // ched a routes
-router.use('/cheda/create-cheda', require('./views/cheda/create-cheda/_routes'))
+router.use('/cheda/part-1-latest', require('./views/cheda/part-1-latest/_routes'))
 
 // ched d routes
 // router.use('/chedd/imp-to-chedd', require('./views/chedd/imp-to-chedd/_routes'))
