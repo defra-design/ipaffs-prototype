@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Select the address – {{ serviceName }} – GOV.UK Prototype Kit
+    Select billing address – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,8 +31,8 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
       {% endif %}
 
         <input name="" type="hidden" value="visited">
-          <div class="govuk-form-group">
-            <span class="govuk-caption-xl">Billing</span>
+          <span class="govuk-caption-xl">Billing</span>
+          <div class="govuk-form-group">    
             <h1 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--xl" for="addresses-found">
                 Select the address
@@ -68,10 +68,10 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
               <option value="2 SEASONS, 26A, BAKERS LANE, LICHFIELD, WS13 6NF">2 SEASONS, 26A, BAKERS LANE, LICHFIELD, WS13 6NF</option>
               <option value="MOUNTAIN WAREHOUSE, 8-10, BAKERS LANE, LICHFIELD, WS13 6NF">MOUNTAIN WAREHOUSE, 8-10, BAKERS LANE, LICHFIELD, WS13 6NF</option>
             </select>
-            <p class="govuk-!-margin-top-4">
-              <a href="03b-enter-billing-address">I cannot find the address in the list</a>
-            </p>
           </div>
+          <p class="govuk-!-margin-top-4">
+            <a href="03b-enter-billing-address">I cannot find the address in the list</a>
+          </p>
         
         {% if (data['action'] == "change") %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save" data-module="govuk-button">
@@ -79,7 +79,13 @@ Select the address – {{ serviceName }} – GOV.UK Prototype Kit
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
         {% endif %}
 
-        <p class="govuk-body"><a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a></p>
+        <p class="govuk-body">
+          {% if (data['action'] == "change") %}
+          <a class="govuk-link" href="05-confirm-billing-details">Cancel and return to notification</a>
+          {% else %}
+          <a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a>
+          {% endif %}
+        </p>
       </form>
     </div>
   </div>

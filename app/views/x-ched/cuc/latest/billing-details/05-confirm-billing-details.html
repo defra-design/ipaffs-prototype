@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirm the billing details – {{ serviceName }} – GOV.UK Prototype Kit
+    Confirm billing details – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,19 +28,26 @@ Confirm the billing details – {{ serviceName }} – GOV.UK Prototype Kit
       <form action="../{{ data['ched-type'] or "chedp" }}/07-cn-01-review" method="post">
         <input name="testing" type="hidden" value="visited">
         <p>
-          Your notification may be chargeable. If so, we need some billing details for the invoice.
+          Consignments eligible for Border Control Post (BCP) checks are now chargeable if they enter through:
         </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the Port of Dover</li>
+          <li>Eurotunnel Le Shuttle</li>
+        </ul>
         <p>
           For further information, <a href="">read about our charges</a>.
+        </p>
+        <p>
+          If you bring goods into the UK, we need the correct billing details for any invoices. We will send invoices to the email address provided.
         </p>
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-visually-hidden">Warning</span>
-            The billing address will be liable for any charges for this notification. Additional fees may apply if you use an incorrect address.
+            The billing address is liable for any charges for this consignment. Additional fees may apply if you use an incorrect address.
           </strong>
         </div>
-        <h2 class="govuk-heading-m">Billing details</h2>
+        <h2 class="govuk-heading-m">Billing details for XYZ Limited</h2>
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
