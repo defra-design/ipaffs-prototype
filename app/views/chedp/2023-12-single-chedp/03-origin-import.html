@@ -297,7 +297,47 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                         <option value="Zimbabwe" {% if (data['origin-country'] == "Zimbabwe") %}selected{% endif %}>Zimbabwe</option>
           </select>
         </div>
-           
+       
+        <div class="govuk-form-group" id="region-code-field">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Does the consignment require a region of origin code?
+            </legend>
+        
+            <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
+              This is only required if the consignment needs a health certificate that shows a region of origin code.
+            </span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-code-yes" name="region-code-option" type="radio" value="true" aria-controls="conditional-region-code-yes" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="region-code-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-region-code-yes">
+                <div class="govuk-form-group ">
+                  <label class="govuk-label govuk-label--m" for="region-code">
+                      Enter the region code
+                  </label>
+                  
+                  <span class="region-code" id="region-code-input">
+                  <span id="region-code-box" class="region-code-box">DZ</span>
+                  <strong class="region-code-divider">-</strong>
+                </span>
+                  <input class="govuk-input govuk-input--width-3 " id="region-code" name="region-code" type="text" maxlength="3" value="">
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-code-no" name="region-code-option" type="radio" value="false" checked="">
+                <label class="govuk-label govuk-radios__label" for="region-code-no">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
         <div class="govuk-form-group ">
           <label class="govuk-label govuk-label--m" for="origin-country">
             Country from where consigned
@@ -568,25 +608,38 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
                     
                     Does this consignment conform to regulatory requirements?
-                    
-                  </legend>
-                <div class="govuk-radios ">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="conform-uk-regulations" name="conform-uk-regulations" type="radio" value="true">
-                      <label class="govuk-label govuk-radios__label " for="conform-uk-regulations">
-                        Yes
-                      </label>
+                    <legend></legend>
+                  
+                    <div id="signIn-hint" class="govuk-hint">
+                      <p>  If you are unsure, <a href="/accessibility/wcag-2.2/#components-and-patterns-affected-in-the-design-system">read the regulatory requirements</a>.</p>
                     </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="conform-uk-regulations-2" name="conform-uk-regulations" type="radio" value="false">
-                      <label class="govuk-label govuk-radios__label " for="conform-uk-regulations-2">
-                        No
-                      </label>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="signIn">
+                          Yes
+                        </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                        The purpose of the consignment is Internal market (such as human consumption or animal feedingstuff), Transhipment or onward travel, Transit, or Re-entry.
+                        </div>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                        <label class="govuk-label govuk-radios__label" for="signIn-2">
+                          No
+                        </label>
+                        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                          The purpose of the consignment is Transhipment or onward travel, Transit, Customs warehouse, Free zone or free warehouse, Ship supplier, or Ship.
+                        </div>
+                      </div>
                     </div>
-                </div>
-              </fieldset>
-            </div>        
+                  </fieldset>
+                </div>      
            
+
+            
+
+
             <div class="govuk-form-group  ">
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
