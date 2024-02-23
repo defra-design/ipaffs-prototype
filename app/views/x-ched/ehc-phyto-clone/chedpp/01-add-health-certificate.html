@@ -22,120 +22,171 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
   </span>
 </div>
 
-
-<main class="govuk-main-wrapper" id="main-content">
-  <!-- <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
-      <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="banner-title">
-              Success
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-            <p class="govuk-body">
-              1 row removed
-            </p>
-        </div>
-      </div>
-  </div> -->
-  <div class="govuk-grid-row" id="veterinary-health-certificate">
+<main class="govuk-main-wrapper cloning-summary-page" id="main-content">
+  <div class="govuk-grid-row" id="cloning-summary">
     <div class="govuk-grid-column-full">
-      <!--<span class="govuk-caption-xl">Documents</span>-->
-      <h1 class="govuk-heading-xl " id="page-primary-title">Health certificate </h1>
-      <p">We found a match for: <b>NZL2022/PPCS2/110011</b></p>
+        <h1 class="govuk-heading-xl " id="page-primary-title">Confirm this is the correct electronic phytosanitary certificate (ePhyto) </h1>
+      <table class="govuk-table review-table" id="consignment-table">
+        <caption class="govuk-visually-hidden">Consignment table</caption>
+        <tbody>
+          <!-- <tr class="govuk-table__header">
+            <th class="govuk-heading-m govuk-!-width-full" id="about-consignment">About the consignment</th>
+          </tr> -->
+          <tr>
+            <th scope="row" class="govuk-table__header">Health certificate number</th>
+            <td class="govuk-table__cell" id="health-certificate-number">CHEDPP/ALL-FIELDS</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Country of origin</th>
+            <td class="govuk-table__cell" id="country-of-origin">Netherlands</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Purpose of the consignment</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">For Import</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Consignor</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Pluschange Food Limited</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Consignee</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Plant Life UK Ltd</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Border Control Post
+                          </th>
+            <td class="govuk-table__cell" id="bcp">Port of Felixstowe (plants) - GBFXT1PP</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Seal number</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">905327895-379GHGSHAS-4378439832489</td>
+          </tr>
+        </tbody>
+      </table>
 
+      <table class="govuk-table  govuk-!-margin-bottom-0">
+        <tr class="presentation-table__row--no-border">
+          <th scope="row" class="govuk-table__header govuk-!-width-one-half">Commodity details</th>
+          <td class="govuk-table__cell govuk-!-width-one-quarter">152 commodities</td>
+          <td class="govuk-table__cell change govuk-!-width-one-quarter" ><a>View all</a>
+          </td>
+      </tr>
+      <tr class="presentation-table__row--no-border">        
+        <td class="govuk-body govuk-table__cell gov-!-width-full govuk-!-margin-bottom-0" colspan="2" style="border: 0;">Showing 1 to 5 out of 152 commodities</td>
+      </tr>
+      </table>
 
-      <!--<p>We found a health certificate document for <b>NZL2022/PPCS2/110011</b>.--><p> Please check the correct certificate has been found before copying the details into your notification. <a href="#">Search again</a></p>
-
-      <main class="govuk-main-wrapper cloning-summary-page" id="main-content">
-        <div class="govuk-grid-row" id="cloning-summary">
-          <div class="govuk-grid-column-full">
-            <table class="govuk-table review-table" id="consignment-table">
-              <caption class="govuk-visually-hidden">Consignment table</caption>
-              <tbody>
-                <tr class="govuk-table__header">
-                  <th class="govuk-heading-m govuk-!-width-full" id="about-consignment">About the consignment</th>
-                </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header">Health certificate number</th>
-                  <td class="govuk-table__cell" id="health-certificate-number">NZL2022/PPCS2/110011</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header">Country of origin</th>
-                  <td class="govuk-table__cell" id="country-of-origin">New Zealand</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="govuk-table__header">
-                      Purpose of the consignment
-                                </th>
-                  <td class="govuk-table__cell" id="purpose-of-consignment">Human Consumption</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <table class="govuk-table review-table govuk-!-margin-bottom-0" id="consignment-table">
-              <caption class="govuk-visually-hidden">Consignment table</caption>
-              <tbody>
-              <tr class="govuk-table__header">
-                <th class="govuk-heading-m" id="description-of-goods">Description of goods</th>
-                <td class="govuk-body govuk-!-font-weight-bold text-align-right" id="num-commodity-lines">1 of 1</td>
+        <!-- <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+              
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity details</th>
+                <td class="govuk-table__cell" id="commodity-code-0">152 commodities</td>
+                <td class="govuk-table__cell"> </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-0">08045000</td>
+                <td class="govuk-table__cell change">change
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Guavas, mangoes and mangosteens</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Garcinia mangostana</td>
+                <td class="govuk-table__cell"></td>
               </tr>
-              </tbody>
-            </table>
+            </tbody>
+        </table> -->
 
-              <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
-                  <tbody class="govuk-table__head">
-                  <tr class="presentation-table__row--no-border">
-                      <th scope="row" class="govuk-table__header">Commodity code</th>
-                      <td class="govuk-table__cell" id="commodity-code-0">02044310</td>
-                      <td class="govuk-table__cell change">
-                      </td>
-                  </tr>
-                  <tr class="presentation-table__row--no-border">
-                      <th scope="row" class="govuk-table__header ">Description</th>
-                      <td class="govuk-table__cell">Of lamb</td>
-                      <td class="govuk-table__cell"></td>
-                  </tr>
-                    <tr class="presentation-table__row--no-border">
-                      <th scope="row" class="govuk-table__header ">Genus and species</th>
-                      <td class="govuk-table__cell">Ovis aries</td>
-                      <td class="govuk-table__cell"></td>
-                    </tr>
-                  </tbody>
-              </table>
+        <table class="govuk-table" id="goods-table-0">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__header govuk-!-width-one-quarter">Commodity code</td>
+              <td class="govuk-table__header govuk-!-width-one-third">Description</td>
+              <td class="govuk-table__header govuk-!-width-one-third">Genus and species</td>
+          
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">08045000</td>
+              <td class="govuk-table__cell">Guavas, mangoes and mangosteens</td>
+              <td class="govuk-table__cell">Garcinia mangostana</td>
+          </tr>
+          <tr>
+            <td class="govuk-table__cell">08045000</td>
+            <td class="govuk-table__cell">Guavas, mangoes and mangosteens</td>
+            <td class="govuk-table__cell">Garcinia mangostana</td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell">08045000</td>
+          <td class="govuk-table__cell">Guavas, mangoes and mangosteens</td>
+          <td class="govuk-table__cell">Garcinia mangostana</td>
+      </tr>
+      <tr>
+        <td class="govuk-table__cell">08045000</td>
+        <td class="govuk-table__cell">Guavas, mangoes and mangosteens</td>
+        <td class="govuk-table__cell">Garcinia mangostana</td>
+    </tr>
+    <tr>
+      <td class="govuk-table__cell">08045000</td>
+      <td class="govuk-table__cell">Guavas, mangoes and mangosteens</td>
+      <td class="govuk-table__cell">Garcinia mangostana</td>
+  </tr>
+           
+          </tbody>
+        </table>
 
-              <table class="govuk-table review-table" id="goods-table-0">
-                <caption class="govuk-visually-hidden">Goods table</caption>
-                <tbody>
-                <tr>
-                    <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
-                    <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
-                    <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
-                </tr>
-                <tr>
-                    <td class="govuk-table__cell">16211.2 kgs/units</td>
-                    <td class="govuk-table__cell">596</td>
-                    <td class="govuk-table__cell">Carton</td>
-                </tr>
-                  <tr>
-                    <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
-                  </tr>
-                  <tr>
-                    <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
-                  </tr>
-                </tbody>
-              </table>
+       <div class="govuk-!-margin-top-9 govuk-!-padding-4 govuk-!-margin-bottom-9" style="border: 4px solid black;">
+        <h2 class="govuk-heading-m">You will be copying these documents only</h2>
+<p class="govuk-body">3 documents will be attached when copying this ephyto</p>
 
+<table class="govuk-table" id="goods-table-0">
+  <caption class="govuk-visually-hidden">Goods table</caption>
+  <tbody>
+  <tr>
+      <td class="govuk-table__header govuk-!-width-one-half">Document type</td>
+      <td class="govuk-table__header govuk-!-width-one-half">Description</td>
+      
+  
+  </tr>
+  <tr>
+      <td class="govuk-table__cell">Seaway Bill</td>
+      <td class="govuk-table__cell">SWB-859q77543987.pdf</td>
+  </tr>
+  <tr>
+    <td class="govuk-table__cell">Storage document</td>
+    <td class="govuk-table__cell">STO-859q77543987.pdf</td>
+</tr>
+<tr>
+  <td class="govuk-table__cell">Commercial invoice</td>
+  <td class="govuk-table__cell">COM-859q77543987.pdf</td>
+</tr>
+  </tbody>
+  </table>
+       </div>
 
-
-                    <form action="03-do-01a-phyto-clone" method="post" >
-                        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="accDocRoutelink" type="submit" value="Copy health certificate" data-module="govuk-button" display="inline">
-                    </form>
-
-        <p class="govuk-body"><a class="govuk-link" href="03-do-01-documents">Cancel</a></p>
-
-
+       
+       
+<div class="govuk-!-margin-top-9">
+      <form action="03-do-01a-phyto-clone" method="POST">
+        <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and copy documents</button>
+        
+        <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">
+        <input name="country-of-origin-code" type="hidden" value="NL">
+        <input name="certificate-type" type="hidden" value="CHEDPP">
+        <input name="crumb" type="hidden" value="pAX8KbbF_kTf-zwr0UqqZTYVT8dKDyzcqU2LeTvWorP">
+      </form>
+      </div>
     </div>
+    <a class="govuk-link clear-link" id="search-to-clone" href="03a-certificate-reference">Go back and search again</a>
   </div>
 </main>
+
+
 {% endblock %}
