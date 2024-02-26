@@ -23,26 +23,31 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 <main class="govuk-main-wrapper" id="main-content">
-  <!-- <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
-      <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="banner-title">
-              Success
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-            <p class="govuk-body">
-              1 row removed
-            </p>
-        </div>
+  <div class="govuk-grid-column-three-quarters govuk-!-padding-0">
+    <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="banner-title">
+            Success
+        </h2>
       </div>
-  </div> -->
+      <div class="govuk-notification-banner__content">
+          <p class="govuk-body">
+            1 health certificate cloned
+            
+          </p>
+          <p class="govuk-body">
+            
+            3 additional documents cloned (next page)
+          </p>
+      </div>
+    </div>
+</div>
   <div class="govuk-grid-row" id="veterinary-health-certificate">
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-xl">Documents</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Add latest health certificate (where required)</h1>
 
-      <div class="govuk-!-padding-bottom-0">
+      <!-- <div class="govuk-!-padding-bottom-0">
         <div class="govuk-inset-text govuk-!-width-three-quarters govuk-!-padding-4 govuk-!-padding-bottom-0 govuk-!-margin-bottom-9">
           <H3 class="govuk-heading-m">Use an electronic health certificate (eCert) to partly fill your notification</H3>
          <p class="govuk-body">hint text - bullet what you can do?</p>
@@ -50,10 +55,10 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             Search for an eCert
           </button></form>
         </div>
-      </div>
+      </div> -->
 
 
-      <form action="13b-accompanying-docs" method="post">
+      <form action="13b-accompanying-docs-clone" method="post">
         <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
         <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
         <input name="12-health-certificate" type="hidden" value="visited">
@@ -98,84 +103,39 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 Attachments
               </div>
             </div>
-              <div class="additional-documents__grid-row additional-documents__add-document">
-                <div class="additional-documents__grid-column-20">
-                    <p class="govuk-body">Veterinary health certificate</p>
-                </div>
-                <div class="additional-documents__grid-column-20">
-                  <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                  
-                  
-                      
-                  
-                    <input class="govuk-input  " id="latest-vet-health-cert-reference" name="latest-vet-health-cert-reference" type="text" value="" aria-label="Document reference">
-                  </div>
-                </div>
-                <div class="additional-documents__grid-column-doc-date">
-                  <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                    <fieldset class="govuk-fieldset" role="group">
-                        <legend class="govuk-fieldset__legend govuk-visually-hidden">
-                          
-                          Document issue date
-                          
-                        </legend>
-                  
-                  
-                  
-                      <div class="govuk-date-input date-input--picker short-date-input" id="latest-vet-health-cert-issue-date" data-module="accessible-datepicker">
-                        <div class="govuk-date-input__item date-input-day">
-                          <div class="govuk-form-group">
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="latest-vet-health-cert-issue-date-day" name="latest-vet-health-cert-issue-date-day" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Day">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item date-input-month">
-                          <div class="govuk-form-group">
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="latest-vet-health-cert-issue-date-month" name="latest-vet-health-cert-issue-date-month" type="text" value="" inputmode="numeric" maxlength="2" aria-label="Month">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item date-input-year">
-                          <div class="govuk-form-group">
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="latest-vet-health-cert-issue-date-year" name="latest-vet-health-cert-issue-date-year" type="text" value="" inputmode="numeric" maxlength="4" aria-label="Year">
-                          </div>
-                        </div>
-                      <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                        <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-                          <svg aria-hidden="true" role="img">
-                            <use href="#calendar"></use>
-                          </svg></button> -->
-                        <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1">
-                          <div class="date-picker__header govuk-clearfix"><button type="button"
-                              class="date-picker__button__previous-month">Previous month</button>
-                            <h2 id="date-picker-label-58" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2>
-                            <button type="button" class="date-picker__button__next-month">Next month</button>
-                          </div>
-                          <table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-58">
-                            <thead>
-                              <tr>
-                                <th scope="col" abbr="Sunday" aria-label="Sunday">Su</th>
-                                <th scope="col" abbr="Monday" aria-label="Monday">Mo</th>
-                                <th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th>
-                                <th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th>
-                                <th scope="col" abbr="Thursday" aria-label="Thursday">Th</th>
-                                <th scope="col" abbr="Friday" aria-label="Friday">Fr</th>
-                                <th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th>
-                              </tr>
-                            </thead>
-                            <tbody></tbody>
-                          </table><button class="date-picker__button__close" type="button" value="close">Cancel</button>
-                          <p class="aria-live-message sr-only" aria-live="assertive"></p>
-                        </div>
-                        </div>
-                        </div>
-                        </fieldset>
-                  </div>
-                </div>
-                <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment">
-                  <button type="submit" class="link-button no-wrap" id="add-attachment-latest-health-cert" name="add-attachment-latest-health-cert" value="">
-                    Add attachment
-                  </button>
+            <div class="additional-documents__grid-row additional-documents__add-document" style="border-bottom: 0 ;">
+              <div class="additional-documents__grid-column-20">
+                  <p class="govuk-body">Veterinary health certificate <span class="govuk-!-font-weight-bold  govuk-!-margin-bottom-0">(cloned)</span></p>
+              </div>
+              <div class="additional-documents__grid-column-20">
+                <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                  <p class="govuk-body">VHC-4792-45892HDFDGHF</p>
+                
+                   
                 </div>
               </div>
+              <div class="additional-documents__grid-column-doc-date">
+                <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-margin-top-0">
+                  <p class="govuk-body">22 February 2024</p>
+                </div>
+              </div>
+              <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment  govuk-!-margin-bottom-0 govuk-!-margin-top-0">
+                <p class="govuk-body"><a>VHC-4792-45892HDFDGHF.pdf</a></p>
+              </div>
+            </div>
+            <div class="additional-documents__grid-row additional-documents__content-links" style="border-top: 0 ;">
+              <div class="additional-documents__grid-column-60">
+                <a href="03a-certificate-reference" class="govuk-link link-button" id="attachment-download-28944d07-c434-4f0c-aeea-9cc5ea719e34" aria-label="Download a-docs page.png">
+                  Replace cloned documents
+                </a>
+              </div>
+              <!-- <div class="additional-documents__grid-column-50">
+                    <button type="submit" class="link-button text-align-left" id="remove-attachment-28944d07-c434-4f0c-aeea-9cc5ea719e34" name="remove-attachment" value="28944d07-c434-4f0c-aeea-9cc5ea719e34" aria-label="Remove attachment a-docs page.png">
+                      Remove attachment
+                    </button>
+              </div> -->
+        </div> 
+
           </div>
 
             <!-- <div class="govuk-form-group govuk-!-margin-bottom-8" id="region-code-field">
