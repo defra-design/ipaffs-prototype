@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-
 // Add your routes here - above the module.exports line
 
 // console.log( 'This is the V1 _routes file' );
@@ -16,20 +15,17 @@ const router = express.Router()
 */
 
   
-  
   //  - risk route question - 06a-risk-category
-  router.post('/risk-route', function (req, res) {
+  router.post('/route-x-a-docs-info', function (req, res) {
   
     // Make a variable and give it the value from name
-    var riskRoute = req.session.data['risk-category']
-    if (riskRoute == "medium"){
-      res.redirect('06b-risk-high-or-medium')
+    var ecertRoute = req.session.data['docs-info']
+    if (ecertRoute == "all"){
+      res.redirect('18-review-errors')
     }
-  
-   else if (riskRoute == "low"){
-      res.redirect('07-check-answers')
-    }
-    
+   else {
+      res.redirect('13a-health-certificate-clone')
+    }  
   })
   
   //  - documents - 10-additional-details

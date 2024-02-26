@@ -1,7 +1,18 @@
 const express = require('express')
 const router = express.Router()
 // Add your routes here - above the module.exports line
-
+ //  - risk route question - 06a-risk-category
+ router.post('/route-x-p-docs-info', function (req, res) {
+  
+  // Make a variable and give it the value from name
+  var ecertRoute = req.session.data['docs-info']
+  if (ecertRoute == "all"){
+    res.redirect('18-review-errors')
+  }
+ else {
+    res.redirect('12-health-certificate-clone')
+  }  
+})
 
 /* 
   Run this when submitting the form on 05-commodity-genus page
