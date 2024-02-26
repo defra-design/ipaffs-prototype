@@ -37,7 +37,7 @@ Review decision
   <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link govuk" href="dashboard" id="navigation-dashboard-link">Dashboard</a>
+        <a class="govuk-breadcrumbs__link govuk" href="00-dashboard" id="navigation-dashboard-link">Dashboard</a>
       </li>
     </ol>
   </div></div>
@@ -628,35 +628,7 @@ Review decision
                
               </tbody>
             </table>
-            <div class="heading-with-change-link" id="additional-details-section">
-              <h2 class="govuk-heading-s">Region of origin code</h2>
-              <td class="govuk-table__cell">
-                {% if (data['region-of-orgin-code'] == "yes") %}
-                  {{ data['region-code-added'] }}
-                {% elif (data['region-of-orgin-code'] == "no") %}
-                  {{ data['region-code-noselected'] }}
-                {% endif %}
-              </td>
-              </a>
-            </div>
-          </div>
-          <div class="govuk-!-margin-bottom-9">
-              
-            <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
-              <tbody>
-                <tr class="">
-                  <td class="govuk-table__header">Health certificate has region code?</td>
-                  <td class="govuk-table__cell" colspan="2">Yes</td>
-                </tr>      
-              <tr class="">
-                <td class="govuk-table__header">Region of origin code</td>
-                <td class="govuk-table__cell" id="imported-in-containers" colspan="2">
-                  EA1
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
+       
         <div class="govuk-!-margin-bottom-6 " id="parttwo/documents">
           <table class="govuk-table govuk-!-margin-top-4 govuk-!-margin-bottom-0">
         
