@@ -134,6 +134,15 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       </td>
                       <td class="govuk-table__cell"></td>
                     </tr>
+
+                    <tr>
+                      <td class="govuk-table__header">Region of origin code</td>
+                      <td class="govuk-table__cell" id="region-of-consignment-value">EA-1
+                        
+                      </td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+
                     <tr>
                       <td class="govuk-table__header">Consignment reference number</td>
                       <td class="govuk-table__cell" id="region-of-consignment-value">RN11111
@@ -2105,34 +2114,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </table>
                 </div>
                 
-                <div class="heading-with-change-link" id="additional-details-section">
-                  <h2 class="govuk-heading-s">Region of origin code</h2>
-                  <td class="govuk-table__cell">
-                    {% if (data['region-of-orgin-code'] == "yes") %}
-                      {{ data['region-code-added'] }}
-                    {% elif (data['region-of-orgin-code'] == "no") %}
-                      {{ data['region-code-noselected'] }}
-                    {% endif %}
-                  </td>
-                  </a>
-                </div>
-                <div class="govuk-!-margin-bottom-9">
-            
-                  <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
-                    <tbody>
-                      <tr class="">
-                        <td class="govuk-table__header">Health certificate has region code?</td>
-                        <td class="govuk-table__cell" colspan="2">Yes</td>
-                      </tr>      
-                    <tr class="">
-                      <td class="govuk-table__header">Region of origin code</td>
-                      <td class="govuk-table__cell" id="imported-in-containers" colspan="2">
-                        EA1
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div> 
+                
                 <div class="heading-with-change-link">
                     <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
                       <a class="govuk-link" id="documents-change-link" href="12b-accompanying-docs">
