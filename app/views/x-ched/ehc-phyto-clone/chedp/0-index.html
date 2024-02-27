@@ -50,14 +50,14 @@
 
       <form action="01-ched-type" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
-        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
+        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="x-p-create-notification" name="p-create" value="x-p-create">
           Create a new notification
         </button>
-          <a class="govuk-button notification-button" id="search-to-clone" href="/notification/tst/protected/notifications/cloning/type">Clone a certificate</a>
+          <a class="govuk-button notification-button" id="search-to-clone" href="#">Clone a certificate</a>
       </form>
 
       <div id="existing-notifications">
-        <form action="/notification/tst/protected/notifications" method="post" class="search-filter-form">
+        <form action="#" method="post" class="search-filter-form">
           <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
           <div class="govuk-form-group search-panel">
             <input class="button search-hidden" type="submit" value="hidden-search">
@@ -1556,15 +1556,15 @@
           <div class="notification-list__grid-row">
             <div class="notification-list__grid-column-30">
               <dt class="notification-list__heading">Consignee</dt>
-              <dd class="notification-list__value" id="consignee-7">41b97966cee34436b846184037d1aefb</dd>
+              <dd class="notification-list__value" id="consignee-7">ABC goods Ltd</dd>
             </div>
             <div class="notification-list__grid-column-25">
               <dt class="notification-list__heading">Consignor</dt>
-              <dd class="notification-list__value" id="consignor-7">b935dbaabd5d4567b2748df6f35c682d</dd>
+              <dd class="notification-list__value" id="consignor-7">Produkty Mięsne Fm</dd>
             </div>
             <div class="notification-list__grid-column-25">
               <dt class="notification-list__heading">Origin</dt>
-              <dd class="notification-list__value" id="origin-7">China</dd>
+              <dd class="notification-list__value" id="origin-7">Argentina</dd>
             </div>
           </div>
           <div class="notification-list__links">
@@ -1632,7 +1632,7 @@
                   Copy as new
                 </button>
               </form>
-            <form action="07-check-answers-orig" method="post" class="govuk-!-display-inline">
+            <form action="07-check-answers-orig" method="post" class="govuk-!-display-inline" id="amend">
               <input name="crumb" type="hidden" value="bsuL64X4EjY2NWEcV59n9-1RFXFxFCq0I38KLIBid9C">
                 <button class="govuk-link" id="view-details-DRAFT.GB.2024.3469116" name="viewDetails" value="DRAFT.GB.2024.3469116">
                   View details
