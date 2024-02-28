@@ -7,7 +7,7 @@ const router = express.Router()
   // Make a variable and give it the value from name
   var ecertRoute = req.session.data['docs-info']
   if (ecertRoute == "all"){
-    res.redirect('18-review-errors')
+    res.redirect('18-review-clone-info-error')
   }
  else {
     res.redirect('12-health-certificate-clone')
