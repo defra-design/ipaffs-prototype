@@ -54,33 +54,39 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
   <main class="govuk-main-wrapper" id="main-content">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-            <!-- <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" data-gtm-vis-first-on-screen-10427495_18="48" data-gtm-vis-recent-on-screen-10427495_18="35723" data-gtm-vis-total-visible-time-10427495_18="100" data-gtm-vis-has-fired-10427495_18="1">
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" data-gtm-vis-first-on-screen-10427495_18="48" data-gtm-vis-recent-on-screen-10427495_18="35723" data-gtm-vis-total-visible-time-10427495_18="100" data-gtm-vis-has-fired-10427495_18="1">
               <h2 class="govuk-error-summary__title" id="error-summary-title">
-                  Please fix the following errors
-              </h2>
+                Please fix the following errors
+            </h2>
               <div class="govuk-error-summary__body">
                 <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+                   
+                   
+
+
                     <li>
-                      <a id="error-description-0" href="#partone/arrivaldate">Date of estimated arrival at BCP</a>
+                      <a id="error-description-0" href="#meansoftransportfromentrypoint/id">Add the transport identification</a>
+                    </li>
+                    <!-- <li>
+                      <a id="error-description-1" href="#partone/isGVMSRoute">Select if the transport will use the Goods Vehicle Movement Service (GVMS)?</a>
+                    </li> -->
+                    <li>
+                      <a id="error-description-2" href="#meansoftransportfromentrypoint/type">Add the means of transport after the BCP</a>
                     </li>
                     <li>
-                      <a id="error-description-1" href="#partone/arrivaltime">Time of estimated arrival at BCP</a>
+                      <a id="error-description-3" href="#meansoftransportfromentrypoint/id">Add the transport identification</a>
                     </li>
                     <li>
-                      <a id="error-description-2" href="#meansoftransportfromentrypoint/document">Document</a>
+                      <a id="error-description-4" href="#meansoftransport-date">Enter the date of departure from the BCP</a>
                     </li>
                     <li>
-                      <a id="error-description-3" href="#meansoftransportfromentrypoint/id">Identification</a>
+                      <a id="error-description-5" href="#meansoftransport-after-ref">Transport document reference</a>
                     </li>
-                    <li>
-                      <a id="error-description-4" href="#meansoftransportfromentrypoint/type">Means of transport to the BCP</a>
-                    </li>
-                    <li>
-                      <a id="error-description-5" href="#partone/pointofentry">Border control post</a>
-                    </li>
+                    
+                   
                 </ul>
               </div>
-            </div> -->
+            </div>
   
   
         <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>
@@ -147,6 +153,16 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     
                       <td class="govuk-table__cell"></td>
                     </tr>
+                    <tr>
+                      <td class="govuk-table__header">Region of origin code</td>
+                      <td class="govuk-table__cell">
+                        {% if (data['region-of-orgin-code'] == "yes") %}
+                          {{ data['region-code-added'] }}
+                        {% elif (data['region-of-orgin-code'] == "no") %}
+                          {{ data['region-code-noselected'] }}
+                        {% endif %}
+                      </td>
+                      </a>
                     <tr>
                       <td class="govuk-table__header">Consignment conforms to regulatory requirements</td>
                       <td class="govuk-table__cell" id="region-of-consignment-value">
@@ -437,11 +453,123 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <h2 class="govuk-heading-l" id="documents-section-heading">Documents</h2>
                 <hr>
                 <div class="table-responsive">
+                  
+                  {% if (data['risk-category'] != "low") %}
+                  <div class="heading-with-change-link">
+                    <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
+                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12-health-certificate-clone">
+                          Change
+                        </a>
+                  </div>
+                  
+                  <div class="table-responsive" id="vet-health-cert">
+                    <table id="latest-health-certificate-table" aria-describedby="latest health certificate table" class="govuk-table presentation-table review-latest-health-certificate-table">
+                      <thead class="govuk-table__head">
+                        <tr>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="presentation-table__section ">
+                          <td class="govuk-table__cell" id="latest-health-document-type">
+                            Veterinary health certificate <span class="govuk-!-font-weight-bold">(cloned)</span>
+                          </td>
+                          <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                            4387942
+                          </td>
+                          <td class="govuk-table__cell" id="latest-health-document-issue-date">
+                            26 February 2024
+                          </td>
+                          <td class="govuk-table__cell">
+                            <a class="govuk-link ellipsis" id="attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" title="VHC-4373484.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?source=review">
+                              VHC-4373484.pdf
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                  
+                  
+                  {% endif %}
+
+                  <div class="heading-with-change-link">
+                    <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Cloned documents</h3>
+                      <a class="govuk-link" id="latest-health-certificate-change-link" href="12-accompanying-docs-clone">
+                        Change
+                      </a>
+                </div>
+                
+                <div class="table-responsive">
+                  <table id="additional-documents-table" class="govuk-table presentation-table review-additional-documents-table">
+                    <thead class="govuk-table__head">
+                      <tr>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                            <tr class="presentation-table__section ">
+                              <td class="govuk-table__cell" id="veterinary-document-type-1">
+                                Storage document 
+                              </td>
+                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
+                                STO-4387474
+                              </td>
+                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
+                                26 February 2024
+                              </td>
+                              <td class="govuk-table__cell">
+                                <a class="govuk-link ellipsis" id="attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" title="CC-4387474.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90?source=review">
+                                  STO-4387474.pdf
+                                </a>
+                              </td>
+                            </tr>
+                            <tr class="presentation-table__section ">
+                              <td class="govuk-table__cell" id="veterinary-document-type-2">
+                                Processing statement
+                              </td>
+                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-2">
+                                PS-4387475
+                              </td>
+                              <td class="govuk-table__cell" id="veterinary-document-issue-date-2">
+                                26 February 2024
+                              </td>
+                              <td class="govuk-table__cell">
+                                <a class="govuk-link ellipsis" id="attachment-view-1595c61f-40f2-447f-8578-7a2670cd06a0" title="CC-4387475.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/1595c61f-40f2-447f-8578-7a2670cd06a0?source=review">
+                                  PS-4387475.pdf
+                                </a>
+                              </td>
+                            </tr>
+                            <tr class="presentation-table__section ">
+                              <td class="govuk-table__cell" id="veterinary-document-type-3">
+                                Commercial invoice
+                              </td>
+                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-3">
+                                COM-4387476
+                              </td>
+                              <td class="govuk-table__cell" id="veterinary-document-issue-date-3">
+                                26 February 2024
+                              </td>
+                              <td class="govuk-table__cell">
+                                <a class="govuk-link ellipsis" id="attachment-view-13ba0f42-d0a5-497e-b038-4564844e7ca1" title="CC-4387476.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/13ba0f42-d0a5-497e-b038-4564844e7ca1?source=review">
+                                  PS-4387476.pdf
+                                </a>
+                              </td>
+                            </tr>
+                           
+                    </tbody>
+                  </table>
+                </div>
                   
                   <div class="heading-with-change-link">
                       <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
-                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs">
+                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12-accompanying-docs-clone">
                           Change
                         </a>
                   </div>
@@ -465,7 +593,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                                   PS-4387474
                                 </td>
                                 <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                  20 August 2023
+                                  27 February 2024
                                 </td>
                                 <td class="govuk-table__cell">
                                   <a class="govuk-link ellipsis" id="attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" title="CC-4387474.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90?source=review">
@@ -481,7 +609,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                                   PS-4387475
                                 </td>
                                 <td class="govuk-table__cell" id="veterinary-document-issue-date-2">
-                                  20 August 2023
+                                  27 February 2024
                                 </td>
                                 <td class="govuk-table__cell">
                                   <a class="govuk-link ellipsis" id="attachment-view-1595c61f-40f2-447f-8578-7a2670cd06a0" title="CC-4387475.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/1595c61f-40f2-447f-8578-7a2670cd06a0?source=review">
@@ -497,7 +625,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                                   PS-4387476
                                 </td>
                                 <td class="govuk-table__cell" id="veterinary-document-issue-date-3">
-                                  20 August 2023
+                                  28 February 2024
                                 </td>
                                 <td class="govuk-table__cell">
                                   <a class="govuk-link ellipsis" id="attachment-view-13ba0f42-d0a5-497e-b038-4564844e7ca1" title="CC-4387476.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/13ba0f42-d0a5-497e-b038-4564844e7ca1?source=review">
@@ -513,7 +641,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                                   PS-4387477
                                 </td>
                                 <td class="govuk-table__cell" id="veterinary-document-issue-date-4">
-                                  21 August 2023
+                                  26 February 2024
                                 </td>
                                 <td class="govuk-table__cell">
                                   <a class="govuk-link ellipsis" id="attachment-view-5fb6acd6-bdbd-42d6-80f9-f5fc94248c20" title="CC-4387477.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/5fb6acd6-bdbd-42d6-80f9-f5fc94248c20?source=review">
@@ -663,12 +791,12 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-                <!-- <span class="govuk-error-message" id="partone/pointofentry">Entry border control post</span>
+                <span class="govuk-error-message" id="partone/pointofentry">Entry border control post</span>
                 <span class="govuk-error-message" id="meansoftransportfromentrypoint/type">Means of transport to the BCP</span>
-                <span class="govuk-error-message" id="meansoftransportfromentrypoint/id">Identification</span>
+                <span class="govuk-error-message" id="meansoftransportfromentrypoint/id">Transport identification</span>
                 <span class="govuk-error-message" id="meansoftransportfromentrypoint/document">Document</span>
                 <span class="govuk-error-message" id="partone/arrivaldate">Date of estimated arrival at BCP</span>
-                <span class="govuk-error-message" id="partone/arrivaltime">Time of estimated arrival at BCP</span> -->
+                <span class="govuk-error-message" id="partone/arrivaltime">Time of estimated arrival at BCP</span>
                 
                 <div class="table-responsive govuk-!-margin-bottom-9">
                   <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">

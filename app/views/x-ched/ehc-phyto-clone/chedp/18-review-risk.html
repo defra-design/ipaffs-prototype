@@ -148,6 +148,16 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <td class="govuk-table__cell"></td>
                     </tr>
                     <tr>
+                      <td class="govuk-table__header">Region of origin code</td>
+                      <td class="govuk-table__cell">
+                        {% if (data['region-of-orgin-code'] == "yes") %}
+                          {{ data['region-code-added'] }}
+                        {% elif (data['region-of-orgin-code'] == "no") %}
+                          {{ data['region-code-noselected'] }}
+                        {% endif %}
+                      </td>
+                      </a>
+                    <tr>
                       <td class="govuk-table__header">Consignment conforms to regulatory requirements</td>
                       <td class="govuk-table__cell" id="region-of-consignment-value">
                         
@@ -437,7 +447,48 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <h2 class="govuk-heading-l" id="documents-section-heading">Documents</h2>
                 <hr>
                 <div class="table-responsive">
+                  
+                  {% if (data['risk-category'] != "low") %}
+                  <div class="heading-with-change-link">
+                    <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
+                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-health-certificate">
+                          Change
+                        </a>
+                  </div>
+                  
+                  <div class="table-responsive">
+                    <table id="latest-health-certificate-table" aria-describedby="latest health certificate table" class="govuk-table presentation-table review-latest-health-certificate-table">
+                      <thead class="govuk-table__head">
+                        <tr>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="presentation-table__section ">
+                          <td class="govuk-table__cell" id="latest-health-document-type">
+                            Veterinary health certificate
+                          </td>
+                          <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                            4387942
+                          </td>
+                          <td class="govuk-table__cell" id="latest-health-document-issue-date">
+                            20 August 2023
+                          </td>
+                          <td class="govuk-table__cell">
+                            <a class="govuk-link ellipsis" id="attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" title="VHC-4373484.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?source=review">
+                              VHC-4373484.pdf
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                  
+                  
+                  {% endif %}
                   
                   <div class="heading-with-change-link">
                       <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>

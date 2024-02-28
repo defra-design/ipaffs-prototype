@@ -62,7 +62,22 @@
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" data-gtm-vis-first-on-screen10427495_18="54" data-gtm-vis-recent-on-screen10427495_18="61946" data-gtm-vis-total-visible-time10427495_18="100" data-gtm-vis-has-fired10427495_18="1">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+            Please fix the following errors
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+            <li>
+              <a id="error-description-0" href="#meansoftransportfromentrypoint/id">Add the transport identification</a>
+            </li>
+          
+              <li>
+                <a class="" id="error-description-1" href="#meansoftransportfromentrypoint/document">Add transport document reference</a>
+              </li>
+          </ul>
+        </div>
+      </div>
 
       <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>
 
@@ -269,8 +284,8 @@
           
           
           
-          
-          
+          <span class="govuk-error-message" id="meansoftransportfromentrypoint/id">Transport identification</span>
+          <span class="govuk-error-message" id="meansoftransportfromentrypoint/document">Transport document reference</span>
           
           
           
@@ -290,11 +305,11 @@
                 <th scope="row" class="govuk-table__header">Means of transport to the BCP</th>
                 <td class="govuk-table__cell">Road vehicle</td>
               </tr>
-              <tr class="">
+              <tr class="table-row--error">
                 <th scope="row" class="govuk-table__header">Transport identification</th>
                 <td class="govuk-table__cell">GHH-43789234742</td>
               </tr>
-              <tr class="">
+              <tr class="table-row--error">
                 <th scope="row" class="govuk-table__header">Transport document reference</th>
                 <td class="govuk-table__cell">SHP-6893598ADR</td>
               </tr>
@@ -378,18 +393,131 @@
           </div>
           
           
-          <div class="govuk-!-margin-bottom-9">
-              <h2 class="govuk-heading-m" id="accompanying-documents-heading">Accompanying documents</h2>
-            
+          <div class="govuk-!-margin-bottom-9" id="accompanying-documents-section">
+            <h2 class="govuk-heading-m" id="documents-section-heading">Documents</h2>
+            <hr>
+            <div class="table-responsive">
               
-            
-            <div class="heading-with-change-link">
-                <h3 class="govuk-heading-s">Additional documents</h3>
-                  <a class="govuk-link" id="documents-change-link" href="03-do-01i-document-added">
+           
+              <div class="heading-with-change-link">
+                <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Phytosanitary certificate</h3>
+                    <a class="govuk-link" id="latest-health-certificate-change-link" href="03-do-01a-phyto-clone">
+                      Change
+                    </a>
+              </div>
+              
+              <div class="table-responsive" id="vet-health-cert">
+                <table id="latest-health-certificate-table" aria-describedby="latest health certificate table" class="govuk-table presentation-table review-latest-health-certificate-table">
+                  <thead class="govuk-table__head">
+                    <tr>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="presentation-table__section ">
+                      <td class="govuk-table__cell" id="latest-health-document-type">
+                        Phytosanitary health certificate <span class="govuk-!-font-weight-bold">(cloned)</span>
+                      </td>
+                      <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                        4387942
+                      </td>
+                      <td class="govuk-table__cell" id="latest-health-document-issue-date">
+                        26 February 2024
+                      </td>
+                      <td class="govuk-table__cell">
+                        <a class="govuk-link ellipsis" id="attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" title="VHC-4373484.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?source=review">
+                          VHC-4373484.pdf
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+             
+              
+      
+
+              <div class="heading-with-change-link">
+                <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Cloned documents</h3>
+                  <a class="govuk-link" id="latest-health-certificate-change-link" href="03-do-01-documents-clone">
                     Change
                   </a>
             </div>
             
+            <div class="table-responsive">
+              <table id="additional-documents-table" class="govuk-table presentation-table review-additional-documents-table">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                        <tr class="presentation-table__section ">
+                          <td class="govuk-table__cell" id="veterinary-document-type-1">
+                            Storage document 
+                          </td>
+                          <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
+                            STO-4387474
+                          </td>
+                          <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
+                            26 February 2024
+                          </td>
+                          <td class="govuk-table__cell">
+                            <a class="govuk-link ellipsis" id="attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" title="CC-4387474.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90?source=review">
+                              STO-4387474.pdf
+                            </a>
+                          </td>
+                        </tr>
+                        <tr class="presentation-table__section ">
+                          <td class="govuk-table__cell" id="veterinary-document-type-2">
+                            Processing statement
+                          </td>
+                          <td class="govuk-table__cell break-word" id="veterinary-document-reference-2">
+                            PS-4387475
+                          </td>
+                          <td class="govuk-table__cell" id="veterinary-document-issue-date-2">
+                            26 February 2024
+                          </td>
+                          <td class="govuk-table__cell">
+                            <a class="govuk-link ellipsis" id="attachment-view-1595c61f-40f2-447f-8578-7a2670cd06a0" title="CC-4387475.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/1595c61f-40f2-447f-8578-7a2670cd06a0?source=review">
+                              PS-4387475.pdf
+                            </a>
+                          </td>
+                        </tr>
+                        <tr class="presentation-table__section ">
+                          <td class="govuk-table__cell" id="veterinary-document-type-3">
+                            Commercial invoice
+                          </td>
+                          <td class="govuk-table__cell break-word" id="veterinary-document-reference-3">
+                            COM-4387476
+                          </td>
+                          <td class="govuk-table__cell" id="veterinary-document-issue-date-3">
+                            26 February 2024
+                          </td>
+                          <td class="govuk-table__cell">
+                            <a class="govuk-link ellipsis" id="attachment-view-13ba0f42-d0a5-497e-b038-4564844e7ca1" title="CC-4387476.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/13ba0f42-d0a5-497e-b038-4564844e7ca1?source=review">
+                              PS-4387476.pdf
+                            </a>
+                          </td>
+                        </tr>
+                       
+                </tbody>
+              </table>
+            </div>
+              
+              <div class="heading-with-change-link">
+                  <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
+                    <a class="govuk-link" id="latest-health-certificate-change-link" href="03-do-01-documents-clone">
+                      Change
+                    </a>
+              </div>
+              
               <div class="table-responsive">
                 <table id="additional-documents-table" class="govuk-table presentation-table review-additional-documents-table">
                   <thead class="govuk-table__head">
@@ -403,24 +531,142 @@
                   <tbody>
                           <tr class="presentation-table__section ">
                             <td class="govuk-table__cell" id="veterinary-document-type-1">
-                              Phytosanitary certificate
+                              Processing statement
                             </td>
                             <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                              PHT-3985348432583284
+                              PS-4387474
                             </td>
                             <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                              26 November 2023
+                              27 February 2024
                             </td>
                             <td class="govuk-table__cell">
-                              <a class="govuk-link ellipsis" id="attachment-view-801164bf-3cac-4272-a196-3e22a7f72360" title="transport-chedpp.png" rel="noopener noreferrer"  href="#">
-                                phyto-chedpp.png
+                              <a class="govuk-link ellipsis" id="attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" title="CC-4387474.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90?source=review">
+                                PS-4387474.pdf
+                              </a>
+                            </td>
+                          </tr>
+                          <tr class="presentation-table__section ">
+                            <td class="govuk-table__cell" id="veterinary-document-type-2">
+                              Processing statement
+                            </td>
+                            <td class="govuk-table__cell break-word" id="veterinary-document-reference-2">
+                              PS-4387475
+                            </td>
+                            <td class="govuk-table__cell" id="veterinary-document-issue-date-2">
+                              27 February 2024
+                            </td>
+                            <td class="govuk-table__cell">
+                              <a class="govuk-link ellipsis" id="attachment-view-1595c61f-40f2-447f-8578-7a2670cd06a0" title="CC-4387475.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/1595c61f-40f2-447f-8578-7a2670cd06a0?source=review">
+                                PS-4387475.pdf
+                              </a>
+                            </td>
+                          </tr>
+                          <tr class="presentation-table__section ">
+                            <td class="govuk-table__cell" id="veterinary-document-type-3">
+                              Processing statement
+                            </td>
+                            <td class="govuk-table__cell break-word" id="veterinary-document-reference-3">
+                              PS-4387476
+                            </td>
+                            <td class="govuk-table__cell" id="veterinary-document-issue-date-3">
+                              28 February 2024
+                            </td>
+                            <td class="govuk-table__cell">
+                              <a class="govuk-link ellipsis" id="attachment-view-13ba0f42-d0a5-497e-b038-4564844e7ca1" title="CC-4387476.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/13ba0f42-d0a5-497e-b038-4564844e7ca1?source=review">
+                                PS-4387476.pdf
+                              </a>
+                            </td>
+                          </tr>
+                          <tr class="presentation-table__section ">
+                            <td class="govuk-table__cell" id="veterinary-document-type-4">
+                              Processing statement
+                            </td>
+                            <td class="govuk-table__cell break-word" id="veterinary-document-reference-4">
+                              PS-4387477
+                            </td>
+                            <td class="govuk-table__cell" id="veterinary-document-issue-date-4">
+                              26 February 2024
+                            </td>
+                            <td class="govuk-table__cell">
+                              <a class="govuk-link ellipsis" id="attachment-view-5fb6acd6-bdbd-42d6-80f9-f5fc94248c20" title="CC-4387477.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/5fb6acd6-bdbd-42d6-80f9-f5fc94248c20?source=review">
+                                PS-4387477.pdf
                               </a>
                             </td>
                           </tr>
                   </tbody>
                 </table>
               </div>
-          </div>
+
+                <!-- <div class="table-responsive">
+                  <table class="govuk-table review-table govuk-!-margin-bottom-0 table--no-borders data-table-catch-certificates-heading">
+                    <tbody>
+                    <tr>
+                      <td class="govuk-table__header" id="03043100-catch-cert-heading">
+                        03043100 catch certificate details
+                      </td>
+                      <td class="govuk-table__cell change">
+                        <a href="09-catch-certificates" class="govuk-link" id="03043100-catch-cert-change-link">Change</a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div> 
+                <div class="table-responsive">
+                  <table class="govuk-table presentation-table data-table data-table-catch-certificates">
+                    <thead class="govuk-table__head">
+                    <tr>
+                      <th class="govuk-table__header species">Species</th>
+                      <th class="govuk-table__header govuk-table__header--numeric weight">Catch certificate number</th>
+                      <th class="govuk-table__header govuk-table__header--numeric packages">Weight (kg)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="divider-bottom">
+                    <td id="121418-name-0" class="govuk-table__cell govuk-form-group">Oreochromis niloticus</td>
+                    <td id="121418-catch-certificate-number-0" class="govuk-table__cell govuk-table__cell--numeric">CC-89342</td>
+                    <td id="121418-catch-certificate-weight-0" class="govuk-table__cell govuk-table__cell--numeric">300</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+
+
+            </div>
+              <div class="heading-with-change-link">
+                <h2 id="approved-establishment-header" class="govuk-heading-m">Approved establishment</h2>
+                <a href="13b-approved-est-chosen" class="govuk-link" id="establishment-of-origin-change-link">
+                  Change
+                </a>
+              </div>
+            <div class="table-responsive">
+              <table class="govuk-table presentation-table" id="review-table-approved-establishments" >
+                <caption class="govuk-visually-hidden">
+                  Approved establishment
+                </caption>
+                <thead class="govuk-table__head">
+                  <tr >
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Country</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Type</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter no-wrap" >
+                      Approval number
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr >
+                      <td class="govuk-table__cell" >Agropur, inc. (Pesquera Atunes del Pacifico S.A. Atunpacificosa)</td>
+                      <td class="govuk-table__cell" >Argentina</td>
+                      <td class="govuk-table__cell" style="padding-left: 10px" >
+                        raw milk or dairy products or colostrum and colostrum-based products
+                          
+                      </td>
+                      <td class="govuk-table__cell">2116532</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
           
           <h2 class="govuk-heading-m">Traders</h2>
           

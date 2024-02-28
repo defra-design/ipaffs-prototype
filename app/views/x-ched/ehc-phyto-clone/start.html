@@ -1,0 +1,124 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <a href="/index" id="back-link" class="govuk-!-margin-top-0 govuk-!-margin-bottom-6 govuk-back-link back-link--next-to-breadcrumbs">Prototypes home</a>
+     <a href="../start" id="back-link" class="govuk-!-margin-top-0 govuk-!-margin-bottom-6 govuk-back-link back-link--next-to-breadcrumbs govuk-!-margin-left-2">XCHED home</a>
+   
+   
+    </div> </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <span class="govuk-caption-xl"></span>
+    <h1 class="govuk-heading-xl">CR37 - attaching electronic certificates afterwards</h1>
+
+
+ 
+        
+
+        <div class="govuk-!-margin-bottom-4 govuk-!-padding-4 govuk-!-width-one-third" style="background-color: #f6f6f6;">
+          <p>February 2024</p>
+          <p>UX: Millie Guest</p>
+          <p><a href="https://app.mural.co/t/defra5166/m/defra5166/1708532853912/231651fa86bc8210e587ece065c89abf3b65bdb8?sender=ue435e1ad5ba6d27993027455" target="_blank">Mural board flow</a></p>
+        </div>
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Journeys - Part 1</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+                <th scope="col" class="govuk-table__header">CHEDA</th>
+                <th scope="col" class="govuk-table__header">CHEDP</th>
+                <th scope="col" class="govuk-table__header">CHEDPP</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Dashboard</td>
+                <td class="govuk-table__cell"><a href="cheda/0-index">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/0-index">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/0-index">Done</a><br></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Notification hub</td>
+                <td class="govuk-table__cell"><a href="cheda/07-notification">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/07-check-answers-orig">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/01-no-check-answers">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Choice page</td>
+                <td class="govuk-table__cell"><a href=""></a>N/A</td>
+                <td class="govuk-table__cell"><a href=""></a>N/A</td>
+                <td class="govuk-table__cell"><a href="chedpp/01-ac-04-how-add-commodity">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">SPS cert doc page</td>
+                <td class="govuk-table__cell"><a href="cheda/13a-health-certificate">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/12-health-certificate">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/03-do-01a-phyto">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Accompanying docs</td>
+                <td class="govuk-table__cell"><a href="cheda/13b-accompanying-docs">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/12-accompanying-docs">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/03-do-01-documents">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Search for certificate</td>
+                <td class="govuk-table__cell"><a href="cheda/03a-certificate-reference">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/03a-certificate-reference">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/03a-certificate-reference">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Confirm correct cert </td>
+                <td class="govuk-table__cell"><a href="cheda/01-add-health-certificate">not fin</a><br>needs A goods</td>
+                <td class="govuk-table__cell"><a href="chedp/01-add-health-certificate">not fin</a><br>needs P goods</td>
+                <td class="govuk-table__cell"><a href="chedpp/01-add-health-certificate">not fin</a><br>needs matching PP goods</td>
+              </tr>
+              
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">SPS cert doc with cloning</td>
+                <td class="govuk-table__cell"><a href="cheda/13a-health-certificate-clone">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/12-health-certificate-clone">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/03-do-01a-phyto-clone">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Accompanying docs with cloning</td>
+                <td class="govuk-table__cell"><a href="cheda/13b-accompanying-docs-clone">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/12-accompanying-docs-clone">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/03-do-01-documents-clone">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Review cloned docs only</td>
+                <td class="govuk-table__cell"><a href="cheda/18-review-clone-error">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/18-review-clone-error">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review-clone-error">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Review - cloned info and docs</td>
+                <td class="govuk-table__cell"><a href="cheda/18-review-clone-info-error">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/18-review-clone-info-error">Done</a></td>
+                <td class="govuk-table__cell">N/A</td>
+              </tr>
+              </tbody>
+              </table>
+
+
+<hr>
+          
+
+
+       
+
+
+
+{% endblock %}
