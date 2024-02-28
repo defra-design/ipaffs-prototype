@@ -42,12 +42,7 @@
           </div>
         </details>
      
-      <form method="post" action="04a-commodity-selection#tree-nav">
-        <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
-        <input name="etag" type="hidden" value="&quot;0000000004C79E8F&quot;">
-        <input name="commodityDetailsPage" type="hidden" value="">
-
-      </form>
+     
 
           <div class="govuk-tabs">
             <h2 class="govuk-tabs__title">
@@ -66,7 +61,7 @@
               </li>
             </ul>
             <div class="govuk-tabs__panel" id="commodity-code-search-tab">
-              <form method="post" action="04a-commodity-selection#tree-nav">
+              <form method="post" action="05-commodity-genus">
                 <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
                 <input name="etag" type="hidden" value="&quot;0000000004C79E8F&quot;">
                 <input name="selectedCommodity" type="hidden" value="root">
@@ -84,11 +79,7 @@
                           <label class="govuk-label " for="commodity-code-search">
                             Enter commodity code
                           </label>
-                          
-                      
-                      
-                          
-                      
+
                         <input class="govuk-input govuk-!-width-one-third " id="commodity-code-search" name="commodity-text-input" type="text" value="" inputmode="numeric">
                       </div>
                     </fieldset>
@@ -98,6 +89,7 @@
                     Search
                   </button>
                 </div>
+                </form>
               
                   <h3 class="govuk-heading-m">
                     Find the commodity in the commodity tree
@@ -105,6 +97,12 @@
                 
                 <div class="search-panel">
                   <div class="commodity-selection-breadcrumb">
+                    <form method="post" action="04a-commodity-selection#tree-nav">
+                      <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
+                      <input name="etag" type="hidden" value="&quot;0000000004C79E8F&quot;">
+                      <input name="commodityDetailsPage" type="hidden" value="">
+              
+                    
                     <nav>
                         <a class="govuk-link all-sections-link" href="page-3">
                           All commodities
@@ -206,6 +204,7 @@
                       </div>
                 
                     </nav>
+                  </form>
                   </div>
                 </div>
               </form>
