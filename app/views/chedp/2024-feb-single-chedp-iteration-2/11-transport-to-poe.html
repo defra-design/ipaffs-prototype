@@ -108,20 +108,20 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                 Will the transport use the Goods Vehicle Movement Service (GVMS)?
               </h1>
             </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios ">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="gvms-yes" name="gvms" type="radio" value="Yes" aria-describedby="gvms-yes-hint"  {{ checked('gvms','Yes') }}>
-                <label class="govuk-label govuk-radios__label" for="gvms-yes">
-                  Yes 
+                <input class="govuk-radios__input" id="transport-details-required" name="transport-details-required" type="radio" value="true">
+                <label class="govuk-label govuk-radios__label " for="transport-details-required">
+                  Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="gvms-no" name="gvms" type="radio" value="No" aria-describedby="gvms-no-hint" {{ checked('gvms','No') }}>
-                <label class="govuk-label govuk-radios__label" for="gvms-no">
-                  No 
+                <input class="govuk-radios__input" id="transport-details-required-2" name="transport-details-required" type="radio" value="false" checked>
+                <label class="govuk-label govuk-radios__label " for="transport-details-required-2">
+                  No
                 </label>
               </div>
-            </div>
+          </div>
           </fieldset>
           <details class="govuk-details govuk-!-margin-top-4 govuk-!-width-two-thirds" data-module="govuk-details">
             <summary class="govuk-details__summary">
