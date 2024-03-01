@@ -16,20 +16,25 @@ const router = express.Router()
 
 
 
-
+//  - Confirm radio routing - this one is for when user has already reviewed and wants to amend
+router.post('/route-x-a-docs-info-amend', function (req, res) {
+  // Make a variable and give it the value from name
+  var ecertRoute = req.session.data['docs-info']
+  if (ecertRoute == "all") {
+    res.redirect('18-review-clone')
+  }
+ else {
+    res.redirect('13a-health-certificate-clone')
+  }  
+})
 
 
   
   //  - Confirm radio routing
   router.post('/route-x-a-docs-info', function (req, res) {
-  
     // Make a variable and give it the value from name
     var ecertRoute = req.session.data['docs-info']
-    if (ecertRoute == "all" && cr37aReviewedVar == "true"){
-      res.redirect('18-review-clone')
-    }
-   else if 
-    (ecertRoute == "all"){
+    if   (ecertRoute == "all"){
       res.redirect('18-review-clone-info-error')
    }
    else {

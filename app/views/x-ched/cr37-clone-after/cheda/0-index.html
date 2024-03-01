@@ -37,10 +37,10 @@
 
 
       <h1 class="govuk-heading-xl " id="page-primary-title">Your import notifications</h1>
-
+      {{ data | log }}
       <form action="01-ched-type" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
-        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
+        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
           Create a new notification
         </button>
           <a class="govuk-button notification-button" id="search-to-clone" href="">Clone a certificate</a>
@@ -1522,10 +1522,10 @@
               </form>
             <form action="07-notification-amend" method="post" class="govuk-!-display-inline">
               <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
-                <button class="govuk-link" id="view-button" name="amend-link1" value="true">
+                <button class="govuk-link" id="view-button" name="cr37aReviewedVar1" value="true">
                   View details
                 </button>
-                <button class="govuk-link" id="amendlink" name="amend-link" value="true">
+                <button class="govuk-link" id="amendlink" name="cr37aReviewedVar1" value="true">
                   Amend
                 </button>
             </form>
