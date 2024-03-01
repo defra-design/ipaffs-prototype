@@ -14,15 +14,24 @@ const router = express.Router()
         and redirect to appropriate Main reason for importing page
 */
 
+
+
+
+
+
   
-  //  - risk route question - 06a-risk-category
+  //  - Confirm radio routing
   router.post('/route-x-a-docs-info', function (req, res) {
   
     // Make a variable and give it the value from name
     var ecertRoute = req.session.data['docs-info']
-    if (ecertRoute == "all"){
-      res.redirect('18-review-clone-info-error')
+    if (ecertRoute == "all" && cr37aReviewedVar == "true"){
+      res.redirect('18-review-clone')
     }
+   else if 
+    (ecertRoute == "all"){
+      res.redirect('18-review-clone-info-error')
+   }
    else {
       res.redirect('13a-health-certificate-clone')
     }  
