@@ -58,13 +58,7 @@
             </div>
             <input class="govuk-input govuk-!-width-three-quarters" id="billing-telephone-number" name="billing-telephone-number" type="tel" aria-describedby="billing-telephone-number-hint" autocomplete="tel">
           </div>
-
-          {% if (data['action'] == "change") %}
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save" data-module="govuk-button">
-          {% else %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
-          {% endif %}
-
           <p class="govuk-body">
             {% if (data['action'] == "change") %}
             <a class="govuk-link" href="05-confirm-billing-details">Cancel and return to notification</a>
