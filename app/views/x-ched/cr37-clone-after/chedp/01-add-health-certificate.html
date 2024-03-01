@@ -192,7 +192,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
 
          {% if (data['cr37pReviewedVar1'] == "true") %}
          <form action="route-x-p-docs-info-amend" method="POST">
-         <div class="govuk-form-group">
+         <div class="govuk-form-group govuk-!-width-two-thirds">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
@@ -204,7 +204,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
                 <input class="govuk-radios__input" id="where-do-you-live" name="docs-info" type="radio" value="all">
                 <label class="govuk-label govuk-radios__label" for="where-do-you-live">
                   All electronic health certificate information and documents 
-                  <p class="govuk-!-font-weight-bold govuk-!-margin-top-3 govuk-!-margin-bottom-1">This will overwrite information already added.</p>
+                  <p class="govuk-!-font-weight-bold govuk-!-margin-top-3 govuk-!-margin-bottom-1">If you have manually added any information that is on the health certificate, it will be overwritten.</p>
                 </label>
                 
               </div>
@@ -234,7 +234,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       </form>
       {% else %}
       <form action="route-x-p-docs-info" method="POST">
-        <div class="govuk-form-group">
+        <div class="govuk-form-group govuk-!-width-two-thirds">
          <fieldset class="govuk-fieldset">
            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
@@ -246,7 +246,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
                <input class="govuk-radios__input" id="where-do-you-live" name="docs-info" type="radio" value="all">
                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
                  All electronic health certificate information and documents 
-                 <p class="govuk-!-font-weight-bold govuk-!-margin-top-3 govuk-!-margin-bottom-1">This will overwrite information already added.</p>
+                 <p class="govuk-!-font-weight-bold govuk-!-margin-top-3 govuk-!-margin-bottom-1">If you have manually added any information that is on the health certificate, it will be overwritten.</p>
                </label>
                
              </div>

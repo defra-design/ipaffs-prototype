@@ -198,10 +198,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           </div> -->
       </div>
 
-      <form action="13-approved-est" method="post">
-        <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
-        <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
-        <input name="12-accompanying-docs" type="hidden" value="visited"> 
+     
        
        
 
@@ -375,16 +372,28 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </button>
             </div>
         </div>
-       
-        
 
-          
+
+
+        {% if (data['cr37pReviewedVar1'] == "true") %}
+        <form action="18-review-clone" method="post">
+          <input name="12-accompanying-docs" type="hidden" value="visited"> 
+          <input name="current-page-number" type="hidden" value="1">
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and Review" data-module="govuk-button">
+          <p class="govuk-body"><a class="govuk-link" href="07-notification-amend">Cancel and return to  hub</a></p>
+        </form>
+
+        {% else %}
+        <form action="13-approved-est" method="post">
+          <input name="12-accompanying-docs" type="hidden" value="visited"> 
         <input name="current-page-number" type="hidden" value="1">
 
         <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="07-check-answers-orig">Cancel and return to  hub</a></p>
       </form>
+ 
+      {% endif %}
     </div>
   </div>
 </main>
