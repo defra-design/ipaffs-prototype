@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Approved establishment of origin – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="establishment-of-origin">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">Documents</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Approved establishment of origin (where required)</h1>
+</div>
+</div>
+      <div class="govuk-grid-row" >
+        <div class="govuk-grid-column-full">
+      <form action="14-addresses" method="POST">
+        <input name="crumb" type="hidden" value="cPWIZj5dg7pqus4I6awnUoZI-bDJyiMAQcNYgDEYOWM">
+        <input name="etag" type="hidden" value="&quot;00000000053B49C1&quot;">
+        <input name="13-approved-est" type="hidden" value="visited">
+        
+        <div class="govuk-!-margin-bottom-6">
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2" id="establishments-table">
+              <caption class="govuk-visually-hidden">Approved establishment of origin table</caption>
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__cell" id="name-header">Name</th>
+                  <th class="govuk-table__cell" id="country-header">Country</th>
+                  <th class="govuk-table__cell" id="type-header">Type</th>
+                  <th class="govuk-table__cell" id="approval-number-header">Approval Number</th>
+                  <th class="govuk-table__cell" id="hidden-remove-header"><span class="govuk-visually-hidden">Remove</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td class="govuk-table__cell" colspan="5">
+                      There are no establishments currently selected
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+         
+          <a href="13a-approved-est-search" class="govuk-link govuk-!-font-size-19" id="add-transporter-from-bip">Search for an approved establishment</a>
+        </div>
+        <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
+        <p class="govuk-body"><a class="govuk-link" href="07-check-answers-orig">Cancel and return to hub</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

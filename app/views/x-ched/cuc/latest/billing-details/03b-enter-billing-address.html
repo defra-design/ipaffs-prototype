@@ -58,7 +58,7 @@
             </summary>
             <div class="govuk-details__text">
               <p>You must employ a UK-based import agent to complete your notifications.</p>
-              <p>Import agents must use their own address for non-UK customers. The agents will receive any invoices.</p>
+              <p>Import agents must use their own address for non-UK customers and are liable for any charges.</p>
             </div>
           </details>
           <div class="govuk-form-group">
@@ -103,13 +103,7 @@
             </label>
             <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" autocomplete="postal-code">
           </div>
-          
-          {% if (data['action'] == "change") %}
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save" data-module="govuk-button">
-          {% else %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
-          {% endif %}
-          
           <p class="govuk-body">
             {% if (data['action'] == "change") %}
             <a class="govuk-link" href="05-confirm-billing-details">Cancel and return to notification</a>
