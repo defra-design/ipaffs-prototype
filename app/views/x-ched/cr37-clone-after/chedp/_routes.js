@@ -1,6 +1,22 @@
 const express = require('express')
 const router = express.Router()
 // Add your routes here - above the module.exports line
+
+
+
+//  - Confirm radio routing - this one is for when user has already reviewed and wants to amend
+router.post('/route-x-p-docs-info-amend', function (req, res) {
+  // Make a variable and give it the value from name
+  var ecertRoute = req.session.data['docs-info']
+  if (ecertRoute == "all") {
+    res.redirect('18-review-clone')
+  }
+ else {
+    res.redirect('12-health-certificate-clone')
+  }  
+})
+
+
  //  - risk route question - 06a-risk-category
  router.post('/route-x-p-docs-info', function (req, res) {
   

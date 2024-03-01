@@ -26,7 +26,8 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="cloning-summary">
     <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl " id="page-primary-title">Confirm this is the correct electronic health certificate</h1>
-      <table class="govuk-table review-table" id="consignment-table">
+        {{ data | log }}
+        <table class="govuk-table review-table" id="consignment-table">
         <caption class="govuk-visually-hidden">Consignment table</caption>
         <tbody>
           <!-- <tr class="govuk-table__header">
@@ -188,7 +189,9 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
     </table>
          </div>
   
-         <form action="route-x-p-docs-info" method="POST">
+
+         {% if (data['cr37pReviewedVar1'] == "true") %}
+         <form action="route-x-p-docs-info-amend" method="POST">
          <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -229,6 +232,49 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       
       </div>
       </form>
+      {% else %}
+      <form action="route-x-p-docs-info" method="POST">
+        <div class="govuk-form-group">
+         <fieldset class="govuk-fieldset">
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+             <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+               What do you want to copy?
+             </h1>
+           </legend>
+           <div class="govuk-radios" data-module="govuk-radios">
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="where-do-you-live" name="docs-info" type="radio" value="all">
+               <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                 All electronic health certificate information and documents 
+                 <p class="govuk-!-font-weight-bold govuk-!-margin-top-3 govuk-!-margin-bottom-1">This will overwrite information already added.</p>
+               </label>
+               
+             </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="where-do-you-live-2" name="docs-info" type="radio" value="docs">
+               <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                 Documents only (including the electronic health certificate)
+               </label>
+             </div>
+            
+           </div>
+         </fieldset>
+       </div> 
+
+      
+      
+<div class="govuk-!-margin-top-9">
+    
+       <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and copy</button>
+       
+       <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">
+       <input name="country-of-origin-code" type="hidden" value="NL">
+       <input name="certificate-type" type="hidden" value="CHEDPP">
+       <input name="crumb" type="hidden" value="pAX8KbbF_kTf-zwr0UqqZTYVT8dKDyzcqU2LeTvWorP">
+     
+     </div>
+     </form>
+     {% endif %}
     </div>
     <a class="govuk-link clear-link" id="search-to-clone" href="03a-certificate-reference">Go back and search again</a>
   </div>
