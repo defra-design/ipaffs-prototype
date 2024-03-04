@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How do you want to add your commodity details? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-!-padding-bottom-6">
+<span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEPP</span>
+</div>
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Description of the goods</span>
+
+      <form class="form" action="chedpp-route-how-enter" method="POST">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+                How do you want to add your commodity details?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-add-commodity" name="addcommodity" type="radio" value="Manual entry">
+                <label class="govuk-label govuk-radios__label" for="how-add-commodity">
+                  Manual entry
+                </label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Enter one commodity line at a time.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-add-commodity-2" name="addcommodity" type="radio" value="Upload from a CSV file">
+                <label class="govuk-label govuk-radios__label" for="how-add-commodity-2">
+                  Upload from a CSV file
+                </label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Add all details at once, by uploading a file you can prepare with most spreadsheet software. Recommended for consignments with many commodity lines.
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

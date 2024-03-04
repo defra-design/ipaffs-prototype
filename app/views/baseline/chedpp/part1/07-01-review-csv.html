@@ -1,0 +1,428 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+   
+    <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+      <div class="navigation-links__divider">|</div>
+<div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="index">Dashboard</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="7-notification-hub">Notification Hub</a>
+          </li>
+    </ol>
+  </div>
+
+
+    <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Hyseni</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+
+
+<div class="govuk-!-padding-top-6" style="margin-bottom: 30px;">
+    <span class="heading-tertiary">
+        <span id="reference-number">DRAFT.GB.2021.1042077</span>
+            <span> - CHEDPP</span>
+    </span>
+</div>
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+
+      <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>      
+      
+      <div class="audit-flag">
+        <div id="last-submission-date">Submitted on: </div>
+        <div id="submitted-by">Submitted by: </div>
+        <div id="last-updated-date">Last updated: 28 November 2023, 21:31</div>
+        <div id="last-updated-by">Last updated by: Andrew Inspector-Tester</div>
+      </div>
+
+          <h2 class="govuk-heading-m">About the consignment</h2>
+          
+          <div class="table-responsive">
+            <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
+              <tbody>
+              <tr>
+                <th scope="row" class="govuk-table__header">What are you importing?</th>
+                <td class="govuk-table__cell" id="importing">Plants, plant products and other objects</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+          
+              <tr class="presentation-table__section">
+                <th scope="row" class="govuk-table__header">Add a reference number for this consignment</th>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell change">
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2021.1015508/consignment/page-2?fromImporterReview=true" class="govuk-link" id="country-of-origin-change-link">Change</a>
+                 </td>
+              </tr>
+              
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Country of origin</th>
+                <td class="govuk-table__cell" id="country-of-origin">Netherlands</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="govuk-table__header">Country from where consigned</th>
+                <td class="govuk-table__cell">Netherlands</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="govuk-table__header">Region code</th>
+                <td class="govuk-table__cell" id="region-of-consignment-value"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+          
+              <tr class="presentation-table__section ">
+                <th scope="row" class="govuk-table__header">What is the purpose of the consignment?</th>
+                <td class="govuk-table__cell" id="purpose-of-consignment-value">
+                    For internal market
+                </td>
+                <td class="govuk-table__cell change">
+                      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2021.1015508/consignment/page-5?fromImporterReview=true" class="govuk-link" id="consignment-purpose-change-link">Change</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <h2 class="govuk-heading-m govuk-!-margin-top-9">Description of the goods</h2>
+
+           <div class="table-responsive">
+            <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
+              <tbody>
+              <tr>
+                <td class="govuk-table__cell" id="importing"> <p class="govuk-body govuk-!-margin-top-3"><a href="8-1-all-details-review">Check commmodity details</a></p></td>
+              </tr>
+              </tbody>
+          </table>
+          </div>
+          
+          {#  <div class="chedpp-review-div">
+
+         
+             <div class="table-responsive">
+                <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-0" role="presentation">
+                  <tbody class="govuk-table__head">
+                  <tr class="presentation-table__row--no-border">
+                    <th scope="row" class="govuk-table__header ">Commodity code</th>
+                    <td class="govuk-table__cell">06042040 </td>
+                    <td class="govuk-table__cell change">
+                          <a href="/notification/vnet/protected/notifications/DRAFT.GB.2021.1015508/commodity/details/bulk?fromImporterReview=true" class="govuk-link" id="commodity-change-bulk-link-0">Change</a>
+                    </td>
+                  </tr>
+                    <tr class="presentation-table__row--no-border">
+                      <th scope="row" class="govuk-table__header ">Description</th>
+                      <td class="govuk-table__cell">Conifer branches</td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                <table class="govuk-table review-table presentation-table govuk-!-margin-bottom-1">
+                  <caption class="govuk-visually-hidden">Species and intended use</caption>
+                  <tbody>
+                    <tr class="govuk-table__row presentation-table__row--no-border">
+                      <th scope="row" class="govuk-table__header">Genus and species</th>
+                      <td class="govuk-table__cell">Abelia chinensis, ABECH</td>
+                    </tr>
+                  </tbody>
+                </table>
+          
+                <div class="table-responsive">
+                  <table class="govuk-table chedpp-species-table  govuk-!-margin-bottom-3" id="review-table-commodities-total-0">
+                    <caption class="govuk-visually-hidden">Commodity details</caption>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row ">
+                        <th scope="col" class="govuk-table__header">Variety</th>
+                        <th scope="col" class="govuk-table__header">Class</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Net weight</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Packages</th>
+                        <th scope="col" class="govuk-table__header">Package type</th>
+                        <th scope="col" class="govuk-table__header">Controlled atmosphere container</th>
+                      </tr>
+                      <tr class="govuk-table__row ">
+                        <td class="border-bottom-none govuk-table__cell"></td>
+                        <td class="border-bottom-none govuk-table__cell"></td>
+                        <td class="border-bottom-none govuk-table__cell govuk-table__cell--numeric consignment-net-weight">123 kg</td>
+                        <td class="border-bottom-none govuk-table__cell govuk-table__cell--numeric">11</td>
+                        <td class="border-bottom-none govuk-table__cell">Bag</td>
+                        <td class="border-bottom-none govuk-table__cell">Yes</td>
+                      </tr>
+                        <tr class="govuk-table__row ">
+                          <th scope="col" class="govuk-table__header">Commodity group</th>
+                          <th scope="col" class="govuk-table__header">Quantity</th>
+                          <th scope="col" colspan="4" class="govuk-table__header">Quantity type</th>
+                        </tr>
+          
+                        <tr class="govuk-table__row ">
+                          <td class="border-bottom-none govuk-table__cell">Plants for Planting</td>
+                          <td class="border-bottom-none govuk-table__cell">1234</td>
+                          <td colspan="4" class="border-bottom-none govuk-table__cell">Stems</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div> #}
+          
+          <div class="chedpp-review-div">
+            <div class="table-responsive govuk-!-margin-bottom-9">
+              <table class="govuk-table presentation-table review-table" role="presentation">
+                <tbody>
+                    <tr class="presentation-table__row--no-border">
+                      <td class="govuk-table__cell" colspan="3">
+                        
+                        
+                      </td>
+                    </tr>
+                  <tr class="presentation-table__row--no-border ">
+                    <th scope="row" class="govuk-table__header">Total net weight</th>
+                    <td class="govuk-table__cell" colspan="2">123 kg</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="govuk-table__header">Total packages</th>
+                    <td class="govuk-table__cell" colspan="2">11</td>
+                  </tr>
+          
+                    <tr class="presentation-table__section">
+                      <td class="govuk-table__cell" colspan="3">
+                        
+                        
+                        
+                        
+                        
+                      </td>
+                    </tr>
+          
+                  <tr class="
+                    
+                    ">
+                    <th scope="row" class="govuk-table__header">Total gross weight (kg)</th>
+                    <td class="govuk-table__cell">1234567 kg</td>
+                    <td class="govuk-table__cell change">
+                          <a href="/notification/vnet/protected/notifications/DRAFT.GB.2021.1015508/consignment/details?fromImporterReview=true" class="govuk-link" id="consignment-details-change-link-weight">
+                          Change
+                          </a>
+                    </td>
+                  </tr>
+          
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Total gross volume</th>
+                    <td class="govuk-table__cell" colspan="2">0</td>
+                  </tr>
+          
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Total gross volume unit</th>
+                    <td class="govuk-table__cell" colspan="2"></td>
+                  </tr>
+          
+                  <tr>
+                    <th scope="row" class="govuk-table__header">Will your goods be imported in shipping containers?</th>
+                    <td class="govuk-table__cell" id="imported-in-containers" colspan="2">No</td>
+                  </tr>
+          
+                </tbody>
+              </table>
+              
+              
+              
+            </div>
+          </div>
+      
+          
+          <div class="heading-with-change-link">
+            <h2 class="govuk-heading-m">Transport to the Border Control Post (BCP)</h2>
+            <a href="transport" class="govuk-link" id="transport-to-bip-change-link">
+              Change
+            </a>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="table-responsive govuk-!-margin-bottom-9">
+            <table class="govuk-table presentation-table" id="review-table-bip-details" role="presentation">
+              <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
+              <tbody>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Border Control Post</th>
+                <td class="govuk-table__cell">Dover Port (plants) - GBDOV1PP</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Inspection Premises</th>
+                <td class="govuk-table__cell">dnata - INSPBHX1</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Means of transport to the BCP</th>
+                <td class="govuk-table__cell">Vessel</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Identification</th>
+                <td class="govuk-table__cell">12345</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Document</th>
+                <td class="govuk-table__cell">1234</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Estimated arrival date at BCP</th>
+                <td class="govuk-table__cell">12 November 2021</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Estimated arrival time at BCP</th>
+                <td class="govuk-table__cell">19:00</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="govuk-!-margin-bottom-9">
+            <h2 class="govuk-heading-m">Accompanying documents</h2>
+            <div class="heading-with-change-link">
+              <h3 class="govuk-heading-s">Additional documents</h3>
+                  <a class="govuk-link" id="documents-change-link" href="/notification/vnet/protected/notifications/DRAFT.GB.2021.1015508/documents/page-1?fromImporterReview=true">
+                    Change
+                  </a>
+            </div>
+            
+              
+              <div class="table-responsive">
+                <table id="additional-documents-table" class="govuk-table presentation-table review-additional-documents-table">
+                  <thead class="govuk-table__head">
+                    <tr>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document number</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr class="">
+                        <td class="govuk-table__cell" id="veterinary-document-type-1">
+                          Phytosanitary certificate
+                        </td>
+                        <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
+                          2e111
+                        </td>
+                        <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
+                          11 November 2021
+                        </td>
+                        <td class="govuk-table__cell">
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+          
+          <h2 class="govuk-heading-m">Traders</h2>
+          
+         
+          <div class="table-responsive govuk-!-margin-bottom-9">
+            <table class="govuk-table presentation-table review-table" id="review-table-traders" role="presentation">
+              <tbody>
+                <tr class="">
+                  <td class="govuk-table__header govuk-!-width-one-half">Importer</td>
+                  <td class="govuk-table__cell" id="importer">IPAFFS Plant Agency F<br>22 Acacia Avenue, London, N17 8LR, United Kingdom of Great Britain and Northern Ireland, 01234123123, ipaffs-plant-agency-f-flic@mailinator.com</td>
+                  <td class="govuk-table__cell change">
+                        <a href="/notification/vnet/protected/notifications/DRAFT.GB.2021.1015508/traders?fromImporterReview=true" class="govuk-link" id="traders-change-link">Change</a>
+                  </td>
+                </tr>
+                <tr class="">
+                  <td class="govuk-table__header govuk-!-width-one-half">Delivery address</td>
+                  <td class="govuk-table__cell" id="final-destination">
+                    
+                    <br>
+                    
+                  </td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="">
+                  <td class="govuk-table__header govuk-!-width-one-half">Consignor or exporter</td>
+                  <td class="govuk-table__cell" id="consignor"><br></td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <h2 class="govuk-heading-m">Contact details</h2>
+          
+          
+          
+          
+          <div class="table-responsive govuk-!-margin-bottom-9">
+            <table class="govuk-table presentation-table" id="contact-details-review-table">
+              <caption class="govuk-visually-hidden">Summary of contact details</caption>
+              <tbody>
+                <tr class="">
+                  <th scope="row" class="govuk-table__header govuk-table__header--half">Name</th>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell change">
+                        <a href="/notification/vnet/protected/notifications/DRAFT.GB.2021.1015508/contact-details?fromImporterReview=true" class="govuk-link" id="contact-details-change-link">
+                          Change
+                        </a>
+                  </td>
+                </tr>
+                <tr class="">
+                  <th scope="row" class="govuk-table__header govuk-table__header--half">Telephone number</th>
+                  <td class="govuk-table__cell" colspan="2"></td>
+                </tr>
+                <tr class="">
+                  <th scope="row" class="govuk-table__header govuk-table__header--half">Email address</th>
+                  <td class="govuk-table__cell" colspan="2"></td>
+                </tr>
+                <tr class="">
+                  <th scope="row" class="govuk-table__header govuk-table__header--half">Agent</th>
+                  <td class="govuk-table__cell" colspan="2"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+
+        <form action="16-declaration" method="POST">
+          <input class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue">
+          <input name="crumb" type="hidden" value="pSHUaiFs0oxvvVTJ3IB6XeqLQKdpnIwDhrHJ9I4Umsc">
+          <input name="etag" type="hidden" value="&quot;000000000001598B&quot;">
+        </form>
+    </div>
+  </div>
+
+{% endblock %}

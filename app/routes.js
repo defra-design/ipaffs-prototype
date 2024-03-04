@@ -9,6 +9,10 @@ const router = express.Router()
 // Start folder specific route
 // router.use('/v1', require('./views/v1/_routes'))
 
+// x baseline routes
+router.use('/baseline/chedpp/part1', require('./views/baseline/chedpp/part1/_routes'))
+router.use('/baseline/cheda/part1', require('./views/baseline/cheda/part1/_routes'))
+
 // x ched routes
 router.use('/x-ched/cr37-clone-after/chedpp', require('./views/x-ched/cr37-clone-after/chedpp/_routes'))
 router.use('/x-ched/cr37-clone-after/chedp', require('./views/x-ched/cr37-clone-after/chedp/_routes'))
