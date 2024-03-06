@@ -13,34 +13,28 @@
     <a  href="/index" id="back-link" class="govuk-!-margin-top-0 govuk-!-margin-bottom-6 govuk-back-link back-link--next-to-breadcrumbs">Back to prototypes home</a>
   </div> 
 </div>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     
     <h1 class="govuk-heading-xl">Common user charge: Foundations</h1>
     
+
+
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Version
           </dt>
           <dd class="govuk-summary-list__value">
-            Iteration 1
+            Iteration 2
           </dd>
           <dd class="govuk-summary-list__actions">
-            <strong class="govuk-tag govuk-tag--yellow">
-              UR completed
+            <strong class="govuk-tag govuk-tag--green">
+              Approved by PO
             </strong>
           </dd>
         </div>
       </dl>
-
-      
-
-
-  
-
-        
         
    
         <div class="govuk-!-padding-bottom-4">
@@ -65,9 +59,19 @@
                 <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode?action=change">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Postcode not found</td>
-                <td class="govuk-table__cell"><a href="billing-details/02b-billing-postcode-not-found?action=add">Done</a></td>
-                <td class="govuk-table__cell"><a href="billing-details/02b-billing-postcode-not-found?action=change">Done</a></td>
+                <td class="govuk-table__cell">Postcode lookup<br><b>Error messages</b></td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode-errors?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode-errors?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Postcode lookup<br><b>No address found</b></td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode-no-address?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode-no-address?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Postcode lookup<br><b>Problem with the service</b></td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode-api-error?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/02-billing-postcode-api-error?action=change">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">Select address</td>
@@ -75,14 +79,29 @@
                 <td class="govuk-table__cell"><a href="billing-details/03-select-billing-address?action=change">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Select address<br><b>Error messages</b></td>
+                <td class="govuk-table__cell"><a href="billing-details/03-select-billing-address-errors?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/03-select-billing-address-errors?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
                 <td class="govuk-table__cell">Enter address manually</td>
                 <td class="govuk-table__cell"><a href="billing-details/03b-enter-billing-address?action=add">Done</a></td>
                 <td class="govuk-table__cell"><a href="billing-details/03b-enter-billing-address?action=change">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Enter address manually<br><b>Error messages</b></td>
+                <td class="govuk-table__cell"><a href="billing-details/03b-enter-billing-address-errors?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/03b-enter-billing-address-errors?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
                 <td class="govuk-table__cell">Billing contact details</td>
                 <td class="govuk-table__cell"><a href="billing-details/04-billing-contact-details?action=add">Done</a></td>
                 <td class="govuk-table__cell"><a href="billing-details/04-billing-contact-details?action=change">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Billing contact details<br><b>Error messages</b></td>
+                <td class="govuk-table__cell"><a href="billing-details/04-billing-contact-details-errors?action=add">Done</a></td>
+                <td class="govuk-table__cell"><a href="billing-details/04-billing-contact-details-errors?action=change">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">Confirm billing details</td>
@@ -106,7 +125,7 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Notification hub – no Billing section</th>
+                <td class="govuk-table__cell">Notification hub<br><b>no Billing</b> section</td>
                 <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell"><a href="chedp/01-no-check-answers-no-billing">Done</a></td>
                 <td class="govuk-table__cell">N/A</td>
@@ -114,7 +133,8 @@
                 <td class="govuk-table__cell"><a href="chedpp/01-no-check-answers-no-billing">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Notification hub – with Billing section</th>
+                <td class="govuk-table__cell">Notification hub<br>
+                <b>with Billing</b> section</td>
                 <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell"><a href="chedp/01-no-check-answers">Done</a></td>
                 <td class="govuk-table__cell">N/A</td>
@@ -122,7 +142,7 @@
                 <td class="govuk-table__cell"><a href="chedpp/01-no-check-answers">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Review your notification</th>
+                <td class="govuk-table__cell">Review your notification</td>
                 <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell"><a href="chedp/07-cn-01-review">Done</a></td>
                 <td class="govuk-table__cell">N/A</td>
@@ -130,15 +150,25 @@
                 <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Review your notification – with error message</th>
+                <td class="govuk-table__cell">Review your notification<br>
+                <b>Error:</b> Add billing details</td>
                 <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review-errors">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review-error-add">Done</a></td>
                 <td class="govuk-table__cell">N/A</td>
-                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review-errors">Done</a></td>
-                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review-errors">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review-error-add">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review-error-add">Done</a></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Confirmation</th>
+                <td class="govuk-table__cell">Review your notification<br>
+                <b>Error:</b> Confirm billing details</td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review-error-confirm">Done</a></td>
+                <td class="govuk-table__cell">N/A</td>
+                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review-error-confirm">Done</a></td>
+                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review-error-confirm">Done</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Confirmation</td>
                 <td class="govuk-table__cell"><a href="common/20-submitted-inspection-required">Done<br>P, D, PP</a></td>
                 <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell"></td>
@@ -147,8 +177,12 @@
               </tr>
             </tbody>
           </table>
+          Previous iterations:
+          <ol class="govuk-list govuk-list--number">
+            <li><a href="../iteration-1/start">Iteration 1</a></li>
+          </ol>
         </div>
 
   </div>
-</div>   
+</div>  
 {% endblock %}

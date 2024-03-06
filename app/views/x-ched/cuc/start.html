@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">   
+    <a  href="/index" id="back-link" class="govuk-!-margin-top-0 govuk-!-margin-bottom-6 govuk-back-link back-link--next-to-breadcrumbs">Back to prototypes home</a>
+  </div> 
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
+    <h1 class="govuk-heading-xl">Common user charge: Foundations</h1>
+    
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col"> Version </th>
+          <th class="govuk-table__header" scope="col"> Status </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="latest/start">Latest (Iteration 2)</a>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
+              Approved by PO
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="iteration-1/start">Iteration 1</a>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              UR completed
+            </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>  
+{% endblock %}
