@@ -18,8 +18,9 @@ router.use('/x-ched/cr37-clone-after/chedpp', require('./views/x-ched/cr37-clone
 router.use('/x-ched/cr37-clone-after/chedp', require('./views/x-ched/cr37-clone-after/chedp/_routes'))
 router.use('/x-ched/cr37-clone-after/cheda', require('./views/x-ched/cr37-clone-after/cheda/_routes'))
 router.use('/x-ched/e-cert-chedp', require('./views/x-ched/e-cert-chedp/_routes'))
-router.use('/x-ched/cuc/latest/billing-details', require('./views/x-ched/cuc/latest/billing-details/_routes'))
-router.use('/x-ched/cuc/iteration-1/billing-details', require('./views/x-ched/cuc/iteration-1/billing-details/_routes'))
+router.use('/x-ched/cuc-foundations/latest/billing-details', require('./views/x-ched/cuc-foundations/latest/billing-details/_routes'))
+router.use('/x-ched/cuc-foundations/iteration-1/billing-details', require('./views/x-ched/cuc-foundations/iteration-1/billing-details/_routes'))
+router.use('/x-ched/cuc-oi/latest/billing-details', require('./views/x-ched/cuc-oi/latest/billing-details/_routes'))
 
 
 // ched p rotes
