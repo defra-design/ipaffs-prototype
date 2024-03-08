@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What are you importing? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">About the consignment</span>
+
+      <form class="form" action="01-ac-02-origin" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+                What are you importing?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="chedtype" type="radio" value="Live animals">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  Live animals
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="chedtype" type="radio" value="Products of animal origin">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Products of animal origin
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="chedtype" type="radio" value="High risk food and feed of non-animal origin">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  High risk food and feed of non-animal origin
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="chedtype" type="radio" value="Plants, plant products and other objects">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                  Plants, plant products and other objects
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
