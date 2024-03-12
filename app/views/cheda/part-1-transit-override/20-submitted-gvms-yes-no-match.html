@@ -1,0 +1,124 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirmation – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+    
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="confirmation-page">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+        <h1 class="govuk-panel__title">
+          Your notification has been submitted
+        </h1>
+      </div>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-1">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            CHED reference
+          </dt>
+          <dd class="govuk-summary-list__value">
+            CHEDA.GB.2023.6244839
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy
+            </button>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            Customs declaration reference
+          </dt>
+          <dd class="govuk-summary-list__value">
+            GBCHD2023.6244839
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy
+            </button>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            Customs document code
+          </dt>
+          <dd class="govuk-summary-list__value">
+            C640
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy
+            </button>
+          </dd>
+        </div>
+      </dl>      
+
+      <div class="govuk-warning-text govuk-!-margin-bottom-1">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You must use the correct reference and code on the customs declaration or your consignment will be delayed.
+        </strong>
+      </div>
+      <hr class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      
+      <p class="govuk-body">The driver must check with the Goods Vehicle Movement Service (GVMS) before disembarking to find out if an inspection is required.</p>
+
+      <div class="govuk-inset-text">
+        The Goods Vehicle Movement Service (GVMS) will notify the driver about all inspections needed for your animals.
+      </div>
+
+        <div>
+          <a href="0-index-post-submit" class="govuk-link govuk-!-font-size-19" id="manage-notifications">
+            Return to your dashboard
+          </a>
+        </div>
+        <div>
+          <form action="01-ched-type" method="post" id="homeForm">
+          <input class="link-button" type="submit" name="new-notification" value="Create a new import notification">
+          </form>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+{% endblock %}
