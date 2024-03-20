@@ -23,9 +23,10 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       <span class="govuk-caption-xl">Traders</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Addresses</h1>
 
-      <form class="form" action="05-00-transport-to-poe-gvms.html" method="post">
+      <form action="11-transport-to-poe" method="post">
         <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
         <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
+        <input name="14-addresses" type="hidden" value="visited">
 
         <div class="govuk-!-margin-bottom-8">
           <h2 class="govuk-heading-m">
@@ -47,22 +48,22 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               <tbody>
               <tr>
                 <td class="govuk-table__cell col-name" headers="consignor-name">
-                  &nbsp;
+                  Produkty Mięsne Fm
                 </td>
                 <td class="govuk-table__cell col-address" headers="consignor-address">
-                  &nbsp;
+                  90 Bazar Ulica , Apt. 924, Wroclaw, 48721
                 </td>
                 <td class="govuk-table__cell col-country" headers="consignor-country">
-                  &nbsp;
+                  Poland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
-                  &nbsp;
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignor/search" class="govuk-link" id="edit-consignor">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-          <a href="04-tr-02-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
+
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -85,22 +86,22 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               <tbody>
               <tr>
                 <td class="govuk-table__cell col-name" headers="consignee-name">
-                  &nbsp;
+                  ABC goods Ltd
                 </td>
                 <td class="govuk-table__cell col-address" headers="consignee-address">
-                  &nbsp;
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
                 </td>
                 <td class="govuk-table__cell col-country" headers="consignee-country">
-                  &nbsp;
+                  United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
-                  &nbsp;
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignee/search" class="govuk-link" id="edit-consignee">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-          <a href="04-tr-02-address-search" class="govuk-link govuk-!-font-size-19" id="add-consignee">Add a consignee </a>
+
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -123,22 +124,22 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               <tbody>
               <tr>
                 <td class="govuk-table__cell col-name" headers="importer-name">
-                  &nbsp;
+                  ABC goods Ltd
                 </td>
                 <td class="govuk-table__cell col-address" headers="importer-address">
-                  &nbsp;
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
                 </td>
                 <td class="govuk-table__cell col-country" headers="importer-country">
-                  &nbsp;
+                  United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
-                  &nbsp;
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/importer/search" class="govuk-link" id="edit-importer">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-          <a href="04-tr-02-address-search" class="govuk-link govuk-!-font-size-19" id="add-importer">Add an importer </a>
+
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -171,30 +172,33 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               <tbody>
               <tr>
                 <td class="govuk-table__cell col-name" headers="place-of-destination-name">
-                  &nbsp;
+                  ABC goods Ltd
                 </td>
                 <td class="govuk-table__cell col-address" headers="place-of-destination-address">
-                  &nbsp;
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
                 </td>
                 <td class="govuk-table__cell col-country" headers="place-of-destination-country">
-                 &nbsp;
+                  United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="place-of-destination-edit">
-                  &nbsp;
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/final-destination/search" class="govuk-link" id="edit-place-of-destination">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-          <a href="04-tr-02-address-search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a>
+
         </div>
         <div class="save-and-submit-buttons">
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-          <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
+          <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
+          <p class="govuk-body"><a class="govuk-link" href="07-check-answers-orig">Cancel and return to hub</a></p>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </main>
-  {% endblock %}
+
+
+
+{% endblock %}

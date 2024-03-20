@@ -16,8 +16,8 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-!-padding-top-6">
   <span class="heading-tertiary">
-      <span id="reference-number">DRAFT.GB.2023.2987635</span>
-          <span> - CHEDD</span>
+      <span id="reference-number">DRAFT.GB.2023.5925980</span>
+          <span> - CHEDP</span>
   </span>
 </div>
 
@@ -41,45 +41,59 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-xl">Documents</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Accompanying documents</h1>
-    </div>
-  </div>
-
-      <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
-              
-           
-        <p class="govuk-body">Upload any required documents, for example:</p>
-        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <li>
-            if applicable, a health or phytosanitary certificate (also known as the ‘official certificate’) and laboratory sample results
-          </li>
-          <li>
-            transport documents, such as a road consignment (CMR) note or air, sea or rail waybills
-          </li>
-          <li>
-            commercial documents, such as bill of lading, invoice and packing list
-          </li>
-         
-        
-        </ul>
-      </div>
-    </div>
 
 
-      <form action="04-01-trader-addresses" method="POST">
+
+
+      <form action="13-approved-est" method="post">
         <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
         <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
-         
+        <input name="12-accompanying-docs" type="hidden" value="visited"> 
        
        
 
 
         <div class="govuk-!-margin-bottom-9 additional-documents-table" id="additional-documents-table">
-          
               <!-- <div class="additional-documents__caption govuk-heading-m" id="add-additional-documents-header">
                 Add additional documents
               </div> -->
+            <p class="govuk-body">You must include commercial documentation. </p>
 
+            {% if (data['risk-category'] == "low") %}
+              <p class="govuk-body"> You do not need to upload a health certificate for this consignment.</p>
+            {% endif %}
+             <!--  <h3>IUU</h3>
+              <p class="govuk-body">There's a separate section to upload catch certificates later in this notification.
+              </p>
+              <p class="govuk-body govuk-!-margin-bottom-6">Read the requirements for <a href="https://www.gov.uk/guidance/importing-or-moving-fish-to-the-uk">import documents</a> needed for wild fish.</p>
+            -->
+              <details class="govuk-details  govuk-!-width-three-quarters">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Check which  documents you should upload
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                  <p class="govuk-body">Add other documents relating to this consignment, for example:</p>
+                  <ul class="govuk-list govuk-list--bullet" id="supporting-details-accordion">
+                    <li>an invoice for the consignment</li>
+                    <li>travel documents or proof of travel, such as air, sea or rail waybills</li>
+                    <li>other documents required for this consignment - this may include catch certificates, storage and processing documents</li>
+                  </ul>
+                  <!-- <h3 class="govuk-heading-s">Illegal, unreported and regulated (IUU) documents</h3>
+                  <p class="govuk-body">Most wild caught fishery products will need IUU documents.</p>
+  
+                  <p class="govuk-body">Upload your processing statements and storage documents here.</p>
+
+                  <p class="govuk-body">If you have catch certificates, upload these in the <a href="09-iuu-docs">catch certificates section</a>.</p>
+
+                  <p class="govuk-body">For help with IUU documents, check the guidance on <a href="https://www.gov.uk/guidance/importing-or-moving-fish-to-the-uk" class="govuk-link" rel="noreferrer noopener" target="_blank">importing or moving fish to the UK (opens in new tab)</a>.</p> -->
+
+
+                  
+                      
+              </div>
+            </details>
 
             <p class="govuk-heading-s" id="additional-documents-number-of-documents-message">Showing 0 additional documents</p>
 
@@ -199,22 +213,24 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
             <div >
             <input name="is-additional-document-row-shown" type="hidden" value="true">
-            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="accDocRoutelink" value="Add documents">
+            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-additional-document" name="add-additional-document" value="">
                 Add a document
             </button>
 
-            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="accDocRoutelink" value="Add documents">
+            <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="add-multiple-documents" value="">
               Add multiple documents
             </button>
             </div>
         </div>
+       
+        
 
           
         <input name="current-page-number" type="hidden" value="1">
 
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="accDocRoutelink" type="submit" value="Save and return to hub" data-module="govuk-button">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button" id="button-save-and-continue-p" name="accDocRoutelink" type="submit" value="Save and continue" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to  hub</a></p>
+        <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
+        <p class="govuk-body"><a class="govuk-link" href="07-check-answers-orig">Cancel and return to  hub</a></p>
       </form>
     </div>
   </div>
