@@ -46,44 +46,75 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
+              <h2 class="govuk-fieldset__heading">
                 Means of transport to port of entry
-              </h1>
+              </h2>
             </legend>
+            <div id="contact-hint" class="govuk-hint">
+              Select one option.
+            </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="airplane">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                <input class="govuk-radios__input" id="transport-airplane" name="means-of-transport" type="radio" value="airplane" data-aria-controls="conditional-flight-number">
+                <label class="govuk-label govuk-radios__label" for="transport-airplane">
                   Airplane
                 </label>
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="railway">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                  Railway
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="road-vehicle" data-aria-controls="conditional-whereDoYouLive-3">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
-                  Road vehicle
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-whereDoYouLive-3">
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-flight-number">
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-email">
-                    Enter vehicle or trailer registration number
+                  <label class="govuk-label" for="flight-number">
+                    Enter flight number
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="whereDoYouLive-registration-number" name="whereDoYouLiveregistrationnumber" spellcheck="false">
+                  <input class="govuk-input govuk-!-width-one-third" id="flight-number" name="flight-number" type="text" spellcheck="false">
                 </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="vessel">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+                <input class="govuk-radios__input" id="transport-railway" name="means-of-transport" type="radio" value="railway" data-aria-controls="conditional-train-number">
+                <label class="govuk-label govuk-radios__label" for="transport-railway">
+                  Railway
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-train-number">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="train-number">
+                    Enter train number
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="train-number" name="train-number" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="transport-road-vehicle" name="means-of-transport" type="radio" value="vehicle" data-aria-controls="conditional-vehicle-registration-number">
+                <label class="govuk-label govuk-radios__label" for="transport-road-vehicle">
+                  Road vehicle
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vehicle-registration-number">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="vehicle-registration-number">
+                    Enter road vehicle registration number
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="vehicle-registration-number" name="vehicle-registration-number" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="transport-vessel" name="means-of-transport" type="radio" value="vessel" data-aria-controls="conditional-vessel-name">
+                <label class="govuk-label govuk-radios__label" for="transport-vessel">
                   Vessel
                 </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vessel-name">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="vessel-name">
+                    Enter vessel name
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third govuk-!-margin-bottom-3" id="vessel-name" name="vessel-name" type="text">
+                  <label class="govuk-label" for="vessel-name">
+                    Enter road vehicle registration number (for ferries)
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
+                </div>
               </div>
             </div>
           </fieldset>
