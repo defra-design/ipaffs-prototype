@@ -30,7 +30,7 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-grid-column-full">
 
 
-      <form action="11b-transport-additional-details" method="post">
+      <form action="16-transport-after-bcp" method="post">
         <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
         <input name="etag" type="hidden" value="&quot;00000000053B49D9&quot;">
         <input name="11-transport-to-poe" type="hidden" value="visited">
@@ -45,52 +45,45 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
             <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
         </div>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
-                Means of transport to port of entry
-              </h1>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="airplane">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-                  Airplane
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="railway">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                  Railway
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="road-vehicle" data-aria-controls="conditional-whereDoYouLive-3">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
-                  Road vehicle
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-whereDoYouLive-3">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-email">
-                    Enter vehicle or trailer registration number
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="whereDoYouLive-registration-number" name="whereDoYouLiveregistrationnumber" spellcheck="false">
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="vessel">
-                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
-                  Vessel
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+        <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0 govuk-!-margin-bottom-2">
+          Means of transport to port of entry
+        </h2>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--s" for="transport-means-before">
+                <span class="govuk-visually-hidden">Choose from:</span>
+            </label>
+            
+            <select class="govuk-select govuk-!-width-one-half" id="transport-means-before" name="transport-means-before">
+                <option value="">Select means of transport to port of entry</option>
+                  <option value="plane">Airplane</option>
+                  <option value="rail">Railway</option>
+                  <option value="road">Road vehicle</option>
+                  <option value="ship">Vessel</option>
+            </select>
+          </div>
 
         
-        
+        <div class="govuk-form-group ">
+            
+          <label class="govuk-label govuk-label--m" for="document">
+            Transport identification
+          </label>
+          
+      
+          <div id="document-hint" class="govuk-hint govuk-!-width-two-thirds">
+            <p class="govuk-hint">To identify the means of transport, enter (one of the following):</p>
+            <ul>
+              <li>flight number</li>
+              <li>train number</li>
+              <li>road vehicle registration number</li>
+              <li>vessel name (for ferries, also the road vehicle registration number)</li>
+            </ul>
+          </div>
+      
+          
+      
+        <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
+      </div>
 
         <div class="govuk-form-group ">
             
@@ -106,6 +99,48 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
             
         
           <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-width-two-thirds">
+              <h1 class="govuk-fieldset__heading ">
+                Will the transport use the Goods Vehicle Movement Service (GVMS)?
+              </h1>
+            </legend>
+            <div class="govuk-radios ">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="transport-details-required" name="transport-details-required" type="radio" value="true">
+                <label class="govuk-label govuk-radios__label " for="transport-details-required">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="transport-details-required-2" name="transport-details-required" type="radio" value="false" checked>
+                <label class="govuk-label govuk-radios__label " for="transport-details-required-2">
+                  No
+                </label>
+              </div>
+          </div>
+          </fieldset>
+          <details class="govuk-details govuk-!-margin-top-4 govuk-!-width-two-thirds" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What is the GVMS?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">The GVMS helps to speed up customs clearance at some UK ports.</p>
+              <p class="govuk-body">To move your goods, you need to:</p>
+              <ol class="govuk-list govuk-list--number">
+                <li><a href="https://www.gov.uk/guidance/list-of-ports-using-the-goods-vehicle-movement-service" target="_blank">Find out which ports use the GVMS (opens in new tab)</a></li>
+                <li><a href="https://www.gov.uk/guidance/register-for-the-goods-vehicle-movement-service" target="_blank">Register for the GVMS (opens in new tab)</a></li>
+                <li><a href="https://www.gov.uk/guidance/get-a-goods-movement-reference" target="_blank">Get a goods movement reference (GMR) (opens in new tab)</a></li>
+              </ol>
+              <p class="govuk-body">The GMR is a single reference that brings together multiple declarations. Without it, you cannot move your goods through UK ports which use the GVMS and you may face delays.</p>
+              <p class="govuk-body">The driver must check the GVMS to find out if an inspection is required before they disembark.</p>
+            </div>
+          </details>
         </div>
 
         <div class="" id="estimated-arrival-at-bcp">
