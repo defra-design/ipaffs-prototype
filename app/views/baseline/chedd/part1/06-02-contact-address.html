@@ -19,60 +19,210 @@
 </div>
 
 <main class="govuk-main-wrapper" id="main-content">
-
-<div class="govuk-grid-row">
-
-  <form class="form" action="07-00-billing-details" method="post">
+  <div class="govuk-grid-row" id="organisation-branch-address-page">
     <div class="govuk-grid-column-full">
-      <div class="govuk-hint govuk-!-margin-bottom-6"></div>
-      <span class="govuk-caption-xl">Complete notification</span>
-
-  <form class="form" action="07-cn-01-review" method="post">
-    <div class="govuk-grid-column-three-quarters">
-    <h1 class="govuk-heading-xl" id="page-primary-title">Contact adress for consignment</h1>
-      <p class="govuk-hint govuk-!-margin-bottom-4">This is the contact address of the person responsible for the consignment from when it enters Great Britain until authorities complete their checks.</p>
-      <fieldset class="govuk-fieldset govuk-!-margin-bottom-5">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
-            Select an address
-          </h2>
-          <p class="govuk-hint">If the correct address is not shown,
-            <a class="govuk-link" href="#">add a new branch address</a>
-            , then return to this page.</p>
-        </legend>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live" name="ad" type="radio" value="6 Wharncliffe Court,
-              Carlton, Barnsley, S71 3BY, United Kingdom">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-              6 Wharncliffe Court<br>
-              Carlton<br>
-              Barnsley<br>
-              S71 3BY<br>
-              United Kingdom<br>
-            </label>
+          <h1 class="govuk-heading-xl " id="page-primary-title">Contact address for consignment</h1>
+        <p class="govuk-body govuk-hint">This is the contact address of the person responsible for
+          the consignment from when it enters Great Britain until authorities complete their
+          checks.</p>
+      <form action="07-00-billing-details" method="POST">
+        <input name="crumb" type="hidden" value="WgYrnDCuPha9-qu9_5tDIJtwfHDZSzlALs6xJaxweMx">
+        <input name="etag" type="hidden" value="&quot;0000000000273F13&quot;">
+        <div class="govuk-form-group branch-address-select ">
+          <fieldset class="govuk-fieldset">
+          
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Select an address
+          </legend>
+          <p class="govuk-body govuk-hint">If the correct address is not shown,
+            <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1110181/traders/organisation branch address/new" class="govuk-link govuk-!-font-size-19" id="add-branch-address">add a new branch address</a>, then return to this page.
+          </p>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="0-branch-address" name="branch-address-select" value="0" type="radio" checked="">
+              <label class="govuk-label govuk-radios__label" for="0-branch-address">
+                Animal and Plant Health Agency<br>
+                Woodham Lane<br>
+                New Haw<br>
+                Surrey<br>
+                Addlestone<br>
+                KT15 3NB<br>
+                United Kingdom of Great Britain and Northern Ireland<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="900eb8ed-ad9a-4afd-8066-4b69ef532608-branch-address" name="branch-address-select" value="900eb8ed-ad9a-4afd-8066-4b69ef532608" type="radio">
+              <label class="govuk-label govuk-radios__label" for="900eb8ed-ad9a-4afd-8066-4b69ef532608-branch-address">
+                4295 Michele Courts<br>
+                Suite 479<br>
+                Florida<br>
+                Kesslerbury<br>
+                52827-4<br>
+                Albania<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="9950007b-1cb0-4723-b554-0d12a1b21346-branch-address" name="branch-address-select" value="9950007b-1cb0-4723-b554-0d12a1b21346" type="radio">
+              <label class="govuk-label govuk-radios__label" for="9950007b-1cb0-4723-b554-0d12a1b21346-branch-address">
+                6960 Katrina Freeway<br>
+                Suite 489<br>
+                Alabama<br>
+                Lake Rafael<br>
+                84776-0<br>
+                France<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="1239984f-b947-4515-ab10-ee71f9a26156-branch-address" name="branch-address-select" value="1239984f-b947-4515-ab10-ee71f9a26156" type="radio">
+              <label class="govuk-label govuk-radios__label" for="1239984f-b947-4515-ab10-ee71f9a26156-branch-address">
+                23228 Zelda Unions<br>
+                Suite 963<br>
+                Nebraska<br>
+                East Prestontown<br>
+                44021-8<br>
+                Poland<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="7e310d3c-083d-4009-820a-b2dc05f9e487-branch-address" name="branch-address-select" value="7e310d3c-083d-4009-820a-b2dc05f9e487" type="radio">
+              <label class="govuk-label govuk-radios__label" for="7e310d3c-083d-4009-820a-b2dc05f9e487-branch-address">
+                514 Rempel Track<br>
+                Apt. 309<br>
+                New Hampshire<br>
+                Johannachester<br>
+                79217<br>
+                Albania<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="5fec85d8-8ded-4141-8d66-c13d4327739c-branch-address" name="branch-address-select" value="5fec85d8-8ded-4141-8d66-c13d4327739c" type="radio">
+              <label class="govuk-label govuk-radios__label" for="5fec85d8-8ded-4141-8d66-c13d4327739c-branch-address">
+                5952 Funk Squares<br>
+                Suite 145<br>
+                Mississippi<br>
+                Johnsonfort<br>
+                69081<br>
+                Albania<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="ed658e58-bae5-494c-9555-fddf1807f48f-branch-address" name="branch-address-select" value="ed658e58-bae5-494c-9555-fddf1807f48f" type="radio">
+              <label class="govuk-label govuk-radios__label" for="ed658e58-bae5-494c-9555-fddf1807f48f-branch-address">
+                8448 Gleason Creek<br>
+                Apt. 221<br>
+                Nevada<br>
+                Hyattmouth<br>
+                72183<br>
+                France<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="5b1329a6-eb85-42ef-b018-f71325ba6cba-branch-address" name="branch-address-select" value="5b1329a6-eb85-42ef-b018-f71325ba6cba" type="radio">
+              <label class="govuk-label govuk-radios__label" for="5b1329a6-eb85-42ef-b018-f71325ba6cba-branch-address">
+                78951 McClure Hill<br>
+                Apt. 342<br>
+                Georgia<br>
+                Port Henry<br>
+                27492-2<br>
+                Brazil<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="95ab0d19-28be-40bc-8271-892f868f668e-branch-address" name="branch-address-select" value="95ab0d19-28be-40bc-8271-892f868f668e" type="radio">
+              <label class="govuk-label govuk-radios__label" for="95ab0d19-28be-40bc-8271-892f868f668e-branch-address">
+                606 Tillman Plaza<br>
+                Suite 101<br>
+                North Carolina<br>
+                Roobfort<br>
+                73806-3<br>
+                Germany<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="71bd72ae-2735-4629-b1c3-8e39ed5e8b7b-branch-address" name="branch-address-select" value="71bd72ae-2735-4629-b1c3-8e39ed5e8b7b" type="radio">
+              <label class="govuk-label govuk-radios__label" for="71bd72ae-2735-4629-b1c3-8e39ed5e8b7b-branch-address">
+                1167 Phyllis Pike<br>
+                Apt. 421<br>
+                New Mexico<br>
+                Carterberg<br>
+                11324<br>
+                Poland<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="ce77f9db-a4d0-4731-993f-5986129a740e-branch-address" name="branch-address-select" value="ce77f9db-a4d0-4731-993f-5986129a740e" type="radio">
+              <label class="govuk-label govuk-radios__label" for="ce77f9db-a4d0-4731-993f-5986129a740e-branch-address">
+                469 Violet Fields<br>
+                Suite 873<br>
+                Wyoming<br>
+                Lorineside<br>
+                13133<br>
+                Germany<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="1152969e-0eb3-42b8-9bf8-dacfc20807b2-branch-address" name="branch-address-select" value="1152969e-0eb3-42b8-9bf8-dacfc20807b2" type="radio">
+              <label class="govuk-label govuk-radios__label" for="1152969e-0eb3-42b8-9bf8-dacfc20807b2-branch-address">
+                98176 Ratke Plains<br>
+                Apt. 236<br>
+                Minnesota<br>
+                Ratkefurt<br>
+                51887-8<br>
+                Brazil<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="a70b1a56-93a2-4c73-b46f-1d0eea0f9740-branch-address" name="branch-address-select" value="a70b1a56-93a2-4c73-b46f-1d0eea0f9740" type="radio">
+              <label class="govuk-label govuk-radios__label" for="a70b1a56-93a2-4c73-b46f-1d0eea0f9740-branch-address">
+                294 Pfeffer Brooks<br>
+                Suite 044<br>
+                Georgia<br>
+                Gottliebfurt<br>
+                72933-8<br>
+                Germany<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="3db4462a-1b97-450a-847b-0b9df747337f-branch-address" name="branch-address-select" value="3db4462a-1b97-450a-847b-0b9df747337f" type="radio">
+              <label class="govuk-label govuk-radios__label" for="3db4462a-1b97-450a-847b-0b9df747337f-branch-address">
+                7711 Barrows Knoll<br>
+                Apt. 343<br>
+                Nevada<br>
+                Daijaville<br>
+                70790<br>
+                Poland<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="7b3d0a89-6999-488e-922f-65fb544464fc-branch-address" name="branch-address-select" value="7b3d0a89-6999-488e-922f-65fb544464fc" type="radio">
+              <label class="govuk-label govuk-radios__label" for="7b3d0a89-6999-488e-922f-65fb544464fc-branch-address">
+                55099 Howe Haven<br>
+                Suite 376<br>
+                Idaho<br>
+                Hellerfurt<br>
+                20349<br>
+                Albania<br>
+              </label>
+            </div>
+            <div class="govuk-radios__item branch-address-select">
+              <input class="govuk-radios__input" id="6f4972ce-1671-45a3-b52d-38b157bc222e-branch-address" name="branch-address-select" value="6f4972ce-1671-45a3-b52d-38b157bc222e" type="radio">
+              <label class="govuk-label govuk-radios__label" for="6f4972ce-1671-45a3-b52d-38b157bc222e-branch-address">
+                8445 Stark Drive<br>
+                Apt. 149<br>
+                New Hampshire<br>
+                New Michelleside<br>
+                88682-9<br>
+                Brazil<br>
+              </label>
+            </div>
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-2" name="ad" type="radio"
-                   value="27 Victoria Street, Chelmsford, CM62 3EV, United Kingdom">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-              27 Victoria Street<br>
-              Chelmsford<br>
-              CM62 3EV<br>
-              United Kingdom<br>
-            </label>
-          </div>
+          </fieldset>
         </div>
-      </fieldset>
-      <div class="govuk-!-margin-bottom-9"></div>
-      <div class="save-and-submit-buttons">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
-      </div>
+            <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button" data-prevent-double-click="true">Save and return to hub</button>
+            <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+            <p class="govuk-body"><a class="govuk-link" href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1110181/overview">Cancel and return to hub</a></p>
+      </form>
     </div>
-  </form>
-</div>
+  </div>
 </main>
 
 {% endblock %}
