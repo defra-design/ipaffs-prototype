@@ -41,9 +41,23 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
   </div>
 </div>
 
+<div class="govuk-error-summary govuk-!-margin-bottom-2 govuk-!-margin-top-6" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      Important
+    </h2>
+    <div class="govuk-error-summary__body">
+      <p class="govuk-body govuk-!-width-three-quarters"><strong>You can submit this notification without a movement reference number (MRN), but you must add it later.</strong></p>
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-three-quarters">
+        <li>
+          <a href="11b-goods-movement-services">Add movement reference number</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-
-  <div class="govuk-!-padding-top-6 govuk-!-margin-bottom-3">
+  <div class="govuk-!-padding-top-6">
     <span class="heading-tertiary">
         <span id="reference-number">DRAFT.GB.2023.5925980</span>
             <span> - CHEDP</span>
@@ -814,7 +828,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         <tr>
                           <td class="govuk-table__header">Movement reference number (MRN)</td>
                           <td class="govuk-table__cell" id="region-of-consignment-value">
-                            23GB1234567890ABCD
+                            <a href="11b-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">Add MRN</a>
                           </td>
                           <td class="govuk-table__cell"></td>
                         </tr>
