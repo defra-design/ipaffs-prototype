@@ -5,14 +5,40 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
-{% endblock %}
-
 {% block content %}
 
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
 
+<div class="navigation-links">
+    <a href="review" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <div class="navigation-links__divider">|</div>
+<div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="index">Dashboard</a>
+        </li>
+      </ol>
+    </div>
+
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Pig</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
 
 <div class="govuk-!-padding-top-6">
     <span class="heading-tertiary">
@@ -28,7 +54,7 @@
         <span class="govuk-caption-xl" id="page-secondary-title">Transport</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Transport details</h1>
 
-      <form action="11b-goods-movement-services" method="post">
+      <form action="before-bip" method="post">
         <input name="crumb" type="hidden" value="rRvl8RBppH2ycmf0gXLXGeHAauhhv0ztAysA0pUak_N">
         <input name="etag" type="hidden" value="&quot;00000000057AB983&quot;">
         <input id="js-enabled-flag" name="js-enabled" type="hidden" value="true">
@@ -163,7 +189,47 @@
 
           </div>
 
-          
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-width-two-thirds">
+              <h1 class="govuk-fieldset__heading ">
+                Will the transport use the Goods Vehicle Movement Service (GVMS)?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gvms-yes" name="gvms" type="radio" value="Yes" aria-describedby="gvms-yes-hint"  {{ checked('gvms','Yes') }}>
+                <label class="govuk-label govuk-radios__label" for="gvms-yes">
+                  Yes &ndash; the GVMS will notify the driver about all inspections
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gvms-no" name="gvms" type="radio" value="No" aria-describedby="gvms-no-hint" {{ checked('gvms','No') }}>
+                <label class="govuk-label govuk-radios__label" for="gvms-no">
+                  No &ndash; you must notify the haulier or driver about all inspections
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <details class="govuk-details govuk-!-margin-top-4 govuk-!-width-two-thirds" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What is the GVMS?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">The GVMS helps to speed up customs clearance at some UK ports.</p>
+              <p class="govuk-body">To move your goods, you need to:</p>
+              <ol class="govuk-list govuk-list--number">
+                <li><a href="https://www.gov.uk/guidance/list-of-ports-using-the-goods-vehicle-movement-service" target="_blank">Find out which ports use the GVMS (opens in new tab)</a></li>
+                <li><a href="https://www.gov.uk/guidance/register-for-the-goods-vehicle-movement-service" target="_blank">Register for the GVMS (opens in new tab)</a></li>
+                <li><a href="https://www.gov.uk/guidance/get-a-goods-movement-reference" target="_blank">Get a goods movement reference (GMR) (opens in new tab)</a></li>
+              </ol>
+              <p class="govuk-body">The GMR is a single reference that brings together multiple declarations. Without it, you cannot move your goods through UK ports which use the GVMS and you may face delays.</p>
+              <p class="govuk-body">The driver must check the GVMS to find out if an inspection is required before they disembark.</p>
+            </div>
+          </details>
+        </div>
 
         <div class="" id="estimated-arrival-at-bcp">
               

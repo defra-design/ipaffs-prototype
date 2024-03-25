@@ -331,7 +331,48 @@
               </fieldset>
             </div>
 
-            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="ctc-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
+                  <h1 class="govuk-fieldset__heading">
+                    Is your consignment using the Common Transit Convention (CTC)?
+                  </h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="ctc" name="ctc" type="radio" value="yes" data-aria-controls="conditional-ctc">
+                    <label class="govuk-label govuk-radios__label" for="ctc">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ctc">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m">
+                        Enter CTC movement reference number (MRN)
+                      </label>
+                      <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
+                        This is 18 characters long and appears on the transit declaration. For example, 23GB1234567890ABCD.
+                      </span>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+                    </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="ctc-2" name="ctc" type="radio" value="no" data-aria-controls="conditional-ctc-2">
+                    <label class="govuk-label govuk-radios__label" for="ctc-2">
+                      No
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-phone">
+                        Phone number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
 
 
 

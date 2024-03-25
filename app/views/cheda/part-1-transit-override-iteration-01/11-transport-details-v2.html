@@ -5,14 +5,40 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
-{% endblock %}
-
 {% block content %}
 
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
 
+<div class="navigation-links">
+    <a href="review" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <div class="navigation-links__divider">|</div>
+<div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="index">Dashboard</a>
+        </li>
+      </ol>
+    </div>
+
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Pig</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
 
 <div class="govuk-!-padding-top-6">
     <span class="heading-tertiary">
@@ -28,7 +54,7 @@
         <span class="govuk-caption-xl" id="page-secondary-title">Transport</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Transport details</h1>
 
-      <form action="11b-goods-movement-services" method="post">
+      <form action="before-bip" method="post">
         <input name="crumb" type="hidden" value="rRvl8RBppH2ycmf0gXLXGeHAauhhv0ztAysA0pUak_N">
         <input name="etag" type="hidden" value="&quot;00000000057AB983&quot;">
         <input id="js-enabled-flag" name="js-enabled" type="hidden" value="true">
@@ -107,46 +133,79 @@
         
         <script src="/notification/tst/public/javascripts/transport_to_bip_poe.js?v=1.0.2880"></script>
 
-        <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0">
-          Means of transport to port of entry
-        </h2>
-          <div class="govuk-form-group  ">
-            <label class="govuk-label govuk-label--s" for="transport-means-before">
-                <span class="govuk-visually-hidden">Choose from:</span>
-            </label>
-            
-            <select class="govuk-select govuk-!-width-one-half" id="transport-means-before" name="transport-means-before">
-                <option value="" selected="">Select means of transport to port of entry</option>
-                  <option value="plane">Airplane</option>
-                  <option value="rail">Railway</option>
-                  <option value="road">Road vehicle</option>
-                  <option value="ship">Vessel</option>
-            </select>
-          </div>
 
-          <div class="govuk-form-group  ">
-              
-              <label class="govuk-label govuk-label--m" for="identification">
-                Transport identification
-              </label>
-              
-          
-              <div id="identification-hint" class="govuk-hint">
-                <p class="govuk-hint">To identify the means of transport, enter (one of the following):</p>
-                <ul class="govuk-!-width-two-thirds">
-                  <li>flight number</li>
-                  <li>train number</li>
-                  <li>road vehicle registration number</li>
-                  <li>vessel name (for ferries, also the road vehicle registration number)</li>
-                </ul>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                  Means of transport to port of entry
+                </h2>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
               </div>
-          
-              
-          
-            <input class="govuk-input govuk-!-width-one-half " id="identification" name="identification" type="text" value="" aria-describedby="identification-hint">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="transport-airplane" name="means-of-transport" type="radio" value="airplane" data-aria-controls="conditional-flight-number">
+                  <label class="govuk-label govuk-radios__label" for="transport-airplane">
+                    Airplane
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-flight-number">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="flight-number">
+                      Enter flight number
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="flight-number" name="flight-number" type="text" spellcheck="false">
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="transport-railway" name="means-of-transport" type="radio" value="railway" data-aria-controls="conditional-train-number">
+                  <label class="govuk-label govuk-radios__label" for="transport-railway">
+                    Railway
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-train-number">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="train-number">
+                      Enter train number
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="train-number" name="train-number" type="text">
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="transport-road-vehicle" name="means-of-transport" type="radio" value="vehicle" data-aria-controls="conditional-vehicle-registration-number">
+                  <label class="govuk-label govuk-radios__label" for="transport-road-vehicle">
+                    Road vehicle
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vehicle-registration-number">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="vehicle-registration-number">
+                      Enter road vehicle registration number
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="vehicle-registration-number" name="vehicle-registration-number" type="text">
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="transport-vessel" name="means-of-transport" type="radio" value="vessel" data-aria-controls="conditional-vessel-name">
+                  <label class="govuk-label govuk-radios__label" for="transport-vessel">
+                    Vessel
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vessel-name">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="vessel-name">
+                      Enter vessel name (for ferries, also the road vehicle registration number)
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
           </div>
 
-          <div class="govuk-form-group  ">
+          <div class="govuk-form-group ">
               
               <label class="govuk-label govuk-label--m" for="document">
                 Transport document reference
@@ -160,10 +219,7 @@
               
           
             <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
-
           </div>
-
-          
 
         <div class="" id="estimated-arrival-at-bcp">
               
