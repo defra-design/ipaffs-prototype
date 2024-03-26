@@ -28,7 +28,7 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
       {% if (data['from'] == "review") %}
       <form action="18-review" id="consignmentCountries" method="post">
       {% else %}
-      <form action="04-commodity" id="consignmentCountries" method="post">
+      <form action="03-01-commodity" id="consignmentCountries" method="post">
       {% endif %}
 
         <input name="crumb" type="hidden" value="2PV89JtB8VaplnH3tu65ZntQTvpaFW0v_2rJbUMdRUS">
@@ -607,9 +607,11 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
                     
-                    Does this consignment conform to regulatory requirements?
+                    Does the consignment comply with the regulatory requirements?
                     <legend></legend>
-                  
+                   
+                    <p class="signIn-item-hint govuk-!-width-three-quarters">This refers to <a href="https://www.legislation.gov.uk/eur/2017/625/article/1" class="govuk-link" rel="noreferrer noopener" target="_blank">points (a) and (d) of Assimilated Regulation 2017/625</a>.</p>
+
                     
                     <div class="govuk-radios" data-module="govuk-radios">
                       <div class="govuk-radios__item">
@@ -617,13 +619,20 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                         <label class="govuk-label govuk-radios__label" for="signIn">
                           Yes
                         </label>
-                        
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                          The consignment conforms to the regulatory requirements and the goods are for the internal market, transit, transhipment or movement for ship supply.
+                        </div>
+
+
                       </div>
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
                         <label class="govuk-label govuk-radios__label" for="signIn-2">
                           No
                         </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                          The consignment does not conform to regulatory requirements. Transits, transhipments, or movement for ship supply may not need to meet the regulatory requirements, if not intended for the internal market.
+                        </div>
                       </div>
                     </div>
                   </fieldset>
