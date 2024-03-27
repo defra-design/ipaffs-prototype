@@ -11,12 +11,10 @@
 
 {% block content %}
 
-
-
 <div class="govuk-!-padding-top-6">
   <span class="heading-tertiary">
-      <span id="reference-number">DRAFT.GB.2024.1098634</span>
-          <span> - {{ data['ched-type'] | upper or "CHEDX" }}
+      <span id="reference-number">DRAFT.GB.2023.2987635</span>
+          <span> - CHEDD
           </span>
   </span>
 </div>
@@ -25,7 +23,7 @@
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Billing</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Confirm billing details</h1>
-      <form action="../{{ data['ched-type'] or "chedp" }}/08-00-review" method="post">
+      <form action="08-00-review" method="post">
         <input name="testing" type="hidden" value="visited">
         <p>
           Consignments eligible for Border Control Post (BCP) checks at Sevington are now chargeable if they enter through:
@@ -60,7 +58,7 @@
               3 Bakers Lane<br>Lichfield<br>WS13 6NF
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="02-billing-postcode?action=change">Change<span class="govuk-visually-hidden"> billing address</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> billing address</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
@@ -71,7 +69,7 @@
               payments@xyz.ltd.uk
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="04-billing-contact-details?action=change">Change<span class="govuk-visually-hidden"> billing contact details</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> billing contact details</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -83,9 +81,9 @@
             </dd>
           </div>
         </dl>
-        <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" formaction="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">
+        <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" formaction="00-no-check-answers">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">Cancel and return to hub</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="00-check-answers">Cancel and return to hub</a></p>
       </form>
     </div>
   </div>
