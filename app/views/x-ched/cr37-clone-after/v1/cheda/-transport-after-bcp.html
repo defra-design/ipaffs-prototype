@@ -1,0 +1,234 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+    <a href="review" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <div class="navigation-links__divider">|</div>
+<div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="index">Dashboard</a>
+        </li>
+      </ol>
+    </div>
+
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Pig</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+      <span> - CHEDA</span>
+    </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="traders-page">
+    <div class="govuk-grid-column-full">
+          <span class="govuk-caption-xl">Traders</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Consignor or Exporter, Consignee, Importer and Place of Destination</h1>
+      <form action="traders" method="POST">
+        <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
+        <input name="etag" type="hidden" value="&quot;0000000004C8AAC0&quot;">
+
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Consignor or exporter 
+            </h2>
+            <p class="govuk-hint"></p>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                    <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                      <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="consignor-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell col-name" headers="consignor-name">
+                          CXConsignor
+                        </td>
+                        <td class="govuk-table__cell col-address" headers="consignor-address">
+                          CXAddressLine1, CXCity, CX12345
+                        </td>
+                          <td class="govuk-table__cell col-country" headers="consignor-country">
+                            Christmas Island
+                          </td>
+                        <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                          <a href="/notification/tst/protected/notifications/DRAFT.GB.2024.5501422/traders/consignor/search" class="govuk-link" id="edit-consignor">Change</a>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+          </div>
+          
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Consignee 
+            </h2>
+            <p class="govuk-hint"></p>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="consignee-name">Name</th>
+                    <th class="govuk-table__header col-address" id="consignee-address">Address</th>
+                      <th class="govuk-table__header col-country" id="consignee-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="consignee-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell col-name" headers="consignee-name">
+                          Tee Inc
+                        </td>
+                        <td class="govuk-table__cell col-address" headers="consignee-address">
+                          177 Langport Avenue, Houston, 77889
+                        </td>
+                          <td class="govuk-table__cell col-country" headers="consignee-country">
+                            United States of America
+                          </td>
+                        <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                          <a href="/notification/tst/protected/notifications/DRAFT.GB.2024.5501422/traders/consignee/search" class="govuk-link" id="edit-consignee">Change</a>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+          </div>
+          
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Importer 
+            </h2>
+            <p class="govuk-hint"></p>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-importer">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="importer-name">Name</th>
+                    <th class="govuk-table__header col-address" id="importer-address">Address</th>
+                      <th class="govuk-table__header col-country" id="importer-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="importer-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell col-name" headers="importer-name">
+                          Tee Inc
+                        </td>
+                        <td class="govuk-table__cell col-address" headers="importer-address">
+                          177 Langport Avenue, Houston, 77889
+                        </td>
+                          <td class="govuk-table__cell col-country" headers="importer-country">
+                            United States of America
+                          </td>
+                        <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
+                          <a href="/notification/tst/protected/notifications/DRAFT.GB.2024.5501422/traders/importer/search" class="govuk-link" id="edit-importer">Change</a>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+          </div>
+          
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m">
+              Place of destination 
+            </h2>
+              <div class="govuk-warning-text" id="high-risk-eu-cveda-fraud-warning">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Providing a false address is an act of fraud
+                </strong>
+                <div class="govuk-inset-text">
+                  This is the address:
+                  <ul class="govuk-list--bullet">
+                    <li>where animals will be unloaded and accomodated for at least 48 hours </li>
+                    <li>stated on the corresponding health certificate</li>
+                  </ul>
+                </div>
+              </div>
+            <p class="govuk-hint"></p>
+            <div class="table-responsive">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-place-of-destination">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <th class="govuk-table__header col-name" id="place-of-destination-name">Name</th>
+                    <th class="govuk-table__header col-address" id="place-of-destination-address">Address</th>
+                      <th class="govuk-table__header col-country" id="place-of-destination-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="place-of-destination-edit">
+                      <span class="govuk-visually-hidden">Change link</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="govuk-table__cell col-name" headers="place-of-destination-name">
+                          Tee Inc
+                        </td>
+                        <td class="govuk-table__cell col-address" headers="place-of-destination-address">
+                          177 Langport Avenue, Houston, 77889
+                        </td>
+                          <td class="govuk-table__cell col-country" headers="place-of-destination-country">
+                            United States of America
+                          </td>
+                        <td class="govuk-table__cell col-edit text-align-right" headers="place-of-destination-edit">
+                          <a href="/notification/tst/protected/notifications/DRAFT.GB.2024.5501422/traders/final-destination/search" class="govuk-link" id="edit-place-of-destination">Change</a>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          
+          </div>
+          
+        
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+            <p class="govuk-body"><a class="govuk-link" href="7-notification">Cancel and return to hub</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
