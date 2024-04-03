@@ -1,0 +1,770 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Decision hub
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<body class="govuk-template__body app-body-class js-enabled" data-test="My value" data-other="report:details">
+
+  <a href="#main-content" class="govuk-skip-link">Skip to content</a>
+  
+  <div id="global-cookie-message">
+    
+    <div class="global-accepted-cookie-message">
+    <div class="global-cookie-wrapper">
+      <div class="govuk-width-container" tabindex="-1">
+        <p>You’ve accepted all cookies. You can <a class="govuk-link" href="/decision/tst/protected/bip-notifications/cookies?returnUrl=%2Fprotected%2Fbip-notifications%2Fhigh-priority-tasks-consignments" data-module="track-click" data-track-category="cookieBanner" data-track-action="Cookie banner settings clicked from confirmation">change your cookie settings</a> at any time.</p>
+        <a id="hide-accepted-cookies" class="govuk-link govuk-link--right" href="#" data-hide-cookie-banner="true" data-module="track-click" data-track-category="cookieBanner" data-track-action="Hide cookie banner">Hide</a>
+      </div>
+    </div>
+  </div>
+  <script src="/decision/tst/public/javascripts/cookies.js?v=1.0.1884"></script>
+  </div>
+  
+ 
+  
+  <div class="govuk-width-container app-width-container--wide">
+   
+  <div class="navigation-links">
+    <div id="sign-out-section" class="information-banner">
+      <p class="information-banner__content">
+        <span>Mark Admin-Tester</span>
+        <span aria-hidden="true">|</span>
+          <a class="govuk-link govuk-!-display-inline-block" id="bcp-admin-link" href="/bcpadmin/tst/protected/bcp-admin">
+            Admin area
+          </a>
+          <span aria-hidden="true">|</span>
+        <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+          Address book
+        </a>
+        <span aria-hidden="true">|</span>
+        <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+          Blank CHEDs
+        </a>
+        <span aria-hidden="true">|</span>
+        <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+          Sign out
+        </a>
+      </p>
+    </div>
+    <div class="navigation-links__left-block">
+      <a href="#" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+      <div class="navigation-links__divider">|</div>
+      <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link govuk" href="/chedp/2024-feb-part-2-single-chedp-iteration-2/00-dashboard" id="navigation-dashboard-link">Dashboard</a>
+          </li>
+        </ol>
+      </div>  </div>
+  </div>
+  
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row" id="high-priority-tasks-page">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl" id="page-primary-title">High priority tasks</h1>
+        <div class="govuk-tabs" data-module="govuk-tabs">
+  
+          <ul class="govuk-tabs__list" role="tablist">
+            <li class="govuk-tabs__list-item" role="presentation">
+              <a class="govuk-tabs__tab" href="/chedp/2024-feb-part-2-single-chedp-iteration-2/01-hp-outstanding-documentry-check" id="tab_" role="tab" aria-controls="" aria-selected="false" tabindex="-1">
+                Outstanding documentary checks
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+              <a class="govuk-tabs__tab high-priority-tabs" id="consignment-tab" role="tab" aria-controls="consignments-to-inspect" aria-selected="true" tabindex="1">
+                Consignments to inspect
+              </a>
+            </li>
+          </ul>
+  
+          <div class="govuk-tabs__panel" id="consignments-to-inspect" role="tabpanel" aria-labelledby="consignment-tab">
+            <p class="govuk-body">
+              All of these consignments are on their way to this BCP and require inspection.
+            </p>
+            <form method="post" class="search-and-filter-form">
+                <input name="crumb" type="hidden" value="hLxxDo0ck1OehnqDKYGWhwmaxYJOxZ5Y_UbhRyscvG0">
+                <div class="govuk-form-group search-panel">
+                    <div class="govuk-heading-m">Search consignments</div>
+            
+                    <div class="govuk-grid-row govuk-!-margin-bottom-5">
+                        <div class="govuk-grid-column-one-third">
+                            <div class="govuk-form-group" id="arrival-date-filter">
+                                <label class="govuk-label--s">Arrival date </label>
+            
+                                <div class="govuk-radios__item govuk-radios--small">
+                                    <input class="govuk-radios__input" id="yesterday" name="dateTemplate" type="radio" value="yesterday">
+                                    <label class="govuk-label govuk-radios__label" for="yesterday">
+                                        Yesterday
+                                        <p class="govuk-label govuk-!-font-size-14"> Overdue or delayed consignments</p>
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item govuk-radios--small">
+                                    <input class="govuk-radios__input" id="today" name="dateTemplate" type="radio" value="today">
+                                    <label class="govuk-label govuk-radios__label" for="today">
+                                        Today
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item govuk-radios--small">
+                                    <input class="govuk-radios__input" id="tomorrow" name="dateTemplate" type="radio" value="tomorrow">
+                                    <label class="govuk-label govuk-radios__label" for="tomorrow">
+                                        Tomorrow
+                                    </label>
+                                </div>
+                            </div>
+            
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-label--s" for="bipSelect">BCP</label>
+                                    <select class="govuk-select govuk-!-width-full" id="bipSelect" name="selectedBcp">
+                                        <option value="">All</option>
+                                            <option id="bip-select-option" value="GBBOH4PP">
+                                                (Hurn) Bournemouth Airport (plants) (undesignated) - GBBOH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="Test070820">
+                                                070820t1 tester ltd - Test070820
+                                            </option>
+                                            <option id="bip-select-option" value="Test200820">
+                                                200820t1 tester Ltd - Test200820
+                                            </option>
+                                            <option id="bip-select-option" value="GBAHB4PP">
+                                                Aberdeen Harbour Board (plants) - GBAHB4PP
+                                            </option>
+                                            <option id="bip-select-option" value="LINKS182">
+                                                AD links limited - LINKS182
+                                            </option>
+                                            <option id="bip-select-option" value="beta">
+                                                APHA - beta
+                                            </option>
+                                            <option id="bip-select-option" value="GBABP4PP">
+                                                Associated British Ports, Ayr (plants) (undesignated) - GBABP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="TESTHELLO1">
+                                                Automation9 Testing - TESTHELLO1
+                                            </option>
+                                            <option id="bip-select-option" value="ELLO12345">
+                                                Automation9 Testing - ELLO12345
+                                            </option>
+                                            <option id="bip-select-option" value="B2CLTD">
+                                                B2C Limited - B2CLTD
+                                            </option>
+                                            <option id="bip-select-option" value="GBBCW4PP">
+                                                Baltic Wharf (plants) (undesignated) - GBBCW4PP
+                                            </option>
+                                            <option id="bip-select-option" value="REL136">
+                                                Bananas - REL136
+                                            </option>
+                                            <option id="bip-select-option" value="GBBEL1">
+                                                Belfast Airport - GBBEL1
+                                            </option>
+                                            <option id="bip-select-option" value="BelfPort2">
+                                                Belfast Pharmaceuticals - BelfPort2
+                                            </option>
+                                            <option id="bip-select-option" value="1">
+                                                Belfast Pharmaceuticals - 1
+                                            </option>
+                                            <option id="bip-select-option" value="0101">
+                                                Belfast Pharmaceuticals - 0101
+                                            </option>
+                                            <option id="bip-select-option" value="0102">
+                                                Belfast Pharmaceuticals - 0102
+                                            </option>
+                                            <option id="bip-select-option" value="33311">
+                                                Belfast Pharmaceuticals - 33311
+                                            </option>
+                                            <option id="bip-select-option" value="BCP0000002">
+                                                Belfast Pharmaceuticals - BCP0000002
+                                            </option>
+                                            <option id="bip-select-option" value="GBBEL2">
+                                                Belfast Pharmaceuticals - GBBEL2
+                                            </option>
+                                            <option id="bip-select-option" value="GBBEL4">
+                                                Belfast Port - GBBEL4
+                                            </option>
+                                            <option id="bip-select-option" value="BPTestAdd">
+                                                Belfast Port - BPTestAdd
+                                            </option>
+                                            <option id="bip-select-option" value="Jack Lord">
+                                                Belfast Port - Jack Lord
+                                            </option>
+                                            <option id="bip-select-option" value="BhmAllIn1">
+                                                Birmingham International Airport - BhmAllIn1
+                                            </option>
+                                            <option id="bip-select-option" value="GBBXH4PP">
+                                                Birmingham International Airport (plants) - GBBXH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="BSON123">
+                                                Blackburn &amp; Sons - BSON123
+                                            </option>
+                                            <option id="bip-select-option" value="BBS1456">
+                                                Blackburn &amp; Sons - BBS1456
+                                            </option>
+                                            <option id="bip-select-option" value="GBBRS1">
+                                                Bristol - GBBRS1
+                                            </option>
+                                            <option id="bip-select-option" value="TST92BCP">
+                                                Bristol - TST92BCP
+                                            </option>
+                                            <option id="bip-select-option" value="BSCHPDtmp">
+                                                Bristol - BSCHPDtmp
+                                            </option>
+                                            <option id="bip-select-option" value="DRIO">
+                                                Bristol - DRIO
+                                            </option>
+                                            <option id="bip-select-option" value="DRIP555">
+                                                Bristol - DRIP555
+                                            </option>
+                                            <option id="bip-select-option" value="brjk">
+                                                Bristol - brjk
+                                            </option>
+                                            <option id="bip-select-option" value="u">
+                                                Bristol - u
+                                            </option>
+                                            <option id="bip-select-option" value="GBCTM4PP">
+                                                Chatham (plants) (undesignated) - GBCTM4PP
+                                            </option>
+                                            <option id="bip-select-option" value="REL94">
+                                                Chicken Solutions - REL94
+                                            </option>
+                                            <option id="bip-select-option" value="CONPNT">
+                                                Control Point - CONPNT
+                                            </option>
+                                            <option id="bip-select-option" value="GBDSA4P">
+                                                Doncaster Sheffield Airport - GBDSA4P
+                                            </option>
+                                            <option id="bip-select-option" value="GBDOV2P">
+                                                Dover Harbour (Deep Sea Terminal) - GBDOV2P
+                                            </option>
+                                            <option id="bip-select-option" value="GBDOV1P">
+                                                Dover Port - GBDOV1P
+                                            </option>
+                                            <option id="bip-select-option" value="GBDOV1PP">
+                                                Dover Port (plants) - GBDOV1PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBDND4PP">
+                                                Dundee Port (plants) (undesignated) - GBDND4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBEMA4">
+                                                East Midlands Airport - GBEMA4
+                                            </option>
+                                            <option id="bip-select-option" value="GBEMA4PP">
+                                                East Midlands Airport (plants) - GBEMA4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBNOTT1">
+                                                EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - GBNOTT1
+                                            </option>
+                                            <option id="bip-select-option" value="NOTTS0123">
+                                                EAST MIDLANDS CHAMBER (DERBYSHIRE, NOTTINGHAMSHIRE, LEICESTERSHIRE) - NOTTS0123
+                                            </option>
+                                            <option id="bip-select-option" value="GBEDI4TALL">
+                                                Edinburgh Airport - GBEDI4TALL
+                                            </option>
+                                            <option id="bip-select-option" value="GBEDI4">
+                                                Edinburgh Airport (animals) - GBEDI4
+                                            </option>
+                                            <option id="bip-select-option" value="GBEDI4PP">
+                                                Edinburgh Airport (plants) - GBEDI4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBFXT1">
+                                                Felixstowe - GBFXT1
+                                            </option>
+                                            <option id="bip-select-option" value="GBFSH4PP">
+                                                Fishguard Harbour (plants) (undesignated) - GBFSH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBFOL4PP">
+                                                Folkestone (plants) (undesignated) - GBFOL4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBLGW1">
+                                                Gatwick Airport - GBLGW1
+                                            </option>
+                                            <option id="bip-select-option" value="GBLGW4">
+                                                Gatwick Airport (animals) - GBLGW4
+                                            </option>
+                                            <option id="bip-select-option" value="GBLGW4PP">
+                                                Gatwick Airport (plants) - GBLGW4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBGLA4PP">
+                                                Glasgow Airport (plants) - GBGLA4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBHUL1G">
+                                                Goole - GBHUL1G
+                                            </option>
+                                            <option id="bip-select-option" value="GBGOO4PP">
+                                                Goole Port (plants) (undesignated) - GBGOO4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBGRP4PP">
+                                                Grangemouth Port (plants) - GBGRP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBGOT4PP">
+                                                Greenock Ocean Terminal (Peel Ports) (plants) (undesignated) - GBGOT4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBGSY1">
+                                                Grimsby and Immingham - GBGSY1
+                                            </option>
+                                            <option id="bip-select-option" value="GBGRM4PP">
+                                                Grimsby Port (plants) (undesignated) - GBGRM4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBHRT4PP">
+                                                Hartlepool (plants) (undesignated) - GBHRT4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBHRW1P">
+                                                Harwich - GBHRW1P
+                                            </option>
+                                            <option id="bip-select-option" value="GBHCH4PP">
+                                                Harwich International Port (plants) - GBHCH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBLHR1P">
+                                                Heathrow Airport - APH (products) - GBLHR1P
+                                            </option>
+                                            <option id="bip-select-option" value="GBLHR4P">
+                                                Heathrow Airport - Eurobip (products) - GBLHR4P
+                                            </option>
+                                            <option id="bip-select-option" value="GBLHR4A">
+                                                Heathrow Airport - HARC (animals) - GBLHR4A
+                                            </option>
+                                            <option id="bip-select-option" value="GBLHR4PP">
+                                                Heathrow Airport (plants) - GBLHR4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBHBT1PP">
+                                                HES Humber Bulk Terminal (Plant products, Other objects) - GBHBT1PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBHYS4PP">
+                                                Heysham Port (plants) (undesignated) - GBHYS4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBHLY4PP">
+                                                Holyhead Port (plants) (undesignated) - GBHLY4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBHUL1H">
+                                                Hull - GBHUL1H
+                                            </option>
+                                            <option id="bip-select-option" value="GBHLL4PP">
+                                                Hull Port (plants) (undesignated) - GBHLL4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBIMM4PP">
+                                                Immingham Port (plants) (undesignated) - GBIMM4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBIVG1">
+                                                Invergordon - GBIVG1
+                                            </option>
+                                            <option id="bip-select-option" value="GBIVG4PP">
+                                                Invergordon (plants) (undesignated) - GBIVG4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBIVN4PP">
+                                                Inverness Harbour (plants) (undesignated) - GBIVN4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBIPS1P">
+                                                Ipswich - GBIPS1P
+                                            </option>
+                                            <option id="bip-select-option" value="GBIPS4PP">
+                                                Ipswich Port  (plants) (undesignated) - GBIPS4PP
+                                            </option>
+                                            <option id="bip-select-option" value="TST89TEST">
+                                                Jemma BIP - TST89TEST
+                                            </option>
+                                            <option id="bip-select-option" value="R135">
+                                                Kainos - R135
+                                            </option>
+                                            <option id="bip-select-option" value="Kang101">
+                                                KangarooRUs Limited - Kang101
+                                            </option>
+                                            <option id="bip-select-option" value="GBKLG4PP">
+                                                Killingholme Port (plants) (undesignated) - GBKLG4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBKLP4PP">
+                                                Kings Lynn Port (plants) - GBKLP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBKRK4PP">
+                                                Kirkcaldy Port (plants) (undesignated) - GBKRK4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBLBA4PP">
+                                                Leeds Bradford Airport (plants) (undesignated) - GBLBA4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBLTH4PP">
+                                                Leith Port (plants) (undesignated) - GBLTH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBLIV1">
+                                                Liverpool - GBLIV1
+                                            </option>
+                                            <option id="bip-select-option" value="GBLPL4PP">
+                                                Liverpool John Lennon Airport (plants) (undesignated) - GBLPL4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBLIV1PP">
+                                                Liverpool Port (plants) - GBLIV1PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBLGP1">
+                                                London Gateway - GBLGP1
+                                            </option>
+                                            <option id="bip-select-option" value="GBLGP1PP">
+                                                London Gateway (plants) - GBLGP1PP
+                                            </option>
+                                            <option id="bip-select-option" value="LtnCA111">
+                                                London Luton Airport - LtnCA111
+                                            </option>
+                                            <option id="bip-select-option" value="LtnCP111">
+                                                London Luton Airport - LtnCP111
+                                            </option>
+                                            <option id="bip-select-option" value="LtnCPP111">
+                                                London Luton Airport - LtnCPP111
+                                            </option>
+                                            <option id="bip-select-option" value="LtnCD111">
+                                                London Luton Airport - LtnCD111
+                                            </option>
+                                            <option id="bip-select-option" value="LTCH111tmp">
+                                                London Luton Airport - LTCH111tmp
+                                            </option>
+                                            <option id="bip-select-option" value="GBLSH1">
+                                                London Sheerness - GBLSH1
+                                            </option>
+                                            <option id="bip-select-option" value="GBTHP1">
+                                                London Thamesport - GBTHP1
+                                            </option>
+                                            <option id="bip-select-option" value="GBTHP1PP">
+                                                London Thamesport (plants) - GBTHP1PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBTIL1">
+                                                London Tilbury - GBTIL1
+                                            </option>
+                                            <option id="bip-select-option" value="GBLTN4PP">
+                                                Luton Airport (plants) - GBLTN4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBMNC1">
+                                                Manchester airport - GBMNC1
+                                            </option>
+                                            <option id="bip-select-option" value="Y-RelT-UK">
+                                                Manchester Airport - Y-RelT-UK
+                                            </option>
+                                            <option id="bip-select-option" value="GBMNC4">
+                                                Manchester Airport (animals) - GBMNC4
+                                            </option>
+                                            <option id="bip-select-option" value="GBMNC4PP">
+                                                Manchester Airport (plants) - GBMNC4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBMEP1P">
+                                                Manchester Ellesmere port - GBMEP1P
+                                            </option>
+                                            <option id="bip-select-option" value="GBMTH4PP">
+                                                Methil Port (plants) (undesignated) - GBMTH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBMIL4PP">
+                                                Milford Haven (plants) (undesignated) - GBMIL4PP
+                                            </option>
+                                            <option id="bip-select-option" value="REL130">
+                                                Minty Green Tea - REL130
+                                            </option>
+                                            <option id="bip-select-option" value="GBMTR4PP">
+                                                Montrose Port  (plants) (undesignated) - GBMTR4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBNCL4PP">
+                                                Newcastle Airport (plants) (undesignated) - GBNCL4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBNCP4PP">
+                                                Newcastle Tyne Port (plants) (undesignated) - GBNCP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBNWH4PP">
+                                                Newhaven Port (plants) (undesignated) - GBNWH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="34354">
+                                                Non-BCP Heathrow - 34354
+                                            </option>
+                                            <option id="bip-select-option" value="241">
+                                                Non-BCP Heathrow - 241
+                                            </option>
+                                            <option id="bip-select-option" value="rel98T">
+                                                Org A+FishExport+sole - rel98T
+                                            </option>
+                                            <option id="bip-select-option" value="GBPEM4PP">
+                                                Pembroke Port (plants) (undesignated) - GBPEM4PP
+                                            </option>
+                                            <option id="bip-select-option" value="Rel8.8">
+                                                Performance Testing - Rel8.8
+                                            </option>
+                                            <option id="bip-select-option" value="GBPHD1">
+                                                Peterhead - GBPHD1
+                                            </option>
+                                            <option id="bip-select-option" value="GBPLH4PP">
+                                                Plymouth City Airport (plants) (undesignated) - GBPLH4PP
+                                            </option>
+                                            <option id="bip-select-option" value="POP4321">
+                                                PopCorn Christmas LTD - POP4321
+                                            </option>
+                                            <option id="bip-select-option" value="POP987">
+                                                PopCorn Christmas LTD - POP987
+                                            </option>
+                                            <option id="bip-select-option" value="POP123">
+                                                PopCorn Christmas LTD - POP123
+                                            </option>
+                                            <option id="bip-select-option" value="POP1212">
+                                                PopCorn Christmas LTD - POP1212
+                                            </option>
+                                            <option id="bip-select-option" value="POP80">
+                                                PopCorn Christmas LTD - POP80
+                                            </option>
+                                            <option id="bip-select-option" value="POP82">
+                                                PopCorn Christmas LTD - POP82
+                                            </option>
+                                            <option id="bip-select-option" value="REL122">
+                                                PopCorn Christmas LTD - REL122
+                                            </option>
+                                            <option id="bip-select-option" value="POP124T">
+                                                PopCorn Christmas LTD - POP124T
+                                            </option>
+                                            <option id="bip-select-option" value="GBBOS4PP">
+                                                Port of Boston (plants) (undesignated) - GBBOS4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBFXT1PP">
+                                                Port of Felixstowe (plants) - GBFXT1PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBPLP4PP">
+                                                Port of Plymouth (plants) (undesignated) - GBPLP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBPOP4PP">
+                                                Port of Poole  (Plants) - GBPOP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBPOS4PP">
+                                                Port of Silloth (plants) (undesignated) - GBPOS4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBPME1P">
+                                                Portsmouth - GBPME1P
+                                            </option>
+                                            <option id="bip-select-option" value="GBPME1PP">
+                                                Portsmouth (plants) - GBPME1PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBPIK4">
+                                                Prestwick Airport (animals) - GBPIK4
+                                            </option>
+                                            <option id="bip-select-option" value="GBPFP4PP">
+                                                Purfeet Port (plants) (undesignated) - GBPFP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="Coffee123">
+                                                Rooster Coffee Roasters - Coffee123
+                                            </option>
+                                            <option id="bip-select-option" value="GBROS4PP">
+                                                Rosyth Port (plants) (undesignated) - GBROS4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBSNP4PP">
+                                                Sheerness Port (plants) (undesignated) - GBSNP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBSHP4PP">
+                                                Shoreham Port (plants) - GBSHP4PP
+                                            </option>
+                                            <option id="bip-select-option" value="BCC123456">
+                                                Sole Trader for R.MA.009 - BCC123456
+                                            </option>
+                                            <option id="bip-select-option" value="5234128877">
+                                                Sole Trader Number 3 - 5234128877
+                                            </option>
+                                            <option id="bip-select-option" value="GBSOU1">
+                                                Southampton - GBSOU1
+                                            </option>
+                                            <option id="bip-select-option" value="GBSOU1PP">
+                                                Southampton (plants) - GBSOU1PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBSTN4ATp">
+                                                Stansted - GBSTN4ATp
+                                            </option>
+                                            <option id="bip-select-option" value="GBSTNAPED">
+                                                Stansted Airport - GBSTNAPED
+                                            </option>
+                                            <option id="bip-select-option" value="GBSTN4A">
+                                                Stansted Airport (animals) - GBSTN4A
+                                            </option>
+                                            <option id="bip-select-option" value="GBSTN4PP">
+                                                Stansted Airport (plants) - GBSTN4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBSTN4P">
+                                                Stansted Airport (products) - GBSTN4P
+                                            </option>
+                                            <option id="bip-select-option" value="GBTEE1P">
+                                                Teesport - GBTEE1P
+                                            </option>
+                                            <option id="bip-select-option" value="GBTES4PP">
+                                                Teesport (plants) (undesignated) - GBTES4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBTEE4PP">
+                                                Teesside International Airport Limited (plant products) - GBTEE4PP
+                                            </option>
+                                            <option id="bip-select-option" value="BCP1342">
+                                                Test TST Org - BCP1342
+                                            </option>
+                                            <option id="bip-select-option" value="BCP3JUL23">
+                                                Test TST Org - BCP3JUL23
+                                            </option>
+                                            <option id="bip-select-option" value="GBBPC4PP">
+                                                The Bristol Port Company - Royal Portbury Dock (plants) - GBBPC4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBTLB4PP">
+                                                Tilbury 2 Ro-Ro Terminal (plants) (undesignated) - GBTLB4PP
+                                            </option>
+                                            <option id="bip-select-option" value="GBTIL1PP">
+                                                Tilbury Port (plants) - GBTIL1PP
+                                            </option>
+                                            <option id="bip-select-option" value="BCCODE">
+                                                tster - BCCODE
+                                            </option>
+                                            <option id="bip-select-option" value="GBTYN4P">
+                                                Tyne - GBTYN4P
+                                            </option>
+                                            <option id="bip-select-option" value="TYNFRE">
+                                                Tyneside Freeport - TYNFRE
+                                            </option>
+                                            <option id="bip-select-option" value="GBDNU1">
+                                                X Do Not Use X - GBDNU1
+                                            </option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <div class="govuk-form-group">
+                                <div class="govuk-form-group " id="search-time">
+                                    <fieldset class="govuk-fieldset">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            Start time range (optional)
+                                            <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
+                                        </legend>
+                                        <span class="form-label-bold"></span>
+                                        
+                                        
+                                        <div class="govuk-date-input" id="start-time">
+                                            <div class="govuk-date-input__item date-input-hour">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="start-time-hour">
+                                                        Hour
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item date-input-minute">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="start-time-minute">
+                                                        Minutes
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-one-third">
+                            <div class="govuk-form-group">
+                                <div class="govuk-form-group " id="search-time">
+                                    <fieldset class="govuk-fieldset">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            End time range (optional)
+                                            <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
+                                        </legend>
+                                        <span class="form-label-bold"></span>
+                                        
+                                        
+                                        <div class="govuk-date-input" id="end-time">
+                                            <div class="govuk-date-input__item date-input-hour">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="end-time-hour">
+                                                        Hour
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-hour" name="end-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                                                </div>
+                                            </div>
+                                            <div class="govuk-date-input__item date-input-minute">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="end-time-minute">
+                                                        Minutes
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-minute" name="end-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <button class="govuk-button govuk-!-margin-0" id="search-consignments" type="submit" data-module="govuk-button" data-prevent-double-click="true">Search</button>
+                            <a href="/decision/tst/protected/bip-notifications/high-priority-tasks-consignments?searchClear=true" class="govuk-link clear-link">Clear</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p class="govuk-body govuk-!-font-weight-bold" id="number-of-results">
+              <span id="consignment-count">2</span>
+              results
+            </p>
+            
+              <div class="table-responsive">
+                <table class="govuk-table high-priority-tasks-table" aria-describedby="number-of-results">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="col">Reference number</th>
+                      <th class="govuk-table__header" scope="col">BCP</th>
+                      <th class="govuk-table__header" scope="col">Estimated arrival time at BCP</th>
+                      <th class="govuk-table__header" scope="col">Updated arrival time at BCP</th>
+                      <th class="govuk-table__header" scope="col">Documentary check status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell reference-number-cell">
+                          <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.6283885" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6283885/hub" target="_self">
+                            CHEDP.GB.2024.6283885
+                          </a>
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell">16 January 2024, 08:30</td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag tag tag--to-do">
+                              TO DO
+                            </strong>
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell reference-number-cell">
+                          <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.6288184" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2024.6288184/hub" target="_self">
+                            CHEDP.GB.2024.6288184
+                          </a>
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell">17 January 2024, 10:00</td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag tag tag--to-do">To Do</strong>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav class="pagination" aria-label="Pagination">
+                <ul class="pagination-list">
+                </ul>
+              </nav>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  </div>
+  
+  
+  <script src="/decision/tst/public/javascripts/all.js"></script>
+  <script src="/decision/tst/public/javascripts/application.js?v=1.0.1884"></script>
+  <script src="/decision/tst/public/javascripts/datepickers.js"></script>
+  
+  
+  
+  </body>
+{% endblock %}
