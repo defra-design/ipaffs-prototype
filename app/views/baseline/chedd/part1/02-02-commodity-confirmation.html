@@ -54,12 +54,41 @@
               </table>
             </div>
 
-          </fieldset>
-        </div>
+            <div class="govuk-form-group govuk-!-margin-bottom-9">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you want to add another commodity?
+                  </h1>
+                </legend>
+                  <div id="event-name-hint" class="govuk-hint">
+                    You can only add another commodity if it has the same country of origin. If not, create a separate notification.
+                  </div> 
+                  
+                
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="whereDoYouLive" name="add-commodity" type="radio" value="Yes">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="whereDoYouLive-2" name="add-commodity" type="radio" value="No">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                      No 
+                    </label>
+                  </div>
+                 
+                </div>
+              </fieldset>
+            </div>
+
+         
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
 
-        <input class="link-button " id="family-button" type="submit" name="familyButton" value="Add another commodity" data-module="govuk-button">
+        
 
 
       </form>
