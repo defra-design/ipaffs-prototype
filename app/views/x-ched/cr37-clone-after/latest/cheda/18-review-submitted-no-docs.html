@@ -73,29 +73,79 @@
           </div> -->
 
 
-      <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4" id="page-primary-title">Review your notification</h1>
 
 
     
-      <div class="govuk-grid-row govuk-!-margin-bottom-9">
-         
+      <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
-          <div class="audit-flag govuk-!-margin-bottom-3">
+          <div class="audit-flag govuk-!-margin-bottom-2">
         
         <div id="last-updated-date">Last updated 8 April 2024, 10:27</div>
         <div id="last-updated-by">by Percy Hyseni </div>
       </div>
       </div>
-      <div class="govuk-grid-column-one-half">
-        <div class="audit-flag govuk-!-margin-bottom-3">
-          <div id="last-submission-date">Not  submitted  </div>
-          <div id="submitted-by">  </div>
+        <div class="govuk-grid-column-one-half">
+          <div class="audit-flag govuk-!-margin-bottom-2">
+            <div id="last-submission-date">Submitted 8 April 2024, 18:13 </div>
+            <div id="submitted-by">by Percy Hyseni</div>
+          </div>
         </div>
-      </div>
+       
     </div>
 
 
-    <!-- <h2 class="govuk-heading-l">Your notification</h2> -->
+    <h2 class="govuk-heading-l">Actions</h2>
+    <div class="action-button-container govuk-!-margin-bottom-9 govuk-!-padding-bottom-3">
+      
+
+      <form method="post" action="07-check-answers-orig" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="submit_param" value="Copy as new" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">Copy as new</button>
+      </form>
+
+      <form action="18-review-submitted-amend-no-docs" method="post" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+          Amend
+        </button>
+      </form>
+
+      <!-- <form action="12-health-certificate" method="post" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+          Add documents
+        </button>
+      </form> -->
+
+      <form action="03a-certificate-reference" method="post" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+          Clone an electronic health certificate
+        </button>
+      </form>
+
+      <form action="pdf" method="post" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+          View CHED
+        </button>
+      </form>
+
+      <a href="#" id="delete-notification" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3">
+        Delete notification
+      </a>
+  </div>
+
+
+  <!-- <hr class="govuk-section-break govuk-section-break--visible"> -->
+
+  <h2 class="govuk-heading-l">Notification details</h2>
     <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-about-notification">
       <caption class="govuk-visually-hidden">
         Customs declaration reference and document code table
@@ -160,9 +210,9 @@
                     <td class="govuk-table__header">Country of origin</td>
                     <td class="govuk-table__cell" id="country-of-origin">Austria</td>
                     <td class="govuk-table__cell change">
-                          <a href="03-origin-of-import" class="govuk-link" id="country-of-origin-change-link">
+                          <!-- <a href="03-origin-of-import" class="govuk-link" id="country-of-origin-change-link">
                              Change
-                          </a>
+                          </a> -->
                     </td>
                   </tr>
                   <tr>
@@ -185,9 +235,9 @@
                       For internal market
                             </td>
                   <td class="govuk-table__cell change">
-                        <a href="06-about-consignment" class="govuk-link" id="consignment-purpose-change-link">
+                        <!-- <a href="06-about-consignment" class="govuk-link" id="consignment-purpose-change-link">
                           Change
-                        </a>
+                        </a> -->
                   </td>
                 </tr>
                     <tr class="">
@@ -221,7 +271,7 @@
                       
                     </td>
                       <td class="govuk-table__cell change">
-                            <a href="08-commodity-details" class="govuk-link" id="commodity-change-link-0">Change</a>
+                            <!-- <a href="08-commodity-details" class="govuk-link" id="commodity-change-link-0">Change</a> -->
                       </td>
                   </tr>
                       <tr class="presentation-table__row--no-border">
@@ -351,9 +401,9 @@
           
             <div class="heading-with-change-link govuk-!-margin-top-8">
               <h3 class="govuk-heading-s">Additional details</h3>
-                <a href="09-additional-details" class="govuk-link" id="consignment-details-change-link">
+                <!-- <a href="09-additional-details" class="govuk-link" id="consignment-details-change-link">
                   Change
-                </a>
+                </a> -->
             </div>
           
           <div class="table-responsive govuk-!-margin-bottom-9">
@@ -405,7 +455,7 @@
                       <th scope="col" class="govuk-table__header">Bos taurus identification details</th>
                       <td class="govuk-table__cell"></td>
                       <td class="govuk-table__cell change">
-                          <a href="10-animal-identifiers" class="govuk-link">Change</a>
+                          <!-- <a href="10-animal-identifiers" class="govuk-link">Change</a> -->
                       </td>
                     </tr>
                       <tr>
@@ -433,9 +483,9 @@
                   
                   <div class="heading-with-change-link">
                     <h3 class="govuk-heading-s" id="latest-health-certificate-heading">Latest health certificate</h3>
-                        <a class="govuk-link" id="latest-health-certificate-change-link" href="01-ac-04-how-add-hc">
+                        <!-- <a class="govuk-link" id="latest-health-certificate-change-link" href="01-ac-04-how-add-hc">
                           Change
-                        </a>
+                        </a> -->
                   </div>
                   
                   <div class="table-responsive">
@@ -483,9 +533,9 @@
                 
                 <div class="heading-with-change-link">
                     <h3 class="govuk-heading-s" id="additional-documents-sub-heading">Showing 1 additional document</h3>
-                      <a class="govuk-link" id="documents-change-link" href="13b-accompanying-docs">
+                      <!-- <a class="govuk-link" id="documents-change-link" href="13b-accompanying-docs">
                         Change
-                      </a>
+                      </a> -->
                 </div>
                 
                   <div class="table-responsive">
@@ -537,9 +587,9 @@
                     ATAddressLine1, ATCity, AT12345, Austria, 12345678, AT@gmail.com
                   </td>
                   <td class="govuk-table__cell change">
-                        <a href="14-addresses" class="govuk-link" id="traders-change-link">
+                        <!-- <a href="14-addresses" class="govuk-link" id="traders-change-link">
                           Change
-                        </a>
+                        </a> -->
                   </td>
                 </tr>
                 <tr class="">
@@ -571,7 +621,7 @@
                     <td class="govuk-table__header govuk-!-width-one-half">County Parish Holding number</td>
                     <td class="govuk-table__cell" id="cph-number"></td>
                     <td class="govuk-table__cell change">
-                        <a id="cph-number-change-link" href="14d-cph-number" class="govuk-link">Change</a>
+                        <!-- <a id="cph-number-change-link" href="14d-cph-number" class="govuk-link">Change</a> -->
                     </td>
                   </tr>
               </tbody>
@@ -579,9 +629,9 @@
           </div>
             <div class="heading-with-change-link">
               <h2 class="govuk-heading-m">Transport details</h2>
-              <a href="11-transport-details" class="govuk-link" id="transport-to-bip-change-link">
+              <!-- <a href="11-transport-details" class="govuk-link" id="transport-to-bip-change-link">
                 Change
-              </a>
+              </a> -->
             </div>
             <!-- <span class="govuk-error-message" id="partone/pointofentry">Add the port of entry</span>
             
@@ -633,7 +683,7 @@
               <td class="govuk-table__header">Name</td>
               <td class="govuk-table__cell" id="transporter-name">Matt Green</td>
               <td class="govuk-table__cell change">
-                <a href="15-transporter" class="govuk-link" id="transporter-change-link">Change</a>
+                <!-- <a href="15-transporter" class="govuk-link" id="transporter-change-link">Change</a> -->
               </td>
             </tr>
             <tr>
@@ -668,7 +718,7 @@
                   <td class="govuk-table__cell">
                   </td>
                 <td class="govuk-table__cell change">
-                      <a href="16-route" class="govuk-link" id="route-change-link">Change</a>
+                      <!-- <a href="16-route" class="govuk-link" id="route-change-link">Change</a> -->
                 </td>
               </tr>
                 </tbody>
@@ -683,7 +733,7 @@
                     <td class="govuk-table__header" id="organisation-address-header">Contact address</td>
                     <td class="govuk-table__cell" id="organisation-branch-address-address">Animal and Plant Health Agency, Woodham Lane, New Haw, Surrey, Addlestone, KT15 3NB</td>
                     <td class="govuk-table__cell change">
-                          <a href="17-organisation" class="govuk-link" id="organisation-branch-address-change-link">Change</a>
+                          <!-- <a href="17-organisation" class="govuk-link" id="organisation-branch-address-change-link">Change</a> -->
                     </td>
                   </tr>
                 </tbody>
