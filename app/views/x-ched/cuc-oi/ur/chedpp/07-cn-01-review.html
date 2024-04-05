@@ -480,19 +480,31 @@
                 <tr class="">
                   <th scope="row" class="govuk-table__header govuk-table__header--half">Address</th>
                   <td class="govuk-table__cell" id="billing-address">
-                    3 Bakers Lane<br>Lichfield<br>WS13 6NF
+                    {% if (data['address-entry-type'] == "address-lookup") %}
+                      {{ data['billing-address'] }}
+                    {% elseif (data['address-entry-type'] == "manual-entry") %}
+                      {{ data['billing-address-line-1'] }}
+                      {{ data['billing-address-line-2'] }}
+                      {{ data['billing-address-line-3'] }}
+                      {{ data['billing-address-line-4'] }}
+                      {{ data['billing-address-town'] }}
+                      {{ data['billing-address-county'] }}
+                      {{ data['billing-address-postcode'] }}
+                    {% else %}
+                      3 Bakers Lane<br>Lichfield<br>WS13 6NF
+                    {% endif %}
                   </td>
                 </tr>
                 <tr class="">
                   <th scope="row" class="govuk-table__header govuk-table__header--half">Email address</th>
                   <td class="govuk-table__cell" id="billing-email">
-                    payments@xyz.ltd.uk
+                    {{ data['billing-email'] }}
                   </td>
                 </tr>
                 <tr class="">
                   <th scope="row" class="govuk-table__header govuk-table__header--half">Phone number</th>
                   <td class="govuk-table__cell break-word" id="billing-telephone-number">
-                    07700 900457
+                    {{ data['billing-telephone-number'] }}
                   </td>
                 </tr>
               </tbody>
