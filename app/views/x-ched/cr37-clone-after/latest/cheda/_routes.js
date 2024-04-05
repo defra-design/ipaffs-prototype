@@ -34,7 +34,7 @@ router.post('/route-x-a-docs-info-amend', function (req, res) {
   // Make a variable and give it the value from name
   var ecertRoute = req.session.data['docs-info']
   if (ecertRoute == "all") {
-    res.redirect('18-review-clone')
+    res.redirect('18-review-clone-success')
   }
  else {
     res.redirect('13a-health-certificate-clone')
