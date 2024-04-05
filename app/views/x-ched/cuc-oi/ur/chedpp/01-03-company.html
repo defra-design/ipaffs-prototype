@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What are you importing? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row" id="consignment-on-behalf-of-page">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl" id="page-secondary-title">About the consignment</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Which company is this notification for</h1>
+
+      <form method="post" action="01-no-check-answers">
+        <input name="crumb" type="hidden" value="lioe2I2YkWQmGxT3_2pvk5F8odSOjid-pz9MR0bF2_f">
+        <input id="notification-type" type="hidden" name="notification-type" value="CHEDPP">
+
+          <div class="govuk-form-group  ">
+              
+          
+              <div class="govuk-radios ">
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="organisation" name="organisation" type="radio" value="eb0ca011-bc72-eb11-a812-000d3a274b26">
+                          <label class="govuk-label govuk-radios__label " for="organisation">
+                              <strong>IPAFFS Plant Organisation 1</strong><br>
+                              KAINOS SOFTWARE LTD, 
+                               4-6
+                              UPPER CRESCENT<br>
+                              BELFAST<br>
+                              BT7 1NT
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="organisation-2" name="organisation" type="radio" value="0e96ec84-c672-eb11-a812-000d3a22983f">
+                          <label class="govuk-label govuk-radios__label " for="organisation-2">
+                              <strong>IPAFFS Plant Organisation 2</strong><br>
+                              KAINOS SOFTWARE LTD, 
+                               4-6
+                              UPPER CRESCENT<br>
+                              BELFAST<br>
+                              BT7 1NT
+                          </label>
+                      </div>
+              </div>
+          </div>
+
+          <button class="govuk-button" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

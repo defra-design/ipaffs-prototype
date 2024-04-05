@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What are you importing? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row" id="behalf-type-page">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl" id="page-secondary-title">About the consignment</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Who are you creating this notification for?</h1>
+
+      <form method="post" id="consignment-for" action="01-03-company">
+        <input name="crumb" type="hidden" value="lioe2I2YkWQmGxT3_2pvk5F8odSOjid-pz9MR0bF2_f">
+        <input name="notification-type" type="hidden" value="CHEDPP">
+
+        <div class="govuk-form-group  ">
+          <fieldset class="govuk-fieldset">
+        
+        
+            
+        
+            <div class="govuk-radios ">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="for-own-organisation" name="for-own-organisation" type="radio" value="true">
+                  <label class="govuk-label govuk-radios__label " for="for-own-organisation">
+                    IPAFFS Plant Agency E
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="for-own-organisation-2" name="for-own-organisation" type="radio" value="false">
+                  <label class="govuk-label govuk-radios__label " for="for-own-organisation-2">
+                    A different organisation
+                  </label>
+                </div>
+            </div>
+          </fieldset>
+        </div>
+
+          <button class="govuk-button" id="button-save-and-continue" type="submit" data-prevent-double-click="true" value="Save and continue" data-module="govuk-button">Save and continue</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

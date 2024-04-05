@@ -59,8 +59,8 @@
             <dt class="govuk-summary-list__key">
               Address
             </dt>
-            <dd class="govuk-summary-list__value" style="text-transform: capitalize;">
-              3 Bakers Lane<br>Lichfield<br>WS13 6NF
+            <dd class="govuk-summary-list__value">
+              {{ data['billing-address'] or "3 Bakers Lane, Lichfield, WS13 6NF" }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="02-billing-postcode?action=change">Change<span class="govuk-visually-hidden"> billing address</span></a>
