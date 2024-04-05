@@ -15,7 +15,7 @@ router.post('/route-chedp-how-add', function (req, res) {
     res.redirect('12-health-certificate')
   }
  else {
-    res.redirect('12-accompanying-docs')
+    res.redirect('13-approved-est')
   }  
 })
 
