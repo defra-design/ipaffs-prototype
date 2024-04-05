@@ -40,7 +40,7 @@ router.post('/route-chedpp-how-add', function (req, res) {
     res.redirect('03-do-01a-phyto')
   }
  else {
-    res.redirect('04-tr-01-trader-addresses')
+    res.redirect('03-do-01-documents')
   }  
 })
 

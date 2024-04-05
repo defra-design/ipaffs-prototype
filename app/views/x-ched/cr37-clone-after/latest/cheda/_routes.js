@@ -25,7 +25,7 @@ router.post('/route-cheda-how-add', function (req, res) {
     res.redirect('13a-health-certificate')
   }
  else {
-    res.redirect('14-addresses')
+    res.redirect('13b-accompanying-docs')
   }  
 })
 

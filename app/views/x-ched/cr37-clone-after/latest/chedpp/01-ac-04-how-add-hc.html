@@ -17,30 +17,30 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
 
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
 
       <span class="govuk-caption-xl">Documents</span>
 
       <form class="form" action="route-chedpp-how-add" method="POST">
-        <h1 class="govuk-!govuk-heading-l">How do you want to add documents?</h1>
- <p class="govuk-body ">You can add documents manually or clone them from an electronic phytosanitary certificate (ePhyto).</p> 
+        <h1 class="govuk-!govuk-heading-l">Add a phytosanitary certificate</h1>
+ <p class="govuk-body ">You can add a phytosanitary certificate manually or clone documents from an electronic version (ePhyto).</p> 
   
   
-  <p class="govuk-body govuk-!-margin-bottom-6">You can clone (copy) an ePhyto to add all the documents from it at once.
+  
   
   </p>
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <p class="govuk-hint govuk-!-margin-bottom-5">
-                Select one option.
-              </p>
-            </legend> -->
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+                What do you want to do?
+              </h2>
+            </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone">
                 <label class="govuk-label govuk-radios__label" for="how-add-hc">
-                  Clone documents from an ePhtyo
+                  Clone from an ePhyto
                 </label>
                 <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
                  This may save time by adding all the associated documents at once from  The electronic health certificate can include other documents and information.
@@ -49,7 +49,7 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc-2" name="addhc" type="radio" value="Manual">
                 <label class="govuk-label govuk-radios__label" for="how-add-hc-2">
-                  Attach  manually
+                  Attach a phytosanitary certificate manually
                 </label>
                 <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
                   Add commodities manually and copy documents from an electronic phytosanitary certificate (ePhyto).
@@ -58,11 +58,11 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc-3" name="addhc" type="radio" value="Upload from a CSV file">
                 <label class="govuk-label govuk-radios__label" for="how-add-hc-3">
-                  Skip for now
+                  Skip for now 
                 </label>
-                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  Skip to other accompanying documents.
-                </div> -->
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Skip to other accompanying documents section.
+                </div>
               </div>
             </div>
           </fieldset>
