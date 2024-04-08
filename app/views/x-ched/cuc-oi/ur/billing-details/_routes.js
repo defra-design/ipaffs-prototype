@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const util = require('util')
+
 // Add your routes here - above the module.exports line
 
 // Postcode validation
