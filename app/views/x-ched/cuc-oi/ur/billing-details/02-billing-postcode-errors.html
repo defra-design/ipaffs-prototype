@@ -30,15 +30,18 @@
           </h2>
           <div class="govuk-error-summary__body">
             <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+              {% if data['postcode-search'] == "" %}
               <li>
                 <a href="#postcode-search">Enter postcode or enter address manually</a>
               </li>
-              <li>
+              {% else %}
+              <!-- <li>
                 <a href="#postcode-search">Enter valid UK postcode</a>
-              </li>
+              </li> -->
               <li>
                 <a href="#postcode-search">No address found. Try again or enter address manually</a>
-              </li> 
+              </li>
+              {% endif %}
             </ul>
           </div>
         </div>
@@ -74,11 +77,14 @@
               For example, AA3 1AB
             </div>
             <p id="postcode-search-error" class="govuk-error-message">
+              {% if data['postcode-search'] == "" %}
               <span class="govuk-visually-hidden">Error:</span> Enter postcode or enter address manually<br>
-              <span class="govuk-visually-hidden">Error:</span> Enter valid UK postcode<br>
+              {% else %}
+              <!-- <span class="govuk-visually-hidden">Error:</span> Enter valid UK postcode<br> -->
               <span class="govuk-visually-hidden">Error:</span> No address found. Try again or enter address manually
+              {% endif %}
             </p>
-            <input class="govuk-input govuk-input--width-10" id="postcode-search" name="postcode-search" type="text" aria-describedby="billing-address-postcode-hint">
+            <input class="govuk-input govuk-input--width-10" id="postcode-search" name="postcode-search" type="text" aria-describedby="billing-address-postcode-hint" value="{{ data['postcode-search'] }}">
           </div>
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Find address" data-module="govuk-button">
           <p class="govuk-body"><a class="govuk-link" href="03b-enter-billing-address">Enter address manually</a></p>
