@@ -24,6 +24,7 @@ router.use('/x-ched/e-cert-chedp', require('./views/x-ched/e-cert-chedp/_routes'
 router.use('/x-ched/cuc-foundations/latest/billing-details', require('./views/x-ched/cuc-foundations/latest/billing-details/_routes'))
 router.use('/x-ched/cuc-foundations/iteration-1/billing-details', require('./views/x-ched/cuc-foundations/iteration-1/billing-details/_routes'))
 router.use('/x-ched/cuc-oi/latest/billing-details', require('./views/x-ched/cuc-oi/latest/billing-details/_routes'))
+router.use('/x-ched/cuc-oi/ur/billing-details', require('./views/x-ched/cuc-oi/ur/billing-details/_routes'))
 
 
 // ched p rotes

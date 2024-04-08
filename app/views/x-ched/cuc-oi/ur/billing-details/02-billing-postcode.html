@@ -23,7 +23,7 @@
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="">
     <div class="govuk-grid-column-two-thirds">
-      <form action="03-select-billing-address" method="post">
+      <form action="route-validate-postcode" method="post">
         <input name="" type="hidden" value="visited">
         <span class="govuk-caption-xl">Billing</span>
         <fieldset class="govuk-fieldset">
@@ -47,13 +47,13 @@
             </div>
           </details>
           <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--s" for="billing-address-postcode">
+            <label class="govuk-label govuk-label--s" for="postcode-search">
               Postcode
             </label>
-            <div id="billing-address-postcode-hint" class="govuk-hint">
+            <div id="postcode-search-hint" class="govuk-hint">
               For example, AA3 1AB
             </div>
-            <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" aria-describedby="billing-address-postcode-hint">
+            <input class="govuk-input govuk-input--width-10" id="postcode-search" name="postcode-search" type="text" aria-describedby="postcode-search">
           </div>
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Find address" data-module="govuk-button">
           <p class="govuk-body"><a class="govuk-link" href="03b-enter-billing-address">Enter address manually</a></p>
