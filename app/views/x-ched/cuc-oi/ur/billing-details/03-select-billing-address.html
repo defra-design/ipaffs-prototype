@@ -39,8 +39,71 @@
               </label>
             </h1>
             <p>
-              Postcode: <strong>WS13 6NF</strong> <a class="govuk-!-margin-left-2" href="02-billing-postcode">Change</a>
+              Postcode: <strong>{{ data['postcode-search'] or "WS13 6NF" }}</strong> <a class="govuk-!-margin-left-2" href="02-billing-postcode">Change</a>
             </p>
+
+            {% if data['postcode-search'] == "PR0 2AA" or data['postcode-search'] == "PR02AA" or data['postcode-search'] == "pr0 2aa" or data['postcode-search'] == "pr02aa" %}
+            <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
+              <option value="" selected="">6 addresses found</option>
+              <option value="20 COLLIER STREET, PRESTON, PR0&nbsp;2AA">20 COLLIER STREET, PRESTON, PR0 2AA</option>
+              <option value="21 COLLIER STREET, PRESTON, PR0&nbsp;2AA">21 COLLIER STREET, PRESTON, PR0 2AA</option>
+              <option value="22 COLLIER STREET, PRESTON, PR0&nbsp;2AA">22 COLLIER STREET, PRESTON, PR0 2AA</option>
+              <option value="23 COLLIER STREET, PRESTON, PR0&nbsp;2AA">23 COLLIER STREET, PRESTON, PR0 2AA</option>
+              <option value="24 COLLIER STREET, PRESTON, PR0&nbsp;2AA">24 COLLIER STREET, PRESTON, PR0 2AA</option>
+              <option value="25 COLLIER STREET, PRESTON, PR0&nbsp;2AA">25 COLLIER STREET, PRESTON, PR0 2AA</option>
+            </select>
+
+            {% elseif data['postcode-search'] == "WN3 2CW" or data['postcode-search'] == "WN32CW" or data['postcode-search'] == "wn3 2cw" or data['postcode-search'] == "wn32cw" %}
+            <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
+              <option value="" selected="">5 addresses found</option>
+              <option value="MOUNTAIN WAREHOUSE, 6 TRADERS WAY, PIMBO, WN3&nbsp;2CW">MOUNTAIN WAREHOUSE, 6 TRADERS WAY, PIMBO, WN3 2CW</option>
+              <option value="UNIT 7, TRADERS WAY, PIMBO, WN3&nbsp;2CW">UNIT 7, TRADERS WAY, PIMBO, WN3 2CW</option>
+              <option value="2 SEASONS, 8A TRADERS WAY, PIMBO, WN3&nbsp;2CW">2 SEASONS, 8A TRADERS WAY, PIMBO, WN3 2CW</option>
+              <option value="VODAFONE, 8B TRADERS WAY, PIMBO, WN3&nbsp;2CW">VODAFONE, 8B TRADERS WAY, PIMBO, WN3 2CW</option>
+              <option value="9 TRADERS WAY, PIMBO, WN3&nbsp;2CW">9 TRADERS WAY, PIMBO, WN3&nbsp;2CW</option>
+            </select>
+
+            {% elseif data['postcode-search'] == "RG17 7LS" or data['postcode-search'] == "RG177LS" or data['postcode-search'] == "rg17 7ls" or data['postcode-search'] == "rg177ls" %}
+            <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
+              <option value="" selected="">5 addresses found</option>
+              <option value="6 SHRUBBERY LANE, OLD BASING, RG17&nbsp;7LS">6 SHRUBBERY LANE, OLD BASING, RG17 7LS</option>
+              <option value="7 SHRUBBERY LANE, OLD BASING, RG17&nbsp;7LS">7 SHRUBBERY LANE, OLD BASING, RG17 7LS</option>
+              <option value="8 SHRUBBERY LANE, OLD BASING, RG17&nbsp;7LS">8 SHRUBBERY LANE, OLD BASING, RG17 7LS</option>
+              <option value="9 SHRUBBERY LANE, OLD BASING, RG17&nbsp;7LS">9 SHRUBBERY LANE, OLD BASING, RG17 7LS</option>
+              <option value="10 SHRUBBERY LANE, OLD BASING, RG17&nbsp;7LS">10 SHRUBBERY LANE, OLD BASING, RG17 7LS</option>
+            </select>
+
+            {% elseif data['postcode-search'] == "RG21 7DB" or data['postcode-search'] == "RG217DB" or data['postcode-search'] == "rg21 7db" or data['postcode-search'] == "rg217db" %}
+            <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
+              <option value="" selected="">3 addresses found</option>
+              <option value="VALLEY WAREHOUSE, DAFFODIL ROAD, BASINGSTOKE, RG21&nbsp;7DB">VALLEY WAREHOUSE, DAFFODIL ROAD, BASINGSTOKE, RG21 7DB</option>
+              <option value="NORTH PROSPECTS RETAIL PARK, DAFFODIL ROAD, BASINGSTOKE, RG21&nbsp;7DB">NORTH PROSPECTS RETAIL PARK, DAFFODIL ROAD, BASINGSTOKE, RG21 7DB</option>
+              <option value="W H SMITH LTD., DAFFODIL ROAD, BASINGSTOKE, RG21&nbsp;7DB">W H SMITH LTD., DAFFODIL ROAD, BASINGSTOKE, RG21 7DB</option>
+            </select>
+
+            {% elseif data['postcode-search'] == "SP12 21AG" or data['postcode-search'] == "SP1221AG" or data['postcode-search'] == "sp12 21ag" or data['postcode-search'] == "sp1221ag" %}
+            <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
+              <option value="" selected="">5 addresses found</option>
+              <option value="46 ELMS STREET, SALISBURY, SP12&nbsp;21AG">46 ELMS STREET, SALISBURY, SP12 21AG</option>
+              <option value="47 ELMS STREET, SALISBURY, SP12&nbsp;21AG">47 ELMS STREET, SALISBURY, SP12 21AG</option>
+              <option value="48 ELMS STREET, SALISBURY, SP12&nbsp;21AG">48 ELMS STREET, SALISBURY, SP12 21AG</option>
+              <option value="49 ELMS STREET, SALISBURY, SP12&nbsp;21AG">49 ELMS STREET, SALISBURY, SP12 21AG</option>
+              <option value="50 ELMS STREET, SALISBURY, SP12&nbsp;21AG">50 ELMS STREET, SALISBURY, SP12 21AG</option>
+            </select>
+
+            {% elseif data['postcode-search'] == "SP4 7HW" or data['postcode-search'] == "SP47HW" or data['postcode-search'] == "sp4 7hw" or data['postcode-search'] == "sp47hw" %}
+            <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
+              <option value="" selected="">7 addresses found</option>
+              <option value="UNIT 1, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 1, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
+              <option value="UNIT 2, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 2, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
+              <option value="UNIT 3, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 3, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
+              <option value="UNIT 4, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 4, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
+              <option value="UNIT 5, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 5, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
+              <option value="UNIT 6, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 6, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
+              <option value="UNIT 7, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 7, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
+            </select>
+
+            {% else %}
             <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
               <option value="" selected="">24 addresses found</option>
               <option value="BOOTS OPTICIANS PROFESSIONAL SERVICES LTD, 2, BAKERS LANE, LICHFIELD, WS13&nbsp;6NF">BOOTS OPTICIANS PROFESSIONAL SERVICES LTD, 2, BAKERS LANE, LICHFIELD, WS13 6NF</option>
@@ -68,6 +131,7 @@
               <option value="2 SEASONS, 26A, BAKERS LANE, LICHFIELD, WS13&nbsp;6NF">2 SEASONS, 26A, BAKERS LANE, LICHFIELD, WS13 6NF</option>
               <option value="MOUNTAIN WAREHOUSE, 8-10, BAKERS LANE, LICHFIELD, WS13&nbsp;6NF">MOUNTAIN WAREHOUSE, 8-10, BAKERS LANE, LICHFIELD, WS13 6NF</option>
             </select>
+            {% endif %}
           </div>
           <p class="govuk-!-margin-top-4">
             <a href="03b-enter-billing-address">I cannot find the address in the list</a>
