@@ -76,8 +76,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
      
   
   
-      <h2 class="govuk-heading-l">Actions</h2>
-      <div class="action-button-container govuk-!-margin-bottom-9 govuk-!-padding-bottom-3">
+      
+      <div class="action-button-container govuk-!-margin-bottom-0 govuk-!-padding-bottom-0 govuk-!-margin-top-8">
         
 
         <!-- <form method="post" action="07-check-answers" class="govuk-!-display-inline">
@@ -106,10 +106,11 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
           <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
           <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
-            Clone electronic health certificate
+            Clone an EHC
           </button>
         </form>
 
+       
         <!-- <form action="pdf" method="post" class="govuk-!-display-inline">
           <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
           <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
@@ -122,8 +123,19 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
           Delete notification
         </a>
     </div>
+
+    <details class="govuk-details govuk-!-margin-bottom-9">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What is cloning an EHC?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        You can only clone a digitally-signed export health certificate (EHC). This brings across information and documents from the EHC and populates your import notification. Your health certificate will also be attached.
+      </div>
+    </details>
   
-    <h2 class="govuk-heading-l">Your notification</h2>
+  
     <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-about-notification">
       <caption class="govuk-visually-hidden">
         Customs declaration reference and document code table
