@@ -1,20 +1,23 @@
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Addresses – {{ serviceName }} – GOV.UK Prototype Kit
+Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
     {% include "includes/phase-banner.html" %}
-    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
+    {% include "includes/back.html" %} 
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-!-padding-top-6">
+
+
+<div class="govuk-!-padding-top-0">
   <span class="heading-tertiary">
-      <span id="reference-number">DRAFT.GB.2023.5925980</span>
-          <span> - CHEDP</span>
+      <span id="reference-number">DRAFT.GB.2023.1088756</span>
+          <span> - CHEDPP</span>
   </span>
 </div>
 
@@ -22,16 +25,15 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="search-economic-operators-page">
     <div class="govuk-grid-column-full">
-          <span class="govuk-caption-xl">Traders</span>
-          <h1 class="govuk-heading-xl" id="page-primary-title">
-            Add a{% if (data['addressType'] == "importer") %}n{% endif %} {{ data['addressType'] }}</h1>
-      <!-- <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1> -->
-      <form class="govuk-!-margin-bottom-6" action="search" method="GET">
+        <span class="govuk-caption-xl" id="page-secondary-title">Traders</span>
+        <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing {{ data['addressType'] }}</h1>
+
+      <form class="govuk-!-margin-bottom-6" action="search" method="get">
 
         <div class="form-group search-panel">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Search for an existing {{ data['addressType'] }}
+              Search
             </legend>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
@@ -62,7 +64,30 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                     <input class="govuk-input  " id="address" name="address" type="text" value="">
                   </div>
                 </div>
-                  <div class="govuk-grid-column-one-third">
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="type">
+                        Type
+                      </label>
+                      
+                  
+                  
+                  
+                    
+                  
+                    <select class="govuk-select govuk-!-width-full" id="type" name="type">
+                        <option value="">Select type</option>
+                        <option value="Balai">Balai</option>
+                        <option value="Quarantine">Quarantine</option>
+                        <option value="Bird Quarantine">Bird Quarantine</option>
+                        <option value="ABP">ABP</option>
+                        <option value="Other Controlled Destination">Other Controlled Destination</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group">
                     <label class="govuk-label" for="country">Country</label>
                     <select class="govuk-select govuk-!-width-full" id="country" name="country">
                       <option value="">Select country</option>
@@ -304,9 +329,9 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                                   <option value="AE">United Arab Emirates</option>
                                   <optgroup label="United Kingdom of Great Britain and Northern Ireland">
                                           <option value="GB-ENG">England</option>
-                                          <option value="GB-NIR">Northern Ireland</option>
                                           <option value="GB-SCT">Scotland</option>
                                           <option value="GB-WLS">Wales</option>
+                                          <option value="GB-NIR">Northern Ireland</option>
                                   </optgroup>
                                   <option value="UM">United States Minor Outlying Islands</option>
                                   <option value="US">United States of America</option>
@@ -323,33 +348,24 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                                   <option value="ZW">Zimbabwe</option>
                     </select>
                   </div>
+                </div>
             </div>
           </fieldset>
 
-          <input class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search" data-module="govuk-button">
+          <button class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search" data-module="govuk-button" data-prevent-double-click="true">Search</button>
         </div>
       </form>
 
-      <form action="14-addresses" method="POST">
-        <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
-        <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
-        <!-- <input name="14a-address-search" type="hidden" value="visited">  -->
-        {% if (data['addressType'] == " consignor or exporter") %}
-        <input name="consignor-page" type="hidden" value="yes"> 
-        {% else %}
-        {% endif %}
+      <form action="04-01-addresses" method="POST">
+        <input name="crumb" type="hidden" value="keha1DOoAmmELZLuoAQXiLX4uf2H1u2amsf5rpMxz0p">
+        <input name="etag" type="hidden" value="&quot;0000000000224D16&quot;">
 
-        {% if (data['addressType'] == " consignee") %}
-        <input name="consignee-page" type="hidden" value="yes"> 
-        {% else %}
-        {% endif %}
-        {% if (data['addressType'] == "importer") %}
-         <input name="importer-page" type="hidden" value="yes"> 
-        {% else %}
-        {% endif %}
-        {% if (data['addressType'] == " place of destination") %}
-        <input name="place-of-destination-page" type="hidden" value="yes"> 
-        {% else %}
+        {% if (data['addressType'] == "packer") %}
+        <input name="packer-page" type="hidden" value="yes"> 
+        {% elseif (data['addressType'] == "delivery address") %}
+        <input name="delivery-page" type="hidden" value="yes"> 
+        {% elseif (data['addressType'] == "consignor or exporter") %}
+        <input name="consignor-page" type="hidden" value="yes"> 
         {% endif %}
 
         <div class="table-responsive">
@@ -359,8 +375,6 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                 <th class="govuk-table__header" scope="col">Name</th>
                 <th class="govuk-table__header" scope="col">Address</th>
                 <th class="govuk-table__header" scope="col">Country</th>
-                
-                
               <th class="govuk-table__header">
                 <span class="govuk-visually-hidden">View</span>
               </th>
@@ -370,24 +384,24 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             </tr>
             </thead>
             <tbody>
-              {% if (data['addressType'] == " consignor or exporter") %}
+              {% if (data['addressType'] == "packer") or (data['addressType'] == "consignor or exporter") %}
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    Fromage Délicieux
+                    Bloemen en Bloembollen Nederland
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    71 rue Banaudon, Rhône-Alpes, 69009 Lyon
+                    Pompstraat 101, Rotterdam, 3082 RN
                   </td>
-                  <td class="govuk-table__cell">
-                    France
+                  <td class="govuk-table__cell" style="vertical-align: top;">
+                    Netherlands
                   </td>
-                  <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-b5334368-3a09-4d70-a553-6be7ea6b2f4d" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                  <button type="submit" class="link-button" name="add-id" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
                     Select
                   </button>
                 </td>
@@ -395,60 +409,40 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               {% else %}
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    World Meats and Cheeses
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    Unit 7, Western Business Park, Salisbury, SP4 7HW
-                  </td>
-                  <td class="govuk-table__cell">
-                    England
-                  </td>
-                  <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
                     Plants and Trees Nurseries
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
                     North Prospects Retail Park, Daffodil Road, Basingstoke, RG21 7DB
                   </td>
-                  <td class="govuk-table__cell">
+                  <td class="govuk-table__cell" style="vertical-align: top;">
                     England
                   </td>
-                  <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-b5334368-3a09-4d70-a553-6be7ea6b2f4d" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                  <button type="submit" class="link-button" name="add-id" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
                     Select
                   </button>
                 </td>
               </tr>
               {% endif %}
+              
             </tbody>
           </table>
         </div>
       </form>
 
-      <a href="#" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
+      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1088756/traders/final-destination/new" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
         Create a new {{ data['addressType'] }}
       </a>
 
         <!-- <nav class="pagination" aria-label="Pagination">
           <ul class="pagination-list">
               <li class="pagination-item pagination-item-next">
-                  <a href="#" class="pagination-link" rel="next" id="next-page">
+                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
                     <span class="pagination-link-title">
                        Next page
                       <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
@@ -456,7 +450,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                       </svg>
                     </span>
                     <span class="govuk-visually-hidden">:</span>
-                    <span class="pagination-link-label">2 of 4000</span>
+                    <span class="pagination-link-label">2 of 451</span>
                   </a>
               </li>
           </ul>
@@ -465,4 +459,5 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
   </div>
 </main>
+
 {% endblock %}
