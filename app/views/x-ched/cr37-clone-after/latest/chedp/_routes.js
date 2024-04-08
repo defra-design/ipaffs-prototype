@@ -15,7 +15,7 @@ router.post('/route-chedp-how-add', function (req, res) {
     res.redirect('12-health-certificate')
   }
  else {
-    res.redirect('12-accompanying-docs')
+    res.redirect('13-approved-est')
   }  
 })
 
@@ -94,7 +94,7 @@ router.post('/add-documents', function (req, res) {
     res.redirect('12-accompanying-docs')
   }
  else {
-    res.redirect('12-health-certificate')
+    res.redirect('01-ac-04-how-add-hc')
   }
   
 })

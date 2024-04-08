@@ -27,3 +27,21 @@ router.post('/chedpp-route-how-enter', function (req, res) {
     }
     
     })
+
+
+      //  - How to add hc
+router.post('/route-chedpp-how-add', function (req, res) {
+  // Make a variable and give it the value from name
+  var howAdd = req.session.data['addhc']
+  if (howAdd == "Clone") {
+    res.redirect('03a-certificate-reference')
+  }
+ else if (howAdd == "Manual") {
+    res.redirect('03-do-01a-phyto')
+  }
+ else {
+    res.redirect('03-do-01-documents')
+  }  
+})
+
+    

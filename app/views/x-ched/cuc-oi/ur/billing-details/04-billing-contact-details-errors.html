@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    {% if (data['action'] == "change") %}
+    Change billing contact details
+    {% else %}
+    Add billing contact details
+    {% endif %} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.1098634</span>
+          <span> - {{ data['ched-type'] | upper or "CHEDX" }}
+          </span>
+  </span>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+              <li>
+                <a href="#billing-email">Enter an email address</a>
+              </li>
+              <li>
+                <a href="#billing-email">Enter an email address in the correct format, like name@example.com</a>
+              </li>
+              <li>
+                <a href="#billing-telephone-number">Enter a telephone number</a>
+              </li>
+              <li>
+                <a href="#billing-telephone-number">Enter a telephone number that is between 9 and 20 characters</a>
+              </li>
+              <li>
+                <a href="#billing-telephone-number">Enter a telephone number using only these characters: 0-9 / + () . -</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> 
+      <form action="05-confirm-billing-details" method="post">
+        <input name="" type="hidden" value="visited">
+        <span class="govuk-caption-xl">Billing</span>
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading ">
+              {% if (data['action'] == "change") %}
+              Change billing contact details
+              {% else %}
+              Add billing contact details
+              {% endif %}
+            </h1>
+          </legend>
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label govuk-label--s" for="billing-email">
+              Email address
+            </label>
+            <div id="billing-email-hint" class="govuk-hint">
+              We'll send the invoice to this email address
+            </div>
+            <p id="billing-email-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter an email address<br>
+              <span class="govuk-visually-hidden">Error:</span> Enter an email address in the correct format, like name@example.com<br>
+            </p>
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-email" name="billing-email" type="email" spellcheck="false" aria-describedby="billing-email-hint" autocomplete="email">
+          </div>
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label govuk-label--s" for="billing-telephone-number">
+              Phone number
+            </label>
+            <div id="billing-telephone-number-hint" class="govuk-hint">
+              For example, the payments team
+            </div>
+            <p id="billing-telephone-number-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter a telephone number<br>
+              <span class="govuk-visually-hidden">Error:</span> Enter a telephone number that is between 9 and 20 characters<br>
+              <span class="govuk-visually-hidden">Error:</span> Enter a telephone number using only these characters: 0-9 / + () . -
+            </p>
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-telephone-number" name="billing-telephone-number" type="tel" aria-describedby="billing-telephone-number-hint" autocomplete="tel">
+          </div>
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
+          <p class="govuk-body">
+            {% if (data['action'] == "change") %}
+            <a class="govuk-link" href="05-confirm-billing-details">Cancel and return to notification</a>
+            {% else %}
+            <a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a>
+            {% endif %}
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

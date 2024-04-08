@@ -29,46 +29,26 @@ Search – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-form-group govuk-!-width-three-quarters ">
           <h1 class="govuk-label-wrapper govuk-!-margin-bottom-5">
             <label class="govuk-label govuk-label--xl " for="certificate-reference">
-              Clone an electronic health certificate
+              Which EHC do you want to clone?
             </label>
           </h1>
           {{ data | log }}
           <div class="govuk-!-margin-bottom-8">
             <!-- <p class="govuk-caption-l govuk-!-margin-bottom-2">You can use this to automatically:</p> -->
-           <ul class="govuk-body govuk-!-margin-bottom-4">
+           <!-- <ul class="govuk-body govuk-!-margin-bottom-4">
             <li>Clone the information from the electronic system to populate parts of your IPAFFS notification</li>
             <li>Clone documents uploaded by the exporter and vet</li>
-           </ul> 
-           <details class="govuk-details  govuk-!-width-three-quarters">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                  What is this?
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-                <p class="govuk-body">If your vet has used the electronic health certificate service, you can find information that your exporter and vet has added to the exporting system, for example 'Traces NT' for Europe.</p>
-                    
-            </div>
-          </details>
+           </ul>  -->
+           
           </div>
-          <label class="govuk-label govuk-label--m " for="certificate-reference">
-            Electronic health certificate reference number
+          <label class="govuk-label " for="certificate-reference">
+            Enter EHC reference number
           </label>
-          <details class="govuk-details  govuk-!-width-three-quarters">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                  Where do I get this?
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-                <p class="govuk-body">The vet who signed the health certificate or your exporter.</p>
-                    
-            </div>
-          </details>
+          <p class="govuk-hint">You can get this from your exporter or the vetinary inspector.</p>
           <input class="govuk-input govuk-!-width-one-half govuk-!-margin-bottom-5" id="certificate-reference" type="text" >
         </div>
         <div class="govuk-button-group ">
-          <input class="govuk-button" id="button-search" type="submit" value="Find health certificate" data-module="govuk-button"> 
+          <input class="govuk-button" id="button-search" type="submit" value="Continue" data-module="govuk-button"> 
           
           <p><a href="javascript:history.back()" title="Skip this step" style="margin-left: 10px;">Cancel</a></p>
         </div>

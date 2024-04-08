@@ -22,18 +22,90 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
   </span>
 </div>
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters govuk-!-padding-0 govuk-!-margin-top-7">
+  <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+        <p class="govuk-body">
+          Electronic phytosanitary certificate (ePhyto) found.
+          
+        </p>
+      
+    </div>
+    </div>
+  </div>
+</div>
 <main class="govuk-main-wrapper cloning-summary-page" id="main-content">
   <div class="govuk-grid-row" id="cloning-summary">
     <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl" id="page-primary-title">Confirm this is the correct electronic phytosanitary certificate (ePhyto) </h1>
-      <table class="govuk-table review-table" id="consignment-table">
-        <caption class="govuk-visually-hidden">Consignment table</caption>
+        <h1 class="govuk-heading-xl" id="page-primary-title">Confirm documents to clone</h1>
+      
+        <div id="documents-table" class="govuk-!-margin-top-9 govuk-!-margin-bottom-9">
+          <h2 class="govuk-heading-m">6 documents will be attached after cloning</h2>
+         
+
+
+  
+
+  <p class="govuk-body govuk-!-margin-bottom-2">Showing 1 to 5 out of 6 documents</p>
+  <p class="govuk-body govuk-!-margin-bottom-4"><a>View all documents</a></p>
+  
+  <table class="govuk-table" id="goods-table-0">
+    <caption class="govuk-visually-hidden">Docs table</caption>
+    <tbody>
+    <tr>
+      <td class="govuk-table__header govuk-!-width-one-third">Document type</td>
+      <td class="govuk-table__header govuk-!-width-one-third">Reference</td>
+      <!-- <td class="govuk-table__header govuk-!-width-one-third">File name</td> -->
+    </tr>
+    <tr>
+      <td class="govuk-table__cell">Phytosanitary certificate</td>
+      <td class="govuk-table__cell">PHC-859q77543987</td>
+      <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
+  </tr>
+    <tr>
+        <td class="govuk-table__cell">Seaway Bill</td>
+        <td class="govuk-table__cell">SWB-859q77543987</td>
+        <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
+    </tr>
+    <tr>
+      <td class="govuk-table__cell">Processing statement</td>
+      <td class="govuk-table__cell">PCS-859q77543987</td>
+      <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
+  </tr>
+  <tr>
+    <td class="govuk-table__cell">Storage document</td>
+    <td class="govuk-table__cell">STO-43987KSRETQS</td>
+    <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
+</tr>
+  <tr>
+    <td class="govuk-table__cell">Commercial invoice</td>
+    <td class="govuk-table__cell">COM-859q77543987</td>
+    <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
+  </tr>
+    </tbody>
+    </table>
+         </div>
+
+        
+             
+      
+      <div class="govuk-!-padding-4" style="border: solid 1px grey;">
+      <h2 class="govuk-heading-m">Summary of the ePhyto certificate</h2>
+      <hr>
+        <table class="govuk-table review-table" id="consignment-table">
+        <caption class="govuk-visually-hidden">Summary of the ePhyto certificate</caption>
         <tbody>
           <!-- <tr class="govuk-table__header">
-            <th class="govuk-heading-m govuk-!-width-full" id="about-consignment">About the consignment</th>
+            <th class="govuk-heading-m govuk-!-width-full"  style=" flex:unset; column-span: all !important;" colspan="2">Summary of the ePhyto certificate</th>
           </tr> -->
           <tr>
-            <th scope="row" class="govuk-table__header">Health certificate number</th>
+            <th scope="row" class="govuk-table__header">Phytosanitary certificate number</th>
             <td class="govuk-table__cell" id="health-certificate-number">RIHFS-LKSFJ4329849-837429827349</td>
           </tr>
           <tr>
@@ -58,22 +130,27 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
                           </th>
             <td class="govuk-table__cell" id="bcp">Port of Felixstowe (plants) - GBFXT1PP</td>
           </tr>
-          <tr>
+          <!-- <tr>
             <th scope="row" class="govuk-table__header">Seal number</th>
             <td class="govuk-table__cell" id="purpose-of-consignment">905327895-379GHGSHAS-4378439832489</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
 
       <table class="govuk-table  govuk-!-margin-bottom-0">
         <tr class="presentation-table__row--no-border">
           <th scope="row" class="govuk-table__header govuk-!-width-one-half">Commodity details</th>
-          <td class="govuk-table__cell govuk-!-width-one-quarter">52 commodities</td>
-          <td class="govuk-table__cell change govuk-!-width-one-quarter" ><a>View all</a>
+          <td class="govuk-table__cell govuk-!-width-one-quarter">52 commodities
+
+            
           </td>
+          <!-- <td class="govuk-table__cell change govuk-!-width-one-quarter" ><a>View all</a> 
+          </td>-->
       </tr>
       <tr class="presentation-table__row--no-border">        
-        <td class="govuk-body govuk-table__cell gov-!-width-full govuk-!-margin-bottom-0" colspan="2" style="border: 0;">Showing 1 to 5 out of 52 commodities</td>
+        <td class="govuk-body govuk-table__cell gov-!-width-full govuk-!-margin-bottom-0" colspan="2" style="border: 0;">Showing 1 to 5 out of 52 commodities
+          <p><a>View all</a></p>
+        </td>
       </tr>
       </table>
 
@@ -143,48 +220,21 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
           </tbody>
         </table>
 
-       <div class="govuk-!-margin-top-9 govuk-!-padding-4 govuk-!-margin-bottom-9" style="border: 4px solid black;">
-        <h2 class="govuk-heading-m">Documents</h2>
-       
-<p class="govuk-caption-l govuk-!-margin-bottom-4">4 documents will be attached when copying this ephyto</p>
+      </div>
 
-<table class="govuk-table" id="goods-table-0">
-  <caption class="govuk-visually-hidden">Goods table</caption>
-  <tbody>
-  <tr>
-    <td class="govuk-table__header govuk-!-width-one-third">Document type</td>
-    <td class="govuk-table__header govuk-!-width-one-third">Reference</td>
-    <td class="govuk-table__header govuk-!-width-one-third">File name</td>
-  </tr>
-  <tr>
-    <td class="govuk-table__cell">Phytosanitary certificate</td>
-    <td class="govuk-table__cell">PHC-859q77543987</td>
-    <td class="govuk-table__cell">PHC-859q77543987.pdf</td>
-</tr>
-  <tr>
-      <td class="govuk-table__cell">Seaway Bill</td>
-      <td class="govuk-table__cell">SWB-859q77543987</td>
-      <td class="govuk-table__cell">PHC-859q77543987.pdf</td>
-  </tr>
-  <tr>
-    <td class="govuk-table__cell">Storage document</td>
-    <td class="govuk-table__cell">STO-859q77543987</td>
-    <td class="govuk-table__cell">PHC-859q77543987.pdf</td>
-</tr>
-<tr>
-  <td class="govuk-table__cell">Commercial invoice</td>
-  <td class="govuk-table__cell">COM-859q77543987</td>
-  <td class="govuk-table__cell">PHC-859q77543987.pdf</td>
-</tr>
-  </tbody>
-  </table>
-       </div>
+      <div class="govuk-form-group govuk-!-margin-top-9 govuk-!-margin-bottom-9">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label govuk-label--m" for="waste-3">
+            I confirm this is the correct ePhyto certificate to clone documents from
+          </label>
+        </div>
+    
+       </div>    
 
-       
-       
 <div class="govuk-!-margin-top-9">
       <form action="03-do-01a-phyto-clone" method="POST">
-        <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and copy documents</button>
+        <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and clone documents</button>
         
         <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">
         <input name="country-of-origin-code" type="hidden" value="NL">
@@ -192,9 +242,12 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="crumb" type="hidden" value="pAX8KbbF_kTf-zwr0UqqZTYVT8dKDyzcqU2LeTvWorP">
       </form>
       </div>
-    </div>
-    <a class="govuk-link clear-link" id="search-to-clone" href="03a-certificate-reference">Go back and search again</a>
+    
+      <p class="govuk-body"><a class="govuk-link clear-link" id="search-to-clone" href="03a-certificate-reference">Go back and search again</a></p>
+        <p class="govuk-body"><a class="govuk-link clear-link" href="01-no-check-answers">Cancel and return to hub</a></p>
   </div>
+  </div>
+ 
 </main>
 
 

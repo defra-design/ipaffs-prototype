@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    {% if (data['action'] == "change") %}
+    Change billing address
+    {% else %}
+    Add billing address
+    {% endif %}
+    – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.1098634</span>
+          <span> - {{ data['ched-type'] | upper or "CHEDX" }}
+          </span>
+  </span>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="">
+    <div class="govuk-grid-column-two-thirds"> 
+
+      {% if (data['action'] == "change") %}
+      <form action="05-confirm-billing-details" method="post">
+      {% else %}
+      <form action="04-billing-contact-details" method="post">
+      {% endif %}
+
+        <input name="address-entry-type" type="hidden" value="manual-entry">    
+        <span class="govuk-caption-xl">Billing</span>
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              {% if (data['action'] == "change") %}
+              Change billing address
+              {% else %}
+              Add billing address
+              {% endif %}
+            </h1>
+          </legend>
+          <p class="govuk-body">
+            You must use a UK address.
+          </p>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help for non-UK businesses
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>You must employ a UK-based import agent to complete your notifications.</p>
+              <p>Import agents must use their own address for non-UK customers and are liable for any charges.</p>
+            </div>
+          </details>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="billing-address-line-1">
+              Address line 1
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-address-line-1" name="billing-address-line-1" type="text" autocomplete="address-line-1" value="{{ data['billing-address-line-1'] }}">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="billing-address-line-2">
+              Address line 2 (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-address-line-2" name="billing-address-line-2" type="text" autocomplete="address-line-2" value="{{ data['billing-address-line-2'] }}">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="billing-address-line-3">
+              Address line 3 (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-address-line-3" name="billing-address-line-3" type="text" autocomplete="address-line-3" value="{{ data['billing-address-line-3'] }}">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="billing-address-line-4">
+              Address line 4 (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-address-line-4" name="billing-address-line-4" type="text" autocomplete="address-line-4" value="{{ data['billing-address-line-4'] }}">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="billing-address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-one-half" id="billing-address-town" name="billing-address-town" type="text" autocomplete="address-level2" value="{{ data['billing-address-town'] }}">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="billing-address-county">
+              County (optional)
+            </label>
+            <input class="govuk-input govuk-!-width-one-half" id="billing-address-county" name="billing-address-county" type="text" value="{{ data['billing-address-county'] }}">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="billing-address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" autocomplete="postal-code" value="{{ data['billing-address-postcode'] }}">
+          </div>
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
+          <p class="govuk-body">
+            {% if (data['action'] == "change") %}
+            <a class="govuk-link" href="05-confirm-billing-details">Cancel and return to notification</a>
+            {% else %}
+            <a class="govuk-link" href="01-add-billing-details">Cancel and return to notification</a>
+            {% endif %}
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
