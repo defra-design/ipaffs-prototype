@@ -23,7 +23,8 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
 
       <form class="form" action="route-chedp-how-add" method="POST">
         <h1 class="govuk-!govuk-heading-l">Add the latest health certificate</h1>
-
+        {{ data | log }}
+        
         <p class="govuk-body govuk-!-margin-bottom-6">You can clone information and documents from an electronic export health certificate (EHC). 
         </p>
         <!-- <p class="govuk-body govuk-!-margin-bottom-6">You can clone an EHC to populate your import notification with all documents and information from it.
@@ -37,7 +38,7 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone">
+                <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
                 <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="how-add-hc">
                   Clone  information and documents
                 </label>
@@ -46,7 +47,7 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
                 </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-add-hc-1" name="addhc" type="radio" value="Clone">
+                <input class="govuk-radios__input" id="how-add-hc-1" name="addhc" type="radio" value="Clone-doc">
                 <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="how-add-hc">
                   Clone documents only 
                 </label>
@@ -64,7 +65,7 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
                 </div> -->
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-add-hc-3" name="addhc" type="radio" value="Upload from a CSV file">
+                <input class="govuk-radios__input" id="how-add-hc-3" name="addhc" type="radio" value="Manual-2">
                 <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="how-add-hc-3">
                   I  don't have one yet
                 </label>

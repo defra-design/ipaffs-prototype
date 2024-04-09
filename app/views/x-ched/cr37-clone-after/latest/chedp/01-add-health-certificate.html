@@ -28,7 +28,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
 
 <main class="govuk-main-wrapper cloning-summary-page" id="main-content">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters govuk-!-padding-0">
+    <div class="govuk-grid-column-full govuk-!-padding-left-3">
     <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="banner-title">
@@ -43,16 +43,24 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
         
       </div>
       </div>
+
+      {% if (data['addhc'] == "Clone-info") %}
+      <h1 class="govuk-heading-xl " id="page-primary-title">Confirm EHC to clone documents and information from</h1>
+      {% else %}
+      <h1 class="govuk-heading-xl " id="page-primary-title">Confirm EHC to clone documents from</h1>
+      {% endif %}
+
+      {{ data | log }}
     </div>
   </div>
   <div class="govuk-grid-row" id="cloning-summary">
     <div class="govuk-grid-column-full">
-        <!-- <h1 class="govuk-heading-l " id="page-primary-title">What do you want to copy?</h1> -->
-        {{ data | log }}
+        
+       
 
        
         <form action="route-x-p-docs-info-amend" method="POST">
-        <div class="govuk-form-group govuk-!-width-two-thirds">
+        <!-- <div class="govuk-form-group govuk-!-width-two-thirds">
          <fieldset class="govuk-fieldset">
            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
@@ -64,8 +72,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
                <input class="govuk-radios__input" id="where-do-you-live" name="docs-info" type="radio" value="all">
                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
                  All information and documents 
-                 <!-- <p class="govuk-!-font-weight-bold govuk-!-margin-top-3 govuk-!-margin-bottom-1">Information you have previously entered will be replaced by any matching data from the cloned information.</p> -->
-              
+                
               
                  <div class="govuk-warning-text">
                   <span class="govuk-warning-text__icon govuk-!-margin-top-1" aria-hidden="true">!</span>
@@ -87,10 +94,11 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
             
            </div>
          </fieldset>
-       </div> 
+       </div>  -->
 
        <div id="surrounding-table" class="govuk-!-padding-6" style="border: 1px solid #b1b4b6;">
-        <h2 class="govuk-heading-l govuk-!-margin-bottom-5">Summary of the export health certificate</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-5">Summary of the export health certificate</h2>
+        <hr>
         <table class="govuk-table review-table" id="consignment-table">
         <caption class="govuk-visually-hidden">Consignment table</caption>
         <tbody>
@@ -234,7 +242,28 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
   
 </div>
        
+<div class="govuk-form-group govuk-!-margin-top-9 govuk-!-margin-bottom-9">
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+    <label class="govuk-label govuk-checkboxes__label govuk-label--m" for="waste-3">
+      I confirm this is the correct EHC to clone from
+    </label>
+   
+    {% if (data['addhc'] == "Clone-info") %}
+    <div class="govuk-warning-text govuk-!-margin-left-1 govuk-!-margin-top-3 govuk-grid-column-two-thirds">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        This will replace any information already added with the details from the electronic EHC.
+      </strong>
+    </div>
+    {% else %}
+    {% endif %}
+  </div>
+  
+ 
 
+ </div> 
        
 {% if (data['cr37pReviewedVar1'] == "true") %} 
 <form action="route-x-p-docs-info-amend" method="POST">   
