@@ -51,10 +51,83 @@
         </div>
       </dl>
         
-   
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Adding billing details by agents</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">CHED-PP Delegation of Authority scenario</th>
+            <th scope="col" class="govuk-table__header">CHED-P non-DoA scenario</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <ol class="govuk-list govuk-list--number">
+              <li><a href="chedpp/01-01-importing">What are you importing?</a> (start here)</li>
+              <li><a href="chedpp/01-02-doa">Who are you creating this notification for?</a></li>
+              <li><a href="chedpp/01-03-company">Which company is this notification for</a></li>
+              <li><a href="chedpp/01-no-check-answers"><b>Notification Hub</b></a></li>
+              <li><a href="chedpp/06-01-contact">Contact details</a></li>
+              <li><a href="chedpp/06-02-nominated-contacts">Nominated contacts</a> (ask to leave blank)</li>
+              <li><a href="chedpp/03-01-documents">Accompanying documents</a> (ask to leave blank)</li>
+              <li><a href="chedpp/04-01-addresses">Importer, Packer, Delivery address and Consignor</a>
+                <ol type="a">
+                  <li><a href="chedpp/04-01-addresses">Addresses search</a></li>
+                </ol>
+              </li>
+              <li>Billing section:
+                <ol type="a">
+                  <li><a href="billing-details/01-add-billing-details?ched-type=chedpp">Add billing details</a></li>
+                  <li><a href="billing-details/05-confirm-billing-details?ched-type=chedpp">Confirm billing details</a></li>
+                </ol>
+              </li>
+              <li><a href="chedpp/07-cn-01-review">Review your notification</a>
+                <ol type="a">
+                  <li><a href="chedpp/07-cn-01-review-error-add">Error: Add billing details</a></li>
+                  <li><a href="chedpp/07-cn-01-review-error-confirm">Error: Confirm billing details</a></li>
+                </ol>
+              </li>
+              <li><a href="chedpp/07-cn-02-declaration">Declaration</a></li>
+              <li><a href="common/20-submitted-inspection-required?ched-type=chedp">Confirmation</a></li>
+            </ol>
+          </td>
+          <td class="govuk-table__cell">
+            <ol class="govuk-list govuk-list--number">
+              <li><a href="chedp/01-no-check-answers"><b>Notification Hub</b></a> (start here)</li>
+              <li><a href="chedp/14-addresses">Addresses</a>
+                <ol type="a">
+                  <li><a href="chedp/14a-address-search">Addresses search</a></li>
+                </ol>
+              </li>
+              <li><a href="chedp/11-transport-to-poe">Transport to the port of entry</a> (ask to leave blank)</li>
+              <li><a href="chedp/17a-contact">Contact details</a></li>
+              <li><a href="chedp/17b-nominated-contacts">Nominated contacts</a> (ask to leave blank)</li>
+              <li><a href="chedp/17c-contact-consignment">Contact address for consignment</a></li>
+              <li>Billing section:
+                <ol type="a">
+                  <li><a href="billing-details/01-add-billing-details?ched-type=chedp">Add billing details</a></li>
+                  <li><a href="billing-details/05-confirm-billing-details?ched-type=chedp">Confirm billing details</a></li>
+                </ol>
+              </li>
+              <li><a href="chedp/07-cn-01-review">Review your notification</a>
+                <ol type="a">
+                  <li><a href="chedp/07-cn-01-review-error-add">Error: Add billing details</a></li>
+                  <li><a href="chedp/07-cn-01-review-error-confirm">Error: Confirm billing details</a></li>
+                </ol>
+              </li>
+              <li><a href="chedp/07-cn-02-declaration">Declaration</a></li>
+              <li><a href="common/20-submitted-inspection-required?ched-type=chedp">Confirmation</a></li>
+            </ol>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+
         <div class="govuk-!-padding-bottom-4">
           <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Adding and changing billing details</caption>
+            <caption class="govuk-table__caption govuk-table__caption--m">Billing details screens</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
@@ -126,78 +199,6 @@
             </tbody>
           </table>
 
-          <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Other notifciation journey screens</caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
-                <th scope="col" class="govuk-table__header">All</th>
-                <th scope="col" class="govuk-table__header">CHED P</th>
-                <th scope="col" class="govuk-table__header">CHED A</th>
-                <th scope="col" class="govuk-table__header">CHED D</th>
-                <th scope="col" class="govuk-table__header">CHED PP</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Notification hub<br><b>no Billing</b> section</td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"><a href="chedp/01-no-check-answers-no-billing">Done</a></td>
-                <td class="govuk-table__cell">N/A</td>
-                <td class="govuk-table__cell">
-                  <a href="chedd/01-no-check-answers-no-billing">EU</a><br>
-                  <a href="chedd/01-no-check-answers-row-no-billing">RoW</a>
-                </td>
-                <td class="govuk-table__cell"><a href="chedpp/01-no-check-answers-no-billing">Done</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Notification hub<br>
-                <b>with Billing</b> section</td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"><a href="chedp/01-no-check-answers">Done</a></td>
-                <td class="govuk-table__cell">N/A</td>
-                <td class="govuk-table__cell">
-                  <a href="chedd/01-no-check-answers">EU</a><br>
-                  <a href="chedd/01-no-check-answers-row">RoW</a>
-                </td>
-                <td class="govuk-table__cell"><a href="chedpp/01-no-check-answers">Done</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Review your notification</td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review">Done</a></td>
-                <td class="govuk-table__cell">N/A</td>
-                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review">Done</a></td>
-                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review">Done</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Review your notification<br>
-                <b>Error:</b> Add billing details</td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review-error-add">Done</a></td>
-                <td class="govuk-table__cell">N/A</td>
-                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review-error-add">Done</a></td>
-                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review-error-add">Done</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Review your notification<br>
-                <b>Error:</b> Confirm billing details</td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"><a href="chedp/07-cn-01-review-error-confirm">Done</a></td>
-                <td class="govuk-table__cell">N/A</td>
-                <td class="govuk-table__cell"><a href="chedd/07-cn-01-review-error-confirm">Done</a></td>
-                <td class="govuk-table__cell"><a href="chedpp/07-cn-01-review-error-confirm">Done</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Confirmation</td>
-                <td class="govuk-table__cell"><a href="common/20-submitted-inspection-required">Done<br>P, D, PP</a></td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
 
   </div>
