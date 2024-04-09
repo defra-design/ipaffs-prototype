@@ -11,7 +11,8 @@ router.post('/route-validate-postcode', function (req, res) {
                           'RG17 7LS', 'RG177LS', 'rg17 7ls', 'rg177ls', 
                           'RG21 7DB', 'RG217DB', 'rg21 7db', 'rg217db', 
                           'SP12 21AG', 'SP1221AG', 'sp12 21ag', 'sp1221ag',  
-                          'SP4 7HW', 'SP47HW', 'sp4 7hw', 'sp47hw']
+                          'SP4 7HW', 'SP47HW', 'sp4 7hw', 'sp47hw', 
+                          'SP6 9NM', 'SP69NM', 'sp6 9nm', 'sp69nm']
   if (validPostcodes.includes(enteredPostocde)) {
     res.redirect('03-select-billing-address')
   } else {
