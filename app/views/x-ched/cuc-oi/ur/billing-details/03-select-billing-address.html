@@ -103,6 +103,16 @@
               <option value="UNIT 7, WESTERN BUSINESS PARK, SALISBURY, SP4&nbsp;7HW">UNIT 7, WESTERN BUSINESS PARK, SALISBURY, SP4 7HW</option>
             </select>
 
+            {% elseif data['postcode-search'] == "SP6 9NM" or data['postcode-search'] == "SP69NM" or data['postcode-search'] == "sp6 9nm" or data['postcode-search'] == "sp69nm" %}
+            <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
+              <option value="" selected="">5 addresses found</option>
+              <option value="21 OAK LANE, CRENDELL, SP6&nbsp;9NM">21 OAK LANE, CRENDELL, SP6 9NM</option>
+              <option value="22 OAK LANE, CRENDELL, SP6&nbsp;9NM">22 OAK LANE, CRENDELL, SP6 9NM</option>
+              <option value="23 OAK LANE, CRENDELL, SP6&nbsp;9NM">23 OAK LANE, CRENDELL, SP6 9NM</option>
+              <option value="24 OAK LANE, CRENDELL, SP6&nbsp;9NM">24 OAK LANE, CRENDELL, SP6 9NM</option>
+              <option value="25 OAK LANE, CRENDELL, SP6&nbsp;9NM">25 OAK LANE, CRENDELL, SP6 9NM</option>
+            </select>
+
             {% else %}
             <select class="govuk-select govuk-!-width-full" id="billing-address" name="billing-address">
               <option value="" selected="">24 addresses found</option>
