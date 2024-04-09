@@ -41,6 +41,14 @@
         Address book
       </a>
       <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state" id="manage-account-link" href="manage?returnUrl=%2Fprotected%2Fnotifications%2Fconsignment-organisation%3Ftype%3DCHEDPP">
+            Manage account
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state" id="manage-trade-partners-link" href="/notification/vnet/protected/notifications/trade-partners/filter">
+            Manage trade partners
+        </a>
+      <span>|</span>
       <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
         Sign out
       </a>
@@ -84,8 +92,8 @@
       <div class="audit-flag">
         <div id="last-submission-date">Submitted on: </div>
         <div id="submitted-by">Submitted by: </div>
-        <div id="last-updated-date">Last updated: 28 November 2023, 21:31</div>
-        <div id="last-updated-by">Last updated by: Andrew Inspector-Tester</div>
+        <div id="last-updated-date">Last updated: 11 April 2024, 21:31</div>
+        <div id="last-updated-by">Last updated by: Alex Watson</div>
       </div>
 
 
@@ -104,6 +112,15 @@
                 <td class="govuk-table__cell" id="importing">Plants, plant products and other objects</td>
                 <td class="govuk-table__cell"></td>
               </tr>
+
+              <tr class="presentation-table__section">
+                  <th scope="row" class="govuk-table__header">Who are you creating this notification for?</th>
+                  <td class="govuk-table__cell" id="importing-on-behalf">Plants and Trees Nurseries</td>
+                  <td class="govuk-table__cell change">
+                      <a href="01-03-company" class="govuk-link" id="organisation-change-link">Change</a>
+                  </td>
+          
+                </tr>
           
               <tr class="presentation-table__section">
                 <th scope="row" class="govuk-table__header">Add a reference number for this consignment</th>
@@ -115,12 +132,12 @@
               
               <tr class="presentation-table__row--no-border ">
                 <th scope="row" class="govuk-table__header">Country of origin</th>
-                <td class="govuk-table__cell" id="country-of-origin">Austria</td>
+                <td class="govuk-table__cell" id="country-of-origin">Netherlands</td>
                 <td class="govuk-table__cell"></td>
               </tr>
               <tr>
                 <th scope="row" class="govuk-table__header">Country from where consigned</th>
-                <td class="govuk-table__cell">Austria</td>
+                <td class="govuk-table__cell">Netherlands</td>
                 <td class="govuk-table__cell"></td>
               </tr>
           
@@ -158,7 +175,7 @@
                     </tr><tr>
                       <td class="govuk-table__header">Commodity code</td>
                       <td class="govuk-table__cell">
-                        06011010
+                        06011030
                       </td>
                         <td class="govuk-table__cell change">
                               <a href="02-dg-04i-weights-packaging-added" class="govuk-link" id="commodity-change-bulk-link-0">Change</a>
@@ -166,7 +183,7 @@
                     </tr>
                       <tr class="presentation-table__row--no-border">
                         <td class="govuk-table__header">Description</td>
-                        <td class="govuk-table__cell">Hyacinths</td>
+                        <td class="govuk-table__cell">Tulips</td>
                         <td class="govuk-table__cell"></td>
                       </tr>
                     <tr></tr>
@@ -178,7 +195,7 @@
                     <tbody>
                       <tr class="govuk-table__row presentation-table__row--no-border ">
                         <th scope="row" class="govuk-table__header">Genus and species</th>
-                        <td class="govuk-table__cell">Albuca bracteata, ABWBR</td>
+                        <td class="govuk-table__cell">Tulipa gesneriana, TULGE</td>
                       </tr>
                     </tbody>
                   </table>
@@ -318,7 +335,7 @@
               </tr>
               <tr class="">
                 <th scope="row" class="govuk-table__header">Estimated arrival date at BCP</th>
-                <td class="govuk-table__cell">30 November 2023</td>
+                <td class="govuk-table__cell">30 May 2024</td>
               </tr>
                 <tr class="">
                   <th scope="row" class="govuk-table__header">Estimated arrival time at BCP</th>
@@ -329,7 +346,7 @@
           </div>
           <div class="heading-with-change-link">
             <h2 class="govuk-heading-m">Contact details</h2>
-                <a href="06-co-01-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
+                <a href="06-01-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
                 Change
                 </a>
           </div>
@@ -344,34 +361,34 @@
                   ">
                   <td class="govuk-table__header govuk-table__header--half">Name</td>
                   <td class="govuk-table__cell" id="responsible-contact-name">
-                    Percy Hyseni
+                     {{ data['responsible-contact-name'] }}
                   </td>
                 </tr>
                 <tr class="
                   ">
                   <td class="govuk-table__header govuk-table__header--half">Email address</td>
                   <td class="govuk-table__cell break-word" id="responsible-contact-email">
-                    percy@percy-plants.co.uk
+                     {{ data['responsible-contact-email'] }}
                   </td>
                 </tr>
                 <tr class="
                   ">
                     <td class="govuk-table__header govuk-table__header--half">Phone number</td>
                   <td class="govuk-table__cell" id="responsible-contact-telephone">
-                    020 8225 7295
+                     {{ data['responsible-contact-telephone'] }}
                   </td>
                 </tr>
                 <tr class="">
                   <td class="govuk-table__header govuk-table__header--half">Agent</td>
                   <td class="govuk-table__cell" id="responsible-contact-agent">
-                    
+                    {{ data['responsible-contact-agent'] }}
                   </td>
                 </tr>
               </tbody>
             </table>
           </div><div class="heading-with-change-link">
             <h2 class="govuk-heading-m">Nominated contacts</h2>
-                <a href="06-co-02-nominated-contacts" class="govuk-link" id="nominated-contact-change-link">
+                <a href="06-02-nominated-contacts" class="govuk-link" id="nominated-contact-change-link">
                 Change
                 </a>
           </div>
@@ -399,7 +416,7 @@
             
             <div class="heading-with-change-link">
                 <h3 class="govuk-heading-s">Additional documents</h3>
-                  <a class="govuk-link" id="documents-change-link" href="03-do-01i-document-added">
+                  <a class="govuk-link" id="documents-change-link" href="03-01-documents">
                     Change
                   </a>
             </div>
@@ -446,23 +463,24 @@
               <tbody>
                 <tr class="">
                   <td class="govuk-table__header govuk-!-width-one-half">Importer</td>
-                  <td class="govuk-table__cell" id="importer">Percy Plants<br>Woodham Lane, New Haw, Addlestone, KT15 3NB, United Kingdom of Great Britain and Northern Ireland, 020 8225 7295, percy@percyplants.co.uk</td>
+                  <td class="govuk-table__cell" id="importer">
+                    Plants and Trees Nurseries<br>
+                    North Prospects Retail Park, Daffodil Road, Basingstoke, RG21 7DB, 01256 446387, import@plantsandtrees.co.uk</td>
                   <td class="govuk-table__cell change">
-                        <a href="04-tr-01-trader-addresses" class="govuk-link" id="traders-change-link">Change</a>
+                        <a href="04-01-addresses" class="govuk-link" id="traders-change-link">Change</a>
                   </td>
                 </tr>
                 <tr class="">
                   <td class="govuk-table__header govuk-!-width-one-half">Delivery address</td>
                   <td class="govuk-table__cell" id="final-destination">
-                    Percy Plants
-                    <br>
-                    Woodham Lane, New Haw, Addlestone, KT15 3NB, United Kingdom of Great Britain and Northern Ireland, 01615555555, percy@percyplants.co.uk
+                    Plants and Trees Nurseries<br>
+                    North Prospects Retail Park, Daffodil Road, Basingstoke, RG21 7DB, 01256 446387, import@plantsandtrees.co.uk
                   </td>
                   <td class="govuk-table__cell"></td>
                 </tr>
                 <tr class="">
                   <td class="govuk-table__header govuk-!-width-one-half">Consignor or exporter</td>
-                  <td class="govuk-table__cell" id="consignor">Espania Giardinieri<br>La Fontanilla 71, Córdoba, 14240, 01615555555, infos@Espania-Giardinieri.es</td>
+                  <td class="govuk-table__cell" id="consignor">Bloemen en Bloembollen Nederland<br>Pompstraat 101, Rotterdam, 3082 RN, 011 10 20 300 4000, info@Bloemen-en-Bloembollen.nl</td>
                   <td class="govuk-table__cell"></td>
                 </tr>
               </tbody>
@@ -495,7 +513,7 @@
                 <tr class="table-row--error">
                   <th scope="row" class="govuk-table__header govuk-table__header--half">Phone number</th>
                   <td class="govuk-table__cell break-word" id="billing-telephone-number">
-                      
+                    
                   </td>
                 </tr>
               </tbody>
