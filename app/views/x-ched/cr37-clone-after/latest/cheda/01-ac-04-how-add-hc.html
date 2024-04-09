@@ -23,28 +23,30 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
 
       <form class="form" action="route-cheda-how-add" method="POST">
         <h1 class="govuk-!govuk-heading-l">Add the latest health certificate (where required)</h1>
-        <p class="govuk-body">You can add documents manually or clone them from a digitally-signed export health certificate (EHC). </p>
-        <p class="govuk-body govuk-!-margin-bottom-6">You can clone an EHC to populate your import notification with all documents and information from it.</p>
+        <p class="govuk-body govuk-!-margin-bottom-6">You can add documents manually or clone them from a electronic export health certificate (EHC). </p>
+        <!-- <p class="govuk-body govuk-!-margin-bottom-6">You can clone an EHC to populate your import notification with all documents and information from it.</p> -->
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
-                Select what you would like to do
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-2">
+                What do you want to do?
               </h2>
-            </legend> -->
+            </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone">
-                <label class="govuk-label govuk-radios__label" for="how-add-hc">
-                  Clone an EHC
+                <label class="govuk-label govuk-radios__label " for="how-add-hc">
+                  Clone from an electronic EHC
                 </label>
-                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  The electronic health certificate can include other documents and information.
-                </div> -->
-              </div>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Choose to bring in documents and information from an electronic EHC, or documents only. 
+                </div>
+               </div>
+
+              
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc-2" name="addhc" type="radio" value="Manual">
-                <label class="govuk-label govuk-radios__label" for="how-add-hc-2">
+                <label class="govuk-label govuk-radios__label " for="how-add-hc-2">
                   Attach the latest health certificate manually
                 </label>
                 <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
@@ -53,11 +55,12 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc-3" name="addhc" type="radio" value="Upload from a CSV file">
-                <label class="govuk-label govuk-radios__label" for="how-add-hc-3">
-                  Skip 
+                <label class="govuk-label govuk-radios__label " for="how-add-hc-3">
+                  Skip if you don't have a health certificate yet or aren't required to have one
                 </label>
                 <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  Skip to other accompanying documents section.
+                  Go  to other accompanying documents section.</div> 
+                  <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">You must have a health certificate attached by the time it enters GB (where required).
                 </div>
               </div>
             </div>
