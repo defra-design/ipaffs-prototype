@@ -8,11 +8,14 @@ const router = express.Router()
 router.post('/route-chedp-how-add', function (req, res) {
   // Make a variable and give it the value from name
   var howAdd = req.session.data['addhc']
-  if (howAdd == "Clone") {
+  if (howAdd == "Clone-info") {
+    res.redirect('03a-certificate-reference')
+  }
+  else if (howAdd == "Clone-doc") {
     res.redirect('03a-certificate-reference')
   }
  else if (howAdd == "Manual") {
-    res.redirect('12-health-certificate')
+    res.redirect('12-accompanying-docs')
   }
  else {
     res.redirect('12-accompanying-docs')
@@ -22,9 +25,12 @@ router.post('/route-chedp-how-add', function (req, res) {
 //  - Confirm radio routing - this one is for when user has already reviewed and wants to amend
 router.post('/route-x-p-docs-info-amend', function (req, res) {
   // Make a variable and give it the value from name
-  var ecertRoute = req.session.data['docs-info']
-  if (ecertRoute == "all") {
+  var ecertRoute = req.session.data['addhc']
+  if (ecertRoute == "Clone-info") {
     res.redirect('18-review-clone-success')
+  }
+  else if (ecertRoute == "Clone-docs") {
+    res.redirect('12-health-certificate-clone')
   }
   
  else {

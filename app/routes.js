@@ -17,9 +17,15 @@ router.use('/baseline/cheda/part1', require('./views/baseline/cheda/part1/_route
 router.use('/x-ched/cr37-clone-after/latest/chedpp', require('./views/x-ched/cr37-clone-after/latest/chedpp/_routes'))
 router.use('/x-ched/cr37-clone-after/latest/chedp', require('./views/x-ched/cr37-clone-after/latest/chedp/_routes'))
 router.use('/x-ched/cr37-clone-after/latest/cheda', require('./views/x-ched/cr37-clone-after/latest/cheda/_routes'))
+
+router.use('/x-ched/cr37-clone-after/v2/chedpp', require('./views/x-ched/cr37-clone-after/v2/chedpp/_routes'))
+router.use('/x-ched/cr37-clone-after/v2/chedp', require('./views/x-ched/cr37-clone-after/v2/chedp/_routes'))
+router.use('/x-ched/cr37-clone-after/v2/cheda', require('./views/x-ched/cr37-clone-after/v2/cheda/_routes'))
+
 router.use('/x-ched/cr37-clone-after/v1/chedpp', require('./views/x-ched/cr37-clone-after/v1/chedpp/_routes'))
 router.use('/x-ched/cr37-clone-after/v1/chedp', require('./views/x-ched/cr37-clone-after/v1/chedp/_routes'))
 router.use('/x-ched/cr37-clone-after/v1/cheda', require('./views/x-ched/cr37-clone-after/v1/cheda/_routes'))
+
 router.use('/x-ched/cuc-foundations/latest/billing-details', require('./views/x-ched/cuc-foundations/latest/billing-details/_routes'))
 router.use('/x-ched/cuc-foundations/iteration-1/billing-details', require('./views/x-ched/cuc-foundations/iteration-1/billing-details/_routes'))
 router.use('/x-ched/cuc-oi/latest/billing-details', require('./views/x-ched/cuc-oi/latest/billing-details/_routes'))

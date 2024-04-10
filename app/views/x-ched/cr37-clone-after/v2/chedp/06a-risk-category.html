@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Select risk category – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-full">
+          <!-- <span class="govuk-caption-xl">About the consignment</span> -->
+      <h1 class="govuk-heading-xl govuk-!-width-three-quarters" id="page-primary-title">Select the highest risk category for the commodities in this consignment</h1>
+      <p class="govuk-body govuk-!-width-three-quarters">We need to know this so we can collect the correct details for your notification.</p> 
+      <p class="govuk-body govuk-!-width-three-quarters">You can <a href="https://www.gov.uk/government/publications/risk-categories-for-animal-and-animal-product-imports-to-great-britain" class="govuk-link" rel="noreferrer noopener" target="_blank">check the risk categories on GOV.UK (open in new tab)</a>.</p>
+      <form action="risk-route" method="post" id="homeForm">
+        <input name="crumb" type="hidden" value="ap8RGD2HV43zQbawQzPRbIFdefUPgzdrYTdNHsFAUId">
+
+        <div class="govuk-form-group  ">
+          <fieldset class="govuk-fieldset">
+        
+            <div class="govuk-radios ">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cert-type" name="risk-category" type="radio" value="medium" {{ checked('risk-category','medium') }}>
+                  <label class="govuk-label govuk-radios__label " for="cert-type">
+                      Medium risk
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cert-type-2" name="risk-category" type="radio" value="low" {{ checked('risk-category','low') }}>
+                  <label class="govuk-label govuk-radios__label " for="cert-type-2">
+                      Low risk
+                  </label>
+                </div>
+               
+            </div>
+          </fieldset>
+        </div>
+
+        <input class="govuk-button" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
