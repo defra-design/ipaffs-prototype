@@ -23,7 +23,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       <span class="govuk-caption-xl">Traders</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Addresses</h1>
 
-      <form action="04-04-addresses-chosen.html" method="POST">
+      <form action="05-00-transport-to-poe" method="post">
         <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
         <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
         <input name="14-addresses" type="hidden" value="visited">
@@ -33,7 +33,6 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignor or exporter
           </h2>
           <p class="govuk-hint">This is the sender of the consignment.</p>
-          {% if (data['consignor-page'] == "yes") %}
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
               <thead class="govuk-table__head">
@@ -52,28 +51,19 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   Produkty Mięsne Fm
                 </td>
                 <td class="govuk-table__cell col-address" headers="consignor-address">
-                  San Martin 230, Piso 5 Dpto 8, Y0000HGH Villa Maria
-
+                  90 Bazar Ulica , Apt. 924, Wroclaw, 48721
                 </td>
                 <td class="govuk-table__cell col-country" headers="consignor-country">
-                  Argentina
+                  Poland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
-                  <a href="14a-address-search?addressType=%20consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Change</a>
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignor/search" class="govuk-link" id="edit-consignor">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
-          </div> 
-          
-          {% else %}
-          <a href="04-02-address-search?addressType=%20consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Add a consignor or exporter</a>
+          </div>
 
-          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignor" name="addressType" value="consignor or exporter">
-            Add a consignor or exporter
-        </button> -->
-         
-          {% endif %}
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -81,8 +71,6 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignee
           </h2>
           <p class="govuk-hint">This is the receiver or buyer of the consignment being shipped or transported.</p>
-
-          {% if (data['consignee-page'] == "yes") %}
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
               <thead class="govuk-table__head">
@@ -101,50 +89,26 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   ABC goods Ltd
                 </td>
                 <td class="govuk-table__cell col-address" headers="consignee-address">
-                  112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
                 </td>
                 <td class="govuk-table__cell col-country" headers="consignee-country">
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
-                  <a href="14a-address-search?addressType=%20consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignee/search" class="govuk-link" id="edit-consignee">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-          {% else %}
-          <a href="14a-address-search?addressType=%20consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Add a consignee</a>
 
-          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignee" name="addressType" value="consignee">
-            Add a consignee
-        </button> -->
-        {% endif %}
-       
-         
         </div>
 
         <div class="govuk-!-margin-bottom-8">
-          <h2 class="govuk-heading-m" id="importer-heading">
+          <h2 class="govuk-heading-m">
             Importer
           </h2>
           <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
-         
-          {% if (data['importer-page'] != "yes") and (data['consignee-page'] == "yes") %}
-          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignee-to-importer" name="addConsigee" value="consignee">
-            Same as consignee
-        </button> -->
-
-        <a href="14-addresses?importer-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
-        
-        &nbsp;
-        <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
-         
-        {% elif (data['importer-page'] != "yes") %}
-       
-      <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
-
-          {% elif (data['importer-page'] == "yes") %}
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-importer">
               <thead class="govuk-table__head">
@@ -163,19 +127,19 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   ABC goods Ltd
                 </td>
                 <td class="govuk-table__cell col-address" headers="importer-address">
-                  112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
                 </td>
                 <td class="govuk-table__cell col-country" headers="importer-country">
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
-                  <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-importer">Change</a>
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/importer/search" class="govuk-link" id="edit-importer">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-        {% endif %}
+
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -193,25 +157,6 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             <div class="govuk-grid-column-three-quarters">
           <p class="govuk-hint">This is where the consignment will be sent for final unloading, and must be in Great Britain. If this is not the same as the consignee or importer, select a different address.</p>
           </div></div>
-          {% if (data['place-of-destination-page'] != "yes") and (data['consignee-page'] == "yes") %}
-
-          <a href="14-addresses?place-of-destination-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
-        
-
-          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
-            Same as consignee
-        </button> -->
-        &nbsp;
-        <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
-        <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
-          Add a place of destination
-      </button> -->
-      {% elif (data['place-of-destination-page'] != "yes") %}
-      <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
-      <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
-        Add a place of destination
-    </button> -->
-          {% elif (data['place-of-destination-page'] == "yes") %}
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-place-of-destination">
               <thead class="govuk-table__head">
@@ -230,28 +175,24 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   ABC goods Ltd
                 </td>
                 <td class="govuk-table__cell col-address" headers="place-of-destination-address">
-                  112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
                 </td>
                 <td class="govuk-table__cell col-country" headers="place-of-destination-country">
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="place-of-destination-edit">
-                  <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-place-of-destination">Change</a>
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/final-destination/search" class="govuk-link" id="edit-place-of-destination">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-         
-        {% endif %}
-          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a> -->
+
         </div>
-        </form>
-        <form action="11-transport-to-poe" method="post">
         <div class="save-and-submit-buttons">
           <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
-          <p class="govuk-body"><a class="govuk-link" href="00-check-answers.html">Cancel and return to hub</a></p>
+          <p class="govuk-body"><a class="govuk-link" href="07-check-answers-orig">Cancel and return to hub</a></p>
         </div>
       </form>
     </div>
