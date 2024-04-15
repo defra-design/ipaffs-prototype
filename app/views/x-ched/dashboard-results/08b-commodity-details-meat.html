@@ -31,10 +31,367 @@ Commodity details – {{ serviceName }} – GOV.UK Prototype Kit
               Edit multiple goods information at the same time
             </span>
           </summary>
-          <div class="govuk-details__text">
-            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          <div class="govuk-!-margin-bottom-8">
+            <h2 class="govuk-heading-m"><br>Commodities</h2>
+            <div class="table-responsive commodity-details-commodity-wrapper" id="selectedCommodities">
+              <div class="">
+                <table class="govuk-table govuk-!-margin-bottom-4 commodities-info-table">
+                  <caption class="govuk-visually-hidden">Commodities table</caption>
+                  <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">
+                      <noscript>
+                        <button type="submit" class="link-button" name="disabled-js-checkboxes-button"
+                                value="select-all" id="disabled-js-checkboxes-button">
+                          Select all
+                        </button>
+                      </noscript>
+                      <div class="govuk-checkboxes" id="hidden-select-all-checkbox-container">
+                        <div class="govuk-checkboxes__item" data-target="hidden-select-all-checkbox">
+                          <input class="govuk-checkboxes__input" id="select-all-checkbox" name="select-all-checkbox" type="checkbox" value="select-all-checkbox">
+                          <label class="govuk-label govuk-checkboxes__label" for="select-all-checkbox"><span class="govuk-visually-hidden">Select all</span></label>
+                        </div>
+                      </div>
+                    </th>
+                    <th class="govuk-table__header">Commodity</th>
+                    <th class="govuk-table__header">Genus and species</th>
+                    <th class="govuk-table__header">Variety</th>
+                    <th class="govuk-table__header">Class</th>
+                    <th class="govuk-table__header">Action</th>
+                  </tr>
+                  </thead>
+                  <tbody class="govuk-table__body" id="commodity_list">
+                      <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row
+                          ">
+                        <td class="govuk-table__cell">
+                          <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                            <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                              <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                              <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="govuk-table__cell">06011010</td>
+                        <td class="govuk-table__cell">Albuca canadensis</td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+                      </tr>
+                      <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row
+                          ">
+                        <td class="govuk-table__cell">
+                          <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                            <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                              <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                              <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="govuk-table__cell">06011010</td>
+                        <td class="govuk-table__cell">Belvalia trifoliata</td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell"></td>
+                        <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+                      </tr>
+                      <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row
+                      ">
+                    <td class="govuk-table__cell">
+                      <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                        <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                          <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                          <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="govuk-table__cell">06011010</td>
+                    <td class="govuk-table__cell">Dipcadi bakeriana</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+                  </tr>
+                  <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row
+                  ">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                    <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                      <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                      <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">3824999390</td>
+                <td class="govuk-table__cell">Soil</td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+              </tr>
+
+              <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">	06011010</td>
+            <td class="govuk-table__cell">Amana edulis</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">Class I</td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">	06011010</td>
+            <td class="govuk-table__cell">Tulipa greigii hybrids</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">Class I</td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">	06011010</td>
+            <td class="govuk-table__cell">Tulipa aucheriana</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">Class I</td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">	1404900010</td>
+            <td class="govuk-table__cell">Piper betle</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">		06011040</td>
+            <td class="govuk-table__cell">Gladiolus aleppicus</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">		06011040</td>
+            <td class="govuk-table__cell">Gladiolus cardinalis</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">		06011040</td>
+            <td class="govuk-table__cell">Gladiolus natalensis</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">		06011040</td>
+            <td class="govuk-table__cell">Gladiolus sp.</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">			10041000</td>
+            <td class="govuk-table__cell">Avena abyssinica</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+
+          <tr id="expired_commodity_06011010_ABWBR" class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes " id="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477-container">
+                <div class="govuk-checkboxes__item" data-target="hidden-commodity-a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <input class="govuk-checkboxes__input" id="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" name="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477" type="checkbox" value="a8106b4c-0214-415f-bb7d-4159c59d1477">
+                  <label class="govuk-label govuk-checkboxes__label" for="commodity-a8106b4c-0214-415f-bb7d-4159c59d1477"><span class="govuk-visually-hidden">commodity-a8106b4c-0214-415f-bb7d-4159c59d1477</span></label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">				25309000</td>
+            <td class="govuk-table__cell">Soil</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+          </tr>
+
+
+
+                  </tbody>
+                </table>
+              </div>
+              <div id="chedpp-bulk-capture">
+                <div class="govuk-form-group search-panel" id="selectedBulkValues">
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                      <h3 class="govuk-heading-m">Apply to all commodity lines</h3>
+                    </div>
+                  </div>
+              
+                  <div class="govuk-grid-row govuk-!-margin-bottom-5">
+                    <div class="govuk-grid-column-one-quarter  ">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="bulk-num-packages">Number of packages</label>
+                          <input class="govuk-input" id="bulk-num-packages" name="bulk-num-packages" type="text" value="">
+                      </div>
+                    </div>
+                    <div class="govuk-grid-column-one-quarter ">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="bulk-package-type">Type of package</label>
+                          <select class="govuk-select govuk-!-width-full" id="bulk-package-type" name="bulk-package-type" aria-labelledby="bulk-package-type">
+                            <option value="">Select type of package</option>
+                            <option>Bag</option>
+                            <option>Bale</option>
+                            <option>Bottle, flask and other glass packages</option>
+                            <option>Box</option>
+                            <option>Bulk solid granular particles ("grains")</option>
+                            <option>Can</option>
+                            <option>Carton</option>
+                            <option>Case</option>
+                            <option>Cask</option>
+                            <option>Coffer</option>
+                            <option>Container</option>
+                            <option>Crate</option>
+                            <option>Other</option>
+                            <option>Package</option>
+                            <option>Pallet</option>
+                            <option>Polystyrene Box</option>
+                            <option>Tray</option>
+                            <option>Tube</option>
+                            <option>Vial</option>
+                            <option>Wood bundle</option>
+                            <option>Wood crate</option>
+                            <option>Wooden barrel</option>
+                            <option>Wooden case with pallet base</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="govuk-grid-column-one-quarter  ">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="bulk-quantity">Quantity</label>
+                          <input class="govuk-input" id="bulk-quantity" name="bulk-quantity" type="text" value="">
+                      </div>
+                    </div>
+                    <div class="govuk-grid-column-one-quarter ">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="bulk-quantity-type">Quantity type</label>
+                          <select class="govuk-select govuk-!-width-full" id="bulk-quantity-type" name="bulk-quantity-type" aria-labelledby="bulk-quantity-type">
+                            <option value="">Select quantity type</option>
+                            <option>Stems</option>
+                            <option>Bulbs</option>
+                            <option>Corms and rhizomes</option>
+                            <option>Plants in tissue culture</option>
+                            <option>Seeds</option>
+                            <option>Kilograms</option>
+                          </select>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-quarter  ">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="bulk-net-weight">Net weight (kg)</label>
+                        <input class="govuk-input" id="bulk-net-weight" name="bulk-net-weight" type="text" value="">
+                      </div>
+                    </div>
+              
+                    <div class="govuk-grid-column-three-quarters grid ">
+                      <label class="govuk-label govuk-label--s" for="bulk-container">Controlled atmosphere container</label>
+                      <div class="govuk-form-group govuk-input--width-4">
+                        <select class="govuk-select" id="bulk-container" name="bulk-container" aria-labelledby="bulk-container">
+                          <option value=""></option>
+                          <option value="on">Yes</option>
+                          <option value="off">No</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="govuk-grid-row govuk-!-margin-top-7 govuk-!-margin-bottom-0">
+                    <div class="govuk-grid-column-full">
+                      <button class="govuk-button govuk-!-margin-bottom-0 govuk-!-margin-left-0" id="apply-bulk-commodity-details" name="apply-bulk-commodity-details" type="submit" value="Apply" data-module="govuk-button" data-prevent-double-click="true">
+                        Apply
+                      </button>
+                      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1088756/commodity/details/bulk" class="govuk-link clear-link govuk-!-margin-bottom-0">Clear</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </details>
+
+    
+      
+                       
+            
+     
+    </div>
+  </div>
 
     
       
