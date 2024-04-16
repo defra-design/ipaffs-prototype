@@ -23,7 +23,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       <span class="govuk-caption-xl">Traders</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Addresses</h1>
 
-      <form action="05-00-transport-to-poe.html" method="POST">
+      <form action="04-01-addresses" method="POST">
         <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
         <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
         <input name="14-addresses" type="hidden" value="visited">
@@ -67,7 +67,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           </div> 
           
           {% else %}
-          <a href="04-02-address-search.html" class="govuk-link" id="edit-consignor">Add a consignor or exporter</a>
+          <a href="04-02-address-search?addressType=%20consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Add a consignor or exporter</a>
 
           <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignor" name="addressType" value="consignor or exporter">
             Add a consignor or exporter
@@ -107,14 +107,14 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
-                  <a href="04-02-address-search?addressType=%20consignor%20or%20consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  <a href="04-02-address-search?addressType=%20consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
           {% else %}
-          <a href="04-02-address-search.html" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Add a consignee</a>
+          <a href="04-02-address-search?addressType=%20consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Add a consignee</a>
 
           <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignee" name="addressType" value="consignee">
             Add a consignee
@@ -135,7 +135,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Same as consignee
         </button> -->
 
-        <a href="04-01-trader-addresses?importer-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
+        <a href="04-01-addresses?importer-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
         
         &nbsp;
         <a href="04-02-address-search?addressType=n%20importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
@@ -195,19 +195,19 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           </div></div>
           {% if (data['place-of-destination-page'] != "yes") and (data['consignee-page'] == "yes") %}
 
-          <a href="04-01-trader-addresses?place-of-destination-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
+          <a href="04-01-addresses?place-of-destination-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
         
 
           <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
             Same as consignee
         </button> -->
         &nbsp;
-        <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+        <a href="04-02-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
         <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
           Add a place of destination
       </button> -->
       {% elif (data['place-of-destination-page'] != "yes") %}
-      <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+      <a href="04-02-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
       <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
         Add a place of destination
     </button> -->
@@ -236,7 +236,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="place-of-destination-edit">
-                  <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-place-of-destination">Change</a>
+                  <a href="04-02-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-place-of-destination">Change</a>
                 </td>
               </tr>
               </tbody>
@@ -251,7 +251,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="save-and-submit-buttons">
           <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
-          <p class="govuk-body"><a class="govuk-link" href="00-check-answers.html">Cancel and return to hub</a></p>
+          <p class="govuk-body"><a class="govuk-link" href="00-check-answers">Cancel and return to hub</a></p>
         </div>
       </form>
     </div>

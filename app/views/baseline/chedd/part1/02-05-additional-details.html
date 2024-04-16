@@ -27,48 +27,57 @@
       <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
       <form class="form" action="03-00-documents" method="post">
 
-      <div class="govuk-form-group commodity-intended-for ">           
-        <fieldset class="govuk-fieldset">
-        <legend class="govuk-heading-m">Commodity intended for</legend>
-           
-            <div class="govuk-hint govuk-radios__hint">
-              You’ll find this on the health or phytosanitary certificate (also known as the ‘official certificate’) if you have one.
-            </div>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-                <label class="govuk-label govuk-radios__label" for="signIn">
-                  Feedingstuff
-                </label>
-                <div  class="govuk-hint govuk-radios__hint">
-                  Intended for oral feeding to animals.
+        <div class="govuk-form-group commodity-intended-for ">           
+          <fieldset class="govuk-fieldset">
+            <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Commodity intended for
+                </h1>
+              </legend>
+              <div id="signIn-hint" class="govuk-hint">
+                You’ll find this on the health or phytosanitary certificate (also known as the ‘official certificate’) if you have one.
+              </div> 
+          
+          
+            
+              
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn">
+                    Human consumption
+                  </label>
+                  <div  class="govuk-hint govuk-radios__hint">
+                    For direct human consumption without further treatment.
+                  </div>
                 </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="signIn-2">
-                  Further process
-                </label>
-                <div class="govuk-hint govuk-radios__hint">
-                  For human consumption after further treatment.
+                
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn-2">
+                    Further process
+                  </label>
+                  <div class="govuk-hint govuk-radios__hint">
+                    For human consumption after further treatment.
+                  </div>
                 </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn-2">
+                    Feedingstuff
+                  </label>
+                  <div class="govuk-hint govuk-radios__hint">
+                    Intended for oral feeding to animals.
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="signIn-2">
-                  Human consumption
-                </label>
-                <div class="govuk-hint govuk-radios__hint">
-                  For direct human consumption without further treatment.
             </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                Other
+              </label>
+            </fieldset>
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-            <label class="govuk-label govuk-radios__label" for="signIn-2">
-              Other
-            </label>
-          </fieldset>
-        </div>
       
         <div class="govuk-form-group temperature ">
           <fieldset class="govuk-fieldset">

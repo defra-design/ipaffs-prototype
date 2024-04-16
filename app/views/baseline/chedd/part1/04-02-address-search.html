@@ -14,7 +14,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-!-padding-top-6">
   <span class="heading-tertiary">
       <span id="reference-number">DRAFT.GB.2023.5925980</span>
-          <span> - CHEDP</span>
+          <span> - CHEDD</span>
   </span>
 </div>
 
@@ -23,12 +23,14 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="search-economic-operators-page">
     <div class="govuk-grid-column-full">
           <span class="govuk-caption-xl">Traders</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1>
+          <h1 class="govuk-heading-xl" id="page-primary-title">Add a{{ data['addressType'] }}</h1>
+      <!-- <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1> -->
       <form class="govuk-!-margin-bottom-6" action="search" method="GET">
+
         <div class="form-group search-panel">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Search
+              Search for an existing {{ data['addressType'] }}
             </legend>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
@@ -327,9 +329,27 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </form>
 
-      <form action="04-01a-trader-addresses-added" method="POST">
+      <form action="04-01-addresses" method="POST">
         <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
         <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
+        <!-- <input name="14a-address-search" type="hidden" value="visited">  -->
+        {% if (data['addressType'] == " consignor or exporter") %}
+        <input name="consignor-page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
+
+        {% if (data['addressType'] == " consignee") %}
+        <input name="consignee-page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
+        {% if (data['addressType'] == "n importer") %}
+         <input name="importer-page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
+        {% if (data['addressType'] == " place of destination") %}
+       <input name="place-of-destination-page" type="hidden" value="yes"> 
+       {% else %}
+        {% endif %}
 
         <div class="table-responsive">
           <table class="govuk-table traders-search-results" id="Table-SearchResults">
@@ -339,7 +359,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                 <th class="govuk-table__header" scope="col">Address</th>
                 <th class="govuk-table__header" scope="col">Country</th>
                 <th class="govuk-table__header" scope="col">Status</th>
-                <th class="govuk-table__header" scope="col">Approval Number</th>
+                
               <th class="govuk-table__header">
                 <span class="govuk-visually-hidden">View</span>
               </th>
@@ -351,20 +371,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             <tbody>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    CXConsignor
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    CXAddressLine1, CXCity, CX12345
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    Christmas Island
+                    Argentina
                   </td>
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
                     View
@@ -378,20 +396,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    UAConsignor
+                    UKConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    UAAddressLine1, UACity, UA12345
+                    UKAddressLine1, UKCity, UK12345
                   </td>
                   <td class="govuk-table__cell">
-                    Ukraine
+                    United Kingdom of Great Britain and Northern Ireland
                   </td>
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-69ce4f4c-3123-422d-ad28-f6999aadcb3b" value="69ce4f4c-3123-422d-ad28-f6999aadcb3b">
                     View
@@ -405,20 +421,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    JEConsignor
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    JEAddressLine1, JECity, JE12345
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    Jersey
+                    Argentina
                   </td>
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd" value="d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd">
                     View
@@ -443,9 +457,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-306c1de8-bb60-42af-b2a1-0cddad19d1a7" value="306c1de8-bb60-42af-b2a1-0cddad19d1a7">
                     View
@@ -459,20 +471,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    JEConsignor
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    JEAddressLine1, JECity, JE12345
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    Jersey
+                    Argentina
                   </td>
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-c0db5909-6228-4795-9119-1b1f6390ed3c" value="c0db5909-6228-4795-9119-1b1f6390ed3c">
                     View
@@ -486,20 +496,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    NZConsignor
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    NZAddressLine1, NZCity, NZ12345
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    New Zealand
+                    Argentina
                   </td>
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-cd33b9e8-e726-4bbf-8a33-a2ff8b43080b" value="cd33b9e8-e726-4bbf-8a33-a2ff8b43080b">
                     View
@@ -524,9 +532,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-1051986e-ddf6-4379-8397-f1423e4f361a" value="1051986e-ddf6-4379-8397-f1423e4f361a">
                     View
@@ -551,9 +557,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-f9890ecf-1dd3-4264-bb16-bd43f3a70ded" value="f9890ecf-1dd3-4264-bb16-bd43f3a70ded">
                     View
@@ -567,20 +571,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    PAConsignor
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    PAAddressLine1, PACity, PA12345
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    Panama
+                    Argentina
                   </td>
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-730a99e7-9df9-47b2-a00e-cb2f2e81f7b6" value="730a99e7-9df9-47b2-a00e-cb2f2e81f7b6">
                     View
@@ -605,9 +607,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-66e731c0-275e-41cd-8c2e-e9728b3a7ec9" value="66e731c0-275e-41cd-8c2e-e9728b3a7ec9">
                     View
@@ -632,9 +632,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-9cfa0bcd-0d1c-4320-8c90-1b10e40f582a" value="9cfa0bcd-0d1c-4320-8c90-1b10e40f582a">
                     View
@@ -648,20 +646,18 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    CMConsignor
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    CMAddressLine1, CMCity, CM12345
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    Cameroon
+                    Argentina
                   </td>
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-d85fb445-7b0d-419e-ab6b-2bb41cc403f4" value="d85fb445-7b0d-419e-ab6b-2bb41cc403f4">
                     View
@@ -686,9 +682,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-9a99bca7-49d9-44c2-b5f7-3209cda4aea5" value="9a99bca7-49d9-44c2-b5f7-3209cda4aea5">
                     View
@@ -713,9 +707,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-e4763f30-03b5-4870-bc11-dc2d79e136b7" value="e4763f30-03b5-4870-bc11-dc2d79e136b7">
                     View
@@ -740,9 +732,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-7f766549-d9a0-4d23-9609-9fa914167c21" value="7f766549-d9a0-4d23-9609-9fa914167c21">
                     View
@@ -767,9 +757,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-85e2f624-4ba9-4ec1-a1f9-938676fc2ddb" value="85e2f624-4ba9-4ec1-a1f9-938676fc2ddb">
                     View
@@ -794,9 +782,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-22d3a23c-c8eb-49e9-9a92-25be56586e83" value="22d3a23c-c8eb-49e9-9a92-25be56586e83">
                     View
@@ -821,9 +807,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-9a1591de-7809-4841-8183-714edb64f38b" value="9a1591de-7809-4841-8183-714edb64f38b">
                     View
@@ -848,9 +832,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-244eae4f-4d71-4ced-b7b1-f407226a745f" value="244eae4f-4d71-4ced-b7b1-f407226a745f">
                     View
@@ -875,9 +857,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-a6263819-262a-492f-b16f-be90d9f947ef" value="a6263819-262a-492f-b16f-be90d9f947ef">
                     View
@@ -902,9 +882,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-9f4d80ae-25b5-4d64-b318-7117613cc907" value="9f4d80ae-25b5-4d64-b318-7117613cc907">
                     View
@@ -929,9 +907,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-d10edae1-0529-4687-862b-2e5d74230add" value="d10edae1-0529-4687-862b-2e5d74230add">
                     View
@@ -956,9 +932,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-3e50c181-f27b-403c-a918-9ae2dd1056bb" value="3e50c181-f27b-403c-a918-9ae2dd1056bb">
                     View
@@ -983,9 +957,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-a7cd80ad-c021-4940-8ae3-5dd974e69f9c" value="a7cd80ad-c021-4940-8ae3-5dd974e69f9c">
                     View
@@ -1010,9 +982,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__cell">
                     New
                   </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
+                  
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id" id="view-button-d262f5c2-5333-44f7-9bda-b94905e29fac" value="d262f5c2-5333-44f7-9bda-b94905e29fac">
                     View
@@ -1030,13 +1000,13 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       </form>
 
       <a href="#" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
-        Create a new consignor or exporter
+        Create a new {{ data['addressType'] }}
       </a>
 
         <nav class="pagination" aria-label="Pagination">
           <ul class="pagination-list">
               <li class="pagination-item pagination-item-next">
-                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                  <a href="#" class="pagination-link" rel="next" id="next-page">
                     <span class="pagination-link-title">
                        Next page
                       <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
