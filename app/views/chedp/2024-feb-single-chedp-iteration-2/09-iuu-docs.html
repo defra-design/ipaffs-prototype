@@ -1,0 +1,118 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Illegal, unreported and unregulated (IUU) fishing documents  – Import and export applications – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <!-- <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+      <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="banner-title">
+              Success
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+            <p class="govuk-body">
+              1 row removed
+            </p>
+        </div>
+      </div>
+  </div> -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">Documents</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Catch certificates</h1>
+<div class="govuk-!-margin-bottom-9">
+
+
+<p class="govuk-body">You must add catch certificates for all fish species unless they are exempt from illegal, unreported and unregulated (IUU) fishing controls.</p>
+  
+<p class="govuk-body">For help with catch certificates, check the guidance on <a href="https://www.gov.uk/guidance/importing-or-moving-fish-to-the-uk" target="_blank">importing or moving fish into the UK (opens in new tab)</a>.</p>
+  
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+    If you do not have catch certificates now
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  <p class="govuk-body">If catch certificates are missing or incomplete, the consignment is at high risk of being rejected.</p>
+
+  <p class="govuk-body">Make sure you provide all required documents for this notification promptly to avoid disruptions and delays in the clearance process.</p>
+    
+  </div>
+</details>
+ </div>  
+ </div>
+ </div>  
+ 
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form action="12-health-certificate" method="POST">
+        <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
+        <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
+         
+
+
+        <div class="govuk-form-group govuk-!-margin-bottom-9">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you need to add catch certificates?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="iuuDocType" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="iuuDocType" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  No – all the wild fish in this consignment are exempt from IUU fishing controls
+                </label>
+              </div>
+             
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+
+
+          
+        <input name="current-page-number" type="hidden" value="1">
+
+       
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 govuk-button" id="" name="save-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="" name="save-button" type="submit" value="Save and continue" data-module="govuk-button">
+        <p class="govuk-body"><a class="govuk-link" href="07-check-answers">Cancel and return to hub</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
