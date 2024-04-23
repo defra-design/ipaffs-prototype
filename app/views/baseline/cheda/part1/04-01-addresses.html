@@ -33,7 +33,6 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignor or exporter
           </h2>
           <p class="govuk-hint">This is the sender of the consignment.</p>
-          {% if (data['consignor-page'] == "yes") %}
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
               <thead class="govuk-table__head">
@@ -47,32 +46,35 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td class="govuk-table__cell col-name" headers="consignor-name">
-                  Produkty Mięsne Fm
-                </td>
-                <td class="govuk-table__cell col-address" headers="consignor-address">
-                  San Martin 230, Piso 5 Dpto 8, Y0000HGH Villa Maria
+                {% if (data['consignor-page'] == "yes") %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignor-name">
+                    Produkty Mięsne Fm
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignor-address">
+                    San Martin 230, Piso 5 Dpto 8, Y0000HGH Villa Maria
 
-                </td>
-                <td class="govuk-table__cell col-country" headers="consignor-country">
-                  Argentina
-                </td>
-                <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
-                  <a href="14a-address-search?addressType=%20consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Change</a>
-                </td>
-              </tr>
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignor-country">
+                    Argentina
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                    <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Change</a>
+                  </td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td class="govuk-table__cell" headers="consignor-name">&nbsp;</td>
+                  <td class="govuk-table__cell" headers="consignor-address"></td>
+                  <td class="govuk-table__cell" headers="consignor-country"></td>
+                  <td class="govuk-table__cell" headers="consignor-edit"></td>
+                </tr>
+                {% endif %}
               </tbody>
             </table>
           </div> 
-          
-          {% else %}
-          <a href="14a-address-search?addressType=%20consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Add a consignor or exporter</a>
-
-          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignor" name="addressType" value="consignor or exporter">
-            Add a consignor or exporter
-        </button> -->
-         
+          {% if (data['consignor-page'] != "yes") %}
+          <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Add a consignor or exporter</a>
           {% endif %}
         </div>
 
@@ -81,8 +83,6 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Consignee
           </h2>
           <p class="govuk-hint">This is the receiver or buyer of the consignment being shipped or transported.</p>
-
-          {% if (data['consignee-page'] == "yes") %}
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
               <thead class="govuk-table__head">
@@ -96,32 +96,35 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td class="govuk-table__cell col-name" headers="consignee-name">
-                  ABC goods Ltd
-                </td>
-                <td class="govuk-table__cell col-address" headers="consignee-address">
-                  112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
-                </td>
-                <td class="govuk-table__cell col-country" headers="consignee-country">
-                  United Kingdom of Great Britain and Northern Ireland
-                </td>
-                <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
-                  <a href="14a-address-search?addressType=%20consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
-                </td>
-              </tr>
+                {% if (data['consignee-page'] == "yes") %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignee-name">
+                    ABC goods Ltd
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignee-address">
+                    112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignee-country">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                    <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  </td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td class="govuk-table__cell" headers="consignee-name">&nbsp;</td>
+                  <td class="govuk-table__cell" headers="consignee-address"></td>
+                  <td class="govuk-table__cell" headers="consignee-country"></td>
+                  <td class="govuk-table__cell" headers="consignee-edit"></td>
+                </tr>
+                {% endif %}
               </tbody>
             </table>
           </div>
-          {% else %}
-          <a href="14a-address-search?addressType=%20consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Add a consignee</a>
-
-          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-consignee" name="addressType" value="consignee">
-            Add a consignee
-        </button> -->
-        {% endif %}
-       
-         
+          {% if (data['consignee-page'] != "yes") %}
+          <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Add a consignee</a>
+          {% endif %}
         </div>
 
         <div class="govuk-!-margin-bottom-8">
@@ -138,11 +141,11 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         <a href="14-addresses?importer-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
         
         &nbsp;
-        <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
+        <a href="04-02-address-search?addressType=importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
          
         {% elif (data['importer-page'] != "yes") %}
        
-      <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
+      <a href="04-02-address-search?addressType=importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
 
           {% elif (data['importer-page'] == "yes") %}
           <div class="table-responsive">
@@ -169,7 +172,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
-                  <a href="14a-address-search?addressType=n%20importer" class="govuk-link" id="edit-importer">Change</a>
+                  <a href="04-02-address-search?addressType=importer" class="govuk-link" id="edit-importer">Change</a>
                 </td>
               </tr>
               </tbody>
@@ -189,10 +192,9 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               Providing a false address is an act of fraud.
             </strong>
           </div>
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-three-quarters">
-          <p class="govuk-body">This is where the animals will be unloaded and accommodated for at least 48 hours. If a health certificate is required, it will show this address.</p>
-          </div></div>
+          <div class="govuk-body">
+            This is where the animals will be unloaded and accommodated for at least 48 hours. If a health certificate is required, it will show this address.
+          </div>
           {% if (data['place-of-destination-page'] != "yes") and (data['consignee-page'] == "yes") %}
 
           <a href="14-addresses?place-of-destination-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
@@ -202,12 +204,12 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             Same as consignee
         </button> -->
         &nbsp;
-        <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+        <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
         <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
           Add a place of destination
       </button> -->
       {% elif (data['place-of-destination-page'] != "yes") %}
-      <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+      <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
       <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="add-place-of-destination" name="addressType" value="place of destination">
         Add a place of destination
     </button> -->
@@ -236,7 +238,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   United Kingdom of Great Britain and Northern Ireland
                 </td>
                 <td class="govuk-table__cell col-edit text-align-right" headers="place-of-destination-edit">
-                  <a href="14a-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-place-of-destination">Change</a>
+                  <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-place-of-destination">Change</a>
                 </td>
               </tr>
               </tbody>
@@ -244,7 +246,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
          
         {% endif %}
-          <!-- <a href="14a-address-search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a> -->
+          <!-- <a href="04-02-address-search" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a place of destination </a> -->
         </div>
         </form>
         <form action="14d-cph-number" method="post">
