@@ -12,6 +12,7 @@ const router = express.Router()
 // x baseline routes
 router.use('/baseline/chedpp/part1', require('./views/baseline/chedpp/part1/_routes'))
 router.use('/baseline/cheda/part1', require('./views/baseline/cheda/part1/_routes'))
+router.use('/baseline/chedp/part1', require('./views/baseline/chedp/part1/_routes'))
 
 // x ched routes
 router.use('/x-ched/cr37-clone-after/latest/chedpp', require('./views/x-ched/cr37-clone-after/latest/chedpp/_routes'))

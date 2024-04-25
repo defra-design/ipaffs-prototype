@@ -15,7 +15,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
 
 <div class="navigation-links">
-    <a href="07-check-answers-orig" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <a href="00-check-answers" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
   <div class="navigation-links__divider">|</div>
   <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
     <ol class="govuk-breadcrumbs__list">
@@ -23,7 +23,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <a class="govuk-breadcrumbs__link" href="0-index">Dashboard</a>
       </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="07-check-answers-orig">Notification Hub</a>
+            <a class="govuk-breadcrumbs__link" href="00-check-answers">Notification Hub</a>
           </li>
     </ol>
   </div>  <div id="sign-out-section" class="information-banner">
@@ -115,7 +115,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <td class="govuk-table__header">Country of origin</td>
                       <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] }}</td>
                       <td class="govuk-table__cell change">
-                        <a href="03-origin-import?from=review" class="govuk-link" id="country-of-origin-change-link">
+                        <a href="02-origin-import?from=review" class="govuk-link" id="country-of-origin-change-link">
                           Change
                         </a>
                       </td>
@@ -148,6 +148,16 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <td class="govuk-table__cell"></td>
                     </tr>
                     <tr>
+                      <td class="govuk-table__header">Region of origin code</td>
+                      <td class="govuk-table__cell">
+                        {% if (data['region-of-orgin-code'] == "yes") %}
+                          {{ data['region-code-added'] }}
+                        {% elif (data['region-of-orgin-code'] == "no") %}
+                          {{ data['region-code-noselected'] }}
+                        {% endif %}
+                      </td>
+                      </a>
+                    <tr>
                       <td class="govuk-table__header">Consignment conforms to regulatory requirements</td>
                       <td class="govuk-table__cell" id="region-of-consignment-value">
                         
@@ -166,7 +176,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       For internal market
                               </td>
                     <td class="govuk-table__cell change">
-                          <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "both" }}" class="govuk-link" id="consignment-purpose-change-link">
+                          <a href="04-about-consignment-{{ data['conform-uk-regulations'] or "both" }}" class="govuk-link" id="consignment-purpose-change-link">
                             Change
                           </a>
                     </td>
@@ -191,7 +201,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <td class="govuk-table__header" id="import-risk-header">Import risk category</td>
                         <td>{{ data['risk-category'] | capitalize }} risk</td>
                           <td class="govuk-table__cell change">
-                            <a href="06a-risk-category" class="govuk-link">
+                            <a href="05-01-risk-category" class="govuk-link">
                               Change
                             </a>
                       </td>
@@ -243,7 +253,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       <th scope="row" class="govuk-table__header ">Commodity code</th>
                       <td class="govuk-table__cell">02102010   </td>
                       <td class="govuk-table__cell change">
-                            <a href="08-addgoods-weights-packaging" class="govuk-link" id="commodity-change-link-0">Change</a>
+                            <a href="06-01-add-goods-weights-packaging" class="govuk-link" id="commodity-change-link-0">Change</a>
                       </td>
                     </tr>
                     <tr class="presentation-table__row--no-border">
@@ -396,7 +406,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__header">Total gross weight (kg/units)</td>
                     <td class="govuk-table__cell" id="gross-weight">100 kg/units</td>
                       <td class="govuk-table__cell change">
-                          <a href="08-commodity-details#total-gross-weight" class="govuk-link" id="consignment-details-change-link-weight">
+                          <a href="06-01-add-goods-weights-packaging" class="govuk-link" id="consignment-details-change-link-weight">
                             Change
                           </a>
                       </td>
@@ -408,7 +418,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 
             <div class="heading-with-change-link" id="additional-details-section">
               <h2 class="govuk-heading-m">Additonal details</h2>
-              <a href="10-additional-details" class="govuk-link" id="establishment-of-origin-change-link">
+              <a href="10-01-additional-details" class="govuk-link" id="establishment-of-origin-change-link">
                     Change
               </a>
             </div>
@@ -437,11 +447,52 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <h2 class="govuk-heading-l" id="documents-section-heading">Documents</h2>
                 <hr>
                 <div class="table-responsive">
+                  
+                  {% if (data['risk-category'] != "low") %}
+                  <div class="heading-with-change-link">
+                    <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
+                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12-02-health-certificate">
+                          Change
+                        </a>
+                  </div>
+                  
+                  <div class="table-responsive">
+                    <table id="latest-health-certificate-table" aria-describedby="latest health certificate table" class="govuk-table presentation-table review-latest-health-certificate-table">
+                      <thead class="govuk-table__head">
+                        <tr>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="presentation-table__section ">
+                          <td class="govuk-table__cell" id="latest-health-document-type">
+                            Veterinary health certificate
+                          </td>
+                          <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                            4387942
+                          </td>
+                          <td class="govuk-table__cell" id="latest-health-document-issue-date">
+                            20 August 2023
+                          </td>
+                          <td class="govuk-table__cell">
+                            <a class="govuk-link ellipsis" id="attachment-view-b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656" title="VHC-4373484.pdf" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/b3ccd9bf-5eda-47c6-86ca-ad9e52d2d656?source=review">
+                              VHC-4373484.pdf
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                  
+                  
+                  {% endif %}
                   
                   <div class="heading-with-change-link">
                       <h3 class="govuk-heading-m" id="additional-documents-sub-heading">Showing 4 additional documents</h3>
-                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12b-accompanying-docs">
+                        <a class="govuk-link" id="latest-health-certificate-change-link" href="12-05-accompanying-docs">
                           Change
                         </a>
                   </div>
@@ -562,7 +613,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
                   <div class="heading-with-change-link">
                     <h2 id="approved-establishment-header" class="govuk-heading-m">Approved establishment</h2>
-                    <a href="13b-approved-est-chosen" class="govuk-link" id="establishment-of-origin-change-link">
+                    <a href="13-03-approved-est-chosen" class="govuk-link" id="establishment-of-origin-change-link">
                       Change
                     </a>
                   </div>
@@ -612,7 +663,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       San Martin 230, Piso 5 Dpto 8, Y0000HGH Villa Maria, Argentina
                     </td>
                     <td class="govuk-table__cell change">
-                          <a href="14-addresses" class="govuk-link" id="traders-change-link">
+                          <a href="14-01-addresses" class="govuk-link" id="traders-change-link">
                             Change
                           </a>
                     </td>
@@ -649,7 +700,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             <h2 class="govuk-heading-l">Transport</h2>
                 <div class="heading-with-change-link">
                   <h2 id="approved-establishment-header" class="govuk-heading-m">Transport to the port of entry</h2>
-                  <a href="11-transport-to-poe" class="govuk-link" id="establishment-of-origin-change-link">
+                  <a href="11-01-transport-to-poe" class="govuk-link" id="establishment-of-origin-change-link">
                     Change
                   </a>
                 </div>
@@ -745,7 +796,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </th>
                   <td>Road vehicle</td>
                   <td class="change">
-                        <a href="16-transport-after-bcp" class="govuk-link" id="transport-details-change-link">Change</a>
+                        <a href="16-01-transport-after-bcp" class="govuk-link" id="transport-details-change-link">Change</a>
                   </td>
                 </tr>
                 <tr>
@@ -777,7 +828,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__header" >Transporter name</td>
                     <td class="govuk-table__cell" id="transporter-name" >Matt Green</td>
                     <td class="govuk-table__cell change" >
-                      <a href="15b-transporter-entered" class="govuk-link" id="transporter-change-link">Change</a>
+                      <a href="15-03-transporter-entered" class="govuk-link" id="transporter-change-link">Change</a>
                     </td>
                   </tr>
                   <tr>
@@ -806,7 +857,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <h2 class="govuk-heading-l">Contact</h2>
               <div class="heading-with-change-link">
                 <h2 class="govuk-heading-m">Contact details</h2>
-                    <a href="17a-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
+                    <a href="17-01-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
                     Change
                     </a>
               </div>
@@ -837,7 +888,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
               <div class="heading-with-change-link">
                 <h2 class="govuk-heading-m">Nominated contacts</h2>
-                    <a href="17b-nominated-contacts-entered.html" class="govuk-link" id="nominated-contact-change-link">
+                    <a href="17-02-nominated-contacts-entered.html" class="govuk-link" id="nominated-contact-change-link">
                     Change
                     </a>
               </div>
@@ -867,7 +918,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               
               <div class="heading-with-change-link">
                 <h2 class="govuk-heading-m">Contact address for consignment</h2>
-                    <a href="17c-contact-consignment" class="govuk-link" id="responsible-person-contact-details-change-link">
+                    <a href="17-04-contact-consignment" class="govuk-link" id="responsible-person-contact-details-change-link">
                     Change
                     </a>
               </div>
@@ -886,7 +937,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 </table>
               </div>
   
-          <form action="19-declaration" method="POST">
+          <form action="19-01-declaration" method="POST">
             <input class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue-p">
             <input name="crumb" type="hidden" value="GhnRlYhYaV4zCfwfqik109EM7N9iRMsexXIg2qUpS1A">
             <input name="etag" type="hidden" value="&quot;00000000053B836D&quot;">
