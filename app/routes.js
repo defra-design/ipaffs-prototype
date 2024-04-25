@@ -19,6 +19,10 @@ router.use('/x-ched/cr37-clone-after/latest/chedpp', require('./views/x-ched/cr3
 router.use('/x-ched/cr37-clone-after/latest/chedp', require('./views/x-ched/cr37-clone-after/latest/chedp/_routes'))
 router.use('/x-ched/cr37-clone-after/latest/cheda', require('./views/x-ched/cr37-clone-after/latest/cheda/_routes'))
 
+router.use('/x-ched/cr37-clone-after/v3/chedpp', require('./views/x-ched/cr37-clone-after/v3/chedpp/_routes'))
+router.use('/x-ched/cr37-clone-after/v3/chedp', require('./views/x-ched/cr37-clone-after/v3/chedp/_routes'))
+router.use('/x-ched/cr37-clone-after/v3/cheda', require('./views/x-ched/cr37-clone-after/v3/cheda/_routes'))
+
 router.use('/x-ched/cr37-clone-after/v2/chedpp', require('./views/x-ched/cr37-clone-after/v2/chedpp/_routes'))
 router.use('/x-ched/cr37-clone-after/v2/chedp', require('./views/x-ched/cr37-clone-after/v2/chedp/_routes'))
 router.use('/x-ched/cr37-clone-after/v2/cheda', require('./views/x-ched/cr37-clone-after/v2/cheda/_routes'))

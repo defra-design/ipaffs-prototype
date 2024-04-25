@@ -38,15 +38,45 @@
 
       <h1 class="govuk-heading-xl " id="page-primary-title">Your import notifications</h1>
       {{ data | log }}
-      <form action="01-ched-type" method="post" id="homeForm">
-        <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
+
+<form action="01-ched-type" method="post" id="homeForm">
+<div class="govuk-!-padding-3">
+        <div class="govuk-grid-row govuk-!-margin-bottom-4" style="border-bottom: 1px #b1b4b6 solid;">
+          <div class="govuk-grid-column-one-third govuk-!-padding-left-1" >
+            <!-- <a class="govuk-button notification-button"  href="">Clone an electronic EHC</a>
+            <a class="govuk-button notification-button" id="search-to-clone2" href="">Clone an ePhyto</a> -->
+            <a class="govuk-button notification-button"  href="01-cl-01">Clone from a certificate</a>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body">Bring across information and documents from your electronic Export Health Certificate or ePhyto straight into your import notification. </p>
+         
+            <details class="govuk-details govuk-!-margin-bottom-2">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What is cloning?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>Cloning sets up a link between the exporter's system and IPAFFS. Use your electronic EHC or ePhyto to populate parts of your import notification. 
+                  This includes your Health certificate and any data and documents uploaded by your exporter or vet to their export system (for example TracesNT). 
+                  They must save it as an electronic certificate type for you to be able to use this feature.</p>
+                <p>This can save time compared to entering all the information manually and can cut down on manual errors and border checks triggered when data doesn't match up.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="govuk-grid-row govuk-!-margin-bottom-4" style="border-bottom: 1px #b1b4b6 solid;">
+          <div class="govuk-grid-column-one-third  govuk-!-padding-left-1" >
         <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
-          Create a new notification
+          Create a new notification 
         </button>
-          <a class="govuk-button notification-button" id="search-to-clone" href="">Clone a certificate</a>
-      </form>
-
-
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">Create a new notification manually</p>   
+</div>
+</div>
+</div>
+</form>
       <div id="existing-notifications">
         <form action="/notification/tst/protected/notifications" method="post" class="search-filter-form">
           <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
@@ -1514,7 +1544,7 @@
               </div>
           </div>
           <div class="notification-list__links">
-              <form method="post" action="07-notification" class="govuk-!-display-inline">
+              <form method="post" action="07-notification-can" class="govuk-!-display-inline">
                 <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="copy-as-new-CHEDA.GB.2024.1101880" name="submit-param" value="CHEDA.GB.2024.1101880">
                   Copy as new
@@ -1526,12 +1556,12 @@
                     View details
                   </button>
               </form>
-              <form action="07-notification-amend" method="post" class="govuk-!-display-inline">
+              <form action="07-notification-can-amend" method="post" class="govuk-!-display-inline">
               <button class="govuk-link" id="amend-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                 Amend
               </button>
               </form>
-            <!-- <form action="07-notification-amend" method="post" class="govuk-!-display-inline">
+            <!-- <form action="07-notification-can-amend" method="post" class="govuk-!-display-inline">
               <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="view-button" name="cr37aReviewedVar1" value="true">
                   View details
@@ -1583,7 +1613,7 @@
             </div>
           </div>
           <div class="notification-list__links">
-              <form method="post" action="07-notification" class="govuk-!-display-inline">
+              <form method="post" action="07-notification-can" class="govuk-!-display-inline">
                 <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="copy-as-new-DRAFT.GB.2024.1100598" name="submit-param" value="DRAFT.GB.2024.1100598">
                   Copy as new
@@ -1595,7 +1625,7 @@
                     View details
                   </button>
               </form>
-              <form action="07-notification-amend" method="post" class="govuk-!-display-inline">
+              <form action="07-notification-can-amend" method="post" class="govuk-!-display-inline">
               <button class="govuk-link" id="amend-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                 Amend
               </button>
@@ -1643,7 +1673,7 @@
             </div>
           </div>
           <div class="notification-list__links">
-              <form method="post" action="07-notification" class="govuk-!-display-inline">
+              <form method="post" action="07-notification-can" class="govuk-!-display-inline">
                 <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="copy-as-new-DRAFT.GB.2024.1100598" name="submit-param" value="DRAFT.GB.2024.1100598">
                   Copy as new
@@ -1655,7 +1685,7 @@
                     View details
                   </button>
               </form>
-              <form action="07-notification-amend" method="post" class="govuk-!-display-inline">
+              <form action="07-notification-can-amend" method="post" class="govuk-!-display-inline">
               <button class="govuk-link" id="amend-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                 Amend
               </button>
@@ -1709,7 +1739,7 @@
               </div>
           </div>
           <div class="notification-list__links">
-              <form method="post" action="07-notification" class="govuk-!-display-inline">
+              <form method="post" action="07-notification-can" class="govuk-!-display-inline">
                 <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="copy-as-new-CHEDA.GB.2024.1101315" name="submit-param" value="CHEDA.GB.2024.1101315">
                   Copy as new
@@ -1721,7 +1751,7 @@
                     View details
                   </button>
               </form>
-              <form action="07-notification-amend" method="post" class="govuk-!-display-inline">
+              <form action="07-notification-can-amend" method="post" class="govuk-!-display-inline">
               <button class="govuk-link" id="amend-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                 Amend
               </button>
@@ -1775,13 +1805,13 @@
               </div>
           </div>
           <div class="notification-list__links">
-              <form method="post" action="07-notification" class="govuk-!-display-inline">
+              <form method="post" action="07-notification-can" class="govuk-!-display-inline">
                 <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="copy-as-new-CHEDA.GB.2024.1101324" name="submit-param" value="CHEDA.GB.2024.1101324">
                   Copy as new
                 </button>
               </form>
-            <form action="07-notification" method="post" class="govuk-!-display-inline">
+            <form action="07-notification-can" method="post" class="govuk-!-display-inline">
               <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="view-details-CHEDA.GB.2024.1101324" name="viewDetails" value="CHEDA.GB.2024.1101324">
                   View details
@@ -1900,7 +1930,7 @@
                   Copy as new
                 </button>
               </form>
-            <form action="07-notification-amend" method="post" class="govuk-!-display-inline">
+            <form action="07-notification-can-amend" method="post" class="govuk-!-display-inline">
               <input name="crumb" type="hidden" value="3G-qEyivfTzLS2Mbfj2CCL4zaX2zZa0byKY3oo62Pg2">
                 <button class="govuk-link" id="view-details-DRAFT.GB.2024.1100598" name="viewDetails" value="DRAFT.GB.2024.1100598">
                   View details
