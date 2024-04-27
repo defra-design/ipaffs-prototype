@@ -17,8 +17,8 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-!-padding-top-0">
   <span class="heading-tertiary">
-      <span id="reference-number">DRAFT.GB.2024.5925980</span>
-          <span> - CHEDP</span>
+      <span id="reference-number">DRAFT.GB.2024.2987635</span>
+          <span> - CHEDPP</span>
   </span>
 </div>
 
@@ -27,7 +27,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
     <div class="govuk-notification-banner__header">
       <h2 class="govuk-notification-banner__title" id="banner-title">
-        Success - electronic EHC found
+        Success - ePhyto found
       </h2>
     </div>
     <div class="govuk-notification-banner__content">
@@ -43,7 +43,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper cloning-summary-page" id="main-content">
   <div class="govuk-grid-row" id="cloning-summary">
     <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl" id="page-primary-title">Confirm clone from your EHC</h1>
+        <h1 class="govuk-heading-xl" id="page-primary-title">Confirm clone from your ePhyto</h1>
       
         <div id="documents-table" class="govuk-!-margin-top-9 govuk-!-margin-bottom-9">
           <h2 class="govuk-heading-m">11 documents will be attached</h2>
@@ -65,7 +65,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       <!-- <td class="govuk-table__header govuk-!-width-one-third">File name</td> -->
     </tr>
     <tr>
-      <td class="govuk-table__cell">Health certificate</td>
+      <td class="govuk-table__cell">Phytosanitary certificate</td>
       <td class="govuk-table__cell">RIHFS-LKSFJ4329849-837429827349</td>
       <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
   </tr>
@@ -102,10 +102,10 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       
       <div class="govuk-!-padding-4" style="border: solid 1px grey;">
       <h2 class="govuk-heading-l">Summary</h2>
-      <hp class="govuk-body">Brief details of the EHC certificate to be cloned from:</p>
+      <hp class="govuk-body">Brief details of the ePhyto certificate:</p>
       <hr>
         <table class="govuk-table review-table" id="consignment-table">
-        <caption class="govuk-visually-hidden">Summary of the EHC </caption>
+        <caption class="govuk-visually-hidden">Summary of the ePhyto certificate</caption>
         <tbody>
           <!-- <tr class="govuk-table__header">
             <th class="govuk-heading-m govuk-!-width-full"  style=" flex:unset; column-span: all !important;" colspan="2">Summary of the ePhyto certificate</th>
@@ -128,17 +128,17 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
           </tr>
           <tr>
             <th scope="row" class="govuk-table__header">Consignee</th>
-            <td class="govuk-table__cell" id="purpose-of-consignment">Pinkers UK Ltd</td>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Plant Life UK Ltd</td>
           </tr>
           <tr>
             <th scope="row" class="govuk-table__header">Delivery address name</th>
-            <td class="govuk-table__cell" id="purpose-of-consignment">Pinkers Hertfordshire</td>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Plant Life Hertfordshire</td>
           </tr>
           <tr>
             <th scope="row" class="govuk-table__header">
                 Border Control Post
                           </th>
-            <td class="govuk-table__cell" id="bcp">Port of Felixstowe - GBFXT1PP</td>
+            <td class="govuk-table__cell" id="bcp">Port of Felixstowe (plants) - GBFXT1PP</td>
           </tr>
           <!-- <tr>
             <th scope="row" class="govuk-table__header">Seal number</th>
@@ -261,7 +261,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Would you like to bring in the information from the EHC also?
+              Would you like to bring in the information from the ePhyto  also?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
@@ -270,7 +270,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
               <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
                 Yes, bring in information also
               </label>
-              <p class="govuk-body govuk-!-padding-left-3">This will replace any information you've already entered with the details from the EHC.</p>
+              <p class="govuk-body govuk-!-padding-left-3">This will replace any information you've already entered with the details from the ePhyto.</p>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
@@ -284,20 +284,19 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
         </fieldset>
       </div>
 
-      <div class="govuk-!-margin-top-9">
-        <form action="03-do-01a-phyto-clone" method="POST">
-          <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and clone from certificate</button>
-          
-          <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">
-          <input name="country-of-origin-code" type="hidden" value="NL">
-          <input name="certificate-type" type="hidden" value="CHEDPP">
-          <input name="crumb" type="hidden" value="pAX8KbbF_kTf-zwr0UqqZTYVT8dKDyzcqU2LeTvWorP">
-        </form>
-        </div>
-        <div class="">
-        <p class="govuk-body"><a class="govuk-link clear-link govuk-!-padding-0" id="search-to-clone" href="03a-certificate-reference">Go back and search again</a></p>
-          <p class="govuk-body"><a class="govuk-link clear-link govuk-!-padding-0" href="00-check-answers">Cancel and return to hub</a></p>
-        </div>
+<div class="govuk-!-margin-top-9">
+      <form action="03-do-01a-phyto-clone" method="POST">
+        <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and clone</button>
+        
+        <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">
+        <input name="country-of-origin-code" type="hidden" value="NL">
+        <input name="certificate-type" type="hidden" value="CHEDPP">
+        <input name="crumb" type="hidden" value="pAX8KbbF_kTf-zwr0UqqZTYVT8dKDyzcqU2LeTvWorP">
+      </form>
+      </div>
+    
+      <p class="govuk-body"><a class="govuk-link clear-link" id="search-to-clone" href="03a-certificate-reference">Go back and search again</a></p>
+        <p class="govuk-body"><a class="govuk-link clear-link" href="00-check-answers">Cancel and return to hub</a></p>
   </div>
   </div>
  

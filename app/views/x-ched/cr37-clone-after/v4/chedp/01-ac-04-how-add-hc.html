@@ -11,7 +11,7 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
 
 {% block content %}
 <div class="govuk-!-padding-bottom-6">
-<span class="heading-tertiary">DRAFT.GB.2024.5925980 - CHEDP</span>
+<span class="heading-tertiary">DRAFT.GB.2024.5925980 - CHEDA</span>
 </div>
 
 
@@ -25,71 +25,79 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
         <h1 class="govuk-!govuk-heading-l">Add the latest health certificate</h1>
         {{ data | log }}
         
-        <p class="govuk-body govuk-!-margin-bottom-6">You can clone information and documents from an electronic export health certificate (EHC). 
+        <p class="govuk-body govuk-!-margin-bottom-4">You can clone from your electronic export health certificate (EHC) to populate your notification. 
         </p>
-        <!-- <p class="govuk-body govuk-!-margin-bottom-6">You can clone an EHC to populate your import notification with all documents and information from it.
-        </p> -->
-        <div class="govuk-form-group">
+        
+        <details class="govuk-details govuk-!-margin-bottom-8">
+          <summary class="govuk-details__summary  govuk-!-width-one-half">
+            <span class="govuk-details__summary-text">
+              What is cloning?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body  govuk-!-margin-bottom-2">
+              Cloning can save you time to cut down on manual errors and border checks that are triggred when data doesn't match up. It involves the following steps:</p>
+              <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-7">
+                <li>You enter the EHC reference number</li>
+                <li> It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
+                <li>IPAFFS can find the electronic EHC</li>
+                <li>The EHC is used to populate parts of your import notification including your health certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
+              </ol>
+              <p class="govuk-body  govuk-!-margin-bottom-1">Any information and documents that are brought over from the electronic EHC will:</p>
+              <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-7">
+                <li>overwrite existing information you've entered</li>
+                <li>be in addition to documents you've entered</li>
+                
+              </ul>
+
+
+          </div>
+        </details>
+
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+              <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-2">
                 How do you want to add the health certificate?
               </h2>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
-                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="how-add-hc">
-                  Clone  information and documents
+                <label class="govuk-label govuk-radios__label d" for="how-add-hc">
+                  Clone from your electronic EHC 
                 </label>
-                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
                   This will replace any information already added with the details from the electronic EHC. 
-                </div>
+                </div> -->
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-add-hc-1" name="addhc" type="radio" value="Clone-doc">
-                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="how-add-hc">
-                  Clone documents only 
-                </label>
-                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  This will include the health certificate and any other documents that the vet or exporter uploaded.
-                </div>
-              </div>
+            
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc-2" name="addhc" type="radio" value="Manual">
-                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="how-add-hc-2">
+                <label class="govuk-label govuk-radios__label " for="how-add-hc-2">
                   Attach  manually
                 </label>
                 <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
                   Add commodities manually and copy documents from an electronic phytosanitary certificate (ePhyto).
                 </div> -->
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-add-hc-3" name="addhc" type="radio" value="Manual-2">
-                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="how-add-hc-3">
-                  I  don't have one yet
-                </label>
-                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  Skip to other accompanying documents section.
-                </div>
-                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">You must have a health certificate attached by the time your consignment enters GB.
-                </div> -->
-              </div>
+             
             </div>
           </fieldset>
         </div>
 
-        <div class="govuk-warning-text govuk-!-margin-bottom-8">
+        <!-- <div class="govuk-warning-text govuk-!-margin-bottom-8">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-visually-hidden">Warning</span>
             Your consignment must have a health certificate before it enters Great Britain.
           </strong>
-        </div>
+        </div> -->
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
 
       </form>
-      <p class="govuk-body"><a class="govuk-link" href="07-check-answers-amend">Cancel and return to hub</a></p>
+      <p class="govuk-body"><a class="govuk-link" href="00-check-answers-amend">Cancel and return to hub</a></p>
     </div>
   </div>
 

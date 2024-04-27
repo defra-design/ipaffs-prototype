@@ -23,7 +23,7 @@ router.post('/chedpp-route-how-enter', function (req, res) {
     }
   
    else {
-      res.redirect('01-no-check-answers')
+      res.redirect('00-check-answers')
     }
     
     })

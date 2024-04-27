@@ -88,7 +88,7 @@ router.post('/risk-route', function (req, res) {
   }
 
  else if (riskRoute == "low"){
-    res.redirect('07-check-answers-orig')
+    res.redirect('00-check-answers-orig')
   }
   
 })
