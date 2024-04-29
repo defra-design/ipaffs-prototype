@@ -1,0 +1,334 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+        
+        <h1 class="govuk-heading-xl">
+          Check health certificate details
+        </h1>
+      <p class="govuk-body">If you continue, these details from the health certificate will be copied into your draft notification.</p>
+
+      <p class="govuk-body">You can update these and fill in the remaining details later.</p>
+
+</div>
+  </div>
+     
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+             
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Health certificate number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    NZL2021/PPCS2/999999
+                  </dd>
+                  <!-- <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="03a-certificate-reference">
+                      Go back to change<span class="govuk-visually-hidden"> certificate number</span>
+                    </a>
+                  </dd> -->
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Consignee
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Acme Trading Company Ltd
+                  </dd>
+                  <!-- <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> date of birth</span>
+                    </a>
+                  </dd> -->
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Port of entry
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Felixstowe
+                  </dd>
+                  <!-- <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> customer reference</span>
+                    </a>
+                  </dd> -->
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Country of origin
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    France
+                  </dd>
+                  <!-- <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd> -->
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Number of commodities
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    15 commodities (3 commodity codes)
+                  </dd>
+                  <!-- <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd> -->
+                </div>
+
+
+                <div class="govuk-summary-list__row" >
+                  <dt class="govuk-summary-list__key">
+                    Type of commodities
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">CHEDP -  Products of animal origin</p>
+
+                    <div class="table-responsive govuk-!-width-full " style="border-top: 0;">
+                      <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation" >
+                        <tbody>
+                          <tr class="presentation-table__section">
+                            
+                            <td class="govuk-table__header" style="border-top: 0; ">Commodity code</td>
+                            <td class="govuk-table__header govuk-!-width-three-quarters" style=" border-top: 0;">Type</td>
+                            
+                          </tr>
+                          <tr class="presentation-table__section">
+                            
+                            <td class="govuk-table__cell ">02030450 </td>
+                            <td class="govuk-table__cell " >Meat and edible meat offal</td>
+                          </tr>
+                            <tr class="presentation-table__section">
+                             
+                              <td class="govuk-table__cell ">03809090 </td>
+                              <td class="govuk-table__cell " >Fish and crustaceans, molluscs and other aquatic invertebrate</td>
+                             
+                            </tr>
+                            <tr>
+                             
+                              <td class="govuk-table__cell " style="border-bottom: 0;">04040503</td>
+                              <td class="govuk-table__cell " style="border-bottom: 0;">Dairy produce; birds' eggs; natural honey; edible products of animal origin, not elsewhere specified or include</td>
+                              
+                            </tr>
+                        </tbody>
+                      </table>
+                        </div>
+
+                  </dd>
+                  <!-- <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd> -->
+                </div>
+
+              </dl>
+
+                   
+
+
+             
+              
+             
+            </div>
+          </div>
+       
+ 
+      <!-- <div class="table-responsive">
+        <table class="govuk-table presentation-table review-table" id="review-table-about-notification" role="presentation">
+          <tbody>
+            <tr class="presentation-table__section">
+              <td class="govuk-table__header govuk-!-width-one-third">Health certificate number</td>
+              <td class="govuk-table__cell govuk-!-width-two-thirds">NZL2021/PPCS2/999999</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            <tr class="presentation-table__section">
+              <td class="govuk-table__header">Consignee</td>
+              <td class="govuk-table__cell" id="importing">Acme trading company Ltd</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            <tr class="presentation-table__section">
+              <td class="govuk-table__header">Port of entry</td>
+              <td class="govuk-table__cell" id="importing">Felixstowe</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="presentation-table__section">
+              <td class="govuk-table__header">Number of commodities</td>
+              <td class="govuk-table__cell" id="importing">5 commodities (4 commodity codes)</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="presentation-table__section">
+              <td class="govuk-table__header">Type of commodities</td>
+              <td class="govuk-table__cell" id="importing">CHEDP -  Products of animal origin
+<ul class="govuk-list govuk-list--bullet">
+  <li>02 meat and edible meat offal</li>
+  <li>03 fish and crustaceans, molluscs and other aquatic invertebrates</li>
+    <li>04 dairy produce; birds' eggs; natural honey; edible products of animal origin, not elsewhere specified or included</li>
+</ul>
+
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+
+      <form action="correct-hc-route" id="certificate-lookup" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Is this the correct health certificate?
+              </h1>
+            </legend>
+
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" id="purpose">
+
+          <div class="govuk-radios__item purpose">
+            <input class="govuk-radios__input" id="re-entry" name="correctHC" type="radio" value="yes">
+            
+            <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="re-entry">
+              <h2 class="govuk-label">Yes, use this certificate to fill part of the notification</h2>
+             </label>
+            
+          </div>
+
+          <div class="govuk-radios__item purpose">
+            <input class="govuk-radios__input" id="a_impadm1" name="correctHC" type="radio" value="no" aria-controls="internalmarket-conditional" aria-expanded="false">
+            <label class="govuk-label govuk-radios__label " for="a_impadm1">
+             <h2 class="govuk-label">No</h2>
+            </label>
+           
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="internalmarket-conditional">
+                  
+                  <div class="govuk-form-group govuk-!-margin-bottom-5">
+                    <fieldset class="govuk-fieldset">
+                     
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="where-do-you-live" name="notCorrectHC" type="radio" value="reenter">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                            Go back and re-enter the number
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="where-do-you-live-2" name="notCorrectHC" type="radio" value="continue-manual">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                            Continue manually
+                          </label>
+                        </div>
+                       
+                      </div>
+                    </fieldset>
+                  </div>
+                 
+          </div>
+
+ 
+
+
+
+        
+
+      
+
+
+    </div>
+          </fieldset>
+        </div>
+
+
+
+
+      <!-- <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Is this the correct health certificate?
+            </h1>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            
+          </div>
+          
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" id="purpose">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yes" name="correctHC" type="radio" value="yes" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Yes, use this certificate to fill part of the notification
+              </label>
+            </div>
+            
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="correctHC" type="radio" value="internalmarket" aria-controls="not-correct-hc" aria-expanded="false">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="not-correct-hc">
+                          
+              <div class="govuk-form-group govuk-!-margin-bottom-5">
+                <fieldset class="govuk-fieldset">
+                 
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="reenter-number" name="correctHC" type="radio" value="go-back">
+                      <label class="govuk-label govuk-radios__label" for="reenter-number">
+                        Go back and re-enter the number 
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="continue-manual" name="correctHC" type="radio" value="continue-manual">
+                      <label class="govuk-label govuk-radios__label" for="continue-manual">
+                        Continue manually 
+                      </label>
+                    </div>
+                    
+                  </div>
+                </fieldset>
+              </div>
+             
+      </div>
+         
+          </div>
+        </fieldset>
+      </div> -->
+
+      
+       
+
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Continue" data-module="govuk-button">
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

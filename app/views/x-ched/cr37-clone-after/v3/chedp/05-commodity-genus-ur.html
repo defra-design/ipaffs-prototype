@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Commodity – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
+<form action="06-about-consignment-cg" method="post">
+  <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
+  <input name="etag" type="hidden" value="&quot;00000000053B49D9&quot;">
+  <input name="11-transport-to-poe" type="hidden" value="visited">
+  <input id="js-enabled-flag" name="js-enabled" type="hidden" value="true">
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="species-page">
+    <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-xl">Description of the goods</span>
+        <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
+
+      <div class="table-responsive">
+        <table class="govuk-table" id="commodity-table">
+          <thead class="govuk-table__head">
+          <tr>
+            <th scope="col" class="govuk-table__header">Commodity code</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="govuk-table__cell" id="commodity-code-value">02102010</td>
+            <td class="govuk-table__cell">With bone in</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <form action="add-commodity-route" id="categories" method="post">
+        <input name="commodity-selected-code" type="hidden" value="03031200">
+        <input name="commodityDetailsPage" type="hidden" value="">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--m" for="type-select">
+                Type of commodity
+              </label>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn">
+                    <strong>Meat products</strong> 
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    Foods containing meat that may contain multiple ingredients. For example, a chicken and mushroom pie.
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+                  <label class="govuk-label govuk-radios__label" for="signIn-2">
+                    <strong>Meat preparations</strong> 
+                  </label>
+                  <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                    Foods made from fresh meat that may have other foods, additives and seasonings added to them.
+                  </div>
+                </div>
+          </div>
+              </select>
+              <noscript>
+                <input id="type-button" class="button" type="submit" name="typeButton" value="update">
+              </noscript>
+            </div>
+
+            <input type="hidden" name="class" id="class-select-hidden" value="147118">
+
+    
+              <div class="govuk-form-group ">
+                <fieldset class="govuk-fieldset" id="species-list">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    Select species of commodity
+                  </legend>
+                  <span class="govuk-hint" id="species-hint">
+                    Select all that apply.
+                  </span>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Bovidae-checkbox" name="species" type="checkbox" value="139994">
+                      <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Bovidae-checkbox">
+                        Bovidae
+                      </label>
+                    </div>
+                </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group govuk-!-margin-bottom-9">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Do you want to add another commodity?
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="add-commodity" type="radio" value="Yes">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="add-commodity" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                    No 
+                  </label>
+                </div>
+               
+              </div>
+            </fieldset>
+          </div>
+
+        <div class="govuk-!-margin-top-6">
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+        </div>
+
+        <input name="crumb" type="hidden" value="XnVseX9p7oZgWaoYH_r9FJ5Jl0V0mvtmgI2L0GDadrU">
+        <input name="commodityDetailsPage" type="hidden" value="">
+        <input name="etag" type="hidden" value="&quot;000000000537FA32&quot;">
+        <input name="complement-id" type="hidden" value="">
+        <input name="commodity-selected-code" type="hidden" value="03031200">
+        <input name="type-id" type="hidden" value="20">
+        <input name="class-id" type="hidden" value="147118">
+        <input name="family-id" type="hidden" value="">
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+How do you want to add your commodity details? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="certificate-type">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-xl" id="page-primary-title">Clone a health or phytosanitary certificate</h1>
+        <p class="govuk-body">You can copy details from a health or phytosanitary certificate to create a new import notification, depending on the type of commodity and country you're importing from.</p>
+     <h2 class="govuk-heading-l">Search for a certificate to clone</h2> 
+       <p class="govuk-body">Before you start, you'll need these details from the certificate:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>country of origin of the certificate</li>
+        <li>certificate reference number</li>
+      </ul>
+      <form action="01-cl-02" method="POST">
+        <input name="crumb" type="hidden" value="qnK25zNGKBPjM_UkLfCkIXQSI3LzjC2-SV4JuXcPQVv">
+          <div class="govuk-form-group  ">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-label--m">
+                  
+                  What are you importing?
+                  
+                </legend>
+          
+          
+              
+          
+              <div class="govuk-radios govuk-!-width-one-half">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CVEDA">
+                    <label class="govuk-label govuk-radios__label " for="cert-type">
+                      Live animals
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="CVEDP">
+                    <label class="govuk-label govuk-radios__label " for="cert-type-2">
+                      Products of animal origin
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="cert-type-3" name="cert-type" type="radio" value="CHEDPP">
+                    <label class="govuk-label govuk-radios__label " for="cert-type-3">
+                      Plants, plant products and other objects
+                    </label>
+                  </div>
+              </div>
+            </fieldset>
+          </div>
+        <button class="govuk-button govuk-!-margin-top-7" type="submit" value="Continue" id="continue" data-prevent-double-click="true">Continue</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

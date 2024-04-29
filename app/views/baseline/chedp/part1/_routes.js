@@ -15,16 +15,16 @@ router.post('/add-commodity-route', function (req, res) {
   var conformUKRegulations = req.session.data['conform-uk-regulations']
   // if user wants to add more commodities, redirect back to Commodity page
   if (addCommodity == "Yes"){
-    res.redirect('04-commodity')
+    res.redirect('03-01-commodity')
   }
   // if user doesn't want to add more commodities or no answer is given, 
     // and is importing non conforming goods, redirect to Main reason for importing non conforming goods
     else if (conformUKRegulations == "ncg"){
-      res.redirect('06-about-consignment-ncg')
+      res.redirect('04-02-about-consignment-ncg')
     } 
     // in any other case, redirect to Main reason for importing conforming goods
     else {
-      res.redirect('06-about-consignment-cg')
+      res.redirect('04-01-about-consignment-cg')
     }
 })
 
@@ -35,11 +35,11 @@ router.post('/risk-route', function (req, res) {
   // Make a variable and give it the value from name
   var riskRoute = req.session.data['risk-category']
   if (riskRoute == "medium"){
-    res.redirect('06b-risk-high-or-medium')
+    res.redirect('05-02-risk-high-or-medium')
   }
 
  else if (riskRoute == "low"){
-    res.redirect('07-check-answers')
+    res.redirect('00-check-answers')
   }
   
 })
@@ -48,10 +48,10 @@ router.post('/risk-route', function (req, res) {
 router.post('/add-documents', function (req, res) {
   var riskRoute = req.session.data['risk-category']
   if (riskRoute == "low"){
-    res.redirect('12-accompanying-docs')
+    res.redirect('12-02-accompanying-docs')
   }
  else {
-    res.redirect('12-health-certificate')
+    res.redirect('12-01-health-certificate')
   }
   
 })
@@ -67,7 +67,7 @@ router.post('/ae-route', function (req, res) {
   }
 
  else if (appEstRoute == "Save and continue"){
-    res.redirect('14-addresses')
+    res.redirect('14-01-addresses')
   }
   
 })
@@ -85,12 +85,12 @@ router.post('/submit-notification', function (req, res) {
   var riskRoute = req.session.data['risk-category']
   // if GVMS is yes, redirect to GVMS confrimation page
   if (gvmsAnswer == "Yes"){
-    res.redirect('20-submitted-gvms-yes')
+    res.redirect('20-01-submitted-gvms-yes')
   } 
   // if GVMS is no or no answer is given,
     // and risk category is low, redirect to Inspection not required confirmation page
     else if (riskRoute == "low"){
-      res.redirect('20-submitted-inspection-not-required')
+      res.redirect('20-01-submitted-inspection-not-required')
     }
     // in any other case, redirect to Inspection required page
     else {

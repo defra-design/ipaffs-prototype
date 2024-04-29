@@ -12,11 +12,20 @@ const router = express.Router()
 // x baseline routes
 router.use('/baseline/chedpp/part1', require('./views/baseline/chedpp/part1/_routes'))
 router.use('/baseline/cheda/part1', require('./views/baseline/cheda/part1/_routes'))
+router.use('/baseline/chedp/part1', require('./views/baseline/chedp/part1/_routes'))
 
 // x ched routes
 router.use('/x-ched/cr37-clone-after/latest/chedpp', require('./views/x-ched/cr37-clone-after/latest/chedpp/_routes'))
 router.use('/x-ched/cr37-clone-after/latest/chedp', require('./views/x-ched/cr37-clone-after/latest/chedp/_routes'))
 router.use('/x-ched/cr37-clone-after/latest/cheda', require('./views/x-ched/cr37-clone-after/latest/cheda/_routes'))
+
+router.use('/x-ched/cr37-clone-after/v4/chedpp', require('./views/x-ched/cr37-clone-after/v4/chedpp/_routes'))
+router.use('/x-ched/cr37-clone-after/v4/chedp', require('./views/x-ched/cr37-clone-after/v4/chedp/_routes'))
+router.use('/x-ched/cr37-clone-after/v4/cheda', require('./views/x-ched/cr37-clone-after/v4/cheda/_routes'))
+
+router.use('/x-ched/cr37-clone-after/v3/chedpp', require('./views/x-ched/cr37-clone-after/v3/chedpp/_routes'))
+router.use('/x-ched/cr37-clone-after/v3/chedp', require('./views/x-ched/cr37-clone-after/v3/chedp/_routes'))
+router.use('/x-ched/cr37-clone-after/v3/cheda', require('./views/x-ched/cr37-clone-after/v3/cheda/_routes'))
 
 router.use('/x-ched/cr37-clone-after/v2/chedpp', require('./views/x-ched/cr37-clone-after/v2/chedpp/_routes'))
 router.use('/x-ched/cr37-clone-after/v2/chedp', require('./views/x-ched/cr37-clone-after/v2/chedp/_routes'))
