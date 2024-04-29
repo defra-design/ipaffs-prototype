@@ -27,7 +27,7 @@
     <div class="govuk-grid-column-full">
           <span class="govuk-caption-xl">Transport</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing transporter</h1>
-      <form class="govuk-!-margin-bottom-6" action="15b-transporter-entered" method="GET">
+      <form class="govuk-!-margin-bottom-6" action="05-03-transporter" method="GET">
         <div class="form-group search-panel">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -83,9 +83,10 @@
         </div>
       </form>
 
-      <form action="15b-transporter-entered" method="POST">
+      <form action="05-03-transporter" method="POST">
         <input name="crumb" type="hidden" value="Oc_P40viwBADQYqopIWp1PVEfgL0tapC7ExjI8jIsXA">
         <input name="etag" type="hidden" value="&quot;0000000004D0A987&quot;">
+        <input type="hidden" name="transporter-search-page" value="yes">
 
         <div class="table-responsive">
           <table class="govuk-table traders-search-results" id="Table-SearchResults">
