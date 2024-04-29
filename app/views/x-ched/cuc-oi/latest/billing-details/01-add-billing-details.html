@@ -6,7 +6,7 @@
 
 {% block beforeContent %}
     {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
 {% endblock %}
 
 {% block content %}
@@ -45,7 +45,16 @@
           We need the correct billing details for Common User Charge invoices.
         </p>
         <p class="govuk-!-margin-bottom-9">
-          <a href="02-billing-postcode?action=add" class="govuk-link">Add billing details for XYZ Limited</a>
+          <a href="02-billing-postcode?action=add" class="govuk-link">
+            Add billing details for
+            {% if (data['ched-type'] == "chedp") %}
+            Customs Agency 4U
+            {% elseif (data['ched-type'] == "chedpp")%}
+            Plants and Trees Nurseries
+            {% else %}
+            XYZ Limited
+            {% endif %}
+          </a>
         </p>
         <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" formaction="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">

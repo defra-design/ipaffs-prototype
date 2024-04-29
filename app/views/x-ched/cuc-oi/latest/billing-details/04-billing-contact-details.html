@@ -10,7 +10,7 @@
 
 {% block beforeContent %}
     {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
 {% endblock %}
 
 {% block content %}
@@ -47,7 +47,7 @@
             <div id="billing-email-hint" class="govuk-hint">
               We'll send the invoice to this email address
             </div>
-            <input class="govuk-input govuk-!-width-three-quarters" id="billing-email" name="billing-email" type="email" spellcheck="false" aria-describedby="billing-email-hint" autocomplete="email">
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-email" name="billing-email" type="email" spellcheck="false" aria-describedby="billing-email-hint" autocomplete="email" value="{{ data['billing-email'] }}">
           </div>
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--s" for="billing-telephone-number">
@@ -56,7 +56,7 @@
             <div id="billing-telephone-number-hint" class="govuk-hint">
               For example, the payments team
             </div>
-            <input class="govuk-input govuk-!-width-three-quarters" id="billing-telephone-number" name="billing-telephone-number" type="tel" aria-describedby="billing-telephone-number-hint" autocomplete="tel">
+            <input class="govuk-input govuk-!-width-three-quarters" id="billing-telephone-number" name="billing-telephone-number" type="tel" aria-describedby="billing-telephone-number-hint" autocomplete="tel" value="{{ data['billing-telephone-number'] }}">
           </div>
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Continue" data-module="govuk-button">
           <p class="govuk-body">

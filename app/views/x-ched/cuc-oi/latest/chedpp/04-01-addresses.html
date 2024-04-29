@@ -7,7 +7,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block beforeContent %}
     {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
 {% endblock %}
 
 {% block content %}
@@ -51,13 +51,13 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 <tbody>
                     <tr>
                         <td class="govuk-table__cell col-name" headers="importer-name">
-                          Percy Plants
+                          Plants and Trees Nursery
                         </td>
                         <td class="govuk-table__cell col-address" headers="importer-address">
-                          Percy Agency, Woodham Lane, New Haw, Addlestone, KT15 3NB
+                          North Prospects Retail Park, Daffodil Road, Basingstoke, RG21 7DB
                         </td>
                           <td class="govuk-table__cell col-country" headers="importer-country">
-                            United Kingdom of Great Britain and Northern Ireland
+                            England
                           </td>
                         <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
                         </td>
@@ -86,17 +86,31 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                 </thead>
                 <tbody>
+                    {% if (data['packer-page'] == "yes") %}
+                    <tr>
+                        <td class="govuk-table__cell" headers="packer-name" style="vertical-align: top;">Bloemen en Bloembollen Nederland</td>
+                        <td class="govuk-table__cell" headers="packer-address" style="vertical-align: top;">Pompstraat 101, Rotterdam, 3082 RN</td>
+                        <td class="govuk-table__cell" headers="packer-country" style="vertical-align: top;">Netherlands</td>
+                        <td class="govuk-table__cell" headers="packer-edit">
+                          <a href="04-02-addresses-search?addressType=packer" class="govuk-link" id="edit-delivery-address">
+                            Change
+                          </a>
+                        </td>
+                    </tr>
+                    {% else %}
                     <tr>
                         <td class="govuk-table__cell" headers="packer-name">&nbsp;</td>
                         <td class="govuk-table__cell" headers="packer-address"></td>
                         <td class="govuk-table__cell" headers="packer-country"></td>
                         <td class="govuk-table__cell" headers="packer-edit"></td>
                     </tr>
+                    {% endif %}
                 </tbody>
               </table>
             </div>
-          
-              <a href="#" class="govuk-link govuk-!-font-size-19" id="add-packer">Add a packer (optional) </a>
+              {% if (data['packer-page'] != "yes") %}
+              <a href="04-02-addresses-search?addressType=packer" class="govuk-link govuk-!-font-size-19" id="add-packer">Add a packer (optional) </a>
+              {% endif %}
           </div>
           
           <div class="govuk-!-margin-bottom-8">
@@ -105,29 +119,43 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </h2>
             <p class="govuk-hint"></p>
             <div class="table-responsive">
-              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-place-of-destination">
+              <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-delivery-address">
                 <thead class="govuk-table__head">
                   <tr>
-                    <th class="govuk-table__header col-name" id="place-of-destination-name">Name</th>
-                    <th class="govuk-table__header col-address" id="place-of-destination-address">Address</th>
-                      <th class="govuk-table__header col-country" id="place-of-destination-country">Country</th>
-                    <th class="govuk-table__header col-edit" id="place-of-destination-edit">
+                    <th class="govuk-table__header col-name" id="delivery-address-name">Name</th>
+                    <th class="govuk-table__header col-address" id="delivery-address-address">Address</th>
+                      <th class="govuk-table__header col-country" id="delivery-address-country">Country</th>
+                    <th class="govuk-table__header col-edit" id="delivery-address-edit">
                       <span class="govuk-visually-hidden">Change link</span>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
+                    {% if (data['delivery-page'] == "yes") %}
                     <tr>
-                        <td class="govuk-table__cell" headers="place-of-destination-name">Percy Gardens&nbsp;</td>
-                        <td class="govuk-table__cell" headers="place-of-destination-address">Percy Agency, Woodham Lane, New Haw, Addlestone, KT15 3NB</td>
-                        <td class="govuk-table__cell" headers="place-of-destination-country">United Kingdom of Great Britain and Northern Ireland</td>
-                        <td class="govuk-table__cell" headers="place-of-destination-edit"></td>
+                        <td class="govuk-table__cell" headers="delivery-address-name" style="vertical-align: top;">Plants and Trees Nurseries</td>
+                        <td class="govuk-table__cell" headers="delivery-address-address" style="vertical-align: top;">North Prospects Retail Park, Daffodil Road, Basingstoke, RG21 7DB</td>
+                        <td class="govuk-table__cell" headers="delivery-address-country" style="vertical-align: top;">England</td>
+                        <td class="govuk-table__cell" headers="delivery-address-edit">
+                          <a href="04-02-addresses-search?addressType=delivery%20address" class="govuk-link" id="edit-delivery-address">
+                            Change
+                          </a>
+                        </td>
                     </tr>
+                    {% else %}
+                    <tr>
+                        <td class="govuk-table__cell" headers="delivery-address-name">&nbsp;</td>
+                        <td class="govuk-table__cell" headers="delivery-address-address"></td>
+                        <td class="govuk-table__cell" headers="delivery-address-country"></td>
+                        <td class="govuk-table__cell" headers="delivery-address-edit"></td>
+                    </tr>
+                    {% endif %}
                 </tbody>
               </table>
             </div>
-          
-              <a href="04-tr-03-delivery-address" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a delivery address </a>
+              {% if (data['delivery-page'] != "yes") %}
+              <a href="04-02-addresses-search?addressType=delivery%20address" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a delivery address </a>
+              {% endif %}
           </div>
           
           <div class="govuk-!-margin-bottom-8">
@@ -148,21 +176,35 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                 </thead>
                 <tbody>
+                    {% if (data['consignor-page'] == "yes") %}
                     <tr>
-                        <td class="govuk-table__cell" headers="consignor-name">Espania Giardinieri&nbsp;</td>
-                        <td class="govuk-table__cell" headers="consignor-address">La Fontanilla 71, Córdoba, 14240</td>
-                        <td class="govuk-table__cell" headers="consignor-country">Spain</td>
+                        <td class="govuk-table__cell" headers="consignor-name" style="vertical-align: top;">Bloemen en Bloembollen Nederland</td>
+                        <td class="govuk-table__cell" headers="consignor-address" style="vertical-align: top;">Pompstraat 101, Rotterdam, 3082 RN</td>
+                        <td class="govuk-table__cell" headers="consignor-country" style="vertical-align: top;">Netherlands</td>
+                        <td class="govuk-table__cell" headers="consignor-edit">
+                          <a href="04-02-addresses-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-delivery-address">
+                            Change
+                          </a>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td class="govuk-table__cell" headers="consignor-name">&nbsp;</td>
+                        <td class="govuk-table__cell" headers="consignor-address"></td>
+                        <td class="govuk-table__cell" headers="consignor-country"></td>
                         <td class="govuk-table__cell" headers="consignor-edit"></td>
                     </tr>
+                    {% endif %}
                 </tbody>
               </table>
             </div>
-          
-              <a href="04-tr-04-consignor-exporter" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
+              {% if (data['consignor-page'] != "yes") %}
+              <a href="04-02-addresses-search?addressType=consignor%20or%20exporter" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
+              {% endif %}
           </div>
           
 
-            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button" formaction="01-no-check-answers">
             <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
             <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
       </form>
