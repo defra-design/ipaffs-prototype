@@ -67,7 +67,7 @@ router.post('/ae-route', function (req, res) {
   }
 
  else if (appEstRoute == "Save and continue"){
-    res.redirect('14-addresses')
+    res.redirect('14-01-addresses')
   }
   
 })
@@ -85,12 +85,12 @@ router.post('/submit-notification', function (req, res) {
   var riskRoute = req.session.data['risk-category']
   // if GVMS is yes, redirect to GVMS confrimation page
   if (gvmsAnswer == "Yes"){
-    res.redirect('20-submitted-gvms-yes')
+    res.redirect('20-01-submitted-gvms-yes')
   } 
   // if GVMS is no or no answer is given,
     // and risk category is low, redirect to Inspection not required confirmation page
     else if (riskRoute == "low"){
-      res.redirect('20-submitted-inspection-not-required')
+      res.redirect('20-01-submitted-inspection-not-required')
     }
     // in any other case, redirect to Inspection required page
     else {
