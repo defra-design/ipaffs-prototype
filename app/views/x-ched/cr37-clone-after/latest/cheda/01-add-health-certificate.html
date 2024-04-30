@@ -287,34 +287,40 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
           </label>
         </div>
 
-        <h2 class="govuk-heading-m">What do you want to clone?</h2>
-
-        <div class="govuk-checkboxes__item govuk-!-margin-bottom-7">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Information - (will <strong>overwrite</strong> previously entered information)
-          </label>
-         
-          <details class="govuk-details govuk-!-margin-3">
-            <summary class="govuk-details__summary ">
-              <span class="govuk-details__summary-text">
-                Which fields will be cloned?
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              List of fields
-            </div>
-          </details>
+        <h2 class="govuk-heading-m ">What do you want to clone?</h2>
+        <!-- <p class="govuk-body"><a>List of fields that can be cloned (opens in a new window)</a></p> -->
+        <!-- <p class="govuk-body">When you clone:</p> -->
+        <!-- <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+          <li class="govuk-!-margin-bottom-4">Information that's cloned will <strong>overwrite</strong> any information previously entered. <p class="govuk-!-margin-top-1"><a></a></p></li>
+          <li>Documents that are cloned will be <strong>in addition</strong> to any already uploaded</li>
+        </ul> -->
        
+        <div class="govuk-inset-text govuk-!-margin-top-0">
+        <p class="govuk-body govuk-!-margin-bottom-4"><a>Information that's cloned</a> will <strong>overwrite</strong> any information previously entered.</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Documents that are cloned will be <strong>in addition</strong> to any already uploaded.</p>
+</div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+           
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item govuk-!-margin-bottom-6">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england" checked>
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Information and documents
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  Documents only
+                </label>
+              </div>
+            
+            </div>
+          </fieldset>
         </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm" checked>
-          <label class="govuk-label govuk-checkboxes__label " for="waste-3">
-            Documents  - (will be <strong>added</strong> to already uploaded documents)
-            <p class="govuk-hint govuk-!-margin-top-2">You will not be able to delete cloned documents from your notification</p>
-          </label>
-          
-        </div>
+
+       
 
        
 
