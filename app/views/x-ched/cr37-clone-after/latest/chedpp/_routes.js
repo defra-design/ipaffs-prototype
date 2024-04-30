@@ -37,10 +37,10 @@ router.post('/route-chedpp-how-add', function (req, res) {
     res.redirect('03a-certificate-reference')
   }
  else if (howAdd == "Manual") {
-    res.redirect('03-do-01a-phyto')
+    res.redirect('03-01-certificate')
   }
  else {
-    res.redirect('03-do-01-documents')
+    res.redirect('03-02-documents')
   }  
 })
 
