@@ -43,7 +43,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-  <div class="govuk-!-padding-top-6 govuk-!-margin-bottom-3">
+  <div class="govuk-!-padding-top-6 ">
     <span class="heading-tertiary">
         <span id="reference-number">DRAFT.GB.2024.5925980</span>
             <span> - CHEDP</span>
@@ -73,52 +73,55 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
   
   
-      <!-- <h2 class="govuk-heading-l">Actions</h2> -->
-      <div class="action-button-container govuk-!-margin-bottom-0 govuk-!-padding-bottom-0 govuk-!-margin-top-8">
-          
+      <div class="govuk-!-padding-5 govuk-!-margin-top-8 govuk-!-margin-bottom-9" style="border-top: 1px #b1b4b6 solid; border-bottom: 1px #b1b4b6 solid;">
+        <div class="govuk-grid-row" >
+          <div class="govuk-grid-column-full" >
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Cloning from your  EHC</h3>
+            </div>
+        </div>
+        <div class="govuk-grid-row govuk-!-padding-0">
+          <div class="govuk-grid-column-full ">
+            <p class="govuk-body govuk-!-margin-top-3">Bring across information and documents from your electronic EHC into your import notification.</p>
+            <details class="govuk-details govuk-!-margin-bottom-3 govuk-!-width-three-quarters">
+              <summary class="govuk-details__summary  ">
+                <span class="govuk-details__summary-text">
+                  How does cloning save time?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p class="govuk-body  govuk-!-margin-bottom-2">
+                  Cloning can save you time by reducing manual errors and border checks that are triggered when data doesn't match up. It involves the following steps:</p>
+                  <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-5">
+                    <li>You enter the electronic EHC or ePhyto reference number</li>
+                    <li>It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
+                    <li>IPAFFS can find the electronic certificate</li>
+                    <li>The electronic certificate is used to populate parts of your import notification including your health or phytosanitary certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
+                  </ol>
+                  <p class="govuk-body  govuk-!-margin-bottom-2">When you clone :</p>
+                  <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-5">
+                    <li>information cloned will overwrite existing information you've entered</li>
+                    <li>documents cloned will be in addition to documents already uploaded</li>
+                  </ul>
   
-        <!-- <form method="post" action="00-check-answers-orig" class="govuk-!-display-inline">
-           <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
-           <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
-           <button type="submit" name="submit_param" value="Copy as new" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">Copy as new</button>
-         </form>
- 
-         <form action="07-00-review-submitted-amend-no-docs" method="post" class="govuk-!-display-inline">
-           <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
-           <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
-           <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
-             Amend
-           </button>
-         </form>-->
- 
-          <form action="01-ac-04-how-add-hc" method="post" class="govuk-!-display-inline">
-           <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
-           <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
-           <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
-             Add health certificate
-           </button>
-         </form> 
- 
-       <!--  <form action="03a-certificate-reference" method="post" class="govuk-!-display-inline">
-           <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
-           <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
-           <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
-             Clone an EHC
-           </button>
-         </form>
- 
-          <form action="pdf" method="post" class="govuk-!-display-inline">
-           <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
-           <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
-           <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
-             View CHED
-           </button>
-         </form>-->
- 
-         <a href="#" id="delete-notification" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3">
-           Delete notification
-         </a> 
-     </div>
+                  <p class="govuk-body  govuk-!-margin-bottom-2">You can choose to clone documents only (sometimes called 'verifiable pdfs') or information and documents.</p>
+                  
+              </div>
+            </details>
+          </div>
+  
+        </div>
+        <div class="govuk-grid-row govuk-!-margin-bottom-1 govuk-!-padding-top-0">
+          <div class="govuk-grid-column-full govuk-!-padding-3" >
+            
+            <a class="govuk-button govuk-button--secondary button-small govuk-!-margin-bottom-0 govuk-!-margin-right-3"  href="03a-certificate-reference">Clone information and documents</a>
+  
+            <a class="govuk-button govuk-button--secondary button-small govuk-!-margin-bottom-0"  href="03a-certificate-reference">Clone documents only</a>
+          </div>
+  
+         
+        </div>
+       
+  </div>
 
      <!-- <details class="govuk-details govuk-!-margin-bottom-9">
        <summary class="govuk-details__summary">
