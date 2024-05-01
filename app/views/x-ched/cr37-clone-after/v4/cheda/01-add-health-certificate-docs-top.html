@@ -258,6 +258,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
        </div>     -->
 
        <div class="govuk-form-group govuk-!-margin-top-9 govuk-!-width-two-thirds">
+        <form  method="POST"></form>
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
@@ -266,16 +267,16 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-                Yes, bring in information also
+                Yes, bring in information also / 18-review-amend.html
               </label>
               <p class="govuk-body govuk-!-padding-left-3">This will replace any information you've already entered with the details from the EHC.</p>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="No">
               <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                No, only bring in the documents 
+                No, only bring in the documents / 00-check-answers- amend
               </label>
               
             </div>
@@ -285,7 +286,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-!-margin-top-9">
-        <form action="03-do-01a-phyto-clone" method="POST">
+        
           <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and clone from certificate</button>
           
           <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">

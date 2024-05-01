@@ -89,7 +89,15 @@ router.post('/route-x-a-docs-info-amend', function (req, res) {
     }
     
   })
-  
+  router.post ('/01-add-health-certificate', (req,res) => {
+    if (req.session.data.new.canApply == "No"){
+  res.redirect ('/00-check-answers-amend')
+} else {
+     res.redirect ('/18-review-amend.html')
+   }
+        
+          
+})
  
   
   
