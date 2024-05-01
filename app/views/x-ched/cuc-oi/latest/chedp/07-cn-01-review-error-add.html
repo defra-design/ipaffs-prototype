@@ -23,16 +23,24 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <a class="govuk-breadcrumbs__link" href="0-index">Dashboard</a>
       </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="07-check-answers">Notification Hub</a>
+            <a class="govuk-breadcrumbs__link" href="01-no-check-answers">Notification Hub</a>
           </li>
     </ol>
   </div>  <div id="sign-out-section" class="information-banner">
     <p class="information-banner__content">
-      <span>Percy Hyseni</span>
+      <span>Alex Watson</span>
       <span>|</span>
       <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
         Address book
       </a>
+      <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state" id="manage-account-link" href="manage?returnUrl=%2Fprotected%2Fnotifications%2Fconsignment-organisation%3Ftype%3DCHEDPP">
+            Manage account
+        </a>
+        <span>|</span>
+        <a class="govuk-link govuk-link--no-visited-state" id="manage-trade-partners-link" href="/notification/vnet/protected/notifications/trade-partners/filter">
+            Manage trade partners
+        </a>
       <span>|</span>
       <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
         Sign out
@@ -74,8 +82,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="audit-flag">
           <div id="last-submission-date">Submitted on: </div>
           <div id="submitted-by">Submitted by: </div>
-          <div id="last-updated-date">Last updated: 12 January 2024, 10:27</div>
-          <div id="last-updated-by">Last updated by: Percy Hyseni </div>
+          <div id="last-updated-date">Last updated: 11 April 2024, 10:27</div>
+          <div id="last-updated-by">Last updated by: Alex Watson </div>
         </div>
   
   
@@ -97,7 +105,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </tr>
                     <tr class="presentation-table__section">
                       <td class="govuk-table__header">Country of origin</td>
-                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] or "Argentina" }}</td>
+                      <td class="govuk-table__cell" id="country-of-origin">{{ data['origin-country'] or "France" }}</td>
                       <td class="govuk-table__cell change">
                         <a href="03-origin-import?from=review" class="govuk-link" id="country-of-origin-change-link">
                           Change
@@ -112,7 +120,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         {% elif (data['consigned-country'] == "different") %}
                           {{ data['consigned-country-selected'] }}
                         {% else %}
-                          Argentina
+                          France
                         {% endif %}
                       </td>
                       <td class="govuk-table__cell"></td>
@@ -192,7 +200,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       </tr> -->
                       <tr class="presentation-table__section">
                       <td class="govuk-table__header" id="import-risk-header">Import risk category</td>
-                        <td>{{ data['risk-category'] or "medium" | capitalize }} risk</td>
+                        <td>{{ data['risk-category'] or "low" | capitalize }} risk</td>
                           <td class="govuk-table__cell change">
                             <a href="06a-risk-category" class="govuk-link">
                               Change
@@ -212,14 +220,14 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <tbody class="govuk-table__head">
                         <tr class="presentation-table__section">
                       <th scope="row" class="govuk-table__header ">Commodity code</th>
-                      <td class="govuk-table__cell">02102010   </td>
+                      <td class="govuk-table__cell">040640   </td>
                       <td class="govuk-table__cell change">
                             <a href="08-addgoods-weights-packaging" class="govuk-link" id="commodity-change-link-0">Change</a>
                       </td>
                     </tr>
                     <tr class="presentation-table__row--no-border">
                       <th scope="row" class="govuk-table__header ">Type of commodity</th>
-                      <td class="govuk-table__cell">meat preparations</td>
+                      <td class="govuk-table__cell">Pasteurized</td>
                       <td class="govuk-table__cell"></td>
                     </tr>
                     <tr></tr>
@@ -247,13 +255,13 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                                      
                                      ">
                             <td class="govuk-table__cell ">
-                              Bovidae
+                              Bos taurus
                             </td>
                             <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
                               100 kg/units
                             </td>
                             <td class="govuk-table__cell govuk-table__cell--numeric">
-                              10
+                              1
                             </td>
                             <td class="govuk-table__cell">Bag</td>
                           </tr>
@@ -267,7 +275,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                             100 kg/units
                           </td>
                           <td class="govuk-table__cell govuk-table__cell--numeric">
-                            10
+                            1
                           </td>
                           <td class="govuk-table__cell"></td>
                         </tr>
@@ -358,7 +366,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <tr>
                   <td class="govuk-table__header">Total packages</td>
                   <td class="govuk-table__cell" colspan="2">
-                    10
+                    1
                   </td>
                 </tr>
             
@@ -593,13 +601,13 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     </thead>
                     <tbody>
                         <tr >
-                          <td class="govuk-table__cell" >Agropur, inc. (Pesquera Atunes del Pacifico S.A. Atunpacificosa)</td>
-                          <td class="govuk-table__cell" >Argentina</td>
+                          <td class="govuk-table__cell" >La Ferme du val Fleury, 2363 rte de Jancenay, Chazelles-Sur-Lyon, 42140</td>
+                          <td class="govuk-table__cell" >France</td>
                           <td class="govuk-table__cell" style="padding-left: 10px" >
                             raw milk or dairy products or colostrum and colostrum-based products
                               
                           </td>
-                          <td class="govuk-table__cell">2116532</td>
+                          <td class="govuk-table__cell">42.059.005</td>
                         </tr>
                     </tbody>
                   </table>
@@ -618,8 +626,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <tr class="">
                     <td class="govuk-table__header govuk-!-width-one-half">Consignor or exporter</td>
                     <td class="govuk-table__cell" id="consignor">
-                      Produkty Mięsne Fm<br>
-                      San Martin 230, Piso 5 Dpto 8, Y0000HGH Villa Maria, Argentina
+                      Fromage Délicieux<br>
+                      71 rue Banaudon, Rhône-Alpes, 69009 Lyon, France, +330423596240, contact@fromage-delicieux.fr
                     </td>
                     <td class="govuk-table__cell change">
                           <a href="14-addresses" class="govuk-link" id="traders-change-link">
@@ -630,16 +638,16 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   <tr class="">
                     <td class="govuk-table__header govuk-!-width-one-half">Consignee</td>
                     <td class="govuk-table__cell" id="consignee">
-                      ABC goods Ltd<br>
-                      112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY, United Kingdom of Great Britain and Northern Ireland BHabc@gmail.com
+                      World Meats and Cheeses<br>
+                      Unit 7, Western Business Park, Salisbury, SP4 7HW, England, 01722923028, import_queries@wmac.co.uk
                     </td>
                     <td class="govuk-table__cell"></td>
                   </tr>
                   <tr class="">
                     <td class="govuk-table__header govuk-!-width-one-half">Importer</td>
                     <td class="govuk-table__cell" id="importer">
-                      ABC goods Ltd<br>
-                      112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY, United Kingdom of Great Britain and Northern Ireland BHabc@gmail.com</td>
+                      World Meats and Cheeses<br>
+                      Unit 7, Western Business Park, Salisbury, SP4 7HW, England, 01722923028, import_queries@wmac.co.uk</td>
                     <td class="govuk-table__cell"></td>
                   </tr>
                   <tr class="">
@@ -647,8 +655,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       Place of Destination
                     </td>
                     <td class="govuk-table__cell" id="final-destination">
-                      ABC goods Ltd<br>
-                      112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY, United Kingdom of Great Britain and Northern Ireland BHabc@gmail.com BHabc@gmail.com
+                      World Meats and Cheeses<br>
+                      Unit 7, Western Business Park, Salisbury, SP4 7HW, England, 01722923028, import_queries@wmac.co.uk
                     </td>
                     <td class="govuk-table__cell"></td>
                   </tr>
@@ -707,7 +715,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       </tr>
                       <tr class="">
                         <th scope="row" class="govuk-table__header">Estimated arrival date at port of entry</th>
-                        <td class="govuk-table__cell">26 August 2023</td>
+                        <td class="govuk-table__cell">26 May 2024</td>
                       </tr>
                         <tr class="">
                           <th scope="row" class="govuk-table__header">Estimated arrival time at port of entry</th>
@@ -747,6 +755,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </table>
                 <!-- </div>
                 <div class="table-responsive govuk-!-margin-bottom-9"> -->
+                <!-- 
                 <h2 class="govuk-heading-m">Transport after the BCP</h2>
                 <table class="govuk-table presentation-table review-table" id="review-table-transport" role="presentation">
                   <tbody>
@@ -810,7 +819,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__cell" id="transporter-approval-number"></td>
                     <td class="govuk-table__cell"></td>
                   </tr>
-                </table>
+                </table> -->
                 </div>
 
                 <h2 class="govuk-heading-l">Contact</h2>
@@ -827,19 +836,19 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <tr class="">
                       <td class="govuk-table__header govuk-table__header--half">Name</td>
                       <td class="govuk-table__cell" id="responsible-contact-name">
-                        Percy Hyseni
+                        {{ data['responsible-contact-name'] }}
                       </td>
                     </tr>
                     <tr class="">
                       <td class="govuk-table__header govuk-table__header--half">Email address</td>
                       <td class="govuk-table__cell break-word" id="responsible-contact-email">
-                        ImporterABC@goods.com
+                        {{ data['responsible-contact-email'] }}
                       </td>
                     </tr>
                     <tr class="">
                       <td class="govuk-table__header govuk-table__header--half">Phone number</td>
                       <td class="govuk-table__cell" id="responsible-contact-telephone">
-                        020 8225 7295
+                        {{ data['responsible-contact-telephone'] }}
                       </td>
                     </tr>
                   </tbody>
@@ -847,7 +856,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
               <div class="heading-with-change-link">
                 <h2 class="govuk-heading-m">Nominated contacts</h2>
-                    <a href="17b-nominated-contacts-entered.html" class="govuk-link" id="nominated-contact-change-link">
+                    <a href="17b-nominated-contacts.html" class="govuk-link" id="nominated-contact-change-link">
                     Change
                     </a>
               </div>
@@ -863,7 +872,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell" id="nominated-contact-name-0">
-                      Alex
+                      Al
                     </td>
                     <td class="govuk-table__cell break-word" id="nominated-contact-email-0">
                       a.asher@email.com
@@ -887,7 +896,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                    
                     <tr>
                       <td class="govuk-table__header">Address</td>
-                      <td class="govuk-table__cell" id="organisation-branch-address-address">10900, Bradley Stoke, Cardiff, CD03 9OE</td>
+                      <td class="govuk-table__cell" id="organisation-branch-address-address">Unit 7, Traders Way, Pimbo, WN3 2CW, England</td>
                       <!-- <td class="govuk-table__cell change">
                             <a href="17c-contact-consignment" class="govuk-link" id="organisation-branch-address-change-link">Change</a>
                       </td> -->
@@ -922,7 +931,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     <tr class="table-row--error">
                       <th scope="row" class="govuk-table__header govuk-table__header--half">Phone number</th>
                       <td class="govuk-table__cell break-word" id="billing-telephone-number">
-                        
+                       
                       </td>
                     </tr>
                   </tbody>

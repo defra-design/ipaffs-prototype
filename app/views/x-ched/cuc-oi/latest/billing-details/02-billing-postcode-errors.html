@@ -6,7 +6,7 @@
 
 {% block beforeContent %}
     {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+    {% include "x-ched/cuc-oi/ur/includes/back.html" %} 
 {% endblock %}
 
 {% block content %}
@@ -30,20 +30,23 @@
           </h2>
           <div class="govuk-error-summary__body">
             <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+              {% if data['postcode-search'] == "" %}
               <li>
-                <a href="#billing-address-postcode">Enter postcode or enter address manually</a>
+                <a href="#postcode-search">Enter postcode or enter address manually</a>
               </li>
+              {% else %}
+              <!-- <li>
+                <a href="#postcode-search">Enter valid UK postcode</a>
+              </li> -->
               <li>
-                <a href="#billing-address-postcode">Enter valid UK postcode</a>
+                <a href="#postcode-search">No address found. Try again or enter address manually</a>
               </li>
-              <li>
-                <a href="#billing-address-postcode">No address found. Try again or enter address manually</a>
-              </li> 
+              {% endif %}
             </ul>
           </div>
         </div>
       </div>
-      <form action="validate-postcode" method="post">
+      <form action="route-validate-postcode" method="post">
         <input name="" type="hidden" value="visited">
         <span class="govuk-caption-xl">Billing</span>
         <fieldset class="govuk-fieldset">
@@ -67,18 +70,21 @@
             </div>
           </details>
           <div class="govuk-form-group govuk-form-group--error">
-            <label class="govuk-label govuk-label--s" for="billing-address-postcode">
+            <label class="govuk-label govuk-label--s" for="postcode-search">
               Postcode
             </label>
-            <div id="billing-address-postcode-hint" class="govuk-hint">
+            <div id="postcode-search-hint" class="govuk-hint">
               For example, AA3 1AB
             </div>
-            <p id="billing-address-postcode-error" class="govuk-error-message">
+            <p id="postcode-search-error" class="govuk-error-message">
+              {% if data['postcode-search'] == "" %}
               <span class="govuk-visually-hidden">Error:</span> Enter postcode or enter address manually<br>
-              <span class="govuk-visually-hidden">Error:</span> Enter valid UK postcode<br>
+              {% else %}
+              <!-- <span class="govuk-visually-hidden">Error:</span> Enter valid UK postcode<br> -->
               <span class="govuk-visually-hidden">Error:</span> No address found. Try again or enter address manually
+              {% endif %}
             </p>
-            <input class="govuk-input govuk-input--width-10" id="billing-address-postcode" name="billing-address-postcode" type="text" aria-describedby="billing-address-postcode-hint">
+            <input class="govuk-input govuk-input--width-10" id="postcode-search" name="postcode-search" type="text" aria-describedby="billing-address-postcode-hint" value="{{ data['postcode-search'] }}">
           </div>
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Find address" data-module="govuk-button">
           <p class="govuk-body"><a class="govuk-link" href="03b-enter-billing-address">Enter address manually</a></p>

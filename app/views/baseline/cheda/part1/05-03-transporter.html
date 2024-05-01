@@ -28,7 +28,7 @@
           <span class="govuk-caption-xl">Transport</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Transporter</h1>
       <div class="govuk-hint govuk-!-margin-bottom-5">This is the commercial transporter authorised by the Animal and Plant Health Agency (APHA) to transport live animals for commercial movements into the UK.</div>
-      <form action="05-04-route" method="POST">
+      <form action="05-05-route" method="POST">
         <input name="crumb" type="hidden" value="Oc_P40viwBADQYqopIWp1PVEfgL0tapC7ExjI8jIsXA">
         <input name="etag" type="hidden" value="&quot;0000000004D0A987&quot;">
         <div class="govuk-!-margin-bottom-6">
@@ -36,33 +36,49 @@
           <div class="table-responsive">
             <table class="govuk-table govuk-!-margin-bottom-2" id="transport-from-bip-table">
               <thead class="govuk-table__head">
-              <tr>
-                <th class="govuk-table__header" id="transporter-company-name">Name</th>
-                <th class="govuk-table__header" id="transporter-type">Type</th>
-                <th class="govuk-table__header" id="transporter-address">Address</th>
-                <th class="govuk-table__header" id="transporter-country">Country</th>
-                <th class="govuk-table__header no-wrap" id="transporter-number">Approval number</th>
-                <td class="govuk-table__header"></td>
-              </tr>
+                <tr>
+                  <th class="govuk-table__header" id="transporter-company-name-address-country">Name, address and country</th>
+                  <th class="govuk-table__header no-wrap" id="transporter-number">Approval number</th>
+                  <th class="govuk-table__header" id="transporter-type">Type</th>
+                  <td class="govuk-table__header"></td>
+                </tr>
               </thead>
               <tbody>
-              <tr>
-                <td class="govuk-table__cell" headers="transporter-company-name">&nbsp;</td>
-                <td class="govuk-table__cell" headers="transporter-type"></td>
-                <td class="govuk-table__cell" headers="transporter-address"></td>
-                <td class="govuk-table__cell" headers="transporter-country"></td>
-                <td class="govuk-table__cell" headers="transporter-number"></td>
-                <td class="govuk-table__cell"></td>
-              </tr>
+                {% if data['transporter-search-page'] == "yes" %}
+                <tr>
+                  <td class="govuk-table__cell vertical-align-middle name-address-and-country" headers="transporter-company-name-address-country" style="vertical-align: middle; width: 14em;">
+                      <p>Horse Transport Ltd</p>
+                      <p>100 Meadow Lane, Somewhere, Maze, Lisburn, 5437</p>
+                      <p>France</p>
+                  </td>
+                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-number" style="vertical-align: middle;">
+                      123
+                  </td>
+                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-type" style="vertical-align: middle;">
+                      commercial transporter - user added
+                  </td>
+                  <td class="govuk-table__cell vertical-align-middle" style="vertical-align: middle;">
+                      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1002957/transport/transporter/search" class="govuk-link" id="edit-transporter-from-bip">Change</a>
+                  </td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td class="govuk-table__cell vertical-align-middle name-address-and-country" headers="transporter-company-name-address-country" style="vertical-align: middle; width: 14em;">&nbsp;</td>
+                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-number" style="vertical-align: middle;"></td>
+                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-type" style="vertical-align: middle;"></td>
+                  <td class="govuk-table__cell vertical-align-middle" style="vertical-align: middle;"></td>
+                </tr>
+                {% endif %}
               </tbody>
             </table>
           </div>
-        
-            <a href="15a-transporter-search" class="govuk-link govuk-!-font-size-19" id="add-transporter-from-bip">Add a transporter</a>
+            {% if data['transporter-search-page'] != "yes" %}
+            <a href="05-04-transporter-search" class="govuk-link govuk-!-font-size-19" id="add-transporter-from-bip">Add a transporter</a>
+            {% endif %}
         </div>
-            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
             <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-            <p class="govuk-body"><a class="govuk-link" href="07-notification">Cancel and return to hub</a></p>
+            <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
       </form>
     </div>
   </div>
