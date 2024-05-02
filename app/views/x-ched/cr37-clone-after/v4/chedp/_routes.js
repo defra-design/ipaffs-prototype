@@ -15,10 +15,10 @@ router.post('/route-chedp-how-add', function (req, res) {
     res.redirect('03a-certificate-reference')
   }
  else if (howAdd == "Manual") {
-    res.redirect('12-accompanying-docs')
+    res.redirect('03-02-documents')
   }
  else {
-    res.redirect('12-accompanying-docs')
+    res.redirect('03-02-documents')
   }  
 })
 
@@ -27,14 +27,14 @@ router.post('/route-x-p-docs-info-amend', function (req, res) {
   // Make a variable and give it the value from name
   var ecertRoute = req.session.data['addhc']
   if (ecertRoute == "Clone-info") {
-    res.redirect('18-review-clone-success')
+    res.redirect('07-00-review-clone-success')
   }
   else if (ecertRoute == "Clone-docs") {
-    res.redirect('12-health-certificate-clone')
+    res.redirect('03-01-certificate-clone')
   }
   
  else {
-    res.redirect('12-health-certificate-clone')
+    res.redirect('03-01-certificate-clone')
   }  
 })
 
@@ -45,10 +45,10 @@ router.post('/route-x-p-docs-info-amend', function (req, res) {
   // Make a variable and give it the value from name
   var ecertRoute = req.session.data['docs-info']
   if (ecertRoute == "all"){
-    res.redirect('18-review-clone-info-error')
+    res.redirect('07-00-review-clone-info-error')
   }
  else {
-    res.redirect('12-health-certificate-clone')
+    res.redirect('03-01-certificate-clone')
   }  
 })
 
@@ -97,7 +97,7 @@ router.post('/risk-route', function (req, res) {
 router.post('/add-documents', function (req, res) {
   var riskRoute = req.session.data['risk-category']
   if (riskRoute == "low"){
-    res.redirect('12-accompanying-docs')
+    res.redirect('03-02-documents')
   }
  else {
     res.redirect('01-ac-04-how-add-hc')
@@ -123,7 +123,7 @@ router.post('/ae-route', function (req, res) {
 
 // 
 /* 
-  Run this code when the notification is submitted on 19-declaration
+  Run this code when the notification is submitted on 07-02-declaration
     to check if GVMS is used,
     and if not,
       then check risk-category is low,

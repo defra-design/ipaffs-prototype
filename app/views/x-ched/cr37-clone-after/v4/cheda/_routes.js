@@ -25,10 +25,10 @@ router.post('/route-cheda-how-add', function (req, res) {
     res.redirect('03a-certificate-reference')
   }
  else if (howAdd == "Manual") {
-    res.redirect('13a-health-certificate')
+    res.redirect('03-01-certificate')
   }
  else {
-    res.redirect('13b-accompanying-docs')
+    res.redirect('03-02-documents')
   }  
 })
 
@@ -37,14 +37,14 @@ router.post('/route-x-a-docs-info-amend', function (req, res) {
   // Make a variable and give it the value from name
   var ecertRoute = req.session.data['addhc']
   if (ecertRoute == "Clone-info") {
-    res.redirect('18-review-clone-success')
+    res.redirect('07-00-review-clone-success')
   }
   else if (ecertRoute == "Clone-docs") {
-    res.redirect('13a-health-certificate-clone')
+    res.redirect('03-01-certificate-clone')
   }
   
  else {
-    res.redirect('13a-health-certificate-clone')
+    res.redirect('03-01-certificate-clone')
   }  
 })
 
@@ -55,10 +55,10 @@ router.post('/route-x-a-docs-info-amend', function (req, res) {
     // Make a variable and give it the value from name
     var ecertRoute = req.session.data['docs-info']
     if   (ecertRoute == "all"){
-      res.redirect('18-review-clone-info-error')
+      res.redirect('07-00-review-clone-info-error')
    }
    else {
-      res.redirect('13a-health-certificate-clone')
+      res.redirect('03-01-certificate-clone')
     }  
   })
   
@@ -66,10 +66,10 @@ router.post('/route-x-a-docs-info-amend', function (req, res) {
   router.post('/add-documents', function (req, res) {
     var riskRoute = req.session.data['risk-category']
     if (riskRoute == "low"){
-      res.redirect('12-accompanying-docs')
+      res.redirect('03-02-documents')
     }
    else {
-      res.redirect('12-health-certificate')
+      res.redirect('03-01-certificate')
     }
     
   })
@@ -89,15 +89,7 @@ router.post('/route-x-a-docs-info-amend', function (req, res) {
     }
     
   })
-  router.post ('/01-add-health-certificate', (req,res) => {
-    if (req.session.data.new.canApply == "No"){
-  res.redirect ('/00-check-answers-amend')
-} else {
-     res.redirect ('/18-review-amend.html')
-   }
-        
-          
-})
+  
  
   
   

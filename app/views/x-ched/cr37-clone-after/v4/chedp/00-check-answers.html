@@ -11,12 +11,6 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 
-<div class="action-button-container govuk-!-margin-top-0 govuk-!-padding-bottom-0">
-  <a href="12-accompanying-docs" class="govuk-button govuk-button--secondary button-small action-button">
-    Attachments
-  </a>
-</div>
-
 <div class="govuk-!-padding-top-6">
   <span class="heading-tertiary">
       <span id="reference-number">DRAFT.GB.2024.5925980</span>
@@ -99,9 +93,9 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                   {% if (data['risk-category'] != "low") %}
                   <li class="govuk-task-list__item govuk-task-list__item--with-link">
                     <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/12-health-certificate" aria-describedby="prepare-application-1-status">Latest health certificate</a>
+                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/03-01-certificate" aria-describedby="prepare-application-1-status">Latest health certificate</a>
                       <div id="application-details-3-hint" class="govuk-task-list__hint">
-                        {% if (data['12-health-certificate'] == "visited") %}
+                        {% if (data['03-01-certificate'] == "visited") %}
                        
                         {% else %}
                         No documents added
@@ -110,7 +104,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                     </div>
                    
                     <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['12-health-certificate'] == "visited") %}
+                      {% if (data['03-01-certificate'] == "visited") %}
                         Completed
                       {% else %}
                       <strong class="govuk-tag-new govuk-tag--grey">
@@ -122,9 +116,9 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                   {% endif %}
                   <li class="govuk-task-list__item govuk-task-list__item--with-link">
                     <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/12-accompanying-docs" aria-describedby="prepare-application-2-status">Additional documents</a>
+                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/03-02-documents" aria-describedby="prepare-application-2-status">Additional documents</a>
                       <div id="application-details-3-hint" class="govuk-task-list__hint">
-                        {% if (data['12-accompanying-docs'] == "visited") %}
+                        {% if (data['03-02-documents'] == "visited") %}
                         4 documents attached
                       {% else %}
                         No documents added
@@ -293,7 +287,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                 <ul class="govuk-task-list">
                 <li class="govuk-task-list__item">
                   <div class="govuk-task-list__name-and-hint">
-                    <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/18-review" aria-describedby="prepare-application-2-status">Review and submit</a>
+                    <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/07-00-review" aria-describedby="prepare-application-2-status">Review and submit</a>
                    
                   
                   </div> 
