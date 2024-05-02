@@ -33,19 +33,71 @@ Search – {{ serviceName }} – GOV.UK Prototype Kit
            
           </h1>
           {{ data | log }}
-          <!-- <div class="govuk-!-margin-bottom-6">
-            <p class="govuk-body">These documents will be added to your import notification.</p>
-            <p class="govuk-body">You will not be able to delete cloned documents from your notification, but you can upload additional documents.</p>
-              <h2 class="govuk-heading-m">10 documents will be attached</h2>
-              <ul class="govuk-list--bullet govuk-body">
-              <li>1 latest health certificate</li>
-              <li>9 additional documents</li>
-             </ul>
-       </div> -->
+         
       </div>
     
     
        <div id="documents-table" class="govuk-!-margin-top-9 govuk-!-margin-bottom-9">
+        <div class="table-responsive">
+          <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-0" role="presentation">
+            <tbody class="govuk-table__head">
+              <tr id="0102/expired" class="presentation-table__section ">
+            </tr><tr>
+              <td class="govuk-table__header">Commodity code</td>
+              <td class="govuk-table__cell">
+                0102
+                
+              </td>
+                <td class="govuk-table__cell change">
+                      <!-- <a href="08-commodity-details" class="govuk-link" id="commodity-change-link-0">Change</a> -->
+                </td>
+            </tr>
+                <tr class="presentation-table__row--no-border">
+                  <td class="govuk-table__header">Type of commodity</td>
+                  <td class="govuk-table__cell">Domestic</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="govuk-table presentation-table data-table-commodities" id="review-table-consignment-0">
+            <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header species" scope="col">
+                  Species
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric animals">
+                  Number of animals
+                </th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric packages">
+                  Number of packages
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="
+                           ">
+                  <td class="govuk-table__cell">
+                    Bos taurus
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" class="govuk-table__header">
+                  Subtotal
+                </th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       
         <table class="govuk-table presentation-table review-table" id="animal-identification-details-table">
           <caption class="govuk-table__caption govuk-!-margin-top-5 govuk-heading-m">Animal identification details</caption>
@@ -53,10 +105,8 @@ Search – {{ serviceName }} – GOV.UK Prototype Kit
                 <th scope="col" class="govuk-table__header">Bos taurus identification details</th>
                 <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell change">
-                    <!-- <a href="/notification/tst/protected/notifications/DRAFT.GB.2024.6639181/identification-details?fromImporterReview=true" class="govuk-link">Change</a>
-                    <a href="#" class="accordion-toggle accordion-icon accordion-icon-close" data-target="identifiers-01">
-                      <span class="govuk-visually-hidden">Show/Hide identifiers</span>
-                    </a> -->
+                   
+                  
                 </td>
               </tr>
                 <tr class="presentation-table__row--no-border">
@@ -160,7 +210,7 @@ Search – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-button-group ">
           <input class="govuk-button" id="button-search" type="submit" value="Back" data-module="govuk-button"> 
           
-          <!-- <p><a href="javascript:history.back()" title="Skip this step" style="margin-left: 10px;">Cancel</a></p> -->
+        
         </div>
       </form>
 
