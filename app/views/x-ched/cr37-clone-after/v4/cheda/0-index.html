@@ -32,8 +32,7 @@
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="notifications-page">
     <div class="govuk-grid-column-full">
-
-
+      
       <div class="govuk-notification-banner notification-banner--alert" id="message-alert-banner" role="alert" aria-labelledby="message-alert-banner-title" data-label="" data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
           <h2 class="govuk-notification-banner__title" id="message-alert-banner-title">
@@ -59,69 +58,57 @@
         </div>
       </div>
 
+
+
       <h1 class="govuk-heading-xl " id="page-primary-title">Your import notifications</h1>
       {{ data | log }}
 
       <form action="01-01-ched-type" method="post" id="homeForm">
-        <div class="govuk-!-padding-3">
-
-          <div class="govuk-grid-row govuk-!-margin-bottom-4" style="border-bottom: 1px #b1b4b6 solid;">
-            <div class="govuk-grid-column-one-third  govuk-!-padding-left-0" >
-          <button class="govuk-button govuk-!-width-full govuk-!-margin-right-3 " type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
-            Create a notification manually
-          </button>
-            </div>
-            <div class="govuk-grid-column-two-thirds">
-          <!-- <p class="govuk-body">Create a new notification manually</p>    -->
-            </div>
-          </div>
-
-          <!-- <div class="govuk-grid-row govuk-!-margin-bottom-4" >
-            <div class="govuk-grid-column-three-quarters govuk-!-padding-0">
-              <h3 class="govuk-heading-m">Save time by cloning</h3>
-           
-             
-            </div>
-          </div> -->
-
-
-           <div class="govuk-grid-row govuk-!-margin-bottom-0" >
-                  <div class="govuk-grid-column-one-third govuk-!-padding-left-0" >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-1" id="search-to-clone2" href="../cloning/01-cl-02">Clone from your ePhyto</a>
-                    <p class="govuk-hint govuk-!-width-full" style="text-align: center;">Most of Europe</p>
+        <div class="govuk-!-padding-3 govuk-!-padding-bottom-0 govuk-!-margin-bottom-9" style="border-bottom: 1px #b1b4b6 solid;">
+              <div class="govuk-grid-row govuk-!-margin-bottom-0" >
+                  <div class="govuk-grid-column-one-half govuk-!-padding-left-10 " >
+                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3"  href="../cloning/01-cl-01">Clone from your certificate</a>
                   </div>
-                  <div class="govuk-grid-column-one-third govuk-!-padding-left-0" >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-1"  href="../cloning/01-cl-02">Clone from your CHEDA EHC</a>
-                    <p class="govuk-hint govuk-!-width-full" style="text-align: center;">Europe and some other countries</p>
-                  </div> 
-                  <div class="govuk-grid-column-one-third govuk-!-padding-left-0" >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-1"  href="../cloning/01-cl-02">Clone from your CHEDP EHC</a>
-                    <p class="govuk-hint govuk-!-width-full" style="text-align: center;">New Zealand only</p>
+                  <div class="govuk-grid-column-one-half  govuk-!-padding-left-10" >
+                    <button class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3" type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
+                      Create a notification manually
+                    </button>
                   </div>
-              </div>
-        
-        
-           <div class="govuk-grid-row govuk-!-margin-bottom-7" style="border-bottom: 1px #b1b4b6 solid;">
-                  <div class="govuk-grid-column-three-quarters">
-                     
+                </div>
+              <div class="govuk-grid-row govuk-!-margin-bottom-0" >
+                <div class="govuk-grid-column-three-quarters">
                     <details class="govuk-details govuk-!-margin-bottom-2">
-                      <summary class="govuk-details__summary">
+                      <summary class="govuk-details__summary  govuk-!-width-one-half">
                         <span class="govuk-details__summary-text">
-                          Find out how cloning can save time
+                          Find out how cloning from your certificate can save time
                         </span>
                       </summary>
                       <div class="govuk-details__text">
-                        <p>Cloning sets up a link between the exporter's system and IPAFFS. Use your electronic EHC or ePhyto to populate parts of your import notification. 
-                          This includes your Health certificate and any data and documents uploaded by your exporter or vet to their export system (for example TracesNT). 
-                          They must save it as an electronic certificate type for you to be able to use this feature.</p>
-                        <p>This can save time compared to entering all the information manually and can cut down on manual errors and border checks triggered when data doesn't match up.</p>
+                        <p class="govuk-body  govuk-!-margin-bottom-2">
+                          Cloning can save you time to cut down on manual errors and border checks that are triggred when data doesn't match up. It involves the following steps:</p>
+                          <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-5">
+                            <li>You enter the electronic EHC or ePhyto reference number</li>
+                            <li> It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
+                            <li>IPAFFS can find the electronic certificate</li>
+                            <li>The EHC is used to populate parts of your import notification including your health or phytosanitary certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
+                          </ol>
+                          <p class="govuk-body  govuk-!-margin-bottom-2">When you clone :</p>
+                          <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-5">
+                            <li>information cloned will overwrite existing information you've entered</li>
+                            <li>documents cloned will be in addition to documents you've entered</li>
+                            
+                          </ul>
+
+
                       </div>
                     </details>
-                  </div>
                 </div>
-               
+              </div>
+                
         </div>
         </form>
+
+
 
       <div id="existing-notifications">
         <form action="/notification/tst/protected/notifications" method="post" class="search-filter-form">
@@ -129,9 +116,8 @@
           <div class="govuk-form-group search-panel">
             <input class="button search-hidden" type="submit" value="hidden-search">
             <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                
-                <h32 class="govuk-heading-m">Search notifications</h2>
+              <div class="govuk-grid-column-one-third">
+                <h3 class="govuk-heading-m">Search notifications by</h3>
               </div>
             </div>
       
@@ -156,16 +142,8 @@
                 </div>
               </div>
             </div>
-
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  More filters
-                </span>
-              </summary>
-              <div class="govuk-details__text">     
-      <div >
-            <div class="govuk-grid-row govuk-!-margin-bottom-5 govuk-!-margin-top-3">
+      
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--s" for="bcp">BCP or POE</label>
@@ -1372,7 +1350,7 @@
               </div>
             </div>
       
-            <div class="govuk-grid-row govuk-!-margin-bottom-7">
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third ">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--s" for="consignee">Consignee / Importer</label>
@@ -1423,53 +1401,8 @@
               </div>
             </div>
       
- 
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
-             
-              <div class="govuk-grid-column-full">
-                
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
-                    <h3 class="govuk-heading-m">Arrival / import date range</h3>
-                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                      <h1 class="govuk-fieldset__heading">
-                        Arrival / import date range
-                      </h1>
-                    </legend> 
-                     <div id="changedName-hint" class="govuk-hint">
-                      This includes changing your last name or spelling your name differently.
-                    </div> -->
-                    <div class="govuk-radios govuk-radios--small govuk-radios--inline govuk-!-margin-bottom-4" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes" checked>
-                        <label class="govuk-label govuk-radios__label" for="changedName">
-                          All time
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          Today
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          Tomorrow
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          Next 7 days
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-
-              </div>
-             <!--  <div class="govuk-grid-column-one-third">
+              <div class="govuk-grid-column-one-third">
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     Arrival / Import date range
@@ -1486,11 +1419,11 @@
                     </button>
                     <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="clear-range" id="button-clear-date-range">
                       Clear date range
-                    </button> 
+                    </button>
                   </div>
                 </fieldset>
-              </div>-->
-              <div class="govuk-grid-column-one-half">
+              </div>
+              <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group ">
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
@@ -1524,7 +1457,7 @@
                   </fieldset>
                 </div>
               </div>
-              <div class="govuk-grid-column-one-half">
+              <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group ">
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
@@ -1561,11 +1494,7 @@
                 </div>
               </div>
             </div>
-      </div>
-      </div>
-      </details>
-
-
+      
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <input class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" value="Search" data-module="govuk-button">
@@ -1575,8 +1504,6 @@
               </div>
             </div>
           </div>
-
-          
       
             <div id="archiveNotificationLink" class="govuk-!-margin-bottom-6">
               <a href="/notification/tst/protected/notifications/archived-notifications" class="govuk-link link-button">
@@ -1605,9 +1532,6 @@
           </div>
         </form>
       </div>
-
-
-
       <div class="notification-list">
         <dl class="notification-list__row">
           <div class="notification-list__grid-row">
@@ -1659,7 +1583,7 @@
                   Copy as new
                 </button>
               </form>
-              <form action="18-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
+              <form action="07-00-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
                 <input name="crumb-view-deets" type="hidden" value="true">
                   <button class="govuk-link" id="view-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                     View details
@@ -1728,7 +1652,7 @@
                   Copy as new
                 </button>
               </form>
-              <form action="18-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
+              <form action="07-00-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
                 <input name="crumb-view-deets" type="hidden" value="true">
                   <button class="govuk-link" id="view-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                     View details
@@ -1788,7 +1712,7 @@
                   Copy as new
                 </button>
               </form>
-              <form action="18-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
+              <form action="07-00-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
                 <input name="crumb-view-deets" type="hidden" value="true">
                   <button class="govuk-link" id="view-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                     View details
@@ -1854,7 +1778,7 @@
                   Copy as new
                 </button>
               </form>
-              <form action="18-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
+              <form action="07-00-review-submitted-no-docs" method="post" class="govuk-!-display-inline">
                 <input name="crumb-view-deets" type="hidden" value="true">
                   <button class="govuk-link" id="view-details-IMP.GB.2023.3982612" name="cr37aReviewedVar1" value="true">
                     View details

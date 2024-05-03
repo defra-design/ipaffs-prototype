@@ -34,8 +34,6 @@
   <div class="govuk-grid-row" id="notifications-page">
     <div class="govuk-grid-column-full">
 
-
-
       <div class="govuk-notification-banner notification-banner--alert" id="message-alert-banner" role="alert" aria-labelledby="message-alert-banner-title" data-label="" data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
           <h2 class="govuk-notification-banner__title" id="message-alert-banner-title">
@@ -61,79 +59,64 @@
         </div>
       </div>
 
+
+
       <h1 class="govuk-heading-xl " id="page-primary-title">Your import notifications</h1>
       {{ data | log }}
 
       <form action="01-01-ched-type" method="post" id="homeForm">
-        <div class="govuk-!-padding-3">
-
-          <div class="govuk-grid-row govuk-!-margin-bottom-4" style="border-bottom: 1px #b1b4b6 solid;">
-            <div class="govuk-grid-column-one-third  govuk-!-padding-left-0" >
-          <button class="govuk-button govuk-!-width-full govuk-!-margin-right-3 " type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
-            Create a notification manually
-          </button>
-            </div>
-            <div class="govuk-grid-column-two-thirds">
-          <!-- <p class="govuk-body">Create a new notification manually</p>    -->
-            </div>
-          </div>
-
-          <!-- <div class="govuk-grid-row govuk-!-margin-bottom-4" >
-            <div class="govuk-grid-column-three-quarters govuk-!-padding-0">
-              <h3 class="govuk-heading-m">Save time by cloning</h3>
-           
-             
-            </div>
-          </div> -->
-
-
-           <div class="govuk-grid-row govuk-!-margin-bottom-0" >
-                  <div class="govuk-grid-column-one-third govuk-!-padding-left-0" >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-1" id="search-to-clone2" href="../cloning/01-cl-02">Clone from your ePhyto</a>
-                    <p class="govuk-hint govuk-!-width-full" style="text-align: center;">Most of Europe</p>
+        <div class="govuk-!-padding-3 govuk-!-padding-bottom-0 govuk-!-margin-bottom-9" style="border-bottom: 1px #b1b4b6 solid;">
+              <div class="govuk-grid-row govuk-!-margin-bottom-0" >
+                  <div class="govuk-grid-column-one-half govuk-!-padding-left-10 " >
+                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3"  href="../cloning/01-cl-01">Clone from your certificate</a>
                   </div>
-                  <div class="govuk-grid-column-one-third govuk-!-padding-left-0" >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-1"  href="../cloning/01-cl-02">Clone from your CHEDA EHC</a>
-                    <p class="govuk-hint govuk-!-width-full" style="text-align: center;">Europe and some other countries</p>
-                  </div> 
-                  <div class="govuk-grid-column-one-third govuk-!-padding-left-0" >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-1"  href="../cloning/01-cl-02">Clone from your CHEDP EHC</a>
-                    <p class="govuk-hint govuk-!-width-full" style="text-align: center;">New Zealand only</p>
+                  <div class="govuk-grid-column-one-half  govuk-!-padding-left-10" >
+                    <button class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3" type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
+                      Create a notification manually
+                    </button>
                   </div>
-              </div>
-        
-        
-           <div class="govuk-grid-row govuk-!-margin-bottom-7" style="border-bottom: 1px #b1b4b6 solid;">
-                  <div class="govuk-grid-column-three-quarters">
-                     
+                </div>
+              <div class="govuk-grid-row govuk-!-margin-bottom-0" >
+                <div class="govuk-grid-column-three-quarters">
                     <details class="govuk-details govuk-!-margin-bottom-2">
-                      <summary class="govuk-details__summary">
+                      <summary class="govuk-details__summary  govuk-!-width-one-half">
                         <span class="govuk-details__summary-text">
-                          Find out how cloning can save time
+                          Find out how cloning from your certificate can save  time
                         </span>
                       </summary>
                       <div class="govuk-details__text">
-                        <p>Cloning sets up a link between the exporter's system and IPAFFS. Use your electronic EHC or ePhyto to populate parts of your import notification. 
-                          This includes your Health certificate and any data and documents uploaded by your exporter or vet to their export system (for example TracesNT). 
-                          They must save it as an electronic certificate type for you to be able to use this feature.</p>
-                        <p>This can save time compared to entering all the information manually and can cut down on manual errors and border checks triggered when data doesn't match up.</p>
+                        <p class="govuk-body  govuk-!-margin-bottom-2">
+                          Cloning can save you time to cut down on manual errors and border checks that are triggred when data doesn't match up. It involves the following steps:</p>
+                          <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-7">
+                            <li>You enter the EHC reference number</li>
+                            <li> It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
+                            <li>IPAFFS can find the electronic EHC</li>
+                            <li>The EHC is used to populate parts of your import notification including your health certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
+                          </ol>
+                          <p class="govuk-body  govuk-!-margin-bottom-1">Any information and documents that are brought over from the electronic EHC will:</p>
+                          <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-7">
+                            <li>overwrite existing information you've entered</li>
+                            <li>be in addition to documents you've entered</li>
+                            
+                          </ul>
+
+
                       </div>
                     </details>
-                  </div>
                 </div>
-               
+              </div>
+                
         </div>
         </form>
 
       <div id="existing-notifications">
-        <form action="/notification/tst/protected/notifications" method="post" class="search-filter-form">
-          <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
+        <form action="#" method="post" class="search-filter-form">
+          <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
           <div class="govuk-form-group search-panel">
             <input class="button search-hidden" type="submit" value="hidden-search">
             <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                
-                <h32 class="govuk-heading-m">Search notifications</h2>
+              <div class="govuk-grid-column-one-third">
+                <h3 class="govuk-heading-m">Search notifications by</h3>
               </div>
             </div>
       
@@ -158,16 +141,8 @@
                 </div>
               </div>
             </div>
-
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  More filters
-                </span>
-              </summary>
-              <div class="govuk-details__text">     
-      <div >
-            <div class="govuk-grid-row govuk-!-margin-bottom-5 govuk-!-margin-top-3">
+      
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--s" for="bcp">BCP or POE</label>
@@ -241,9 +216,6 @@
                       </option>
                       <option value="GBDSA4P-Doncaster Sheffield Airport">
                         Doncaster Sheffield Airport - GBDSA4P
-                      </option>
-                      <option value="GBDSA4PP-Doncaster Sheffield Airport(plants)">
-                        Doncaster Sheffield Airport(plants) - GBDSA4PP
                       </option>
                       <option value="GBDOV2P-Dover Harbour (Deep Sea Terminal)">
                         Dover Harbour (Deep Sea Terminal) - GBDOV2P
@@ -320,8 +292,8 @@
                       <option value="GBHRW1P-Harwich">
                         Harwich - GBHRW1P
                       </option>
-                      <option value="GBHCH4PP-Harwich Port (plants) (undesignated)">
-                        Harwich Port (plants) (undesignated) - GBHCH4PP
+                      <option value="GBHCH4PP-Harwich International Port (plants)">
+                        Harwich International Port (plants) - GBHCH4PP
                       </option>
                       <option value="GBLHR1P-Heathrow Airport - APH (products)">
                         Heathrow Airport - APH (products) - GBLHR1P
@@ -329,11 +301,14 @@
                       <option value="GBLHR4P-Heathrow Airport - Eurobip (products)">
                         Heathrow Airport - Eurobip (products) - GBLHR4P
                       </option>
-                      <option value="GBLHR4A-Heathrow Airport (animals)">
-                        Heathrow Airport (animals) - GBLHR4A
+                      <option value="GBLHR4A-Heathrow Airport - HARC (animals)">
+                        Heathrow Airport - HARC (animals) - GBLHR4A
                       </option>
                       <option value="GBLHR4PP-Heathrow Airport (plants)">
                         Heathrow Airport (plants) - GBLHR4PP
+                      </option>
+                      <option value="GBHBT1PP-HES Humber Bulk Terminal (Plant products, Other objects)">
+                        HES Humber Bulk Terminal (Plant products, Other objects) - GBHBT1PP
                       </option>
                       <option value="GBHYS4PP-Heysham Port (plants) (undesignated)">
                         Heysham Port (plants) (undesignated) - GBHYS4PP
@@ -526,6 +501,9 @@
                       </option>
                       <option value="GBTEE4PP-Teesside International Airport Limited (plant products)">
                         Teesside International Airport Limited (plant products) - GBTEE4PP
+                      </option>
+                      <option value="BCP3JUL23-Test TST Org">
+                        Test TST Org - BCP3JUL23
                       </option>
                       <option value="GBTLB4PP-Tilbury 2 Ro-Ro Terminal (plants) (undesignated)">
                         Tilbury 2 Ro-Ro Terminal (plants) (undesignated) - GBTLB4PP
@@ -1374,7 +1352,7 @@
               </div>
             </div>
       
-            <div class="govuk-grid-row govuk-!-margin-bottom-7">
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
               <div class="govuk-grid-column-one-third ">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--s" for="consignee">Consignee / Importer</label>
@@ -1397,7 +1375,7 @@
                       <option value="CED">
                         CHED-D
                       </option>
-                      <option value="CHEDPP">
+                      <option value="CHEDPP" selected="">
                         CHED-PP
                       </option>
                       <option value="IMP">
@@ -1425,149 +1403,81 @@
               </div>
             </div>
       
- 
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
-             
-              <div class="govuk-grid-column-full">
-                
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
-                    <h3 class="govuk-heading-m">Arrival / import date range</h3>
-                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                      <h1 class="govuk-fieldset__heading">
-                        Arrival / import date range
-                      </h1>
-                    </legend> 
-                     <div id="changedName-hint" class="govuk-hint">
-                      This includes changing your last name or spelling your name differently.
-                    </div> -->
-                    <div class="govuk-radios govuk-radios--small govuk-radios--inline govuk-!-margin-bottom-4" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes" checked>
-                        <label class="govuk-label govuk-radios__label" for="changedName">
-                          All time
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          Today
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          Tomorrow
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          Next 7 days
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-
-              </div>
-             <!--  <div class="govuk-grid-column-one-third">
+              <div class="govuk-grid-column-one-third">
                 <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    Arrival / Import date range
-                  </legend>
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Arrival / Import date range</legend>
                   <div class="govuk-form-group">
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="today" id="button-today">
-                      Today
-                    </button>
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="tomorrow" id="button-tomorrow">
-                      Tomorrow
-                    </button>
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="next-seven-days" id="button-next-seven-days">
-                      Next seven days
-                    </button>
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="clear-range" id="button-clear-date-range">
-                      Clear date range
-                    </button> 
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="today" id="button-today">Today</button>
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="tomorrow" id="button-tomorrow">Tomorrow</button>
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="next-seven-days" id="button-next-seven-days">Next seven days</button>
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="clear-range" id="button-clear-date-range">Clear date range</button>
                   </div>
                 </fieldset>
-              </div>-->
-              <div class="govuk-grid-column-one-half">
-                <div class="govuk-form-group ">
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
-                    <div class="govuk-date-input" id="start-date" data-module="accessible-datepicker">
-                
+                    <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
+
                       <div class="govuk-date-input__item date-input-day">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
                         </div>
                       </div>
-                
+
                       <div class="govuk-date-input__item date-input-month">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
                         </div>
                       </div>
-                
+
                       <div class="govuk-date-input__item date-input-year">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
                         </div>
                       </div>
-                
-                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-55" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-55"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+
+                    </div>
                   </fieldset>
                 </div>
               </div>
-              <div class="govuk-grid-column-one-half">
-                <div class="govuk-form-group ">
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
-                    <div class="govuk-date-input" id="end-date" data-module="accessible-datepicker">
-                
+                    <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="end-date">
+
                       <div class="govuk-date-input__item date-input-day">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="end-date-day" value="" name="end-date-day" type="text" inputmode="numeric">
                         </div>
                       </div>
-                
+
                       <div class="govuk-date-input__item date-input-month">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="end-date-month" value="" name="end-date-month" type="text" inputmode="numeric">
                         </div>
                       </div>
-                
+
                       <div class="govuk-date-input__item date-input-year">
                         <div class="govuk-form-group">
                           <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
                           <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="end-date-year" value="" name="end-date-year" type="text" inputmode="numeric">
                         </div>
                       </div>
-                
-                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-            
-            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix">
-              <button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-33" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-33"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                    </div>
                   </fieldset>
                 </div>
               </div>
             </div>
-      </div>
-      </div>
-      </details>
-
-
+      
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <input class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" value="Search" data-module="govuk-button">
@@ -1577,8 +1487,6 @@
               </div>
             </div>
           </div>
-
-          
       
             <div id="archiveNotificationLink" class="govuk-!-margin-bottom-6">
               <a href="/notification/tst/protected/notifications/archived-notifications" class="govuk-link link-button">
@@ -1587,7 +1495,7 @@
             </div>
       
           <p class="govuk-heading-s govuk-!-margin-bottom-2">
-            <span id="notification-count">2047</span>
+            <span id="notification-count">1284197</span>
               <span id="results">results</span>
           </p>
       
@@ -1653,7 +1561,7 @@
                       Copy as new
                     </button>
                   </form>
-                <form action="07-cn-01-review-manual" method="post" class="govuk-!-display-inline">
+                <form action="07-00-review-manual" method="post" class="govuk-!-display-inline">
                   <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
                     <button class="govuk-link" id="view-details-DRAFT.GB.2022.3687149" name="viewDetails" value="DRAFT.GB.2022.3687149">
                       View details
@@ -1713,7 +1621,7 @@
                       Copy as new
                     </button>
                   </form>
-                <form action="07-cn-01-review-manual" method="post" class="govuk-!-display-inline">
+                <form action="07-00-review-manual" method="post" class="govuk-!-display-inline">
                   <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
                     <button class="govuk-link" id="view-details-DRAFT.GB.2022.4273200" name="viewDetails" value="DRAFT.GB.2022.4273200">
                       View details
@@ -1773,7 +1681,7 @@
                       Copy as new
                     </button>
                   </form>
-                <form action="07-cn-01-review-manual" method="post" class="govuk-!-display-inline">
+                <form action="07-00-review-manual" method="post" class="govuk-!-display-inline">
                   <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
                     <button class="govuk-link" id="view-details-CHEDPP.GB.2024.5163479" name="viewDetails" value="CHEDPP.GB.2024.5163479">
                       View details

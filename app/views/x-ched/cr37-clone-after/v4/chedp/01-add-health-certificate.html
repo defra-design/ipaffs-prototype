@@ -27,7 +27,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
     <div class="govuk-notification-banner__header">
       <h2 class="govuk-notification-banner__title" id="banner-title">
-        Success - electronic EHC found
+        Electronic EHC found
       </h2>
     </div>
     <div class="govuk-notification-banner__content">
@@ -40,10 +40,11 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
   </div>
 </div>
-<main class="govuk-main-wrapper cloning-summary-page" id="main-content">
+<main class="govuk-main-wrapper cloning-summary-page" id="main-content" >
   <div class="govuk-grid-row" id="cloning-summary">
     <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl" id="page-primary-title">Confirm clone from your EHC</h1>
+       
       
         <div id="documents-table" class="govuk-!-margin-top-9 govuk-!-margin-bottom-9">
           <h2 class="govuk-heading-m">11 documents will be attached</h2>
@@ -69,6 +70,11 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       <td class="govuk-table__cell">RIHFS-LKSFJ4329849-837429827349</td>
       <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
   </tr>
+  <tr>
+    <td class="govuk-table__cell">Commercial invoice</td>
+    <td class="govuk-table__cell">COM-859q77543987</td>
+    <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
+  </tr>
     <tr>
         <td class="govuk-table__cell">Seaway Bill</td>
         <td class="govuk-table__cell">SWB-859q77543987</td>
@@ -84,11 +90,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
     <td class="govuk-table__cell">STO-43987KSRETQS</td>
     <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
 </tr>
-  <tr>
-    <td class="govuk-table__cell">Commercial invoice</td>
-    <td class="govuk-table__cell">COM-859q77543987</td>
-    <!-- <td class="govuk-table__cell">PHC-859q77543987.pdf</td> -->
-  </tr>
+ 
   <tr>
     <td class="colspan-2"><p class="govuk-body govuk-!-margin-top-2"><a>View list of 11 documents</a></p></td>
   </tr>
@@ -98,13 +100,23 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
          </div>
 
         
-             
-      
-      <div class="govuk-!-padding-4" style="border: solid 1px grey;">
-      <h2 class="govuk-heading-l">Summary</h2>
-      <hp class="govuk-body">Brief details of the EHC certificate to be cloned from:</p>
-      <hr>
-        <table class="govuk-table review-table" id="consignment-table">
+       
+    
+<div style="border: solid 20px  #f3f2f1 ;">
+        <div class="govuk-grid-row  govuk-!-padding-bottom-0">
+          <div class="govuk-grid-column-full govuk-!-padding-4 govuk-!-margin-bottom-0" style="background-color:   #f3f2f1 ;">
+            <h2 class="govuk-heading-l">Summary</h2>
+            <hp class="govuk-body">Brief details of the EHC certificate to be cloned from:</p>
+          </div>
+        </div>
+
+        <div class="govuk-grid-row  govuk-!-padding-top-0">
+          <div class="govuk-grid-column-full govuk-!-padding-left-7 govuk-!-padding-right-7 govuk-!-padding-bottom-3 govuk-!-padding-top-3">
+
+      <!-- <h2 class="govuk-heading-l">Summary</h2> -->
+      <!-- <hp class="govuk-body">Brief details of the EHC certificate to be cloned from:</p> -->
+     
+        <table class="govuk-table review-table" id="consignment-table" >
         <caption class="govuk-visually-hidden">Summary of the EHC </caption>
         <tbody>
           <!-- <tr class="govuk-table__header">
@@ -159,9 +171,16 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
           
       </tr>
       </table>
+     
+     
 
-      <span class="govuk-accordion__section-toggle" data-nosnippet=""><span class="govuk-accordion__section-toggle-focus"><span class="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span><span class="govuk-accordion__section-toggle-text"><a>Show more summary details</a></span></span></span>
-
+      <span class="govuk-accordion__section-toggle" data-nosnippet="">
+        <span class="govuk-accordion__section-toggle-focus">
+          <span class="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span>
+          <span class="govuk-accordion__section-toggle-text"><a>Show more summary details</a></span>
+        </span></span>
+    </div>
+  </div>
       <!-- <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -257,35 +276,60 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
     
        </div>     -->
 
-       <div class="govuk-form-group govuk-!-margin-top-9 govuk-!-width-two-thirds">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Would you like to bring in the information from the EHC also?
-            </h1>
-          </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-                Yes, bring in information also
-              </label>
-              <p class="govuk-body govuk-!-padding-left-3">This will replace any information you've already entered with the details from the EHC.</p>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                No, only bring in the documents 
-              </label>
-              
-            </div>
-          
-          </div>
-        </fieldset>
-      </div>
+       
+       <div class="govuk-form-group govuk-!-margin-top-9 govuk-!-margin-bottom-9">
 
+        <h2 class="govuk-heading-m">Is this the correct EHC to clone from?</h2>
+        <div class="govuk-checkboxes__item govuk-!-margin-bottom-9">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            I confirm this is the correct EHC 
+          </label>
+        </div>
+
+        <h2 class="govuk-heading-m ">What do you want to clone?</h2>
+        <!-- <p class="govuk-body"><a>List of fields that can be cloned (opens in a new window)</a></p> -->
+        <!-- <p class="govuk-body">When you clone:</p> -->
+        <!-- <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+          <li class="govuk-!-margin-bottom-4">Information that's cloned will <strong>overwrite</strong> any information previously entered. <p class="govuk-!-margin-top-1"><a></a></p></li>
+          <li>Documents that are cloned will be <strong>in addition</strong> to any already uploaded</li>
+        </ul> -->
+       
+        <div class="govuk-inset-text govuk-!-margin-top-0">
+        <p class="govuk-body govuk-!-margin-bottom-4"><a>Information that's cloned</a> will <strong>overwrite</strong> any information previously entered.</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Documents that are cloned will be <strong>in addition</strong> to any already uploaded.</p>
+</div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+           
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item govuk-!-margin-bottom-6">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england" checked>
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Information and documents
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  Documents only
+                </label>
+              </div>
+            
+            </div>
+          </fieldset>
+        </div>
+
+       
+
+       
+
+     
+
+       </div>
+      
       <div class="govuk-!-margin-top-9">
-        <form action="03-do-01a-phyto-clone" method="POST">
+        <form action="01-clone-success" method="POST">
           <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and clone from certificate</button>
           
           <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">

@@ -25,32 +25,32 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
         <h1 class="govuk-!govuk-heading-l">Add the latest health certificate</h1>
         {{ data | log }}
         
-        <p class="govuk-body govuk-!-margin-bottom-4">You can clone from your electronic export health certificate (EHC) to populate your notification. 
+        <p class="govuk-body govuk-!-margin-bottom-4">You may save time by cloning from your electronic export health certificate (EHC) to populate your notification. 
         </p>
         
-        <details class="govuk-details govuk-!-margin-bottom-8">
-          <summary class="govuk-details__summary  govuk-!-width-one-half">
+        <details class="govuk-details govuk-!-margin-bottom-6 govuk-!-width-full">
+          <summary class="govuk-details__summary  ">
             <span class="govuk-details__summary-text">
-              What is cloning?
+              How does cloning save time?
             </span>
           </summary>
           <div class="govuk-details__text">
             <p class="govuk-body  govuk-!-margin-bottom-2">
-              Cloning can save you time to cut down on manual errors and border checks that are triggred when data doesn't match up. It involves the following steps:</p>
-              <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-7">
-                <li>You enter the EHC reference number</li>
-                <li> It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
-                <li>IPAFFS can find the electronic EHC</li>
-                <li>The EHC is used to populate parts of your import notification including your health certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
+              Cloning can save you time by reducing manual errors and border checks that are triggered when data doesn't match up. It involves the following steps:</p>
+              <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-5">
+                <li>You enter the electronic EHC or ePhyto reference number</li>
+                <li>It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
+                <li>IPAFFS can find the electronic certificate</li>
+                <li>The electronic certificate is used to populate parts of your import notification including your health or phytosanitary certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
               </ol>
-              <p class="govuk-body  govuk-!-margin-bottom-1">Any information and documents that are brought over from the electronic EHC will:</p>
-              <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-7">
-                <li>overwrite existing information you've entered</li>
-                <li>be in addition to documents you've entered</li>
-                
+              <p class="govuk-body  govuk-!-margin-bottom-2">When you clone :</p>
+              <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-5">
+                <li>information cloned will overwrite existing information you've entered</li>
+                <li>documents cloned will be in addition to documents already uploaded</li>
               </ul>
 
-
+              <p class="govuk-body  govuk-!-margin-bottom-2">You can choose to clone documents only (sometimes called 'verifiable pdfs') or information and documents.</p>
+              
           </div>
         </details>
 
@@ -66,12 +66,24 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
                 <label class="govuk-label govuk-radios__label d" for="how-add-hc">
-                  Clone from your electronic EHC 
+                  Clone  from your electronic EHC 
                 </label>
-                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  This will replace any information already added with the details from the electronic EHC. 
-                </div> -->
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                 <p class="govuk-hint govuk-!-margin-bottom-1">Later you'll be asked if you want to clone:</p> 
+                  <ul class="govuk-list--bullet">
+                    <li>documents only</li>
+                    <li>information and documents</li>
+                  </ul> 
+                  
+                </div>
               </div>
+              <!-- <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
+                <label class="govuk-label govuk-radios__label d" for="how-add-hc">
+                  Clone documents only 
+                </label>
+               
+              </div> -->
             
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc-2" name="addhc" type="radio" value="Manual">

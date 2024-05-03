@@ -10,13 +10,6 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-
-<div class="action-button-container govuk-!-margin-top-0 govuk-!-padding-bottom-3">
-  <a href="03-do-01-documents" class="govuk-button govuk-button--secondary button-small action-button">
-    Attachments
-  </a>
-</div>
-
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-full">
   <span class="heading-tertiary">DRAFT.GB.2024.2987635-CHEDPP</span>
@@ -25,16 +18,16 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
   {{ data | log }}
   <!-- <h2 class="govuk-heading-l">Actions</h2> -->
   <!-- <p class="govuk-body">You can clone an electronic phytosanitary certificate to save time.</p> -->
-  <!-- <div class="action-button-container govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+  <div class="action-button-container govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
     
 
-   <form method="post" action="00-check-answers-orig" class="govuk-!-display-inline">
+   <!-- <form method="post" action="00-check-answers-orig" class="govuk-!-display-inline">
       <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
       <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
       <button type="submit" name="submit_param" value="Copy as new" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">Copy as new</button>
     </form>
 
-    <form action="18-review-submitted-amend-no-docs" method="post" class="govuk-!-display-inline">
+    <form action="07-00-review-submitted-amend-no-docs" method="post" class="govuk-!-display-inline">
       <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
       <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
       <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
@@ -42,13 +35,13 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
       </button>
     </form>
 
-     <form action="12-health-certificate" method="post" class="govuk-!-display-inline">
+     <form action="03-01-certificate" method="post" class="govuk-!-display-inline">
       <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
       <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
       <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
         Add documents
       </button>
-    </form> 
+    </form> -->
 
     <form action="03a-certificate-reference" method="post" class="govuk-!-display-inline">
       <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
@@ -58,13 +51,13 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
       </button>
     </form>
 
-    <form action="pdf" method="post" class="govuk-!-display-inline">
+    <!-- <form action="pdf" method="post" class="govuk-!-display-inline">
       <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
       <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
       <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
         View CHED
       </button>
-    </form>
+    </form>-->
 
     <a href="#" id="delete-notification" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3">
       Delete notification
@@ -80,7 +73,7 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-details__text">
     An ePhyto is an electronic phytosanitary certificate. You can clone all the associated documents from the ePhyto into your import notification in one go.
   </div>
-</details>-->
+</details>
 
 <!-- <h2 class="govuk-heading-l">Your notification</h2> -->
 
@@ -215,7 +208,7 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
         <tr class="table__row--border-top">
           <td class="govuk-table__cell">
-            <a href="03-do-01-documents" class="govuk-link">
+            <a href="03-02-documents" class="govuk-link">
               Accompanying documents
             </a>
           </td>
@@ -281,7 +274,7 @@ Check answers – {{ serviceName }} – GOV.UK Prototype Kit
         <tbody class="table__row--border-top">
         <tr>
           <td class="govuk-table__cell">
-            <a href="07-cn-01-review-clone" class="govuk-link" id="review-link">
+            <a href="07-00-review-clone" class="govuk-link" id="review-link">
               Review and submit
             </a>
           </td>

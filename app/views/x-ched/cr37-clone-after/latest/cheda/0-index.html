@@ -66,44 +66,17 @@
       <form action="01-01-ched-type" method="post" id="homeForm">
         <div class="govuk-!-padding-3 govuk-!-padding-bottom-0 govuk-!-margin-bottom-9" style="border-bottom: 1px #b1b4b6 solid;">
               <div class="govuk-grid-row govuk-!-margin-bottom-0" >
+                <div class="govuk-grid-column-one-half  govuk-!-padding-left-10" >
+                  <button class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3" type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
+                    Create a notification
+                  </button>
+                </div>
                   <div class="govuk-grid-column-one-half govuk-!-padding-left-10 " >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3"  href="../cloning/01-cl-01">Clone from your certificate</a>
+                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3"  href="../cloning/01-cl-01">Create a notification using your digital certificate</a>
                   </div>
-                  <div class="govuk-grid-column-one-half  govuk-!-padding-left-10" >
-                    <button class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3" type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
-                      Create a notification manually
-                    </button>
-                  </div>
+                 
                 </div>
-              <div class="govuk-grid-row govuk-!-margin-bottom-0" >
-                <div class="govuk-grid-column-three-quarters">
-                    <details class="govuk-details govuk-!-margin-bottom-2">
-                      <summary class="govuk-details__summary  govuk-!-width-one-half">
-                        <span class="govuk-details__summary-text">
-                          Find out how cloning from your certificate can save time
-                        </span>
-                      </summary>
-                      <div class="govuk-details__text">
-                        <p class="govuk-body  govuk-!-margin-bottom-2">
-                          Cloning can save you time to cut down on manual errors and border checks that are triggred when data doesn't match up. It involves the following steps:</p>
-                          <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-5">
-                            <li>You enter the electronic EHC or ePhyto reference number</li>
-                            <li> It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
-                            <li>IPAFFS can find the electronic certificate</li>
-                            <li>The EHC is used to populate parts of your import notification including your health or phytosanitary certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
-                          </ol>
-                          <p class="govuk-body  govuk-!-margin-bottom-2">When you clone :</p>
-                          <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-5">
-                            <li>information cloned will overwrite existing information you've entered</li>
-                            <li>documents cloned will be in addition to documents you've entered</li>
-                            
-                          </ul>
-
-
-                      </div>
-                    </details>
-                </div>
-              </div>
+            
                 
         </div>
         </form>
@@ -113,12 +86,14 @@
       <div id="existing-notifications">
         <form action="/notification/tst/protected/notifications" method="post" class="search-filter-form">
           <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
+          
           <div class="govuk-form-group search-panel">
             <input class="button search-hidden" type="submit" value="hidden-search">
             <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-third">
-                <h3 class="govuk-heading-m">Search notifications by</h3>
-              </div>
+              <div class="govuk-grid-column-two-thirds">
+                
+                <h32 class="govuk-heading-m">Search notifications
+              </h32></div>
             </div>
       
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
@@ -142,8 +117,16 @@
                 </div>
               </div>
             </div>
-      
-            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More filters
+                </span>
+              </summary>
+              <div class="govuk-details__text">     
+      <div>
+            <div class="govuk-grid-row govuk-!-margin-bottom-5 govuk-!-margin-top-3">
               <div class="govuk-grid-column-one-third">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--s" for="bcp">BCP or POE</label>
@@ -626,7 +609,7 @@
                             Australia
                           </option>
                           <option value="AT">
-                            Austria
+                            Netherlands
                           </option>
                           <option value="AZ">
                             Azerbaijan
@@ -1350,7 +1333,7 @@
               </div>
             </div>
       
-            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+            <div class="govuk-grid-row govuk-!-margin-bottom-7">
               <div class="govuk-grid-column-one-third ">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--s" for="consignee">Consignee / Importer</label>
@@ -1401,8 +1384,53 @@
               </div>
             </div>
       
+ 
             <div class="govuk-grid-row govuk-!-margin-bottom-5">
-              <div class="govuk-grid-column-one-third">
+             
+              <div class="govuk-grid-column-full">
+                
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <h3 class="govuk-heading-m">Arrival / import date range</h3>
+                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h1 class="govuk-fieldset__heading">
+                        Arrival / import date range
+                      </h1>
+                    </legend> 
+                     <div id="changedName-hint" class="govuk-hint">
+                      This includes changing your last name or spelling your name differently.
+                    </div> -->
+                    <div class="govuk-radios govuk-radios--small govuk-radios--inline govuk-!-margin-bottom-4" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes" checked="">
+                        <label class="govuk-label govuk-radios__label" for="changedName">
+                          All time
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          Today
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          Tomorrow
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changedName-2">
+                          Next 7 days
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+              </div>
+             <!--  <div class="govuk-grid-column-one-third">
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     Arrival / Import date range
@@ -1419,11 +1447,11 @@
                     </button>
                     <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="clear-range" id="button-clear-date-range">
                       Clear date range
-                    </button>
+                    </button> 
                   </div>
                 </fieldset>
-              </div>
-              <div class="govuk-grid-column-one-third">
+              </div>-->
+              <div class="govuk-grid-column-one-half">
                 <div class="govuk-form-group ">
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
@@ -1453,11 +1481,12 @@
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
                       <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
             <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-55" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-55"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-55" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-55"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div><div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-41" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-41"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
               </div>
-              <div class="govuk-grid-column-one-third">
+              <div class="govuk-grid-column-one-half">
                 <div class="govuk-form-group ">
                   <fieldset class="govuk-fieldset" role="group">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
@@ -1489,12 +1518,17 @@
             <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
             
             <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix">
-              <button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-33" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-33"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+              <button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-33" class="date-picker__heading" aria-live="assertive" aria-atomic="true">March 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-33"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div><div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-36" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-36"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
               </div>
             </div>
-      
+      </div>
+      </div>
+      </details>
+
+
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <input class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" value="Search" data-module="govuk-button">
@@ -1567,7 +1601,7 @@
             </div>
             <div class="notification-list__grid-column-25">
               <dt class="notification-list__heading">Origin</dt>
-              <dd class="notification-list__value" id="origin-21">Austria</dd>
+              <dd class="notification-list__value" id="origin-21">Netherlands</dd>
             </div>
               <div class="notification-list__grid-column-20">
                 <dt class="notification-list__heading">Inspection</dt>
@@ -2075,7 +2109,7 @@
             </div>
             <div class="notification-list__grid-column-25">
               <dt class="notification-list__heading">Origin</dt>
-              <dd class="notification-list__value" id="origin-13">Austria</dd>
+              <dd class="notification-list__value" id="origin-13">Netherlands</dd>
             </div>
               <div class="notification-list__grid-column-20">
                 <dt class="notification-list__heading">Inspection</dt>
@@ -2203,7 +2237,7 @@
             </div>
             <div class="notification-list__grid-column-25">
               <dt class="notification-list__heading">Origin</dt>
-              <dd class="notification-list__value" id="origin-15">Austria</dd>
+              <dd class="notification-list__value" id="origin-15">Netherlands</dd>
             </div>
               <div class="notification-list__grid-column-20">
                 <dt class="notification-list__heading">Inspection</dt>
@@ -2264,7 +2298,7 @@
             </div>
             <div class="notification-list__grid-column-25">
               <dt class="notification-list__heading">Origin</dt>
-              <dd class="notification-list__value" id="origin-16">Austria</dd>
+              <dd class="notification-list__value" id="origin-16">Netherlands</dd>
             </div>
               <div class="notification-list__grid-column-20">
                 <dt class="notification-list__heading">Inspection</dt>
