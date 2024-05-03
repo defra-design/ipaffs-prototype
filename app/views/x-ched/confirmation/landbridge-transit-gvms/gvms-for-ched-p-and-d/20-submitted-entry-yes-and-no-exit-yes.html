@@ -34,17 +34,19 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="confirmation-page">
     <div class="govuk-grid-column-two-thirds">
-
-      <div class="govuk-panel govuk-!-margin-bottom-6 panel--inspection-required" id="inspection-required-confirmation-panel">
-        <h1 class="govuk-panel__title">
-          Initial risk assessment
-        </h1>
+      <div class="govuk-notification-banner notification-banner--inspection-required govuk-!-margin-bottom-0" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title">
+              Initial risk assessment
+            </h2>
+        </div>
+      </div>
+      <div style="border-top: none;" class="govuk-panel govuk-!-margin-bottom-8 panel--inspection-required" id="inspection-may-be-required-confirmation-panel">
         <div class="govuk-panel__body">
-          <div class="govuk-!-margin-bottom-0">Inspection required</div>
-          <!--Your reference number<br>
-          <strong>
-            <span id="reference-number">CHEDP.GB.2023.2001123</span>
-          </strong>-->
+          <div class="govuk-!-margin-bottom-2">Entry inspection status</div>
+          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-6">Check GVMS</div>
+          <div class="govuk-!-margin-bottom-2">Exit inspection status</div>
+          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-2">Required at [inspection premises]</div>
         </div>
       </div>
 
@@ -99,18 +101,15 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <hr class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
 
-      <h2 class="govuk-heading-m">What you need to do</h2>
-      <p class="govuk-body">Tell the driver to go directly to [Inspection premises] with this consignment on arrival in Great Britain.</p>
-
-      <p class="govuk-body">If the consignment does not arrive in Great Britain at the entry point stated in this notification, it must go directly to the Border Control Post where it first arrives in Great Britain.</p>
+      <h2 class="govuk-heading-m">On entry to Great Britain</h2>
+      <p class="govuk-body">The Goods Vehicle Movement Service (GVMS) will notify the driver of all inspections before they arrive at the border location.</p>
 
       <div class="govuk-inset-text">
-        Initial risk assessments can change.
+        The driver must check GVMS before arriving at the border location to find out if an inspection is required.
       </div>
-      
-      <h2 class="govuk-heading-m">What happens next</h2>
-      <p class="govuk-body">An inspector may update the risk assessment.</p>
-      <p class="govuk-body">If the risk assessment changes, IPAFFS will notify you and any nominated contacts by text message or email.</p>
+
+      <h2 class="govuk-heading-m">On exit from Great Britain</h2>
+      <p class="govuk-body">The consignment must go directly to [inspection premises] before it exits Great Britain.</p>
 
       <h2 class="govuk-heading-m">How to view or amend this notification</h2>
       <p class="govuk-body">You can access or amend this notification from your dashboard.</p>
@@ -126,7 +125,7 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div>
           <form action="01-ched-type" method="post" id="homeForm">
-          <input class="link-button" type="submit" name="new-notification" value="Create a new notification">
+          <input class="link-button" type="submit" name="new-notification" value="Create a new import notification">
           </form>
         </div>
 
