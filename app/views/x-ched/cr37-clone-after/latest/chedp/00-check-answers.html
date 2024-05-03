@@ -11,7 +11,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 
-<div class="govuk-!-padding-top-6">
+<div class="govuk-!-padding-top-2">
   <span class="heading-tertiary">
       <span id="reference-number">DRAFT.GB.2024.5925980</span>
           <span> - CHEDP</span>
@@ -20,289 +20,355 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl " id="page-primary-title">
-        Notification Hub</h1>
+        Complete your notification</h1>
+        {{ data | log }}
+        <!-- <h2 class="govuk-heading-l">Actions</h2> -->
+        <div class="action-button-container govuk-!-margin-bottom-0 govuk-!-padding-bottom-0">
+          
+  
+         <!-- <form method="post" action="00-check-answers" class="govuk-!-display-inline">
+            <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+            <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+            <button type="submit" name="submit_param" value="Copy as new" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">Copy as new</button>
+          </form>
+  
+          <form action="07-00-review-submitted-amend-no-docs" method="post" class="govuk-!-display-inline">
+            <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+            <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+            <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+              Amend
+            </button>
+          </form>-->
+  
+           <form action="01-ac-04-how-add-hc" method="post" class="govuk-!-display-inline">
+            <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+            <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+            <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+              Add health certificate
+            </button>
+          </form> 
+  
+         <!-- <form action="03a-certificate-reference" method="post" class="govuk-!-display-inline">
+            <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+            <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+            <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+              Clone an EHC
+            </button>
+          </form>
+  
+           <form action="pdf" method="post" class="govuk-!-display-inline">
+            <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+            <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+            <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+              View CHED
+            </button>
+          </form>-->
+  
+          <a href="#" id="delete-notification" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3">
+            Delete notification
+          </a> 
+      </div>
 
-      <p class="govuk-body govuk-!-margin-bottom-8">
-        These sections can be completed in any order. Completing optional questions may speed up checks.
+      <!-- <details class="govuk-details govuk-!-margin-bottom-9">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is cloning an EHC?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          You can only clone a electronic export health certificate (EHC). This brings across information and documents from the EHC and populates your import notification. Your health certificate will also be attached.
+        </div>
+      </details> -->
+
+      <!-- <h2 class="govuk-heading-l">Your notification</h2> -->
+      <p class="govuk-body govuk-!-margin-bottom-8 govuk-!-margin-top-8">
+        These sections can be completed in any order. You can save your progress and return at any time.
       </p>
 
-      <form action="overview-p" method="POST">
+      <form action="#" method="POST">
 
-       
+        <div class="table-responsive">
+          <table class="govuk-table govuk-!-margin-bottom-8" id="prerequisites-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              About the consignment
+            </caption>
+            <tbody>
+            <tr class="table__row--border-top">
+              <td class="govuk-table__cell">
+                <a href="03-origin-import" class="govuk-link" id="origin-of-the-import">
+                  Origin of the import
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag " id="origin-of-import">
+                  STARTED
+                </strong>
+              </td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="purpose-of-consignment">
+                <a href="06-about-consignment-{{ data['conform-uk-regulations'] or "cg" }}" class="govuk-link">
+                  Main reason for importing the consignment
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag " id="consignment-purpose">
+                  STARTED
+                </strong>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="govuk-table govuk-!-margin-bottom-8" id="consignment-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              Description of the goods
+            </caption>
+            <tbody>
+            <tr class="table__row--border-top">
+              <td class="govuk-table__cell">
+                <a href="08-addgoods-weights-packaging" class="govuk-link" id="commodity-details-link">
+                  Commodity
+                </a>
+              </td>
+
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
           
-                <h2 class="govuk-heading-m">About</h2>
-                <ul class="govuk-task-list">
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/03-origin-import" aria-describedby="before-you-start-1-status">Origin of the import</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="before-you-start-1-status">
-                      Completed
-                    </div>
-                  </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/06-about-consignment-{{ data['conform-uk-regulations'] or "cg" }}" aria-describedby="before-you-start-2-status">Main reason for importing the consignment</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="before-you-start-1-status">
-                      Completed
-                    </div>
-                  </li>
-                </ul>
-                <h2 class="govuk-heading-m govuk-!-margin-top-5">Description of the goods</h2>
-                <ul class="govuk-task-list">
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/08-addgoods-weights-packaging" aria-describedby="prepare-application-1-status">Add goods, weights and packaging</a>
-                      <div id="application-details-3-hint" class="govuk-task-list__hint">
-                        1 good added
-                      </div>
-                    </div>
-                   
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['08-commodity-details'] == "visited") %}
-                        Completed
-                      {% else %}
-                      <strong class="govuk-tag-new govuk-tag--blue">
-                        Incomplete
-                      </strong>
-                      {% endif %}
-                    </div>
-                  </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/10-additional-details" aria-describedby="prepare-application-2-status">Additional details</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['08-commodity-details'] == "visited") %}
-                        Completed
-                      {% else %}
-                      <strong class="govuk-tag-new govuk-tag--grey">
-                        Not started
-                      </strong>
-                      {% endif %}
-                    </div>
-                  </li>
-               
-                </ul>
-              
-                <h2 class="govuk-heading-m govuk-!-margin-top-5">Documents</h2>
-                <ul class="govuk-task-list">
-                  {% if (data['risk-category'] != "low") %}
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/03-01-certificate" aria-describedby="prepare-application-1-status">Latest health certificate</a>
-                      <div id="application-details-3-hint" class="govuk-task-list__hint">
-                        {% if (data['03-01-certificate'] == "visited") %}
-                       
-                        {% else %}
-                        No documents added
-                        {% endif %}
-                      </div>
-                    </div>
-                   
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['03-01-certificate'] == "visited") %}
-                        Completed
-                      {% else %}
-                      <strong class="govuk-tag-new govuk-tag--grey">
-                        Not started
-                      </strong>
-                      {% endif %}
-                    </div>
-                  </li>
-                  {% endif %}
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/03-02-documents" aria-describedby="prepare-application-2-status">Additional documents</a>
-                      <div id="application-details-3-hint" class="govuk-task-list__hint">
-                        {% if (data['03-02-documents'] == "visited") %}
-                        4 documents attached
-                      {% else %}
-                        No documents added
-                        {% endif %}
-                      </div>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['haveYouCompletedThisSectionDocs'] == "yes") %}
-                        Completed
-                        {% elif (data['haveYouCompletedThisSectionDocs'] == "no") %}
-                        <strong class="govuk-tag-new govuk-tag--blue">
-                          Incomplete
-                        </strong>
-                        {% else  %}
-                        
-                        <strong class="govuk-tag-new govuk-tag--grey">
-                          Not started
-                        </strong>
-                      {% endif %}
-                    </div>
-                  </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/13-approved-est" aria-describedby="prepare-application-2-status">Approved establishment of origin (where required)</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['13-approved-est'] == "visited") %}
-                        Completed
-                      {% else %}
-                      <strong class="govuk-tag-new govuk-tag--grey">
-                        Not started
-                      </strong>
-                      {% endif %}
-                    </div>
-                  </li>
-                </ul>
-            
-                <h2 class="govuk-heading-m govuk-!-margin-top-5">Traders</h2>
-                <ul class="govuk-task-list">
-                
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/14-addresses" aria-describedby="prepare-application-2-status">Addresses</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['14-addresses'] == "visited") %}
-                        Completed
-                      {% else %}
-                      <strong class="govuk-tag-new govuk-tag--grey">
-                        Not started
-                      </strong>
-                      {% endif %}
-                    </div>
-                  </li>
-                </ul>
+            <tr>
+              <td class="govuk-table__cell">
+                <a href="10-additional-details" class="govuk-link">
+                  Additional details
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
+          
     
-                <h2 class="govuk-heading-m govuk-!-margin-top-5">Transport</h2>
-                <ul class="govuk-task-list">
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/11-transport-to-poe" aria-describedby="prepare-application-2-status">Transport to the port of entry</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['11-transport-to-poe'] == "visited") %}
-                        Completed
-                      {% else %}
-                      <strong class="govuk-tag-new govuk-tag--grey">
-                        Not started
-                      </strong>
-                      {% endif %}
-                    </div>
-                  </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/16-transport-after-bcp" aria-describedby="prepare-application-2-status">Transport after the Border Control Post (BCP)</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['16-transport-after-bcp'] == "visited") %}
-                      Completed
-                    {% else %}
-                    <strong class="govuk-tag-new govuk-tag--grey">
-                      Not started
-                    </strong>
-                    {% endif %}
-                    </div>
-                  </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/15-transporter" aria-describedby="prepare-application-2-status">Transporter</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['15-transporter'] == "visited") %}
-                      Completed
-                    {% else %}
-                    <strong class="govuk-tag-new govuk-tag--grey">
-                      Not started
-                    </strong>
-                    {% endif %}
-                    </div>
-                  </li>
-                </ul>
+            </tbody>
+          </table>
+        </div>
 
-                <h2 class="govuk-heading-m govuk-!-margin-top-5">Contact</h2>
-                <ul class="govuk-task-list">
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/17a-contact" aria-describedby="prepare-application-2-status">Contact details</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['17a-contact'] == "visited") %}
-                      Completed
-                    {% else %}
-                    <strong class="govuk-tag-new govuk-tag--grey">
-                      Not started
-                    </strong>
-                    {% endif %}
-                    </div>
-                  </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/17b-nominated-contacts" aria-describedby="prepare-application-2-status">Nominated contacts (optional)</a>
-                    </div>
+        <div class="table-responsive">
+          <table class="govuk-table govuk-!-margin-bottom-8" id="documents-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              Documents
+            </caption>
+            <tbody>
+            {% if (data['risk-category'] != "low") %}
+            <tr class="table__row--border-top">
+              <td class="govuk-table__cell">
+                <a href="01-ac-04-how-add-hc" class="govuk-link">
+                  Latest health certificate
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
+            {% endif %}
+            <tr class="table__row--border-top">
+              <td class="govuk-table__cell">
+                <a href="03-02-documents" class="govuk-link">
+                  Accompanying documents
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
 
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['haveYouCompletedThisSectionNom'] == "yes") %}
-                        Completed
-                        {% elif (data['haveYouCompletedThisSectionNom'] == "no") %}
-                        <strong class="govuk-tag-new govuk-tag--blue">
-                          Incomplete
-                        </strong>
-                        {% else  %}
-                        
-                        <strong class="govuk-tag-new govuk-tag--grey">
-                          Not started
-                        </strong>
-                      {% endif %}
-                    </div>
+            <!-- <tr class="table__row--border-top">
+              <td class="govuk-table__cell">
+                <a href="09-catch-certificates" class="govuk-link" id="commodity-details-link">
+                  Catch certificates
+                </a>
+              </td>
 
-                    <!-- <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['17b-nominated-contacts'] == "visited") %}
-                      Completed
-                    {% else %}
-                    <strong class="govuk-tag-new govuk-tag--grey">
-                      Not started
-                    </strong>
-                    {% endif %}
-                    </div> -->
-                  </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/17c-contact-consignment" aria-describedby="prepare-application-2-status">Contact address for consignment</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['17c-contact-consignment'] == "visited") %}
-                      Completed
-                    {% else %}
-                    <strong class="govuk-tag-new govuk-tag--grey">
-                      Not started
-                    </strong>
-                    {% endif %}
-                    </div>
-                  </li>
-                </ul>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr> -->
 
-                <h2 class="govuk-heading-m govuk-!-margin-top-5">Complete</h2>
-                <ul class="govuk-task-list">
-                <li class="govuk-task-list__item">
-                  <div class="govuk-task-list__name-and-hint">
-                    <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/07-00-review" aria-describedby="prepare-application-2-status">Review and submit</a>
-                   
+            <tr class="table__row--border-top">
+              <td class="govuk-table__cell">
+                <a href="13-approved-est" class="govuk-link">
+                  Approved establishment of origin (where required)
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+      
+
+
+        <div class="table-responsive">
+          <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              Traders
+            </caption>
+            <tbody>
+            <tr class="table__row--border-top">
+              <td class="govuk-table__cell">
+                <a href="14-addresses" class="govuk-link">
+                  Addresses
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              Transport
+            </caption>
+            <tbody>
+              <tr>
+                <td class="govuk-table__cell notification-list__links">
+
+                  <a href="11-transport-to-poe" class="govuk-link" name="cr37pReviewedVar1" value="false">
+                    Transport to the port of entry 
+                  </a> 
                   
-                  </div> 
-                  {% if (data['17c-contact-consignment'] == "visited") %}
-                  <div class="govuk-task-list__status" id="prepare-application-2-status">
-                  Ready to submit
-                  </div>
-                {% else %}
-                  <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-                    Not ready to submit
-                  </div>
-                  {% endif %}
-                </li>
-              </ul>
 
+                  <!-- <a href="11-transport-to-poe" class="govuk-link">
+                    Transport to the port of entry
+                  </a> -->
+                </td>
+                <td class="govuk-table__cell badge-right">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                    TO DO
+                  </strong>
+                </td>
+              </tr>
+                <tr class="table__row--border-top">
+                <td class="govuk-table__cell">
+                  <a href="16-transport-after-bcp" class="govuk-link">
+                    Transport after the Border Control Post (BCP) 
+                  </a> 
+                </td>
+                <td class="govuk-table__cell badge-right">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                    TO DO
+                  </strong>
+                </td>
+              </tr>
+              <tr class="table__row--border-top">
+                <td class="govuk-table__cell">
+                  <a href="15-transporter" class="govuk-link">
+                    Transporter 
+                  </a>
+                </td>
+                <td class="govuk-table__cell badge-right">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                    TO DO
+                  </strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              Contact
+            </caption>
+            <tbody>
+              <tr>
+                <td class="govuk-table__cell">
+                  <a href="17a-contact" class="govuk-link">
+                    Contact details
+                  </a>
+                </td>
+                <td class="govuk-table__cell badge-right">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                    TO DO
+                  </strong>
+                </td>
+              </tr>
+                <tr class="table__row--border-top">
+                <td class="govuk-table__cell">
+                  <a href="17b-nominated-contacts" class="govuk-link">
+                    Nominated contacts (optional)
+                  </a> 
+                </td>
+                <td class="govuk-table__cell badge-right">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                    TO DO
+                  </strong>
+                </td>
+              </tr>
+              <tr class="table__row--border-top">
+                <td class="govuk-table__cell">
+                  <a href="17c-contact-consignment" class="govuk-link">
+                    Contact address for consignment
+                  </a>
+                </td>
+                <td class="govuk-table__cell badge-right">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                    TO DO
+                  </strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-responsive">
+          <table class="govuk-table" id="review-table" role="presentation">
+            <caption class="govuk-table__caption govuk-heading-m">
+              Complete notification
+            </caption>
+            <tbody class="table__row--border-top">
+            
+            <tr>
+              <td class="govuk-table__cell">
+                <a href="07-00-review-error" class="govuk-link" id="review-link">
+                  Review and submit
+                </a>
+              </td>
+              <td class="govuk-table__cell badge-right">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </form>
     </div>
   </div>
