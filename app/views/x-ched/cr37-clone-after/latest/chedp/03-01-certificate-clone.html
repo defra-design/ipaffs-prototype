@@ -64,77 +64,89 @@ Health certificate – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="03-01-certificate" type="hidden" value="visited">
        
         <div class="govuk-!-margin-bottom-8 additional-documents-table" id="latest-vet-health-certificate-table">
-              <!-- <div class="additional-documents__caption govuk-heading-m">
-               
-                Add latest health certificate (where required)
-              </div> -->
-              <p class="govuk-body govuk-!-width-three-quarters">Make sure the health certificate covers all commodities in this notification, or the consignment may be rejected.</p>
-            <p class="govuk-body  govuk-!-width-three-quarters">
-              This is the document that will be shown on the Common Health Entry Document (CHED).
-            </p>
-            <div class="govuk-warning-text  govuk-!-width-three-quarters" id="cveda-row-legal-warning">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                  You must still provide the original health certificate at the Border Control Post.
-              </strong>
-            </div>
-
-
-            <div class="additional-documents__grid-row additional-documents__headers ">
-              <div class="additional-documents__grid-column-20 additional-documents__table-header">
-                Document type
-              </div>
-              <div class="additional-documents__grid-column-20 additional-documents__table-header">
-                Document reference
-              </div>
-              <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
-                Date of issue
-                  <div class="additional-documents__date-of-issue-hint">
-                    <span class="additional-documents__date-of-issue-hint__day">Day</span>
-                    <span class="additional-documents__date-of-issue-hint__month">Month</span>
-                    <span class="additional-documents__date-of-issue-hint__year">Year</span>
-                  </div>
-              </div>
-              <div class="additional-documents__grid-column-20 additional-documents__table-header">
-                Attachments
-              </div>
-            </div>
-              <div class="additional-documents__grid-row additional-documents__add-document" style="border-bottom: 0 ;">
-                <div class="additional-documents__grid-column-20">
-                    <p class="govuk-body">Veterinary health certificate <span class="govuk-!-font-weight-bold  govuk-!-margin-bottom-0">(cloned)</span></p>
-                </div>
-                <div class="additional-documents__grid-column-20">
-                  <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                    <p class="govuk-body">VHC-4792-45892HDFDGHF</p>
-                  
-                     
-                  </div>
-                </div>
-                <div class="additional-documents__grid-column-doc-date">
-                  <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-margin-top-0">
-                    <p class="govuk-body">8 April 2024</p>
-                  </div>
-                </div>
-                <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment  govuk-!-margin-bottom-0 govuk-!-margin-top-0">
-                  <p class="govuk-body"><a>VHC-4792-45892HDFDGHF.pdf</a></p>
-                </div>
-              </div>
-              <div class="additional-documents__grid-row additional-documents__content-links" style="border-top: 0 ;">
-                <div class="additional-documents__grid-column-60">
-                  <a href="03a-certificate-reference" class="govuk-link link-button" id="attachment-download-28944d07-c434-4f0c-aeea-9cc5ea719e34" aria-label="Download a-docs page.png">
-                    Replace cloned documents
-                  </a>
-                </div>
-                <!-- <div class="additional-documents__grid-column-50">
-                      <button type="submit" class="link-button text-align-left" id="remove-attachment-28944d07-c434-4f0c-aeea-9cc5ea719e34" name="remove-attachment" value="28944d07-c434-4f0c-aeea-9cc5ea719e34" aria-label="Remove attachment a-docs page.png">
-                        Remove attachment
-                      </button>
-                </div> -->
+          <!-- <div class="additional-documents__caption govuk-heading-m">
+           
+            Add latest health certificate details 
           </div> 
+          <p class="govuk-body govuk-!-width-three-quarters">Make sure the health certificate covers all commodities in this notification, or the consignment may be rejected.</p>
+        <p class="govuk-body  govuk-!-width-three-quarters">
+          This is the document that will be shown on the Common Health Entry Document (CHED).
+        </p>
+        <div class="govuk-warning-text  govuk-!-width-three-quarters" id="cveda-row-legal-warning">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            You must upload a health certificate if the consignment requires one. This must be in English and you must upload all pages.
+          </strong>
+        </div>
 
+        <div class="govuk-inset-text" id="blank-attachment-warning">
+          If the attachments field is blank, your document is missing. You must upload it manually.
+        </div>-->
 
+        <div class="additional-documents__grid-row additional-documents__headers ">
+          <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Document type
           </div>
+          <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Document reference
+          </div>
+          <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
+            Date of issue
+              <div class="additional-documents__date-of-issue-hint">
+                <span class="additional-documents__date-of-issue-hint__day">Day</span>
+                <span class="additional-documents__date-of-issue-hint__month">Month</span>
+                <span class="additional-documents__date-of-issue-hint__year">Year</span>
+              </div>
+          </div>
+          <div class="additional-documents__grid-column-20 additional-documents__table-header">
+            Attachments
+          </div>
+        </div>
+        <div class="additional-documents__grid-row additional-documents__add-document" style="border-bottom: 0 ;">
+          <div class="additional-documents__grid-column-20">
+              <p class="govuk-body">Veterinary health certificate <span class="govuk-!-font-weight-bold  govuk-!-margin-bottom-0">(cloned)</span></p>
+          </div>
+          <div class="additional-documents__grid-column-20">
+            <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+              <p class="govuk-body">RIHFS-LKSFJ4329849-837429827349</p>
+            
+               
+            </div>
+          </div>
+          <div class="additional-documents__grid-column-doc-date">
+            <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-margin-top-0">
+              <p class="govuk-body">6 May 2024</p>
+            </div>
+          </div>
+          <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment  govuk-!-margin-bottom-0 govuk-!-margin-top-0">
+            <p class="govuk-body"><a>VHC-4792-45892HDFDGHF.pdf</a></p>
+          </div>
+        </div>
+        <div class="additional-documents__grid-row additional-documents__content-links" style="border-top: 0 ;">
+          <!-- <div class="additional-documents__grid-column-60">
+            <a href="03a-certificate-reference" class="govuk-link link-button" id="attachment-download-28944d07-c434-4f0c-aeea-9cc5ea719e34" aria-label="Download a-docs page.png">
+              Replace cloned documents
+            </a>
+          </div> -->
+          <!-- <div class="additional-documents__grid-column-50">
+                <button type="submit" class="link-button text-align-left" id="remove-attachment-28944d07-c434-4f0c-aeea-9cc5ea719e34" name="remove-attachment" value="28944d07-c434-4f0c-aeea-9cc5ea719e34" aria-label="Remove attachment a-docs page.png">
+                  Remove attachment
+                </button>
+          </div> -->
+    </div> 
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full govuk-!-margin-top-3">
+
+<p class="govuk-body">If this is not correct you need to
+      <a href="03a-certificate-reference" class="govuk-link link-button" id="attachment-download-28944d07-c434-4f0c-aeea-9cc5ea719e34" aria-label="Download a-docs page.png">
+        replace your digital health certificate
+      </a></p>
+    </div>
+    </div>
+      </div>
 
             <!-- <div class="govuk-form-group govuk-!-margin-bottom-8" id="region-code-field">
               <fieldset class="govuk-fieldset">
