@@ -44,13 +44,12 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-error-summary govuk-!-margin-top-6" data-module="govuk-error-summary">
   <div role="alert">
     <h2 class="govuk-error-summary__title">
-      Important
+      There is a problem
     </h2>
     <div class="govuk-error-summary__body">
-      <p class="govuk-body govuk-!-width-three-quarters"><strong>No movement reference number (MRN) added. If you submit this notification, you must add one later or your consignment may be delayed.</strong></p>
-      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-three-quarters">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
         <li>
-          <a href="11b-goods-movement-services">Add movement reference number</a>
+          <a href="#partone/addmrn">Add movement reference number</a>
         </li>
       </ul>
     </div>
@@ -827,6 +826,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                       Change
                     </a>
                   </div>
+                  <span class="govuk-error-message" id="partone/addmrn">Add movement reference number</span>
                   <!-- <h3 class="govuk-heading-m">Transport to the border control post (BCP)</h3> -->
                  <!-- <div class="heading-with-change-link">
                      <h2 class="govuk-heading-s">Transport to the Border Control Post (BCP)</h2> -->
@@ -856,7 +856,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           </td>
                           <td class="govuk-table__cell"></td>
                         </tr>
-                        <tr>
+                        <tr class="table-row--error">
                           <td class="govuk-table__header">Movement reference number (MRN)</td>
                           <td class="govuk-table__cell" id="region-of-consignment-value">
                             <a href="11b-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">Add MRN</a>
