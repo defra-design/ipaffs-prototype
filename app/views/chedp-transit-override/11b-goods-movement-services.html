@@ -41,20 +41,23 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
           <fieldset class="govuk-fieldset" aria-describedby="ctc-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
               <h1 class="govuk-fieldset__heading">
-                Is the consignment using the Common Transit Convention (CTC)?
+                Are you using the Common Transit Convention (CTC) to move goods between countries?
               </h1>
             </legend>
+            <div class="govuk-hint govuk-!-width-two-thirds">
+              If yes, you must provide the NCTS movement reference (MRN) number.
+            </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="ctc" name="ctc" type="radio" value="yes" data-aria-controls="conditional-ctc">
                 <label class="govuk-label govuk-radios__label" for="ctc">
-                  Yes - I have a movement reference number (MRN)
+                  Yes &ndash; add MRN
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ctc">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--m">
-                    Movement reference number
+                    NCTS movement reference number (MRN)
                   </label>
                   <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
                     It is 18 characters, starting with 2 numbers, a 2-letter country code then 14 letters and numbers. For example, 24GB123456789AB012.
@@ -65,7 +68,7 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="ctc-3" name="ctc" type="radio" value="yeslater">
                 <label class="govuk-label govuk-radios__label" for="ctc-3">
-                  Yes - I'll add a movement reference number later
+                  Yes &ndash; add MRN later
                 </label>
               </div>
               <div class="govuk-radios__item">
@@ -91,19 +94,20 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
               </span>
             </summary>
             <div class="govuk-details__text">
-              <p class="govuk-body">The Common Transit Convention (CTC) is a customs procedure that can help you move goods quickly between:</p>
+              <p class="govuk-body">The Common Transit Convention (CTC) is a customs procedure that allows you to quickly move goods between countries in:</p>
               <ul class="govuk-list govuk-list--bullet">
                 <li>the UK</li>
                 <li>the EU</li>
                 <li>other CTC countries</li>
               </ul>
-              <p class="govuk-body">To move your goods, you need to:</p>
+              <p class="govuk-body">It can help reduce the number of customs declarations you'll need to complete and you won't have to pay charges until you end the movement.</p>
+              <p class="govuk-body">To move your goods using the CTC, you need to:</p>
               <ol class="govuk-list govuk-list--number">
-                <li><a href="https://www.gov.uk/guidance/check-if-you-can-use-transit-to-move-goods-to-the-eu-and-common-transit-countries" target="_blank">Check if you can use transit (opens in new tab)</a></li>
-                <li><a href="https://www.gov.uk/government/collections/using-common-or-union-transit-to-move-goods-into-through-and-out-of-the-uk" target="_blank">Find out how to move goods using transit (opens in new tab)</a></li>
-                <li><a href="https://www.gov.uk/guidance/planning-your-route-before-moving-goods-using-transit" target="_blank">Plan your route before using transit (opens in new tab)</a></li>
+                <li>check if you can use it</li>
+                <li>find out how to use it to move goods</li>
+                <li>plan your route before you use it</li>
               </ol>
-              <p class="govuk-body">Using transit can help reduce the number of customs declarations you’ll need to complete.</p>
+              <p class="govuk-body"><a href="https://www.gov.uk/government/collections/using-common-or-union-transit-to-move-goods-into-through-and-out-of-the-uk" class="govuk-link" target="_blank">Find out more about using transit to move goods (opens in new tab)</a></p>
             </div>
           </details>
         </div>
@@ -123,7 +127,7 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="transport-details-required-2" name="transport-details-required" type="radio" value="false" checked>
+                <input class="govuk-radios__input" id="transport-details-required-2" name="transport-details-required" type="radio" value="false">
                 <label class="govuk-label govuk-radios__label " for="transport-details-required-2">
                   No
                 </label>
@@ -133,19 +137,19 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
           <details class="govuk-details govuk-!-margin-top-4 govuk-!-width-two-thirds" data-module="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
-                What is the GVMS?
+                What is GVMS?
               </span>
             </summary>
             <div class="govuk-details__text">
-              <p class="govuk-body">The GVMS helps to speed up customs clearance at some UK ports.</p>
+              <p class="govuk-body">GVMS helps to speed up customs clearance at some UK ports.</p>
               <p class="govuk-body">To move your goods, you need to:</p>
               <ol class="govuk-list govuk-list--number">
-                <li><a href="https://www.gov.uk/guidance/list-of-ports-using-the-goods-vehicle-movement-service" target="_blank">Find out which ports use the GVMS (opens in new tab)</a></li>
-                <li><a href="https://www.gov.uk/guidance/register-for-the-goods-vehicle-movement-service" target="_blank">Register for the GVMS (opens in new tab)</a></li>
-                <li><a href="https://www.gov.uk/guidance/get-a-goods-movement-reference" target="_blank">Get a goods movement reference (GMR) (opens in new tab)</a></li>
+                <li><a href="https://www.gov.uk/guidance/list-of-ports-using-the-goods-vehicle-movement-service" target="_blank">Find out which ports use GVMS (opens in new tab)</a></li>
+                <li><a href="https://www.gov.uk/guidance/register-for-the-goods-vehicle-movement-service" target="_blank">Register for GVMS (opens in new tab)</a></li>
+                <li><a href="https://www.gov.uk/guidance/get-a-goods-movement-reference" target="_blank">Get a NCTS goods movement reference (GMR) (opens in new tab)</a></li>
               </ol>
-              <p class="govuk-body">The GMR is a single reference that brings together multiple declarations. Without it, you cannot move your goods through UK ports which use the GVMS and you may face delays.</p>
-              <p class="govuk-body">The driver must check the GVMS to find out if an inspection is required before they disembark.</p>
+              <p class="govuk-body">The GMR is a single reference that brings together multiple declarations. Without it, you cannot move your goods through UK ports which use GVMS and you may face delays.</p>
+              <p class="govuk-body">The driver must check GVMS to find out if an inspection is required before they disembark.</p>
             </div>
           </details>
         </div>

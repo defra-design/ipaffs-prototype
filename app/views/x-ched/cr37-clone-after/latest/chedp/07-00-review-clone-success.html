@@ -45,8 +45,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
 
   <div class="govuk-!-padding-top-6 govuk-!-margin-bottom-3">
     <span class="heading-tertiary">
-        <span id="reference-number">DRAFT.GB.2024.5925980</span>
-            <span> - CHEDP</span>
+        <span id="reference-number">CHEDP.GB.2024.5925980</span>
+            <span> - V2</span>
     </span>
   </div>
 
@@ -54,27 +54,46 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
   <main class="govuk-main-wrapper" id="main-content">
     <div class="govuk-grid-row govuk-!-margin-left-0">
       <div class="govuk-grid-column-three-quarters govuk-!-padding-0">
-   
-
-        
+        <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region"
+          aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="banner-title">
+              Successfully cloned
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-body">
+              Your notification has been populated using your digital health certificate.
+            </p>
+            <!-- <ul class="govuk-list govuk-list--bullet">
+              <li>Data cloned</li>
+              <li>10 documents cloned</li>
+            </ul> -->
+  
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="govuk-notification-banner " id="clone-draft-information" role="region" aria-labelledby="clone-draft-information-title" data-label="" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="clone-draft-information-title">
-            Cloned
+            Important
         </h2>
       </div>
       <div class="govuk-notification-banner__content notification-banner__content--full-width">
               <p class="govuk-notification-banner__heading" id="is-approved-establishments-heading">
-                1 Health certificate <br>
-                10 additional documents (next page)
+                Check the approved establishment details are correct
               </p>
-            
-             
+              <p class="govuk-body">We found a match for these details from the health certificate you cloned. You'll need to check this to confirm it's correct.</p>
+              <p class="govuk-body">
+                <a class="govuk-notification-banner__link" href="13b-approved-est-chosen" id="add-when-is-approved-establishments-link">
+                Check approved establishment details
+                </a>
+              </p>
       </div>
     </div>
+   
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl govuk-!-margin-bottom-4" id="page-primary-title">Review your notification</h1>
@@ -89,8 +108,8 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div class="govuk-grid-column-one-half">
           <div class="audit-flag govuk-!-margin-bottom-3">
-            <div id="last-submission-date">Not  submitted  </div>
-            <div id="submitted-by">  </div>
+            <div id="last-submission-date">Submitted 5 May 2024, 18:13   </div>
+            <div id="submitted-by"> by Percy Hyseni </div>
           </div>
         </div>
       </div>
