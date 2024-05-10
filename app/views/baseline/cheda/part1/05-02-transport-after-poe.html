@@ -1,44 +1,19 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
 {% block content %}
 
-<div class="govuk-phase-banner" style="margin-top: -46px;">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
-    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
-  </p>
-</div>
 
-<div class="navigation-links">
-    <a href="review" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
-    <div class="navigation-links__divider">|</div>
-<div class="govuk-breadcrumbs breadcrumbs--next-to-back">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="index">Dashboard</a>
-        </li>
-      </ol>
-    </div>
 
-  <div id="sign-out-section" class="information-banner">
-    <p class="information-banner__content">
-      <span>Percy Pig</span>
-      <span>|</span>
-      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
-        Address book
-      </a>
-      <span>|</span>
-      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
-        Sign out
-      </a>
-    </p>
-  </div>
-</div>
+
 
 <div class="govuk-!-padding-top-6">
     <span class="heading-tertiary">
@@ -46,6 +21,7 @@
       <span> - CHEDA</span>
     </span>
 </div>
+
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="transport-details-page">
