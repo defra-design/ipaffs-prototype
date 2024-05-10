@@ -1,0 +1,276 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check answers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+  <span class="heading-tertiary">DRAFT.GB.2024.2987635-CHEDPP</span>
+  <h1 class="govuk-heading-xl govuk-!-margin-top-8" id="page-primary-title">Complete your notification</h1>
+
+  {{ data | log }}
+ 
+  <div class="govuk-!-padding-5 govuk-!-margin-bottom-8" style="border-top: 1px #b1b4b6 solid; border-bottom: 1px #b1b4b6 solid;">
+    <div class="govuk-grid-row govuk-!-margin-bottom-0 govuk-!-padding-top-0">
+      <div class="govuk-grid-column-full govuk-!-padding-0" >
+        <a class="govuk-button  button-small govuk-!-margin-bottom-0 govuk-!-margin-right-3"  href="03a-certificate-reference">Clone from your ePhyto</a>
+      </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-0">
+      <div class="govuk-grid-column-full govuk-!-padding-0">
+        <p class="govuk-body govuk-!-margin-top-2">You can copy the data and documents from your ePhyto into your import notification.</p>
+        <details class="govuk-details govuk-!-margin-bottom-0 govuk-!-width-three-quarters">
+          <summary class="govuk-details__summary  ">
+            <span class="govuk-details__summary-text">
+              What is cloning?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body  govuk-!-margin-bottom-3">
+              Cloning can save you time by reducing manual errors and border checks that are triggered when data doesn't match up. It involves the following steps:</p>
+              <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-5">
+                <li>You enter the ePhyto reference number</li>
+                <li>It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
+                <li>IPAFFS can find the ePhyto</li>
+                <li>The ePhyto is used to populate parts of your import notification including your phytosanitary certificate and any data and documents uploaded by your exporter or phytosanitary health inspector to their export system.</li>
+              </ol>
+             
+
+              <p class="govuk-body  govuk-!-margin-bottom-3">You can choose to clone documents only (sometimes called 'verifiable pdfs') or data and documents.</p>
+              <p class="govuk-body  govuk-!-margin-bottom-3">When you clone :</p>
+              <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-5">
+                <li>data cloned will <strong>overwrite</strong> existing data you've entered</li>
+                <li>documents cloned will be <strong>in addition</strong> to documents already uploaded</li>
+              </ul>
+              <p class="govuk-body govuk-!-margin-bottom-3">You will not be able to delete cloned documents from your notification, but you can upload additional documents.</p>
+              
+          </div>
+        </details>
+      </div>
+
+    </div>
+  
+   
+</div>
+
+  <p class="govuk-body govuk-!-margin-bottom-8">
+    These sections can be completed in any order. You can save your progress and return at any time.
+  </p>
+
+  <form action="overview" method="POST">
+
+    <div class="table-responsive">
+      <table class="govuk-table govuk-!-margin-bottom-8" id="prerequisites-table" role="presentation">
+        <caption class="govuk-table__caption govuk-heading-m">
+          About the consignment
+        </caption>
+        <tbody>
+        <tr class="table__row--border-top">
+          <td class="govuk-table__cell">
+            <a href="01-ac-03-origin-import" class="govuk-link" id="origin-of-the-import">
+              Origin of the import
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              STARTED
+            </strong>
+          </td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell" id="purpose-of-consignment">
+            <a href="01-ac-05-purpose" class="govuk-link">
+              Purpose of the consignment
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag " id="consignment-purpose">
+              STARTED
+            </strong>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-responsive">
+      <table class="govuk-table govuk-!-margin-bottom-8" id="consignment-table" role="presentation">
+        <caption class="govuk-table__caption govuk-heading-m">
+          Description of the goods
+        </caption>
+        <tbody>
+        <tr class="table__row--border-top">
+          <td class="govuk-table__cell">
+            <a href="02-dg-04-weights-packaging" class="govuk-link" id="commodity-details-link">
+              Commodity
+            </a>
+          </td>
+
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag " id="consignment-purpose">
+              STARTED
+            </strong>
+          </td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell">
+            <a href="02-dg-05-additional-details" class="govuk-link">
+              Additional details
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell">
+            <a href="05-tp-01-transport-to-bcp" class="govuk-link">
+              Transport to the Border Control Post (BCP)
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell">
+            <a href="06-co-01-contact" class="govuk-link">
+              Contact details
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell">
+            <a href="06-co-02-nominated-contacts" class="govuk-link">
+              Nominated contacts
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-responsive">
+      <table class="govuk-table govuk-!-margin-bottom-8" id="documents-table" role="presentation">
+        <caption class="govuk-table__caption govuk-heading-m">
+          Documents
+        </caption>
+        <tbody>
+        <tr class="table__row--border-top">
+          <td class="govuk-table__cell">
+            <a href="03-01-certificate" class="govuk-link">
+              Phytosanitary certificates
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        <tr class="table__row--border-top">
+          <td class="govuk-table__cell">
+            <a href="03-02-documents" class="govuk-link">
+              Accompanying documents
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-responsive">
+      <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
+        <caption class="govuk-table__caption govuk-heading-m">
+          Traders
+        </caption>
+        <tbody>
+        <tr class="table__row--border-top">
+          <td class="govuk-table__cell">
+            <a href="04-tr-01-trader-addresses" class="govuk-link">
+              Importer, Packer, Delivery address and Consignor
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag " id="consignment-purpose">
+              STARTED
+            </strong>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <div class="table-responsive">
+      <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
+        <caption class="govuk-table__caption govuk-heading-m">
+          Transport
+        </caption>
+        <tbody>
+        <tr class="table__row--border-top">
+          <td class="govuk-table__cell">
+            <a href="/IMPtoCHEDD/poe-transport" class="govuk-link">
+              Importer, Packer, Delivery address and Consignor
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div> -->
+
+    <div class="table-responsive">
+      <table class="govuk-table" id="review-table" role="presentation">
+        <caption class="govuk-table__caption govuk-heading-m">
+          Complete notification
+        </caption>
+        <tbody class="table__row--border-top">
+        <tr>
+          <td class="govuk-table__cell">
+            <a href="07-00-review-clone" class="govuk-link" id="review-link">
+              Review and submit
+            </a>
+          </td>
+          <td class="govuk-table__cell badge-right">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              TO DO
+            </strong>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>
+</div>
+{% endblock %}
