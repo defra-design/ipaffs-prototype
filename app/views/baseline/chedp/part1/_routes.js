@@ -15,7 +15,7 @@ router.post('/add-commodity-route', function (req, res) {
   var conformUKRegulations = req.session.data['conform-uk-regulations']
   // if user wants to add more commodities, redirect back to Commodity page
   if (addCommodity == "Yes"){
-    res.redirect('03-01-commodity')
+    res.redirect('02-01-commodity-tree-code-search')
   }
   // if user doesn't want to add more commodities or no answer is given, 
     // and is importing non conforming goods, redirect to Main reason for importing non conforming goods
@@ -24,7 +24,7 @@ router.post('/add-commodity-route', function (req, res) {
     } 
     // in any other case, redirect to Main reason for importing conforming goods
     else {
-      res.redirect('01-04b-reason-for-importing-cg')
+      res.redirect('01-04a-reason-for-importing-cg')
     }
 })
 
