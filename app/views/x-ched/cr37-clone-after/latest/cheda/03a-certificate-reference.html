@@ -29,14 +29,14 @@ Search – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-form-group govuk-!-width-three-quarters ">
           <h1 class="govuk-label-wrapper govuk-!-margin-bottom-5">
             <label class="govuk-label govuk-label--xl " for="certificate-reference">
-              Which certificate would you like to use?
+              Which digital health certificate would you like to use?
 
             </label>
           </h1>
           {{ data | log }}
           <div class="govuk-!-margin-bottom-6">
-            <p class="govuk-body">You can copy the data and documents from your digital export health certificate into your import notification.</p>
-           <!-- <ul class="govuk-body govuk-!-margin-bottom-4">
+           <!-- <p class="govuk-body">You can copy the data and documents from your digital export health certificate into your import notification.</p>
+            <ul class="govuk-body govuk-!-margin-bottom-4">
             <li>Clone the information from the electronic system to populate parts of your IPAFFS notification</li>
             <li>Clone documents uploaded by the exporter and vet</li>
            </ul>  -->
@@ -52,18 +52,17 @@ Search – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
           </details> -->
           </div>
-          <label class="govuk-label  " for="certificate-reference">
+          <label class="govuk-label govuk-label--m " for="certificate-reference">
             Certificate reference
           </label>
-          <!-- <p class="govuk-hint">You can get this from your exporter or the vetinary inspector.</p> -->
+          <p class="govuk-hint">You can get this from your exporter or the vetinary inspector.</p>
           
           <input class="govuk-input govuk-!-width-one-half govuk-!-margin-bottom-5" id="certificate-reference" type="text" >
         </div>
         <div class="govuk-button-group ">
           <input class="govuk-button" id="button-search" type="submit" value="Continue" data-module="govuk-button"> 
-          
-          <p><a href="javascript:history.back()" title="Skip this step" style="margin-left: 10px;">Cancel</a></p>
         </div>
+        <p><a href="javascript:history.back()"  style="margin-left: 10px;">Cancel</a></p>
       </form>
 
       
