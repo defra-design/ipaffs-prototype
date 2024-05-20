@@ -39,8 +39,8 @@
             <!-- <caption class="govuk-table__caption govuk-table__caption--m">Journeys - Part 1</caption> -->
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-!-width-one-half">Screen</th>
-
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">ID</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
                 <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">CHEDA</th>
                 <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">CHEDP</th>
                
@@ -48,18 +48,20 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Dashboard - no changes - </td>
-                
+                <td class="govuk-table__cell">00-00</td>
+                <td class="govuk-table__cell">Dashboard - no changes</td>
                 <td class="govuk-table__cell"><a href="cheda/0-index">Done</a></td>
                 <td class="govuk-table__cell"><a href="chedp/0-index">Done</a></td>
                
               </tr>
 
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-!-width-full" colspan="3"><br>
+                
+                <td class="govuk-table__cell govuk-!-width-full" colspan="4"><br>
                   <strong>User clicks 'Amend' link on dashboard and goes to Notification hub:</strong></td>
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">00-01</td>
                 <td class="govuk-table__cell">Notification hub - No clone button (either clonning not available or cloning already has been done)</td>
               
                 <td class="govuk-table__cell"><a href="cheda/00-check-answers">Done</a></td>
@@ -67,6 +69,7 @@
                
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">00-01a</td>
                 <td class="govuk-table__cell">Notification hub - with cloning button</td>
                
                 <td class="govuk-table__cell"><a href="cheda/00-check-answers-amend">Done</a></td>
@@ -75,6 +78,7 @@
               </tr>
              
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">cl-01-01</td>
                 <td class="govuk-table__cell">How do you want to add the health certificate? <br>(radios)</td>
                 
                 <td class="govuk-table__cell"><a href="cheda/01-ac-04-how-add-hc">Done</a></td>
@@ -83,6 +87,7 @@
               </tr>
              
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">cl-01-02</td>
                 <td class="govuk-table__cell">Which digital health certificate would you like to use? <br>(text field)</td>
                
                 <td class="govuk-table__cell"><a href="cheda/03a-certificate-reference">Done</a></td>
@@ -90,6 +95,7 @@
                 
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">cl-01-03</td>
                 <td class="govuk-table__cell">Confirm clone with summary</td>
                 
                 <td class="govuk-table__cell"><a href="cheda/01-add-health-certificate">Not finished</a><br>Commodity details and document list details component needs to go in</td>
@@ -98,6 +104,7 @@
               </tr>
 
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">07-00-cl-01</td>
                 <td class="govuk-table__cell">Review - cloned docs only added</td>
                
                 <td class="govuk-table__cell"><a href="cheda/07-00-review-clone-success">Done</a></td>
@@ -105,6 +112,7 @@
                
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">07-00-cl-01a</td>
                 <td class="govuk-table__cell">Review - cloned data and docs added</td>
                
                 <td class="govuk-table__cell"><a href="cheda/07-00-review-clone-success-data">Done</a></td>
@@ -113,19 +121,21 @@
               </tr>
 
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-!-width-full" colspan="3"><br>
+                <td class="govuk-table__cell govuk-!-width-full" colspan="4"><br>
                   <strong>User clicks 'View details' link on dashboard and goes to Review details:</strong></td>
               </tr>
         
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Review <br>(submitted notification - read only)</td>
+                <td class="govuk-table__cell">07-00-01</td>
+                <td class="govuk-table__cell">07-00-01 Review <br>(submitted notification - read only)</td>
                 
                 <td class="govuk-table__cell"><a href="cheda/07-00-review-submitted-no-docs">Done</a></td>
                 <td class="govuk-table__cell"><a href="chedp/07-00-review-submitted-no-docs">x</a></td>
                
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">Review <br>(user has clicked 'Amend' so page is in an editable state)</td>
+                <td class="govuk-table__cell">07-00-02</td>
+                <td class="govuk-table__cell">07-00-02 Review <br>(user has clicked 'Amend' so page is in an editable state)</td>
                
                 <td class="govuk-table__cell"><a href="cheda/07-00-review-submitted-amend-no-docs">Done</a></td>
                 <td class="govuk-table__cell"><a href="chedp/07-00-review-submitted-amend-no-docs">x</a></td>
@@ -134,12 +144,13 @@
 
 
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-!-width-full" colspan="3"><br>
+                <td class="govuk-table__cell govuk-!-width-full" colspan="4"><br>
                   <strong>Latest health certificate and documents pages</strong></td>
               </tr>
             
 
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">03-01-cl</td>
                 <td class="govuk-table__cell">Latest health certificate page <br>(user has cloned)</td>
                
                 <td class="govuk-table__cell"><a href="cheda/03-01-certificate-clone">Done</a></td>
@@ -147,6 +158,7 @@
                
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">03-02-cl</td>
                 <td class="govuk-table__cell">Accompanying docs <br>(user has cloned)</td>
                 
                 <td class="govuk-table__cell"><a href="cheda/03-02-documents-clone">Done</a></td>
@@ -155,6 +167,7 @@
               </tr>
              
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">03-01</td>
                 <td class="govuk-table__cell">Latest health certificate page <br>(no docs have been added)</td>
                
                 <td class="govuk-table__cell"><a href="cheda/03-01-certificate">Done</a></td>
@@ -162,6 +175,7 @@
                 
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">03-02</td>
                 <td class="govuk-table__cell">Accompanying docs page <br>(no docs have been added)</td>
              
                 <td class="govuk-table__cell"><a href="cheda/03-02-documents">Done</a></td>
@@ -170,6 +184,7 @@
               </tr>
 
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">03-01a</td>
                 <td class="govuk-table__cell">Latest health certificate page <br>(a doc has been added)</td>
                
                 <td class="govuk-table__cell"><a href="cheda/03-01a-certificate-added">Done</a></td>
@@ -177,6 +192,7 @@
                 
               </tr>
               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">03-02a</td>
                 <td class="govuk-table__cell">Accompanying docs page <br>(a doc has been added)</td>
              
                 <td class="govuk-table__cell"><a href="cheda/03-02a-documents-added">Done</a></td>
