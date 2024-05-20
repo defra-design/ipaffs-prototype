@@ -63,16 +63,18 @@
       <h1 class="govuk-heading-xl " id="page-primary-title">Your import notifications</h1>
       {{ data | log }}
 
+
+
       <form action="01-01-ched-type" method="post" id="homeForm">
         <div class="govuk-!-padding-3 govuk-!-padding-bottom-0 govuk-!-margin-bottom-9" style="border-bottom: 1px #b1b4b6 solid;">
               <div class="govuk-grid-row govuk-!-margin-bottom-0" >
-                <div class="govuk-grid-column-one-half  govuk-!-padding-left-10" >
+                <div class="govuk-grid-column-one-third  govuk-!-padding-left-10" >
                   <button class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3" type="submit" form="homeForm" name="cr37aReviewedVar1" value="false" id="create-notification">
                     Create a notification
                   </button>
                 </div>
-                  <div class="govuk-grid-column-one-half govuk-!-padding-left-10 " >
-                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3"  href="../cloning/01-cl-01">Create a notification using your digital certificate</a>
+                  <div class="govuk-grid-column-one-third govuk-!-padding-left-10 " >
+                    <a class="govuk-button govuk-!-width-full govuk-!-margin-bottom-3"  href="../cloning/01-cl-01">Clone certificate</a>
                   </div>
                  
                 </div>
@@ -124,13 +126,9 @@
 
 
 
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  More filters
-                </span>
-              </summary>
-              <div class="govuk-details__text">     
+           
+             
+                 
       <div>
             <div class="govuk-grid-row govuk-!-margin-bottom-5 govuk-!-margin-top-3">
               <div class="govuk-grid-column-one-third">
@@ -1398,14 +1396,7 @@
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
                     <h3 class="govuk-heading-m">Arrival / import date range</h3>
-                    <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                      <h1 class="govuk-fieldset__heading">
-                        Arrival / import date range
-                      </h1>
-                    </legend> 
-                     <div id="changedName-hint" class="govuk-hint">
-                      This includes changing your last name or spelling your name differently.
-                    </div> -->
+                   
                     <div class="govuk-radios govuk-radios--small govuk-radios--inline govuk-!-margin-bottom-4" data-module="govuk-radios">
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes" checked="">
@@ -1436,27 +1427,7 @@
                 </div>
 
               </div>
-             <!--  <div class="govuk-grid-column-one-third">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    Arrival / Import date range
-                  </legend>
-                  <div class="govuk-form-group">
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="today" id="button-today">
-                      Today
-                    </button>
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="tomorrow" id="button-tomorrow">
-                      Tomorrow
-                    </button>
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="next-seven-days" id="button-next-seven-days">
-                      Next seven days
-                    </button>
-                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="clear-range" id="button-clear-date-range">
-                      Clear date range
-                    </button> 
-                  </div>
-                </fieldset>
-              </div>-->
+             
               <div class="govuk-grid-column-one-half">
                 <div class="govuk-form-group ">
                   <fieldset class="govuk-fieldset" role="group">
@@ -1485,10 +1456,14 @@
                       </div>
                 
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
-            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-55" class="date-picker__heading" aria-live="assertive" aria-atomic="true">April 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-55"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div><div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-41" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-41"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                     
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-55" class="date-picker__heading" aria-live="assertive" aria-atomic="true">April 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-55"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div>
+            <div class="date-picker__container date-picker__container--icon defra-datepicker">
+              <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg>
+          </button> -->
+          
+          <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-41" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-41"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
               </div>
@@ -1520,19 +1495,21 @@
                       </div>
                 
                     <div class="date-picker__container date-picker__container--icon defra-datepicker">
-                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+                     
+            
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1">
+              <div class="date-picker__header govuk-clearfix">
+              <!-- <button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-33" class="date-picker__heading" aria-live="assertive" aria-atomic="true">April 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-33"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div><div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
             <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
             
-            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix">
-              <button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-33" class="date-picker__heading" aria-live="assertive" aria-atomic="true">April 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-33"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div><div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-36" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-36"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-36" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-36"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
                   </fieldset>
                 </div>
               </div>
             </div>
       </div>
-      </div>
-      </details>
+      
+    
 
 
             <div class="govuk-grid-row">

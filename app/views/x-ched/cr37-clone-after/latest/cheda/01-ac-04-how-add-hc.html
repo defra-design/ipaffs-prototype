@@ -26,64 +26,42 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
       <span class="govuk-caption-xl">Documents</span>
 
       <form class="form" action="route-cheda-how-add" method="POST">
-        <h1 class="govuk-!govuk-heading-l">Add the latest health certificate</h1>
+        <h1 class="govuk-!govuk-heading-l"> How do you want to add the health certificate?</h1>
         {{ data | log }}
         
-        <p class="govuk-body ">You many save time by completing a notification using your digital health certificate.</p>
-        <p class="govuk-body govuk-!-margin-bottom-4">This is also called 'Cloning'.</p>
+        <!-- <p class="govuk-body ">You many save time by completing a notification using your digital health certificate.</p>
+        <p class="govuk-body govuk-!-margin-bottom-4">This is also called 'Cloning'.</p> -->
        
 
-        <details class="govuk-details govuk-!-margin-bottom-9 govuk-!-width-full">
-          <summary class="govuk-details__summary  ">
-            <span class="govuk-details__summary-text">
-              How does cloning save time?
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            
-            <p class="govuk-body  govuk-!-margin-bottom-3">
-              Cloning can save you time by reducing manual errors and border checks that are triggered when data doesn't match up. It involves the following steps:</p>
-              <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-5">
-                <li>You enter the digital health certificate reference number</li>
-                <li>It sets up a link between the exporter's system (such as Traces NT) and IPAFFS</li>
-                <li>IPAFFS can find the digital health certificate</li>
-                <li>The digital health certificate is used to populate parts of your import notification including your health certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
-              </ol>
-             
-
-              <p class="govuk-body  govuk-!-margin-bottom-3">You can choose to clone documents only (sometimes called 'verifiable pdfs') or data and documents.</p>
-              <p class="govuk-body  govuk-!-margin-bottom-3">When you clone :</p>
-              <ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-5">
-                <li>data cloned will <strong>overwrite</strong> existing data you've entered</li>
-                <li>documents cloned will be <strong>in addition</strong> to documents already uploaded</li>
-              </ul>
-              <p class="govuk-body govuk-!-margin-bottom-3">You will not be able to delete cloned documents from your notification, but you can upload additional documents.</p>
-              
-          </div>
-        </details>
+        
 
 
         <div class="govuk-form-group govuk-!-margin-bottom-7">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-2">
-                How do you want to add the health certificate?
-              </h2>
-            </legend>
+            
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-add-hc-2" name="addhc" type="radio" value="Manual">
+                <label class="govuk-label govuk-radios__label" for="how-add-hc-2">
+                  Attach  manually
+                </label>
+                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Add commodities manually and copy documents from an electronic phytosanitary certificate (ePhyto).
+                </div> -->
+              </div>
+              <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
-                <label class="govuk-label govuk-radios__label d" for="how-add-hc">
+                <label class="govuk-label govuk-radios__label" for="how-add-hc">
                   Clone (complete a notification using your digital health certificate) 
                 </label>
-                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
                  <p class="govuk-hint govuk-!-margin-bottom-1">Later you'll be asked if you want to clone:</p> 
                   <ul class="govuk-list--bullet">
                     <li>documents only</li>
                     <li>information and documents</li>
                   </ul> 
                   
-                </div>
+                </div> -->
               </div>
               <!-- <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
@@ -93,31 +71,43 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
                
               </div> -->
             
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-add-hc-2" name="addhc" type="radio" value="Manual">
-                <label class="govuk-label govuk-radios__label " for="how-add-hc-2">
-                  Attach  manually
-                </label>
-                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  Add commodities manually and copy documents from an electronic phytosanitary certificate (ePhyto).
-                </div> -->
-              </div>
+             
              
             </div>
           </fieldset>
         </div>
 
-        <!-- <div class="govuk-warning-text govuk-!-margin-bottom-8">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-visually-hidden">Warning</span>
-            Your consignment must have a health certificate before it enters Great Britain.
-          </strong>
-        </div> -->
+       
+
+        <details class="govuk-details govuk-!-margin-bottom-9 govuk-!-width-full">
+          <summary class="govuk-details__summary  ">
+            <span class="govuk-details__summary-text">
+              How does cloning help?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body  govuk-!-margin-bottom-3">
+              Cloning can reduce manual errors and border checks that trigger when data does not match. It involves the following steps:</p>
+              <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-5">
+<li>Enter the digital health certificate reference number.</li>
+<li>IPAFFS links with the exporter's system, such as Traces NT.</li>
+<li>If found, the digital health certificate can complete parts of your import notification. You can include your health certificate and any data and documents uploaded by your exporter or vet to their export system.</li>
+</ol>
+<p class="govuk-body  govuk-!-margin-bottom-3">You can choose to clone data and documents, or documents only (sometimes called ‘verifiable pdfs’).
+</p>
+<p class="govuk-body  govuk-!-margin-bottom-3">When you clone:</p>
+<ul class="govuk-list govuk-list--bullet  govuk-!-margin-bottom-5">
+<li>data will overwrite information already entered</li>
+<li>documents  will be added to your notification</li>
+</ul>
+                  
+          </div>
+        </details>
+
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
 
       </form>
-      <p class="govuk-body"><a class="govuk-link" href="00-check-answers-amend">Cancel and return to hub</a></p>
+      <p class="govuk-body"><a class="govuk-link" href="00-check-answers-amend">Cancel</a></p>
     </div>
   </div>
 
