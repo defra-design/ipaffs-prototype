@@ -1,0 +1,690 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  @import url("/public/css/inspector.css");
+</style>
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="#" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link govuk" href="/decision/tst/protected/bip-notifications" id="navigation-dashboard-link">Dashboard</a>
+      </li>
+    </ol>
+  </div></div>
+
+  
+
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="high-priority-tasks-page">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl" id="page-primary-title">High priority tasks</h1>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+
+        <ul class="govuk-tabs__list" role="tablist">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+            <a class="govuk-tabs__tab" id="doc-check-tab" role="tab" aria-controls="outstanding-documentary-checks" aria-selected="true" tabindex="0">
+              Outstanding documentary checks
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item" role="presentation">
+            <a class="govuk-tabs__tab" href="/decision/vnet/protected/bip-notifications/high-priority-tasks-consignments" id="consignments-to-inspect">
+              Consignments to inspect
+            </a>
+          </li>
+        </ul>
+
+        <div class="govuk-tabs__panel" id="outstanding-documentary-checks" role="tabpanel" aria-labelledby="doc-check-tab">
+          <p class="govuk-body">
+            All CHEDs listed below have outstanding documentary checks that need to be completed.
+          </p>
+          <form action="/decision/vnet/protected/bip-notifications/high-priority-tasks-documentary/search" method="post" class="search-and-filter-by-date-time-form">
+            <input name="crumb" type="hidden" value="Ghrh6doX6nIRmsRjAp7RwDAFz09hUnLTIlFKDfRrPrI">
+            <input name="etag" type="hidden" value="">
+            <div class="govuk-form-group search-panel">
+              <input class="button search-hidden" type="submit" value="HiddenSearch">
+          
+              <div class="govuk-heading-m">Search CHEDs by arrival date and time</div>
+          
+              <div class="govuk-grid-row govuk-!-margin-bottom-5">
+                <div class="govuk-grid-column-one-half">
+                  <div class="form-group ">
+                    <fieldset class="govuk-fieldset" role="group">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        Start date range
+                        <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
+                      </legend>
+                      <div class="govuk-date-input date-input--picker" id="start-date" data-module="accessible-datepicker">
+                        <div class="govuk-date-input__item date-input-day">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" maxlength="2" name="start-date-day" value="">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item date-input-month">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" maxlength="2" name="start-date-month" value="">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item date-input-year">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" maxlength="4" name="start-date-year" value="">
+                          </div>
+                        </div>
+                      <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-28" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-28"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                  <div class="form-group ">
+                    <fieldset class="govuk-fieldset" role="group">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        End date range
+                        <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
+                      </legend>
+                      <div class="govuk-date-input date-input--picker" id="end-date" data-module="accessible-datepicker">
+                        <div class="govuk-date-input__item date-input-day">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="end-date-day" maxlength="2" name="end-date-day" value="">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item date-input-month">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="end-date-month" maxlength="2" name="end-date-month" value="">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item date-input-year">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="end-date-year" maxlength="4" name="end-date-year" value="">
+                          </div>
+                        </div>
+                      <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-46" class="date-picker__heading" aria-live="assertive" aria-atomic="true">May 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-46"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="govuk-grid-row govuk-!-margin-bottom-5">
+                <div class="govuk-grid-column-one-half">
+                  <div class="govuk-form-group " id="search-time">
+                      <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                              Start time range (optional)
+                              <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
+                          </legend>
+                          <span class="form-label-bold"></span>
+                          
+                          
+                          <div class="govuk-date-input" id="start-time">
+                              <div class="govuk-date-input__item date-input-hour">
+                                  <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="start-time-hour">
+                                          Hour
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-hour" name="start-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                                  </div>
+                              </div>
+                              <div class="govuk-date-input__item date-input-minute">
+                                  <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="start-time-minute">
+                                          Minutes
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-time-minute" name="start-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                  <div class="govuk-form-group " id="search-time">
+                      <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                              End time range (optional)
+                              <span class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-0"></span>
+                          </legend>
+                          <span class="form-label-bold"></span>
+                          
+                          
+                          <div class="govuk-date-input" id="end-time">
+                              <div class="govuk-date-input__item date-input-hour">
+                                  <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="end-time-hour">
+                                          Hour
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-hour" name="end-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                                  </div>
+                              </div>
+                              <div class="govuk-date-input__item date-input-minute">
+                                  <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="end-time-minute">
+                                          Minutes
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-time-minute" name="end-time-minute" type="text" maxlength="2" inputmode="numeric" value="">
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                  </div>
+                </div>
+              </div>
+          
+                <div class="govuk-grid-row govuk-!-margin-bottom-5">
+                  <div class="govuk-grid-column-one-half">
+                    <div class="govuk-form-group  ">
+                        
+                        <label class="govuk-label govuk-label--s" for="riskCategory">
+                          Risk category (CHED-P only)
+                        </label>
+                        
+                    
+                    
+                      
+                    
+                      <select class="govuk-select govuk-!-width-full" id="riskCategory" name="riskCategory">
+                          <option value="">All</option>
+                          <option value="High">High</option>
+                          <option value="Medium">Medium</option>
+                      </select>
+                    </div>
+                    
+                  </div>
+                </div>
+          
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  <button class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" data-module="govuk-button" data-prevent-double-click="true">Search</button>
+                  <a href="/decision/vnet/protected/bip-notifications/high-priority-tasks-documentary/search?searchClear=true" class="govuk-link clear-link">Clear</a>
+                </div>
+              </div>
+            </div>
+          </form>
+          <p class="govuk-body govuk-!-font-weight-bold" id="number-of-results">
+            <span id="notification-count">280</span>
+            results
+          </p>
+          
+            <div class="table-responsive">
+              <table class="govuk-table high-priority-tasks-table" aria-describedby="number-of-results">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Reference number</th>
+                    <th class="govuk-table__header" scope="col">BCP or POE</th>
+                    <th class="govuk-table__header" scope="col">Estimated arrival time at BCP or POE</th>
+                    <th class="govuk-table__header" scope="col">Updated arrival time at BCP or POE</th>
+                    <th class="govuk-table__header" scope="col">Risk outcome</th>
+                      <th class="govuk-table__header" scope="col">Risk category</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1001430" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1001430/hub" target="_self">
+                          CHEDA.GB.2024.1001430
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">EAST MIDLANDS AIRPORT</td>
+                      <td class="govuk-table__cell">23 February 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-not-required">
+                          NO INSPECTION
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000188" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000188/hub" target="_self">
+                          CHEDA.GB.2024.1000188
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER</td>
+                      <td class="govuk-table__cell">11 March 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000191" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000191/hub" target="_self">
+                          CHEDA.GB.2024.1000191
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">BIRKENHEAD</td>
+                      <td class="govuk-table__cell">21 March 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-not-required">
+                          NO INSPECTION
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1001432" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1001432/hub" target="_self">
+                          CHEDA.GB.2024.1001432
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">EAST MIDLANDS AIRPORT</td>
+                      <td class="govuk-table__cell">1 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-not-required">
+                          NO INSPECTION
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000077" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000077/hub" target="_self">
+                          CHEDP.GB.2024.1000077
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">Manchester Airport</td>
+                      <td class="govuk-table__cell">10 April 2024, 19:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">High</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000078" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000078/hub" target="_self">
+                          CHEDP.GB.2024.1000078
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">Manchester Airport</td>
+                      <td class="govuk-table__cell">10 April 2024, 19:30</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">High</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000087" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000087/hub" target="_self">
+                          CHEDP.GB.2024.1000087
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">Manchester Airport</td>
+                      <td class="govuk-table__cell">10 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">High</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2024.1000083" href="/decision/vnet/protected/bip-notifications/CHEDD.GB.2024.1000083/hub" target="_self">
+                          CHEDD.GB.2024.1000083
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">FOLKESTONE - EUROTUNNEL (SEVINGTON BCP)</td>
+                      <td class="govuk-table__cell">11 April 2024, 11:11</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2024.1000214" href="/decision/vnet/protected/bip-notifications/CHEDD.GB.2024.1000214/hub" target="_self">
+                          CHEDD.GB.2024.1000214
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER AIRPORT</td>
+                      <td class="govuk-table__cell">11 April 2024, 12:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2024.1000216" href="/decision/vnet/protected/bip-notifications/CHEDD.GB.2024.1000216/hub" target="_self">
+                          CHEDD.GB.2024.1000216
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER AIRPORT</td>
+                      <td class="govuk-table__cell">11 April 2024, 12:45</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-not-required">
+                          NO INSPECTION
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2024.1000259" href="/decision/vnet/protected/bip-notifications/CHEDD.GB.2024.1000259/hub" target="_self">
+                          CHEDD.GB.2024.1000259
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">STANSTED</td>
+                      <td class="govuk-table__cell">11 April 2024, 14:05</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2024.1000285" href="/decision/vnet/protected/bip-notifications/CHEDD.GB.2024.1000285/hub" target="_self">
+                          CHEDD.GB.2024.1000285
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">EAST MIDLANDS AIRPORT</td>
+                      <td class="govuk-table__cell">11 April 2024, 19:30</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000291" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000291/hub" target="_self">
+                          CHEDA.GB.2024.1000291
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER</td>
+                      <td class="govuk-table__cell">11 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000296" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000296/hub" target="_self">
+                          CHEDA.GB.2024.1000296
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER</td>
+                      <td class="govuk-table__cell">11 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDD.GB.2024.1000058" href="/decision/vnet/protected/bip-notifications/CHEDD.GB.2024.1000058/hub" target="_self">
+                          CHEDD.GB.2024.1000058
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">FISHGUARD</td>
+                      <td class="govuk-table__cell">11 April 2024, 22:50</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-not-required">
+                          NO INSPECTION
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000517" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000517/hub" target="_self">
+                          CHEDA.GB.2024.1000517
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">EAST MIDLANDS AIRPORT</td>
+                      <td class="govuk-table__cell">12 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000133" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000133/hub" target="_self">
+                          CHEDA.GB.2024.1000133
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER</td>
+                      <td class="govuk-table__cell">12 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000112" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000112/hub" target="_self">
+                          CHEDA.GB.2024.1000112
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER</td>
+                      <td class="govuk-table__cell">12 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000029" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000029/hub" target="_self">
+                          CHEDA.GB.2024.1000029
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER</td>
+                      <td class="govuk-table__cell">12 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDA.GB.2024.1000297" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1000297/hub" target="_self">
+                          CHEDA.GB.2024.1000297
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">MANCHESTER AIRPORT</td>
+                      <td class="govuk-table__cell">12 April 2024, 22:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000241" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000241/hub" target="_self">
+                          CHEDP.GB.2024.1000241
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">Sevington BCP</td>
+                      <td class="govuk-table__cell">13 April 2024, 01:01</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">Medium</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000247" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000247/hub" target="_self">
+                          CHEDP.GB.2024.1000247
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">Sevington BCP</td>
+                      <td class="govuk-table__cell">13 April 2024, 01:01</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">High</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000292" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000292/hub" target="_self">
+                          CHEDP.GB.2024.1000292
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">East Midlands Airport</td>
+                      <td class="govuk-table__cell">13 April 2024, 14:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-inconclusive">
+                          INCONCLUSIVE
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">High</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000280" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000280/hub" target="_self">
+                          CHEDP.GB.2024.1000280
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">East Midlands Airport</td>
+                      <td class="govuk-table__cell">13 April 2024, 14:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">Medium</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell reference-number-cell">
+                        <a rel="noopener noreferrer" class="govuk-link" id="view-details-CHEDP.GB.2024.1000281" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1000281/hub" target="_self">
+                          CHEDP.GB.2024.1000281
+                        </a>
+                      </td>
+                      <td class="govuk-table__cell">East Midlands Airport</td>
+                      <td class="govuk-table__cell">13 April 2024, 15:00</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--inspection-required">
+                          INSPECT
+                        </strong>
+                      </td>
+                      <td class="govuk-table__cell">Medium</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav class="pagination" aria-label="Pagination">
+              <ul class="pagination-list">
+                <li class="pagination-item pagination-item-next">
+                        <a href="/decision/vnet/protected/bip-notifications/high-priority-tasks-documentary?page=2" class="pagination-link" rel="next" id="next-page">
+                      <span class="pagination-link-title">
+                         Next page
+                        <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                          <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                        </svg>
+                      </span>
+                    <span class="govuk-visually-hidden">:</span>
+                    <span class="pagination-link-label">2 of 12</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
