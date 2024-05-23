@@ -1,0 +1,204 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Addresses – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="traders-page">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Traders</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Addresses</h1>
+
+      <form action="11-transport-to-poe" method="post">
+        <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
+        <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
+        <input name="14-addresses" type="hidden" value="visited">
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">
+            Consignor or exporter
+          </h2>
+          <p class="govuk-hint">This is the sender of the consignment.</p>
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                <th class="govuk-table__header col-edit" id="consignor-edit">
+                  <span class="govuk-visually-hidden">Change link</span>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="govuk-table__cell col-name" headers="consignor-name">
+                  Produkty Mięsne Fm
+                </td>
+                <td class="govuk-table__cell col-address" headers="consignor-address">
+                  90 Bazar Ulica , Apt. 924, Wroclaw, 48721
+                </td>
+                <td class="govuk-table__cell col-country" headers="consignor-country">
+                  Poland
+                </td>
+                <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignor/search" class="govuk-link" id="edit-consignor">Change</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">
+            Consignee
+          </h2>
+          <p class="govuk-hint">This is the receiver or buyer of the consignment being shipped or transported.</p>
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
+              <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header col-name" id="consignee-name">Name</th>
+                <th class="govuk-table__header col-address" id="consignee-address">Address</th>
+                <th class="govuk-table__header col-country" id="consignee-country">Country</th>
+                <th class="govuk-table__header col-edit" id="consignee-edit">
+                  <span class="govuk-visually-hidden">Change link</span>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="govuk-table__cell col-name" headers="consignee-name">
+                  ABC goods Ltd
+                </td>
+                <td class="govuk-table__cell col-address" headers="consignee-address">
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                </td>
+                <td class="govuk-table__cell col-country" headers="consignee-country">
+                  United Kingdom of Great Britain and Northern Ireland
+                </td>
+                <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/consignee/search" class="govuk-link" id="edit-consignee">Change</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">
+            Importer
+          </h2>
+          <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-importer">
+              <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header col-name" id="importer-name">Name</th>
+                <th class="govuk-table__header col-address" id="importer-address">Address</th>
+                <th class="govuk-table__header col-country" id="importer-country">Country</th>
+                <th class="govuk-table__header col-edit" id="importer-edit">
+                  <span class="govuk-visually-hidden">Change link</span>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="govuk-table__cell col-name" headers="importer-name">
+                  ABC goods Ltd
+                </td>
+                <td class="govuk-table__cell col-address" headers="importer-address">
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                </td>
+                <td class="govuk-table__cell col-country" headers="importer-country">
+                  United Kingdom of Great Britain and Northern Ireland
+                </td>
+                <td class="govuk-table__cell col-edit text-align-right" headers="importer-edit">
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/importer/search" class="govuk-link" id="edit-importer">Change</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">
+            Place of destination
+          </h2>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Providing a false address is an act of fraud.
+            </strong>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+          <p class="govuk-hint">This is where the consignment will be sent for final unloading, and must be in Great Britain. If this is not the same as the consignee or importer, select a different address.</p>
+          </div></div>
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-place-of-destination">
+              <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header col-name" id="place-of-destination-name">Name</th>
+                <th class="govuk-table__header col-address" id="place-of-destination-address">Address</th>
+                <th class="govuk-table__header col-country" id="place-of-destination-country">Country</th>
+                <th class="govuk-table__header col-edit" id="place-of-destination-edit">
+                  <span class="govuk-visually-hidden">Change link</span>
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="govuk-table__cell col-name" headers="place-of-destination-name">
+                  ABC goods Ltd
+                </td>
+                <td class="govuk-table__cell col-address" headers="place-of-destination-address">
+                  0112 Thiel Causeway, Apt. 388, Nevada, Grimesport, GM6 7BY
+                </td>
+                <td class="govuk-table__cell col-country" headers="place-of-destination-country">
+                  United Kingdom of Great Britain and Northern Ireland
+                </td>
+                <td class="govuk-table__cell col-edit text-align-right" headers="place-of-destination-edit">
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1056556/traders/final-destination/search" class="govuk-link" id="edit-place-of-destination">Change</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="save-and-submit-buttons">
+          <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
+          <p class="govuk-body"><a class="govuk-link" href="07-check-answers-orig">Cancel and return to hub</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}
