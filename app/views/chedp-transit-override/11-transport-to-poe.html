@@ -45,113 +45,59 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
             <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
         </div>
 
+        <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0 govuk-!-margin-bottom-2">
+          Means of transport to port of entry
+        </h2>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="transport-means-before">
+              <span class="govuk-visually-hidden">Choose from:</span>
+          </label>
+          
+          <select class="govuk-select govuk-!-width-one-half" id="transport-means-before" name="transport-means-before">
+              <option value="">Select means of transport to port of entry</option>
+                <option value="plane">Airplane</option>
+                <option value="rail">Railway</option>
+                <option value="road">Road vehicle</option>
+                <option value="ship">Vessel</option>
+          </select>
+        </div>
+
+        
         <div class="govuk-form-group ">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                Means of transport to port of entry
-              </h2>
-            </legend>
-            <div id="contact-hint" class="govuk-hint">
-              Select one option.
-            </div>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="transport-airplane" name="means-of-transport" type="radio" value="airplane" data-aria-controls="conditional-flight-number">
-                <label class="govuk-label govuk-radios__label" for="transport-airplane">
-                  Airplane
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-flight-number">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="flight-number">
-                    Flight number
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="flight-number" name="flight-number" type="text" spellcheck="false">
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="transport-railway" name="means-of-transport" type="radio" value="railway" data-aria-controls="conditional-train-number">
-                <label class="govuk-label govuk-radios__label" for="transport-railway">
-                  Railway
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-train-number">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="train-number">
-                    Train number
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="train-number" name="train-number" type="text">
-                </div>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="train-number">
-                    Vehicle registration number
-                  </label>
-                  <div id="contact-hint" class="govuk-hint">
-                    Leave blank if only using a trailer
-                  </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="vehicle-registration-number" name="vehicle-registration-number" type="text">
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="transport-road-vehicle" name="means-of-transport" type="radio" value="vehicle" data-aria-controls="conditional-vehicle-registration-number">
-                <label class="govuk-label govuk-radios__label" for="transport-road-vehicle">
-                  Road vehicle
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vehicle-registration-number">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="train-number">
-                    Vehicle registration number
-                  </label>
-                  <div id="contact-hint" class="govuk-hint">
-                    Leave blank if only using a trailer
-                  </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="vehicle-registration-number" name="vehicle-registration-number" type="text">
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="transport-vessel" name="means-of-transport" type="radio" value="vessel" data-aria-controls="conditional-vessel-name">
-                <label class="govuk-label govuk-radios__label" for="transport-vessel">
-                  Vessel
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vessel-name">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="vessel-name">
-                    Vessel or ferry name
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
-                </div>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="train-number">
-                    Vehicle registration number
-                  </label>
-                  <div id="contact-hint" class="govuk-hint">
-                    Leave blank if only using a trailer
-                  </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="vehicle-registration-number" name="vehicle-registration-number" type="text">
-                </div>
-              </div>
-            </div>
-          </fieldset>
+            
+          <label class="govuk-label govuk-label--m" for="document">
+            Transport identification
+          </label>
+          
+      
+          <div id="document-hint" class="govuk-hint govuk-!-width-two-thirds">
+            <p class="govuk-hint">To identify the means of transport, enter (one of the following):</p>
+            <ul>
+              <li>flight number</li>
+              <li>train number</li>
+              <li>road vehicle registration number</li>
+              <li>vessel name (for ferries, also the road vehicle registration number)</li>
+            </ul>
+          </div>
+      
+          <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
         </div>
 
         <div class="govuk-form-group ">
           <fieldset class="govuk-fieldset" aria-describedby="road-trailers-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                Will the consignment use road trailers?
+              <h2 class="govuk-fieldset__heading govuk-!-width-two-thirds">
+                Are any road trailers or shipping containers being used to transport the consignment?
               </h2>
             </legend>
             <div id="road-trailers-hint" class="govuk-hint govuk-!-width-two-thirds">
-              Provide details of all road trailers or your consignment may be delayed. You may need to contact your haulier for this.
+              Provide details of all road trailers and containers or your consignment may be delayed. You may need to contact your haulier for this.
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="road-trailers" name="road-trailers" type="radio" value="yes" data-aria-controls="conditional-road-trailers">
                 <label class="govuk-label govuk-radios__label" for="road-trailers">
-                  Yes &ndash; add now
+                  Yes
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-road-trailers">
@@ -160,8 +106,11 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="vessel-name">
-                    Trailer registration number
+                    Container or trailer number
                   </label>
+                  <div class="govuk-hint govuk-!-width-two-thirds">
+                    Enter the container identification number, or the trailer registration number or number plate.
+                  </div>
                   <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
                 </div>
                 <div class="govuk-form-group">
@@ -174,36 +123,24 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                   <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
                 </div>
                 <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                     <label class="govuk-label" for="vessel-name">
-                      Does it have an official seal?
+                      Official seal
                     </label>
-                    <div class="govuk-hint govuk-!-width-two-thirds">
+                    <div id="waste-hint" class="govuk-hint govuk-!-width-two-thirds">
                       An official seal is affixed under the supervision of the competent authority issuing the certificate.
                     </div>
-                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-                        <label class="govuk-label govuk-radios__label" for="changedName">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          No
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                          
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
-                <p class="govuk-body govuk-!-margin-top-3 govuk-!-padding-bottom-3"><a href="#" class="govuk-link">Add another trailer</a></p>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="road-trailers-2" name="road-trailers" type="radio" value="yeslater">
-                <label class="govuk-label govuk-radios__label" for="road-trailers-2">
-                  Yes &ndash; add details later
-                </label>
+                <p class="govuk-body govuk-!-margin-top-3 govuk-!-padding-bottom-3"><a href="#" class="govuk-link">Add another container</a></p>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="no">
@@ -214,77 +151,6 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
           </fieldset>
         </div>
-
-        <div class="govuk-form-group ">
-          <fieldset class="govuk-fieldset" aria-describedby="shipping-containers-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                Will your goods be imported in shipping containers?
-              </h2>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="shipping-containers" name="shipping-containers" type="radio" value="yes" data-aria-controls="conditional-shipping-containers">
-                <label class="govuk-label govuk-radios__label" for="shipping-containers">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-shipping-containers">
-                <div class="govuk-hint govuk-!-width-two-thirds">
-                  <!--Provide a container number or seal number.-->
-                </div>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="vessel-name">
-                    Container number
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
-                </div>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="vessel-name">
-                    Seal number
-                  </label>
-                  <div class="govuk-hint govuk-!-width-two-thirds">
-                    Enter the seal number on the official certificate or any other seal mentioned in the accompanying documents.
-                  </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
-                </div>
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
-                    <label class="govuk-label" for="vessel-name">
-                      Does it have an official seal?
-                    </label>
-                    <div class="govuk-hint govuk-!-width-two-thirds">
-                      An official seal is affixed under the supervision of the competent authority issuing the certificate.
-                    </div>
-                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-                        <label class="govuk-label govuk-radios__label" for="changedName">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="changedName-2">
-                          No
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-                <p class="govuk-body govuk-!-margin-top-3 govuk-!-padding-bottom-3"><a href="#" class="govuk-link">Add another trailer</a></p>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="shipping-containers-2" name="shipping-containers" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="shipping-containers-2">
-                  No
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-        
         
 
         <div class="govuk-form-group ">
