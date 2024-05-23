@@ -1,0 +1,2073 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Your import notifications
+        {# <span class="govuk-caption-xl">{{releaseVersion}}</span> #}
+      </h1>{{releaseVersion | log }}
+      <form action="/notification/vnet/protected/notifications" method="post" id="homeForm">
+        <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
+          Create a new notification
+        </button>
+          <a class="govuk-button notification-button" id="search-to-clone" href="/notification/vnet/protected/notifications/cloning/search">Search to clone</a>
+      </form>
+
+      <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box" style="border: 5px solid #1d70b8; margin-top: 25px; margin-bottom: 30px; padding:  15px 10px; font-size: 1.1875rem;
+    line-height: 1.31579; ">
+              {# <h2 class="govuk-heading-m alert-dashboard-summary-heading">My alerts</h2> #}
+          <ul class="alert-dashboard-summary-list" id="alert-dashboard-summary-list">
+                  <li>
+                          <a id="alert-description-ALL" href="#search-results" style="font-weight: 700;">35 drafts received from your company system to complete</a>
+                  </li>
+
+          </ul>
+      </div>
+
+      <div id="existing-notifications">
+        <form action="/notification/vnet/protected/notifications/search" method="post" id="searchAndFilterForm">
+          <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+          <div class="govuk-form-group search-panel">
+            <input class="button search-hidden" type="submit" value="hidden-search">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <h3 class="govuk-heading-m">Search certificates by</h3>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+              <div class="govuk-grid-column-one-third ">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="certificate-number">Certificate number / keywords</label>
+                  <input class="govuk-input" id="certificate-number" name="certificate-number" type="text" value="">
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="bcp">Border Control Post (BCP)</label>
+                  <select class="govuk-select govuk-!-width-full" id="bcp" name="bcp">
+                    <option value="">All</option>
+                      <option value="GBBEL1-Belfast Airport">
+                        Belfast Airport - GBBEL1
+                      </option>
+                      <option value="GBBEL4-Belfast Port">
+                        Belfast Port - GBBEL4
+                      </option>
+                      <option value="fdsaf-Belfast Port">
+                        Belfast Port - fdsaf
+                      </option>
+                      <option value="GBBXH4PP-Birmingham International Airport (plants)">
+                        Birmingham International Airport (plants) - GBBXH4PP
+                      </option>
+                      <option value="GBBRS1-Bristol">
+                        Bristol - GBBRS1
+                      </option>
+                      <option value="REL95-Chicken Solutions">
+                        Chicken Solutions - REL95
+                      </option>
+                      <option value="CONPNT-Control Point">
+                        Control Point - CONPNT
+                      </option>
+                      <option value="GBDSA4P-Doncaster Sheffield Airport">
+                        Doncaster Sheffield Airport - GBDSA4P
+                      </option>
+                      <option value="GBDOV2P-Dover Harbour (Deep Sea Terminal)">
+                        Dover Harbour (Deep Sea Terminal) - GBDOV2P
+                      </option>
+                      <option value="GBDOV1P-Dover Port">
+                        Dover Port - GBDOV1P
+                      </option>
+                      <option value="GBDOV1PP-Dover Port (plants)">
+                        Dover Port (plants) - GBDOV1PP
+                      </option>
+                      <option value="GBEMA4-East Midlands Airport">
+                        East Midlands Airport - GBEMA4
+                      </option>
+                      <option value="GBEMA4PP-East Midlands Airport (plants)">
+                        East Midlands Airport (plants) - GBEMA4PP
+                      </option>
+                      <option value="GBEDI4-Edinburgh Airport (animals)">
+                        Edinburgh Airport (animals) - GBEDI4
+                      </option>
+                      <option value="GBFXT1-Felixstowe">
+                        Felixstowe - GBFXT1
+                      </option>
+                      <option value="GBFXT1PP-Felixstowe (plants)">
+                        Felixstowe (plants) - GBFXT1PP
+                      </option>
+                      <option value="GBLGW1-Gatwick Airport">
+                        Gatwick Airport - GBLGW1
+                      </option>
+                      <option value="GBLGW4-Gatwick Airport (animals)">
+                        Gatwick Airport (animals) - GBLGW4
+                      </option>
+                      <option value="GBLGW4PP-Gatwick Airport (plants)">
+                        Gatwick Airport (plants) - GBLGW4PP
+                      </option>
+                      <option value="GBHUL1G-Goole">
+                        Goole - GBHUL1G
+                      </option>
+                      <option value="GBGSY1-Grimsby and Immingham">
+                        Grimsby and Immingham - GBGSY1
+                      </option>
+                      <option value="GBHRW1P-Harwich">
+                        Harwich - GBHRW1P
+                      </option>
+                      <option value="GBLHR1P-Heathrow Airport - APH (products)">
+                        Heathrow Airport - APH (products) - GBLHR1P
+                      </option>
+                      <option value="GBLHR4P-Heathrow Airport - Eurobip (products)">
+                        Heathrow Airport - Eurobip (products) - GBLHR4P
+                      </option>
+                      <option value="GBLHR4A-Heathrow Airport (animals)">
+                        Heathrow Airport (animals) - GBLHR4A
+                      </option>
+                      <option value="GBLHR4PP-Heathrow Airport (plants)">
+                        Heathrow Airport (plants) - GBLHR4PP
+                      </option>
+                      <option value="GBHUL1H-Hull">
+                        Hull - GBHUL1H
+                      </option>
+                      <option value="GBIVG1-Invergordon">
+                        Invergordon - GBIVG1
+                      </option>
+                      <option value="GBIPS1P-Ipswich">
+                        Ipswich - GBIPS1P
+                      </option>
+                      <option value="GBLIV1-Liverpool">
+                        Liverpool - GBLIV1
+                      </option>
+                      <option value="GBLIV1PP-Liverpool (plants)">
+                        Liverpool (plants) - GBLIV1PP
+                      </option>
+                      <option value="GBLGP1-London Gateway">
+                        London Gateway - GBLGP1
+                      </option>
+                      <option value="GBLGP1PP-London Gateway (plants)">
+                        London Gateway (plants) - GBLGP1PP
+                      </option>
+                      <option value="GBLTN4PP-London Luton Airport (plants)">
+                        London Luton Airport (plants) - GBLTN4PP
+                      </option>
+                      <option value="GBLSH1-London Sheerness">
+                        London Sheerness - GBLSH1
+                      </option>
+                      <option value="GBTHP1-London Thamesport">
+                        London Thamesport - GBTHP1
+                      </option>
+                      <option value="GBTHP1PP-London Thamesport (plants)">
+                        London Thamesport (plants) - GBTHP1PP
+                      </option>
+                      <option value="GBTIL1-London Tilbury">
+                        London Tilbury - GBTIL1
+                      </option>
+                      <option value="GBTIL1PP-London Tilbury (plants)">
+                        London Tilbury (plants) - GBTIL1PP
+                      </option>
+                      <option value="GBMNC1-Manchester airport">
+                        Manchester airport - GBMNC1
+                      </option>
+                      <option value="GBMNC4-Manchester Airport (animals)">
+                        Manchester Airport (animals) - GBMNC4
+                      </option>
+                      <option value="GBMNC4PP-Manchester Airport (plants)">
+                        Manchester Airport (plants) - GBMNC4PP
+                      </option>
+                      <option value="GBMEP1P-Manchester Ellesmere port">
+                        Manchester Ellesmere port - GBMEP1P
+                      </option>
+                      <option value="GBPHD1-Peterhead">
+                        Peterhead - GBPHD1
+                      </option>
+                      <option value="IMTA74563-PopCorn Christmas LTD">
+                        PopCorn Christmas LTD - IMTA74563
+                      </option>
+                      <option value="TOK321-PopCorn Christmas LTD">
+                        PopCorn Christmas LTD - TOK321
+                      </option>
+                      <option value="GBPME1P-Portsmouth">
+                        Portsmouth - GBPME1P
+                      </option>
+                      <option value="GBPME1PP-Portsmouth (plants)">
+                        Portsmouth (plants) - GBPME1PP
+                      </option>
+                      <option value="GBPIK4-Prestwick Airport (animals)">
+                        Prestwick Airport (animals) - GBPIK4
+                      </option>
+                      <option value="GBSOU1-Southampton">
+                        Southampton - GBSOU1
+                      </option>
+                      <option value="GBSOU1PP-Southampton (plants)">
+                        Southampton (plants) - GBSOU1PP
+                      </option>
+                      <option value="GBSTN4A-Stansted Airport (animals)">
+                        Stansted Airport (animals) - GBSTN4A
+                      </option>
+                      <option value="GBSTN4PP-Stansted Airport (plants)">
+                        Stansted Airport (plants) - GBSTN4PP
+                      </option>
+                      <option value="GBSTN4P-Stansted Airport (products)">
+                        Stansted Airport (products) - GBSTN4P
+                      </option>
+                      <option value="IMTA-9198-Tea cup Limited">
+                        Tea cup Limited - IMTA-9198
+                      </option>
+                      <option value="GBTEE1P-Teesport">
+                        Teesport - GBTEE1P
+                      </option>
+                      <option value="GBTYN4P-Tyne">
+                        Tyne - GBTYN4P
+                      </option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="certificate-status">Certificate status</label>
+                  <select class="govuk-select govuk-!-width-full" id="certificate-status" name="certificate-status">
+                    <option value="">All</option>
+                      <option value="DRAFT">
+                        Draft
+                      </option>
+                      <option value="NEW">
+                        New
+                      </option>
+                      <option value="SUBMITTED">
+                        Submitted
+                      </option>
+                      <option value="AMEND">
+                        Amend
+                      </option>
+                      <option value="IN_PROGRESS">
+                        In Progress
+                      </option>
+                      <option value="VALIDATED">
+                        Valid
+                      </option>
+                      <option value="REJECTED">
+                        Rejected
+                      </option>
+                      <option value="CANCELLED">
+                        Cancelled
+                      </option>
+                      <option value="REPLACED">
+                        Replaced
+                      </option>
+                      <option value="PARTIALLY_REJECTED">
+                        Partially Rejected
+                      </option>
+                      <option value="SPLIT_CONSIGNMENT">
+                        Split Consignment
+                      </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="country-of-origin">Country of origin</label>
+                  <select class="govuk-select govuk-!-width-full" id="country-of-origin" name="country-of-origin">
+                      <optgroup label="Countries">
+                        <option value="">
+                          All
+                        </option>
+                        <option value="EEA">
+                          European Union/EEA and Northern Ireland
+                        </option>
+                        <option value="GB-CI">
+                          Great Britain and Channel Islands
+                        </option>
+                        <option value="ROW">
+                          Rest of World
+                        </option>
+                      </optgroup>
+                      <optgroup label="Country">
+                          <option value="AF">Afghanistan</option>
+                          <option value="AX">Aland Islands</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AS">American Samoa</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AQ">Antarctica</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AW">Aruba</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                          <option value="BA">Bosnia and Herzegovina</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BV">Bouvet Island</option>
+                          <option value="BR">Brazil</option>
+                          <option value="IO">British Indian Ocean Territory</option>
+                          <option value="VG">British Virgin Islands</option>
+                          <option value="BN">Brunei</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="BF">Burkina Faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CA">Canada</option>
+                          <option value="ES-CN">Canary Islands</option>
+                          <option value="CV">Cape Verde</option>
+                          <option value="KY">Cayman Islands</option>
+                          <option value="CF">Central African Republic</option>
+                          <option value="TD">Chad</option>
+                          <option value="CL">Chile</option>
+                          <option value="CN">China</option>
+                          <option value="CX">Christmas Island</option>
+                          <option value="CC">Cocos (Keeling) Islands</option>
+                          <option value="CO">Colombia</option>
+                          <option value="KM">Comoros</option>
+                          <option value="CG">Congo</option>
+                          <option value="CK">Cook Islands</option>
+                          <option value="CR">Costa Rica</option>
+                          <option value="CI">Côte d'Ivoire</option>
+                          <option value="HR">Croatia</option>
+                          <option value="CU">Cuba</option>
+                          <option value="CW">Curaçao</option>
+                          <option value="CY">Cyprus</option>
+                          <option value="CZ">Czech Republic</option>
+                          <option value="CD">Democratic Republic of the Congo</option>
+                          <option value="DK">Denmark</option>
+                          <option value="DJ">Djibouti</option>
+                          <option value="DM">Dominica</option>
+                          <option value="DO">Dominican Republic</option>
+                          <option value="EC">Ecuador</option>
+                          <option value="EG">Egypt</option>
+                          <option value="SV">El Salvador</option>
+                          <option value="GQ">Equatorial Guinea</option>
+                          <option value="ER">Eritrea</option>
+                          <option value="EE">Estonia</option>
+                          <option value="SZ">Eswatini</option>
+                          <option value="ET">Ethiopia</option>
+                          <option value="FK">Falkland Islands</option>
+                          <option value="FO">Faroe Islands</option>
+                          <option value="FJ">Fiji</option>
+                          <option value="FI">Finland</option>
+                          <option value="FR">France</option>
+                          <option value="GF">French Guiana</option>
+                          <option value="PF">French Polynesia</option>
+                          <option value="TF">French Southern Territories</option>
+                          <option value="GA">Gabon</option>
+                          <option value="GE">Georgia</option>
+                          <option value="DE">Germany</option>
+                          <option value="GH">Ghana</option>
+                          <option value="GI">Gibraltar</option>
+                          <option value="GR">Greece</option>
+                          <option value="GL">Greenland</option>
+                          <option value="GD">Grenada</option>
+                          <option value="GP">Guadeloupe</option>
+                          <option value="GU">Guam</option>
+                          <option value="GT">Guatemala</option>
+                          <option value="GG">Guernsey</option>
+                          <option value="GN">Guinea</option>
+                          <option value="GW">Guinea-Bissau</option>
+                          <option value="GY">Guyana</option>
+                          <option value="HT">Haiti</option>
+                          <option value="HM">Heard Island and McDonald Islands</option>
+                          <option value="VA">Holy See</option>
+                          <option value="HN">Honduras</option>
+                          <option value="HK">Hong Kong</option>
+                          <option value="HU">Hungary</option>
+                          <option value="IS">Iceland</option>
+                          <option value="IN">India</option>
+                          <option value="ID">Indonesia</option>
+                          <option value="IR">Iran</option>
+                          <option value="IQ">Iraq</option>
+                          <option value="IE">Ireland</option>
+                          <option value="IM">Isle of Man</option>
+                          <option value="IL">Israel</option>
+                          <option value="IT">Italy</option>
+                          <option value="JM">Jamaica</option>
+                          <option value="JP">Japan</option>
+                          <option value="JE">Jersey</option>
+                          <option value="JO">Jordan</option>
+                          <option value="KZ">Kazakhstan</option>
+                          <option value="KE">Kenya</option>
+                          <option value="KI">Kiribati</option>
+                          <option value="XK">Kosovo</option>
+                          <option value="KW">Kuwait</option>
+                          <option value="KG">Kyrgyzstan</option>
+                          <option value="LA">Laos</option>
+                          <option value="LV">Latvia</option>
+                          <option value="LB">Lebanon</option>
+                          <option value="LS">Lesotho</option>
+                          <option value="LR">Liberia</option>
+                          <option value="LY">Libya</option>
+                          <option value="LI">Liechtenstein</option>
+                          <option value="LT">Lithuania</option>
+                          <option value="LU">Luxembourg</option>
+                          <option value="MO">Macao</option>
+                          <option value="MG">Madagascar</option>
+                          <option value="MW">Malawi</option>
+                          <option value="MY">Malaysia</option>
+                          <option value="MV">Maldives</option>
+                          <option value="ML">Mali</option>
+                          <option value="MT">Malta</option>
+                          <option value="MH">Marshall Islands</option>
+                          <option value="MQ">Martinique</option>
+                          <option value="MR">Mauritania</option>
+                          <option value="MU">Mauritius</option>
+                          <option value="YT">Mayotte</option>
+                          <option value="MX">Mexico</option>
+                          <option value="FM">Micronesia</option>
+                          <option value="MD">Moldova</option>
+                          <option value="MC">Monaco</option>
+                          <option value="MN">Mongolia</option>
+                          <option value="ME">Montenegro</option>
+                          <option value="MS">Montserrat</option>
+                          <option value="MA">Morocco</option>
+                          <option value="MZ">Mozambique</option>
+                          <option value="MM">Myanmar</option>
+                          <option value="NA">Namibia</option>
+                          <option value="NR">Nauru</option>
+                          <option value="NP">Nepal</option>
+                          <option value="NL">Netherlands</option>
+                          <option value="NC">New Caledonia</option>
+                          <option value="NZ">New Zealand</option>
+                          <option value="NI">Nicaragua</option>
+                          <option value="NE">Niger</option>
+                          <option value="NG">Nigeria</option>
+                          <option value="NU">Niue</option>
+                          <option value="NF">Norfolk Island</option>
+                          <option value="KP">North Korea</option>
+                          <option value="MK">North Macedonia</option>
+                          <option value="MP">Northern Mariana Islands</option>
+                          <option value="NO">Norway</option>
+                          <option value="OM">Oman</option>
+                          <option value="PK">Pakistan</option>
+                          <option value="PW">Palau</option>
+                          <option value="PA">Panama</option>
+                          <option value="PG">Papua New Guinea</option>
+                          <option value="PY">Paraguay</option>
+                          <option value="PE">Peru</option>
+                          <option value="PH">Philippines</option>
+                          <option value="PN">Pitcairn</option>
+                          <option value="PL">Poland</option>
+                          <option value="PT">Portugal</option>
+                          <option value="PR">Puerto Rico</option>
+                          <option value="QA">Qatar</option>
+                          <option value="RE">Réunion</option>
+                          <option value="RO">Romania</option>
+                          <option value="RU">Russian Federation</option>
+                          <option value="RW">Rwanda</option>
+                          <option value="WS">Samoa</option>
+                          <option value="SM">San Marino</option>
+                          <option value="ST">Sao Tome and Principe</option>
+                          <option value="SA">Saudi Arabia</option>
+                          <option value="SN">Senegal</option>
+                          <option value="RS">Serbia</option>
+                          <option value="SC">Seychelles</option>
+                          <option value="SL">Sierra Leone</option>
+                          <option value="SG">Singapore</option>
+                          <option value="SK">Slovakia</option>
+                          <option value="SI">Slovenia</option>
+                          <option value="SB">Solomon Islands</option>
+                          <option value="SO">Somalia</option>
+                          <option value="ZA">South Africa</option>
+                          <option value="GS">South Georgia and the South Sandwich Islands</option>
+                          <option value="KR">South Korea</option>
+                          <option value="SS">South Sudan</option>
+                          <option value="ES">Spain</option>
+                          <option value="LK">Sri Lanka</option>
+                          <option value="BL">St Barthélemy</option>
+                          <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                          <option value="KN">St Kitts and Nevis</option>
+                          <option value="LC">St Lucia</option>
+                          <option value="SX">St Maarten (Dutch)</option>
+                          <option value="MF">St Martin (French)</option>
+                          <option value="PM">St Pierre and Miquelon</option>
+                          <option value="VC">St Vincent and the Grenadines</option>
+                          <option value="SD">Sudan</option>
+                          <option value="SR">Suriname</option>
+                          <option value="SE">Sweden</option>
+                          <option value="CH">Switzerland</option>
+                          <option value="SY">Syria</option>
+                          <option value="TW">Taiwan</option>
+                          <option value="TJ">Tajikistan</option>
+                          <option value="TZ">Tanzania</option>
+                          <option value="TH">Thailand</option>
+                          <option value="GM">The Gambia</option>
+                          <option value="PS">The Occupied Palestinian Territories</option>
+                          <option value="TL">Timor-Leste</option>
+                          <option value="TG">Togo</option>
+                          <option value="TK">Tokelau</option>
+                          <option value="TO">Tonga</option>
+                          <option value="TT">Trinidad and Tobago</option>
+                          <option value="TN">Tunisia</option>
+                          <option value="TR">Turkey</option>
+                          <option value="TM">Turkmenistan</option>
+                          <option value="TC">Turks and Caicos Islands</option>
+                          <option value="TV">Tuvalu</option>
+                          <option value="UG">Uganda</option>
+                          <option value="UA">Ukraine</option>
+                          <option value="AE">United Arab Emirates</option>
+                          <option value="UM">United States Minor Outlying Islands</option>
+                          <option value="US">United States of America</option>
+                          <option value="UY">Uruguay</option>
+                          <option value="UZ">Uzbekistan</option>
+                          <option value="VU">Vanuatu</option>
+                          <option value="VE">Venezuela</option>
+                          <option value="VN">Viet Nam</option>
+                          <option value="VI">Virgin Islands of the United States</option>
+                          <option value="WF">Wallis and Futuna</option>
+                          <option value="EH">Western Sahara</option>
+                          <option value="YE">Yemen</option>
+                          <option value="ZM">Zambia</option>
+                          <option value="ZW">Zimbabwe</option>
+                      </optgroup>
+                      <optgroup label="United Kingdom of Great Britain and Northern Ireland">
+                          <option value="GB-ENG">England</option>
+                          <option value="GB-SCT">Scotland</option>
+                          <option value="GB-WLS">Wales</option>
+                          <option value="GB-NIR">Northern Ireland</option>
+                      </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third ">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="consignee">Consignee / Importer</label>
+                  <input class="govuk-input" id="consignee" name="consignee" type="text" value="">
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="certificate-type">Certificate type</label>
+                  <select class="govuk-select govuk-!-width-full" id="certificate-type" name="certificate-type">
+                    <option value="">All</option>
+                      <option value="CVEDA">
+                        CHED-A
+                      </option>
+                      <option value="CVEDP">
+                        CHED-P
+                      </option>
+                      <option value="CED">
+                        CHED-D
+                      </option>
+                      <option value="CHEDPP">
+                        CHED-PP
+                      </option>
+                      <option value="IMP">
+                        Import from the EU
+                      </option>
+                      <option value="IMPA">
+                        IMP-Animals
+                      </option>
+                      <option value="IMPP">
+                        IMP-POAO
+                      </option>
+                      <option value="IMPD">
+                        IMP-HRFNAO
+                      </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-5">
+              <div class="govuk-grid-column-one-third">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Arrival / Import date range</legend>
+                  <div class="govuk-form-group">
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="today" id="button-today">Today</button>
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="tomorrow" id="button-tomorrow">Tomorrow</button>
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="next-seven-days" id="button-next-seven-days">Next seven days</button>
+                    <button type="submit" class="link-button govuk-!-display-block" name="date-range" value="clear-range" id="button-clear-date-range">Clear date range</button>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Start date range</legend>
+                    <div class="govuk-date-input" id="start-date">
+
+                      <div class="govuk-date-input__item date-input-day">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item date-input-month">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item date-input-year">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                    </div>
+                  </fieldset>
+                </div>        </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">End date range</legend>
+                    <div class="govuk-date-input" id="end-date">
+
+                      <div class="govuk-date-input__item date-input-day">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-day" value="" name="end-date-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item date-input-month">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-month" value="" name="end-date-month" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item date-input-year">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="end-date-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-date-year" value="" name="end-date-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+
+                    </div>
+                  </fieldset>
+                </div>        </div>
+            </div>
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <input class="govuk-button govuk-!-margin-0" id="search-notifications" type="submit" value="Search" data-module="govuk-button">
+                <a href="/notification/vnet/protected/notifications?searchClear=true" class="govuk-link clear-link">Clear</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+{# list #}
+
+    <div class="notification-list" id="search-results">
+        <p class="govuk-heading-s govuk-!-margin-bottom-2">
+          <span id="notification-count">51442</span>
+            results
+        </p>
+
+          <div class="table-responsive">
+            <table id="notifications-table" class="govuk-!-width-full govuk-table">
+              <tbody>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1019673
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-0">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-0">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-0">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1019673/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1019673" name="submit-param" value="CHEDP.GB.2021.1019673">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1019673" name="viewDetails" value="CHEDP.GB.2021.1019673">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1019673" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1019673/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1024852
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-1">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-1">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-1">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1024852/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1024852" name="submit-param" value="CHEDP.GB.2021.1024852">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1024852" name="viewDetails" value="CHEDP.GB.2021.1024852">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1024852" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1024852/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1022050
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-2">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-2">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-2">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022050/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1022050" name="submit-param" value="CHEDP.GB.2021.1022050">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1022050" name="viewDetails" value="CHEDP.GB.2021.1022050">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1022050" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022050/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1022361
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-3">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-3">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-3">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022361/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1022361" name="submit-param" value="CHEDP.GB.2021.1022361">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1022361" name="viewDetails" value="CHEDP.GB.2021.1022361">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1022361" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022361/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1027497
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-4">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-4">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-4">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1027497/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1027497" name="submit-param" value="CHEDP.GB.2021.1027497">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1027497" name="viewDetails" value="CHEDP.GB.2021.1027497">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1027497" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1027497/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1026269
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-5">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-5">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-5">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1026269/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1026269" name="submit-param" value="CHEDP.GB.2021.1026269">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1026269" name="viewDetails" value="CHEDP.GB.2021.1026269">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1026269" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1026269/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1026327
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-6">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-6">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-6">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1026327/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1026327" name="submit-param" value="CHEDP.GB.2021.1026327">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1026327" name="viewDetails" value="CHEDP.GB.2021.1026327">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1026327" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1026327/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1033481
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-7">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-7">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-7">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1033481/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1033481" name="submit-param" value="CHEDP.GB.2021.1033481">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1033481" name="viewDetails" value="CHEDP.GB.2021.1033481">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1033481" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1033481/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1036278
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-8">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-8">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-8">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--amend">AMEND</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1036278/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1036278" name="submit-param" value="CHEDP.GB.2021.1036278">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1036278" name="viewDetails" value="CHEDP.GB.2021.1036278">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1036278" name="amend" value="CHEDP.GB.2021.1036278">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1036278" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1036278/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1021867
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-9">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-9">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-9">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">477837547c424d12bd67a78f9f0f9789</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1021867/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1021867" name="submit-param" value="CHEDP.GB.2021.1021867">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1021867" name="viewDetails" value="CHEDP.GB.2021.1021867">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1021867" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1021867/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1037016
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-10">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-10">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-10">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--amend">AMEND</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1037016/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1037016" name="submit-param" value="CHEDP.GB.2021.1037016">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1037016" name="viewDetails" value="CHEDP.GB.2021.1037016">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1037016" name="amend" value="CHEDP.GB.2021.1037016">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1037016" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1037016/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1030093
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-11">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-11">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-11">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030093/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1030093" name="submit-param" value="CHEDP.GB.2021.1030093">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1030093" name="viewDetails" value="CHEDP.GB.2021.1030093">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1030093" name="amend" value="CHEDP.GB.2021.1030093">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1030093" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030093/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1030180
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-12">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-12">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-12">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030180/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1030180" name="submit-param" value="CHEDP.GB.2021.1030180">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1030180" name="viewDetails" value="CHEDP.GB.2021.1030180">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1030180" name="amend" value="CHEDP.GB.2021.1030180">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1030180" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030180/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1030181
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-13">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-13">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-13">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030181/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1030181" name="submit-param" value="CHEDP.GB.2021.1030181">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1030181" name="viewDetails" value="CHEDP.GB.2021.1030181">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1030181" name="amend" value="CHEDP.GB.2021.1030181">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1030181" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030181/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1030456
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-14">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-14">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-14">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030456/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1030456" name="submit-param" value="CHEDP.GB.2021.1030456">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1030456" name="viewDetails" value="CHEDP.GB.2021.1030456">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1030456" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030456/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1022394
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-15">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-15">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-15">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022394/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1022394" name="submit-param" value="CHEDP.GB.2021.1022394">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1022394" name="viewDetails" value="CHEDP.GB.2021.1022394">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1022394" name="amend" value="CHEDP.GB.2021.1022394">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1022394" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022394/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1020654
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-16">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-16">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-16">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1020654/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1020654" name="submit-param" value="CHEDP.GB.2021.1020654">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1020654" name="viewDetails" value="CHEDP.GB.2021.1020654">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1020654" name="amend" value="CHEDP.GB.2021.1020654">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1020654" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1020654/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1022318
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-17">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-17">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-17">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022318/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1022318" name="submit-param" value="CHEDP.GB.2021.1022318">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1022318" name="viewDetails" value="CHEDP.GB.2021.1022318">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1022318" name="amend" value="CHEDP.GB.2021.1022318">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1022318" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1022318/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1030952
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-18">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-18">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-18">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030952/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1030952" name="submit-param" value="CHEDP.GB.2021.1030952">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1030952" name="viewDetails" value="CHEDP.GB.2021.1030952">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1030952" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1030952/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1028038
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-19">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-19">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-19">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1028038/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1028038" name="submit-param" value="CHEDP.GB.2021.1028038">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1028038" name="viewDetails" value="CHEDP.GB.2021.1028038">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1028038" name="amend" value="CHEDP.GB.2021.1028038">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1028038" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1028038/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1024899
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-20">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-20">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-20">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1024899/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1024899" name="submit-param" value="CHEDP.GB.2021.1024899">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1024899" name="viewDetails" value="CHEDP.GB.2021.1024899">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1024899" name="amend" value="CHEDP.GB.2021.1024899">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1024899" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1024899/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1032377
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-21">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-21">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-21">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1032377/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1032377" name="submit-param" value="CHEDP.GB.2021.1032377">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1032377" name="viewDetails" value="CHEDP.GB.2021.1032377">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1032377" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1032377/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1032415
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-22">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-22">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-22">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1032415/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1032415" name="submit-param" value="CHEDP.GB.2021.1032415">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1032415" name="viewDetails" value="CHEDP.GB.2021.1032415">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1032415" name="amend" value="CHEDP.GB.2021.1032415">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1032415" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1032415/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1032787
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-23">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-23">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-23">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--submitted">NEW</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1032787/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1032787" name="submit-param" value="CHEDP.GB.2021.1032787">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1032787" name="viewDetails" value="CHEDP.GB.2021.1032787">
+                      View details
+                    </button>
+                    <button class="govuk-link" id="amend-details-CHEDP.GB.2021.1032787" name="amend" value="CHEDP.GB.2021.1032787">
+                      Amend
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1032787" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1032787/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row notification-list__row--padding-top">
+                <td>
+                  <span class="notification-list__heading">Reference number</span>
+                  <span class="notification-list__value">
+                      CHEDP.GB.2021.1033105
+                    </span>
+                </td>
+                <td>
+                    <span class="notification-list__heading" id="commodity-header-24">Commodity</span>
+                  <span class="notification-list__value break-word" id="commodity-desc-24">02042210</span>
+                </td>
+                <td>
+                    <span class="notification-list__heading">Arrival at BCP</span>
+                  <span class="notification-list__value" id="arrival-date-24">24 April 2019</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Certificate status</span>
+                  <span class="notification-list__value notification-list__value__tag-list">
+                      <strong class="govuk-tag tag--fixed-width tag--validated">VALID</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr class="notification-list__data-row">
+                <td>              <span class="notification-list__heading">Consignee</span>
+                    <span class="notification-list__value break-word">Acme Importers Limited</span></td>
+                <td>              <span class="notification-list__heading">Consignor</span><span class="notification-list__value break-word">MARCH SEGARRA,SA</span>
+                </td>
+                <td>
+                  <span class="notification-list__heading">Origin</span>
+                  <span class="notification-list__value">Fiji</span>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr class="notification-list__links-row">
+                <td colspan="4">
+                  <form method="post" action="/notification/vnet/protected/notifications/CHEDP.GB.2021.1033105/duplicate" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <button class="govuk-link" id="copy-as-new-CHEDP.GB.2021.1033105" name="submit-param" value="CHEDP.GB.2021.1033105">
+                      Copy as new
+                    </button>
+                  </form>
+                  <form action="/notification/vnet/protected/notifications" method="post" class="inline">
+                    <input name="crumb" type="hidden" value="8Geeu91vaCUxjfD7UumQdxJiSrSkTPcwnLn_zVIbR2Q">
+                    <input name="etag" type="hidden" value="">
+                    <button class="govuk-link" id="view-details-CHEDP.GB.2021.1033105" name="viewDetails" value="CHEDP.GB.2021.1033105">
+                      View details
+                    </button>
+                  </form>
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDP.GB.2021.1033105" href="/notification/vnet/protected/notifications/CHEDP.GB.2021.1033105/certificate/pdf" target="_blank">Show certificate</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+            <nav class="pagination" aria-label="Pagination">
+              <ul class="pagination-list">
+                  <li class="pagination-item pagination-item-next">
+                      <a href="?page=2#existing-notifications" class="pagination-link" rel="next" id="next-page">
+                        <span class="pagination-link-title">
+                           Next page
+                          <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                            <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                          </svg>
+                        </span>
+                        <span class="govuk-visually-hidden">:</span>
+                        <span class="pagination-link-label">2 of 2058</span>
+                      </a>
+                  </li>
+              </ul>
+            </nav>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
