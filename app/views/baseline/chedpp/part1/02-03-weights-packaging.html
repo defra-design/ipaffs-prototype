@@ -25,7 +25,7 @@
         <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
 
 
-      <form method="POST" action="02-dg-05-additional-details">
+      
         <button class="js-hidden" type="submit" value="Keyboard submit">Keyboard submit</button>
         <input name="crumb" type="hidden" value="IZnreMZdNimd3v1fq03M2JhLIDsA2hh38-bDNwZWsHw">
         <input name="etag" type="hidden" value="&quot;0000000000224C4C&quot;">
@@ -349,10 +349,12 @@
             </div>
             <button class="govuk-button" type="submit" value="Update total" name="update-total" id="update-total" data-prevent-double-click="true">Update total</button>
           </div>
-
+          <form method="POST" action="00-notification-hub" class="govuk-!-display-inline">
               <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button" data-prevent-double-click="true">Save and return to hub</button>
+              </form>
+              <form method="POST" action="02-04-additional-details" class="govuk-!-display-inline">
               <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
-              <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
+              <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
       </form>
     </div>
   </div>

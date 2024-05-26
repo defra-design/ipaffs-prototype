@@ -15,15 +15,15 @@ router.post('/chedpp-route-how-enter', function (req, res) {
     // Make a variable and give it the value from name
     var manCsvRoute = req.session.data['addcommodity']
     if (manCsvRoute == "Manual entry"){
-      res.redirect('02-dg-01-commodity')
+      res.redirect('02-01-commodity-tree-genus-search')
     }
   
     else if (manCsvRoute == "Upload from a CSV file"){
-      res.redirect('02-dg-01-01-upload')
+      res.redirect('02-01-01-upload')
     }
   
    else {
-      res.redirect('01-no-check-answers')
+      res.redirect('00-notification-hub')
     }
     
     })

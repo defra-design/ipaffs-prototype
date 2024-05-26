@@ -49,6 +49,28 @@
           <span class="govuk-hint" id="species-hint">You can add multiple Genus (and Species)</span>
         </fieldset>
 
+          <form method="post">
+            <input name="crumb" type="hidden" value="IZnreMZdNimd3v1fq03M2JhLIDsA2hh38-bDNwZWsHw">
+            <input name="etag" type="hidden" value="&quot;0000000000224C4B&quot;">
+            <input name="commodityDetailsPage" type="hidden" value="">
+            <div class="table-responsive govuk-!-margin-bottom-8">
+              <table class="govuk-table" id="selected-species-table">
+                <caption class="govuk-visually-hidden">Remove species table</caption>
+                <thead class="govuk-table__head">
+                <tr>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Genus (and Species)</th>
+                  <th scope="col" class="govuk-table__header">EPPO code</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td class="govuk-table__cell">Albuca bracteata</td>
+                      <td class="govuk-table__cell">ABWBR</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
 
         <form method="get" id="species-filter" class="govuk-!-margin-top-4 govuk-!-margin-bottom-6">
           <input type="hidden" name="page" value="1">
@@ -81,9 +103,9 @@
           </div>
         </form>
 
-      <form method="post" action="02-dg-03-genus-added">
+      <form method="post" action="#">
         <input name="crumb" type="hidden" value="IZnreMZdNimd3v1fq03M2JhLIDsA2hh38-bDNwZWsHw">
-        <input name="etag" type="hidden" value="&quot;0000000000224C4A&quot;">
+        <input name="etag" type="hidden" value="&quot;0000000000224C4B&quot;">
         <input name="is-last-of-page" type="hidden" value="false">
         <input name="commodityDetailsPage" type="hidden" value="">
           <div class="govuk-!-margin-bottom-8">
@@ -100,13 +122,6 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td class="govuk-table__cell">Albuca bracteata</td>
-                    <td class="govuk-table__cell">ABWBR</td>
-                    <td class="govuk-table__cell text-align-right">
-                      <button type="submit" name="add-species-1325967" value="Add" class="link-button" id="add-species-1325967">Add</button>
-                    </td>
-                  </tr>
                   <tr>
                     <td class="govuk-table__cell">Albuca canadensis</td>
                     <td class="govuk-table__cell">ABWAL</td>
@@ -275,6 +290,13 @@
                       <button type="submit" name="add-species-1336384" value="Add" class="link-button" id="add-species-1336384">Add</button>
                     </td>
                   </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Fusifilum physodes</td>
+                    <td class="govuk-table__cell">FSFPH</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1422255" value="Add" class="link-button" id="add-species-1422255">Add</button>
+                    </td>
+                  </tr>
                   </tbody>
                 </table>
                   <nav class="pagination" aria-label="Pagination">
@@ -297,11 +319,10 @@
               </div>
             </div>
           </div>
+          </form>
 
+          <form method="post" action="01-05-purpose">
         <button class="govuk-button govuk-!-margin-bottom-4" name="save-button" type="submit" value="Save and continue" id="button-save-and-continue" data-prevent-double-click="true">Save and continue</button>
-          <p class="govuk-body">
-            <a class="govuk-link" id="cancel-link" href="#">Cancel</a>
-          </p>
       </form>
     </div>
   </div>

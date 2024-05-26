@@ -45,12 +45,6 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-      <form action="04-tr-01-trader-addresses" method="POST">
-        <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
-        <input name="etag" type="hidden" value="&quot;00000000053B49DD&quot;">
-         
-       
-       
 
 
         <div class="govuk-!-margin-bottom-9 additional-documents-table" id="additional-documents-table">
@@ -75,7 +69,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               </div>
             </div>
             <div class="additional-documents__grid-column-20 additional-documents__table-header">
-              Attachments 
+              Attachments (optiona1)
             </div>
           </div>
 
@@ -83,21 +77,27 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               <div class="additional-documents__grid-column-15">
                   <div class="govuk-form-group govuk-!-margin-bottom-0 ">
                     <select class="ipaffs-document-type govuk-!-margin-top-3" id="document-type" name="document-type" aria-label="Document type">
+                       
+
+                     
                         <option value="">Select document type</option>
-                        <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
                         <option value="airWaybill">Air waybill</option>
-                        <option value="billOfLading">Bill of lading</option>
-                        
                         <option value="commercialInvoice">Commercial invoice</option>
-                        <option value="customsDeclaration">Customs declaration</option>
+                        <option value="cargoManifest">Cargo Manifest</option>
+                        <option value="inspectionCertificate">Inspection certificate</option>
+                        <option value="phytosanitaryCertificate">Phytosanitary certificate</option>
                         <option value="importPermit">Import permit</option>
-                        <option value="laboratorySamplingResultsForAflatoxin">Laboratory Sampling results for Aflatoxin (Reg 2019/1793)</option>
+                        <option value="originCertificate">Origin certificate</option>
                         <option value="letterOfAuthority">Letter of authority (Directive 2008/61/EC)</option>
-                        <option value="processingStatement">Processing statement</option>
-                        <option value="proofOfStorage">Proof of storage</option>
-                        <option value="railwayBill">Railway bill</option>
-                        <option value="seaWaybill">Sea waybill</option>
+                        <option value="heatTreatmentCertificate">Heat treatment certificate</option>
+                        <option value="containerManifest">Container manifest</option>
+                        <option value="seaWaybill">Sea Waybill</option>
+                        <option value="railwayBill">Rail waybill</option>
+                        <option value="customsDeclaration">Customs declaration</option>
+                        <option value="billOfLading">Bill of lading</option>
+                        <option value="conformityCertificate">Conformity certificate</option>
                         <option value="other">Other</option>
+                  
                     </select>
                   </div>
               </div>
@@ -186,12 +186,13 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
 
           
-        <input name="current-page-number" type="hidden" value="1">
-
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="accDocRoutelink" type="submit" value="Save and return to hub" data-module="govuk-button">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4 " id="button-save-and-continue-p" name="accDocRoutelink" type="submit" value="Save and continue" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
-      </form>
+        <form method="POST" action="00-notification-hub" class="govuk-!-display-inline">
+          <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button" data-prevent-double-click="true">Save and return to hub</button>
+          </form>
+          <form method="POST" action="04-01-trader-addresses" class="govuk-!-display-inline">
+          <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+  </form>
     </div>
   </div>
 </main>

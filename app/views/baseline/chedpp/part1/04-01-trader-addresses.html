@@ -27,7 +27,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
           <span class="govuk-caption-xl">Traders</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Importer, Packer, Delivery address and Consignor</h1>
-      <form action="07-cn-01-review-manual" method="POST">
+     
         <input name="crumb" type="hidden" value="f7oXRgAyjBToZv6unQMrxEepc20vr89dFouSrRHYril">
         <input name="etag" type="hidden" value="&quot;0000000002C9ABA8&quot;">
 
@@ -126,8 +126,8 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </tbody>
               </table>
             </div>
-          
-              <a href="04-tr-03-delivery-address" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a delivery address </a>
+            <button class="link-button button-margin-right" name="populate_place_of_destination" id="populate-place-of-destination" value="place-of-destination">Same as consignee</button>
+              <a href="04-01b-delivery-address" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a delivery address </a>
           </div>
           
           <div class="govuk-!-margin-bottom-8">
@@ -158,14 +158,17 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               </table>
             </div>
           
-              <a href="04-tr-04-consignor-exporter" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
+              <a href="04-01c-consignor-exporter" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
           </div>
           
 
-            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
-            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-            <p class="govuk-body"><a class="govuk-link" href="01-no-check-answers">Cancel and return to hub</a></p>
-      </form>
+          <form method="POST" action="00-notification-hub" class="govuk-!-display-inline">
+            <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button" data-prevent-double-click="true">Save and return to hub</button>
+            </form>
+            <form method="POST" action="08-01-review-manual" class="govuk-!-display-inline">
+            <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+            <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+    </form>
     </div>
   </div>
 </main>

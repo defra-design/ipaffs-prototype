@@ -48,7 +48,7 @@
         <a class="govuk-button notification-button" id="search-to-clone" href="/notification/tst/protected/notifications/cloning/type">Clone a certificate</a>
       </form> -->
 
-      <form action="01-ac-01-importing" method="post" id="homeForm">
+      <form action="01-01-ched-type" method="post" id="homeForm">
         <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
         <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
           Create a new notification
@@ -1501,21 +1501,23 @@
                 </div>
               </div>
               <div class="notification-list__links">
-                  <form method="post" action="01-no-check-answers" class="govuk-!-display-inline">
+                  <form method="post" action="00-notification-hub" class="govuk-!-display-inline">
                     <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
                     <button class="govuk-link" id="copy-as-new-CHEDPP.GB.2021.3476228" name="submit-param" value="CHEDPP.GB.2021.3476228">
                       Copy as new
                     </button>
                   </form>
-                <form action="/notification/tst/protected/notifications" method="post" class="govuk-!-display-inline">
-                  <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
+                <form action="07-01-review-manual" method="post" class="govuk-!-display-inline">
+                 
                     <button class="govuk-link" id="view-details-CHEDPP.GB.2021.3476228" name="viewDetails" value="CHEDPP.GB.2021.3476228">
                       View details
                     </button>
+                  </form>
+                  <form action="00-notification-hub" method="post" class="govuk-!-display-inline">
                     <button class="govuk-link" id="amend-details-CHEDPP.GB.2021.3476228" name="amend" value="CHEDPP.GB.2021.3476228">
                       Amend
                     </button>
-                </form>
+                
                   <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" id="show-certificate-CHEDPP.GB.2021.3476228" href="/notification/tst/protected/notifications/CHEDPP.GB.2021.3476228/certificate/pdf" target="_blank">
                     Show notification
                   </a>
