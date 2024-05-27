@@ -1,0 +1,86 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index">IPAFFS prototypes</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../../start">XCHED</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../start">CR38: Extend High Priority Tasks</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          Latest
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
+    <h1 class="govuk-heading-l">CR38: Extend High Priority Tasks</h1>
+    
+
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Version
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Iteration 1
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--blue">
+              In progress
+            </strong>
+          </dd>
+        </div>
+      </dl>
+        
+   
+      <div class="govuk-!-padding-bottom-4">
+      <ul class="govuk-list govuk-list--bullet">
+        <li><h2 class="govuk-heading-m"><a href="dashboard">Dashboard</a></h2></li>
+        <li>
+          <h2 class="govuk-heading-m">High priority tasks</h2>
+          <ol class="govuk-list govuk-list--number">
+            <li><a href="documentary">Outstanding documentary checks</a></li>
+            <li><a href="consignments">Consignments to inspect</a></li>
+          </ol>
+        </li>
+        <li>
+          <h2 class="govuk-heading-m">My alerts</h2>
+          <ol class="govuk-list govuk-list--number">
+            <li><a href="my-alerts/01-all">View all</a></li>
+            <li><a href="my-alerts/02-inspection-required">Notifications require an inspection</a></li>
+            <li><a href="my-alerts/03-new">Notifications in New status</a></li>
+            <li><a href="my-alerts/04-no-match">Notifications and customs declarations do not match</a></li>
+            <li><a href="my-alerts/05-rejected">Notifications changed to Rejected status</a></li>
+            <li><a href="my-alerts/06-no-follow-up">Notifications have no follow-up action after 7 days</a></li>
+            <li><a href="my-alerts/07-no-conclusions">Notifications have no laboratory test conclusion after 7 days</a></li>
+            <li><a href="my-alerts/08-control-required">Notifications require control as the Exit BCP</a></li>
+          </ol>
+        </li>
+
+      </ul>
+
+
+      </div>
+
+  </div>
+</div>  
+{% endblock %}
