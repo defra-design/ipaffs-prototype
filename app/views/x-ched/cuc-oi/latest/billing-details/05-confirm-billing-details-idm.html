@@ -44,6 +44,7 @@
         <p>
           We need the correct billing details for Common User Charge invoices. We will send them to the email address provided.
         </p>
+
         <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
             <h2 class="govuk-summary-card__title"> 
@@ -55,6 +56,22 @@
               XYZ Limited
               {% endif %}
             </h2>
+            <ul class="govuk-summary-card__actions">
+              <li class="govuk-summary-card__action">
+                <a class="govuk-link" href="#">Change
+                  <span class="govuk-visually-hidden"> billing details in 
+                    {% if (data['ched-type'] == "chedp") %}
+                    Customs Agency 4U
+                    {% elseif (data['ched-type'] == "chedpp") %}
+                    Plants and Trees Nurseries
+                    {% else %}
+                    XYZ Limited
+                    {% endif %}
+                    Defra Account
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="govuk-summary-card__content">
             <dl class="govuk-summary-list">
@@ -77,9 +94,6 @@
                     3 Bakers Lane<br>Lichfield<br>WS13 6NF
                   {% endif %}
                 </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="02-billing-postcode?action=change&postcode-search=">Change<span class="govuk-visually-hidden"> billing address</span></a>
-                </dd>
               </div>
               <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
                 <dt class="govuk-summary-list__key">
@@ -87,9 +101,6 @@
                 </dt>
                 <dd class="govuk-summary-list__value">
                   {{ data['billing-email'] or "payments@xyz.ltd.uk" }}
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="04-billing-contact-details?action=change">Change<span class="govuk-visually-hidden"> billing contact details</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row  govuk-summary-list__row--no-border">
