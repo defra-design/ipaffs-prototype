@@ -1,0 +1,207 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <a  href="/index" id="back-link" class="govuk-!-margin-top-0 govuk-!-margin-bottom-6 govuk-back-link back-link--next-to-breadcrumbs">Back to prototypes home</a>
+    </div> </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+   
+    <h3 class="govuk-heading-l">No match</h3>
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#part-1">
+            Part 1 - Importer
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#part-2">
+            Part 2  - Inspector
+          </a>
+        </li>
+       
+
+      </ul>
+      <div class="govuk-tabs__panel" id="part-1">
+       
+        
+        
+    
+      
+        <div class="govuk-!-padding-bottom-4">
+        
+         
+          <p class="govuk-body">Note: Where there are no differences specific to a CHED, CHED P is used by default.</p>
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Screen designs</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screen</th>
+                <th scope="col" class="govuk-table__header">All</th>
+                <th scope="col" class="govuk-table__header">CHED P</th>
+                <th scope="col" class="govuk-table__header">CHED A</th>
+                <th scope="col" class="govuk-table__header">CHED D</th>
+                <th scope="col" class="govuk-table__header">CHED PP</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Confirmation &ndash; inspection not required</th>
+                <td class="govuk-table__cell"><a href="/x-ched/confirmation/no-match/20-submitted-inspection-not-required">Done<br>P, D, PP</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="/cheda/part-1-latest/20-submitted-inspection-not-required-no-match">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Confirmation &ndash; inspection required</th>
+                <td class="govuk-table__cell"><a href="/x-ched/confirmation/no-match/20-submitted-inspection-required">Done<br>P, D, PP</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="/cheda/part-1-latest/20-submitted-inspection-required-no-match">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Confirmation &ndash; using GVMS</th>
+                <td class="govuk-table__cell"><a href="/chedp-no-match/20-submitted-gvms-yes-no-match">Done P, D</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"><a href="/cheda/part-1-latest/20-submitted-gvms-yes-no-match">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell">N/A<!--<a href="/chedpp/latest/08-sn-01-submitted">Done</a>--></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Dashboard - with alert</th>
+                <td class="govuk-table__cell"><a href="/chedp-no-match/index-no-match">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Check notification details and customs declarations match</th>
+                <td class="govuk-table__cell"><a href="/chedp-no-match/no-match-results">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Commodity details</th>
+                <td class="govuk-table__cell"><a href="/chedp-no-match/commodity-details">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Commodity details - amend</th>
+                <td class="govuk-table__cell"><a href="/chedp-no-match/commodity-details-amend">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Review - with alert</th>
+                <td class="govuk-table__cell"><a href="/chedp-no-match/review">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Review amend - with alert</th>
+                <td class="govuk-table__cell"><a href="/chedp-no-match/review-amend">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="govuk-heading-m">Emails and SMS</h3>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--s govuk-!-margin-bottom-2">Sent on validation / detection of no match</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Channel</th>
+                <th scope="col" class="govuk-table__header">All</th>
+                <th scope="col" class="govuk-table__header">CHED P</th>
+                <th scope="col" class="govuk-table__header">CHED A</th>
+                <th scope="col" class="govuk-table__header">CHED D</th>
+                <th scope="col" class="govuk-table__header">CHED PP</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Email</th>
+                <td class="govuk-table__cell"><a href="../no-match-emails-and-sms/email-no-match">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">SMS</th>
+                <td class="govuk-table__cell"><a href="../no-match-emails-and-sms/sms-no-match">Done</a></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
+
+        <!--footer-->
+      
+
+     
+
+
+
+
+
+
+
+
+
+
+ <!-- tabs end -->
+
+</div>
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="part-2">
+ 
+  <div class="govuk-!-padding-bottom-4">
+    <h3 class="govuk-heading-m">No match - January 2024</h3>
+    <p><a href="/part-2/no-match/dashboard">Dashboard - with alert</a></p>
+    <p><a href="/part-2/no-match/no-match-results">Commodity details and customs declarations do not match</a></p>
+    <hr>
+  </div>
+ 
+
+
+</div>
+
+
+
+</div>
+
+{% endblock %}
