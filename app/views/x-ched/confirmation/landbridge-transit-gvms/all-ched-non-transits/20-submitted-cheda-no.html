@@ -34,17 +34,19 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="confirmation-page">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-notification-banner notification-banner--inspection-required govuk-!-margin-bottom-0" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner notification-banner--inspection-may-be-required govuk-!-margin-bottom-0" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title">
-              Notification submitted
+            <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title" style="text-align: center;">
+              Risk assessment
             </h2>
         </div>
       </div>
-      <div style="border-top: none;" class="govuk-panel govuk-!-margin-bottom-6 panel--inspection-required" id="inspection-may-be-required-confirmation-panel">
+      <div style="border-top: none;" class="govuk-panel govuk-!-margin-bottom-8 panel--inspection-may-be-required" id="inspection-may-be-required-confirmation-panel">
         <div class="govuk-panel__body">
-          <div class="govuk-!-margin-bottom-2">Inspection status</div>
-          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-2">Check GVMS</div>
+          <div class="govuk-!-margin-bottom-2">Border control post</div>
+          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-6">No inspection required</div>
+          <div class="govuk-!-margin-bottom-2">Place of destination</div>
+          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-2">Inspection may be required</div>
         </div>
       </div>
 
@@ -54,7 +56,7 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             CHED reference
           </dt>
           <dd class="govuk-summary-list__value">
-            CHEDP.GB.2023.6244839
+            CHEDA.GB.2023.6244839
           </dd>
           <dd class="govuk-summary-list__actions">
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -80,7 +82,7 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             Customs document code
           </dt>
           <dd class="govuk-summary-list__value">
-            N853
+            C640
           </dd>
           <dd class="govuk-summary-list__actions">
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -100,12 +102,15 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
       <hr class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
 
       <h2 class="govuk-heading-m">What you need to do</h2>
-      <p class="govuk-body">The Goods Vehicle Movement Service (GVMS) will notify the driver of all entry inspections.</p>
+      <p class="govuk-body">Make sure the consignment goes directly to the place of destination on arriving in Great Britain.</p>
 
-      <div class="govuk-inset-text">
-        The driver must check GVMS before arriving at the border location to find out if entry inspections are required.
-      </div>
+      <p class="govuk-body">The animals or consignment may need to be inspected. The animals must stay at the place of destination for either:</p>
 
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the time stated on the health certificate</li>
+        <li>48 hours if no time is specified</li>
+      </ul>    
+      
       <h2 class="govuk-heading-m">How to view or amend this notification</h2>
       <p class="govuk-body">You can access or amend this notification from your dashboard.</p>
 

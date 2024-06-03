@@ -58,7 +58,7 @@
         <form action="" method="post" id="bip-dpe-filter-form">
             <input name="crumb" type="hidden" value="Z8EU7I-TTjwFzOd9zM47MgW7DTZZj_O5ANBIMSkzrE7">
             <input name="etag" type="hidden" value="">
-            <input name="selectedAlertType" type="hidden" value="SUBMITTED">
+            <input name="selectedAlertType" type="hidden" value="REJECTED_FOR_DECISION">
                 <div class="govuk-!-display-block">
                     <label for="bip-select" class="govuk-label display-inline-block govuk-!-margin-right-3">Select BCP:</label>
                     <select class="govuk-select govuk-!-display-inline-block govuk-!-margin-right-3" id="bip-select" name="bip">
@@ -251,7 +251,7 @@
                             <a id="alert-description-INSPECTION_REQUIRED" href="02-inspection-required">576&nbsp;notifications require an inspection</a>
                     </li>
                     <li>
-                            <strong id="alert-description-SUBMITTED" class="govuk-!-font-weight-bold">599&nbsp;notifications in New status</strong>
+                            <a id="alert-description-SUBMITTED" href="03-new">599&nbsp;notifications in New status</a>
                     </li>
                     <li>
                             <a id="alert-description-CDS_NOT_MATCHED" href="04-no-match">15&nbsp;notifications and customs declarations do not match</a>
@@ -260,10 +260,10 @@
                             <a id="alert-description-REJECTED_FOR_DECISION" href="05-rejected">52&nbsp;notifications changed to Rejected status</a>
                     </li>
                     <li>
-                            <a id="alert-description-REJECTED_FOR_DECISION" href="06-no-follow-up">84&nbsp;notifications have no follow-up action after 7 days</a>
+                            <strong id="alert-description-REJECTED_FOR_DECISION" class="govuk-!-font-weight-bold">84 notifications have no follow-up action after 7 days</strong>
                     </li>
                     <li>
-                            <a id="alert-description-REJECTED_FOR_DECISION" href="07-no-conclusions">166&nbsp;notifications have no laboratory test conclusion after 7 days</a>
+                            <a id="alert-description-PENDING_LAB_TESTS" href="07-no-conclusions">166&nbsp;notifications have no laboratory test conclusion after 7 days</a>
                     </li>
                     <li>
                             <a id="alert-description-CONTROL_REQUIRED" href="08-control-required">11&nbsp;notifications require control as the Exit BCP</a>
@@ -275,7 +275,7 @@
           <input name="searchButtonClicked" type="hidden" value="">
         
           <p class="govuk-heading-s govuk-!-margin-bottom-2">
-            <span id="notification-count">599</span>
+            <span id="notification-count">84</span>
               <span id="results">results</span>
           </p>
         
@@ -296,31 +296,31 @@
         </form>
         
         <div id="notification-list">
-              <dl class="notification-list__row" id="row-CHEDP.GB.2024.1007309">
+            <dl class="notification-list__row" id="row-CHEDP.GB.2023.5785760">
                 <div class="notification-list__grid-row">
                   <div class="notification-list__grid-column-30">
                     <dt class="notification-list__heading">Reference Number</dt>
                     <dd class="notification-list__value">
-                            <a class="govuk-link" id="view-details-CHEDP.GB.2024.1007309" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1007309/hub">CHEDP.GB.2024.1007309</a>
-                                      </dd>
+                        <a class="govuk-link" id="view-details-CHEDP.GB.2023.5785760" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5785760/CHED-overview">CHEDP.GB.2023.5785760</a>
+                    </dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Commodity</dt>
                     <dd class="notification-list__value">
-                      020110
+                      0402
                     </dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Estimated arrival time</dt>
-                    <dd class="notification-list__value" id="arrival-date-0">
-                      11 November 2025, 01:01
+                    <dd class="notification-list__value" id="arrival-date-1">
+                      2 October 2023, 05:03
                     </dd>
                   </div>
                   <div class="notification-list__grid-column-20">
                     <dt class="notification-list__heading">CHED status</dt>
                     <dd class="notification-list__value">
-                    <strong class="govuk-tag tag tag--submitted">
-                      NEW
+                    <strong class="govuk-tag tag tag--rejected">
+                      REJECTED
                     </strong>
                     </dd>
                   </div>
@@ -328,21 +328,21 @@
                 <div class="notification-list__grid-row">
                   <div class="notification-list__grid-column-30">
                     <dt class="notification-list__heading">Consignee</dt>
-                    <dd class="notification-list__value break-word">0fcd2cec875a4f8ebd1122e8fadd5a59</dd>
+                    <dd class="notification-list__value break-word">Emerald Ellis</dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Consignor</dt>
-                    <dd class="notification-list__value break-word">a91aa358345347618d2e4569ca83d77e</dd>
+                    <dd class="notification-list__value break-word">Vanna Barr</dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Origin</dt>
-                    <dd class="notification-list__value">Austria</dd>
+                    <dd class="notification-list__value">Albania</dd>
                   </div>
                   <div class="notification-list__grid-column-20">
                       <dt class="notification-list__heading">Risk outcome</dt>
                       <dd class="notification-list__value" id="risk-outcome">
-                        <strong class="govuk-tag tag tag--inspection-inconclusive">
-                          INCONCLUSIVE
+                        <strong class="govuk-tag tag tag--inspection-pending">
+                          RISK PENDING
                         </strong>
                       </dd>
                   </div>
@@ -354,35 +354,35 @@
                   </div>
                 </div>
                 <div class="notification-list__links">
-                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/vnet/protected/notifications/CHEDP.GB.2024.1007309/certificate/pdf" target="_blank">View CHED
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5785760/certificate/pdf" target="_blank">View CHED
                   </a>
                 </div>
               </dl>
-              <dl class="notification-list__row" id="row-CHEDP.GB.2024.1005084">
+              <dl class="notification-list__row" id="row-CHEDP.GB.2023.5678533">
                 <div class="notification-list__grid-row">
                   <div class="notification-list__grid-column-30">
                     <dt class="notification-list__heading">Reference Number</dt>
                     <dd class="notification-list__value">
-                            <a class="govuk-link" id="view-details-CHEDP.GB.2024.1005084" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1005084/hub">CHEDP.GB.2024.1005084</a>
-                                      </dd>
+                        <a class="govuk-link" id="view-details-CHEDP.GB.2023.5678533" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5678533/CHED-overview">CHEDP.GB.2023.5678533</a>
+                    </dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Commodity</dt>
                     <dd class="notification-list__value">
-                      02091090
+                      020110
                     </dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Estimated arrival time</dt>
                     <dd class="notification-list__value" id="arrival-date-4">
-                      1 April 2025, 01:01
+                      1 May 2023, 10:30
                     </dd>
                   </div>
                   <div class="notification-list__grid-column-20">
                     <dt class="notification-list__heading">CHED status</dt>
                     <dd class="notification-list__value">
-                    <strong class="govuk-tag tag tag--submitted">
-                      NEW
+                    <strong class="govuk-tag tag tag--rejected">
+                      REJECTED
                     </strong>
                     </dd>
                   </div>
@@ -390,135 +390,11 @@
                 <div class="notification-list__grid-row">
                   <div class="notification-list__grid-column-30">
                     <dt class="notification-list__heading">Consignee</dt>
-                    <dd class="notification-list__value break-word">e345f1f7f9dd4336b12f95d74509393e</dd>
+                    <dd class="notification-list__value break-word">CMConsignor</dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Consignor</dt>
-                    <dd class="notification-list__value break-word">a820ec5815b645f8aa456c6af46d7683</dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Origin</dt>
-                    <dd class="notification-list__value">Afghanistan</dd>
-                  </div>
-                  <div class="notification-list__grid-column-20">
-                      <dt class="notification-list__heading">Risk outcome</dt>
-                      <dd class="notification-list__value" id="risk-outcome">
-                        <strong class="govuk-tag tag tag--inspection-inconclusive">
-                          INCONCLUSIVE
-                        </strong>
-                      </dd>
-                  </div>
-                </div>
-                <div class="notification-list__grid-row">
-                  <div class="notification-list__grid-column-20">
-                    <dt class="notification-list__heading">Risk category</dt>
-                    <dd class="notification-list__value" id="risk-category">Medium</dd>
-                  </div>
-                </div>
-                <div class="notification-list__links">
-                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/vnet/protected/notifications/CHEDP.GB.2024.1005084/certificate/pdf" target="_blank">View CHED
-                  </a>
-                </div>
-              </dl>
-              <dl class="notification-list__row" id="row-CHEDP.GB.2024.1004603">
-                <div class="notification-list__grid-row">
-                  <div class="notification-list__grid-column-30">
-                    <dt class="notification-list__heading">Reference Number</dt>
-                    <dd class="notification-list__value">
-                            <a class="govuk-link" id="view-details-CHEDP.GB.2024.1004603" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1004603/hub">CHEDP.GB.2024.1004603</a>
-                                      </dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Commodity</dt>
-                    <dd class="notification-list__value">
-                      020110
-                    </dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Estimated arrival time</dt>
-                    <dd class="notification-list__value" id="arrival-date-5">
-                      25 January 2025, 01:01
-                    </dd>
-                  </div>
-                  <div class="notification-list__grid-column-20">
-                    <dt class="notification-list__heading">CHED status</dt>
-                    <dd class="notification-list__value">
-                    <strong class="govuk-tag tag tag--submitted">
-                      NEW
-                    </strong>
-                    </dd>
-                  </div>
-                </div>
-                <div class="notification-list__grid-row">
-                  <div class="notification-list__grid-column-30">
-                    <dt class="notification-list__heading">Consignee</dt>
-                    <dd class="notification-list__value break-word">3bae47ec7aeb4322b69a53fbace08e4f</dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Consignor</dt>
-                    <dd class="notification-list__value break-word">2fa7e57c4dee493dbe5e8a0b97d1d3b0</dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Origin</dt>
-                    <dd class="notification-list__value">Austria</dd>
-                  </div>
-                  <div class="notification-list__grid-column-20">
-                      <dt class="notification-list__heading">Risk outcome</dt>
-                      <dd class="notification-list__value" id="risk-outcome">
-                        <strong class="govuk-tag tag tag--inspection-inconclusive">
-                          INCONCLUSIVE
-                        </strong>
-                      </dd>
-                  </div>
-                </div>
-                <div class="notification-list__grid-row">
-                  <div class="notification-list__grid-column-20">
-                    <dt class="notification-list__heading">Risk category</dt>
-                    <dd class="notification-list__value" id="risk-category">Low</dd>
-                  </div>
-                </div>
-                <div class="notification-list__links">
-                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/vnet/protected/notifications/CHEDP.GB.2024.1004603/certificate/pdf" target="_blank">View CHED
-                  </a>
-                </div>
-              </dl>
-              <dl class="notification-list__row" id="row-CHEDP.GB.2024.1007227">
-                <div class="notification-list__grid-row">
-                  <div class="notification-list__grid-column-30">
-                    <dt class="notification-list__heading">Reference Number</dt>
-                    <dd class="notification-list__value">
-                            <a class="govuk-link" id="view-details-CHEDP.GB.2024.1007227" href="/decision/vnet/protected/bip-notifications/CHEDP.GB.2024.1007227/hub">CHEDP.GB.2024.1007227</a>
-                                      </dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Commodity</dt>
-                    <dd class="notification-list__value">
-                      020110
-                    </dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Estimated arrival time</dt>
-                    <dd class="notification-list__value" id="arrival-date-6">
-                      9 January 2025, 01:01
-                    </dd>
-                  </div>
-                  <div class="notification-list__grid-column-20">
-                    <dt class="notification-list__heading">CHED status</dt>
-                    <dd class="notification-list__value">
-                    <strong class="govuk-tag tag tag--submitted">
-                      NEW
-                    </strong>
-                    </dd>
-                  </div>
-                </div>
-                <div class="notification-list__grid-row">
-                  <div class="notification-list__grid-column-30">
-                    <dt class="notification-list__heading">Consignee</dt>
-                    <dd class="notification-list__value break-word">7dedf9b45db647f1a8b67762858f69a0</dd>
-                  </div>
-                  <div class="notification-list__grid-column-25">
-                    <dt class="notification-list__heading">Consignor</dt>
-                    <dd class="notification-list__value break-word">f0fe584b24ca4f8fadaffb4d544d8b78</dd>
+                    <dd class="notification-list__value break-word">ERConsignor</dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Origin</dt>
@@ -535,38 +411,40 @@
                 </div>
                 <div class="notification-list__grid-row">
                   <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">Risk category</dt>
+                    <dd class="notification-list__value" id="risk-category">Medium</dd>
                   </div>
                 </div>
                 <div class="notification-list__links">
-                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/vnet/protected/notifications/CHEDP.GB.2024.1007227/certificate/pdf" target="_blank">View CHED
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5678533/certificate/pdf" target="_blank">View CHED
                   </a>
                 </div>
               </dl>
-              <dl class="notification-list__row" id="row-CHEDPP.GB.2024.1002855">
+              <dl class="notification-list__row" id="row-CHEDP.GB.2023.5677018">
                 <div class="notification-list__grid-row">
                   <div class="notification-list__grid-column-30">
                     <dt class="notification-list__heading">Reference Number</dt>
                     <dd class="notification-list__value">
-                            <a class="govuk-link" id="view-details-CHEDPP.GB.2024.1002855" href="/decision/vnet/protected/bip-notifications/CHEDPP.GB.2024.1002855/hub">CHEDPP.GB.2024.1002855</a>
-                                      </dd>
+                        <a class="govuk-link" id="view-details-CHEDP.GB.2023.5677018" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5677018/CHED-overview">CHEDP.GB.2023.5677018</a>
+                    </dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Commodity</dt>
                     <dd class="notification-list__value">
-                      06042020
+                      020110
                     </dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Estimated arrival time</dt>
-                    <dd class="notification-list__value" id="arrival-date-3">
-                      6 January 2025, 10:10
+                    <dd class="notification-list__value" id="arrival-date-5">
+                      1 May 2023, 10:30
                     </dd>
                   </div>
                   <div class="notification-list__grid-column-20">
                     <dt class="notification-list__heading">CHED status</dt>
                     <dd class="notification-list__value">
-                    <strong class="govuk-tag tag tag--submitted">
-                      NEW
+                    <strong class="govuk-tag tag tag--rejected">
+                      REJECTED
                     </strong>
                     </dd>
                   </div>
@@ -574,15 +452,137 @@
                 <div class="notification-list__grid-row">
                   <div class="notification-list__grid-column-30">
                     <dt class="notification-list__heading">Consignee</dt>
-                    <dd class="notification-list__value break-word">Defra Test BIP</dd>
+                    <dd class="notification-list__value break-word">BQConsignor</dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Consignor</dt>
-                    <dd class="notification-list__value break-word">b7236c3eebc44a8cb7c4e81714ad5028</dd>
+                    <dd class="notification-list__value break-word">ISConsignor</dd>
                   </div>
                   <div class="notification-list__grid-column-25">
                     <dt class="notification-list__heading">Origin</dt>
                     <dd class="notification-list__value">Afghanistan</dd>
+                  </div>
+                  <div class="notification-list__grid-column-20">
+                      <dt class="notification-list__heading">Risk outcome</dt>
+                      <dd class="notification-list__value" id="risk-outcome">
+                        <strong class="govuk-tag tag tag--inspection-pending">
+                          RISK PENDING
+                        </strong>
+                      </dd>
+                  </div>
+                </div>
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">Risk category</dt>
+                    <dd class="notification-list__value" id="risk-category">Low</dd>
+                  </div>
+                </div>
+                <div class="notification-list__links">
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.5677018/certificate/pdf" target="_blank">View CHED
+                  </a>
+                </div>
+              </dl>
+              <dl class="notification-list__row" id="row-CHEDP.GB.2023.6218437">
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-30">
+                    <dt class="notification-list__heading">Reference Number</dt>
+                    <dd class="notification-list__value">
+                        <a class="govuk-link" id="view-details-CHEDP.GB.2023.6218437" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.6218437/CHED-overview">CHEDP.GB.2023.6218437</a>
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Commodity</dt>
+                    <dd class="notification-list__value">
+                      121490
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Estimated arrival time</dt>
+                    <dd class="notification-list__value" id="arrival-date-7">
+                      18 April 2023, 05:08
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">CHED status</dt>
+                    <dd class="notification-list__value">
+                    <strong class="govuk-tag tag tag--rejected">
+                      REJECTED
+                    </strong>
+                    </dd>
+                  </div>
+                </div>
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-30">
+                    <dt class="notification-list__heading">Consignee</dt>
+                    <dd class="notification-list__value break-word">Tee Inc</dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Consignor</dt>
+                    <dd class="notification-list__value break-word">MLConsignor</dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Origin</dt>
+                    <dd class="notification-list__value">Aland Islands</dd>
+                  </div>
+                  <div class="notification-list__grid-column-20">
+                      <dt class="notification-list__heading">Risk outcome</dt>
+                      <dd class="notification-list__value" id="risk-outcome">
+                        <strong class="govuk-tag tag tag--inspection-pending">
+                          RISK PENDING
+                        </strong>
+                      </dd>
+                  </div>
+                </div>
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-20">
+                  </div>
+                </div>
+                <div class="notification-list__links">
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDP.GB.2023.6218437/certificate/pdf" target="_blank">View CHED
+                  </a>
+                </div>
+              </dl>
+              <dl class="notification-list__row" id="row-CHEDD.GB.2023.5507078">
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-30">
+                    <dt class="notification-list__heading">Reference Number</dt>
+                    <dd class="notification-list__value">
+                        <a class="govuk-link" id="view-details-CHEDD.GB.2023.5507078" href="/decision/tst/protected/bip-notifications/CHEDD.GB.2023.5507078/CHED-overview">CHEDD.GB.2023.5507078</a>
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Commodity</dt>
+                    <dd class="notification-list__value">
+                      13023290
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Estimated arrival time</dt>
+                    <dd class="notification-list__value" id="arrival-date-9">
+                      16 March 2023, 12:12
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">CHED status</dt>
+                    <dd class="notification-list__value">
+                    <strong class="govuk-tag tag tag--rejected">
+                      REJECTED
+                    </strong>
+                    </dd>
+                  </div>
+                </div>
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-30">
+                    <dt class="notification-list__heading">Consignee</dt>
+                    <dd class="notification-list__value break-word">ANZCO FOODS ( UK ) LTD</dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Consignor</dt>
+                    <dd class="notification-list__value break-word">ANZCO Foods Limited</dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Origin</dt>
+                    <dd class="notification-list__value">Argentina</dd>
                   </div>
                   <div class="notification-list__grid-column-20">
                   </div>
@@ -592,16 +592,71 @@
                   </div>
                 </div>
                 <div class="notification-list__links">
-                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/vnet/protected/notifications/CHEDPP.GB.2024.1002855/certificate/pdf" target="_blank">View CHED
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDD.GB.2023.5507078/certificate/pdf" target="_blank">View CHED
+                  </a>
+                </div>
+              </dl>
+              <dl class="notification-list__row" id="row-CHEDA.GB.2023.5445228">
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-30">
+                    <dt class="notification-list__heading">Reference Number</dt>
+                    <dd class="notification-list__value">
+                        <a class="govuk-link" id="view-details-CHEDA.GB.2023.5445228" href="/decision/tst/protected/bip-notifications/CHEDA.GB.2023.5445228/CHED-overview">CHEDA.GB.2023.5445228</a>
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Commodity</dt>
+                    <dd class="notification-list__value">
+                      01069000
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Estimated arrival time</dt>
+                    <dd class="notification-list__value" id="arrival-date-13">
+                      3 March 2023, 01:00
+                    </dd>
+                  </div>
+                  <div class="notification-list__grid-column-20">
+                    <dt class="notification-list__heading">CHED status</dt>
+                    <dd class="notification-list__value">
+                    <strong class="govuk-tag tag tag--rejected">
+                      REJECTED
+                    </strong>
+                    </dd>
+                  </div>
+                </div>
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-30">
+                    <dt class="notification-list__heading">Consignee</dt>
+                    <dd class="notification-list__value break-word">Armitage Group Ltd</dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Consignor</dt>
+                    <dd class="notification-list__value break-word">Stansfield Exports</dd>
+                  </div>
+                  <div class="notification-list__grid-column-25">
+                    <dt class="notification-list__heading">Origin</dt>
+                    <dd class="notification-list__value">New Caledonia</dd>
+                  </div>
+                  <div class="notification-list__grid-column-20">
+                  </div>
+                </div>
+                <div class="notification-list__grid-row">
+                  <div class="notification-list__grid-column-20">
+                  </div>
+                </div>
+                <div class="notification-list__links">
+                  <a rel="noopener noreferrer" class="govuk-link govuk-!-font-size-19" href="/notification/tst/protected/notifications/CHEDA.GB.2023.5445228/certificate/pdf" target="_blank">View CHED
                   </a>
                 </div>
               </dl>
 
 
+
             <nav class="pagination" aria-label="Pagination">
               <ul class="pagination-list">
                 <li class="pagination-item pagination-item-next">
-                        <a href="/decision/vnet/protected/bip-notifications/alerts?page=2&amp;type=SUBMITTED" class="pagination-link" rel="next" id="next-page">
+                        <a href="/decision/vnet/protected/bip-notifications/alerts?page=2&amp;type=REJECTED_FOR_DECISION" class="pagination-link" rel="next" id="next-page">
                       <span class="pagination-link-title">
                          Next page
                         <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
@@ -609,7 +664,7 @@
                         </svg>
                       </span>
                     <span class="govuk-visually-hidden">:</span>
-                    <span class="pagination-link-label">2 of 24</span>
+                    <span class="pagination-link-label">2 of 3</span>
                   </a>
                 </li>
               </ul>
