@@ -44,18 +44,47 @@
         <p>
           We need the correct billing details for Common User Charge invoices.
         </p>
-        <p class="govuk-!-margin-bottom-9">
-          <a href="02-billing-postcode?action=add" class="govuk-link">
-            Add billing details for
-            {% if (data['ched-type'] == "chedp") %}
-            Customs Agency 4U
-            {% elseif (data['ched-type'] == "chedpp")%}
-            Plants and Trees Nurseries
-            {% else %}
-            XYZ Limited
-            {% endif %}
-          </a>
-        </p>
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h2 class="govuk-summary-card__title"> 
+              {% if (data['ched-type'] == "chedp") %}
+              Customs Agency 4U
+              {% elseif (data['ched-type'] == "chedpp") %}
+              Plants and Trees Nurseries
+              {% else %}
+              XYZ Limited
+              {% endif %}
+            </h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p>
+              No billing details for 
+                {% if (data['ched-type'] == "chedp") %}
+                Customs Agency 4U
+                {% elseif (data['ched-type'] == "chedpp") %}
+                Plants and Trees Nurseries
+                {% else %}
+                XYZ Limited
+                {% endif %} 
+              found
+            </p>
+            <p>
+              <a href="02-billing-postcode?action=add" class="govuk-link">
+                Add billing details to the 
+                <span class="govuk-visually-hidden">
+                  {% if (data['ched-type'] == "chedp") %}
+                  Customs Agency 4U
+                  {% elseif (data['ched-type'] == "chedpp")%}
+                  Plants and Trees Nurseries
+                  {% else %}
+                  XYZ Limited
+                  {% endif %}
+                </span>
+                Defra Account
+              </a>
+            </p>
+          </div>
+        </div>
         <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" formaction="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">Cancel and return to hub</a></p>
