@@ -28,33 +28,26 @@
       <form action="../{{ data['ched-type'] or "chedp" }}/07-cn-01-review" method="post">
         <input name="testing" type="hidden" value="visited">
         <p>
-          Consignments eligible for Border Control Post (BCP) checks at Sevington will incur charges if they enter through:
+          Invoices for chargeable notifications are issued using the billing details in your Defra account. We will send them to the email address provided.
         </p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Port of Dover</li>
-          <li>Eurotunnel Le Shuttle</li>
-        </ul>
         <p>
-          You should:
+          To find out more about the common user charge:
         </p>
         <ul class="govuk-list govuk-list--bullet">
           <li><a href="https://www.gov.uk/guidance/common-user-charge-rates-and-eligibility" class="govuk-link" rel="noreferrer noopener" target="_blank">read about rates and eligibility (opens in new tab)</a></li>
           <li><a href="https://www.gov.uk/government/publications/paying-the-common-user-charge-terms-and-conditions" class="govuk-link" rel="noreferrer noopener" target="_blank">read the terms and conditions (opens in new tab)</a></li>
         </ul>
-        <p>
-          We need the correct billing details for Common User Charge invoices. We will send them to the email address provided.
-        </p>
         <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
             <h2 class="govuk-summary-card__title"> 
+              Billing details for 
               {% if (data['ched-type'] == "chedp") %}
-              Customs Agency 4U
-              {% elseif (data['ched-type'] == "chedpp") %}
-              Plants and Trees Nurseries
-              {% else %}
-              XYZ Limited
+                Customs Agency 4U
+                {% elseif (data['ched-type'] == "chedpp") %}
+                  Plants and Trees Nurseries
+                {% else %}
+                XYZ Limited
               {% endif %}
-              billing details
             </h2>
           </div>
           <div class="govuk-summary-card__content">
@@ -82,7 +75,7 @@
                   <a class="govuk-link" href="02-billing-postcode?action=change&postcode-search=">Change<span class="govuk-visually-hidden"> billing address</span></a>
                 </dd>
               </div>
-              <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+              <div class="govuk-summary-list__row"> <!-- govuk-summary-list__row--no-border -->
                 <dt class="govuk-summary-list__key">
                   Email address
                 </dt>
@@ -90,7 +83,7 @@
                   {{ data['billing-email'] or "payments@xyz.ltd.uk" }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                  <a class="govuk-link" href="04-billing-contact-details?action=change">Change<span class="govuk-visually-hidden"> billing contact details</span></a>
+                  <a class="govuk-link" href="04-billing-contact-details?action=change">Change<span class="govuk-visually-hidden"> billing eamil address</span></a>
                 </dd>
               </div>
               <div class="govuk-summary-list__row  govuk-summary-list__row--no-border">
@@ -100,6 +93,9 @@
                 <dd class="govuk-summary-list__value">
                   {{ data['billing-telephone-number'] or "07700 900457" }}
                 </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="04-billing-contact-details?action=change">Change<span class="govuk-visually-hidden"> billing phone number</span></a>
+                </dd>
               </div>
             </dl>
           </div>
@@ -108,9 +104,9 @@
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
             <span class="govuk-visually-hidden">Warning</span>
-            Billing details must be provided. Additional fees may apply if you provide incorrect details, to cover the costs of correcting this.
+            If you change the billing details, they will be applied to all previous notifications created during the same invoicing period.
           </strong>
-        </div>
+        </div>      
         <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" formaction="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">Cancel and return to hub</a></p>
