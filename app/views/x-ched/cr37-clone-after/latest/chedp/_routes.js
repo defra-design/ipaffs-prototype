@@ -27,10 +27,10 @@ router.post('/route-x-p-docs-info-amend', function (req, res) {
   // Make a variable and give it the value from name
   var ecertRoute = req.session.data['addhc']
   if (ecertRoute == "Clone-info") {
-    res.redirect('07-00-review-clone-success')
+    res.redirect('07-00-review-clone-success-data')
   }
   else if (ecertRoute == "Clone-docs") {
-    res.redirect('03-01-certificate-clone')
+    res.redirect('07-00-review-clone-success')
   }
   
  else {
