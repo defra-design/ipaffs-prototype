@@ -44,24 +44,37 @@
             </h2>
           </div>
           <div class="govuk-summary-card__content">
-            <p>
-              No billing details for 
-              <b>
-                {% if (data['ched-type'] == "chedp") %}
-                  Customs Agency 4U
-                  {% elseif (data['ched-type'] == "chedpp") %}
-                    Plants and Trees Nurseries
-                  {% else %}
-                  XYZ Limited
-                {% endif %}
-              </b>
-              found
-            </p>
-            <p>
-              <a href="02-billing-postcode?action=add" class="govuk-link">
-                Add billing details to Defra account
-              </a>
-            </p>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row"> <!-- govuk-summary-list__row--no-border -->
+                <dt class="govuk-summary-list__key">
+                  Organisation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {% if (data['ched-type'] == "chedp") %}
+                    Customs Agency 4U
+                    {% elseif (data['ched-type'] == "chedpp") %}
+                      Plants and Trees Nurseries
+                    {% else %}
+                    XYZ Limited
+                  {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  
+                </dd>
+              </div>
+            </dl>
+            <div class="govuk-summary-list__row">
+                <p class="govuk-!-margin-top-2">
+                  No billing details found
+                </p>
+                <p>
+                  <a href="02-billing-postcode?action=add" class="govuk-link">
+                    Add billing details to Defra account
+                  </a>
+                </p>
+              
+              
+            </div>
           </div>
         </div>
         <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" formaction="../{{ data['ched-type'] or "chedp" }}/01-no-check-answers">
