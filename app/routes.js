@@ -41,8 +41,8 @@ router.use('/x-ched/cr37-clone-after/v1/cheda', require('./views/x-ched/cr37-clo
 
 router.use('/x-ched/cuc-foundations/latest/billing-details', require('./views/x-ched/cuc-foundations/latest/billing-details/_routes'))
 router.use('/x-ched/cuc-foundations/iteration-1/billing-details', require('./views/x-ched/cuc-foundations/iteration-1/billing-details/_routes'))
-router.use('/x-ched/cuc-oi/latest/billing-details', require('./views/x-ched/cuc-oi/latest/billing-details/_routes'))
-router.use('/x-ched/cuc-oi/ur/billing-details', require('./views/x-ched/cuc-oi/ur/billing-details/_routes'))
+router.use('/x-ched/cuc-ci/latest/billing-details', require('./views/x-ched/cuc-ci/latest/billing-details/_routes'))
+router.use('/x-ched/cuc-ci/ur/billing-details', require('./views/x-ched/cuc-ci/ur/billing-details/_routes'))
 router.use('/x-ched/dashboard-results', require('./views/x-ched/dashboard-results/_routes'))
 
 
