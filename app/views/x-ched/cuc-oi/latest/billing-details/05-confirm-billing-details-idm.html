@@ -40,14 +40,7 @@
         <div class="govuk-summary-card">
           <div class="govuk-summary-card__title-wrapper">
            <h2 class="govuk-summary-card__title"> 
-              Billing details for 
-              {% if (data['ched-type'] == "chedp") %}
-                Customs Agency 4U
-                {% elseif (data['ched-type'] == "chedpp") %}
-                  Plants and Trees Nurseries
-                {% else %}
-                XYZ Limited
-              {% endif %}
+              Billing details
             </h2>
             <ul class="govuk-summary-card__actions">
               <li class="govuk-summary-card__action">
@@ -68,6 +61,20 @@
           </div>
           <div class="govuk-summary-card__content">
             <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+                <dt class="govuk-summary-list__key">
+                  Organisation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {% if (data['ched-type'] == "chedp") %}
+                    Customs Agency 4U
+                      {% elseif (data['ched-type'] == "chedpp") %}
+                        Plants and Trees Nurseries
+                      {% else %}
+                    XYZ Limited
+                  {% endif %}
+                </dd>
+              </div>
               <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
                 <dt class="govuk-summary-list__key">
                   Address

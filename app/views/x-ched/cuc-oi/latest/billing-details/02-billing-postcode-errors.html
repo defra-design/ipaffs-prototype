@@ -30,18 +30,15 @@
           </h2>
           <div class="govuk-error-summary__body">
             <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
-              {% if data['postcode-search'] == "" %}
               <li>
                 <a href="#postcode-search">Enter postcode or enter address manually</a>
               </li>
-              {% else %}
-              <!-- <li>
+              <li>
                 <a href="#postcode-search">Enter valid UK postcode</a>
-              </li> -->
+              </li>
               <li>
                 <a href="#postcode-search">No address found. Try again or enter address manually</a>
               </li>
-              {% endif %}
             </ul>
           </div>
         </div>
@@ -65,7 +62,9 @@
               </span>
             </summary>
             <div class="govuk-details__text">
-              <p>You must employ a UK-based import agent to complete your notifications.</p>
+              <p>If you are a user from the Republic of Ireland only and do not have a UK billing address, email <a href="mailto:CUCsupport@defra.gov.uk">CUCsupport@defra.gov.uk</a>.</p>
+              <p>This email address will not reply to any other type of enquiry.</p>
+              <p>If you are based elsewhere, you must employ a UK-based import agent to complete your notifications.</p>
               <p>Import agents must use their own address for non-UK customers and are liable for any charges.</p>
             </div>
           </details>
@@ -77,12 +76,9 @@
               For example, AA3 1AB
             </div>
             <p id="postcode-search-error" class="govuk-error-message">
-              {% if data['postcode-search'] == "" %}
               <span class="govuk-visually-hidden">Error:</span> Enter postcode or enter address manually<br>
-              {% else %}
-              <!-- <span class="govuk-visually-hidden">Error:</span> Enter valid UK postcode<br> -->
+              <span class="govuk-visually-hidden">Error:</span> Enter valid UK postcode<br>
               <span class="govuk-visually-hidden">Error:</span> No address found. Try again or enter address manually
-              {% endif %}
             </p>
             <input class="govuk-input govuk-input--width-10" id="postcode-search" name="postcode-search" type="text" aria-describedby="billing-address-postcode-hint" value="{{ data['postcode-search'] }}">
           </div>

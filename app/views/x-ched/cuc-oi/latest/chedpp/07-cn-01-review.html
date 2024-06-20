@@ -486,6 +486,18 @@
               <caption class="govuk-visually-hidden">Summary of billing details</caption>
               <tbody>
                 <tr class="">
+                  <th scope="row" class="govuk-table__header govuk-table__header--half">Organisation</th>
+                  <td class="govuk-table__cell" id="billing-organisation">
+                    {% if (data['ched-type'] == "chedp") %}
+                      Customs Agency 4U
+                      {% elseif (data['ched-type'] == "chedpp") %}
+                        Plants and Trees Nurseries
+                      {% else %}
+                      XYZ Limited
+                    {% endif %}
+                  </td>
+                </tr>
+                <tr class="">
                   <th scope="row" class="govuk-table__header govuk-table__header--half">Address</th>
                   <td class="govuk-table__cell" id="billing-address">
                     {% if (data['address-entry-type'] == "address-lookup") %}
