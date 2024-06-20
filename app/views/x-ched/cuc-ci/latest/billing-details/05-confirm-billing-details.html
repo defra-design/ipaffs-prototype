@@ -47,16 +47,22 @@
             <dl class="govuk-summary-list">
               <div class="govuk-summary-list__row"> <!-- govuk-summary-list__row--no-border -->
                 <dt class="govuk-summary-list__key">
-                  Organisation
+                  {% if (data['individual'] == "true") %}
+                    Name
+                    {% else %}
+                    Organisation
+                  {% endif %}
                 </dt>
                 <dd class="govuk-summary-list__value">
                   {% if (data['ched-type'] == "chedp") %}
-                    Customs Agency 4U
-                    {% elseif (data['ched-type'] == "chedpp") %}
-                      Plants and Trees Nurseries
-                    {% else %}
-                    XYZ Limited
-                  {% endif %}
+                  Customs Agency 4U
+                  {% elseif (data['ched-type'] == "chedpp") %}
+                    Plants and Trees Nurseries
+                  {% elseif (data['individual'] == "true") %}
+                    Alex Watson
+                  {% else %}
+                  XYZ Limited
+                {% endif %}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   
