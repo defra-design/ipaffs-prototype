@@ -23,25 +23,12 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 <main class="govuk-main-wrapper" id="main-content">
-  <!-- <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
-      <div class="govuk-notification-banner govuk-notification-banner--success" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="banner-title">
-              Success
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-            <p class="govuk-body">
-              1 row removed
-            </p>
-        </div>
-      </div>
-  </div> -->
+ 
   <div class="govuk-grid-row" id="veterinary-health-certificate">
     <div class="govuk-grid-column-full">
         <span class="govuk-caption-xl">Documents</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Accompanying documents</h1>
-
+      {{ data | log }}
 
 
 
@@ -78,18 +65,21 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   <ul class="govuk-list govuk-list--bullet" id="supporting-details-accordion">
                     <li>an invoice for the consignment</li>
                     <li>travel documents or proof of travel, such as air, sea or rail waybills</li>
-                    <li>other documents required for this consignment - this may include catch certificates, storage and processing documents</li>
+                    <li>other documents required for this consignment - this may include storage and processing documents</li>
                   </ul>
-                  <!-- <h3 class="govuk-heading-s">Illegal, unreported and regulated (IUU) documents</h3>
+                 
+                 
+                  {% if (data['catch-cert'] == "needed") %}
+                  <h3 class="govuk-heading-s">Illegal, unreported and regulated (IUU) documents</h3>
                   <p class="govuk-body">Most wild caught fishery products will need IUU documents.</p>
   
-                  <p class="govuk-body">Upload your processing statements and storage documents here.</p>
+                
 
                   <p class="govuk-body">If you have catch certificates, upload these in the <a href="09-iuu-docs">catch certificates section</a>.</p>
 
-                  <p class="govuk-body">For help with IUU documents, check the guidance on <a href="https://www.gov.uk/guidance/importing-or-moving-fish-to-the-uk" class="govuk-link" rel="noreferrer noopener" target="_blank">importing or moving fish to the UK (opens in new tab)</a>.</p> -->
-
-
+                  <p class="govuk-body">For help with IUU documents, check the guidance on <a href="https://www.gov.uk/guidance/importing-or-moving-fish-to-the-uk" class="govuk-link" rel="noreferrer noopener" target="_blank">importing or moving fish to the UK (opens in new tab)</a>.</p> 
+                
+                  {% endif %}
                   
                       
               </div>
