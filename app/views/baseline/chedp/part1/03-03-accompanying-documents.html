@@ -49,11 +49,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             {% if (data['risk-category'] == "low") %}
               <p class="govuk-body"> You do not need to upload a health certificate for this consignment.</p>
             {% endif %}
-             <!--  <h3>IUU</h3>
-              <p class="govuk-body">There's a separate section to upload catch certificates later in this notification.
-              </p>
-              <p class="govuk-body govuk-!-margin-bottom-6">Read the requirements for <a href="https://www.gov.uk/guidance/importing-or-moving-fish-to-the-uk">import documents</a> needed for wild fish.</p>
-            -->
+            
               <details class="govuk-details  govuk-!-width-three-quarters">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
@@ -69,7 +65,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   </ul>
                  
                  
-                  {% if (data['catch-cert'] == "needed") %}
+                  {% if (data['iuu'] == "needed") %}
                   <h3 class="govuk-heading-s">Illegal, unreported and regulated (IUU) documents</h3>
                   <p class="govuk-body">Most wild caught fishery products will need IUU documents.</p>
   
