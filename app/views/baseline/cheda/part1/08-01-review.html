@@ -180,11 +180,7 @@
                       <td>Commercial sale or change of ownership</td>
                       <td></td>
                     </tr>
-                    <tr>
-                      <td class="govuk-table__header" id="movement-reference-number-header">Movement Reference Number (MRN)</td>
-                      <td id="movement-reference-number-value"></td>
-                      <td></td>
-                    </tr>
+                   
               </tbody>
             </table>
           </div>
@@ -366,12 +362,6 @@
                       </td>
                     </tr>
           
-                <tr class="presentation-table__section" id="imported-in-shipping-containers-section">
-                  <td class="govuk-table__header">Imported in shipping containers or road trailers</td>
-                  <td class="govuk-table__cell" id="imported-in-containers" colspan="2">
-                    No
-                  </td>
-                </tr>
           
               </tbody>
             </table>
@@ -759,8 +749,10 @@
               </tbody>
             </table>
           </div>
+
+          <h2 class="govuk-heading-l">Transport</h2>
             <div class="heading-with-change-link">
-              <h2 class="govuk-heading-m">Transport details</h2>
+              <h2 class="govuk-heading-m">Transport to the port of entry</h2>
               <a href="05-01-transport-to-poe" class="govuk-link" id="transport-to-bip-change-link">
                 Change
               </a>
@@ -771,32 +763,47 @@
               <table class="govuk-table review-table presentation-table" id="review-table-bip-details">
                 <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
                 <tbody>
-                <tr class="table-row">
-                  <th scope="row" class="govuk-table__header">Port of entry</th>
-                  <td class="govuk-table__cell"></td>
-                </tr>
-                <tr class="">
-                  <th scope="row" class="govuk-table__header">Means of transport to port of entry</th>
-                  <td class="govuk-table__cell">Vessel</td>
-                </tr>
-                <tr class="">
-                    <th scope="row" class="govuk-table__header">Transport identification</th>
-                  <td class="govuk-table__cell">4322</td>
-                </tr>
-                <tr class="table-row">
-                    <th scope="row" class="govuk-table__header">Transport document reference</th>
-                  <td class="govuk-table__cell"></td>
-                </tr>
                   <tr class="">
-                    <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)
-                    </th>
-                    <td class="govuk-table__cell">No</td>
+                    <th scope="row" class="govuk-table__header">Port of entry</th>
+                    <td class="govuk-table__cell">Dover Port - GBDOV1P</td>
                   </tr>
-                <tr class="">
-                  <th scope="row" class="govuk-table__header">Arrival date at port of entry</th>
-                  <td class="govuk-table__cell">21 February 2024</td>
-                </tr>
-                </tbody>
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Means of transport to port of entry</th>
+                    <td class="govuk-table__cell">Vessel</td>
+                  </tr>                      
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Transport identification</th>
+                    <td class="govuk-table__cell">Stena</td>
+                  </tr>
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Using road trailers or containers?</th>
+                    <td class="govuk-table__cell">Yes</td>
+                  </tr>
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Trailer or container number</th>
+                    <td class="govuk-table__cell">ABC123</td>
+                  </tr>
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Seal number</th>
+                    <td class="govuk-table__cell">GB 324567</td>
+                  </tr>
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Official seal</th>
+                    <td class="govuk-table__cell">Yes</td>
+                  </tr>
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Transport document reference</th>
+                    <td class="govuk-table__cell">SHP-6893598ADR</td>
+                  </tr>
+                  <tr class="">
+                    <th scope="row" class="govuk-table__header">Estimated arrival date at port of entry</th>
+                    <td class="govuk-table__cell">26 August 2023</td>
+                  </tr>
+                    <tr class="">
+                      <th scope="row" class="govuk-table__header">Estimated arrival time at port of entry</th>
+                      <td class="govuk-table__cell">11:00</td>
+                    </tr>
+                  </tbody>
               </table>
             </div>
 
@@ -839,7 +846,37 @@
                       </tbody>
                     </table>
                   </div>
+                 
+                  <div class="heading-with-change-link">
+                    <h2 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h2>
+                    <a href="11b-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">
+                      Change
+                    </a>
+                  </div>
+                  <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">
+                    <caption class="govuk-visually-hidden">Summary of transport to the port of entry</caption>
 
+                    <tbody>
+                      <tr>
+                        <td class="govuk-table__header">Using the Common Transit Convention (CTC)</td>
+                        <td class="govuk-table__cell" id="region-of-consignment-value">
+                          Yes &ndash; add MRN now
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                      <tr>
+                        <td class="govuk-table__header">Movement Reference Number (MRN)</td>
+                        <td class="govuk-table__cell" id="region-of-consignment-value">
+                          23GB1234567890ABCD
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                      <tr class="">
+                        <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)</th>
+                        <td class="govuk-table__cell">Yes</td>
+                      </tr>
+                      </tbody>
+                  </table>
             
               <h2 class="govuk-heading-m">Transporter</h2>
               <div class="table-responsive govuk-!-margin-bottom-9">
