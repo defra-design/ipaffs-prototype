@@ -1042,6 +1042,38 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                   </tbody>
                 </table>
               </div>
+
+              <div class="heading-with-change-link">
+                <h2 class="govuk-heading-l">Billing details</h2>
+                <a href="../billing-details/05-confirm-billing-details" class="govuk-link" id="billing-details-change-link">
+                  Change
+                </a>
+              </div>
+              <div div class="govuk-!-margin-bottom-9 table-responsive">
+                <table class="govuk-table presentation-table govuk-!-margin-0" id="billing-details-table">
+                  <caption class="govuk-visually-hidden">Summary of billing details</caption>
+                  <tbody>
+                    <tr class="">
+                      <th scope="row" class="govuk-table__header govuk-table__header--half">Address</th>
+                      <td class="govuk-table__cell" id="billing-address">
+                        3 Bakers Lane<br>Lichfield<br>WS13 6NF
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="govuk-table__header govuk-table__header--half">Email address</th>
+                      <td class="govuk-table__cell" id="billing-email">
+                        payments@xyz.ltd.uk
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <th scope="row" class="govuk-table__header govuk-table__header--half">Phone number</th>
+                      <td class="govuk-table__cell break-word" id="billing-telephone-number">
+                        07700 900457
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
   
           <form action="19-declaration" method="POST">
             <input class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue-p">
