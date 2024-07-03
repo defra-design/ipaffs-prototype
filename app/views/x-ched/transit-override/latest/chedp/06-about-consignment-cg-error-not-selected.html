@@ -11,7 +11,22 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
 
 {% block content %}
 
-<div class="govuk-!-padding-top-6">
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      Please fix the following errors
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+        <li>
+          <a href="#transited-country-error">Select at least one transited country</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-!-padding-top-3">
   <span class="heading-tertiary">
       <span id="reference-number">DRAFT.GB.2023.5925980</span>
           <span> - CHEDP</span>
@@ -431,14 +446,17 @@ What is the main reason for importing the consignment? – {{ serviceName }} –
                     </fieldset>
                   </div>
 
-                  <div class="govuk-form-group">
+                  <div class="govuk-form-group govuk-form-group--error">
                     <span id="transit-third-countries" class="govuk-label govuk-label--s">Transited country</span>
+                    <p id="transited-country-error" class="govuk-error-message">
+                      <span class="govuk-visually-hidden">Error:</span> Select at least one transited country
+                    </p>
                     <div id="transit-third-country-container">
                         <!-- <table class="govuk-table govuk-!-margin-bottom-0" role="presentation"> -->
                                 <!-- <tbody><tr>
                                     <td> -->
                                         <div class="govuk-form-group ">
-                                          <select class="govuk-select govuk-!-width-full-width" id="transit-third-countries-last" name="transit-third-countries">
+                                          <select class="govuk-select govuk-!-width-full-width govuk-select--error" id="transit-third-countries-last" name="transit-third-countries">
                                             <option value="">Select transited country</option>
                                                         <option value="AF">Afghanistan</option>
                                                         <option value="AX">Aland Islands</option>
