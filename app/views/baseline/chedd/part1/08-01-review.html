@@ -276,12 +276,7 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                           <td class="govuk-table__header">Temperature</td>
                           <td class="govuk-table__cell" colspan="2">Chilled</td>
                         </tr>
-                        <tr class="presentation-table__section">
-                          <td class="govuk-table__header">Imported in shipping containers or road trailers</td>
-                          <td class="govuk-table__cell" id="imported-in-containers" colspan="2">
-                            No
-                          </td>
-                        </tr>
+                        
                       </tbody>
                     </table>
                   </div>
@@ -379,8 +374,10 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                     </tbody>
                   </table>
                 </div>
+
+                <h2 class="govuk-heading-l" >Transporter</h2>
                   <div class="heading-with-change-link">
-                    <h2 class="govuk-heading-l">Transport to the port of entry</h2>
+                    <h2 class="govuk-heading-m">Transport to the port of entry</h2>
                     <a href="05-01-transport-port-of-entry" class="govuk-link" id="transport-to-bip-change-link">
                       Change
                     </a>
@@ -413,14 +410,42 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
                         <th scope="row" class="govuk-table__header">Estimated arrival date at port of entry</th>
                         <td class="govuk-table__cell">14 December 2023</td>
                       </tr>
-                        <tr class="">
-                          <th scope="row" class="govuk-table__header">Estimated arrival time at port of entry</th>
-                          <td class="govuk-table__cell">12:00</td>
-                        </tr>
+                       
                       </tbody>
                     </table>
                   </div>
                   
+                  <div class="heading-with-change-link">
+                    <h2 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h2>
+                    <a href="11b-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">
+                      Change
+                    </a>
+                  </div>
+
+                  <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">
+                    <caption class="govuk-visually-hidden">Summary of transport to the port of entry</caption>
+
+                    <tbody>
+                      <tr>
+                        <td class="govuk-table__header">Using the Common Transit Convention (CTC)</td>
+                        <td class="govuk-table__cell" id="region-of-consignment-value">
+                          Yes &ndash; add MRN now
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                      <tr>
+                        <td class="govuk-table__header">Movement Reference Number (MRN)</td>
+                        <td class="govuk-table__cell" id="region-of-consignment-value">
+                          23GB1234567890ABCD
+                        </td>
+                        <td class="govuk-table__cell"></td>
+                      </tr>
+                      <tr class="">
+                        <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)</th>
+                        <td class="govuk-table__cell">Yes</td>
+                      </tr>
+                      </tbody>
+                  </table>
                   
                   <h2 class="govuk-heading-l">Contacts</h2>
                   <div class="heading-with-change-link">
