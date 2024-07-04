@@ -107,84 +107,12 @@
           </fieldset>
         </div>
         
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading" id="containers-question">
-                Will your goods be imported in shipping containers or road trailers?
-              </h2>
-            </legend>
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="are-consignments-in-containers-yes" name="consignment-in-container" type="radio" value="Yes" aria-controls="conditional-how-contacted-conditional" aria-expanded="false">
-                <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-yes">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-                <div class="govuk-form-group govuk-!-margin-bottom-0 " id="yes-response">
-                  <div class="containers-grid">
-                    <div class="govuk-grid-row">
-                      <div class="govuk-grid-column-full govuk-!-margin-bottom-2">
-                        <label class="govuk-label govuk-label--s" for="container-number-1">Container or trailer number</label>
-                        <span class="govuk-hint">Enter the container's identification number, or the trailer's registration number or number plate.</span>
-                        <div class="govuk-form-group  ">
-                          <input class="govuk-input  " id="container-number-1" name="container-number-1" type="text" value="" title="Container number 1">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="govuk-grid-row">
-                      <div class="govuk-grid-column-full govuk-!-margin-bottom-2">
-                        <div class="govuk-form-group  ">
-
-                          <label class="govuk-label govuk-label--s" for="seal-number-1">
-                            Seal number
-                          </label>
-
-                          <input class="govuk-input  " id="seal-number-1" name="seal-number-1" type="text" value="" title="Seal number for container 1">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="govuk-grid-row">
-                      <div class="govuk-grid-column-full govuk-!-margin-bottom-2">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-label--s" for="official-seal-1">Official seal</label>
-                          <div class="govuk-checkboxes govuk-!-margin-top-1" id="hidden-official-seal-1-container">
-                            <div class="govuk-checkboxes__item" data-target="hidden-official-seal-1">
-                              <input class="govuk-checkboxes__input" id="official-seal-1" name="official-seal-1" type="checkbox" value="Yes">
-                              <label class="govuk-label govuk-checkboxes__label" for="official-seal-1"><span class="govuk-visually-hidden">official-seal-1</span></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="govuk-grid-row">
-                      <div class="govuk-grid-column-full">
-                        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3 govuk-!-margin-bottom-5">
-                      </div>
-                    </div>
-                  </div>
-                  <button type="submit" class="link-button" name="add-container" value="" id="add-container">
-                    Add another container or trailer
-                  </button>
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="are-consignments-in-containers-no" name="consignment-in-container" type="radio" value="No" checked="">
-                <label class="govuk-label govuk-radios__label" for="are-consignments-in-containers-no">
-                  No
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+       
         
       <div class="save-and-submit-buttons">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
-      </div>
-    </div>
   </form>
   </div>
   </div>

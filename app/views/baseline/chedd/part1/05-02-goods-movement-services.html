@@ -30,7 +30,7 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-grid-column-full">
 
 
-      <form action="05-04-transporter" method="post">
+      <form action="06-01-contact-details" method="post">
         <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy">
         <input name="etag" type="hidden" value="&quot;00000000053B49D9&quot;">
         <input name="11-transport-to-poe" type="hidden" value="visited">
@@ -156,11 +156,9 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
 
         
 
-        
-        <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button" href="07-check-answers">
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button-p" name="save-and-return-button-p" type="submit" value="Save and continue" data-module="govuk-button">
-        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
-
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+            <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
       </form>
     </div>
   </div>
