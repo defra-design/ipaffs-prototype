@@ -177,10 +177,10 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
 
           <a href="04-01-addresses?place-of-destination-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
           &nbsp;
-          <a href="04-02-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+          <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
         
           {% elif (data['place-of-destination-page'] != "yes") %}
-          <a href="04-02-address-search?addressType=%20place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+          <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
       
           {% elif (data['place-of-destination-page'] == "yes") %}
           <div class="table-responsive">
