@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+{% include "includes/back.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+    <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+    <span> - CHEDA</span>
+  </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="permanent-address">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <p class="govuk-body ">To add permanent address you must first enter the number of animals.</p>
+            <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+              <li>
+                <a href="02-06-commodity-details">Enter the number of animals</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <span class="govuk-caption-xl" id="page-secondary-title">Traders</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Permanent addresses for these animals</h1>
+
+      <form action="05-01-transport-to-poe" method="POST">
+        <input name="crumb" type="hidden" value="3cYZjWPYgMusT4vsqO2mM6hRPIW-ttXfMDwpemRDjm5">
+        <input name="etag" type="hidden" value="&quot;0000000000012CA5&quot;">
+        <div class="govuk-!-margin-bottom-0">
+          <div class="govuk-warning-text" id="high-risk-eu-cveda-fraud-warning">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              You must provide accurate information
+            </strong>
+            <div class="govuk-inset-text govuk-!-padding-top-0">
+              A permanent address is where an animal:
+              <ul class="govuk-list--bullet govuk-!-margin-bottom-5">
+                <li>will permanently reside</li>
+                <li>can be checked by the Animal and Plant Health Agency (APHA)</li>
+              </ul>
+              False information can lead to action by APHA
+            </div>
+          </div>
+        </div>
+
+        <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
+          name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button"
+          data-prevent-double-click="true" formaction="00-notification-hub">Save and return to hub</button>
+        <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+          name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button"
+          data-prevent-double-click="true">Save and continue</button>
+        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
