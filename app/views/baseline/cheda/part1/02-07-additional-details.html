@@ -1,13 +1,12 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+{% include "includes/phase-banner.html" %}
+{% include "includes/back.html" %}
 {% endblock %}
 
 {% block content %}
@@ -23,97 +22,81 @@
 
 
 <main class="govuk-main-wrapper" id="main-content">
-<div class="govuk-grid-row" id="consignment-details-page">
-  <div class="govuk-grid-column-three-quarters">
-        <span class="govuk-caption-xl">Description of the goods</span>
-    <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
-
-      <!-- <div class="govuk-!-width-two-thirds">
-        <h2 class="govuk-heading-m">Total</h2>
-        <div class="table-responsive">
-          <table class="govuk-table presentation-table">
-            <tbody>
-            <tr>
-              <th class="govuk-table__header govuk-!-width-three-quarters" scope="row">Number of animals</th>
-              <td class="govuk-table__cell ">3</td>
-            </tr>
-            <tr>
-              <th class="govuk-table__header govuk-!-width-three-quarters" scope="row">Number of packages</th>
-              <td class="govuk-table__cell ">1</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> -->
-
-    <form method="POST">
-      <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
-      <input name="etag" type="hidden" value="&quot;0000000004C7A4DE&quot;">
-
-      <div class="govuk-form-group animal-certified-as ">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h3 class="govuk-fieldset__heading">What are the animals certified for?</h3>
-          </legend>
-            <span class="govuk-hint">You'll find this on the health certificate.</span>
-          
-          <div class="govuk-radios">
-                <div class="govuk-radios__item animal-certified-as">
-                  <input class="govuk-radios__input" id="animalCertifiedapproved" name="animal-certified-as" value="approved" type="radio">
-                  <label class="govuk-label govuk-radios__label" for="animalCertifiedapproved">
-                    Approved bodies
-                  </label>
-                </div>
-                <div class="govuk-radios__item animal-certified-as">
-                  <input class="govuk-radios__input" id="animalCertifiedbreeding" name="animal-certified-as" value="breeding" type="radio">
-                  <label class="govuk-label govuk-radios__label" for="animalCertifiedbreeding">
-                    Breeding and/or production
-                  </label>
-                </div>
-                <div class="govuk-radios__item animal-certified-as">
-                  <input class="govuk-radios__input" id="animalCertifiedslaughter" name="animal-certified-as" value="slaughter" type="radio">
-                  <label class="govuk-label govuk-radios__label" for="animalCertifiedslaughter">
-                    Slaughter
-                  </label>
-                </div>
-          </div>
-        </fieldset>
-      </div>
-
-      <div class="govuk-form-group including-non-ablacted ">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h3 class="govuk-fieldset__heading">Does the consignment contain any unweaned animals?</h3>
-          </legend>
-          
-          <div class="govuk-radios">
-                <div class="govuk-radios__item including-non-ablacted">
-                  <input class="govuk-radios__input" id="includingNonablactedyes" name="including-non-ablacted" value="true" type="radio">
-                  <label class="govuk-label govuk-radios__label" for="includingNonablactedyes">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item including-non-ablacted">
-                  <input class="govuk-radios__input" id="includingNonAblactedno" name="including-non-ablacted" value="false" type="radio">
-                  <label class="govuk-label govuk-radios__label" for="includingNonAblactedno">
-                    No
-                  </label>
-                </div>
-          </div>
-        </fieldset>
-      </div>
-      
-      </form>
-      <form action="02-08-animal-identifiers" method="post" id="homeForm3">
-        <p class="govuk-!-margin-top-6">
-              <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
-            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button"></p>
-            <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
-        <p></p>
+  <div class="govuk-grid-row" id="consignment-details-page">
+    <div class="govuk-grid-column-three-quarters">
+      <span class="govuk-caption-xl">Description of the goods</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
+      <form action="02-08-animal-identifiers" method="post">
         <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
-        <input name="etag" type="hidden" value="&quot;0000000004C7A4E0&quot;">
+        <input name="etag" type="hidden" value="&quot;0000000004C7A4DE&quot;">
+
+        <div class="govuk-form-group animal-certified-as ">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">What are the animals certified for?</h3>
+            </legend>
+            <span class="govuk-hint">You'll find this on the health certificate.</span>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item animal-certified-as">
+                <input class="govuk-radios__input" id="animalCertifiedapproved" name="animal-certified-as"
+                  value="approved" type="radio">
+                <label class="govuk-label govuk-radios__label" for="animalCertifiedapproved">
+                  Approved bodies
+                </label>
+              </div>
+              <div class="govuk-radios__item animal-certified-as">
+                <input class="govuk-radios__input" id="animalCertifiedbreeding" name="animal-certified-as"
+                  value="breeding" type="radio">
+                <label class="govuk-label govuk-radios__label" for="animalCertifiedbreeding">
+                  Breeding and/or production
+                </label>
+              </div>
+              <div class="govuk-radios__item animal-certified-as">
+                <input class="govuk-radios__input" id="animalCertifiedslaughter" name="animal-certified-as"
+                  value="slaughter" type="radio">
+                <label class="govuk-label govuk-radios__label" for="animalCertifiedslaughter">
+                  Slaughter
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group including-non-ablacted ">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">Does the consignment contain any unweaned animals?</h3>
+            </legend>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item including-non-ablacted">
+                <input class="govuk-radios__input" id="includingNonablactedyes" name="including-non-ablacted"
+                  value="true" type="radio">
+                <label class="govuk-label govuk-radios__label" for="includingNonablactedyes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item including-non-ablacted">
+                <input class="govuk-radios__input" id="includingNonAblactedno" name="including-non-ablacted"
+                  value="false" type="radio">
+                <label class="govuk-label govuk-radios__label" for="includingNonAblactedno">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <p class="govuk-!-margin-top-6">
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
+            name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
+            data-module="govuk-button">
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+        </p>
+        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
       </form>
+    </div>
   </div>
-</div>
 </main>
 {% endblock %}
