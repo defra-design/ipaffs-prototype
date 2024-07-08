@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Origin of the animal or product – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl " id="page-primary-title">Replace overdue debtors list</h1>
+      <form action="03-origin-import" method="post" id="homeForm">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="more-detail">
+              Overdue debtor organisation id list
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            For each overdue debtor, put the organisation id on a separate line.
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="10" aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            If you continue, you will replace the current list.
+          </strong>
+        </div>
+
+        <input class="govuk-button" id="button-save-and-continue" type="submit" value="Replace list" data-module="govuk-button">
+        <p><a href="">Cancel</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

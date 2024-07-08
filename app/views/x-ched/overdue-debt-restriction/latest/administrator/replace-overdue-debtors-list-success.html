@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Origin of the animal or product – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Success
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            The list has been replaced. There are 108 organisations on it.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl " id="page-primary-title">Replace overdue debtors list</h1>
+        <p><a href="">Return to admin area</a></p>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

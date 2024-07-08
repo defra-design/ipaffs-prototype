@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What are you importing – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="import-type-page">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl " id="page-primary-title">Clone a health or phytosanitary certificate</h1>
+      <p class="govuk-body">You can copy details from a health or phytosanitary certificate to create a new import notification, depending on the type of commodity and country you're importing from.</p>
+      <h2 class="govuk-heading-l">Search for a certificate to clone</h2>
+      <p class="govuk-body">Before you start, you'll need these details from the certificate:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>country of origin of the certificate</li>
+        <li>certificate reference number</li>
+      </ul>
+      <h3 class="govuk-heading-m">What are you importing?</h3>
+      <form action="02-consignment-origin" method="post" id="homeForm">
+        <input name="crumb" type="hidden" value="ap8RGD2HV43zQbawQzPRbIFdefUPgzdrYTdNHsFAUId">
+
+        <div class="govuk-form-group govuk-!-margin-bottom-3">
+          <fieldset class="govuk-fieldset">
+        
+        
+            
+        
+            <div class="govuk-radios ">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cert-type" name="cert-type" type="radio" value="CHEDA">
+                  <label class="govuk-label govuk-radios__label " for="cert-type">
+                      Live animals
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cert-type-2" name="cert-type" type="radio" value="CVEDP">
+                  <label class="govuk-label govuk-radios__label " for="cert-type-2">
+                      Products of animal origin
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cert-type-4" name="cert-type" type="radio" value="CHEDPP" disabled>
+                  <label class="govuk-label govuk-radios__label " for="cert-type-4">
+                      Plants, plant products and other objects
+                  </label>
+                  <div id="chedpp-hint" class="govuk-hint govuk-radios__hint">
+                    This option is not available.
+                  </div>
+                </div>
+            </div>
+          </fieldset>
+        </div>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Why some options are not available
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">To make a payment:</p>
+            
+            <ul class="govuk-list govuk-list--bullet">
+              <li>call 01633 631800</li>
+              <li><a href="#" class="govuk-link">visit the GOV.uk payment portal</a></li>
+            </ul>
+    
+            <p class="govuk-body">To reactivate your account immediately, please pay over the phone.</p>
+    
+            <p class="govuk-body">If you pay by BACS or the GOV payment portal, it can take up to 3 days to reactivate your account. To speed this up, email your proof of payment to <a href="#" class="govuk-link">SSCL.receipts@gov.sscl.com</a></p>
+    
+          </div>
+        </details>
+
+        <input class="govuk-button" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
