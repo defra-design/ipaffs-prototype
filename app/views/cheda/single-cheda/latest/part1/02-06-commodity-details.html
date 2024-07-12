@@ -43,8 +43,16 @@ GOV.UK Prototype Kit
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell  govuk-!-width-one-third" id="commodity-0102">01061900</td>
-                  <td class="govuk-table__cell" id="commodity-description-0102">Other</td>
+                  <td class="govuk-table__cell  govuk-!-width-one-third" id="commodity-0102">
+                    {{ data['commodity-code'] or 0102 }}
+                  </td>
+                  <td class="govuk-table__cell" id="commodity-description-0102">
+                    {% if data['commodity-code'] == "01061900" %}
+                      Other
+                    {% else  %}
+                      Live bovine animals
+                    {% endif %}
+                  </td>
                   <td class="govuk-table__cell remove">
                   </td>
                 </tr>
@@ -52,8 +60,8 @@ GOV.UK Prototype Kit
             </table>
           </div>
 
-          <input class="link-button" id="add-commodity" name="add-commodity" value="Add commodity" type="button"
-            aria-label="Add commodity">
+          <input class="link-button" id="add-commodity" name="add-commodity" value="Add commodity" type="submit"
+            aria-label="Add commodity" formaction="02-01-commodity-tree-code-search?add-commodity=true">
 
         </div>
 
@@ -61,7 +69,13 @@ GOV.UK Prototype Kit
           <div class="table-responsive">
             <table class="govuk-table species-table-cheda govuk-!-margin-bottom-1">
               <caption class="govuk-table__caption">
-                <h2 class="govuk-heading-m">Other</h2>
+                <h2 class="govuk-heading-m">
+                  {% if data['commodity-code'] == "01061900" %}
+                    Other
+                  {% else  %}
+                    Live bovine animals
+                  {% endif %}
+                </h2>
               </caption>
 
               <thead class="govuk-table__head">
@@ -121,7 +135,7 @@ GOV.UK Prototype Kit
                 </tr>
               </tfoot>
             </table>
-            <a href="02-03-commodity-species">Add species</a>
+            <a href="02-03-commodity-species?add-species=true">Add species</a>
           </div>
         </div>
 

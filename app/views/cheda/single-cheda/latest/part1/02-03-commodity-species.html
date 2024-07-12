@@ -26,6 +26,7 @@ GOV.UK Prototype Kit
       <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
 
+
       <!-- Commodity: Other -->
       <div class="table-responsive">
         <table class="govuk-table" id="commodity-table">
@@ -37,443 +38,23 @@ GOV.UK Prototype Kit
           </thead>
           <tbody>
             <tr>
-              <td class="govuk-table__cell" id="commodity-code-value">01061900</td>
-              <td class="govuk-table__cell">Other</td>
+              <td class="govuk-table__cell" id="commodity-code-value">{{ data['commodity-code'] or 0102 }}</td>
+              <td class="govuk-table__cell">
+                {% if data['commodity-code'] == "01061900" %}
+                Other
+                {% else %}
+                Live bovine animals
+                {% endif %}
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <form action="01-04-reason-for-importing" method="post">
-
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-        {{ govukCheckboxes({
-          name: "species",
-          values: data['species'],
-          fieldset: {
-            legend: {
-              text: "Select species of commodity",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          hint: {
-            text: "Select all that apply."
-          },
-          items: [
-            {
-              value: "Addax spp.",
-              html: "<b>Addax spp.</b>"
-            },
-            {
-              value: "Aepyceros spp.",
-              html: "<b>Aepyceros spp.</b>"
-            },
-            {
-              value: "Alcelaphus spp.",
-              html: "<b>Alcelaphus spp.</b>"
-            },
-            {
-              value: "Alces spp.",
-              html: "<b>Alces spp.</b>"
-            },
-            {
-              value: "Ammodorcas spp.",
-              html: "<b>Ammodorcas spp.</b>"
-            },
-            {
-              value: "Antidorcas spp.",
-              html: "<b>Antidorcas spp.</b>"
-            },
-            {
-              value: "Antilocapra spp.",
-              html: "<b>Antilocapra spp.</b>"
-            },
-            {
-              value: "Antilope spp.",
-              html: "<b>Antilope spp.</b>"
-            },
-            {
-              value: "Axis-Hyelaphus spp.",
-              html: "<b>Axis-Hyelaphus spp.</b>"
-            },
-            {
-              value: "Blastocerus spp.",
-              html: "<b>Blastocerus spp.</b>"
-            },
-            {
-              value: "Boselaphus spp.",
-              html: "<b>Boselaphus spp.</b>"
-            },
-            {
-              value: "Callosciurus erythraeus",
-              html: "<b>Callosciurus erythraeus</b>"
-            },
-            {
-              value: "Canis familiaris",
-              html: "<b>Canis familiaris</b>"
-            },
-            {
-              value: "Capreolus spp.",
-              html: "<b>Capreolus spp.</b>"
-            },
-            {
-              value: "Catagonus spp.",
-              html: "<b>Catagonus spp.</b>"
-            },
-            {
-              value: "Cephalophus spp.",
-              html: "<b>Cephalophus spp.</b>"
-            },
-            {
-              value: "Ceratotherium spp.",
-              html: "<b>Ceratotherium spp.</b>"
-            },
-            {
-              value: "Cervus-Rucervus spp.",
-              html: "<b>Cervus-Rucervus spp.</b>"
-            },
-            {
-              value: "Connochaetes spp.",
-              html: "<b>Connochaetes spp.</b>"
-            },
-            {
-              value: "Dama spp.",
-              html: "<b>Dama spp.</b>"
-            },
-            {
-              value: "Damaliscus spp. (including Beatragus)",
-              html: "<b>Damaliscus spp. (including Beatragus)</b>"
-            },
-            {
-              value: "Dicerorhinus spp.",
-              html: "<b>Dicerorhinus spp.</b>"
-            },
-            {
-              value: "Diceros spp.",
-              html: "<b>Diceros spp.</b>"
-            },
-            {
-              value: "Dorcatragus spp.",
-              html: "<b>Dorcatragus spp.</b>"
-            },
-            {
-              value: "Elaphurus spp.",
-              html: "<b>Elaphurus spp.</b>"
-            },
-            {
-              value: "Elephas spp.",
-              html: "<b>Elephas spp.</b>"
-            },
-            {
-              value: "Equus burchelli",
-              html: "<b>Equus burchelli</b>"
-            },
-            {
-              value: "Equus grevyi",
-              html: "<b>Equus grevyi</b>"
-            },
-            {
-              value: "Equus quagga",
-              html: "<b>Equus quagga</b>"
-            },
-            {
-              value: "Equus spp.",
-              html: "<b>Equus spp.</b>"
-            },
-            {
-              value: "Equus zebra",
-              html: "<b>Equus zebra</b>"
-            },
-            {
-              value: "Felis catus",
-              html: "<b>Felis catus</b>"
-            },
-            {
-              value: "Gazella spp.",
-              html: "<b>Gazella spp.</b>"
-            },
-            {
-              value: "Giraffa spp.",
-              html: "<b>Giraffa spp.</b>"
-            },
-            {
-              value: "Hemitragus spp.",
-              html: "<b>Hemitragus spp.</b>"
-            },
-            {
-              value: "Herpestes javanicus",
-              html: "<b>Herpestes javanicus</b>"
-            },
-            {
-              value: "Hexaprotodon-Choeropsis spp.",
-              html: "<b>Hexaprotodon-Choeropsis spp.</b>"
-            },
-            {
-              value: "Hippocamelus spp.",
-              html: "<b>Hippocamelus spp.</b>"
-            },
-            {
-              value: "Hippopotamus spp.",
-              html: "<b>Hippopotamus spp.</b>"
-            },
-            {
-              value: "Hippotragus spp.",
-              html: "<b>Hippotragus spp.</b>"
-            },
-            {
-              value: "Hydropotes spp.",
-              html: "<b>Hydropotes spp.</b>"
-            },
-            {
-              value: "Hyemoschus spp.",
-              html: "<b>Hyemoschus spp.</b>"
-            },
-            {
-              value: "Kobus spp.",
-              html: "<b>Kobus spp.</b>"
-            },
-            {
-              value: "Litocranius spp.",
-              html: "<b>Litocranius spp.</b>"
-            },
-            {
-              value: "Loxodonta spp.",
-              html: "<b>Loxodonta spp.</b>"
-            },
-            {
-              value: "Madogua spp.",
-              html: "<b>Madogua spp.</b>"
-            },
-            {
-              value: "Mazama spp.",
-              html: "<b>Mazama spp.</b>"
-            },
-            {
-              value: "Megamuntiacus spp.",
-              html: "<b>Megamuntiacus spp.</b>"
-            },
-            {
-              value: "Moschus spp.",
-              html: "<b>Moschus spp.</b>"
-            },
-            {
-              value: "Muntiacus reevesi",
-              html: "<b>Muntiacus reevesi</b>"
-            },
-            {
-              value: "Muntiacus spp.",
-              html: "<b>Muntiacus spp.</b>"
-            },
-            {
-              value: "Mustela putorius furio",
-              html: "<b>Mustela putorius furio</b>"
-            },
-            {
-              value: "Myocastor coypus",
-              html: "<b>Myocastor coypus</b>"
-            },
-            {
-              value: "Naemorhedus spp. (including Nemorhaedus and Capricornis)",
-              html: "<b>Naemorhedus spp. (including Nemorhaedus and Capricornis)</b>"
-            },
-            {
-              value: "Nasua nasua",
-              html: "<b>Nasua nasua</b>"
-            },
-            {
-              value: "Neotragus spp.",
-              html: "<b>Neotragus spp.</b>"
-            },
-            {
-              value: "Nyctereutes procyonoides",
-              html: "<b>Nyctereutes procyonoides</b>"
-            },
-            {
-              value: "Odocoileus spp.",
-              html: "<b>Odocoileus spp.</b>"
-            },
-            {
-              value: "Okapia spp.",
-              html: "<b>Okapia spp.</b>"
-            },
-            {
-              value: "Ondatra zibethicus",
-              html: "<b>Ondatra zibethicus</b>"
-            },
-            {
-              value: "Oreamuos spp.",
-              html: "<b>Oreamuos spp.</b>"
-            },
-            {
-              value: "Oreotragus spp.",
-              html: "<b>Oreotragus spp.</b>"
-            },
-            {
-              value: "Oryx spp.",
-              html: "<b>Oryx spp.</b>"
-            },
-            {
-              value: "Other Carnivora",
-              html: "<b>Other Carnivora</b>"
-            },
-            {
-              value: "Other Lagomorpha",
-              html: "<b>Other Lagomorpha</b>"
-            },
-            {
-              value: "Other Rodentia",
-              html: "<b>Other Rodentia</b>"
-            },
-            {
-              value: "Ourebia spp.",
-              html: "<b>Ourebia spp.</b>"
-            },
-            {
-              value: "Ozotoceros spp.",
-              html: "<b>Ozotoceros spp.</b>"
-            },
-            {
-              value: "Patholops spp.",
-              html: "<b>Patholops spp.</b>"
-            },
-            {
-              value: "Pecari-Tayassu spp.",
-              html: "<b>Pecari-Tayassu spp.</b>"
-            },
-            {
-              value: "Pelea spp.",
-              html: "<b>Pelea spp.</b>"
-            },
-            {
-              value: "Procapra spp.",
-              html: "<b>Procapra spp.</b>"
-            },
-            {
-              value: "Procyon lotor",
-              html: "<b>Procyon lotor</b>"
-            },
-            {
-              value: "Pseudois spp.",
-              html: "<b>Pseudois spp.</b>"
-            },
-            {
-              value: "Pseudoryx spp.",
-              html: "<b>Pseudoryx spp.</b>"
-            },
-            {
-              value: "Pudu spp.",
-              html: "<b>Pudu spp.</b>"
-            },
-            {
-              value: "Rangifer spp.",
-              html: "<b>Rangifer spp.</b>"
-            },
-            {
-              value: "Raphicerus spp.",
-              html: "<b>Raphicerus spp.</b>"
-            },
-            {
-              value: "Redunca spp.",
-              html: "<b>Redunca spp.</b>"
-            },
-            {
-              value: "Rhinoceros spp.",
-              html: "<b>Rhinoceros spp.</b>"
-            },
-            {
-              value: "Rupicapra spp.",
-              html: "<b>Rupicapra spp.</b>"
-            },
-            {
-              value: "Saiga spp.",
-              html: "<b>Saiga spp.</b>"
-            },
-            {
-              value: "Sciurus carolinensis",
-              html: "<b>Sciurus carolinensis</b>"
-            },
-            {
-              value: "Sciurus niger",
-              html: "<b>Sciurus niger</b>"
-            },
-            {
-              value: "Sigmoceros-Alecelaphus spp.",
-              html: "<b>Sigmoceros-Alecelaphus spp.</b>"
-            },
-            {
-              value: "Sylvicapra spp.",
-              html: "<b>Sylvicapra spp.</b>"
-            },
-            {
-              value: "Tamias sibiricus",
-              html: "<b>Tamias sibiricus</b>"
-            },
-            {
-              value: "Tapirus spp.",
-              html: "<b>Tapirus spp.</b>"
-            },
-            {
-              value: "Taurotragus spp.",
-              html: "<b>Taurotragus spp.</b>"
-            },
-            {
-              value: "Tetracerus spp.",
-              html: "<b>Tetracerus spp.</b>"
-            },
-            {
-              value: "Tragelaphus spp. (including Boocerus)",
-              html: "<b>Tragelaphus spp. (including Boocerus)</b>"
-            },
-            {
-              value: "Tragulus-Moschiola spp.",
-              html: "<b>Tragulus-Moschiola spp.</b>"
-            }
-          ]
-        }) }}
-
-
-        <div class="govuk-!-margin-top-6">
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
-            type="submit" value="Save and continue" data-module="govuk-button">
-          <input class="link-button" id="family-button" type="submit" name="familyButton" value="Add another commodity"
-            data-module="govuk-button">
-        </div>
-
-        <input name="crumb" type="hidden" value="U71b9l39rEo3G3NiMprrccxYclb4_ZZVKf2AlP-Dv8n">
-        <input name="commodityDetailsPage" type="hidden" value="">
-        <input name="etag" type="hidden" value="&quot;0000000004D0A76E&quot;">
-        <input name="complement-id" type="hidden" value="">
-        <input name="commodity-selected-code" type="hidden" value="0102">
-        <input name="type-id" type="hidden" value="16">
-        <input name="class-id" type="hidden" value="473099">
-        <input name="family-id" type="hidden" value="">
-      </form>
-
-      <!-- Commodity: Live bovine -->
-      <!-- 
-      <div class="table-responsive">
-        <table class="govuk-table" id="commodity-table">
-          <thead class="govuk-table__head">
-            <tr>
-              <th scope="col" class="govuk-table__header">Commodity Code</th>
-              <th scope="col" class="govuk-table__header">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="govuk-table__cell" id="commodity-code-value">0102</td>
-              <td class="govuk-table__cell">Live bovine animals</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+      {% if data['commodity-code'] != "01061900" %}
       <form action="page-4" id="categories" method="get">
         <input name="commodity-selected-code" type="hidden" value="0102">
         <input name="commodityDetailsPage" type="hidden" value="">
-
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--m" for="type-select">
             Type of commodity
@@ -487,53 +68,445 @@ GOV.UK Prototype Kit
             <input id="type-button" class="button" type="submit" name="typeButton" value="update">
           </noscript>
         </div>
-
         <input type="hidden" name="class" id="class-select-hidden" value="473099">
-
       </form>
+      {% endif %}
 
+      {% if data['notification-hub'] == "visited" %}
+      <form action="02-06-commodity-details" method="post">
+      {% else %}
       <form action="01-04-reason-for-importing" method="post">
-        <div class="govuk-form-group ">
-          <fieldset class="govuk-fieldset" id="species-list">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      {% endif %}
 
-              Select species of commodity
-            </legend>
-            <span class="govuk-hint" id="species-hint">
-              Select all that apply.
-            </span>
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-            <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="Bison bison-checkbox" name="species" type="checkbox"
-                  value="473099">
-                <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Bison bison-checkbox">
-                  Bison bison
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="Bos taurus-checkbox" name="species" type="checkbox"
-                  value="467300">
-                <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Bos taurus-checkbox">
-                  Bos taurus
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="Bubalus bubalis-checkbox" name="species" type="checkbox"
-                  value="512299">
-                <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="Bubalus bubalis-checkbox">
-                  Bubalus bubalis
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+        {% if data['commodity-code'] == "01061900" %}
+        {{ govukCheckboxes({
+        name: "species",
+        values: data['species'],
+        fieldset: {
+        legend: {
+        text: "Select species of commodity",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+        }
+        },
+        hint: {
+        text: "Select all that apply."
+        },
+        items: [
+        {
+        value: "Addax spp.",
+        html: "<b>Addax spp.</b>"
+        },
+        {
+        value: "Aepyceros spp.",
+        html: "<b>Aepyceros spp.</b>"
+        },
+        {
+        value: "Alcelaphus spp.",
+        html: "<b>Alcelaphus spp.</b>"
+        },
+        {
+        value: "Alces spp.",
+        html: "<b>Alces spp.</b>"
+        },
+        {
+        value: "Ammodorcas spp.",
+        html: "<b>Ammodorcas spp.</b>"
+        },
+        {
+        value: "Antidorcas spp.",
+        html: "<b>Antidorcas spp.</b>"
+        },
+        {
+        value: "Antilocapra spp.",
+        html: "<b>Antilocapra spp.</b>"
+        },
+        {
+        value: "Antilope spp.",
+        html: "<b>Antilope spp.</b>"
+        },
+        {
+        value: "Axis-Hyelaphus spp.",
+        html: "<b>Axis-Hyelaphus spp.</b>"
+        },
+        {
+        value: "Blastocerus spp.",
+        html: "<b>Blastocerus spp.</b>"
+        },
+        {
+        value: "Boselaphus spp.",
+        html: "<b>Boselaphus spp.</b>"
+        },
+        {
+        value: "Callosciurus erythraeus",
+        html: "<b>Callosciurus erythraeus</b>"
+        },
+        {
+        value: "Canis familiaris",
+        html: "<b>Canis familiaris</b>"
+        },
+        {
+        value: "Capreolus spp.",
+        html: "<b>Capreolus spp.</b>"
+        },
+        {
+        value: "Catagonus spp.",
+        html: "<b>Catagonus spp.</b>"
+        },
+        {
+        value: "Cephalophus spp.",
+        html: "<b>Cephalophus spp.</b>"
+        },
+        {
+        value: "Ceratotherium spp.",
+        html: "<b>Ceratotherium spp.</b>"
+        },
+        {
+        value: "Cervus-Rucervus spp.",
+        html: "<b>Cervus-Rucervus spp.</b>"
+        },
+        {
+        value: "Connochaetes spp.",
+        html: "<b>Connochaetes spp.</b>"
+        },
+        {
+        value: "Dama spp.",
+        html: "<b>Dama spp.</b>"
+        },
+        {
+        value: "Damaliscus spp. (including Beatragus)",
+        html: "<b>Damaliscus spp. (including Beatragus)</b>"
+        },
+        {
+        value: "Dicerorhinus spp.",
+        html: "<b>Dicerorhinus spp.</b>"
+        },
+        {
+        value: "Diceros spp.",
+        html: "<b>Diceros spp.</b>"
+        },
+        {
+        value: "Dorcatragus spp.",
+        html: "<b>Dorcatragus spp.</b>"
+        },
+        {
+        value: "Elaphurus spp.",
+        html: "<b>Elaphurus spp.</b>"
+        },
+        {
+        value: "Elephas spp.",
+        html: "<b>Elephas spp.</b>"
+        },
+        {
+        value: "Equus burchelli",
+        html: "<b>Equus burchelli</b>"
+        },
+        {
+        value: "Equus grevyi",
+        html: "<b>Equus grevyi</b>"
+        },
+        {
+        value: "Equus quagga",
+        html: "<b>Equus quagga</b>"
+        },
+        {
+        value: "Equus spp.",
+        html: "<b>Equus spp.</b>"
+        },
+        {
+        value: "Equus zebra",
+        html: "<b>Equus zebra</b>"
+        },
+        {
+        value: "Felis catus",
+        html: "<b>Felis catus</b>"
+        },
+        {
+        value: "Gazella spp.",
+        html: "<b>Gazella spp.</b>"
+        },
+        {
+        value: "Giraffa spp.",
+        html: "<b>Giraffa spp.</b>"
+        },
+        {
+        value: "Hemitragus spp.",
+        html: "<b>Hemitragus spp.</b>"
+        },
+        {
+        value: "Herpestes javanicus",
+        html: "<b>Herpestes javanicus</b>"
+        },
+        {
+        value: "Hexaprotodon-Choeropsis spp.",
+        html: "<b>Hexaprotodon-Choeropsis spp.</b>"
+        },
+        {
+        value: "Hippocamelus spp.",
+        html: "<b>Hippocamelus spp.</b>"
+        },
+        {
+        value: "Hippopotamus spp.",
+        html: "<b>Hippopotamus spp.</b>"
+        },
+        {
+        value: "Hippotragus spp.",
+        html: "<b>Hippotragus spp.</b>"
+        },
+        {
+        value: "Hydropotes spp.",
+        html: "<b>Hydropotes spp.</b>"
+        },
+        {
+        value: "Hyemoschus spp.",
+        html: "<b>Hyemoschus spp.</b>"
+        },
+        {
+        value: "Kobus spp.",
+        html: "<b>Kobus spp.</b>"
+        },
+        {
+        value: "Litocranius spp.",
+        html: "<b>Litocranius spp.</b>"
+        },
+        {
+        value: "Loxodonta spp.",
+        html: "<b>Loxodonta spp.</b>"
+        },
+        {
+        value: "Madogua spp.",
+        html: "<b>Madogua spp.</b>"
+        },
+        {
+        value: "Mazama spp.",
+        html: "<b>Mazama spp.</b>"
+        },
+        {
+        value: "Megamuntiacus spp.",
+        html: "<b>Megamuntiacus spp.</b>"
+        },
+        {
+        value: "Moschus spp.",
+        html: "<b>Moschus spp.</b>"
+        },
+        {
+        value: "Muntiacus reevesi",
+        html: "<b>Muntiacus reevesi</b>"
+        },
+        {
+        value: "Muntiacus spp.",
+        html: "<b>Muntiacus spp.</b>"
+        },
+        {
+        value: "Mustela putorius furio",
+        html: "<b>Mustela putorius furio</b>"
+        },
+        {
+        value: "Myocastor coypus",
+        html: "<b>Myocastor coypus</b>"
+        },
+        {
+        value: "Naemorhedus spp. (including Nemorhaedus and Capricornis)",
+        html: "<b>Naemorhedus spp. (including Nemorhaedus and Capricornis)</b>"
+        },
+        {
+        value: "Nasua nasua",
+        html: "<b>Nasua nasua</b>"
+        },
+        {
+        value: "Neotragus spp.",
+        html: "<b>Neotragus spp.</b>"
+        },
+        {
+        value: "Nyctereutes procyonoides",
+        html: "<b>Nyctereutes procyonoides</b>"
+        },
+        {
+        value: "Odocoileus spp.",
+        html: "<b>Odocoileus spp.</b>"
+        },
+        {
+        value: "Okapia spp.",
+        html: "<b>Okapia spp.</b>"
+        },
+        {
+        value: "Ondatra zibethicus",
+        html: "<b>Ondatra zibethicus</b>"
+        },
+        {
+        value: "Oreamuos spp.",
+        html: "<b>Oreamuos spp.</b>"
+        },
+        {
+        value: "Oreotragus spp.",
+        html: "<b>Oreotragus spp.</b>"
+        },
+        {
+        value: "Oryx spp.",
+        html: "<b>Oryx spp.</b>"
+        },
+        {
+        value: "Other Carnivora",
+        html: "<b>Other Carnivora</b>"
+        },
+        {
+        value: "Other Lagomorpha",
+        html: "<b>Other Lagomorpha</b>"
+        },
+        {
+        value: "Other Rodentia",
+        html: "<b>Other Rodentia</b>"
+        },
+        {
+        value: "Ourebia spp.",
+        html: "<b>Ourebia spp.</b>"
+        },
+        {
+        value: "Ozotoceros spp.",
+        html: "<b>Ozotoceros spp.</b>"
+        },
+        {
+        value: "Patholops spp.",
+        html: "<b>Patholops spp.</b>"
+        },
+        {
+        value: "Pecari-Tayassu spp.",
+        html: "<b>Pecari-Tayassu spp.</b>"
+        },
+        {
+        value: "Pelea spp.",
+        html: "<b>Pelea spp.</b>"
+        },
+        {
+        value: "Procapra spp.",
+        html: "<b>Procapra spp.</b>"
+        },
+        {
+        value: "Procyon lotor",
+        html: "<b>Procyon lotor</b>"
+        },
+        {
+        value: "Pseudois spp.",
+        html: "<b>Pseudois spp.</b>"
+        },
+        {
+        value: "Pseudoryx spp.",
+        html: "<b>Pseudoryx spp.</b>"
+        },
+        {
+        value: "Pudu spp.",
+        html: "<b>Pudu spp.</b>"
+        },
+        {
+        value: "Rangifer spp.",
+        html: "<b>Rangifer spp.</b>"
+        },
+        {
+        value: "Raphicerus spp.",
+        html: "<b>Raphicerus spp.</b>"
+        },
+        {
+        value: "Redunca spp.",
+        html: "<b>Redunca spp.</b>"
+        },
+        {
+        value: "Rhinoceros spp.",
+        html: "<b>Rhinoceros spp.</b>"
+        },
+        {
+        value: "Rupicapra spp.",
+        html: "<b>Rupicapra spp.</b>"
+        },
+        {
+        value: "Saiga spp.",
+        html: "<b>Saiga spp.</b>"
+        },
+        {
+        value: "Sciurus carolinensis",
+        html: "<b>Sciurus carolinensis</b>"
+        },
+        {
+        value: "Sciurus niger",
+        html: "<b>Sciurus niger</b>"
+        },
+        {
+        value: "Sigmoceros-Alecelaphus spp.",
+        html: "<b>Sigmoceros-Alecelaphus spp.</b>"
+        },
+        {
+        value: "Sylvicapra spp.",
+        html: "<b>Sylvicapra spp.</b>"
+        },
+        {
+        value: "Tamias sibiricus",
+        html: "<b>Tamias sibiricus</b>"
+        },
+        {
+        value: "Tapirus spp.",
+        html: "<b>Tapirus spp.</b>"
+        },
+        {
+        value: "Taurotragus spp.",
+        html: "<b>Taurotragus spp.</b>"
+        },
+        {
+        value: "Tetracerus spp.",
+        html: "<b>Tetracerus spp.</b>"
+        },
+        {
+        value: "Tragelaphus spp. (including Boocerus)",
+        html: "<b>Tragelaphus spp. (including Boocerus)</b>"
+        },
+        {
+        value: "Tragulus-Moschiola spp.",
+        html: "<b>Tragulus-Moschiola spp.</b>"
+        }
+        ]
+        }) }}
+        {% else %}
+        {{ govukCheckboxes({
+        name: "species",
+        values: data['species'],
+        fieldset: {
+        legend: {
+        text: "Select species of commodity",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+        }
+        },
+        hint: {
+        text: "Select all that apply."
+        },
+        items: [
+        {
+        value: "Bison bison",
+        html: "<b>Bison bison</b>"
+        },
+        {
+        value: "Bos taurus",
+        html: "<b>Bos taurus</b>"
+        },
+        {
+        value: "Bubalus bubalis",
+        html: "<b>Bubalus bubalis</b>"
+        }
+        ]
+        }) }}
+        {% endif %}
+
 
         <div class="govuk-!-margin-top-6">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
             type="submit" value="Save and continue" data-module="govuk-button">
           <input class="link-button" id="family-button" type="submit" name="familyButton" value="Add another commodity"
-            data-module="govuk-button">
+            data-module="govuk-button" formaction="02-01-commodity-tree-code-search?add-commodity=true">
+          {% if data['add-species'] == "true" %}
+          <p class="govuk-body">
+            <a class="govuk-link" href="javascript:history.back()">Cancel</a>
+          </p>
+          {% endif %}
         </div>
 
         <input name="crumb" type="hidden" value="U71b9l39rEo3G3NiMprrccxYclb4_ZZVKf2AlP-Dv8n">
@@ -545,8 +518,6 @@ GOV.UK Prototype Kit
         <input name="class-id" type="hidden" value="473099">
         <input name="family-id" type="hidden" value="">
       </form>
-      -->
-
     </div>
   </div>
 </main>
