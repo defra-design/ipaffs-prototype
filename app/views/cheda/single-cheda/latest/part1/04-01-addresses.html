@@ -217,7 +217,11 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </form>
 
+      {% if data['commodity-code'] == "01061900" %}
+      <form action="04-04-permanent-address" method="post">
+      {% else %}
       <form action="04-03-cph-number" method="post">
+      {% endif %}
         <input name="04-01-addresses" type="hidden" value="visited">
         <div class="save-and-submit-buttons">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
