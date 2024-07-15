@@ -11,6 +11,15 @@
 {% endblock %}
 
 {% block content %}
+<style>
+  .commodity-selection-breadcrumb nav .commodity-list ul {
+    margin-left: 0;
+  }
+  .commodity-selection-breadcrumb nav .commodity-list ul li span {
+    line-height: 38px;
+    padding-bottom: 0;
+}
+</style>
 
 
 
@@ -75,14 +84,22 @@
                       
                           
                       
-                        <input class="govuk-input govuk-!-width-one-third " id="commodity-code-search" name="commodity-text-input" type="text" value="" inputmode="numeric">
+                        <input class="govuk-input govuk-!-width-one-third " id="commodity-code-search" name="commodity-code" type="text" value="" inputmode="numeric">
                       </div>
                     </fieldset>
                   </div>
               
-                  <button class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="action" value="search" data-module="govuk-button">
+                  {% if data['commodity-code'] == "01061900" %}
+                  <button type="submit" class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="action" value="search"
+                    data-module="govuk-button" formaction="commodity-code-validation">
                     Search
                   </button>
+                  {% else %}
+                  <button class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="action" value="search"
+                    data-module="govuk-button">
+                    Search
+                  </button>
+                  {% endif %}
                 </div>
               
                   <h3 class="govuk-heading-m">

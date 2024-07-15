@@ -32,6 +32,21 @@ GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="commodity-search-page">
     <div class="govuk-grid-column-full">
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <p class="govuk-body" style="color: #d4351c; font-weight: 700;">You cannot add the same commodity twice</p>
+            <p >You have already added commodity <b>01061900 Other</b>. You can:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>add a different commodity</li>
+              <li><a href="02-03-commodity-species">add more species</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4" id="page-primary-title">Commodity</h1>
 
@@ -59,12 +74,12 @@ GOV.UK Prototype Kit
           Contents
         </h2>
         <ul class="govuk-tabs__list">
-          <li class="govuk-tabs__list-item">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
             <a class="govuk-tabs__tab" id="commodity-code-search-tab-link" href="02-01-commodity-tree-code-search">
               Commodity code search
             </a>
           </li>
-          <li class="govuk-tabs__list-item  govuk-tabs__list-item--selected">
+          <li class="govuk-tabs__list-item">
             <a class="govuk-tabs__tab" id="species-search-tab-link" href="02-01-commodity-tree-species-search">
               Species search
             </a>
@@ -78,49 +93,35 @@ GOV.UK Prototype Kit
             <input name="commodityDetailsPage" type="hidden" value="">
 
             <div class="search-panel govuk-!-margin-bottom-6">
-              <div class="govuk-form-group govuk-!-margin-bottom-0">
+              <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                    <h2 class="govuk-fieldset__heading">
-                      Search species of commodity
-                    </h2>
+                    <h2 class="govuk-fieldset__heading">Search commodities</h2>
                   </legend>
 
-                  <div class="govuk-form-group ">
-                    <label class="govuk-label" for="species-search">
-                      Enter scientific (Latin) name of species
+                  <div class="govuk-form-group  ">
+
+                    <label class="govuk-label " for="commodity-code-search">
+                      Enter commodity code
                     </label>
 
-                    <span class="govuk-hint" id="species-search-hint">
-                      <p class="govuk-hint">For example:</p>
-                      <ul>
-                        <li class="govuk-!-margin-bottom-0">for cattle, enter Bos taurus</li>
-                        <li class="govuk-!-margin-bottom-0">for sheep, enter Ovis aries</li>
-                        <li class="govuk-!-margin-bottom-0">for dogs, enter Canis familiaris</li>
-                      </ul>
-                    </span>
-
-                    <div class="govuk-!-width-one-third" id="autocomplete-container">
-
-                      <div class="autocomplete__wrapper">
-                        <div
-                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                          <div id="species-search__status--A" role="status" aria-atomic="true" aria-live="polite"></div>
-                          <div id="species-search__status--B" role="status" aria-atomic="true" aria-live="polite"></div>
-                        </div><input aria-expanded="false" aria-owns="species-search__listbox" aria-autocomplete="list"
-                          aria-describedby="species-search__assistiveHint" autocomplete="off"
-                          class="autocomplete__input autocomplete__input--default" id="species-search"
-                          name="input-autocomplete" placeholder="" type="text" role="combobox">
-                        <ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden"
-                          id="species-search__listbox" role="listbox"></ul><span id="species-search__assistiveHint"
-                          style="display: none;">When autocomplete results are available use up and down arrows to
-                          review and enter to select. Touch device users, explore by touch or with swipe
-                          gestures.</span>
-                      </div>
-                    </div>
+                    <input class="govuk-input govuk-!-width-one-third " id="commodity-code-search" name="commodity-code"
+                      type="text" value="" inputmode="numeric">
                   </div>
                 </fieldset>
               </div>
+
+              {% if data['commodity-code'] == "01061900" %}
+              <button type="submit" class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="action" value="search"
+                data-module="govuk-button" formaction="commodity-code-validation">
+                Search
+              </button>
+              {% else %}
+              <button class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="action" value="search"
+                data-module="govuk-button">
+                Search
+              </button>
+              {% endif %}
             </div>
           </form>
 
@@ -130,7 +131,7 @@ GOV.UK Prototype Kit
 
           <div class="search-panel">
             <div class="commodity-selection-breadcrumb">
-              <form method="post" action="02-02-commodity-tree-species-search-expanded#tree-nav">
+              <form method="post" action="02-02-commodity-tree-code-search-expanded#tree-nav">
                 <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
                 <input name="etag" type="hidden" value="&quot;0000000004C79E8F&quot;">
                 <input name="commodityDetailsPage" type="hidden" value="">
@@ -249,6 +250,12 @@ GOV.UK Prototype Kit
           </form>
         </div>
       </div>
+      {% if data['add-commodity'] == "true" %}
+      <p class="govuk-body">
+        <a class="govuk-link" href="javascript:history.back()">Cancel</a>
+      </p>
+      {% endif %}
+
 
     </div>
   </div>

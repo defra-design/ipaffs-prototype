@@ -5,7 +5,7 @@ const router = express.Router()
 router.post('/commodity-code-validation', function (req, res) {
   var commodityCode = req.session.data['commodity-code']
   if (commodityCode == "01061900") {
-    res.redirect('02-02a-commodity-tree-code-search-expanded-error')
+    res.redirect('02-01a-commodity-tree-code-search-error')
   }
   else {
     res.redirect('02-03-commodity-species')
