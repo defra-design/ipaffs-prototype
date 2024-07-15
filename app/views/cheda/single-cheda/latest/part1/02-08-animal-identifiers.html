@@ -136,11 +136,11 @@ GOV.UK Prototype Kit
               <tr class="input-row" id="1-25761-input-row">
                 <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">{{ specie }} 1</td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="1-25761.identifiers-1-ear_tag" name="1-25761.identifiers-1-ear_tag"
+                  <input class="govuk-input  " id="1-25761.identifiers-1-ear_tag" name="eartag-01"
                     type="text" value="" aria-label="1-25761.identifiers-1-ear_tag">
                 </td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="1-25761.identifiers-1-passport" name="1-25761.identifiers-1-passport"
+                  <input class="govuk-input  " id="1-25761.identifiers-1-passport" name="passport-01"
                     type="text" value="" aria-label="1-25761.identifiers-1-passport">
                 </td>
                 <td class="govuk-table__cell change"><span class="govuk-visually-hidden">Remove link</span></td>
@@ -155,8 +155,14 @@ GOV.UK Prototype Kit
               Add another button for
               {{ specie }}
             </legend>
+            {% if (data['species'] | length === 1) %}
             <input type="submit" name="add-1-502501.identifiers-1" id="add-1-502501.identifiers-1" value="Add another"
               class="link-button govuk-!-margin-bottom-8" formaction="02-08-animal-identifiers-2#{{ specie }}">
+            {% else %}
+            <input type="button" name="add-1-502501.identifiers-1" id="add-1-502501.identifiers-1" value="Add another"
+              class="link-button govuk-!-margin-bottom-8">
+            {% endif %}
+
           </fieldset>
         </div>
         {% endfor %}

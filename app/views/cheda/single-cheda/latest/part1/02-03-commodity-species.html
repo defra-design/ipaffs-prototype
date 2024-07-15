@@ -38,7 +38,7 @@ GOV.UK Prototype Kit
           </thead>
           <tbody>
             <tr>
-              <td class="govuk-table__cell" id="commodity-code-value">{{ data['commodity-code'] or 0102 }}</td>
+              <td class="govuk-table__cell" id="commodity-code-value">{{ data['commodity-code'] or "0102" }}</td>
               <td class="govuk-table__cell">
                 {% if data['commodity-code'] == "01061900" %}
                 Other
