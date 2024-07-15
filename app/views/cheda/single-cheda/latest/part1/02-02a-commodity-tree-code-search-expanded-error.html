@@ -306,7 +306,11 @@ GOV.UK Prototype Kit
           </form>
         </div>
       </div>
-      <p class="govuk-body"><a class="govuk-link" href="">Cancel</a></p>
+      {% if data['add-commodity'] == "true" %}
+      <p class="govuk-body">
+        <a class="govuk-link" href="javascript:history.go(-2)">Cancel</a>
+      </p>
+      {% endif %}
 
     </div>
   </div>
