@@ -90,7 +90,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
               Attachments 
             </div>
           </div>
-          {% if data['page-03-04-upload'] == "visited" and data['additional-documents-attachment'] == "yes" %}
+          {% if data['page-03-04-upload'] == "visited" and data['accomp-doc-attachment'] == "yes" %}
             <div class="additional-documents__grid-row additional-document-info">
               <div class="additional-documents__grid-column-15 additional-document-content">
                 <div class="additional-documents__content-heading" id="additional-document-type-heading-1">Document type</div>
@@ -231,7 +231,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
               </div>
               <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment">
-                <button type="submit" class="link-button no-wrap" id="add-attachment" name="add-attachment" value="" formaction="03-04-upload?additional-documents-attachment=yes">
+                <button type="submit" class="link-button no-wrap" id="add-attachment" name="add-attachment" value="" formaction="03-04-upload?document-type=accomp-doc">
                   Add attachment
                 </button>
               </div>

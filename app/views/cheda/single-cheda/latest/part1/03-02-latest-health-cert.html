@@ -61,7 +61,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
                 <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
                   Date of issue
-                    {% if data['page-03-04-upload'] != "visited" or data['health-certificate-attachment'] != "yes" %}                    
+                    {% if data['page-03-04-upload'] != "visited" or data['health-cert-attachment'] != "yes" %}                    
                     <div class="additional-documents__date-of-issue-hint">
                       <span class="additional-documents__date-of-issue-hint__day">Day</span>
                       <span class="additional-documents__date-of-issue-hint__month">Month</span>
@@ -74,7 +74,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
               </div>
 
-                {% if data['page-03-04-upload'] == "visited" and data['health-certificate-attachment'] == "yes" %}
+                {% if data['page-03-04-upload'] == "visited" and data['health-cert-attachment'] == "yes" %}
                   <div class="additional-documents__grid-row additional-document-info">
                     <div class="additional-documents__grid-column-15 additional-document-content">
                       <div class="additional-documents__content-heading" id="additional-document-type-heading-1">Document type</div>
@@ -161,7 +161,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                       </div>
                     </div>
                     <div class="additional-documents__grid-column-35 additional-documents__add-document-attachment">
-                      <button type="submit" class="link-button no-wrap" id="add-attachment-latest-health-cert" name="add-attachment-latest-health-cert" value="latest-vet-health" formaction="03-04-upload?health-certificate-attachment=yes">
+                      <button type="submit" class="link-button no-wrap" id="add-attachment-latest-health-cert" name="add-attachment-latest-health-cert" value="latest-vet-health" formaction="03-04-upload?document-type=health-cert">
                         Add attachment
                       </button>
                     </div>

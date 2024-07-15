@@ -26,9 +26,15 @@ Accompanying documents – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="add-attachment-page">
       <div class="govuk-grid-column-full">
           <span class="govuk-caption-xl">Documents</span>
+        
+        
+        {% if data['document-type'] == "health-cert" %}
+        <h1 class="govuk-heading-xl" id="page-primary-title">Latest health certificate</h1>
+        <form action="03-02-latest-health-cert?health-cert-attachment=yes" method="post">
+        {% else %}
         <h1 class="govuk-heading-xl" id="page-primary-title">Accompanying documents</h1>
-  
-        <form action="03-03-accompanying-documents" method="POST">
+        <form action="03-03-accompanying-documents?accomp-doc-attachment=yes" method="post">
+        {% endif %}
           <input type="hidden" name="crumb" value="cx3ExTG-HTdv9E6-kkq797-caH_3ODMwSDPABbL9ODJ">
           <input type="hidden" name="etag" value="&quot;000000000000DF14&quot;">
           <input type="hidden" name="document-index" value="">
@@ -43,7 +49,7 @@ Accompanying documents – {{ serviceName }} – GOV.UK Prototype Kit
           
           
                 
-              <input class="govuk-file-upload " id="fileUpload" name="fileUpload" type="file">
+              <input class="govuk-file-upload " id="fileUpload" name="fileUpload" type="file" disabled>
             </div>
           </div>
   

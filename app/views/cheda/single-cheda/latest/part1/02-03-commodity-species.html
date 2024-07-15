@@ -51,8 +51,13 @@ GOV.UK Prototype Kit
         </table>
       </div>
 
-      {% if data['commodity-code'] != "01061900" %}
-      <form action="page-4" id="categories" method="get">
+      {% if data['notification-hub'] == "visited" %}
+      <form action="02-06-commodity-details" method="post">
+      {% else %}
+      <form action="01-04-reason-for-importing" method="post">
+      {% endif %}
+
+        {% if data['commodity-code'] != "01061900" %}
         <input name="commodity-selected-code" type="hidden" value="0102">
         <input name="commodityDetailsPage" type="hidden" value="">
         <div class="govuk-form-group">
@@ -60,23 +65,17 @@ GOV.UK Prototype Kit
             Type of commodity
           </label>
           <input type="hidden" id="typeButtonId">
-          <select class="govuk-select commodity-type govuk-!-width-one-half" id="type-select" name="type">
-            <option selected="selected" value="16">Domestic</option>
-            <option value="24">Game</option>
+          <select class="govuk-select commodity-type govuk-!-width-one-half" id="type-select" name="type-of-commodity">
+            <option value="Domestic" {% if (data['type-of-commodity'] == "Domestic") %}selected{% endif %}>Domestic</option>
+            <option value="Game" {% if (data['type-of-commodity'] == "Game") %}selected{% endif %}>Game</option>
           </select>
           <noscript>
             <input id="type-button" class="button" type="submit" name="typeButton" value="update">
           </noscript>
         </div>
         <input type="hidden" name="class" id="class-select-hidden" value="473099">
-      </form>
-      {% endif %}
+        {% endif %}
 
-      {% if data['notification-hub'] == "visited" %}
-      <form action="02-06-commodity-details" method="post">
-      {% else %}
-      <form action="01-04-reason-for-importing" method="post">
-      {% endif %}
 
         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 

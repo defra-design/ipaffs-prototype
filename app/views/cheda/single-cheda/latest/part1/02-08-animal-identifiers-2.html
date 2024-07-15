@@ -84,7 +84,7 @@ GOV.UK Prototype Kit
         </div>
 
         {% for specie in data['species'] %}
-        <h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-margin-top-0" id="#{{ specie }}">
+        <h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-margin-top-0" id="{{ specie }}">
           {{ specie }}{% if (data['type-of-commodity'] == "Domestic" or data['type-of-commodity'] == "Game") %}, {{
           data['type-of-commodity'] }}{% endif %}
           Identification details
@@ -102,20 +102,33 @@ GOV.UK Prototype Kit
               </tr>
             </thead>
             <tbody>
+              <tr id="species-01061900-129518-1">
+                <td class="govuk-form-group govuk-table__cell govuk-!-width-one-quarter" id="01061900-129518-1">
+                  {{ specie }} 1
+                </td>
+                      <td class="govuk-table__cell">{{ data['microchip-01'] }}</td>
+                      <td class="govuk-table__cell">{{ data['passport-01'] }}</td>
+                      <td class="govuk-table__cell">{{ data['tattoo-01'] }}</td>
+                <td class="change govuk-table__cell">
+                  <button type="button" name="remove-3-129518.identifiers-1" value="Remove" class="link-button" id="identifier-remove-3-129518.identifiers-1" aria-label="Remove identifier 3-129518.identifiers-1">
+                    Remove
+                  </button>
+                </td>
+              </tr>
               <tr class="input-row" id="3-129518-input-row">
-                <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">{{ specie }} 1</td>
+                <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">{{ specie }} 2</td>
                 <td class="govuk-table__cell">
                   <input class="govuk-input  " id="3-129518.identifiers-1-microchip"
-                    name="microchip-01" type="text" value=""
+                    name="microchip-02" type="text" value=""
                     aria-label="3-129518.identifiers-1-microchip">
                 </td>
                 <td class="govuk-table__cell">
                   <input class="govuk-input  " id="3-129518.identifiers-1-passport"
-                    name="passport-01" type="text" value=""
+                    name="passport-02" type="text" value=""
                     aria-label="3-129518.identifiers-1-passport">
                 </td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="3-129518.identifiers-1-tattoo" name="tattoo-01"
+                  <input class="govuk-input  " id="3-129518.identifiers-1-tattoo" name="tattoo-02"
                     type="text" value="" aria-label="3-129518.identifiers-1-tattoo">
                 </td>
                 <td class="govuk-table__cell change"><span class="govuk-visually-hidden">Remove link</span></td>
@@ -156,7 +169,7 @@ GOV.UK Prototype Kit
               {{ specie }}
             </legend>
             <input type="submit" name="add-1-502501.identifiers-1" id="add-1-502501.identifiers-1" value="Add another"
-              class="link-button govuk-!-margin-bottom-8" formaction="02-08-animal-identifiers-2#{{ specie }}">
+              class="link-button govuk-!-margin-bottom-8" formaction="02-08-animal-identifiers-3#{{ specie }}">
           </fieldset>
         </div>
         {% endfor %}

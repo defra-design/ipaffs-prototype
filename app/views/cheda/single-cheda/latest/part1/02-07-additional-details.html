@@ -52,6 +52,26 @@ GOV.UK Prototype Kit
                   Breeding and/or production
                 </label>
               </div>
+              {% if data['commodity-code'] == "01061900" %}
+              <div class="govuk-radios__item animal-certified-as">
+                <input class="govuk-radios__input" id="animalCertifiedcircus" name="animal-certified-as" value="circus" type="radio">
+                <label class="govuk-label govuk-radios__label" for="animalCertifiedcircus">
+                  Circus/exhibition
+                </label>
+              </div>
+              <div class="govuk-radios__item animal-certified-as">
+                <input class="govuk-radios__input" id="animalCertifiedpets" name="animal-certified-as" value="pets" type="radio">
+                <label class="govuk-label govuk-radios__label" for="animalCertifiedpets">
+                  Pets
+                </label>
+              </div>
+              <div class="govuk-radios__item animal-certified-as">
+                <input class="govuk-radios__input" id="animalCertifiedother" name="animal-certified-as" value="other" type="radio">
+                <label class="govuk-label govuk-radios__label" for="animalCertifiedother">
+                  Other
+                </label>
+              </div>
+              {% else %}
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedslaughter" name="animal-certified-as"
                   value="slaughter" type="radio">
@@ -59,10 +79,12 @@ GOV.UK Prototype Kit
                   Slaughter
                 </label>
               </div>
+              {% endif %}
             </div>
           </fieldset>
         </div>
 
+        {% if data['commodity-code'] != "01061900" %}
         <div class="govuk-form-group including-non-ablacted ">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -72,14 +94,14 @@ GOV.UK Prototype Kit
             <div class="govuk-radios">
               <div class="govuk-radios__item including-non-ablacted">
                 <input class="govuk-radios__input" id="includingNonablactedyes" name="including-non-ablacted"
-                  value="true" type="radio">
+                  value="true" type="radio" {{ checked('including-non-ablacted','true') }}>
                 <label class="govuk-label govuk-radios__label" for="includingNonablactedyes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item including-non-ablacted">
                 <input class="govuk-radios__input" id="includingNonAblactedno" name="including-non-ablacted"
-                  value="false" type="radio">
+                  value="false" type="radio" checked>
                 <label class="govuk-label govuk-radios__label" for="includingNonAblactedno">
                   No
                 </label>
@@ -87,13 +109,12 @@ GOV.UK Prototype Kit
             </div>
           </fieldset>
         </div>
-        <p class="govuk-!-margin-top-6">
+        {% endif %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
             name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
             data-module="govuk-button">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
             name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-        </p>
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
       </form>
     </div>

@@ -141,7 +141,9 @@
                 </tr>
                   <tr class="presentation-table__section">
                     <td class="govuk-table__header">Country of origin</td>
-                    <td class="govuk-table__cell" id="country-of-origin">Austria</td>
+                    <td class="govuk-table__cell" id="country-of-origin">
+                      {{ data['origin-country'] or "Argentina" }}
+                    </td>
                     <td class="govuk-table__cell change">
                           <a href="01-03-origin-of-import" class="govuk-link" id="country-of-origin-change-link">
                              Change
