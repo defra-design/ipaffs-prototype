@@ -40,33 +40,33 @@ GOV.UK Prototype Kit
             <div class="govuk-radios">
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedapproved" name="animal-certified-as"
-                  value="approved" type="radio">
+                  value="Approved bodies" type="radio" {{ checked('animal-certified-as','Approved bodies') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedapproved">
                   Approved bodies
                 </label>
               </div>
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedbreeding" name="animal-certified-as"
-                  value="breeding" type="radio">
+                  value="Breeding and/or production" type="radio" {{ checked('animal-certified-as','Breeding and/or production') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedbreeding">
                   Breeding and/or production
                 </label>
               </div>
               {% if data['commodity-code'] == "01061900" %}
               <div class="govuk-radios__item animal-certified-as">
-                <input class="govuk-radios__input" id="animalCertifiedcircus" name="animal-certified-as" value="circus" type="radio">
+                <input class="govuk-radios__input" id="animalCertifiedcircus" name="animal-certified-as" value="Circus/exhibition" type="radio" {{ checked('animal-certified-as','Circus/exhibition') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedcircus">
                   Circus/exhibition
                 </label>
               </div>
               <div class="govuk-radios__item animal-certified-as">
-                <input class="govuk-radios__input" id="animalCertifiedpets" name="animal-certified-as" value="pets" type="radio">
+                <input class="govuk-radios__input" id="animalCertifiedpets" name="animal-certified-as" value="Pets" type="radio" {{ checked('animal-certified-as','Pets') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedpets">
                   Pets
                 </label>
               </div>
               <div class="govuk-radios__item animal-certified-as">
-                <input class="govuk-radios__input" id="animalCertifiedother" name="animal-certified-as" value="other" type="radio">
+                <input class="govuk-radios__input" id="animalCertifiedother" name="animal-certified-as" value="Other" type="radio" {{ checked('animal-certified-as','Other') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedother">
                   Other
                 </label>
@@ -74,7 +74,7 @@ GOV.UK Prototype Kit
               {% else %}
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedslaughter" name="animal-certified-as"
-                  value="slaughter" type="radio">
+                  value="Slaughter" type="radio" {{ checked('animal-certified-as','Slaughter') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedslaughter">
                   Slaughter
                 </label>
@@ -94,14 +94,14 @@ GOV.UK Prototype Kit
             <div class="govuk-radios">
               <div class="govuk-radios__item including-non-ablacted">
                 <input class="govuk-radios__input" id="includingNonablactedyes" name="including-non-ablacted"
-                  value="true" type="radio" {{ checked('including-non-ablacted','true') }}>
+                  value="Yes" type="radio" {{ checked('including-non-ablacted','Yes') }}>
                 <label class="govuk-label govuk-radios__label" for="includingNonablactedyes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item including-non-ablacted">
                 <input class="govuk-radios__input" id="includingNonAblactedno" name="including-non-ablacted"
-                  value="false" type="radio" checked>
+                  value="No" type="radio" {{ checked('including-non-ablacted','No') }}>
                 <label class="govuk-label govuk-radios__label" for="includingNonAblactedno">
                   No
                 </label>
