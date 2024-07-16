@@ -384,6 +384,95 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
             </thead>
             <tbody>
+              {% if (data['addressType'] == "consignor or exporter") %}
+              <tr>
+                <td class="govuk-table__cell economic-operator-name">
+                  MadDyr exports
+                </td>
+                <td class="govuk-table__cell economic-operator-address">
+                  Fisketorvet Shoppingcenter, Kalvebod Brygge 59, Kobenhavn, 1560
+                </td>
+                <td class="govuk-table__cell">
+                  Denmark
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id"
+                    id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell economic-operator-name">
+                  K9 specialists
+                </td>
+                <td class="govuk-table__cell economic-operator-address">
+                  100 Rajander Road, West Gujuptur, 114436
+                </td>
+                <td class="govuk-table__cell">
+                  India
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id"
+                    id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell economic-operator-name">
+                  Bovine Deliveries
+                </td>
+                <td class="govuk-table__cell economic-operator-address">
+                  Sheldon Drive, Perth, Western Australia, WA 6000
+                </td>
+                <td class="govuk-table__cell">
+                  Australia
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id"
+                    id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell economic-operator-name">
+                  Carne del Mundo
+                </td>
+                <td class="govuk-table__cell economic-operator-address">
+                  Avenida del Alma, Buenos Aires, Z1700 
+                </td>
+                <td class="govuk-table__cell">
+                  Argentina
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id"
+                    id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    Select
+                  </button>
+                </td>
+              </tr>
               <tr>
                 <td class="govuk-table__cell economic-operator-name">
                   Criadores de Salamanca
@@ -393,6 +482,51 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                 </td>
                 <td class="govuk-table__cell">
                   Spain
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id"
+                    id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              {% else %}
+              <tr>
+                <td class="govuk-table__cell economic-operator-name">
+                  Hound Welfare LTD
+                </td>
+                <td class="govuk-table__cell economic-operator-address">
+                  The Ridgeway, Linconshire, LN6 5PH
+                </td>
+                <td class="govuk-table__cell">
+                  England
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id"
+                    id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell economic-operator-name">
+                  The Cow Company LTD
+                </td>
+                <td class="govuk-table__cell economic-operator-address">
+                  Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH
+                </td>
+                <td class="govuk-table__cell">
+                  England
                 </td>
                 <td class="govuk-table__cell">
                   <button type="submit" class="link-button" name="view-id"
@@ -428,606 +562,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
                   </button>
                 </td>
               </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  ARConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  ARAddressLine1, ARCity, AR12345
-                </td>
-                <td class="govuk-table__cell">
-                  Argentina
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  UKConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  UKAddressLine1, UKCity, UK12345
-                </td>
-                <td class="govuk-table__cell">
-                  United Kingdom of Great Britain and Northern Ireland
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-69ce4f4c-3123-422d-ad28-f6999aadcb3b" value="69ce4f4c-3123-422d-ad28-f6999aadcb3b">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="14b-traders-entered">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  ARConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  ARAddressLine1, ARCity, AR12345
-                </td>
-                <td class="govuk-table__cell">
-                  Argentina
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd" value="d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  VIConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  VIAddressLine1, VICity, VI12345
-                </td>
-                <td class="govuk-table__cell">
-                  Virgin Islands of the United States
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-306c1de8-bb60-42af-b2a1-0cddad19d1a7" value="306c1de8-bb60-42af-b2a1-0cddad19d1a7">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="306c1de8-bb60-42af-b2a1-0cddad19d1a7">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  ARConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  ARAddressLine1, ARCity, AR12345
-                </td>
-                <td class="govuk-table__cell">
-                  Argentina
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-c0db5909-6228-4795-9119-1b1f6390ed3c" value="c0db5909-6228-4795-9119-1b1f6390ed3c">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="c0db5909-6228-4795-9119-1b1f6390ed3c">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  ARConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  ARAddressLine1, ARCity, AR12345
-                </td>
-                <td class="govuk-table__cell">
-                  Argentina
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-cd33b9e8-e726-4bbf-8a33-a2ff8b43080b" value="cd33b9e8-e726-4bbf-8a33-a2ff8b43080b">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="cd33b9e8-e726-4bbf-8a33-a2ff8b43080b">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  GMConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  GMAddressLine1, GMCity, GM12345
-                </td>
-                <td class="govuk-table__cell">
-                  The Gambia
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-1051986e-ddf6-4379-8397-f1423e4f361a" value="1051986e-ddf6-4379-8397-f1423e4f361a">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="1051986e-ddf6-4379-8397-f1423e4f361a">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  VAConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  VAAddressLine1, VACity, VA12345
-                </td>
-                <td class="govuk-table__cell">
-                  Holy See
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-f9890ecf-1dd3-4264-bb16-bd43f3a70ded" value="f9890ecf-1dd3-4264-bb16-bd43f3a70ded">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="f9890ecf-1dd3-4264-bb16-bd43f3a70ded">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  ARConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  ARAddressLine1, ARCity, AR12345
-                </td>
-                <td class="govuk-table__cell">
-                  Argentina
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-730a99e7-9df9-47b2-a00e-cb2f2e81f7b6" value="730a99e7-9df9-47b2-a00e-cb2f2e81f7b6">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="730a99e7-9df9-47b2-a00e-cb2f2e81f7b6">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  CGConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  CGAddressLine1, CGCity, CG12345
-                </td>
-                <td class="govuk-table__cell">
-                  Congo
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-66e731c0-275e-41cd-8c2e-e9728b3a7ec9" value="66e731c0-275e-41cd-8c2e-e9728b3a7ec9">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="66e731c0-275e-41cd-8c2e-e9728b3a7ec9">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  MKConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  MKAddressLine1, MKCity, MK12345
-                </td>
-                <td class="govuk-table__cell">
-                  North Macedonia
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-9cfa0bcd-0d1c-4320-8c90-1b10e40f582a" value="9cfa0bcd-0d1c-4320-8c90-1b10e40f582a">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="9cfa0bcd-0d1c-4320-8c90-1b10e40f582a">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  ARConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  ARAddressLine1, ARCity, AR12345
-                </td>
-                <td class="govuk-table__cell">
-                  Argentina
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-d85fb445-7b0d-419e-ab6b-2bb41cc403f4" value="d85fb445-7b0d-419e-ab6b-2bb41cc403f4">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="d85fb445-7b0d-419e-ab6b-2bb41cc403f4">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  CIConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  CIAddressLine1, CICity, CI12345
-                </td>
-                <td class="govuk-table__cell">
-                  Côte d'Ivoire
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-9a99bca7-49d9-44c2-b5f7-3209cda4aea5" value="9a99bca7-49d9-44c2-b5f7-3209cda4aea5">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="9a99bca7-49d9-44c2-b5f7-3209cda4aea5">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  MOConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  MOAddressLine1, MOCity, MO12345
-                </td>
-                <td class="govuk-table__cell">
-                  Macao
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-e4763f30-03b5-4870-bc11-dc2d79e136b7" value="e4763f30-03b5-4870-bc11-dc2d79e136b7">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="e4763f30-03b5-4870-bc11-dc2d79e136b7">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  VIConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  VIAddressLine1, VICity, VI12345
-                </td>
-                <td class="govuk-table__cell">
-                  Virgin Islands of the United States
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-7f766549-d9a0-4d23-9609-9fa914167c21" value="7f766549-d9a0-4d23-9609-9fa914167c21">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="7f766549-d9a0-4d23-9609-9fa914167c21">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  KGConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  KGAddressLine1, KGCity, KG12345
-                </td>
-                <td class="govuk-table__cell">
-                  Kyrgyzstan
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-85e2f624-4ba9-4ec1-a1f9-938676fc2ddb" value="85e2f624-4ba9-4ec1-a1f9-938676fc2ddb">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="85e2f624-4ba9-4ec1-a1f9-938676fc2ddb">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  GYConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  GYAddressLine1, GYCity, GY12345
-                </td>
-                <td class="govuk-table__cell">
-                  Guyana
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-22d3a23c-c8eb-49e9-9a92-25be56586e83" value="22d3a23c-c8eb-49e9-9a92-25be56586e83">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="22d3a23c-c8eb-49e9-9a92-25be56586e83">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  MSConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  MSAddressLine1, MSCity, MS12345
-                </td>
-                <td class="govuk-table__cell">
-                  Montserrat
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-9a1591de-7809-4841-8183-714edb64f38b" value="9a1591de-7809-4841-8183-714edb64f38b">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="9a1591de-7809-4841-8183-714edb64f38b">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  PHConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  PHAddressLine1, PHCity, PH12345
-                </td>
-                <td class="govuk-table__cell">
-                  Philippines
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-244eae4f-4d71-4ced-b7b1-f407226a745f" value="244eae4f-4d71-4ced-b7b1-f407226a745f">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="244eae4f-4d71-4ced-b7b1-f407226a745f">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  SJConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  SJAddressLine1, SJCity, SJ12345
-                </td>
-                <td class="govuk-table__cell">
-                  SJ
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-a6263819-262a-492f-b16f-be90d9f947ef" value="a6263819-262a-492f-b16f-be90d9f947ef">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="a6263819-262a-492f-b16f-be90d9f947ef">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  VEConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  VEAddressLine1, VECity, VE12345
-                </td>
-                <td class="govuk-table__cell">
-                  Venezuela
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-9f4d80ae-25b5-4d64-b318-7117613cc907" value="9f4d80ae-25b5-4d64-b318-7117613cc907">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="9f4d80ae-25b5-4d64-b318-7117613cc907">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  IRConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  IRAddressLine1, IRCity, IR12345
-                </td>
-                <td class="govuk-table__cell">
-                  Iran
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-d10edae1-0529-4687-862b-2e5d74230add" value="d10edae1-0529-4687-862b-2e5d74230add">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="d10edae1-0529-4687-862b-2e5d74230add">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  BBConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  BBAddressLine1, BBCity, BB12345
-                </td>
-                <td class="govuk-table__cell">
-                  Barbados
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-3e50c181-f27b-403c-a918-9ae2dd1056bb" value="3e50c181-f27b-403c-a918-9ae2dd1056bb">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="3e50c181-f27b-403c-a918-9ae2dd1056bb">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  SNConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  SNAddressLine1, SNCity, SN12345
-                </td>
-                <td class="govuk-table__cell">
-                  Senegal
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-a7cd80ad-c021-4940-8ae3-5dd974e69f9c" value="a7cd80ad-c021-4940-8ae3-5dd974e69f9c">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="a7cd80ad-c021-4940-8ae3-5dd974e69f9c">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="govuk-table__cell economic-operator-name">
-                  FMConsignor
-                </td>
-                <td class="govuk-table__cell economic-operator-address">
-                  FMAddressLine1, FMCity, FM12345
-                </td>
-                <td class="govuk-table__cell">
-                  Micronesia
-                </td>
-
-
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id"
-                    id="view-button-d262f5c2-5333-44f7-9bda-b94905e29fac" value="d262f5c2-5333-44f7-9bda-b94905e29fac">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="d262f5c2-5333-44f7-9bda-b94905e29fac">
-                    Select
-                  </button>
-                </td>
-              </tr>
+              {% endif %}
             </tbody>
           </table>
         </div>
