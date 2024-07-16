@@ -232,9 +232,8 @@
 
       </div>
 
-      <div class="" id="estimated-arrival-at-bcp">
-            
-            <h2 class="govuk-heading-m">Arrival date at port of entry</h2>
+      <div class="" id="estimated-arrival-at-bcp">          
+        <h2 class="govuk-heading-m">Arrival date at port of entry</h2>
           <div class="govuk-form-group ">
             <fieldset class="govuk-fieldset">
               <legend class="hidden govuk-visually-hidden">Date entry:</legend>
@@ -270,7 +269,40 @@
             </div>
             </fieldset>
           </div>
+      </div>
 
+      <div class="govuk-form-group ">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Estimated journey time
+          </legend>
+    
+          <span class="govuk-hint">For example, enter 1 day, 5 hours and 30 minutes as 1 5 30</span>
+    
+    
+          <div class="govuk-date-input date-input-width" id="estimated-journey-time">
+            <div class="govuk-date-input__item date-input-day">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-days">Days</label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="estimated-journey-time-days" name="estimated-journey-time-days" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+    
+            <div class="govuk-date-input__item date-input-hour">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-hours">Hours</label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="estimated-journey-time-hours" name="estimated-journey-time-hours" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+    
+            <div class="govuk-date-input__item date-input-minute">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-minutes">Minutes</label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="estimated-journey-time-minutes" name="estimated-journey-time-minutes" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
 
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
