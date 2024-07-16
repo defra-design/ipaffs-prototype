@@ -180,13 +180,13 @@ GOV.UK Prototype Kit
         <div class="table-responsive">
           <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
             <caption class="govuk-table__caption govuk-heading-m">
-              Traders
+              Addresses
             </caption>
             <tbody>
               <tr class="table__row--border-top">
                 <td class="govuk-table__cell">
                   <a href="04-01-addresses" class="govuk-link">
-                    Addresses
+                    Consignor or Exporter, Consignee, Importer and Place of Destination
                   </a>
                 </td>
                 <td class="govuk-table__cell badge-right">
@@ -195,15 +195,32 @@ GOV.UK Prototype Kit
                   </strong>
                 </td>
               </tr>
-
               <tr>
                 <td class="govuk-table__cell">
+                  {% if data['commodity-code'] == "01061900" %}
+                  <a href="04-04-permanent-address" class="govuk-link">
+                    Permanent addresses for the animals
+                  </a>
+                  {% else %}
                   <a href="04-03-cph-number" class="govuk-link">
                     County Parish Holding (CPH) number
                   </a>
+                  {% endif %}
                 </td>
                 <td class="govuk-table__cell badge-right">
                   <strong class="govuk-tag phase-tag govuk-tag--grey" id="responsible-person-contact-details">
+                    TO DO
+                  </strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell">
+                  <a href="06-03-contact-address" class="govuk-link">
+                    Contact address for consignment
+                  </a>
+                </td>
+                <td class="govuk-table__cell badge-right">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="branch-address">
                     TO DO
                   </strong>
                 </td>
@@ -282,6 +299,7 @@ GOV.UK Prototype Kit
           </table>
         </div>
 
+        <!-- 
         <div class="table-responsive">
           <table class="govuk-table govuk-!-margin-bottom-8" id="contact-table" role="presentation">
             <caption class="govuk-table__caption govuk-heading-m">
@@ -303,6 +321,7 @@ GOV.UK Prototype Kit
             </tbody>
           </table>
         </div>
+        -->
 
         <div class="table-responsive">
           <table class="govuk-table" id="review-table" role="presentation">
