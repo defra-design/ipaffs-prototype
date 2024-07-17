@@ -66,13 +66,13 @@ GOV.UK Prototype Kit
         <div class="govuk-grid-column-one-half">
           <div class="audit-flag govuk-!-margin-bottom-9">
 
-            <div id="last-updated-date">Last updated 8 April 2024, 10:27</div>
+            <div id="last-updated-date">Last updated 22 July 2024, 10:27</div>
             <div id="last-updated-by">by Percy Hyseni </div>
           </div>
         </div>
         <div class="govuk-grid-column-one-half">
           <div class="audit-flag govuk-!-margin-bottom-2">
-            <div id="last-submission-date">Submitted 8 April 2024, 18:13 </div>
+            <div id="last-submission-date">Submitted 22 July 2024, 18:13 </div>
             <div id="submitted-by">by Percy Hyseni</div>
           </div>
         </div>
@@ -92,7 +92,7 @@ GOV.UK Prototype Kit
           <tbody>
             <tr class="presentation-table__row--no-border ">
               <th scope="row" class="govuk-table__header border-top-none">CHED reference</th>
-              <td class="govuk-table__cell border-top-none" id="reference-number">DRAFT.GB.2024.1002950</td>
+              <td class="govuk-table__cell border-top-none" id="reference-number">DRAFT.GB.2024.5501422</td>
               <td class="govuk-table__cell change border-top-none">
                 <button data-prevent-double-click="true" id="copy-notification-reference-number" type="submit"
                   class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0 copy-button"
@@ -103,7 +103,7 @@ GOV.UK Prototype Kit
             </tr>
             <tr class="presentation-table__section">
               <th scope="row" class="govuk-table__header">Customs declaration reference</th>
-              <td class="govuk-table__cell" id="reference-number-customs">GBCHD2024.1002950</td>
+              <td class="govuk-table__cell" id="reference-number-customs">GBCHD2024.5501422</td>
               <td class="govuk-table__cell change">
                 <button data-prevent-double-click="true" type="submit" id="copy-customs-declaration-reference-number"
                   class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0 copy-button"
@@ -137,7 +137,7 @@ GOV.UK Prototype Kit
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible section-break-margin">
       </div>
 
-      <h2 class="govuk-heading-m">About the consignment</h2>
+      <h2 class="govuk-heading-l">About the consignment</h2>
 
 
 
@@ -200,7 +200,7 @@ GOV.UK Prototype Kit
       </div>
 
       <div class="govuk-grid-row">
-        <h2 class="govuk-heading-m govuk-!-margin-top-5 govuk-grid-column-one-half">Description of the goods</h2>
+        <h2 class="govuk-heading-l govuk-!-margin-top-5 govuk-grid-column-one-half">Description of the goods</h2>
       </div>
 
       
@@ -208,10 +208,8 @@ GOV.UK Prototype Kit
         <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0"
           id="review-table-commodity-attributes-0" role="presentation">
           <tbody class="govuk-table__head">
-            <tr id="0102/expired" class="presentation-table__section ">
-            </tr>
             <tr>
-              <td class="govuk-table__header">Commodity code</td>
+              <th scope="row" class="govuk-table__header">Commodity code</th>
               <td class="govuk-table__cell">
                 {{ data['commodity-code'] }}
               </td>
@@ -291,7 +289,7 @@ GOV.UK Prototype Kit
 
 
       <div class="heading-with-change-link govuk-!-margin-top-8">
-        <h3 class="govuk-heading-s">Additional details</h3>
+        <h3 class="govuk-heading-m">Additional animal details</h3>
         <a href="02-07-additional-details" class="govuk-link" id="consignment-details-change-link">
           Change
         </a>
@@ -481,12 +479,12 @@ GOV.UK Prototype Kit
 
 
       <div class="govuk-!-margin-bottom-9" id="accompanying-documents-section">
-        <h2 class="govuk-heading-m" id="documents-section-heading">Documents</h2>
-        <hr>
+        <h2 class="govuk-heading-l" id="documents-section-heading">Documents</h2>
+        <!-- hr -->
         <div class="table-responsive">
 
           <div class="heading-with-change-link">
-            <h3 class="govuk-heading-s" id="latest-health-certificate-heading">Latest health certificate</h3>
+            <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
             <a class="govuk-link" id="latest-health-certificate-change-link" href="03-01-certificate?AReviewedVar=yes">
               Change
             </a>
@@ -528,7 +526,7 @@ GOV.UK Prototype Kit
 
 
           <div class="heading-with-change-link">
-            <h3 class="govuk-heading-s" id="additional-documents-sub-heading">1 additional document</h3>
+            <h3 class="govuk-heading-m" id="additional-documents-sub-heading">1 additional document</h3>
             <a class="govuk-link" id="documents-change-link" href="03-02-documents?AReviewedVar=yes">
               Change
             </a>
@@ -783,11 +781,13 @@ GOV.UK Prototype Kit
       </div>
 
 
-      <h2 class="govuk-heading-m">Addresses</h2>
-
-
-
-
+      <h2 class="govuk-heading-l">Addresses</h2>
+      <div class="heading-with-change-link govuk-!-margin-top-8">
+        <h3 class="govuk-heading-m">Consignor or Exporter, Consignee, Importer and Place of Destination</h3>
+        <a href="04-01-addresses" class="govuk-link" id="traders-change-link">
+          Change
+        </a>
+      </div>
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table presentation-table review-table" id="review-table-traders" role="presentation">
           <tbody>
@@ -804,9 +804,7 @@ GOV.UK Prototype Kit
                 {% endif %}
               </td>
               <td class="govuk-table__cell change">
-                <a href="04-01-addresses" class="govuk-link" id="traders-change-link">
-                  Change
-                </a>
+                
               </td>
             </tr>
             <tr class="">
@@ -849,25 +847,118 @@ GOV.UK Prototype Kit
               </td>
               <td class="govuk-table__cell"></td>
             </tr>
+            {% if data['commodity-code'] != "01061900" %}
             <tr>
               <td class="govuk-table__header govuk-!-width-one-half">County Parish Holding number</td>
-              <td class="govuk-table__cell" id="cph-number"></td>
+              <td class="govuk-table__cell" id="cph-number">{{ data['cph-number'] }}</td>
               <td class="govuk-table__cell change">
                 <a id="cph-number-change-link" href="14d-cph-number" class="govuk-link">Change</a>
+              </td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+
+      {% if data['commodity-code'] == "01061900" %}
+      <div class="heading-with-change-link govuk-!-margin-top-8">
+        <h3 class="govuk-heading-m">Permanent addresses</h3>
+        <a href="04-04-permanent-address" class="govuk-link" id="consignment-details-change-link">
+          Change
+        </a>
+      </div>
+      <div class="table-responsive govuk-!-margin-bottom-9">
+        <table class="govuk-table presentation-table review-table" id="review-table-traders" role="presentation">
+          <thead></thead>
+          <tbody>
+          <!-- <tr>
+            <td class="govuk-table__header govuk-!-width-one-half"></td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell change">
+                <a id="permanent-addresses-change-link" href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1019482/permanent-address?fromImporterReview=true" class="govuk-link">Change</a>
+            </td>
+          </tr> -->
+            {% for specie in data['species'] %}
+            <tr>
+              <td class="govuk-table__header govuk-!-width-one-half" id="animal-name">{{ specie }} 1</td>
+              <td class="govuk-table__cell" id="animal-permanent-address">
+                Hound Welfare LTD<br>
+                The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr>
+              <td class="govuk-table__header govuk-!-width-one-half" id="animal-name">{{ specie }} 2</td>
+              <td class="govuk-table__cell" id="animal-permanent-address">
+                Hound Welfare LTD<br>
+                The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr>
+              <td class="govuk-table__header govuk-!-width-one-half" id="animal-name">{{ specie }} 3</td>
+              <td class="govuk-table__cell" id="animal-permanent-address">
+                Hound Welfare LTD<br>
+                The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr>
+              <td class="govuk-table__header govuk-!-width-one-half" id="animal-name">{{ specie }} 4</td>
+              <td class="govuk-table__cell" id="animal-permanent-address">
+                Hound Welfare LTD<br>
+                The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr>
+              <td class="govuk-table__header govuk-!-width-one-half" id="animal-name">{{ specie }} 5</td>
+              <td class="govuk-table__cell" id="animal-permanent-address">
+                Hound Welfare LTD<br>
+                The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+
+      <div class="heading-with-change-link">
+        <h3 class="govuk-heading-m" id="organisation-address-section-heading">Contact address for consignment</h3>
+        <a href="06-03-contact-address" class="govuk-link" id="organisation-branch-address-change-link">
+          Change
+        </a>
+      </div>
+      <div class="table-responsive govuk-!-margin-bottom-9">
+        <table class="govuk-table presentation-table review-table" id="review-table-organisation-address"
+          role="presentation">
+          <tbody>
+            <tr>
+              <td class="govuk-table__header" id="organisation-address-header">Contact address</td>
+              <td class="govuk-table__cell" id="organisation-branch-address-address">
+                {% if data['commodity-code'] == "01061900" %}
+                  The Ridgeway, Linconshire, LN6 5PH, 0044 1552 463789
+                {% else %}
+                  Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, 0044 1582 996774
+                {% endif %}
+              <td class="govuk-table__cell change">
               </td>
             </tr>
           </tbody>
         </table>
       </div>
 
+      
+
       <h2 class="govuk-heading-l">Transport</h2>
       <div class="heading-with-change-link">
-        <h2 class="govuk-heading-m">Transport to the port of entry</h2>
+        <h3 class="govuk-heading-m">Transport to the port of entry</h3>
         <a href="05-01-transport-to-poe" class="govuk-link" id="transport-to-bip-change-link">
           Change
         </a>
       </div>
-
 
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table review-table presentation-table" id="review-table-bip-details">
@@ -915,14 +1006,19 @@ GOV.UK Prototype Kit
             </tr> -->
             <tr>
               <th scope="row" class="govuk-table__header">Estimated journey time</th>
-              <td class="govuk-table__cell">{{ data['estimated-journey-time-days'] }} days {{ data['estimated-journey-time-hours'] }} hrs</td>
+              <td class="govuk-table__cell">
+                <!-- {{ data['estimated-journey-time-days'] }} days -->
+                  {{ data['estimated-journey-time-hours'] }} hrs</td>
               <td class="govuk-table__cell"></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h2 class="govuk-heading-m">Transport after the port of entry</h2>
+      <div class="heading-with-change-link">
+        <h3 class="govuk-heading-m">Transport after the port of entry</h3>
+        <a href="05-02-transport-after-poe" class="govuk-link" id="transport-details-change-link">Change</a>
+      </div>
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table presentation-table review-table" id="review-table-transport-after-poe"
           aria-describedby="Transport after the port of entry">
@@ -932,7 +1028,6 @@ GOV.UK Prototype Kit
               </th>
               <td>{{ data['transport-means-after'] }}</td>
               <td class="change">
-                <a href="05-02-transport-after-poe" class="govuk-link" id="transport-details-change-link">Change</a>
               </td>
             </tr>
             <tr>
@@ -955,13 +1050,12 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">{{ data['departure-time-hour'] }}:{{ data['departure-time-minutes'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
-            
           </tbody>
         </table>
       </div>
 
       <div class="heading-with-change-link">
-        <h2 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h2>
+        <h3 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h3>
         <a href="05-03-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">
           Change
         </a>
@@ -969,7 +1063,6 @@ GOV.UK Prototype Kit
       <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation"
         style="border-top: 0;">
         <caption class="govuk-visually-hidden">Summary of transport to the port of entry</caption>
-
         <tbody>
           <tr>
             <td class="govuk-table__header">Using the Common Transit Convention (CTC)</td>
@@ -992,36 +1085,37 @@ GOV.UK Prototype Kit
         </tbody>
       </table>
 
-      <h2 class="govuk-heading-m">Transporter</h2>
+      <div class="heading-with-change-link">
+        <h2 class="govuk-heading-m">Transporter</h2>
+        <a href="05-03-transporter" class="govuk-link" id="transporter-change-link">Change</a>
+      </div>
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table presentation-table review-table" id="review-table-transporter" role="presentation">
           <tbody>
             <tr id="review-transporter-details" class="presentation-table__section ">
               <td class="govuk-table__header">Name</td>
-              <td class="govuk-table__cell" id="transporter-name">Acha Transporte y Logística</td>
-              <td class="govuk-table__cell change">
-                <a href="05-03-transporter" class="govuk-link" id="transporter-change-link">Change</a>
+              <td class="govuk-table__cell" id="transporter-name">LUCY ANN EDE</td>
+              <td class="govuk-table__cell change">          
               </td>
             </tr>
             <tr>
               <td class="govuk-table__header">Type</td>
-              <td class="govuk-table__cell" id="transporter-type">private transporter</td>
+              <td class="govuk-table__cell" id="transporter-type">commercial transporter</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
               <td class="govuk-table__header">Address</td>
-              <td class="govuk-table__cell" id="transporter-address">Avda. de la Estación 43, Fuentidueña De Tajo,
-                28597, +34737395071, transporte@acha-tl.es</td>
+              <td class="govuk-table__cell" id="transporter-address">MEADERS FARM, MADERS, SOUTH HILL ROAD, CALLINGTON, PL17 7LL</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
               <td class="govuk-table__header">Country</td>
-              <td class="govuk-table__cell" id="transporter-country">Spain</td>
+              <td class="govuk-table__cell" id="transporter-country">United Kingdom of Great Britain and Northern Ireland</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
               <td class="govuk-table__header">Approval number</td>
-              <td class="govuk-table__cell" id="transporter-approval-number"></td>
+              <td class="govuk-table__cell" id="transporter-approval-number">UK/EXETE/T1/00090579</td>
               <td class="govuk-table__cell"></td>
             </tr>
           </tbody>
@@ -1037,28 +1131,6 @@ GOV.UK Prototype Kit
               </td>
               <td class="govuk-table__cell change">
                 <a href="05-05-route" class="govuk-link" id="route-change-link">Change</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <h2 class="govuk-heading-m" id="organisation-address-section-heading">Contact address for consignment</h2>
-
-      <div class="table-responsive govuk-!-margin-bottom-9">
-        <table class="govuk-table presentation-table review-table" id="review-table-organisation-address"
-          role="presentation">
-          <tbody>
-            <tr>
-              <td class="govuk-table__header" id="organisation-address-header">Contact address</td>
-              <td class="govuk-table__cell" id="organisation-branch-address-address">
-                {% if data['commodity-code'] == "01061900" %}
-                  The Ridgeway, Linconshire, LN6 5PH, 0044 1552 463789
-                {% else %}
-                  Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, 0044 1582 996774
-                {% endif %}
-              <td class="govuk-table__cell change">
-                <a href="06-03-contact-address" class="govuk-link"
-                  id="organisation-branch-address-change-link">Change</a>
               </td>
             </tr>
           </tbody>

@@ -89,15 +89,15 @@
         <input type="hidden" name="transporter-search-page" value="yes">
 
         <div class="table-responsive">
-          <table class="govuk-table traders-search-results" id="Table-SearchResults">
+          <table class="govuk-table traders-search-results" id="Table-SearchResults" aria-describedby="traders search results table">
             <thead class="govuk-table__head">
             <tr>
-                <th class="govuk-table__header" scope="col">Name</th>
-                <th class="govuk-table__header" scope="col">Address</th>
-                <th class="govuk-table__header" scope="col">Country</th>
-                <th class="govuk-table__header" scope="col">Status</th>
-                <th class="govuk-table__header" scope="col">Approval Number</th>
-                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col" id="transporter-company-name">Name</th>
+                <th class="govuk-table__header" scope="col" id="transporter-company-address">Address</th>
+                <th class="govuk-table__header" scope="col" id="transporter-company-country">Country</th>
+                <th class="govuk-table__header" scope="col" id="transporter-company-status">Status</th>
+                <th class="govuk-table__header" scope="col" id="transporter-approval-number">Approval Number</th>
+                <th class="govuk-table__header" scope="col" id="transporter-type">Type</th>
               <th class="govuk-table__header">
                 <span class="govuk-visually-hidden">View</span>
               </th>
@@ -108,71 +108,11 @@
             </thead>
             <tbody>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    Acha Transporte y Logística
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    LUCY ANN EDE
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    Avda. de la Estación 43, Fuentidueña De Tajo, 28597
-                  </td>
-                  <td class="govuk-table__cell">
-                    Spain
-                  </td>
-                  <td class="govuk-table__cell">
-                    New
-                  </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
-                  <td class="govuk-table__cell">
-                    private transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-0e4f4280-29d4-4963-acb7-a072f4eb756e" value="0e4f4280-29d4-4963-acb7-a072f4eb756e">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="0e4f4280-29d4-4963-acb7-a072f4eb756e">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    COOPERATIVECa30 Ltd
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    Isle of Man Government Office of Human Resources, Learning Education and Development, The Lodge Education and Training Centre, Vienna, 1030
-                  </td>
-                  <td class="govuk-table__cell">
-                    Austria
-                  </td>
-                  <td class="govuk-table__cell">
-                    New
-                  </td>
-                  <td class="govuk-table__cell">
-                    
-                  </td>
-                  <td class="govuk-table__cell">
-                    private transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-0529467b-52b4-46e8-8837-e4d7c5d49461" value="0529467b-52b4-46e8-8837-e4d7c5d49461">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="0529467b-52b4-46e8-8837-e4d7c5d49461">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    NEWHOUSE MILL LTD
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    NEWHOUSE, CANWORTHY WATER, LAUNCESTON, CORNWALL, PL15 8UW
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    MEADERS FARM, MADERS, SOUTH HILL ROAD, CALLINGTON, PL17 7LL
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -181,28 +121,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/EXETE/T1/00102720
+                    UK/EXETE/T1/00090579
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-5c8d159d-3faa-4e0e-8b68-5ab09f0f3fa5" value="5c8d159d-3faa-4e0e-8b68-5ab09f0f3fa5">
+                  <button type="button" class="link-button" name="view-id" id="view-button-209b6043-fe46-48cd-9f47-55ac551039fc" value="209b6043-fe46-48cd-9f47-55ac551039fc">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="5c8d159d-3faa-4e0e-8b68-5ab09f0f3fa5">
+                  <button type="submit" class="link-button" name="add-id" value="209b6043-fe46-48cd-9f47-55ac551039fc">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    Happily Ever After Dog Rescue Transport
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    STEPHEN GELDERD
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    Cornfield Cottage, Wens Road, Dundry, Bristol, BS41 8NB
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    27 GARDEN TERRACE, ULVERSTON, CUMBRIA, LA12 7DA
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -211,28 +151,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/EXETE/T2/00090939
+                    UK/PREST/T1/00090577
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-9780f959-58f1-4cd4-8116-5532921a4682" value="9780f959-58f1-4cd4-8116-5532921a4682">
+                  <button type="button" class="link-button" name="view-id" id="view-button-fbc0950d-9e97-4df5-9522-dcd7d6aa18e3" value="fbc0950d-9e97-4df5-9522-dcd7d6aa18e3">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="9780f959-58f1-4cd4-8116-5532921a4682">
+                  <button type="submit" class="link-button" name="add-id" value="fbc0950d-9e97-4df5-9522-dcd7d6aa18e3">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    JR &amp; F MARGINSON
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    T &amp; S King
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    PEACOCK HEY FARM COTTAGE, CHIPPING, PRESTON, LANCASHIRE, PR3 2QR
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Crossrig, Hutton, Berwick Upon Tweed, TD15 1XG
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -241,28 +181,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/PREST/T1/00093404
+                    UK/GALAS/T1/00090193
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-2b6bbf0d-4c4a-422d-adac-d69d7d8ce943" value="2b6bbf0d-4c4a-422d-adac-d69d7d8ce943">
+                  <button type="button" class="link-button" name="view-id" id="view-button-dcd15628-1ac8-4ab1-afa8-f3682dae487a" value="dcd15628-1ac8-4ab1-afa8-f3682dae487a">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="2b6bbf0d-4c4a-422d-adac-d69d7d8ce943">
+                  <button type="submit" class="link-button" name="add-id" value="dcd15628-1ac8-4ab1-afa8-f3682dae487a">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    Native Marine Centre Ltd
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    TREVOR WILLIAM JONES
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    NMC Ltd, Unit 1, Inner Breakwater, Portland Port, Castletown, DT5 1PR
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    LLAIN Y GRUG, HERMON ROAD, MYNYDD LLANDEGAI, BETHESDA, LL57 4DZ
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -271,28 +211,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/EXETE/T2/00090571
+                    UK/CAERN/T1/00090189
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-b716d948-e17b-4176-80d4-fb894c28d8dc" value="b716d948-e17b-4176-80d4-fb894c28d8dc">
+                  <button type="button" class="link-button" name="view-id" id="view-button-d3a795b5-a09d-42c2-82f8-17ac4aaaccf6" value="d3a795b5-a09d-42c2-82f8-17ac4aaaccf6">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="b716d948-e17b-4176-80d4-fb894c28d8dc">
+                  <button type="submit" class="link-button" name="add-id" value="d3a795b5-a09d-42c2-82f8-17ac4aaaccf6">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    I &amp; C Rutter
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    LNB Horse Transport
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    Burradon Mains, Thropton, Morpeth, Northumberland, NE65 7HH
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Hargreaves Lodge, Whitmore Road, HANCHURCH, Staffordshire, ST5 4DG
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -301,28 +241,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/NEWCA/T1/00091521
+                    UK/STAFF/T1/00090190
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-b477d4b1-aa52-4674-8f67-a0303e0f6d30" value="b477d4b1-aa52-4674-8f67-a0303e0f6d30">
+                  <button type="button" class="link-button" name="view-id" id="view-button-e1f478ad-8335-45e6-9a97-ad6fb87a17c3" value="e1f478ad-8335-45e6-9a97-ad6fb87a17c3">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="b477d4b1-aa52-4674-8f67-a0303e0f6d30">
+                  <button type="submit" class="link-button" name="add-id" value="e1f478ad-8335-45e6-9a97-ad6fb87a17c3">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    LEONARD JOHN ROWE
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    Cunningham (Cleavland) Ltd
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    THE BUNGALOW FARM, VENUS HILL, BOVINGDON, HERTFORDSHIRE, HP3 0PG
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    2 Durham Road, Thorpe Thewles, Stockton - On - Tees, Cleveland, TS21 3JN
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -331,147 +271,27 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/BURY/T1/00093617
+                    UK/NEWCA/T1/00090184
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-e921f9b5-ea7a-4a11-85b8-d545be597e38" value="e921f9b5-ea7a-4a11-85b8-d545be597e38">
+                  <button type="button" class="link-button" name="view-id" id="view-button-a86930ab-9777-4310-ae2e-fba1d49c50e4" value="a86930ab-9777-4310-ae2e-fba1d49c50e4">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="e921f9b5-ea7a-4a11-85b8-d545be597e38">
+                  <button type="submit" class="link-button" name="add-id" value="a86930ab-9777-4310-ae2e-fba1d49c50e4">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    MATTHEW MASSEY
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    27 ALCESTER ROAD, LICKEY END, BROMSGROVE, WORCS, B60 1JT
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/STAFF/T1/00091515
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-824e631f-2ac0-4f93-9cc9-5c62190fa07b" value="824e631f-2ac0-4f93-9cc9-5c62190fa07b">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="824e631f-2ac0-4f93-9cc9-5c62190fa07b">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    SIDNEY ROY BOWRING
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    FIR TREE FARM, EDWINSTOWE, MANSFIELD, NOTTINGHAMSHIRE, NG21 9JG
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/LEICE/T1/00093989
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-ebe7ac50-cd91-4046-8bbd-265bb6839eee" value="ebe7ac50-cd91-4046-8bbd-265bb6839eee">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="ebe7ac50-cd91-4046-8bbd-265bb6839eee">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    JOHN STUART MARGINSON
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    PEACOCK HEY FARM, CHIPPING, PRESTON, LANCASHIRE, PR3 2QR
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/PREST/T1/00093447
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-4eaeeefe-3eb7-443b-bb41-de40a89cc5cd" value="4eaeeefe-3eb7-443b-bb41-de40a89cc5cd">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="4eaeeefe-3eb7-443b-bb41-de40a89cc5cd">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    B &amp; C UPCHURCH
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    GREENWAY FARM, 12 LITLINGTON ROAD, STEEPLE MORDEN, ROYSTON, SG8 0LX
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/BURY/T1/00092923
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-5dca170b-9f99-4585-9245-27d27df27ef1" value="5dca170b-9f99-4585-9245-27d27df27ef1">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="5dca170b-9f99-4585-9245-27d27df27ef1">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
                     BRIAN FARISH
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
                     3 LEECHES TERRACE, MAIN ROAD, FLIMBY, MARYPORT, CA15 8RS
                   </td>
                   <td class="govuk-table__cell">
@@ -487,22 +307,22 @@
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-9b4fa6b7-c550-4d54-9565-faf16ea56c9e" value="9b4fa6b7-c550-4d54-9565-faf16ea56c9e">
+                  <button type="button" class="link-button" name="view-id" id="view-button-dc25497c-b417-4179-9228-50e9838aedcc" value="dc25497c-b417-4179-9228-50e9838aedcc">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="9b4fa6b7-c550-4d54-9565-faf16ea56c9e">
+                  <button type="submit" class="link-button" name="add-id" value="dc25497c-b417-4179-9228-50e9838aedcc">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    DAVID JOHN FAULDER
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    RG Vickers
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    TOWN MEAD FARM, UNTHANK DALSTON, CARLISLE, CUMBRIA, CA5 7BA
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Lowesby Grange, Tilton On The Water, Leicester, LE1 9LE
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -511,28 +331,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/PREST/T1/00093902
+                    UK/LEICE/T1/00090192
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-537d4f3c-b5bd-44e6-bdc4-e2c042e4ab01" value="537d4f3c-b5bd-44e6-bdc4-e2c042e4ab01">
+                  <button type="button" class="link-button" name="view-id" id="view-button-01422809-17d4-4860-af26-92d605f371fd" value="01422809-17d4-4860-af26-92d605f371fd">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="537d4f3c-b5bd-44e6-bdc4-e2c042e4ab01">
+                  <button type="submit" class="link-button" name="add-id" value="01422809-17d4-4860-af26-92d605f371fd">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    RICHARD NELSON GREENWOOD
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    SIMON POPE
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    DANIEL FOLD FARM, DANIEL FOLD LANE, CATTERALL, PRESTON, PR3 0JZ
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    ALBANS BARNYARD, ROMFORD ROAD, PEMBURY, KENT, TN2 4BB
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -541,28 +361,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/PREST/T1/00092570
+                    UK/REIGA/T1/00090183
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-f8c575a0-ce9b-4aed-a596-9f9241c4c2c1" value="f8c575a0-ce9b-4aed-a596-9f9241c4c2c1">
+                  <button type="button" class="link-button" name="view-id" id="view-button-7910c2d5-035c-4856-985f-612ec0b04f35" value="7910c2d5-035c-4856-985f-612ec0b04f35">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="f8c575a0-ce9b-4aed-a596-9f9241c4c2c1">
+                  <button type="submit" class="link-button" name="add-id" value="7910c2d5-035c-4856-985f-612ec0b04f35">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    FIRM OF H M INNES
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    J W SPILSBURY &amp; CO
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    38 CRAIGHILL TERRACE, TAIN, ROSS-SHIRE, IV19 1ER
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    ORISTON COURT, STANFORD BRIDGE, WORCESTER, WR6 6SU
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -571,28 +391,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/INVER/T1/00092935
+                    UK/STAFF/T1/00090186
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-625e2fb7-86cc-45bf-a977-1d68cce2b7e2" value="625e2fb7-86cc-45bf-a977-1d68cce2b7e2">
+                  <button type="button" class="link-button" name="view-id" id="view-button-1f160f59-89e2-4120-a6e6-4afbbdccd5c9" value="1f160f59-89e2-4120-a6e6-4afbbdccd5c9">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="625e2fb7-86cc-45bf-a977-1d68cce2b7e2">
+                  <button type="submit" class="link-button" name="add-id" value="1f160f59-89e2-4120-a6e6-4afbbdccd5c9">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    TANYA HEATHER MCAULEY
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    CW COURIER SERVICES
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    ROSEDALE, CASTLE STREET, MERE, WILTSHIRE, BA12 6JF
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    FAUVE, THE STREET, BIROBROOK, HALSTEAD, CO9 4BJ
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -601,28 +421,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/EXETE/T1/00091846
+                    UK/BURY/T1/00090182
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-ef9cc0d3-bc9e-4d67-9aac-1d797b384954" value="ef9cc0d3-bc9e-4d67-9aac-1d797b384954">
+                  <button type="button" class="link-button" name="view-id" id="view-button-d460a4bb-b6a3-41bd-b82d-203e3c69786f" value="d460a4bb-b6a3-41bd-b82d-203e3c69786f">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="ef9cc0d3-bc9e-4d67-9aac-1d797b384954">
+                  <button type="submit" class="link-button" name="add-id" value="d460a4bb-b6a3-41bd-b82d-203e3c69786f">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    JE &amp; MA ATKINSON
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    John Dorling
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    NIBTHWAITE GRANGE FARM, NR ULVERSTON, CUMBRIA, LA12 8DB
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Blaenffynnon Fach, Clydey, Llanfyrnach, Pembrokeshire, SA35 0BH
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -631,28 +451,28 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/PREST/T1/00090649
+                    UK/CARMA/T1/00090194
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-f6e5c9f7-865d-4f5e-8e42-d9c7099773f6" value="f6e5c9f7-865d-4f5e-8e42-d9c7099773f6">
+                  <button type="button" class="link-button" name="view-id" id="view-button-24d0cba4-4538-40e4-a47b-89536ab3939d" value="24d0cba4-4538-40e4-a47b-89536ab3939d">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="add-id" value="f6e5c9f7-865d-4f5e-8e42-d9c7099773f6">
+                  <button type="submit" class="link-button" name="add-id" value="24d0cba4-4538-40e4-a47b-89536ab3939d">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    A L K BOOTH
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    SARAH GREEN
                   </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    HARDWICK HALL FARM, ASTON, SHEFFIELD, S. YORKS, S26 2BE
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    TANKERDALE FARM, TANKERDALE LANE, LISS, HANTS, GU33 7QY
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
@@ -661,198 +481,18 @@
                     Approved
                   </td>
                   <td class="govuk-table__cell">
-                    UK/LEEDS/T1/00091235
+                    UK/REIGA/T1/00090185
                   </td>
                   <td class="govuk-table__cell">
                     commercial transporter
                   </td>
                 <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-40e0f578-20eb-43d0-88b4-39955793815f" value="40e0f578-20eb-43d0-88b4-39955793815f">
+                  <button type="button" class="link-button" name="view-id" id="view-button-63ccb7e3-93e0-4f67-812b-315a56ac4d4c" value="63ccb7e3-93e0-4f67-812b-315a56ac4d4c">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="40e0f578-20eb-43d0-88b4-39955793815f">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    A &amp; SL THROUP &amp; SON
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    HIGHER HOUSE FARM, SILSDEN, KEIGHLEY, WEST YORKSHIRE, BD20 9HT
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/LEEDS/T1/00090624
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-74c99454-9645-47c8-9feb-d9fafbddce66" value="74c99454-9645-47c8-9feb-d9fafbddce66">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="74c99454-9645-47c8-9feb-d9fafbddce66">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    M &amp; E HALL
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    KIDDAL QUARRY FARM, YORK ROAD, LEEDS, LS14 3AE
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/LEEDS/T1/00092707
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-b6f30773-9531-481b-bce4-3ac00bb07add" value="b6f30773-9531-481b-bce4-3ac00bb07add">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="b6f30773-9531-481b-bce4-3ac00bb07add">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    KAILZIE EQUESTRIAN
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    KAILZIE HOME FARM, PEEBLES, BORDERS, EH45 9HT
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/GALAS/T1/00092822
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-b7c767a5-2e4d-4df3-80e1-da5e34587240" value="b7c767a5-2e4d-4df3-80e1-da5e34587240">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="b7c767a5-2e4d-4df3-80e1-da5e34587240">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    JOHN COOPER
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    HASELEY MILL, HASELEY, HATTON, WARWICKSHIRE, CV35 7LS
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/STAFF/T1/00092645
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-6bfce73d-0abd-490c-a324-2a06ea5b89e6" value="6bfce73d-0abd-490c-a324-2a06ea5b89e6">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="6bfce73d-0abd-490c-a324-2a06ea5b89e6">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    HELEN WILCOCK
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    2 BOUNDARY CLOSE, BISHOPS STORTFORD, HERTFORDSHIRE, CM23 5GY
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/BURY/T1/00091440
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-86602adf-7f9f-43ef-ab10-2dda293e814d" value="86602adf-7f9f-43ef-ab10-2dda293e814d">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="86602adf-7f9f-43ef-ab10-2dda293e814d">
-                    Select
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                  <td class="govuk-table__cell economic-operator-name">
-                    JACK DOUGLAS BRAIN
-                  </td>
-                  <td class="govuk-table__cell economic-operator-address">
-                    62 HILL VIEW, BROAD TOWN, SWINDON, WILTSHIRE, SN4 7RQ
-                  </td>
-                  <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
-                  </td>
-                  <td class="govuk-table__cell">
-                    Approved
-                  </td>
-                  <td class="govuk-table__cell">
-                    UK/EXETE/T2/00090998
-                  </td>
-                  <td class="govuk-table__cell">
-                    commercial transporter
-                  </td>
-                <td class="govuk-table__cell">
-                  <button type="button" class="link-button" name="view-id" id="view-button-487bd8d5-2e13-4921-9faa-e1a029e5c976" value="487bd8d5-2e13-4921-9faa-e1a029e5c976">
-                    View
-                  </button>
-                </td>
-                <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="487bd8d5-2e13-4921-9faa-e1a029e5c976">
+                  <button type="submit" class="link-button" name="add-id" value="63ccb7e3-93e0-4f67-812b-315a56ac4d4c">
                     Select
                   </button>
                 </td>
