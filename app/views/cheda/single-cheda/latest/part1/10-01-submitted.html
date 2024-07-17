@@ -1,0 +1,102 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+    
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Plants</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="confirmation-page">
+    <div class="govuk-grid-column-two-thirds">
+        <!--  IPAFFS Messaging disabled | not high risk EU | has no risk assessment  -->
+        <!--  Standard green confirmation partials  -->
+          <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6" id="eu-cheda-chedp-confirmation-panel">
+            <h1 class="govuk-panel__title">Your notification has been submitted</h1>
+              <div class="govuk-panel__body">
+                Your reference number<br>
+                <strong class="bold">
+                  <span id="reference-number">CHEDA.GB.2024.5501422</span>
+                  <span id="version-number"> - V1</span>
+                </strong>
+              </div>
+          </div>
+          
+            <button class="govuk-button govuk-button--secondary copy-button" data-prevent-double-click="true" data-copy-value="CHEDA.GB.2024.5501422" type="button">Copy reference number</button>
+          
+            <h2 class="govuk-heading-m">What you need to do next</h2>
+            <p class="govuk-body">
+              Make sure the consignment goes directly to the place of destination on arriving in Great Britain.
+            </p>
+          <p class="govuk-body">
+            The animals or consignment may need to be inspected there. If so, the animals must stay at the place of destination for either:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the time stated on the health certificate</li>
+            <li>48 hours if no time is specified</li>
+          </ul>
+          
+          <h2 class="govuk-heading-m">How to view or amend this notification</h2>
+          <p class="govuk-body">
+            You can access or amend this notification from your dashboard.
+          </p>
+      
+      <div class="govuk-button-group govuk-!-display-block">
+
+
+
+      <div class="govuk-body" id="exit-links">
+        <div>
+          <a href="/notification/vnet/protected/notifications" class="link-button govuk-!-font-size-19" id="manage-notifications">
+            Return to your dashboard
+          </a>
+        </div>
+        <div>
+          <a class="link-button" href="/notification/vnet/protected/notifications/consignment/page-1?source=dashboard">
+              Create a new import notification
+          </a>
+        </div>
+      </div>
+      <div class="govuk-grid-row govuk-!-margin-top-9 govuk-!-margin-left-0">
+          <div class="footer_feedback" style="border-top: 2px solid; color: #1d70b8;">
+              <h2 class="govuk-heading-s govuk-!-margin-top-4">Tell us what we can improve</h2>
+              <p class="govuk-body">
+                  <a href="https://defragroup.eu.qualtrics.com/jfe/form/SV_3a7O8heitk4GtWS?link_location=notification&amp;ched=a" class="govuk-link" target="_blank" id="feedbackFooterLink" rel="noopener">What did you think of this service? (opens in new tab)</a>
+              </p>
+          </div>
+      </div>    </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+{% endblock %}
