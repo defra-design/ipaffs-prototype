@@ -314,7 +314,7 @@ GOV.UK Prototype Kit
         <div class="govuk-form-group ">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Estimated journey time
+              Total estimated journey time
             </legend>
 
             <span class="govuk-hint">For example, 48<!-- enter 1 day and 6 hours and 30 minutes as 1 5 30 --> </span>
@@ -353,13 +353,16 @@ GOV.UK Prototype Kit
           </fieldset>
         </div>
 
+        {% if data['from-page'] == "review" %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review" name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review">
+        {% else  %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
           name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
           data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
           name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
-
+        {% endif %}
       </form>
     </div>
   </div>

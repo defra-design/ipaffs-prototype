@@ -48,9 +48,9 @@ GOV.UK Prototype Kit
                   </td>
                   <td class="govuk-table__cell" id="commodity-description-0102">
                     {% if data['commodity-code'] == "01061900" %}
-                      Other
-                    {% else  %}
-                      Live bovine animals
+                    Other
+                    {% else %}
+                    Live bovine animals
                     {% endif %}
                   </td>
                   <td class="govuk-table__cell remove">
@@ -71,9 +71,9 @@ GOV.UK Prototype Kit
               <caption class="govuk-table__caption">
                 <h2 class="govuk-heading-m">
                   {% if data['commodity-code'] == "01061900" %}
-                    Other
-                  {% else  %}
-                    Live bovine animals
+                  Other
+                  {% else %}
+                  Live bovine animals
                   {% endif %}
                 </h2>
               </caption>
@@ -90,7 +90,8 @@ GOV.UK Prototype Kit
                 {% for specie in data['species'] %}
                 <tr class="govuk-table__row" id="species-01061900-129518-desktop">
                   <td class="govuk-table__cell govuk-!-padding-top-3" id="01061900-129518-desktop">
-                    {{ specie }}{% if (data['type-of-commodity'] == "Domestic" or data['type-of-commodity'] == "Game") %}, {{ data['type-of-commodity'] }}{% endif %}
+                    {{ specie }}{% if (data['type-of-commodity'] == "Domestic" or data['type-of-commodity'] == "Game")
+                    %}, {{ data['type-of-commodity'] }}{% endif %}
                   </td>
                   <td class="govuk-table__cell  govuk-!-padding-top-2 govuk-!-padding-bottom-2">
                     <div class="govuk-form-group govuk-!-margin-bottom-0 ">
@@ -141,13 +142,18 @@ GOV.UK Prototype Kit
           </div>
         </div>
 
-
+        {% if data['from-page'] == "review" %}
+        <input type="hidden" name="from-page" id="from-page" value="commodity-details">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+          name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" formaction="02-08-animal-identifiers-6">
+        {% else %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
           name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
           data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
           name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% endif %}
       </form>
     </div>
   </div>

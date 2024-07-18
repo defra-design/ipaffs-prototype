@@ -27,7 +27,8 @@ GOV.UK Prototype Kit
       <span class="govuk-caption-xl">Description of the goods</span>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4" id="page-primary-title">Enter animal identification details
       </h1>
-      <div class="govuk-hint govuk-!-margin-bottom-4">Enter the identification details you have for the animal. You must enter these details into the notification before arrival at the port of entry.</div>
+      <div class="govuk-hint govuk-!-margin-bottom-4">Enter the identification details you have for the animal. You must
+        enter these details into the notification before arrival at the port of entry.</div>
 
       <form action="02-07-additional-details" method="post">
         <div class="table-responsive">
@@ -102,18 +103,16 @@ GOV.UK Prototype Kit
               <tr class="input-row" id="3-129518-input-row">
                 <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">{{ specie }} 1</td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="3-129518.identifiers-1-microchip"
-                    name="microchip-01" type="text" value=""
-                    aria-label="3-129518.identifiers-1-microchip">
+                  <input class="govuk-input  " id="3-129518.identifiers-1-microchip" name="microchip-01" type="text"
+                    value="" aria-label="3-129518.identifiers-1-microchip">
                 </td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="3-129518.identifiers-1-passport"
-                    name="passport-01" type="text" value=""
-                    aria-label="3-129518.identifiers-1-passport">
+                  <input class="govuk-input  " id="3-129518.identifiers-1-passport" name="passport-01" type="text"
+                    value="" aria-label="3-129518.identifiers-1-passport">
                 </td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="3-129518.identifiers-1-tattoo" name="tattoo-01"
-                    type="text" value="" aria-label="3-129518.identifiers-1-tattoo">
+                  <input class="govuk-input  " id="3-129518.identifiers-1-tattoo" name="tattoo-01" type="text" value=""
+                    aria-label="3-129518.identifiers-1-tattoo">
                 </td>
                 <td class="govuk-table__cell change"><span class="govuk-visually-hidden">Remove link</span></td>
               </tr>
@@ -133,12 +132,12 @@ GOV.UK Prototype Kit
               <tr class="input-row" id="1-25761-input-row">
                 <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">{{ specie }} 1</td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="1-25761.identifiers-1-ear_tag" name="eartag-01"
-                    type="text" value="" aria-label="1-25761.identifiers-1-ear_tag">
+                  <input class="govuk-input  " id="1-25761.identifiers-1-ear_tag" name="eartag-01" type="text" value=""
+                    aria-label="1-25761.identifiers-1-ear_tag">
                 </td>
                 <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="1-25761.identifiers-1-passport" name="passport-01"
-                    type="text" value="" aria-label="1-25761.identifiers-1-passport">
+                  <input class="govuk-input  " id="1-25761.identifiers-1-passport" name="passport-01" type="text"
+                    value="" aria-label="1-25761.identifiers-1-passport">
                 </td>
                 <td class="govuk-table__cell change"><span class="govuk-visually-hidden">Remove link</span></td>
               </tr>
@@ -163,17 +162,25 @@ GOV.UK Prototype Kit
           </fieldset>
         </div>
         {% endfor %}
-        <p class="govuk-!-margin-top-6">
+        <div class="govuk-!-margin-top-6">
+          {% if data['from-page'] == "review" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button"
+            formaction="08-01-review">
+          {% elseif data['from-page'] == "commodity-details" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+          {% else %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
             name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
             data-module="govuk-button">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
             name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-        </p>
-        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
-        <p></p>
-        <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
-        <input name="etag" type="hidden" value="&quot;0000000004C7A4E0&quot;">
+          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+          {% endif %}
+          <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
+          <input name="etag" type="hidden" value="&quot;0000000004C7A4E0&quot;">
+        </div>
       </form>
     </div>
   </div>

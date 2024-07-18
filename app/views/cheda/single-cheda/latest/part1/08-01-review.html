@@ -61,10 +61,9 @@ GOV.UK Prototype Kit
 
       <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>
 
-
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
-          <div class="audit-flag govuk-!-margin-bottom-9">
+          <div class="audit-flag govuk-!-margin-bottom-7">
 
             <div id="last-updated-date">Last updated 22 July 2024, 10:27</div>
             <div id="last-updated-by">by Percy Hyseni </div>
@@ -72,17 +71,15 @@ GOV.UK Prototype Kit
         </div>
         <div class="govuk-grid-column-one-half">
           <div class="audit-flag govuk-!-margin-bottom-2">
-            <div id="last-submission-date">Submitted 22 July 2024, 18:13 </div>
-            <div id="submitted-by">by Percy Hyseni</div>
+            <div id="last-submission-date">Not submitted <!-- 22 July 2024, 18:13 --></div>
+            <!-- <div id="submitted-by">by Percy Hyseni</div> -->
           </div>
         </div>
-
       </div>
 
-
-
-
-
+      <div class="govuk-grid-row">
+        <h2 class="govuk-heading-l govuk-grid-column-one-half">Import reference numbers</h2>
+      </div>
       <div class="table-responsive">
         <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0"
           id="review-table-about-notification">
@@ -157,7 +154,7 @@ GOV.UK Prototype Kit
                 {{ data['origin-country'] or "Argentina" }}
               </td>
               <td class="govuk-table__cell change">
-                <a href="01-03-origin-of-import" class="govuk-link" id="country-of-origin-change-link">
+                <a href="01-03-origin-of-import?from-page=review" class="govuk-link" id="country-of-origin-change-link">
                   Change
                 </a>
               </td>
@@ -165,13 +162,15 @@ GOV.UK Prototype Kit
             <tr>
               <td class="govuk-table__header">Region of origin code</td>
               <td class="govuk-table__cell" id="region-of-consignment-value">
-
+                {% if data['region-code'] != "" %}
+                IN-{{ data['region-code'] }}
+                {% endif %}
               </td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
               <td class="govuk-table__header">Consignment reference number</td>
-              <td class="govuk-table__cell">{{ data['local-reference-number'] or "A-438347-GHKOS" }}</td>
+              <td class="govuk-table__cell">{{ data['local-reference-number'] }}</td>
             </tr>
 
             <tr class="presentation-table__section  ">
@@ -182,7 +181,7 @@ GOV.UK Prototype Kit
                 For {{ data['purpose'] | lower  or "internal market" }}
               </td>
               <td class="govuk-table__cell change">
-                <a href="01-04-reason-for-importing" class="govuk-link" id="consignment-purpose-change-link">
+                <a href="01-04-reason-for-importing?from-page=review" class="govuk-link" id="consignment-purpose-change-link">
                   Change
                 </a>
               </td>
@@ -214,7 +213,7 @@ GOV.UK Prototype Kit
                 {{ data['commodity-code'] }}
               </td>
               <td class="govuk-table__cell change">
-                <a href="02-06-commodity-details" class="govuk-link" id="commodity-change-link-0">Change</a>
+                <a href="02-06-commodity-details?from=review" class="govuk-link" id="commodity-change-link-0">Change</a>
               </td>
             </tr>
             {% if data['commodity-code'] != "01061900" %}
@@ -290,7 +289,7 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link govuk-!-margin-top-8">
         <h3 class="govuk-heading-m">Additional animal details</h3>
-        <a href="02-07-additional-details" class="govuk-link" id="consignment-details-change-link">
+        <a href="02-07-additional-details?from-page=review" class="govuk-link" id="consignment-details-change-link">
           Change
         </a>
       </div>
@@ -333,7 +332,7 @@ GOV.UK Prototype Kit
               <th scope="col" class="govuk-table__header">{{ specie }} identification details</th>
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell change">
-                <a href="02-08-animal-identifiers" class="govuk-link">Change</a>
+                <a href="02-08-animal-identifiers-6?from-page=review" class="govuk-link">Change</a>
               </td>
             </tr>
             <tr class="presentation-table__row--no-border">
@@ -784,7 +783,7 @@ GOV.UK Prototype Kit
       <h2 class="govuk-heading-l">Addresses</h2>
       <div class="heading-with-change-link govuk-!-margin-top-8">
         <h3 class="govuk-heading-m">Consignor or Exporter, Consignee, Importer and Place of Destination</h3>
-        <a href="04-01-addresses" class="govuk-link" id="traders-change-link">
+        <a href="04-01-addresses?from-page=review" class="govuk-link" id="traders-change-link">
           Change
         </a>
       </div>
@@ -852,7 +851,7 @@ GOV.UK Prototype Kit
               <td class="govuk-table__header govuk-!-width-one-half">County Parish Holding number</td>
               <td class="govuk-table__cell" id="cph-number">{{ data['cph-number'] }}</td>
               <td class="govuk-table__cell change">
-                <a id="cph-number-change-link" href="14d-cph-number" class="govuk-link">Change</a>
+                <a id="cph-number-change-link" href="04-03-cph-number" class="govuk-link">Change</a>
               </td>
             </tr>
             {% endif %}
@@ -863,7 +862,7 @@ GOV.UK Prototype Kit
       {% if data['commodity-code'] == "01061900" %}
       <div class="heading-with-change-link govuk-!-margin-top-8">
         <h3 class="govuk-heading-m">Permanent addresses</h3>
-        <a href="04-04-permanent-address" class="govuk-link" id="consignment-details-change-link">
+        <a href="04-04-permanent-address?from-page=review" class="govuk-link" id="consignment-details-change-link">
           Change
         </a>
       </div>
@@ -927,7 +926,7 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link">
         <h3 class="govuk-heading-m" id="organisation-address-section-heading">Contact address for consignment</h3>
-        <a href="06-03-contact-address" class="govuk-link" id="organisation-branch-address-change-link">
+        <a href="06-03-contact-address?from-page=review" class="govuk-link" id="organisation-branch-address-change-link">
           Change
         </a>
       </div>
@@ -955,7 +954,7 @@ GOV.UK Prototype Kit
       <h2 class="govuk-heading-l">Transport</h2>
       <div class="heading-with-change-link">
         <h3 class="govuk-heading-m">Transport to the port of entry</h3>
-        <a href="05-01-transport-to-poe" class="govuk-link" id="transport-to-bip-change-link">
+        <a href="05-01-transport-to-poe?from-page=review" class="govuk-link" id="transport-to-bip-change-link">
           Change
         </a>
       </div>
@@ -1005,7 +1004,7 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">11:00</td>
             </tr> -->
             <tr>
-              <th scope="row" class="govuk-table__header">Estimated journey time</th>
+              <th scope="row" class="govuk-table__header">Total estimated journey time</th>
               <td class="govuk-table__cell">
                 <!-- {{ data['estimated-journey-time-days'] }} days -->
                   {{ data['estimated-journey-time-hours'] }} hrs</td>
@@ -1017,7 +1016,7 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link">
         <h3 class="govuk-heading-m">Transport after the port of entry</h3>
-        <a href="05-02-transport-after-poe" class="govuk-link" id="transport-details-change-link">Change</a>
+        <a href="05-02-transport-after-poe?from-page=review" class="govuk-link" id="transport-details-change-link">Change</a>
       </div>
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table presentation-table review-table" id="review-table-transport-after-poe"
@@ -1056,7 +1055,7 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link">
         <h3 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h3>
-        <a href="05-03-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">
+        <a href="05-03-goods-movement-services?from-page=review" class="govuk-link" id="establishment-of-origin-change-link">
           Change
         </a>
       </div>
@@ -1087,7 +1086,7 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link">
         <h2 class="govuk-heading-m">Transporter</h2>
-        <a href="05-03-transporter" class="govuk-link" id="transporter-change-link">Change</a>
+        <a href="05-04-transporter?from-page=review" class="govuk-link" id="transporter-change-link">Change</a>
       </div>
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table presentation-table review-table" id="review-table-transporter" role="presentation">
@@ -1130,7 +1129,7 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">
               </td>
               <td class="govuk-table__cell change">
-                <a href="05-05-route" class="govuk-link" id="route-change-link">Change</a>
+                <a href="05-06-route?from-page=review" class="govuk-link" id="route-change-link">Change</a>
               </td>
             </tr>
           </tbody>

@@ -242,17 +242,26 @@ GOV.UK Prototype Kit
           {% endif %}
         </div>
         {% endfor %}
-        <p class="govuk-!-margin-top-6">
+        
+        <div class="govuk-!-margin-top-6">
+          {% if data['from-page'] == "review" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button"
+            formaction="08-01-review">
+          {% elseif data['from-page'] == "commodity-details" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+          {% else %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
             name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
             data-module="govuk-button">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
             name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-        </p>
-        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
-        <p></p>
-        <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
-        <input name="etag" type="hidden" value="&quot;0000000004C7A4E0&quot;">
+          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+          {% endif %}
+          <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
+          <input name="etag" type="hidden" value="&quot;0000000004C7A4E0&quot;">
+        </div>
       </form>
     </div>
   </div>

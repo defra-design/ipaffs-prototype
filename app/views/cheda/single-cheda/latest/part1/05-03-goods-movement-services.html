@@ -64,8 +64,7 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
                     It is 18 characters, starting with 2 numbers, a 2-letter country code then 14 letters and numbers.
                     For example, 24GB123456789AB012.
                   </span>
-                  <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mrn"
-                    spellcheck="false">
+                  <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mrn" spellcheck="false">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -130,15 +129,13 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
             </legend>
             <div class="govuk-radios ">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="gvms-yes" name="gvms"
-                  type="radio" value="Yes">
+                <input class="govuk-radios__input" id="gvms-yes" name="gvms" type="radio" value="Yes">
                 <label class="govuk-label govuk-radios__label " for="gvms-yes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="gvms-no" name="gvms"
-                  type="radio" value="No">
+                <input class="govuk-radios__input" id="gvms-no" name="gvms" type="radio" value="No">
                 <label class="govuk-label govuk-radios__label" for="gvms-no">
                   No
                 </label>
@@ -170,15 +167,21 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
           </details>
         </div>
 
-        <p class="govuk-!-margin-top-6">
+        <div class="govuk-!-margin-top-6">
+          {% if data['from-page'] == "review" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button"
+            formaction="08-01-review">
+          {% else %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
             name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
             data-module="govuk-button">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
             name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-        </p>
-        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
-        <p></p>
+          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+          {% endif %}
+        </div>
+        
         <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
         <input name="etag" type="hidden" value="&quot;0000000004C7A4E0&quot;">
       </form>
