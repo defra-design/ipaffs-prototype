@@ -54,13 +54,13 @@ GOV.UK Prototype Kit
               {% for specie in data['species'] %}
               <tr>
                 <td class="form-group govuk-table__cell">
-                  {{ data['commodity-code'] or "0102" }}
+                  {{ data['commodity-code'] or "0103" }}
                 </td>
                 <td class="govuk-table__cell">
                   {% if data['commodity-code'] == "01061900" %}
                   Other
                   {% else %}
-                  Live bovine animals
+                  Live swine
                   {% endif %}
                 </td>
                 <td class="govuk-table__cell">
@@ -138,7 +138,7 @@ GOV.UK Prototype Kit
               <tr>
                 <th scope="col" class="govuk-form-group govuk-table__header">Animal</th>
                 <th scope="col" class="govuk-table__header" id="earTag-01">Ear tag</th>
-                <th scope="col" class="govuk-table__header" id="passport-01">Passport</th>
+                <!-- th scope="col" class="govuk-table__header" id="passport-01">Passport</th -->
                 <td class="govuk-form-group govuk-table__header"></td>
               </tr>
             </thead>
@@ -148,7 +148,7 @@ GOV.UK Prototype Kit
                   {{ specie }} 1
                 </td>
                 <td class="govuk-table__cell">{{ data['eartag-01'] }}</td>
-                <td class="govuk-table__cell">{{ data['passport-01'] }}</td>
+                <!-- td class="govuk-table__cell">{{ data['passport-01'] }}</td -->
                 <td class="change govuk-table__cell">
                   <button type="button" name="remove-1-25761.identifiers-1" value="Remove" class="link-button" id="identifier-remove-1-25761.identifiers-1" aria-label="Remove identifier 1-25761.identifiers-1">
                     Remove
@@ -161,10 +161,10 @@ GOV.UK Prototype Kit
                   <input class="govuk-input  " id="1-25761.identifiers-1-ear_tag" name="eartag-02"
                     type="text" value="" aria-label="1-25761.identifiers-1-ear_tag">
                 </td>
-                <td class="govuk-table__cell">
+                <!-- td class="govuk-table__cell">
                   <input class="govuk-input  " id="1-25761.identifiers-1-passport" name="passport-02"
                     type="text" value="" aria-label="1-25761.identifiers-1-passport">
-                </td>
+                </td -->
                 <td class="govuk-table__cell change"><span class="govuk-visually-hidden">Remove link</span></td>
               </tr>
             </tbody>

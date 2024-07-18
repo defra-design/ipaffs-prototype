@@ -150,7 +150,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           </h2>
           <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
           {% if (data['importer-page'] != "yes") and (data['consignee-page'] == "yes") %}
-          <a href="04-01-addresses?importer-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
+          <a href="04-01-addresses?importer-page=yes#importer-heading" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
         
           &nbsp;
           <a href="04-02-address-search?addressType=importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
@@ -211,7 +211,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
 
         <div class="govuk-!-margin-bottom-8">
-          <h2 class="govuk-heading-m">
+          <h2 class="govuk-heading-m" id="poc-heading">
             Place of destination
           </h2>
           <div class="govuk-warning-text">
@@ -226,7 +226,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           {% if (data['place-of-destination-page'] != "yes") and (data['consignee-page'] == "yes") %}
 
-          <a href="04-01-addresses?place-of-destination-page=yes" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
+          <a href="04-01-addresses?place-of-destination-page=yes#poc-heading" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
           &nbsp;
           <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
         

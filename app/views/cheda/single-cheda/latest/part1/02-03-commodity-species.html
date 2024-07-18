@@ -38,12 +38,12 @@ GOV.UK Prototype Kit
           </thead>
           <tbody>
             <tr>
-              <td class="govuk-table__cell" id="commodity-code-value">{{ data['commodity-code'] or "0102" }}</td>
+              <td class="govuk-table__cell" id="commodity-code-value">{{ data['commodity-code'] or "0103" }}</td>
               <td class="govuk-table__cell">
                 {% if data['commodity-code'] == "01061900" %}
                 Other
                 {% else %}
-                Live bovine animals
+                Live swine
                 {% endif %}
               </td>
             </tr>
@@ -58,7 +58,7 @@ GOV.UK Prototype Kit
       {% endif %}
 
         {% if data['commodity-code'] != "01061900" %}
-        <input name="commodity-selected-code" type="hidden" value="0102">
+        <input name="commodity-selected-code" type="hidden" value="0103">
         <input name="commodityDetailsPage" type="hidden" value="">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--m" for="type-select">
@@ -756,22 +756,8 @@ GOV.UK Prototype Kit
             },
             items: [
               {
-              value: "Bison bison",
-              text: "Bison bison",
-              label: {
-                classes: "govuk-label--s"
-                }
-              },
-              {
-              value: "Bos taurus",
-              text: "Bos taurus",
-              label: {
-                classes: "govuk-label--s"
-                }
-              },
-              {
-              value: "Bubalus bubalis",
-              text: "Bubalus bubalis",
+              value: "Sus scrofa domesticus",
+              text: "Sus scrofa domesticus",
               label: {
                 classes: "govuk-label--s"
                 }

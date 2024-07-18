@@ -44,13 +44,13 @@ GOV.UK Prototype Kit
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell  govuk-!-width-one-third" id="commodity-0102">
-                    {{ data['commodity-code'] or "0102" }}
+                    {{ data['commodity-code'] or "0103" }}
                   </td>
                   <td class="govuk-table__cell" id="commodity-description-0102">
                     {% if data['commodity-code'] == "01061900" %}
                     Other
                     {% else %}
-                    Live bovine animals
+                    Live swine
                     {% endif %}
                   </td>
                   <td class="govuk-table__cell remove">
@@ -73,7 +73,7 @@ GOV.UK Prototype Kit
                   {% if data['commodity-code'] == "01061900" %}
                   Other
                   {% else %}
-                  Live bovine animals
+                  Live swine
                   {% endif %}
                 </h2>
               </caption>
