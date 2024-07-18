@@ -70,7 +70,7 @@
           
               
           
-            <input class="govuk-input govuk-!-width-one-half " id="identification" name="transport-identification-after" type="text" value="" aria-describedby="identification-hint" minlength="0" maxlength="50">
+            <input class="govuk-input govuk-!-width-one-half " id="identification" name="transport-identification-after" type="text" value="{{ data['transport-identification-after'] }}" aria-describedby="identification-hint" minlength="0" maxlength="50">
           </div>
 
           <div class="govuk-form-group  ">
@@ -86,7 +86,7 @@
           
               
           
-            <input class="govuk-input govuk-!-width-one-half " id="document" name="transport-document-after" type="text" value="" aria-describedby="document-hint" minlength="0" maxlength="32">
+            <input class="govuk-input govuk-!-width-one-half " id="document" name="transport-document-after" type="text" value="{{ data['transport-document-after'] }}" aria-describedby="document-hint" minlength="0" maxlength="32">
           </div>
 
 
@@ -103,7 +103,7 @@
                     <label class="govuk-label govuk-date-input__label" for="departure-date-day">
                       Day
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="departure-date-day" name="departure-date-day" type="text" maxlength="2" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="departure-date-day" name="departure-date-day" type="text" maxlength="2" inputmode="numeric" value="{{ data['departure-date-day'] }}">
                   </div>
                 </div>
                 <div class="govuk-date-input__item date-input-month">
@@ -111,7 +111,7 @@
                     <label class="govuk-label govuk-date-input__label" for="departure-date-month">
                       Month
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="departure-date-month" name="departure-date-month" type="text" maxlength="2" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="departure-date-month" name="departure-date-month" type="text" maxlength="2" inputmode="numeric" value="{{ data['departure-date-month'] }}">
                   </div>
                 </div>
                 <div class="govuk-date-input__item date-input-year">
@@ -119,7 +119,7 @@
                     <label class="govuk-label govuk-date-input__label" for="departure-date-year">
                       Year
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="departure-date-year" name="departure-date-year" type="text" maxlength="4" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="departure-date-year" name="departure-date-year" type="text" maxlength="4" inputmode="numeric" value="{{ data['departure-date-year'] }}">
                   </div>
                 </div>
                 <div class="date-picker__container date-picker__container--icon defra-datepicker"><span class="sr-only">Choose date</span>
@@ -141,7 +141,7 @@
                     <label class="govuk-label govuk-date-input__label" for="departure-time-hour">
                       Hour
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="departure-time-hour" name="departure-time-hour" type="text" maxlength="2" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="departure-time-hour" name="departure-time-hour" type="text" maxlength="2" inputmode="numeric" value="{{ data['departure-time-hour'] }}">
                   </div>
                 </div>
                 <div class="govuk-date-input__item date-input-minute">
@@ -149,7 +149,7 @@
                     <label class="govuk-label govuk-date-input__label" for="departure-time-minutes">
                       Minutes
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="departure-time-minutes" name="departure-time-minutes" type="text" maxlength="2" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="departure-time-minutes" name="departure-time-minutes" type="text" maxlength="2" inputmode="numeric" value="{{ data['departure-time-minutes'] }}">
                   </div>
                 </div>
               </div>

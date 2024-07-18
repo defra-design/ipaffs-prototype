@@ -168,7 +168,7 @@ GOV.UK Prototype Kit
 
 
           <input class="govuk-input govuk-!-width-one-half " id="identification" name="transport-identification" type="text"
-            value="" aria-describedby="identification-hint">
+            value="{{ data['transport-identification'] }}" aria-describedby="identification-hint">
         </div>
 
         <div class="govuk-form-group ">
@@ -185,7 +185,7 @@ GOV.UK Prototype Kit
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="road-trailers" name="road-trailers" type="radio" value="Yes"
-                  data-aria-controls="conditional-road-trailers">
+                  data-aria-controls="conditional-road-trailers" {{ checked('road-trailers','Yes') }}>
                 <label class="govuk-label govuk-radios__label" for="road-trailers">
                   Yes
                 </label>
@@ -201,7 +201,7 @@ GOV.UK Prototype Kit
                   <div class="govuk-hint govuk-!-width-two-thirds">
                     Enter the container identification number, or the trailer registration number or number plate.
                   </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="trailer-number" name="trailer-number" type="text">
+                  <input class="govuk-input govuk-!-width-one-third" id="trailer-number" name="trailer-number" type="text" value="{{ data['trailer-number'] }}">
                 </div>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="seal-number">
@@ -211,7 +211,7 @@ GOV.UK Prototype Kit
                     Enter the seal number on the official certificate or any other seal mentioned in the accompanying
                     documents.
                   </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="seal-number" name="seal-number" type="text">
+                  <input class="govuk-input govuk-!-width-one-third" id="seal-number" name="seal-number" type="text" value="{{ data['seal-number'] }}">
                 </div>
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -225,7 +225,7 @@ GOV.UK Prototype Kit
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="official-seal" name="official-seal" type="checkbox"
-                          value="Yes">
+                          value="Yes" {{ checked('official-seal','Yes') }}>
                         <label class="govuk-label govuk-checkboxes__label" for="waste">
 
                         </label>
@@ -237,7 +237,7 @@ GOV.UK Prototype Kit
                     another container or trailer</a></p>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="No">
+                <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="No" {{ checked('road-trailers','No') }}>
                 <label class="govuk-label govuk-radios__label" for="road-trailers-3">
                   No
                 </label>
@@ -260,7 +260,7 @@ GOV.UK Prototype Kit
 
 
 
-          <input class="govuk-input govuk-!-width-one-half " id="document" name="document-reference" type="text" value=""
+          <input class="govuk-input govuk-!-width-one-half " id="document" name="document-reference" type="text" value="{{ data['document-reference'] }}"
             aria-describedby="document-hint">
 
         </div>
@@ -280,7 +280,7 @@ GOV.UK Prototype Kit
                     </label>
                     <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day"
                       id="arrival-date-day" name="arrival-date-day" type="text" maxlength="2" inputmode="numeric"
-                      value="">
+                      value="{{ data['arrival-date-day']}} ">
                   </div>
                 </div>
                 <div class="govuk-date-input__item date-input-month">
@@ -290,7 +290,7 @@ GOV.UK Prototype Kit
                     </label>
                     <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month"
                       id="arrival-date-month" name="arrival-date-month" type="text" maxlength="2" inputmode="numeric"
-                      value="">
+                      value="{{ data['arrival-date-month'] }}">
                   </div>
                 </div>
                 <div class="govuk-date-input__item date-input-year">
@@ -300,7 +300,7 @@ GOV.UK Prototype Kit
                     </label>
                     <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year"
                       id="arrival-date-year" name="arrival-date-year" type="text" maxlength="4" inputmode="numeric"
-                      value="">
+                      value="{{ data['arrival-date-year'] }}">
                   </div>
                 </div>
                 <div class="date-picker__container date-picker__container--icon defra-datepicker"><span
@@ -337,7 +337,7 @@ GOV.UK Prototype Kit
                   <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-hours">Hours</label>
                   <input class="govuk-input govuk-date-input__input govuk-input--width-2"
                     id="estimated-journey-time-hours" name="estimated-journey-time-hours" type="text"
-                    inputmode="numeric" value="">
+                    inputmode="numeric" value="{{ data['estimated-journey-time-hours'] }}">
                 </div>
               </div>
 

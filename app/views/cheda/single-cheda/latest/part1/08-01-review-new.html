@@ -178,10 +178,11 @@ GOV.UK Prototype Kit
                 Main reason for importing the animals
               </td>
               <td class="govuk-table__cell" id="purpose-of-consignment-value">
-                For {{ data['purpose'] | lower  or "internal market" }}
+                For {{ data['purpose'] | lower or "internal market" }}
               </td>
               <td class="govuk-table__cell change">
-                <a href="01-04-reason-for-importing?from-page=review" class="govuk-link" id="consignment-purpose-change-link">
+                <a href="01-04-reason-for-importing?from-page=review" class="govuk-link"
+                  id="consignment-purpose-change-link">
                   Change
                 </a>
               </td>
@@ -202,27 +203,26 @@ GOV.UK Prototype Kit
         <h2 class="govuk-heading-l govuk-!-margin-top-5 govuk-grid-column-one-half">Description of the goods</h2>
       </div>
 
-      
       <div class="table-responsive">
         <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0"
           id="review-table-commodity-attributes-0" role="presentation">
           <tbody class="govuk-table__head">
             <tr>
-              <th scope="row" class="govuk-table__header">Commodity code</th>
-              <td class="govuk-table__cell">
-                {{ data['commodity-code'] }}
+              <td class="govuk-table__header govuk-!-width-one-third">Commodity code</td>
+              <td class="govuk-table__cell govuk-!-width-one-third govuk-table__cell--numeric">
+                0103
+
               </td>
-              <td class="govuk-table__cell change">
-                <a href="02-06-commodity-details?from=review" class="govuk-link" id="commodity-change-link-0">Change</a>
+              <td class="govuk-table__cell change govuk-!-width-one-third">
+                <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1020929/commodity/details?fromImporterReview=true"
+                  class="govuk-link" id="commodity-change-link-0">Change</a>
               </td>
             </tr>
-            {% if data['commodity-code'] != "01061900" %}
             <tr class="presentation-table__row--no-border">
-              <td class="govuk-table__header">Type of commodity</td>
-              <td class="govuk-table__cell">{{ data['type-of-commodity'] }}</td>
-              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__header govuk-!-width-one-third">Type of commodity</td>
+              <td class="govuk-table__cell govuk-!-width-one-third  govuk-table__cell--numeric">Domestic</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
             </tr>
-            {% endif %}
             <tr></tr>
           </tbody>
         </table>
@@ -243,22 +243,83 @@ GOV.UK Prototype Kit
             </tr>
           </thead>
           <tbody>
-            {% for specie in data['species'] %}
-            <tr class="">
+            <tr class="
+                         ">
               <td class="govuk-table__cell">
-                {{ specie }}
+                Sus scrofa domesticus
               </td>
-              <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
               <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
             </tr>
-            {% endfor %}
           </tbody>
           <tfoot>
             <tr>
               <th scope="row" class="govuk-table__header">
                 Subtotal
               </th>
-              <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="govuk-table presentation-table--no-border review-table govuk-!-margin-bottom-0"
+          id="review-table-commodity-attributes-0" role="presentation">
+          <tbody class="govuk-table__head">
+            <tr>
+              <th scope="row" class="govuk-table__header govuk-!-width-one-third" style="border: 0;">Commodity code</th>
+              <td class="govuk-table__cell govuk-!-width-one-third govuk-table__cell--numeric"  style="border: 0;">
+                01061900	
+              </td>
+              <td class="govuk-table__cell govuk-!-width-one-third change"  style="border: 0;">
+                <a href="02-06-commodity-details?from=review" class="govuk-link" id="commodity-change-link-0">Change</a>
+              </td>
+            </tr>
+            <tr></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-responsive">
+        <table class="govuk-table presentation-table data-table-commodities" id="review-table-consignment-0">
+          <thead class="govuk-table__head">
+            <tr>
+              <th class="govuk-table__header species" scope="col">
+                Species
+              </th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric animals">
+                Number of animals
+              </th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric packages">
+                Number of packages
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+           
+            <tr class="">
+              <td class="govuk-table__cell">
+                Canis familiaris
+              </td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="">
+              <td class="govuk-table__cell">
+                Felis catus
+              </td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            </tr>
+            
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" class="govuk-table__header">
+                Subtotal
+              </th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
               <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
             </tr>
           </tfoot>
@@ -268,18 +329,28 @@ GOV.UK Prototype Kit
 
 
 
-      <table class="govuk-table presentation-table review-table" role="presentation"
-        id="review-consignment-details-table">
+
+      <table class="govuk-table presentation-table data-table-commodities" id="review-consignment-details-table">
+        <thead class="govuk-table__head">
+          <tr>
+            <th class="govuk-table__header species" scope="col">
+
+            </th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric animals">
+              Number of animals
+            </th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric packages">
+              Number of packages
+            </th>
+          </tr>
+        </thead>
         <tbody>
-          <tr class="presentation-table__section ">
-            <td class="govuk-table__header">Total number of animals</td>
-            <td class="govuk-table__cell" colspan="2">
+          <tr>
+            <th scope="row" class="govuk-table__header govuk-!-width-one-third">Total</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-width-one-third">
               5
             </td>
-          </tr>
-          <tr>
-            <td class="govuk-table__header">Total number of packages</td>
-            <td class="govuk-table__cell" colspan="2">
+            <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-width-one-third">
               0
             </td>
           </tr>
@@ -321,18 +392,18 @@ GOV.UK Prototype Kit
 
 
 
-
-
+        <div class="heading-with-change-link govuk-!-margin-top-8">
+          <h3 class="govuk-heading-m">Animal identification details</h3>
+          <a href="02-08-animal-identifiers-6?from-page=review" class="govuk-link">Change</a>
+        </div>
         <table class="govuk-table presentation-table review-table" id="animal-identification-details-table">
-          <caption class="govuk-table__caption govuk-!-margin-top-5 govuk-heading-m">Animal identification details
-          </caption>
           <tbody>
             {% for specie in data['species'] %}
             <tr class="presentation-table__section">
               <th scope="col" class="govuk-table__header">{{ specie }} identification details</th>
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell change">
-                <a href="02-08-animal-identifiers-6?from-page=review" class="govuk-link">Change</a>
+
               </td>
             </tr>
             <tr class="presentation-table__row--no-border">
@@ -484,7 +555,8 @@ GOV.UK Prototype Kit
 
           <div class="heading-with-change-link">
             <h3 class="govuk-heading-m" id="latest-health-certificate-heading">Latest health certificate</h3>
-            <a class="govuk-link" id="latest-health-certificate-change-link" href="03-02-latest-health-cert?AReviewedVar=yes">
+            <a class="govuk-link" id="latest-health-certificate-change-link"
+              href="03-02-latest-health-cert?AReviewedVar=yes">
               Change
             </a>
           </div>
@@ -803,7 +875,7 @@ GOV.UK Prototype Kit
                 {% endif %}
               </td>
               <td class="govuk-table__cell change">
-                
+
               </td>
             </tr>
             <tr class="">
@@ -870,7 +942,7 @@ GOV.UK Prototype Kit
         <table class="govuk-table presentation-table review-table" id="review-table-traders" role="presentation">
           <thead></thead>
           <tbody>
-          <!-- <tr>
+            <!-- <tr>
             <td class="govuk-table__header govuk-!-width-one-half"></td>
             <td class="govuk-table__cell"></td>
             <td class="govuk-table__cell change">
@@ -926,7 +998,8 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link">
         <h3 class="govuk-heading-m" id="organisation-address-section-heading">Contact address for consignment</h3>
-        <a href="06-03-contact-address?from-page=review" class="govuk-link" id="organisation-branch-address-change-link">
+        <a href="06-03-contact-address?from-page=review" class="govuk-link"
+          id="organisation-branch-address-change-link">
           Change
         </a>
       </div>
@@ -938,9 +1011,9 @@ GOV.UK Prototype Kit
               <td class="govuk-table__header" id="organisation-address-header">Contact address</td>
               <td class="govuk-table__cell" id="organisation-branch-address-address">
                 {% if data['commodity-code'] == "01061900" %}
-                  The Ridgeway, Linconshire, LN6 5PH, 0044 1552 463789
+                The Ridgeway, Linconshire, LN6 5PH, 0044 1552 463789
                 {% else %}
-                  Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, 0044 1582 996774
+                Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, 0044 1582 996774
                 {% endif %}
               <td class="govuk-table__cell change">
               </td>
@@ -949,7 +1022,7 @@ GOV.UK Prototype Kit
         </table>
       </div>
 
-      
+
 
       <h2 class="govuk-heading-l">Transport</h2>
       <div class="heading-with-change-link">
@@ -1007,7 +1080,8 @@ GOV.UK Prototype Kit
               <th scope="row" class="govuk-table__header">Total estimated journey time</th>
               <td class="govuk-table__cell">
                 <!-- {{ data['estimated-journey-time-days'] }} days -->
-                  {{ data['estimated-journey-time-hours'] }} hrs</td>
+                {{ data['estimated-journey-time-hours'] }} hrs
+              </td>
               <td class="govuk-table__cell"></td>
             </tr>
           </tbody>
@@ -1016,7 +1090,8 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link">
         <h3 class="govuk-heading-m">Transport after the port of entry</h3>
-        <a href="05-02-transport-after-poe?from-page=review" class="govuk-link" id="transport-details-change-link">Change</a>
+        <a href="05-02-transport-after-poe?from-page=review" class="govuk-link"
+          id="transport-details-change-link">Change</a>
       </div>
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table presentation-table review-table" id="review-table-transport-after-poe"
@@ -1055,7 +1130,8 @@ GOV.UK Prototype Kit
 
       <div class="heading-with-change-link">
         <h3 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h3>
-        <a href="05-03-goods-movement-services?from-page=review" class="govuk-link" id="establishment-of-origin-change-link">
+        <a href="05-03-goods-movement-services?from-page=review" class="govuk-link"
+          id="establishment-of-origin-change-link">
           Change
         </a>
       </div>
@@ -1094,7 +1170,7 @@ GOV.UK Prototype Kit
             <tr id="review-transporter-details" class="presentation-table__section ">
               <td class="govuk-table__header">Name</td>
               <td class="govuk-table__cell" id="transporter-name">LUCY ANN EDE</td>
-              <td class="govuk-table__cell change">          
+              <td class="govuk-table__cell change">
               </td>
             </tr>
             <tr>
@@ -1104,12 +1180,14 @@ GOV.UK Prototype Kit
             </tr>
             <tr>
               <td class="govuk-table__header">Address</td>
-              <td class="govuk-table__cell" id="transporter-address">MEADERS FARM, MADERS, SOUTH HILL ROAD, CALLINGTON, PL17 7LL</td>
+              <td class="govuk-table__cell" id="transporter-address">MEADERS FARM, MADERS, SOUTH HILL ROAD, CALLINGTON,
+                PL17 7LL</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
               <td class="govuk-table__header">Country</td>
-              <td class="govuk-table__cell" id="transporter-country">United Kingdom of Great Britain and Northern Ireland</td>
+              <td class="govuk-table__cell" id="transporter-country">United Kingdom of Great Britain and Northern
+                Ireland</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
@@ -1120,12 +1198,11 @@ GOV.UK Prototype Kit
           </tbody>
         </table>
       </div>
-
+      
       <div class="heading-with-change-link">
         <h2 class="govuk-heading-m">Countries the consignment will travel through</h2>
         <a href="05-06-route?from-page=review" class="govuk-link" id="route-change-link">Change</a>
       </div>
-      
       <div class="table-responsive govuk-!-margin-bottom-9">
         <table class="govuk-table presentation-table review-table" id="review-table-route" role="presentation">
           <tbody>
