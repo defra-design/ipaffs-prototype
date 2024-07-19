@@ -1038,6 +1038,7 @@ GOV.UK Prototype Kit
         </table>
       </div>
 
+      {% if data['transport-means-before'] == "Airplane" %}
       <div class="heading-with-change-link">
         <h3 class="govuk-heading-m">Transport after the port of entry</h3>
         <a href="05-02-transport-after-poe?from-page=review" class="govuk-link"
@@ -1077,6 +1078,7 @@ GOV.UK Prototype Kit
           </tbody>
         </table>
       </div>
+      {% endif %}
 
       <div class="heading-with-change-link">
         <h3 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h3>
