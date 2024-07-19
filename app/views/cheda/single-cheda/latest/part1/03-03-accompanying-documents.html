@@ -95,7 +95,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
               <div class="additional-documents__grid-column-15 additional-document-content">
                 <div class="additional-documents__content-heading" id="additional-document-type-heading-1">Document type</div>
                 <div class="additional-documents__content-value" id="additional-document-type-value-1">
-                    Air waybill
+                  {% if data['commodity-code'] == "01061900" %}Air waybill{% else %}Other{% endif %}
                 </div>
               </div>
               <div class="additional-documents__grid-column-15 additional-document-content">
@@ -114,7 +114,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                     </div>
                 </div>
                 <div class="additional-documents__content-value" id="additional-document-date-value-1">
-                  22 July 2024
+                  21 July 2024
                 </div>
             
               </div>

@@ -528,15 +528,15 @@ GOV.UK Prototype Kit
                     Veterinary health certificate <!-- span class="govuk-!-font-weight-bold">(cloned)</span -->
                   </td>
                   <td class="govuk-table__cell break-word" id="latest-health-document-reference">
-                    IN/03/01A/01/12
+                    {% if data['commodity-code'] == "01061900" %}IN/03/01A/01/12{% else %}FR140333{% endif %}
                   </td>
                   <td class="govuk-table__cell" id="latest-health-document-issue-date">
-                    20 July 2024
+                    {% if data['commodity-code'] == "01061900" %}20 July 2024{% else %}21 July 2024{% endif %}
                   </td>
                   <td class="govuk-table__cell">
                     <a class="govuk-link ellipsis" id="attachment-view-4d3f24e1-2ef2-42e4-bf14-da0ab37f2353"
                       title="docs page with docs.png" rel="noopener noreferrer" target="_blank" href="#">
-                      IN-03-01A-01-12.pdf
+                      {% if data['commodity-code'] == "01061900" %}IN-03-01A-01-12.pdf{% else %}FR140333.pdf{% endif %}
                     </a>
                   </td>
                 </tr>
@@ -567,13 +567,13 @@ GOV.UK Prototype Kit
               <tbody>
                 <tr class="presentation-table__section ">
                   <td class="govuk-table__cell" id="veterinary-document-type-1">
-                    Air waybill
+                    {% if data['commodity-code'] == "01061900" %}Air waybill{% else %}Other{% endif %}
                   </td>
                   <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
                     001-12345678
                   </td>
                   <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                    22 July 2024
+                    21 July 2024
                   </td>
                   <td class="govuk-table__cell">
                     <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f"
