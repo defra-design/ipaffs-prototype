@@ -847,7 +847,7 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell"></td>
             </tr>
             {% if data['commodity-code'] != "01061900" %}
-            <tr>
+            <tr class="presentation-table__section">
               <td class="govuk-table__header govuk-!-width-one-half">County Parish Holding number</td>
               <td class="govuk-table__cell" id="cph-number">{{ data['cph-number'] }}</td>
               <td class="govuk-table__cell change">
@@ -1004,7 +1004,7 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">11:00</td>
             </tr> -->
             <tr>
-              <th scope="row" class="govuk-table__header">Total estimated journey time</th>
+              <th scope="row" class="govuk-table__header">Estimated total journey time of the animals</th>
               <td class="govuk-table__cell">
                 <!-- {{ data['estimated-journey-time-days'] }} days -->
                   {{ data['estimated-journey-time-hours'] }} hrs</td>

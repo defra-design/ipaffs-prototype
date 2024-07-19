@@ -151,7 +151,7 @@ GOV.UK Prototype Kit
             <tr class="presentation-table__section">
               <td class="govuk-table__header">Country of origin</td>
               <td class="govuk-table__cell" id="country-of-origin">
-                {{ data['origin-country'] or "Argentina" }}
+                {{ data['origin-country'] or "Denmark" }}
               </td>
               <td class="govuk-table__cell change">
                 <a href="01-03-origin-of-import?from-page=review" class="govuk-link" id="country-of-origin-change-link">
@@ -163,14 +163,14 @@ GOV.UK Prototype Kit
               <td class="govuk-table__header">Region of origin code</td>
               <td class="govuk-table__cell" id="region-of-consignment-value">
                 {% if data['region-code'] != "" %}
-                IN-{{ data['region-code'] }}
+                DK-{{ data['region-code'] or "243" }}
                 {% endif %}
               </td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
               <td class="govuk-table__header">Consignment reference number</td>
-              <td class="govuk-table__cell">{{ data['local-reference-number'] }}</td>
+              <td class="govuk-table__cell">{{ data['local-reference-number'] or "dk-2024-july"}}</td>
             </tr>
 
             <tr class="presentation-table__section  ">
@@ -358,35 +358,7 @@ GOV.UK Prototype Kit
       </table>
 
 
-      <div class="heading-with-change-link govuk-!-margin-top-8">
-        <h3 class="govuk-heading-m">Additional animal details</h3>
-        <a href="02-07-additional-details?from-page=review" class="govuk-link" id="consignment-details-change-link">
-          Change
-        </a>
-      </div>
-
-      <div class="table-responsive govuk-!-margin-bottom-9">
-        <table class="govuk-table presentation-table review-table" role="presentation"
-          id="review-consignment-details-table">
-          <tbody>
-            <tr class="presentation-table__section">
-              <td class="govuk-table__header">Certified for</td>
-              <td class="govuk-table__cell">{{ data['animal-certified-as'] }}</td>
-            </tr>
-
-            {% if data['commodity-code'] != "01061900" %}
-            <tr>
-              <td class="govuk-table__header">
-                Includes unweaned animals
-              </td>
-              <td class="govuk-table__cell" colspan="2">
-                {{ data['including-non-ablacted'] }}
-              </td>
-            </tr>
-            {% endif %}
-
-          </tbody>
-        </table>
+      
 
 
 
@@ -396,6 +368,9 @@ GOV.UK Prototype Kit
           <h3 class="govuk-heading-m">Animal identification details</h3>
           <a href="02-08-animal-identifiers-6?from-page=review" class="govuk-link">Change</a>
         </div>
+
+        
+
         <table class="govuk-table presentation-table review-table" id="animal-identification-details-table">
           <tbody>
             {% for specie in data['species'] %}
@@ -494,7 +469,7 @@ GOV.UK Prototype Kit
                           {{ specie }} 1
                         </td>
                         <td class="govuk-table__cell govuk-!-width-one-quarter" headers="earTag-01">{{ data['eartag-01']
-                          }}</td>
+                          or "192827363541-tag" }}</td>
                         <!-- td class="govuk-table__cell govuk-!-width-one-quarter" headers="passport-01">{{
                           data['passport-01'] }}</td -->
                       </tr>
@@ -503,7 +478,7 @@ GOV.UK Prototype Kit
                           {{ specie }} 2
                         </td>
                         <td class="govuk-table__cell govuk-!-width-one-quarter" headers="earTag-01">{{ data['eartag-02']
-                          }}</td>
+                          or "192827363542-tag" }}</td>
                         <!-- td class="govuk-table__cell govuk-!-width-one-quarter" headers="passport-01">{{
                           data['passport-02'] }}</td -->
                       </tr>
@@ -512,7 +487,7 @@ GOV.UK Prototype Kit
                           {{ specie }} 3
                         </td>
                         <td class="govuk-table__cell govuk-!-width-one-quarter" headers="earTag-01">{{ data['eartag-03']
-                          }}</td>
+                          or "192827363543-tag" }}</td>
                         <!-- td class="govuk-table__cell govuk-!-width-one-quarter" headers="passport-01">{{
                           data['passport-03'] }}</td -->
                       </tr>
@@ -521,7 +496,7 @@ GOV.UK Prototype Kit
                           {{ specie }} 4
                         </td>
                         <td class="govuk-table__cell govuk-!-width-one-quarter" headers="earTag-01">{{ data['eartag-04']
-                          }}</td>
+                          or "192827363544-tag" }}</td>
                         <!-- td class="govuk-table__cell govuk-!-width-one-quarter" headers="passport-01">{{
                           data['passport-04'] }}</td -->
                       </tr>
@@ -529,7 +504,7 @@ GOV.UK Prototype Kit
                         <td class="govuk-table__cell govuk-!-width-one-quarter" headers="animalProduct-01">
                           {{ specie }} 5
                         </td>
-                        <td class="govuk-table__cell govuk-!-width-one-quarter" headers="earTag-01">{{ data['eartag-05']
+                        <td class="govuk-table__cell govuk-!-width-one-quarter" headers="earTag-01">{{ data['eartag-05'] or "192827363545-tag" 
                           }}</td>
                         <!-- td class="govuk-table__cell govuk-!-width-one-quarter" headers="passport-01">{{
                           data['passport-05'] }}</td -->
@@ -541,10 +516,56 @@ GOV.UK Prototype Kit
               </td>
             </tr>
             {% endfor %}
+            <tr class="presentation-table__section">
+              <th scope="col" class="govuk-table__header" colspan="4" style="border-top: 0">Canis familiaris identification details</th>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" headers="animalProduct-01" colspan="4">
+                No identification details have been recorded
+              </td>
+            </tr>
+            <tr class="presentation-table__section">
+              <th scope="col" class="govuk-table__header" colspan="4">Felis catus identification details</th>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" headers="animalProduct-01" colspan="4">
+                No identification details have been recorded
+              </td>
+            </tr>
           </tbody>
         </table>
-      </div>
+ 
 
+        <div class="heading-with-change-link govuk-!-margin-top-8">
+          <h3 class="govuk-heading-m">Additional animal details</h3>
+          <a href="02-07-additional-details?from-page=review" class="govuk-link" id="consignment-details-change-link">
+            Change
+          </a>
+        </div>
+  
+        <div class="table-responsive govuk-!-margin-bottom-9">
+          <table class="govuk-table presentation-table review-table" role="presentation"
+            id="review-consignment-details-table">
+            <tbody>
+              <tr class="presentation-table__section">
+                <td class="govuk-table__header">Certified for</td>
+                <td class="govuk-table__cell">{{ data['animal-certified-as'] or "Approved bodies" }}</td>
+              </tr>
+  
+              {% if data['commodity-code'] != "01061900" %}
+              <tr>
+                <td class="govuk-table__header">
+                  Includes unweaned animals
+                </td>
+                <td class="govuk-table__cell" colspan="2">
+                  {{ data['including-non-ablacted'] or "No" }}
+                </td>
+              </tr>
+              {% endif %}
+  
+            </tbody>
+          </table>
+        </div>
 
 
 
@@ -919,9 +940,9 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell"></td>
             </tr>
             {% if data['commodity-code'] != "01061900" %}
-            <tr>
+            <tr class="presentation-table__section">
               <td class="govuk-table__header govuk-!-width-one-half">County Parish Holding number</td>
-              <td class="govuk-table__cell" id="cph-number">{{ data['cph-number'] }}</td>
+              <td class="govuk-table__cell" id="cph-number">{{ data['cph-number'] or "CPH-09876" }}</td>
               <td class="govuk-table__cell change">
                 <a id="cph-number-change-link" href="04-03-cph-number" class="govuk-link">Change</a>
               </td>
@@ -1038,35 +1059,35 @@ GOV.UK Prototype Kit
           <tbody>
             <tr class="">
               <th scope="row" class="govuk-table__header">Port of entry</th>
-              <td class="govuk-table__cell">{{ data['bcp'] }}</td>
+              <td class="govuk-table__cell">{{ data['bcp'] or "HEATHROW (GBLHR)" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Means of transport to port of entry</th>
-              <td class="govuk-table__cell">{{ data['transport-means-before'] }}</td>
+              <td class="govuk-table__cell">{{ data['transport-means-before'] or "Airplane" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Transport identification</th>
-              <td class="govuk-table__cell">{{ data['transport-identification'] }}</td>
+              <td class="govuk-table__cell">{{ data['transport-identification'] or "Flight XY-987" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Using road trailers or containers?</th>
-              <td class="govuk-table__cell">{{ data['road-trailers'] }}</td>
+              <td class="govuk-table__cell">{{ data['road-trailers'] or "Yes" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Trailer or container number</th>
-              <td class="govuk-table__cell">{{ data['trailer-number'] }}</td>
+              <td class="govuk-table__cell">{{ data['trailer-number'] or "ABC 234" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Seal number</th>
-              <td class="govuk-table__cell">{{ data['seal-number']}}</td>
+              <td class="govuk-table__cell">{{ data['seal-number'] or "98097652928" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Official seal</th>
-              <td class="govuk-table__cell">{{ data['official-seal']}}</td>
+              <td class="govuk-table__cell">{{ data['official-seal'] or "Yes" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Transport document reference</th>
-              <td class="govuk-table__cell">{{ data['document-reference'] }}</td>
+              <td class="govuk-table__cell">{{ data['document-reference'] or "Air waybill N-CVB-098" }}</td>
             </tr>
             <tr class="">
               <th scope="row" class="govuk-table__header">Estimated arrival date at port of entry</th>
@@ -1077,10 +1098,10 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">11:00</td>
             </tr> -->
             <tr>
-              <th scope="row" class="govuk-table__header">Total estimated journey time</th>
+              <th scope="row" class="govuk-table__header">Estimated total journey time of the animals</th>
               <td class="govuk-table__cell">
                 <!-- {{ data['estimated-journey-time-days'] }} days -->
-                {{ data['estimated-journey-time-hours'] }} hrs
+                {{ data['estimated-journey-time-hours'] or "48" }} hrs
               </td>
               <td class="govuk-table__cell"></td>
             </tr>
@@ -1100,18 +1121,18 @@ GOV.UK Prototype Kit
             <tr class=" presentation-table__section">
               <th scope="row" class="govuk-table__header">Means of transport after port of entry
               </th>
-              <td>{{ data['transport-means-after'] }}</td>
+              <td>{{ data['transport-means-after'] or "Road vehicle" }}</td>
               <td class="change">
               </td>
             </tr>
             <tr>
               <th scope="row" class="govuk-table__header">Transport identification</th>
-              <td class="govuk-table__cell">{{ data['transport-identification-after']}} </td>
+              <td class="govuk-table__cell">{{ data['transport-identification-after'] or "BNM 876" }} </td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
               <th scope="row" class="govuk-table__header">Transport document reference</th>
-              <td class="govuk-table__cell">{{ data['transport-document-after'] }}</td>
+              <td class="govuk-table__cell">{{ data['transport-document-after'] or "Ref 817262AB" }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
@@ -1121,7 +1142,7 @@ GOV.UK Prototype Kit
             </tr>
             <tr>
               <th scope="row" class="govuk-table__header">Departure time from port of entry</th>
-              <td class="govuk-table__cell">{{ data['departure-time-hour'] }}:{{ data['departure-time-minutes'] }}</td>
+              <td class="govuk-table__cell">{{ data['departure-time-hour'] or "15" }}:{{ data['departure-time-minutes'] or "00" }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
           </tbody>
@@ -1142,20 +1163,20 @@ GOV.UK Prototype Kit
           <tr>
             <td class="govuk-table__header">Using the Common Transit Convention (CTC)</td>
             <td class="govuk-table__cell" id="region-of-consignment-value">
-              {{ data ['ctc'] }}
+              {{ data ['ctc'] or "Yes" }}
             </td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr>
             <td class="govuk-table__header">Movement Reference Number (MRN)</td>
             <td class="govuk-table__cell" id="region-of-consignment-value">
-              {{ data['mrn'] }}
+              {{ data['mrn'] or "24GB123456789AB012"}}
             </td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="">
             <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)</th>
-            <td class="govuk-table__cell">{{ data['gvms'] }}</td>
+            <td class="govuk-table__cell">{{ data['gvms'] or "No" }}</td>
           </tr>
         </tbody>
       </table>
