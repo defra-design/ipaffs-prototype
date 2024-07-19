@@ -1,0 +1,145 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+      <span> - CHEDA</span>
+    </span>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="commodity-details-page">
+    <div class="govuk-grid-column-full">
+            <span class="govuk-caption-xl">Description of the goods</span>
+        <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
+      <form action="09-additional-details" method="post">
+        <input name="" id="" class="js-hidden" type="submit" value="Keyboard submit">
+        <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
+        <input name="etag" type="hidden" value="&quot;0000000004C79E92&quot;">
+        <input name="commodityDetailsPage" type="hidden" value="1">
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">Commodities</h2>
+          <div class="table-responsive">
+            <table class="govuk-table commodity-overview govuk-!-margin-bottom-1" id="commodity-table">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Commodity</th>
+                <th scope="col" class="govuk-table__header" colspan="2">Description</th>
+              </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell " id="commodity-0101">0101</td>
+                <td class="govuk-table__cell" id="commodity-description-0101">Live horses, asses, mules and hinnies</td>
+                <td class="govuk-table__cell remove">
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <input class="link-button" id="add-commodity" name="add-commodity" value="Add commodity" type="submit" aria-label="Add commodity">
+          
+        </div>
+
+          <div class="govuk-!-margin-bottom-8">
+            <div class="table-responsive">
+              <table class="govuk-table species-table govuk-!-margin-bottom-1">
+                <caption class="govuk-table__caption">
+                  <h2 class="govuk-heading-m">Live horses, asses, mules and hinnies</h2>
+                </caption>
+
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header species   ">Species, type,<br>class and family</th>
+                    <th scope="col" class="govuk-table__header animals">Number of animals</th>
+                  <th scope="col" class="govuk-table__header">Number of<br>packages</th>
+                  <td class="govuk-table__header"></td>
+                </tr>
+                </thead>
+
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row" id="species-0101-502501">
+                    <td class="govuk-table__cell   " id="0101-502501">Equus asinus</td>
+                    <td class="govuk-table__cell">
+                            <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                            
+                            
+                            
+                              <input class="govuk-input number-of-animals " id="0101-502501.num-animals" name="0101-502501.num-animals" type="[object Object]" value="" aria-label="Number of animals for Equus asinus 1-1">
+                            </div>
+                    </td>
+                    <td class="govuk-table__cell">
+                            <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                            
+                            
+                            
+                              <input class="govuk-input number-of-packages " id="0101-502501.num-packages" name="0101-502501.num-packages" type="[object Object]" value="" aria-label="Number of packages for Equus asinus 1-1">
+                            </div>
+                    </td>
+                    <td class="govuk-table__cell remove">
+                    </td>
+                  </tr>
+                </tbody>
+
+                <tfoot>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header   ">Subtotal</th>
+                  <td class="govuk-table__cell govuk-!-font-weight-bold">
+                      0
+                  </td>
+                  <td class="govuk-table__cell govuk-!-font-weight-bold">
+                    0
+                  </td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+
+              <input type="submit" name="add-species_0101" value="Add species" class="link-button" id="add-species-0101">
+          </div>
+
+        <div>
+          <h2 class="govuk-heading-m">Total for this consignment</h2>
+
+          <div class="table-responsive">
+            <table class="govuk-table" role="presentation">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Number of animals</th>
+                  <td class="govuk-table__cell">0</td>
+                </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-!-width-one-third">Number of packages</th>
+                <td class="govuk-table__cell">0</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <input class="govuk-button" type="submit" value="Update total" name="update-total" id="update-total">
+        </div>
+
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button">
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+            <p class="govuk-body"><a class="govuk-link" href="00-check-answers">Cancel and return to hub</a></p>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

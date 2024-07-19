@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-!-padding-bottom-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">CHEDP.GB.2024.5925980</span>
+          <span> - V2</span>
+  </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form action="01-add-health-certificate" id="certificate-lookup" method="post">
+        
+        <div class="govuk-form-group govuk-!-width-three-quarters ">
+          <h1 class="govuk-label-wrapper govuk-!-margin-bottom-5">
+            <label class="govuk-label govuk-label--xl " for="certificate-reference">
+              Which digital health certificate would you like to use?
+
+            </label>
+          </h1>
+          {{ data | log }}
+          <div class="govuk-!-margin-bottom-6">
+           <!-- <p class="govuk-body">You can copy the data and documents from your digital export health certificate into your import notification.</p>
+            <ul class="govuk-body govuk-!-margin-bottom-4">
+            <li>Clone the information from the electronic system to populate parts of your IPAFFS notification</li>
+            <li>Clone documents uploaded by the exporter and vet</li>
+           </ul>  -->
+           <!-- <details class="govuk-details  govuk-!-width-three-quarters">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                  What is this?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+                <p class="govuk-body">If your vet has used the electronic health certificate service, you can find information that your exporter and vet has added to the exporting system, for example 'Traces NT' for Europe.</p>
+                    
+            </div>
+          </details> -->
+          </div>
+          <label class="govuk-label govuk-label--m " for="certificate-reference">
+            Certificate reference number
+          </label>
+          <p class="govuk-hint">You can get this from your exporter or the vetinary inspector.</p>
+          
+          <input class="govuk-input govuk-!-width-one-half govuk-!-margin-bottom-5" id="certificate-reference" type="text" >
+        </div>
+        <div class="govuk-button-group ">
+          <input class="govuk-button" id="button-search" type="submit" value="Continue" data-module="govuk-button"> 
+        </div>
+        <p><a href="javascript:history.back()"  style="margin-left: 10px;">Cancel</a></p>
+      </form>
+
+      
+      
+    </div>
+  </div>
+</main>
+
+{% endblock %}

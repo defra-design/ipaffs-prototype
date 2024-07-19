@@ -1,0 +1,1001 @@
+@ -1,140 +0,0 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-0">
+  <span class="heading-tertiary">
+      <span id="reference-number">CHEDP.GB.2024.5925980</span>
+          <span> - V2</span>
+  </span>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters govuk-!-padding-0 govuk-!-margin-top-7 govuk-!-margin-left-3">
+
+    <div class="govuk-notification-banner" id="banner" role="region" aria-labelledby="banner-title" data-label="" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="banner-title">
+          Digital certificate found
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+       <strong>Check this is the correct certificate before confirming.</strong> 
+      </div>
+    </div>
+
+
+ 
+  </div>
+</div>
+<main class="govuk-main-wrapper cloning-summary-page" id="main-content" >
+  <div class="govuk-grid-row" id="cloning-summary">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl" id="page-primary-title">Confirm digital health certificate</h1>
+       
+     
+    
+
+        
+       
+    
+<div style="border: solid 20px  #f3f2f1 ;">
+        <div class="govuk-grid-row  govuk-!-padding-bottom-0">
+          <div class="govuk-grid-column-full govuk-!-padding-4 govuk-!-margin-bottom-0" style="background-color:   #f3f2f1 ;">
+            <h2 class="govuk-heading-l">Summary</h2>
+            <hp class="govuk-body">The following details were found on the exporter's system:</p>
+          </div>
+        </div>
+
+        <div class="govuk-grid-row  govuk-!-padding-top-0">
+          <div class="govuk-grid-column-full govuk-!-padding-left-7 govuk-!-padding-right-7 govuk-!-padding-bottom-3 govuk-!-padding-top-3">
+
+      <!-- <h2 class="govuk-heading-l">Summary</h2> -->
+      <!-- <hp class="govuk-body">Brief details of the EHC certificate to be cloned from:</p> -->
+     
+        <table class="govuk-table review-table govuk-!-margin-bottom-1" id="consignment-table" >
+        <caption class="govuk-visually-hidden">Summary of the EHC </caption>
+        <tbody>
+          <!-- <tr class="govuk-table__header">
+            <th class="govuk-heading-m govuk-!-width-full"  style=" flex:unset; column-span: all !important;" colspan="2">Summary of the ePhyto certificate</th>
+          </tr> -->
+          <tr>
+            <th scope="row" class="govuk-table__header">Certificate reference number</th>
+            <td class="govuk-table__cell" id="health-certificate-number">RIHFS-LKSFJ4329849-837429827349</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Country of origin</th>
+            <td class="govuk-table__cell" id="country-of-origin">Netherlands</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Purpose of the consignment</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">For Import</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Consignor</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Pluschange Food Limited</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Consignee</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Pinkers UK Ltd</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Place of destination name</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Pinkers Hertfordshire</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Border Control Post
+                          </th>
+            <td class="govuk-table__cell" id="bcp">Port of Felixstowe - GBFXT1PP</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Total gross weight</th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">1920 kg/units</td>
+          </tr>
+       
+        <tr class="presentation-table__row--no-border">
+          <th scope="row" class="govuk-table__header govuk-!-width-one-half" style="border-bottom: none;">Commodity details 
+            
+           </th>
+          <td class="govuk-table__cell govuk-!-width-one-half" style="border-bottom: none;"> <p class="govuk-body govuk-!-margin-bottom-1">5 commodities</p>
+            <!-- <p class="govuk-body  govuk-!-margin-bottom-1">4 genus and species</a></p> -->
+          </td>
+      </tr>
+      <tr class="presentation-table__row--no-border">
+<td colspan="2" class="govuk-table__cell">
+
+  <details class="govuk-details govuk-!-margin-bottom-1">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Show all commodity details
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+       
+      <div id="commodity-table-summary">
+
+        <div class="table-responsive">
+          <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-2" role="presentation">
+            <tbody class="govuk-table__head">
+              <tr id="3of5" class="presentation-table__row--no-border ">
+                <p class="govuk-hint govuk-!-margin-bottom-0 govuk-body-s">Commodity 1 of 5</p>
+            </tr>
+            <tr>
+              <td class="govuk-table__header">Commodity code</td>
+              <td class="govuk-table__cell">
+                02102010
+                
+              </td>
+                <td class="govuk-table__cell change">
+                        </td>
+            </tr>
+                <tr class="presentation-table__row--no-border">
+                  <td class="govuk-table__header">Type of commodity</td>
+                  <td class="govuk-table__cell">meat products</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+          <div class="table-responsive">
+            <table class="govuk-table review-table" id="review-table-consignment-2" role="presentation">
+              <thead class="govuk-table__head">
+                <tr>
+                  <td class="govuk-table__header species">
+                    Species
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric weight">
+                    Net weight
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric packages">
+                    Packages
+                  </td>
+                  <td class="govuk-table__header package-type">Package type</td>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class="
+                             
+                             ">
+                    <td class="govuk-table__cell">
+                      Bovidae
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                      500 kg/units
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      10
+                    </td>
+                    <td class="govuk-table__cell">Can</td>
+                  </tr>
+              </tbody>
+             
+            </table>
+          </div>
+
+          <div class="table-responsive">
+            <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-2" role="presentation">
+              <tbody class="govuk-table__head">
+                <tr id="3of5" class="presentation-table__row--no-border ">
+                  <p class="govuk-hint govuk-!-margin-bottom-0 govuk-body-s">Commodity 2 of 5</p>
+              </tr>
+              <tr>
+                <td class="govuk-table__header">Commodity code</td>
+                <td class="govuk-table__cell">
+                  02102010
+                  
+                </td>
+                  <td class="govuk-table__cell change">
+                          </td>
+              </tr>
+                  <tr class="presentation-table__row--no-border">
+                    <td class="govuk-table__header">Type of commodity</td>
+                    <td class="govuk-table__cell">meat preparations</td>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+              <tr></tr>
+              </tbody>
+            </table>
+          </div>
+            <div class="table-responsive">
+              <table class="govuk-table review-table" id="review-table-consignment-2" role="presentation">
+                <thead class="govuk-table__head">
+                  <tr>
+                    <td class="govuk-table__header species">
+                      Species
+                    </td>
+                    <td class="govuk-table__header govuk-table__header--numeric weight">
+                      Net weight
+                    </td>
+                    <td class="govuk-table__header govuk-table__header--numeric packages">
+                      Packages
+                    </td>
+                    <td class="govuk-table__header package-type">Package type</td>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class=" ">
+                      <td class="govuk-table__cell">
+                        Bovidae
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                        320 kg/units
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">
+                        10
+                      </td>
+                      <td class="govuk-table__cell">Carton</td>
+                    </tr>
+                </tbody>
+               
+              </table>
+            </div>
+
+        <!-- <div class="table-responsive">
+          <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-0" role="presentation">
+            <tbody class="govuk-table__head">
+              <tr id="02102010/expired" class="presentation-table__section ">
+                <td colspan="3"><p class="govuk-hint govuk-!-margin-bottom-0 govuk-body-s">Commodity 1 of 5</p></td>
+            </tr>
+            <tr>
+              <td class="govuk-table__header">Commodity code</td>
+              <td class="govuk-table__cell">
+                02102010
+                
+              </td>
+                <td class="govuk-table__cell change">
+                     </td>
+            </tr>
+                <tr class="presentation-table__row--no-border">
+                  <td class="govuk-table__header">Type of commodity</td>
+                  <td class="govuk-table__cell">meat products</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+          <div class="table-responsive">
+            <table class="govuk-table review-table" id="review-table-consignment-0" role="presentation">
+              <thead class="govuk-table__head">
+                <tr>
+                  <td class="govuk-table__header species">
+                    Species
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric weight">
+                    Net weight
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric packages">
+                    Packages
+                  </td>
+                  <td class="govuk-table__header package-type">Package type</td>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class=" ">
+                    <td class="govuk-table__cell">
+                      Bovidae
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                      600 kg/units
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      2
+                    </td>
+                    <td class="govuk-table__cell">Package</td>
+                  </tr>
+              </tbody>
+             
+            </table>
+          </div> -->
+    
+        <!-- <div class="table-responsive">
+          <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-2" role="presentation">
+      
+            <tbody class="govuk-table__head">
+              <tr id="2of5" class="presentation-table__row--no-border ">
+                <td colspan="3"><p class="govuk-hint govuk-!-margin-bottom-0 govuk-body-s">Commodity 2 of 5</p></td>
+            </tr>
+            <tr>
+              <td class="govuk-table__header">Commodity code</td>
+              <td class="govuk-table__cell">
+                02102010
+                
+              </td>
+                <td class="govuk-table__cell change">
+                   </td>
+            </tr>
+                <tr class="presentation-table__row--no-border">
+                  <td class="govuk-table__header">Type of commodity</td>
+                  <td class="govuk-table__cell">meat preparations</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+          <div class="table-responsive">
+            <table class="govuk-table review-table" id="review-table-consignment-1" role="presentation">
+              <thead class="govuk-table__head">
+                <tr>
+                  <td class="govuk-table__header species">
+                    Species
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric weight">
+                    Net weight
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric packages">
+                    Packages
+                  </td>
+                  <td class="govuk-table__header package-type">Package type</td>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class="
+                             
+                             ">
+                    <td class="govuk-table__cell">
+                      Bovidae
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                      300 kg/units
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      12
+                    </td>
+                    <td class="govuk-table__cell">Carton</td>
+                  </tr>
+              </tbody>
+             
+            </table>
+          </div> -->
+    
+        <div class="table-responsive">
+          <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-2" role="presentation">
+            <tbody class="govuk-table__head">
+              <tr id="3of5" class="presentation-table__row--no-border ">
+                <p class="govuk-hint govuk-!-margin-bottom-0 govuk-body-s">Commodity 3 of 5</p>
+            </tr>
+            <tr>
+              <td class="govuk-table__header">Commodity code</td>
+              <td class="govuk-table__cell">
+                020210
+                
+              </td>
+                <td class="govuk-table__cell change">
+                        </td>
+            </tr>
+                <tr class="presentation-table__row--no-border">
+                  <td class="govuk-table__header">Type of commodity</td>
+                  <td class="govuk-table__cell">Domestic</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+          <div class="table-responsive">
+            <table class="govuk-table review-table" id="review-table-consignment-2" role="presentation">
+              <thead class="govuk-table__head">
+                <tr>
+                  <td class="govuk-table__header species">
+                    Species
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric weight">
+                    Net weight
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric packages">
+                    Packages
+                  </td>
+                  <td class="govuk-table__header package-type">Package type</td>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class="
+                             
+                             ">
+                    <td class="govuk-table__cell">
+                      Bos taurus
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                      500 kg/units
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      10
+                    </td>
+                    <td class="govuk-table__cell">Box</td>
+                  </tr>
+              </tbody>
+             
+            </table>
+          </div>
+    
+        <div class="table-responsive">
+          <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-3" role="presentation">
+            <tbody class="govuk-table__head">
+              <tr id="020210/expired" class="presentation-table__row--no-border ">
+                <p class="govuk-hint govuk-!-margin-bottom-0 govuk-body-s">Commodity 4 of 5</p>
+            </tr><tr>
+              <td class="govuk-table__header">Commodity code</td>
+              <td class="govuk-table__cell">
+                020210
+                
+              </td>
+                <td class="govuk-table__cell change">
+                       </td>
+            </tr>
+                <tr class="presentation-table__row--no-border">
+                  <td class="govuk-table__header">Type of commodity</td>
+                  <td class="govuk-table__cell">Farmed game</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+          <div class="table-responsive">
+            <table class="govuk-table review-table" id="review-table-consignment-3" role="presentation">
+              <thead class="govuk-table__head">
+                <tr>
+                  <td class="govuk-table__header species">
+                    Species
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric weight">
+                    Net weight
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric packages">
+                    Packages
+                  </td>
+                  <td class="govuk-table__header package-type">Package type</td>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class="
+                             
+                             ">
+                    <td class="govuk-table__cell">
+                      Novibos spp.
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                      400 kg/units
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      20
+                    </td>
+                    <td class="govuk-table__cell">Crate</td>
+                  </tr>
+              </tbody>
+              
+            </table>
+          </div>
+    
+        <div class="table-responsive">
+          <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-4" role="presentation">
+            <tbody class="govuk-table__head">
+              <tr id="0401/expired" class="presentation-table__row--no-border ">
+                <p class="govuk-hint govuk-!-margin-bottom-0 govuk-body-s">Commodity 5 of 5</p>
+            </tr><tr>
+              <td class="govuk-table__header">Commodity code</td>
+              <td class="govuk-table__cell">
+                0401
+                
+              </td>
+                <td class="govuk-table__cell change">
+                      </td>
+            </tr>
+                <tr class="presentation-table__row--no-border">
+                  <td class="govuk-table__header">Type of commodity</td>
+                  <td class="govuk-table__cell">Pasteurized</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+            <tr></tr>
+            </tbody>
+          </table>
+        </div>
+          <div class="table-responsive">
+            <table class="govuk-table review-table" id="review-table-consignment-4" role="presentation">
+              <thead class="govuk-table__head">
+                <tr>
+                  <td class="govuk-table__header species">
+                    Species
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric weight">
+                    Net weight
+                  </td>
+                  <td class="govuk-table__header govuk-table__header--numeric packages">
+                    Packages
+                  </td>
+                  <td class="govuk-table__header package-type">Package type</td>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class="
+                             
+                             ">
+                    <td class="govuk-table__cell">
+                      Bos taurus
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                      200 kg/units
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                      150
+                    </td>
+                    <td class="govuk-table__cell">Carton</td>
+                  </tr>
+              </tbody>
+             
+            </table>
+          </div>
+        </div>
+    
+        </div>
+      </div>
+
+
+
+
+      <!-- <table class="govuk-table presentation-table review-table" id="animal-identification-details-table" style=" border-top: none;">
+        
+        <tbody>
+         
+          <tr class="presentation-table">
+            <td colspan="3" class="govuk-table__cell govuk-!-padding-0" style=" border-top: none;">
+              <div id="identifiers-01" class="accordion-target">
+                <table class="govuk-table presentation-table data-table govuk-!-margin-bottom-0"
+                  aria-describedby="animalProduct-01">
+                  <thead class="govuk-table__head" style=" border-top: none;">
+                    <tr>
+                      <th scope="col" class="govuk-table__header" id="animalProduct-01" style=" border-top: none;">Animal</th>
+                      <th scope="col" class="govuk-table__header" id="earTag-01" style=" border-top: none;">Ear tag</th>
+                      <th scope="col" class="govuk-table__header" id="earTag-01" style=" border-top: none;">Passport number</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter " style=" border-bottom: 1px solid #b1b4b6;"headers="animalProduct-01">
+                        Bos taurus 1
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742385
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742385
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 2
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;"headers="earTag-01">MCP-98348742386</td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;"headers="earTag-01">MCP-98348742386</td>
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 3
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742388</td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742388</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 4
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742389</td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742389</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 5
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742390</td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742390</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 6
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742391</td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742391</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 7
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742392</td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742392</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 8
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01"> MCP-98348742393
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742393</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 9
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01"> MCP-98348742394
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742394</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 10
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01"> MCP-98348742395
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742395</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 11
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01"> MCP-98348742396
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742396</td>
+                    
+                    </tr>
+                    <tr>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="animalProduct-01">
+                        Bos taurus 12
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01"> MCP-98348742397
+                      </td>
+                      <td class="govuk-table__cell govuk-!-width-one-quarter" style=" border-bottom: 1px solid #b1b4b6;" headers="earTag-01">MCP-98348742397</td>
+                    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
+
+
+
+
+    </div>
+  </details>
+
+</td>
+
+      </tr>
+      </table>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      <table class="govuk-table  govuk-!-margin-bottom-4">
+        <tr class="presentation-table__row--no-border">
+          <th scope="row" class="govuk-table__header govuk-!-width-one-half" style="border-bottom: none;">32 Documents 
+           
+          </th>
+          <td class="govuk-table__cell govuk-!-width-one-half" style="border-bottom: none;"> <p class="govuk-body govuk-!-margin-bottom-1">1 latest health certificate</p>
+            <p class="govuk-body  govuk-!-margin-bottom-1">31 additional documents</a></p>
+          </td>
+      </tr>
+       <tr class="presentation-table__row--no-border">
+<td colspan="2" class="govuk-table__cell">
+
+  <details class="govuk-details govuk-!-margin-bottom-1">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Show list of all documents
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      
+
+
+<p>You will not be able to delete cloned documents from your notification, but you can upload additional documents.</p>
+<h3 class="govuk-heading-s">Showing 1 to 10 out of 32 documents</h3>
+<table class="govuk-table" id="goods-table-0">
+<caption class="govuk-visually-hidden">Docs table</caption>
+<tbody>
+<tr>
+  <td class="govuk-table__header govuk-!-width-one-third">Document type</td>
+  <td class="govuk-table__header govuk-!-width-one-half">Reference</td>
+  <td class="govuk-table__header govuk-!-width-one-quarter">Date of issue</td>
+</tr>
+<tr>
+  <td class="govuk-table__cell">Latest health certificate</td>
+  <td class="govuk-table__cell">RIHFS-LKSFJ4329849-837429827349</td>
+  <td class="govuk-table__cell">7 May 2024</td>
+</tr>
+<tr>
+<td class="govuk-table__cell">Health certificate</td>
+<td class="govuk-table__cell">1-LKSFJ4329849-837429827349</td>
+<td class="govuk-table__cell">3 May 2024</td>
+</tr>
+<tr>
+<td class="govuk-table__cell">Commercial invoice</td>
+<td class="govuk-table__cell">COM-859q77543987</td>
+<td class="govuk-table__cell">24 April 2024</td>
+</tr>
+<tr>
+<td class="govuk-table__cell">Commercial invoice</td>
+<td class="govuk-table__cell">COM-859q77543987</td>
+<td class="govuk-table__cell">20 April 2024</td>
+</tr>
+<tr>
+    <td class="govuk-table__cell">Seaway Bill</td>
+    <td class="govuk-table__cell">SWB-859q77543987</td>
+    <td class="govuk-table__cell">6 May 2024</td>
+</tr>
+<tr>
+  <td class="govuk-table__cell">Bill of lading</td>
+  <td class="govuk-table__cell">BOL-859q77543987</td>
+  <td class="govuk-table__cell">6 May 2024</td>
+</tr>
+
+<tr>
+<td class="govuk-table__cell">Journey log</td>
+<td class="govuk-table__cell">JL-43987KSRETQS</td>
+<td class="govuk-table__cell">6 May 2024</td>
+</tr>
+<tr>
+<td class="govuk-table__cell">Other</td>
+<td class="govuk-table__cell">JL-343487KSRETSS</td>
+<td class="govuk-table__cell">1 May 2024</td>
+</tr>
+<tr>
+<td class="govuk-table__cell">Import permit</td>
+<td class="govuk-table__cell">IM-343487KSRETQS</td>
+<td class="govuk-table__cell">1 May 2024</td>
+</tr>
+<tr>
+<td class="govuk-table__cell">Other</td>
+<td class="govuk-table__cell">IM-343487KSRETSS</td>
+<td class="govuk-table__cell">6 May 2024</td>
+</tr>
+
+
+</tbody>
+</table>
+<p><a href="01-cl-doc-list">View list of all documents</a></p>
+
+
+    </div>
+  </details>
+
+</td>
+
+      </tr>
+      </table>
+     
+     
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            List of data that can be brought in by cloning
+          </span>
+        </summary>
+        
+        <div class="govuk-details__text">
+          <p>If available in the digital health certificate, the following details will be added to your notification. The data will overwrite information already entered.</p><br><br>
+          Country of origin <br>
+          Region of origin code<br>
+          Country from where consigned<br>
+          Conforms to regulatory requirements?<br>
+          Means of transport after the border control post details need to be provided?<br>
+          Reason for importing<br>
+          Commodity code<br>
+          Species name<br>
+          Species type<br>
+          Net weight<br>
+          Number of packages<br>
+          Type of package<br>
+          Total gross weight<br>
+          Temperature<br>
+          Seal number<br>
+          Container number<br>
+          Approved establishment of origiin<br>
+
+
+          Consignor or exporter<br>
+          Consignee<br>
+          Importer<br>
+          Place of destination<br>
+
+          Entry border control post (if from Rest of World)<br>
+
+          Means of transport to port of entry or border control post<br>
+          Transport identification<br>
+          
+          Estimated arrival date at port of entry or border control post<br>
+          Estamate arrival time
+
+          Transporter<br>
+          
+
+        </div>
+      </details>
+    </div>
+  </div>
+      <!-- <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+        </div>
+      </details> 
+      <table>
+      <tr class="presentation-table__row--no-border">        
+        <td class="govuk-body govuk-table__cell gov-!-width-full govuk-!-margin-bottom-0" colspan="2" style="border: 0;">Showing 1 to 5 out of 52 commodities
+          
+        </td>
+      </tr>
+      </table>-->
+
+        <!-- <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+              
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity details</th>
+                <td class="govuk-table__cell" id="commodity-code-0">152 commodities</td>
+                <td class="govuk-table__cell"> </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-0">08045000</td>
+                <td class="govuk-table__cell change">change
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Guavas, mangoes and mangosteens</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Garcinia mangostana</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table> -->
+
+        <!-- <table class="govuk-table " id="goods-table-0">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__header govuk-!-width-one-quarter">Commodity code</td>
+              <td class="govuk-table__header govuk-!-width-one-third">Description</td>
+              <td class="govuk-table__header govuk-!-width-one-third">Genus and species</td>
+          
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">06011010</td>
+              <td class="govuk-table__cell">Hyacinths</td>
+              <td class="govuk-table__cell">Albuca bracteata</td>
+          </tr>
+          <tr>
+            <td class="govuk-table__cell">06011010</td>
+            <td class="govuk-table__cell">Hyacinths</td>
+            <td class="govuk-table__cell">Albuca fibrotunicata</td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell">06011010</td>
+          <td class="govuk-table__cell">Hyacinths</td>
+          <td class="govuk-table__cell">Camassia sp.</td>
+      </tr>
+      <tr>
+        <td class="govuk-table__cell">06011010</td>
+        <td class="govuk-table__cell">Hyacinths</td>
+        <td class="govuk-table__cell">Dipcadi filifolium</td>
+    </tr>
+    <tr>
+      <td class="govuk-table__cell">06011010</td>
+      <td class="govuk-table__cell">Hyacinths</td>
+      <td class="govuk-table__cell">Fusifilum physodes</td>
+  </tr>
+         
+           
+          </tbody>
+        </table> -->
+
+      </div>
+
+     
+      <div class="govuk-form-group govuk-!-margin-top-9 govuk-!-margin-bottom-9">
+
+       
+
+        <h2 class="govuk-heading-m ">What do you want to clone?</h2>
+        <!-- <p class="govuk-body"><a>List of fields that can be cloned (opens in a new window)</a></p> -->
+        <!-- <p class="govuk-body">When you clone:</p> -->
+        <!-- <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+          <li class="govuk-!-margin-bottom-4">Information that's cloned will <strong>overwrite</strong> any information previously entered. <p class="govuk-!-margin-top-1"><a></a></p></li>
+          <li>Documents that are cloned will be <strong>in addition</strong> to any already uploaded</li>
+        </ul> -->
+       
+        <div class="govuk-inset-text govuk-!-margin-top-0">
+        <p class="govuk-body govuk-!-margin-bottom-4">When you clone:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+          <li>Data will <strong>overwrite</strong> any data previously entered.</li>
+       <li>Documents will be <strong>added</strong> to your notification.</li>
+        </ul>
+      </div>
+      <form action="route-x-p-docs-info-amend" method="POST">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+           
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item govuk-!-margin-bottom-6">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="addhc" type="radio" value="Clone-info">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Data and documents
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="addhc" type="radio" value="Clone-docs">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  Documents only
+                </label>
+              </div>
+            
+            </div>
+          </fieldset>
+        </div>
+       </div>
+
+       
+    
+      
+      <div class="govuk-!-margin-top-9">
+       
+          <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Confirm and continue</button>
+          
+          <input name="certificate-reference" type="hidden" value="CHEDPP/ALL-FIELDS">
+          <input name="country-of-origin-code" type="hidden" value="NL">
+          <input name="certificate-type" type="hidden" value="CHEDPP">
+          <input name="crumb" type="hidden" value="pAX8KbbF_kTf-zwr0UqqZTYVT8dKDyzcqU2LeTvWorP">
+      
+        </div>  
+      </form>
+        <div class="">
+          <p class="govuk-body">If this is not the correct certificate, you can:
+        <p class="govuk-body"><a class="govuk-link clear-link govuk-!-padding-0" id="search-to-clone" href="03a-certificate-reference">Go back and search again</a></p>
+          <p class="govuk-body"><a class="govuk-link clear-link govuk-!-padding-0" href="00-check-answers-amend">Cancel</a></p>
+        </div>
+  </div>
+  </div>
+ 
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Search – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+{% include "includes/back.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-!-padding-bottom-6">
+  <span class="heading-tertiary">
+    <span id="reference-number">CHEDP.GB.2024.5925980</span>
+    <span> - V2</span>
+  </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+      <div >
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-5">
+          Commodity details
+        </h1>
+        {{ data | log }}
+      </div>
+
+
+      <div class="table-responsive">
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0" id="review-table-commodity-attributes-0" role="presentation">
+          <tbody class="govuk-table__head">
+              <tr class="presentation-table__section">
+            <th scope="row" class="govuk-table__header ">Commodity code</th>
+            <td class="govuk-table__cell">02102010   </td>
+            <td class="govuk-table__cell change">
+                  <a href="08-addgoods-weights-packaging" class="govuk-link" id="commodity-change-link-0">Change</a>
+            </td>
+          </tr>
+          <tr class="presentation-table__row--no-border">
+            <th scope="row" class="govuk-table__header ">Type of commodity</th>
+            <td class="govuk-table__cell">meat preparations</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <table class="govuk-table review-table" id="review-table-consignment-0" role="presentation">
+          <thead class="govuk-table__head">
+            <tr>
+              <th scope="col" class="govuk-table__header ">
+                Species
+              </th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric weight">
+                Net weight
+              </th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric packages">
+                Packages
+              </th>
+              <th scope="col" class="govuk-table__header package-type">Package type</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class="
+                         
+                         ">
+                <td class="govuk-table__cell ">
+                  Bovidae
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric consignment-net-weight">
+                  1,000 kg/units
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  112
+                </td>
+                <td class="govuk-table__cell">Bag</td>
+              </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" class="govuk-table__header ">
+                Subtotal
+              
+              </th><td class="govuk-table__cell govuk-table__cell--numeric">
+                1,000 kg/units
+              </td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">
+                112
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+
+
+
+      <form action="01-add-health-certificate" id="certificate-lookup" method="post">
+        <div class="govuk-button-group ">
+          <input class="govuk-button" id="button-search" type="submit" value="Back" data-module="govuk-button">
+
+
+        </div>
+      </form>
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
