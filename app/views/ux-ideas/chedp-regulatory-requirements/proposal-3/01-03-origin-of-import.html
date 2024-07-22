@@ -41,11 +41,9 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
           <label class="govuk-label govuk-label--m" for="origin-country">
             Country of origin
           </label>
-           
 
-           
               <select class="govuk-select govuk-!-width-one-half" id="origin-country" name="origin-country">
-                <option value="">Select a country</option>
+                <option value="">Select the country of origin</option>
                             <option value="Afghanistan" {% if (data['origin-country'] == "Afghanistan") %}selected{% endif %}>Afghanistan</option>
                             <option value="Aland Islands" {% if (data['origin-country'] == "Aland Islands") %}selected{% endif %}>Aland Islands</option>
                             <option value="Albania" {% if (data['origin-country'] == "Albania") %}selected{% endif %}>Albania</option>
@@ -60,7 +58,7 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                             <option value="Armenia" {% if (data['origin-country'] == "Armenia") %}selected{% endif %}>Armenia</option>
                             <option value="Aruba" {% if (data['origin-country'] == "Aruba") %}selected{% endif %}>Aruba</option>
                             <option value="Australia" {% if (data['origin-country'] == "Australia") %}selected{% endif %}>Australia</option>
-                            <option value="Austria" selected>Austria</option>
+                            <option value="Austria" {% if (data['origin-country'] == "Austria") %}selected{% endif %}>Austria</option>
                             <option value="Azerbaijan" {% if (data['origin-country'] == "Azerbaijan") %}selected{% endif %}>Azerbaijan</option>
                             <option value="Bahamas" {% if (data['origin-country'] == "Bahamas") %}selected{% endif %}>Bahamas</option>
                             <option value="Bahrain" {% if (data['origin-country'] == "Bahrain") %}selected{% endif %}>Bahrain</option>
@@ -301,36 +299,17 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                             <option value="Zambia" {% if (data['origin-country'] == "Zambia") %}selected{% endif %}>Zambia</option>
                             <option value="Zimbabwe" {% if (data['origin-country'] == "Zimbabwe") %}selected{% endif %}>Zimbabwe</option>
               </select>
-            
-         
+
         </div>
 
         <div class="govuk-form-group ">
           <label class="govuk-label govuk-label--m" for="origin-country">
-            Country from where consigned
+            Which country were the goods consigned?
           </label>
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-          <div class="govuk-radios__item purpose ">
-            <input class="govuk-radios__input" id="re-entry" name="purpose" type="radio" value="re-entry" checked>
-            
-            <label class="govuk-label govuk-radios__label govuk-fieldset__legend--l" for="re-entry">
-              <p class="govuk-body">Austria, the same as the origin</p>
-             </label>
-             
-          </div>
-
-          <div class="govuk-radios__item purpose" >
-            <input class="govuk-radios__input" id="another-country" name="purpose" type="radio" value="another-country" aria-controls="another-country-conditional" aria-expanded="false">
-            <label class="govuk-label govuk-radios__label" for="another-country">
-              
-            <p class="govuk-body">A different country</p>
-          </label>
-          </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="another-country-conditional">
-
+         
             <div class="govuk-form-group">
               <select class="govuk-select govuk-!-width-one-half" id="another-country" name="another-country">
-                <option value="">Select the country of origin</option>
+                <option value="">Select the country of consignment</option>
                             <option value="Afghanistan" {% if (data['origin-country'] == "Afghanistan") %}selected{% endif %}>Afghanistan</option>
                             <option value="Aland Islands" {% if (data['origin-country'] == "Aland Islands") %}selected{% endif %}>Aland Islands</option>
                             <option value="Albania" {% if (data['origin-country'] == "Albania") %}selected{% endif %}>Albania</option>
@@ -633,17 +612,9 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
           </fieldset>
         </div>
 
-      
 
 
-
-               
-           
-
-            
-
-
-            <div class="govuk-form-group  ">
+            <!-- <div class="govuk-form-group  ">
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
                     
@@ -670,7 +641,7 @@ Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
                     </div>
                 </div>
               </fieldset>
-            </div>
+            </div> -->
             <div class="govuk-form-group  ">
                 
                 <label class="govuk-label govuk-label--m" for="local-reference-number">
