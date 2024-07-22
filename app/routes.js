@@ -16,9 +16,12 @@ router.use('/baseline/chedp/part1', require('./views/baseline/chedp/part1/_route
 router.use('/baseline/clone', require('./views/baseline/clone/_routes'))
 
 // x ched routes
-router.use('/x-ched/cr37-clone-after/latest/chedpp', require('./views/x-ched/cr37-clone-after/latest/chedpp/_routes'))
+
 router.use('/x-ched/cr37-clone-after/latest/chedp', require('./views/x-ched/cr37-clone-after/latest/chedp/_routes'))
 router.use('/x-ched/cr37-clone-after/latest/cheda', require('./views/x-ched/cr37-clone-after/latest/cheda/_routes'))
+
+router.use('/x-ched/cr37-clone-after/v6/chedp', require('./views/x-ched/cr37-clone-after/latest/chedp/_routes'))
+router.use('/x-ched/cr37-clone-after/v6/cheda', require('./views/x-ched/cr37-clone-after/latest/cheda/_routes'))
 
 router.use('/x-ched/cr37-clone-after/v5/chedpp', require('./views/x-ched/cr37-clone-after/v5/chedpp/_routes'))
 router.use('/x-ched/cr37-clone-after/v5/chedp', require('./views/x-ched/cr37-clone-after/v5/chedp/_routes'))
