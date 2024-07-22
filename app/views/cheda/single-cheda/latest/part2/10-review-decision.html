@@ -38,13 +38,17 @@ Review decision
       <div class="navigation-links">
         <div id="sign-out-section" class="information-banner">
           <p class="information-banner__content">
-            <span>Andrew Inspector-Tester</span>
+            <span>Mark Admin-Tester</span>
             <span aria-hidden="true">|</span>
-            <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+              <a class="govuk-link govuk-!-display-inline-block" id="bcp-admin-link" href="/bcpadmin/vnet/protected/bcp-admin">
+                Admin area
+              </a>
+              <span aria-hidden="true">|</span>
+            <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/vnet/protected/notifications/address-book">
               Address book
             </a>
             <span aria-hidden="true">|</span>
-            <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+            <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/vnet/protected/bip-notifications/CHEDs/blank">
               Blank CHEDs
             </a>
             <span aria-hidden="true">|</span>
@@ -53,26 +57,37 @@ Review decision
             </a>
           </p>
         </div>
-        <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
-        <div class="navigation-links__divider">|</div>
-        <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
-          <ol class="govuk-breadcrumbs__list">
-            <li class="govuk-breadcrumbs__list-item">
-              <a class="govuk-breadcrumbs__link govuk" href="dashboard" id="navigation-dashboard-link">Dashboard</a>
-            </li>
-          </ol>
-        </div></div>
-        <form action="review" method="POST">
-          <input name="crumb" type="hidden" value="WJrgQYlbigxahHG1CrVFju1D1wDWl8cI978WgzlcM71">
-          <input name="etag" type="hidden" value="&quot;00000000002822C0&quot;">
-          <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
-            <tbody><tr class="divider-bottom govuk-table__row">
-              <td class="govuk-table__cell">
-                  <strong class="govuk-tag tag tag--new status-label" id="Status-Label">NEW</strong>
-              </td>
-            </tr>
-          </tbody></table>
-        </form>
+        <div class="navigation-links__left-block">
+          <a href="#" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+          <div class="navigation-links__divider">|</div>
+          <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link govuk" href="00-dashboard" id="navigation-dashboard-link">Dashboard</a>
+              </li>
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="02-decision-hub">Decision Hub</a>
+                </li>
+            </ol>
+          </div>  </div>
+      </div>
+      <form action="review" method="POST">
+        <input name="crumb" type="hidden" value="bkx_NymVEGs1nApZEEwx9ecHtNiHy-khsI_0odvrAhP">
+        <input name="etag" type="hidden" value="&quot;0000000000057140&quot;">
+        <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+          <tbody><tr class="divider-bottom govuk-table__row">
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+                  <button type="submit" class="link-button govuk-!-margin-top-0 govuk-!-margin-bottom-1" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                    Save and set as in progress
+                  </button>
+            </td>
+          </tr>
+        </tbody></table>
+      </form>
+       
+      
+       
       
       <div role="main" class="govuk-main-wrapper">
         <div class="govuk-grid-row" id="bip-review-checks-page">
@@ -144,7 +159,7 @@ Review decision
                 <tbody>
                         <tr class="govuk-table__row divider-top identity-physical-checks-row-0 " id="consignmentcheck/identitycheckdone">
                       <th scope="col" class="check-type govuk-table__header">Identity check</th>
-                      <td class="check-status govuk-table__cell">No</td>
+                      <td class="check-status govuk-table__cell">Satisfactory</td>
                       <td class="govuk-table__cell"></td>
                         <td class="change govuk-table__cell">
                             <a class="govuk-link" href="06a-identity-check" id="change-identity-physical-checks">Change</a>
@@ -152,7 +167,13 @@ Review decision
                     </tr>
                           <tr class="govuk-table__row divider-bottom identity-physical-checks-row-1 " id="consignmentcheck/physicalcheckdone">
                       <th scope="col" class="check-type govuk-table__header">Physical check</th>
-                      <td class="check-status govuk-table__cell">No</td>
+                      <td class="check-status govuk-table__cell">Satisfactory</td>
+                      <td class="govuk-table__cell"></td>
+                        <td></td>
+                    </tr>
+                    <tr class="govuk-table__row divider-bottom identity-physical-checks-row-1 " id="consignmentcheck/physicalcheckdone">
+                      <th scope="col" class="check-type govuk-table__header">Welfare</th>
+                      <td class="check-status govuk-table__cell">Not done</td>
                       <td class="govuk-table__cell"></td>
                         <td></td>
                     </tr>
@@ -284,70 +305,11 @@ Review decision
                                     </div>
                   </div>
                 </fieldset>
-              </div>
-      
-                <h3 class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-6">Date and time of checks</h3>
-      
-                <div class="govuk-form-group  ">
-                  <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-checks-hint">
-                      <legend class="hidden govuk-visually-hidden">Date entry:</legend>
-                
-                      <span id="date-of-checks-hint" class="govuk-hint">
-                        For example, 31 03 2018
-                      </span>
-                
-                      <div class="govuk-date-input date-input--picker " id="date-of-checks" data-module="accessible-datepicker">
-                      <div class="govuk-date-input__item date-input-day">
-                        <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="date-of-checks-day">
-                              Day
-                            </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="date-of-checks-day" name="date-of-checks-day" type="text" value="" inputmode="numeric" maxlength="2">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item date-input-month">
-                        <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="date-of-checks-month">
-                              Month
-                            </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="date-of-checks-month" name="date-of-checks-month" type="text" value="" inputmode="numeric" maxlength="2">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item date-input-year">
-                        <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="date-of-checks-year">
-                              Year
-                            </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="date-of-checks-year" name="date-of-checks-year" type="text" value="" inputmode="numeric" maxlength="4">
-                        </div>
-                      </div>
-                    <div class="date-picker__container date-picker__container--icon defra-datepicker"><button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
-              <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-86" class="date-picker__heading" aria-live="assertive" aria-atomic="true">April 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-86"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
-                  </fieldset>
-                </div>
-      
-              <div class="govuk-form-group " id="time-of-checks">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-!-margin-bottom-0">
-                    <span class="govuk-hint govuk-!-margin-bottom-0">24 hour format</span>
-                  </legend>
-                  <div class="govuk-date-input">
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="time-of-checks-hour">Hour</label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="time-of-checks-hour" maxlength="2" name="time-of-checks-hour" value="">
-                      </div>
-                    </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="time-of-checks-minute">Minutes</label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="time-of-checks-minute" maxlength="2" name="time-of-checks-minute" value="">
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
                 <button class="govuk-button govuk-!-margin-top-6 submit-button" type="submit" data-prevent-double-click="true" value="Submit decision" id="submit-decision">Submit decision</button>
               </div>
+              </div>
+      
+             
           </div>
       
           </form>
