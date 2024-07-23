@@ -55,22 +55,98 @@
                               <label class="govuk-label govuk-radios__label" for="radio-for-import">
                                 For internal market
                               </label>
+                              <div class="govuk-hint govuk-radios__hint">
+                                The consignment is intended for sale or use in Great Britain (England, Scotland or Wales).
+                              </div>
+                            </div>
+
+                            <div class="govuk-radios__item purpose">
+                              <input class="govuk-radios__input" id="radio-landbridge-movement" name="purpose" type="radio" value="tranship" aria-controls="conditional-landbridge-movement" aria-expanded="false">
+                              <label class="govuk-label govuk-radios__label" for="radio-landbridge-movement">
+                                Landbridge movement
+                              </label>
+                              <div class="govuk-hint govuk-radios__hint">
+                                The consignment will move through Great Britain. It will enter and leave through different ports or airports.
+                              </div>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-landbridge-movement">
+                              <div class="govuk-form-group ">
+                                <label class="govuk-label govuk-label--s" for="bcp-transfer-to">
+                                    Exit border control post
+                                </label>
+                                <input class="govuk-input" id="event-name" name="eventName" type="text">
+                              </div>
+                              <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" role="group">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">When the consignment will leave Great Britain</legend>
+                                  <div id="sign-in-hint" class="govuk-hint">
+                                    For example, 27 3 2023. This must be within 7 days of arrival in Great Britain.
+                                  </div>
+                                  <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
+              
+                                    <div class="govuk-date-input__item date-input-day">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
+                                      </div>
+                                    </div>
+              
+                                    <div class="govuk-date-input__item date-input-month">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
+                                      </div>
+                                    </div>
+              
+                                    <div class="govuk-date-input__item date-input-year">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div id="passport-issued-hint" class="govuk-hint govuk-!-margin-top-3">
+                                    24 hour format, for example, 14 50
+                                  </div>
+                                  <div class="govuk-date-input" id="passport-issued">
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                          Hour
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                      </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                          Minutes
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                      </div>
+                                    </div>
+                                    </div>
+                                </fieldset>
+                              </div>
                             </div>
             
                             <div class="govuk-radios__item purpose">
                               <input class="govuk-radios__input" id="radio-for-transfer-to-dpe" name="purpose" type="radio" value="tranship" aria-controls="conditional-for-transfer-to-dpe" aria-expanded="false">
                               <label class="govuk-label govuk-radios__label" for="radio-for-transfer-to-dpe">
-                                For transfer to
+                                For transfer to a control point
                               </label>
+                              <div class="govuk-hint govuk-radios__hint">
+                                The consignment will transfer to a Border Control Post for inspections.
+                              </div>
                             </div>
                             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-for-transfer-to-dpe">
                               <div class="govuk-form-group ">
                                 <label class="govuk-label govuk-label--s" for="bcp-transfer-to">
-                                    Exit Border Control Post
+                                  Approved control point
                                 </label>
                                 
                                 <select class="govuk-select govuk-!-width-full" id="bcp-transfer-to" name="bcp-transfer-to">
-                                    <option value="">Select Border Control Post</option>
+                                    <option value="">Select approved control point</option>
                                     <option value="GBBEL4" data-country-code="GB">
                                       Belfast Port - GBBEL4
                                     </option>
