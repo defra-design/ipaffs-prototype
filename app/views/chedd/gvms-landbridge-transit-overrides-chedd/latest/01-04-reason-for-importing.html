@@ -66,21 +66,24 @@
                                 Landbridge movement
                               </label>
                               <div class="govuk-hint govuk-radios__hint">
-                                The consignment will move through Great Britain. It will enter and leave through different ports or airports.
+                                The consignment will not be placed on the market in Great Britain. It will leave through a different port.
                               </div>
                             </div>
                             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-landbridge-movement">
                               <div class="govuk-form-group ">
                                 <label class="govuk-label govuk-label--s" for="bcp-transfer-to">
-                                    Exit border control post
+                                  Point of exit
                                 </label>
+                                <div id="sign-in-hint" class="govuk-hint">
+                                  Place of departure from Great Britain
+                                </div>
                                 <input class="govuk-input" id="event-name" name="eventName" type="text">
                               </div>
                               <div class="govuk-form-group">
                                 <fieldset class="govuk-fieldset" role="group">
                                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">When the consignment will leave Great Britain</legend>
                                   <div id="sign-in-hint" class="govuk-hint">
-                                    For example, 27 3 2023. This must be within 7 days of arrival in Great Britain.
+                                    For example, 27 3 2023.
                                   </div>
                                   <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
               
@@ -136,7 +139,7 @@
                                 For transfer to a control point
                               </label>
                               <div class="govuk-hint govuk-radios__hint">
-                                The consignment will transfer to a Border Control Post for inspections.
+                                The consignment will transfer to a control point inland for inspections
                               </div>
                             </div>
                             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-for-transfer-to-dpe">
