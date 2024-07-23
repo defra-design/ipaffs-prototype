@@ -1,0 +1,672 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Origin of the import – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="consignment-country-page">
+    <div class="govuk-grid-column-full">
+        <!-- <span class="govuk-caption-xl">About the consignment</span> -->
+      <h1 class="govuk-heading-xl " id="page-primary-title">About the consignment</h1>
+      <input name="origin-country" type="hidden" value="Austria">
+
+
+      {% if (data['from'] == "review") %}
+      <form action="18-01-review" id="consignmentCountries" method="post">
+      {% else %}
+      <form action="02-01-commodity-tree-code-search" id="consignmentCountries" method="post">
+      {% endif %}
+
+        <input name="crumb" type="hidden" value="2PV89JtB8VaplnH3tu65ZntQTvpaFW0v_2rJbUMdRUS">
+        <input name="etag" type="hidden" value="&quot;000000000537DC3B&quot;">
+
+          <input name="navigation-target-page" type="hidden" value="consignment/page-3">
+          <div class="govuk-form-group ">
+          <label class="govuk-label govuk-label--m" for="origin-country">
+            Country of origin
+          </label>
+
+              <select class="govuk-select govuk-!-width-one-half" id="origin-country" name="origin-country">
+                <option value="">Select the country of origin</option>
+                            <option value="Afghanistan" {% if (data['origin-country'] == "Afghanistan") %}selected{% endif %}>Afghanistan</option>
+                            <option value="Aland Islands" {% if (data['origin-country'] == "Aland Islands") %}selected{% endif %}>Aland Islands</option>
+                            <option value="Albania" {% if (data['origin-country'] == "Albania") %}selected{% endif %}>Albania</option>
+                            <option value="Algeria" {% if (data['origin-country'] == "Algeria") %}selected{% endif %}>Algeria</option>
+                            <option value="American Samoa" {% if (data['origin-country'] == "American Samoa") %}selected{% endif %}>American Samoa</option>
+                            <option value="Andorra" {% if (data['origin-country'] == "Andorra") %}selected{% endif %}>Andorra</option>
+                            <option value="Angola" {% if (data['origin-country'] == "Angola") %}selected{% endif %}>Angola</option>
+                            <option value="Anguilla" {% if (data['origin-country'] == "Anguilla") %}selected{% endif %}>Anguilla</option>
+                            <option value="Antarctica" {% if (data['origin-country'] == "Antarctica") %}selected{% endif %}>Antarctica</option>
+                            <option value="Antigua and Barbuda" {% if (data['origin-country'] == "Antigua and Barbuda") %}selected{% endif %}>Antigua and Barbuda</option>
+                            <option value="Argentina" {% if (data['origin-country'] == "Argentina") %}selected{% endif %}>Argentina</option>
+                            <option value="Armenia" {% if (data['origin-country'] == "Armenia") %}selected{% endif %}>Armenia</option>
+                            <option value="Aruba" {% if (data['origin-country'] == "Aruba") %}selected{% endif %}>Aruba</option>
+                            <option value="Australia" {% if (data['origin-country'] == "Australia") %}selected{% endif %}>Australia</option>
+                            <option value="Austria" {% if (data['origin-country'] == "Austria") %}selected{% endif %}>Austria</option>
+                            <option value="Azerbaijan" {% if (data['origin-country'] == "Azerbaijan") %}selected{% endif %}>Azerbaijan</option>
+                            <option value="Bahamas" {% if (data['origin-country'] == "Bahamas") %}selected{% endif %}>Bahamas</option>
+                            <option value="Bahrain" {% if (data['origin-country'] == "Bahrain") %}selected{% endif %}>Bahrain</option>
+                            <option value="Bangladesh" {% if (data['origin-country'] == "Bangladesh") %}selected{% endif %}>Bangladesh</option>
+                            <option value="Barbados" {% if (data['origin-country'] == "Barbados") %}selected{% endif %}>Barbados</option>
+                            <option value="Belarus" {% if (data['origin-country'] == "Belarus") %}selected{% endif %}>Belarus</option>
+                            <option value="Belgium" {% if (data['origin-country'] == "Belgium") %}selected{% endif %}>Belgium</option>
+                            <option value="Belize" {% if (data['origin-country'] == "Belize") %}selected{% endif %}>Belize</option>
+                            <option value="Benin" {% if (data['origin-country'] == "Benin") %}selected{% endif %}>Benin</option>
+                            <option value="Bhutan" {% if (data['origin-country'] == "Bhutan") %}selected{% endif %}>Bhutan</option>
+                            <option value="Bolivia" {% if (data['origin-country'] == "Bolivia") %}selected{% endif %}>Bolivia</option>
+                            <option value="Bonaire, Sint Eustatius and Saba" {% if (data['origin-country'] == "Bonaire, Sint Eustatius and Saba") %}selected{% endif %}>Bonaire, Sint Eustatius and Saba</option>
+                            <option value="Bosnia and Herzegovina" {% if (data['origin-country'] == "Bosnia and Herzegovina") %}selected{% endif %}>Bosnia and Herzegovina</option>
+                            <option value="Botswana" {% if (data['origin-country'] == "Botswana") %}selected{% endif %}>Botswana</option>
+                            <option value="Bouvet Island" {% if (data['origin-country'] == "Bouvet Island") %}selected{% endif %}>Bouvet Island</option>
+                            <option value="Brazil" {% if (data['origin-country'] == "Brazil") %}selected{% endif %}>Brazil</option>
+                            <option value="British Indian Ocean Territory" {% if (data['origin-country'] == "British Indian Ocean Territory") %}selected{% endif %}>British Indian Ocean Territory</option>
+                            <option value="British Virgin Islands" {% if (data['origin-country'] == "British Virgin Islands") %}selected{% endif %}>British Virgin Islands</option>
+                            <option value="Brunei" {% if (data['origin-country'] == "Brunei") %}selected{% endif %}>Brunei</option>
+                            <option value="Bulgaria" {% if (data['origin-country'] == "Bulgaria") %}selected{% endif %}>Bulgaria</option>
+                            <option value="Burkina Faso" {% if (data['origin-country'] == "Burkina Faso") %}selected{% endif %}>Burkina Faso</option>
+                            <option value="Burundi" {% if (data['origin-country'] == "Burundi") %}selected{% endif %}>Burundi</option>
+                            <option value="Cambodia" {% if (data['origin-country'] == "Cambodia") %}selected{% endif %}>Cambodia</option>
+                            <option value="Cameroon" {% if (data['origin-country'] == "Cameroon") %}selected{% endif %}>Cameroon</option>
+                            <option value="Canada" {% if (data['origin-country'] == "Canada") %}selected{% endif %}>Canada</option>
+                            <option value="Canary Islands" {% if (data['origin-country'] == "Canary Islands") %}selected{% endif %}>Canary Islands</option>
+                            <option value="Cape Verde" {% if (data['origin-country'] == "Cape Verde") %}selected{% endif %}>Cape Verde</option>
+                            <option value="Cayman Islands" {% if (data['origin-country'] == "Cayman Islands") %}selected{% endif %}>Cayman Islands</option>
+                            <option value="Central African Republic" {% if (data['origin-country'] == "Central African Republic") %}selected{% endif %}>Central African Republic</option>
+                            <option value="Chad" {% if (data['origin-country'] == "Chad") %}selected{% endif %}>Chad</option>
+                            <option value="Chile" {% if (data['origin-country'] == "Chile") %}selected{% endif %}>Chile</option>
+                            <option value="China" {% if (data['origin-country'] == "China") %}selected{% endif %}>China</option>
+                            <option value="Christmas Island" {% if (data['origin-country'] == "Christmas Island") %}selected{% endif %}>Christmas Island</option>
+                            <option value="Cocos (Keeling) Islands" {% if (data['origin-country'] == "Cocos (Keeling) Islands") %}selected{% endif %}>Cocos (Keeling) Islands</option>
+                            <option value="Colombia" {% if (data['origin-country'] == "Colombia") %}selected{% endif %}>Colombia</option>
+                            <option value="Comoros" {% if (data['origin-country'] == "Comoros") %}selected{% endif %}>Comoros</option>
+                            <option value="Congo" {% if (data['origin-country'] == "Congo") %}selected{% endif %}>Congo</option>
+                            <option value="Cook Islands" {% if (data['origin-country'] == "Cook Islands") %}selected{% endif %}>Cook Islands</option>
+                            <option value="Costa Rica" {% if (data['origin-country'] == "Costa Rica") %}selected{% endif %}>Costa Rica</option>
+                            <option value="Côte d'Ivoire" {% if (data['origin-country'] == "Côte d'Ivoire") %}selected{% endif %}>Côte d'Ivoire</option>
+                            <option value="Croatia" {% if (data['origin-country'] == "Croatia") %}selected{% endif %}>Croatia</option>
+                            <option value="Cuba" {% if (data['origin-country'] == "Cuba") %}selected{% endif %}>Cuba</option>
+                            <option value="Curaçao" {% if (data['origin-country'] == "Curaçao") %}selected{% endif %}>Curaçao</option>
+                            <option value="Cyprus" {% if (data['origin-country'] == "Cyprus") %}selected{% endif %}>Cyprus</option>
+                            <option value="Czech Republic" {% if (data['origin-country'] == "Czech Republic") %}selected{% endif %}>Czech Republic</option>
+                            <option value="Democratic Republic of the Congo" {% if (data['origin-country'] == "Democratic Republic of the Congo") %}selected{% endif %}>Democratic Republic of the Congo</option>
+                            <option value="Denmark" {% if (data['origin-country'] == "Denmark") %}selected{% endif %}>Denmark</option>
+                            <option value="Djibouti" {% if (data['origin-country'] == "Djibouti") %}selected{% endif %}>Djibouti</option>
+                            <option value="Dominica" {% if (data['origin-country'] == "Dominica") %}selected{% endif %}>Dominica</option>
+                            <option value="Dominican Republic" {% if (data['origin-country'] == "Dominican Republic") %}selected{% endif %}>Dominican Republic</option>
+                            <option value="Ecuador" {% if (data['origin-country'] == "Ecuador") %}selected{% endif %}>Ecuador</option>
+                            <option value="Egypt" {% if (data['origin-country'] == "Egypt") %}selected{% endif %}>Egypt</option>
+                            <option value="El Salvador" {% if (data['origin-country'] == "El Salvador") %}selected{% endif %}>El Salvador</option>
+                            <option value="Equatorial Guinea" {% if (data['origin-country'] == "Equatorial Guinea") %}selected{% endif %}>Equatorial Guinea</option>
+                            <option value="Eritrea" {% if (data['origin-country'] == "Eritrea") %}selected{% endif %}>Eritrea</option>
+                            <option value="Estonia" {% if (data['origin-country'] == "Estonia") %}selected{% endif %}>Estonia</option>
+                            <option value="Eswatini" {% if (data['origin-country'] == "Eswatini") %}selected{% endif %}>Eswatini</option>
+                            <option value="Ethiopia" {% if (data['origin-country'] == "Ethiopia") %}selected{% endif %}>Ethiopia</option>
+                            <option value="Falkland Islands" {% if (data['origin-country'] == "Falkland Islands") %}selected{% endif %}>Falkland Islands</option>
+                            <option value="Faroe Islands" {% if (data['origin-country'] == "Faroe Islands") %}selected{% endif %}>Faroe Islands</option>
+                            <option value="Fiji" {% if (data['origin-country'] == "Fiji") %}selected{% endif %}>Fiji</option>
+                            <option value="Finland" {% if (data['origin-country'] == "Finland") %}selected{% endif %}>Finland</option>
+                            <option value="France" {% if (data['origin-country'] == "France") %}selected{% endif %}>France</option>
+                            <option value="French Guiana" {% if (data['origin-country'] == "French Guiana") %}selected{% endif %}>French Guiana</option>
+                            <option value="French Polynesia" {% if (data['origin-country'] == "French Polynesia") %}selected{% endif %}>French Polynesia</option>
+                            <option value="French Southern Territories" {% if (data['origin-country'] == "French Southern Territories") %}selected{% endif %}>French Southern Territories</option>
+                            <option value="Gabon" {% if (data['origin-country'] == "Gabon") %}selected{% endif %}>Gabon</option>
+                            <option value="Georgia" {% if (data['origin-country'] == "Georgia") %}selected{% endif %}>Georgia</option>
+                            <option value="Germany" {% if (data['origin-country'] == "Germany") %}selected{% endif %}>Germany</option>
+                            <option value="Ghana" {% if (data['origin-country'] == "Ghana") %}selected{% endif %}>Ghana</option>
+                            <option value="Gibraltar" {% if (data['origin-country'] == "Gibraltar") %}selected{% endif %}>Gibraltar</option>
+                            <option value="Greece" {% if (data['origin-country'] == "Greece") %}selected{% endif %}>Greece</option>
+                            <option value="Greenland" {% if (data['origin-country'] == "Greenland") %}selected{% endif %}>Greenland</option>
+                            <option value="Grenada" {% if (data['origin-country'] == "Grenada") %}selected{% endif %}>Grenada</option>
+                            <option value="Guadeloupe" {% if (data['origin-country'] == "Guadeloupe") %}selected{% endif %}>Guadeloupe</option>
+                            <option value="Guam" {% if (data['origin-country'] == "Guam") %}selected{% endif %}>Guam</option>
+                            <option value="Guatemala" {% if (data['origin-country'] == "Guatemala") %}selected{% endif %}>Guatemala</option>
+                            <option value="Guernsey" {% if (data['origin-country'] == "Guernsey") %}selected{% endif %}>Guernsey</option>
+                            <option value="Guinea" {% if (data['origin-country'] == "Guinea") %}selected{% endif %}>Guinea</option>
+                            <option value="Guinea-Bissau" {% if (data['origin-country'] == "Guinea-Bissau") %}selected{% endif %}>Guinea-Bissau</option>
+                            <option value="Guyana" {% if (data['origin-country'] == "Guyana") %}selected{% endif %}>Guyana</option>
+                            <option value="Haiti" {% if (data['origin-country'] == "Haiti") %}selected{% endif %}>Haiti</option>
+                            <option value="Heard Island and McDonald Islands" {% if (data['origin-country'] == "Heard Island and McDonald Islands") %}selected{% endif %}>Heard Island and McDonald Islands</option>
+                            <option value="Holy See" {% if (data['origin-country'] == "Holy See") %}selected{% endif %}>Holy See</option>
+                            <option value="Honduras" {% if (data['origin-country'] == "Honduras") %}selected{% endif %}>Honduras</option>
+                            <option value="Hong Kong" {% if (data['origin-country'] == "Hong Kong") %}selected{% endif %}>Hong Kong</option>
+                            <option value="Hungary" {% if (data['origin-country'] == "Hungary") %}selected{% endif %}>Hungary</option>
+                            <option value="Iceland" {% if (data['origin-country'] == "Iceland") %}selected{% endif %}>Iceland</option>
+                            <option value="India" {% if (data['origin-country'] == "India") %}selected{% endif %}>India</option>
+                            <option value="Indonesia" {% if (data['origin-country'] == "Indonesia") %}selected{% endif %}>Indonesia</option>
+                            <option value="Iran" {% if (data['origin-country'] == "Iran") %}selected{% endif %}>Iran</option>
+                            <option value="Iraq" {% if (data['origin-country'] == "Iraq") %}selected{% endif %}>Iraq</option>
+                            <option value="Ireland" {% if (data['origin-country'] == "Ireland") %}selected{% endif %}>Ireland</option>
+                            <option value="Isle of Man" {% if (data['origin-country'] == "Isle of Man") %}selected{% endif %}>Isle of Man</option>
+                            <option value="Israel" {% if (data['origin-country'] == "Israel") %}selected{% endif %}>Israel</option>
+                            <option value="Italy" {% if (data['origin-country'] == "Italy") %}selected{% endif %}>Italy</option>
+                            <option value="Jamaica" {% if (data['origin-country'] == "Jamaica") %}selected{% endif %}>Jamaica</option>
+                            <option value="Japan" {% if (data['origin-country'] == "Japan") %}selected{% endif %}>Japan</option>
+                            <option value="Jersey" {% if (data['origin-country'] == "Jersey") %}selected{% endif %}>Jersey</option>
+                            <option value="Jordan" {% if (data['origin-country'] == "Jordan") %}selected{% endif %}>Jordan</option>
+                            <option value="Kazakhstan" {% if (data['origin-country'] == "Kazakhstan") %}selected{% endif %}>Kazakhstan</option>
+                            <option value="Kenya" {% if (data['origin-country'] == "Kenya") %}selected{% endif %}>Kenya</option>
+                            <option value="Kiribati" {% if (data['origin-country'] == "Kiribati") %}selected{% endif %}>Kiribati</option>
+                            <option value="Kosovo" {% if (data['origin-country'] == "Kosovo") %}selected{% endif %}>Kosovo</option>
+                            <option value="Kuwait" {% if (data['origin-country'] == "Kuwait") %}selected{% endif %}>Kuwait</option>
+                            <option value="Kyrgyzstan" {% if (data['origin-country'] == "Kyrgyzstan") %}selected{% endif %}>Kyrgyzstan</option>
+                            <option value="Laos" {% if (data['origin-country'] == "Laos") %}selected{% endif %}>Laos</option>
+                            <option value="Latvia" {% if (data['origin-country'] == "Latvia") %}selected{% endif %}>Latvia</option>
+                            <option value="Lebanon" {% if (data['origin-country'] == "Lebanon") %}selected{% endif %}>Lebanon</option>
+                            <option value="Lesotho" {% if (data['origin-country'] == "Lesotho") %}selected{% endif %}>Lesotho</option>
+                            <option value="Liberia" {% if (data['origin-country'] == "Liberia") %}selected{% endif %}>Liberia</option>
+                            <option value="Libya" {% if (data['origin-country'] == "Libya") %}selected{% endif %}>Libya</option>
+                            <option value="Liechtenstein" {% if (data['origin-country'] == "Liechtenstein") %}selected{% endif %}>Liechtenstein</option>
+                            <option value="Lithuania" {% if (data['origin-country'] == "Lithuania") %}selected{% endif %}>Lithuania</option>
+                            <option value="Luxembourg" {% if (data['origin-country'] == "Luxembourg") %}selected{% endif %}>Luxembourg</option>
+                            <option value="Macao" {% if (data['origin-country'] == "Macao") %}selected{% endif %}>Macao</option>
+                            <option value="Madagascar" {% if (data['origin-country'] == "Madagascar") %}selected{% endif %}>Madagascar</option>
+                            <option value="Malawi" {% if (data['origin-country'] == "Malawi") %}selected{% endif %}>Malawi</option>
+                            <option value="Malaysia" {% if (data['origin-country'] == "Malaysia") %}selected{% endif %}>Malaysia</option>
+                            <option value="Maldives" {% if (data['origin-country'] == "Maldives") %}selected{% endif %}>Maldives</option>
+                            <option value="Mali" {% if (data['origin-country'] == "Mali") %}selected{% endif %}>Mali</option>
+                            <option value="Malta" {% if (data['origin-country'] == "Malta") %}selected{% endif %}>Malta</option>
+                            <option value="Marshall Islands" {% if (data['origin-country'] == "Marshall Islands") %}selected{% endif %}>Marshall Islands</option>
+                            <option value="Martinique" {% if (data['origin-country'] == "Martinique") %}selected{% endif %}>Martinique</option>
+                            <option value="Mauritania" {% if (data['origin-country'] == "Mauritania") %}selected{% endif %}>Mauritania</option>
+                            <option value="Mauritius" {% if (data['origin-country'] == "Mauritius") %}selected{% endif %}>Mauritius</option>
+                            <option value="Mayotte" {% if (data['origin-country'] == "Mayotte") %}selected{% endif %}>Mayotte</option>
+                            <option value="Mexico" {% if (data['origin-country'] == "Mexico") %}selected{% endif %}>Mexico</option>
+                            <option value="Micronesia" {% if (data['origin-country'] == "Micronesia") %}selected{% endif %}>Micronesia</option>
+                            <option value="Moldova" {% if (data['origin-country'] == "Moldova") %}selected{% endif %}>Moldova</option>
+                            <option value="Monaco" {% if (data['origin-country'] == "Monaco") %}selected{% endif %}>Monaco</option>
+                            <option value="Mongolia" {% if (data['origin-country'] == "Mongolia") %}selected{% endif %}>Mongolia</option>
+                            <option value="Montenegro" {% if (data['origin-country'] == "Montenegro") %}selected{% endif %}>Montenegro</option>
+                            <option value="Montserrat" {% if (data['origin-country'] == "Montserrat") %}selected{% endif %}>Montserrat</option>
+                            <option value="Morocco" {% if (data['origin-country'] == "Morocco") %}selected{% endif %}>Morocco</option>
+                            <option value="Mozambique" {% if (data['origin-country'] == "Mozambique") %}selected{% endif %}>Mozambique</option>
+                            <option value="Myanmar" {% if (data['origin-country'] == "Myanmar") %}selected{% endif %}>Myanmar</option>
+                            <option value="Namibia" {% if (data['origin-country'] == "Namibia") %}selected{% endif %}>Namibia</option>
+                            <option value="Nauru" {% if (data['origin-country'] == "Nauru") %}selected{% endif %}>Nauru</option>
+                            <option value="Nepal" {% if (data['origin-country'] == "Nepal") %}selected{% endif %}>Nepal</option>
+                            <option value="Netherlands" {% if (data['origin-country'] == "Netherlands") %}selected{% endif %}>Netherlands</option>
+                            <option value="New Caledonia" {% if (data['origin-country'] == "New Caledonia") %}selected{% endif %}>New Caledonia</option>
+                            <option value="New Zealand" {% if (data['origin-country'] == "New Zealand") %}selected{% endif %}>New Zealand</option>
+                            <option value="Nicaragua" {% if (data['origin-country'] == "Nicaragua") %}selected{% endif %}>Nicaragua</option>
+                            <option value="Niger" {% if (data['origin-country'] == "Niger") %}selected{% endif %}>Niger</option>
+                            <option value="Nigeria" {% if (data['origin-country'] == "Nigeria") %}selected{% endif %}>Nigeria</option>
+                            <option value="Niue" {% if (data['origin-country'] == "Niue") %}selected{% endif %}>Niue</option>
+                            <option value="Norfolk Island" {% if (data['origin-country'] == "Norfolk Island") %}selected{% endif %}>Norfolk Island</option>
+                            <option value="North Korea" {% if (data['origin-country'] == "North Korea") %}selected{% endif %}>North Korea</option>
+                            <option value="North Macedonia" {% if (data['origin-country'] == "North Macedonia") %}selected{% endif %}>North Macedonia</option>
+                            <option value="Northern Mariana Islands" {% if (data['origin-country'] == "Northern Mariana Islands") %}selected{% endif %}>Northern Mariana Islands</option>
+                            <option value="Norway" {% if (data['origin-country'] == "Norway") %}selected{% endif %}>Norway</option>
+                            <option value="Oman" {% if (data['origin-country'] == "Oman") %}selected{% endif %}>Oman</option>
+                            <option value="Pakistan" {% if (data['origin-country'] == "Pakistan") %}selected{% endif %}>Pakistan</option>
+                            <option value="Palau" {% if (data['origin-country'] == "Palau") %}selected{% endif %}>Palau</option>
+                            <option value="Panama" {% if (data['origin-country'] == "Panama") %}selected{% endif %}>Panama</option>
+                            <option value="Papua New Guinea" {% if (data['origin-country'] == "Papua New Guinea") %}selected{% endif %}>Papua New Guinea</option>
+                            <option value="Paraguay" {% if (data['origin-country'] == "Paraguay") %}selected{% endif %}>Paraguay</option>
+                            <option value="Peru" {% if (data['origin-country'] == "Peru") %}selected{% endif %}>Peru</option>
+                            <option value="Philippines" {% if (data['origin-country'] == "Philippines") %}selected{% endif %}>Philippines</option>
+                            <option value="Pitcairn" {% if (data['origin-country'] == "Pitcairn") %}selected{% endif %}>Pitcairn</option>
+                            <option value="Poland" {% if (data['origin-country'] == "Poland") %}selected{% endif %}>Poland</option>
+                            <option value="Portugal" {% if (data['origin-country'] == "Portugal") %}selected{% endif %}>Portugal</option>
+                            <option value="Puerto Rico" {% if (data['origin-country'] == "Puerto Rico") %}selected{% endif %}>Puerto Rico</option>
+                            <option value="Qatar" {% if (data['origin-country'] == "Qatar") %}selected{% endif %}>Qatar</option>
+                            <option value="Réunion" {% if (data['origin-country'] == "Réunion") %}selected{% endif %}>Réunion</option>
+                            <option value="Romania" {% if (data['origin-country'] == "Romania") %}selected{% endif %}>Romania</option>
+                            <option value="Russian Federation" {% if (data['origin-country'] == "Russian Federation") %}selected{% endif %}>Russian Federation</option>
+                            <option value="Rwanda" {% if (data['origin-country'] == "Rwanda") %}selected{% endif %}>Rwanda</option>
+                            <option value="Samoa" {% if (data['origin-country'] == "Samoa") %}selected{% endif %}>Samoa</option>
+                            <option value="San Marino" {% if (data['origin-country'] == "San Marino") %}selected{% endif %}>San Marino</option>
+                            <option value="Sao Tome and Principe" {% if (data['origin-country'] == "Sao Tome and Principe") %}selected{% endif %}>Sao Tome and Principe</option>
+                            <option value="Saudi Arabia" {% if (data['origin-country'] == "Saudi Arabia") %}selected{% endif %}>Saudi Arabia</option>
+                            <option value="Senegal" {% if (data['origin-country'] == "Senegal") %}selected{% endif %}>Senegal</option>
+                            <option value="Serbia" {% if (data['origin-country'] == "Serbia") %}selected{% endif %}>Serbia</option>
+                            <option value="Seychelles" {% if (data['origin-country'] == "Seychelles") %}selected{% endif %}>Seychelles</option>
+                            <option value="Sierra Leone" {% if (data['origin-country'] == "Sierra Leone") %}selected{% endif %}>Sierra Leone</option>
+                            <option value="Singapore" {% if (data['origin-country'] == "Singapore") %}selected{% endif %}>Singapore</option>
+                            <option value="Slovakia" {% if (data['origin-country'] == "Slovakia") %}selected{% endif %}>Slovakia</option>
+                            <option value="Slovenia" {% if (data['origin-country'] == "Slovenia") %}selected{% endif %}>Slovenia</option>
+                            <option value="Solomon Islands" {% if (data['origin-country'] == "Solomon Islands") %}selected{% endif %}>Solomon Islands</option>
+                            <option value="Somalia" {% if (data['origin-country'] == "Somalia") %}selected{% endif %}>Somalia</option>
+                            <option value="South Africa" {% if (data['origin-country'] == "South Africa") %}selected{% endif %}>South Africa</option>
+                            <option value="South Georgia and the South Sandwich Islands" {% if (data['origin-country'] == "South Georgia and the South Sandwich Islands") %}selected{% endif %}>South Georgia and the South Sandwich Islands</option>
+                            <option value="South Korea" {% if (data['origin-country'] == "South Korea") %}selected{% endif %}>South Korea</option>
+                            <option value="South Sudan" {% if (data['origin-country'] == "South Sudan") %}selected{% endif %}>South Sudan</option>
+                            <option value="Spain" {% if (data['origin-country'] == "Spain") %}selected{% endif %}>Spain</option>
+                            <option value="Sri Lanka" {% if (data['origin-country'] == "Sri Lanka") %}selected{% endif %}>Sri Lanka</option>
+                            <option value="St Barthélemy" {% if (data['origin-country'] == "St Barthélemy") %}selected{% endif %}>St Barthélemy</option>
+                            <option value="St Helena, Ascension and Tristan da Cunha" {% if (data['origin-country'] == "St Helena, Ascension and Tristan da Cunha") %}selected{% endif %}>St Helena, Ascension and Tristan da Cunha</option>
+                            <option value="St Kitts and Nevis" {% if (data['origin-country'] == "St Kitts and Nevis") %}selected{% endif %}>St Kitts and Nevis</option>
+                            <option value="St Lucia" {% if (data['origin-country'] == "St Lucia") %}selected{% endif %}>St Lucia</option>
+                            <option value="St Maarten (Dutch)" {% if (data['origin-country'] == "St Maarten (Dutch)") %}selected{% endif %}>St Maarten (Dutch)</option>
+                            <option value="St Martin (French)" {% if (data['origin-country'] == "St Martin (French)") %}selected{% endif %}>St Martin (French)</option>
+                            <option value="St Pierre and Miquelon" {% if (data['origin-country'] == "St Pierre and Miquelon") %}selected{% endif %}>St Pierre and Miquelon</option>
+                            <option value="St Vincent and the Grenadines" {% if (data['origin-country'] == "St Vincent and the Grenadines") %}selected{% endif %}>St Vincent and the Grenadines</option>
+                            <option value="Sudan" {% if (data['origin-country'] == "Sudan") %}selected{% endif %}>Sudan</option>
+                            <option value="Suriname" {% if (data['origin-country'] == "Suriname") %}selected{% endif %}>Suriname</option>
+                            <option value="Sweden" {% if (data['origin-country'] == "Sweden") %}selected{% endif %}>Sweden</option>
+                            <option value="Switzerland" {% if (data['origin-country'] == "Switzerland") %}selected{% endif %}>Switzerland</option>
+                            <option value="Syria" {% if (data['origin-country'] == "Syria") %}selected{% endif %}>Syria</option>
+                            <option value="Taiwan" {% if (data['origin-country'] == "Taiwan") %}selected{% endif %}>Taiwan</option>
+                            <option value="Tajikistan" {% if (data['origin-country'] == "Tajikistan") %}selected{% endif %}>Tajikistan</option>
+                            <option value="Tanzania" {% if (data['origin-country'] == "Tanzania") %}selected{% endif %}>Tanzania</option>
+                            <option value="Thailand" {% if (data['origin-country'] == "Thailand") %}selected{% endif %}>Thailand</option>
+                            <option value="The Gambia" {% if (data['origin-country'] == "The Gambia") %}selected{% endif %}>The Gambia</option>
+                            <option value="The Occupied Palestinian Territories" {% if (data['origin-country'] == "The Occupied Palestinian Territories") %}selected{% endif %}>The Occupied Palestinian Territories</option>
+                            <option value="Timor-Leste" {% if (data['origin-country'] == "Timor-Leste") %}selected{% endif %}>Timor-Leste</option>
+                            <option value="Togo" {% if (data['origin-country'] == "Togo") %}selected{% endif %}>Togo</option>
+                            <option value="Tokelau" {% if (data['origin-country'] == "Tokelau") %}selected{% endif %}>Tokelau</option>
+                            <option value="Tonga" {% if (data['origin-country'] == "Tonga") %}selected{% endif %}>Tonga</option>
+                            <option value="Trinidad and Tobago" {% if (data['origin-country'] == "Trinidad and Tobago") %}selected{% endif %}>Trinidad and Tobago</option>
+                            <option value="Tunisia" {% if (data['origin-country'] == "Tunisia") %}selected{% endif %}>Tunisia</option>
+                            <option value="Turkey" {% if (data['origin-country'] == "Turkey") %}selected{% endif %}>Turkey</option>
+                            <option value="Turkmenistan" {% if (data['origin-country'] == "Turkmenistan") %}selected{% endif %}>Turkmenistan</option>
+                            <option value="Turks and Caicos Islands" {% if (data['origin-country'] == "Turks and Caicos Islands") %}selected{% endif %}>Turks and Caicos Islands</option>
+                            <option value="Tuvalu" {% if (data['origin-country'] == "Tuvalu") %}selected{% endif %}>Tuvalu</option>
+                            <option value="Uganda" {% if (data['origin-country'] == "Uganda") %}selected{% endif %}>Uganda</option>
+                            <option value="Ukraine" {% if (data['origin-country'] == "Ukraine") %}selected{% endif %}>Ukraine</option>
+                            <option value="United Arab Emirates" {% if (data['origin-country'] == "United Arab Emirates") %}selected{% endif %}>United Arab Emirates</option>
+                            <optgroup label="United Kingdom of Great Britain and Northern Ireland">
+                                    <option value="England" {% if (data['origin-country'] == "England") %}selected{% endif %}>England</option>
+                                    <option value="Scotland" {% if (data['origin-country'] == "Scotland") %}selected{% endif %}>Scotland</option>
+                                    <option value="Wales" {% if (data['origin-country'] == "Wales") %}selected{% endif %}>Wales</option>
+                                    <option value="Northern Ireland" {% if (data['origin-country'] == "Northern Ireland") %}selected{% endif %}>Northern Ireland</option>
+                            </optgroup>
+                            <option value="United States Minor Outlying Islands" {% if (data['origin-country'] == "United States Minor Outlying Islands") %}selected{% endif %}>United States Minor Outlying Islands</option>
+                            <option value="United States of America" {% if (data['origin-country'] == "United States of America") %}selected{% endif %}>United States of America</option>
+                            <option value="Uruguay" {% if (data['origin-country'] == "Uruguay") %}selected{% endif %}>Uruguay</option>
+                            <option value="Uzbekistan" {% if (data['origin-country'] == "Uzbekistan") %}selected{% endif %}>Uzbekistan</option>
+                            <option value="Vanuatu" {% if (data['origin-country'] == "Vanuatu") %}selected{% endif %}>Vanuatu</option>
+                            <option value="Venezuela" {% if (data['origin-country'] == "Venezuela") %}selected{% endif %}>Venezuela</option>
+                            <option value="Viet Nam" {% if (data['origin-country'] == "Viet Nam") %}selected{% endif %}>Viet Nam</option>
+                            <option value="Virgin Islands of the United States" {% if (data['origin-country'] == "Virgin Islands of the United States") %}selected{% endif %}>Virgin Islands of the United States</option>
+                            <option value="Wallis and Futuna" {% if (data['origin-country'] == "Wallis and Futuna") %}selected{% endif %}>Wallis and Futuna</option>
+                            <option value="Western Sahara" {% if (data['origin-country'] == "Western Sahara") %}selected{% endif %}>Western Sahara</option>
+                            <option value="Yemen" {% if (data['origin-country'] == "Yemen") %}selected{% endif %}>Yemen</option>
+                            <option value="Zambia" {% if (data['origin-country'] == "Zambia") %}selected{% endif %}>Zambia</option>
+                            <option value="Zimbabwe" {% if (data['origin-country'] == "Zimbabwe") %}selected{% endif %}>Zimbabwe</option>
+              </select>
+
+        </div>
+
+        <div class="govuk-form-group ">
+          <label class="govuk-label govuk-label--m" for="origin-country">
+            Which country were the goods consigned?
+          </label>
+         
+            <div class="govuk-form-group">
+              <select class="govuk-select govuk-!-width-one-half" id="another-country" name="another-country">
+                <option value="">Select the country of consignment</option>
+                            <option value="Afghanistan" {% if (data['origin-country'] == "Afghanistan") %}selected{% endif %}>Afghanistan</option>
+                            <option value="Aland Islands" {% if (data['origin-country'] == "Aland Islands") %}selected{% endif %}>Aland Islands</option>
+                            <option value="Albania" {% if (data['origin-country'] == "Albania") %}selected{% endif %}>Albania</option>
+                            <option value="Algeria" {% if (data['origin-country'] == "Algeria") %}selected{% endif %}>Algeria</option>
+                            <option value="American Samoa" {% if (data['origin-country'] == "American Samoa") %}selected{% endif %}>American Samoa</option>
+                            <option value="Andorra" {% if (data['origin-country'] == "Andorra") %}selected{% endif %}>Andorra</option>
+                            <option value="Angola" {% if (data['origin-country'] == "Angola") %}selected{% endif %}>Angola</option>
+                            <option value="Anguilla" {% if (data['origin-country'] == "Anguilla") %}selected{% endif %}>Anguilla</option>
+                            <option value="Antarctica" {% if (data['origin-country'] == "Antarctica") %}selected{% endif %}>Antarctica</option>
+                            <option value="Antigua and Barbuda" {% if (data['origin-country'] == "Antigua and Barbuda") %}selected{% endif %}>Antigua and Barbuda</option>
+                            <option value="Argentina" {% if (data['origin-country'] == "Argentina") %}selected{% endif %}>Argentina</option>
+                            <option value="Armenia" {% if (data['origin-country'] == "Armenia") %}selected{% endif %}>Armenia</option>
+                            <option value="Aruba" {% if (data['origin-country'] == "Aruba") %}selected{% endif %}>Aruba</option>
+                            <option value="Australia" {% if (data['origin-country'] == "Australia") %}selected{% endif %}>Australia</option>
+                            <option value="Austria" {% if (data['origin-country'] == "Austria") %}selected{% endif %}>Austria</option>
+                            <option value="Azerbaijan" {% if (data['origin-country'] == "Azerbaijan") %}selected{% endif %}>Azerbaijan</option>
+                            <option value="Bahamas" {% if (data['origin-country'] == "Bahamas") %}selected{% endif %}>Bahamas</option>
+                            <option value="Bahrain" {% if (data['origin-country'] == "Bahrain") %}selected{% endif %}>Bahrain</option>
+                            <option value="Bangladesh" {% if (data['origin-country'] == "Bangladesh") %}selected{% endif %}>Bangladesh</option>
+                            <option value="Barbados" {% if (data['origin-country'] == "Barbados") %}selected{% endif %}>Barbados</option>
+                            <option value="Belarus" {% if (data['origin-country'] == "Belarus") %}selected{% endif %}>Belarus</option>
+                            <option value="Belgium" {% if (data['origin-country'] == "Belgium") %}selected{% endif %}>Belgium</option>
+                            <option value="Belize" {% if (data['origin-country'] == "Belize") %}selected{% endif %}>Belize</option>
+                            <option value="Benin" {% if (data['origin-country'] == "Benin") %}selected{% endif %}>Benin</option>
+                            <option value="Bhutan" {% if (data['origin-country'] == "Bhutan") %}selected{% endif %}>Bhutan</option>
+                            <option value="Bolivia" {% if (data['origin-country'] == "Bolivia") %}selected{% endif %}>Bolivia</option>
+                            <option value="Bonaire, Sint Eustatius and Saba" {% if (data['origin-country'] == "Bonaire, Sint Eustatius and Saba") %}selected{% endif %}>Bonaire, Sint Eustatius and Saba</option>
+                            <option value="Bosnia and Herzegovina" {% if (data['origin-country'] == "Bosnia and Herzegovina") %}selected{% endif %}>Bosnia and Herzegovina</option>
+                            <option value="Botswana" {% if (data['origin-country'] == "Botswana") %}selected{% endif %}>Botswana</option>
+                            <option value="Bouvet Island" {% if (data['origin-country'] == "Bouvet Island") %}selected{% endif %}>Bouvet Island</option>
+                            <option value="Brazil" {% if (data['origin-country'] == "Brazil") %}selected{% endif %}>Brazil</option>
+                            <option value="British Indian Ocean Territory" {% if (data['origin-country'] == "British Indian Ocean Territory") %}selected{% endif %}>British Indian Ocean Territory</option>
+                            <option value="British Virgin Islands" {% if (data['origin-country'] == "British Virgin Islands") %}selected{% endif %}>British Virgin Islands</option>
+                            <option value="Brunei" {% if (data['origin-country'] == "Brunei") %}selected{% endif %}>Brunei</option>
+                            <option value="Bulgaria" {% if (data['origin-country'] == "Bulgaria") %}selected{% endif %}>Bulgaria</option>
+                            <option value="Burkina Faso" {% if (data['origin-country'] == "Burkina Faso") %}selected{% endif %}>Burkina Faso</option>
+                            <option value="Burundi" {% if (data['origin-country'] == "Burundi") %}selected{% endif %}>Burundi</option>
+                            <option value="Cambodia" {% if (data['origin-country'] == "Cambodia") %}selected{% endif %}>Cambodia</option>
+                            <option value="Cameroon" {% if (data['origin-country'] == "Cameroon") %}selected{% endif %}>Cameroon</option>
+                            <option value="Canada" {% if (data['origin-country'] == "Canada") %}selected{% endif %}>Canada</option>
+                            <option value="Canary Islands" {% if (data['origin-country'] == "Canary Islands") %}selected{% endif %}>Canary Islands</option>
+                            <option value="Cape Verde" {% if (data['origin-country'] == "Cape Verde") %}selected{% endif %}>Cape Verde</option>
+                            <option value="Cayman Islands" {% if (data['origin-country'] == "Cayman Islands") %}selected{% endif %}>Cayman Islands</option>
+                            <option value="Central African Republic" {% if (data['origin-country'] == "Central African Republic") %}selected{% endif %}>Central African Republic</option>
+                            <option value="Chad" {% if (data['origin-country'] == "Chad") %}selected{% endif %}>Chad</option>
+                            <option value="Chile" {% if (data['origin-country'] == "Chile") %}selected{% endif %}>Chile</option>
+                            <option value="China" {% if (data['origin-country'] == "China") %}selected{% endif %}>China</option>
+                            <option value="Christmas Island" {% if (data['origin-country'] == "Christmas Island") %}selected{% endif %}>Christmas Island</option>
+                            <option value="Cocos (Keeling) Islands" {% if (data['origin-country'] == "Cocos (Keeling) Islands") %}selected{% endif %}>Cocos (Keeling) Islands</option>
+                            <option value="Colombia" {% if (data['origin-country'] == "Colombia") %}selected{% endif %}>Colombia</option>
+                            <option value="Comoros" {% if (data['origin-country'] == "Comoros") %}selected{% endif %}>Comoros</option>
+                            <option value="Congo" {% if (data['origin-country'] == "Congo") %}selected{% endif %}>Congo</option>
+                            <option value="Cook Islands" {% if (data['origin-country'] == "Cook Islands") %}selected{% endif %}>Cook Islands</option>
+                            <option value="Costa Rica" {% if (data['origin-country'] == "Costa Rica") %}selected{% endif %}>Costa Rica</option>
+                            <option value="Côte d'Ivoire" {% if (data['origin-country'] == "Côte d'Ivoire") %}selected{% endif %}>Côte d'Ivoire</option>
+                            <option value="Croatia" {% if (data['origin-country'] == "Croatia") %}selected{% endif %}>Croatia</option>
+                            <option value="Cuba" {% if (data['origin-country'] == "Cuba") %}selected{% endif %}>Cuba</option>
+                            <option value="Curaçao" {% if (data['origin-country'] == "Curaçao") %}selected{% endif %}>Curaçao</option>
+                            <option value="Cyprus" {% if (data['origin-country'] == "Cyprus") %}selected{% endif %}>Cyprus</option>
+                            <option value="Czech Republic" {% if (data['origin-country'] == "Czech Republic") %}selected{% endif %}>Czech Republic</option>
+                            <option value="Democratic Republic of the Congo" {% if (data['origin-country'] == "Democratic Republic of the Congo") %}selected{% endif %}>Democratic Republic of the Congo</option>
+                            <option value="Denmark" {% if (data['origin-country'] == "Denmark") %}selected{% endif %}>Denmark</option>
+                            <option value="Djibouti" {% if (data['origin-country'] == "Djibouti") %}selected{% endif %}>Djibouti</option>
+                            <option value="Dominica" {% if (data['origin-country'] == "Dominica") %}selected{% endif %}>Dominica</option>
+                            <option value="Dominican Republic" {% if (data['origin-country'] == "Dominican Republic") %}selected{% endif %}>Dominican Republic</option>
+                            <option value="Ecuador" {% if (data['origin-country'] == "Ecuador") %}selected{% endif %}>Ecuador</option>
+                            <option value="Egypt" {% if (data['origin-country'] == "Egypt") %}selected{% endif %}>Egypt</option>
+                            <option value="El Salvador" {% if (data['origin-country'] == "El Salvador") %}selected{% endif %}>El Salvador</option>
+                            <option value="Equatorial Guinea" {% if (data['origin-country'] == "Equatorial Guinea") %}selected{% endif %}>Equatorial Guinea</option>
+                            <option value="Eritrea" {% if (data['origin-country'] == "Eritrea") %}selected{% endif %}>Eritrea</option>
+                            <option value="Estonia" {% if (data['origin-country'] == "Estonia") %}selected{% endif %}>Estonia</option>
+                            <option value="Eswatini" {% if (data['origin-country'] == "Eswatini") %}selected{% endif %}>Eswatini</option>
+                            <option value="Ethiopia" {% if (data['origin-country'] == "Ethiopia") %}selected{% endif %}>Ethiopia</option>
+                            <option value="Falkland Islands" {% if (data['origin-country'] == "Falkland Islands") %}selected{% endif %}>Falkland Islands</option>
+                            <option value="Faroe Islands" {% if (data['origin-country'] == "Faroe Islands") %}selected{% endif %}>Faroe Islands</option>
+                            <option value="Fiji" {% if (data['origin-country'] == "Fiji") %}selected{% endif %}>Fiji</option>
+                            <option value="Finland" {% if (data['origin-country'] == "Finland") %}selected{% endif %}>Finland</option>
+                            <option value="France" {% if (data['origin-country'] == "France") %}selected{% endif %}>France</option>
+                            <option value="French Guiana" {% if (data['origin-country'] == "French Guiana") %}selected{% endif %}>French Guiana</option>
+                            <option value="French Polynesia" {% if (data['origin-country'] == "French Polynesia") %}selected{% endif %}>French Polynesia</option>
+                            <option value="French Southern Territories" {% if (data['origin-country'] == "French Southern Territories") %}selected{% endif %}>French Southern Territories</option>
+                            <option value="Gabon" {% if (data['origin-country'] == "Gabon") %}selected{% endif %}>Gabon</option>
+                            <option value="Georgia" {% if (data['origin-country'] == "Georgia") %}selected{% endif %}>Georgia</option>
+                            <option value="Germany" {% if (data['origin-country'] == "Germany") %}selected{% endif %}>Germany</option>
+                            <option value="Ghana" {% if (data['origin-country'] == "Ghana") %}selected{% endif %}>Ghana</option>
+                            <option value="Gibraltar" {% if (data['origin-country'] == "Gibraltar") %}selected{% endif %}>Gibraltar</option>
+                            <option value="Greece" {% if (data['origin-country'] == "Greece") %}selected{% endif %}>Greece</option>
+                            <option value="Greenland" {% if (data['origin-country'] == "Greenland") %}selected{% endif %}>Greenland</option>
+                            <option value="Grenada" {% if (data['origin-country'] == "Grenada") %}selected{% endif %}>Grenada</option>
+                            <option value="Guadeloupe" {% if (data['origin-country'] == "Guadeloupe") %}selected{% endif %}>Guadeloupe</option>
+                            <option value="Guam" {% if (data['origin-country'] == "Guam") %}selected{% endif %}>Guam</option>
+                            <option value="Guatemala" {% if (data['origin-country'] == "Guatemala") %}selected{% endif %}>Guatemala</option>
+                            <option value="Guernsey" {% if (data['origin-country'] == "Guernsey") %}selected{% endif %}>Guernsey</option>
+                            <option value="Guinea" {% if (data['origin-country'] == "Guinea") %}selected{% endif %}>Guinea</option>
+                            <option value="Guinea-Bissau" {% if (data['origin-country'] == "Guinea-Bissau") %}selected{% endif %}>Guinea-Bissau</option>
+                            <option value="Guyana" {% if (data['origin-country'] == "Guyana") %}selected{% endif %}>Guyana</option>
+                            <option value="Haiti" {% if (data['origin-country'] == "Haiti") %}selected{% endif %}>Haiti</option>
+                            <option value="Heard Island and McDonald Islands" {% if (data['origin-country'] == "Heard Island and McDonald Islands") %}selected{% endif %}>Heard Island and McDonald Islands</option>
+                            <option value="Holy See" {% if (data['origin-country'] == "Holy See") %}selected{% endif %}>Holy See</option>
+                            <option value="Honduras" {% if (data['origin-country'] == "Honduras") %}selected{% endif %}>Honduras</option>
+                            <option value="Hong Kong" {% if (data['origin-country'] == "Hong Kong") %}selected{% endif %}>Hong Kong</option>
+                            <option value="Hungary" {% if (data['origin-country'] == "Hungary") %}selected{% endif %}>Hungary</option>
+                            <option value="Iceland" {% if (data['origin-country'] == "Iceland") %}selected{% endif %}>Iceland</option>
+                            <option value="India" {% if (data['origin-country'] == "India") %}selected{% endif %}>India</option>
+                            <option value="Indonesia" {% if (data['origin-country'] == "Indonesia") %}selected{% endif %}>Indonesia</option>
+                            <option value="Iran" {% if (data['origin-country'] == "Iran") %}selected{% endif %}>Iran</option>
+                            <option value="Iraq" {% if (data['origin-country'] == "Iraq") %}selected{% endif %}>Iraq</option>
+                            <option value="Ireland" {% if (data['origin-country'] == "Ireland") %}selected{% endif %}>Ireland</option>
+                            <option value="Isle of Man" {% if (data['origin-country'] == "Isle of Man") %}selected{% endif %}>Isle of Man</option>
+                            <option value="Israel" {% if (data['origin-country'] == "Israel") %}selected{% endif %}>Israel</option>
+                            <option value="Italy" {% if (data['origin-country'] == "Italy") %}selected{% endif %}>Italy</option>
+                            <option value="Jamaica" {% if (data['origin-country'] == "Jamaica") %}selected{% endif %}>Jamaica</option>
+                            <option value="Japan" {% if (data['origin-country'] == "Japan") %}selected{% endif %}>Japan</option>
+                            <option value="Jersey" {% if (data['origin-country'] == "Jersey") %}selected{% endif %}>Jersey</option>
+                            <option value="Jordan" {% if (data['origin-country'] == "Jordan") %}selected{% endif %}>Jordan</option>
+                            <option value="Kazakhstan" {% if (data['origin-country'] == "Kazakhstan") %}selected{% endif %}>Kazakhstan</option>
+                            <option value="Kenya" {% if (data['origin-country'] == "Kenya") %}selected{% endif %}>Kenya</option>
+                            <option value="Kiribati" {% if (data['origin-country'] == "Kiribati") %}selected{% endif %}>Kiribati</option>
+                            <option value="Kosovo" {% if (data['origin-country'] == "Kosovo") %}selected{% endif %}>Kosovo</option>
+                            <option value="Kuwait" {% if (data['origin-country'] == "Kuwait") %}selected{% endif %}>Kuwait</option>
+                            <option value="Kyrgyzstan" {% if (data['origin-country'] == "Kyrgyzstan") %}selected{% endif %}>Kyrgyzstan</option>
+                            <option value="Laos" {% if (data['origin-country'] == "Laos") %}selected{% endif %}>Laos</option>
+                            <option value="Latvia" {% if (data['origin-country'] == "Latvia") %}selected{% endif %}>Latvia</option>
+                            <option value="Lebanon" {% if (data['origin-country'] == "Lebanon") %}selected{% endif %}>Lebanon</option>
+                            <option value="Lesotho" {% if (data['origin-country'] == "Lesotho") %}selected{% endif %}>Lesotho</option>
+                            <option value="Liberia" {% if (data['origin-country'] == "Liberia") %}selected{% endif %}>Liberia</option>
+                            <option value="Libya" {% if (data['origin-country'] == "Libya") %}selected{% endif %}>Libya</option>
+                            <option value="Liechtenstein" {% if (data['origin-country'] == "Liechtenstein") %}selected{% endif %}>Liechtenstein</option>
+                            <option value="Lithuania" {% if (data['origin-country'] == "Lithuania") %}selected{% endif %}>Lithuania</option>
+                            <option value="Luxembourg" {% if (data['origin-country'] == "Luxembourg") %}selected{% endif %}>Luxembourg</option>
+                            <option value="Macao" {% if (data['origin-country'] == "Macao") %}selected{% endif %}>Macao</option>
+                            <option value="Madagascar" {% if (data['origin-country'] == "Madagascar") %}selected{% endif %}>Madagascar</option>
+                            <option value="Malawi" {% if (data['origin-country'] == "Malawi") %}selected{% endif %}>Malawi</option>
+                            <option value="Malaysia" {% if (data['origin-country'] == "Malaysia") %}selected{% endif %}>Malaysia</option>
+                            <option value="Maldives" {% if (data['origin-country'] == "Maldives") %}selected{% endif %}>Maldives</option>
+                            <option value="Mali" {% if (data['origin-country'] == "Mali") %}selected{% endif %}>Mali</option>
+                            <option value="Malta" {% if (data['origin-country'] == "Malta") %}selected{% endif %}>Malta</option>
+                            <option value="Marshall Islands" {% if (data['origin-country'] == "Marshall Islands") %}selected{% endif %}>Marshall Islands</option>
+                            <option value="Martinique" {% if (data['origin-country'] == "Martinique") %}selected{% endif %}>Martinique</option>
+                            <option value="Mauritania" {% if (data['origin-country'] == "Mauritania") %}selected{% endif %}>Mauritania</option>
+                            <option value="Mauritius" {% if (data['origin-country'] == "Mauritius") %}selected{% endif %}>Mauritius</option>
+                            <option value="Mayotte" {% if (data['origin-country'] == "Mayotte") %}selected{% endif %}>Mayotte</option>
+                            <option value="Mexico" {% if (data['origin-country'] == "Mexico") %}selected{% endif %}>Mexico</option>
+                            <option value="Micronesia" {% if (data['origin-country'] == "Micronesia") %}selected{% endif %}>Micronesia</option>
+                            <option value="Moldova" {% if (data['origin-country'] == "Moldova") %}selected{% endif %}>Moldova</option>
+                            <option value="Monaco" {% if (data['origin-country'] == "Monaco") %}selected{% endif %}>Monaco</option>
+                            <option value="Mongolia" {% if (data['origin-country'] == "Mongolia") %}selected{% endif %}>Mongolia</option>
+                            <option value="Montenegro" {% if (data['origin-country'] == "Montenegro") %}selected{% endif %}>Montenegro</option>
+                            <option value="Montserrat" {% if (data['origin-country'] == "Montserrat") %}selected{% endif %}>Montserrat</option>
+                            <option value="Morocco" {% if (data['origin-country'] == "Morocco") %}selected{% endif %}>Morocco</option>
+                            <option value="Mozambique" {% if (data['origin-country'] == "Mozambique") %}selected{% endif %}>Mozambique</option>
+                            <option value="Myanmar" {% if (data['origin-country'] == "Myanmar") %}selected{% endif %}>Myanmar</option>
+                            <option value="Namibia" {% if (data['origin-country'] == "Namibia") %}selected{% endif %}>Namibia</option>
+                            <option value="Nauru" {% if (data['origin-country'] == "Nauru") %}selected{% endif %}>Nauru</option>
+                            <option value="Nepal" {% if (data['origin-country'] == "Nepal") %}selected{% endif %}>Nepal</option>
+                            <option value="Netherlands" {% if (data['origin-country'] == "Netherlands") %}selected{% endif %}>Netherlands</option>
+                            <option value="New Caledonia" {% if (data['origin-country'] == "New Caledonia") %}selected{% endif %}>New Caledonia</option>
+                            <option value="New Zealand" {% if (data['origin-country'] == "New Zealand") %}selected{% endif %}>New Zealand</option>
+                            <option value="Nicaragua" {% if (data['origin-country'] == "Nicaragua") %}selected{% endif %}>Nicaragua</option>
+                            <option value="Niger" {% if (data['origin-country'] == "Niger") %}selected{% endif %}>Niger</option>
+                            <option value="Nigeria" {% if (data['origin-country'] == "Nigeria") %}selected{% endif %}>Nigeria</option>
+                            <option value="Niue" {% if (data['origin-country'] == "Niue") %}selected{% endif %}>Niue</option>
+                            <option value="Norfolk Island" {% if (data['origin-country'] == "Norfolk Island") %}selected{% endif %}>Norfolk Island</option>
+                            <option value="North Korea" {% if (data['origin-country'] == "North Korea") %}selected{% endif %}>North Korea</option>
+                            <option value="North Macedonia" {% if (data['origin-country'] == "North Macedonia") %}selected{% endif %}>North Macedonia</option>
+                            <option value="Northern Mariana Islands" {% if (data['origin-country'] == "Northern Mariana Islands") %}selected{% endif %}>Northern Mariana Islands</option>
+                            <option value="Norway" {% if (data['origin-country'] == "Norway") %}selected{% endif %}>Norway</option>
+                            <option value="Oman" {% if (data['origin-country'] == "Oman") %}selected{% endif %}>Oman</option>
+                            <option value="Pakistan" {% if (data['origin-country'] == "Pakistan") %}selected{% endif %}>Pakistan</option>
+                            <option value="Palau" {% if (data['origin-country'] == "Palau") %}selected{% endif %}>Palau</option>
+                            <option value="Panama" {% if (data['origin-country'] == "Panama") %}selected{% endif %}>Panama</option>
+                            <option value="Papua New Guinea" {% if (data['origin-country'] == "Papua New Guinea") %}selected{% endif %}>Papua New Guinea</option>
+                            <option value="Paraguay" {% if (data['origin-country'] == "Paraguay") %}selected{% endif %}>Paraguay</option>
+                            <option value="Peru" {% if (data['origin-country'] == "Peru") %}selected{% endif %}>Peru</option>
+                            <option value="Philippines" {% if (data['origin-country'] == "Philippines") %}selected{% endif %}>Philippines</option>
+                            <option value="Pitcairn" {% if (data['origin-country'] == "Pitcairn") %}selected{% endif %}>Pitcairn</option>
+                            <option value="Poland" {% if (data['origin-country'] == "Poland") %}selected{% endif %}>Poland</option>
+                            <option value="Portugal" {% if (data['origin-country'] == "Portugal") %}selected{% endif %}>Portugal</option>
+                            <option value="Puerto Rico" {% if (data['origin-country'] == "Puerto Rico") %}selected{% endif %}>Puerto Rico</option>
+                            <option value="Qatar" {% if (data['origin-country'] == "Qatar") %}selected{% endif %}>Qatar</option>
+                            <option value="Réunion" {% if (data['origin-country'] == "Réunion") %}selected{% endif %}>Réunion</option>
+                            <option value="Romania" {% if (data['origin-country'] == "Romania") %}selected{% endif %}>Romania</option>
+                            <option value="Russian Federation" {% if (data['origin-country'] == "Russian Federation") %}selected{% endif %}>Russian Federation</option>
+                            <option value="Rwanda" {% if (data['origin-country'] == "Rwanda") %}selected{% endif %}>Rwanda</option>
+                            <option value="Samoa" {% if (data['origin-country'] == "Samoa") %}selected{% endif %}>Samoa</option>
+                            <option value="San Marino" {% if (data['origin-country'] == "San Marino") %}selected{% endif %}>San Marino</option>
+                            <option value="Sao Tome and Principe" {% if (data['origin-country'] == "Sao Tome and Principe") %}selected{% endif %}>Sao Tome and Principe</option>
+                            <option value="Saudi Arabia" {% if (data['origin-country'] == "Saudi Arabia") %}selected{% endif %}>Saudi Arabia</option>
+                            <option value="Senegal" {% if (data['origin-country'] == "Senegal") %}selected{% endif %}>Senegal</option>
+                            <option value="Serbia" {% if (data['origin-country'] == "Serbia") %}selected{% endif %}>Serbia</option>
+                            <option value="Seychelles" {% if (data['origin-country'] == "Seychelles") %}selected{% endif %}>Seychelles</option>
+                            <option value="Sierra Leone" {% if (data['origin-country'] == "Sierra Leone") %}selected{% endif %}>Sierra Leone</option>
+                            <option value="Singapore" {% if (data['origin-country'] == "Singapore") %}selected{% endif %}>Singapore</option>
+                            <option value="Slovakia" {% if (data['origin-country'] == "Slovakia") %}selected{% endif %}>Slovakia</option>
+                            <option value="Slovenia" {% if (data['origin-country'] == "Slovenia") %}selected{% endif %}>Slovenia</option>
+                            <option value="Solomon Islands" {% if (data['origin-country'] == "Solomon Islands") %}selected{% endif %}>Solomon Islands</option>
+                            <option value="Somalia" {% if (data['origin-country'] == "Somalia") %}selected{% endif %}>Somalia</option>
+                            <option value="South Africa" {% if (data['origin-country'] == "South Africa") %}selected{% endif %}>South Africa</option>
+                            <option value="South Georgia and the South Sandwich Islands" {% if (data['origin-country'] == "South Georgia and the South Sandwich Islands") %}selected{% endif %}>South Georgia and the South Sandwich Islands</option>
+                            <option value="South Korea" {% if (data['origin-country'] == "South Korea") %}selected{% endif %}>South Korea</option>
+                            <option value="South Sudan" {% if (data['origin-country'] == "South Sudan") %}selected{% endif %}>South Sudan</option>
+                            <option value="Spain" {% if (data['origin-country'] == "Spain") %}selected{% endif %}>Spain</option>
+                            <option value="Sri Lanka" {% if (data['origin-country'] == "Sri Lanka") %}selected{% endif %}>Sri Lanka</option>
+                            <option value="St Barthélemy" {% if (data['origin-country'] == "St Barthélemy") %}selected{% endif %}>St Barthélemy</option>
+                            <option value="St Helena, Ascension and Tristan da Cunha" {% if (data['origin-country'] == "St Helena, Ascension and Tristan da Cunha") %}selected{% endif %}>St Helena, Ascension and Tristan da Cunha</option>
+                            <option value="St Kitts and Nevis" {% if (data['origin-country'] == "St Kitts and Nevis") %}selected{% endif %}>St Kitts and Nevis</option>
+                            <option value="St Lucia" {% if (data['origin-country'] == "St Lucia") %}selected{% endif %}>St Lucia</option>
+                            <option value="St Maarten (Dutch)" {% if (data['origin-country'] == "St Maarten (Dutch)") %}selected{% endif %}>St Maarten (Dutch)</option>
+                            <option value="St Martin (French)" {% if (data['origin-country'] == "St Martin (French)") %}selected{% endif %}>St Martin (French)</option>
+                            <option value="St Pierre and Miquelon" {% if (data['origin-country'] == "St Pierre and Miquelon") %}selected{% endif %}>St Pierre and Miquelon</option>
+                            <option value="St Vincent and the Grenadines" {% if (data['origin-country'] == "St Vincent and the Grenadines") %}selected{% endif %}>St Vincent and the Grenadines</option>
+                            <option value="Sudan" {% if (data['origin-country'] == "Sudan") %}selected{% endif %}>Sudan</option>
+                            <option value="Suriname" {% if (data['origin-country'] == "Suriname") %}selected{% endif %}>Suriname</option>
+                            <option value="Sweden" {% if (data['origin-country'] == "Sweden") %}selected{% endif %}>Sweden</option>
+                            <option value="Switzerland" {% if (data['origin-country'] == "Switzerland") %}selected{% endif %}>Switzerland</option>
+                            <option value="Syria" {% if (data['origin-country'] == "Syria") %}selected{% endif %}>Syria</option>
+                            <option value="Taiwan" {% if (data['origin-country'] == "Taiwan") %}selected{% endif %}>Taiwan</option>
+                            <option value="Tajikistan" {% if (data['origin-country'] == "Tajikistan") %}selected{% endif %}>Tajikistan</option>
+                            <option value="Tanzania" {% if (data['origin-country'] == "Tanzania") %}selected{% endif %}>Tanzania</option>
+                            <option value="Thailand" {% if (data['origin-country'] == "Thailand") %}selected{% endif %}>Thailand</option>
+                            <option value="The Gambia" {% if (data['origin-country'] == "The Gambia") %}selected{% endif %}>The Gambia</option>
+                            <option value="The Occupied Palestinian Territories" {% if (data['origin-country'] == "The Occupied Palestinian Territories") %}selected{% endif %}>The Occupied Palestinian Territories</option>
+                            <option value="Timor-Leste" {% if (data['origin-country'] == "Timor-Leste") %}selected{% endif %}>Timor-Leste</option>
+                            <option value="Togo" {% if (data['origin-country'] == "Togo") %}selected{% endif %}>Togo</option>
+                            <option value="Tokelau" {% if (data['origin-country'] == "Tokelau") %}selected{% endif %}>Tokelau</option>
+                            <option value="Tonga" {% if (data['origin-country'] == "Tonga") %}selected{% endif %}>Tonga</option>
+                            <option value="Trinidad and Tobago" {% if (data['origin-country'] == "Trinidad and Tobago") %}selected{% endif %}>Trinidad and Tobago</option>
+                            <option value="Tunisia" {% if (data['origin-country'] == "Tunisia") %}selected{% endif %}>Tunisia</option>
+                            <option value="Turkey" {% if (data['origin-country'] == "Turkey") %}selected{% endif %}>Turkey</option>
+                            <option value="Turkmenistan" {% if (data['origin-country'] == "Turkmenistan") %}selected{% endif %}>Turkmenistan</option>
+                            <option value="Turks and Caicos Islands" {% if (data['origin-country'] == "Turks and Caicos Islands") %}selected{% endif %}>Turks and Caicos Islands</option>
+                            <option value="Tuvalu" {% if (data['origin-country'] == "Tuvalu") %}selected{% endif %}>Tuvalu</option>
+                            <option value="Uganda" {% if (data['origin-country'] == "Uganda") %}selected{% endif %}>Uganda</option>
+                            <option value="Ukraine" {% if (data['origin-country'] == "Ukraine") %}selected{% endif %}>Ukraine</option>
+                            <option value="United Arab Emirates" {% if (data['origin-country'] == "United Arab Emirates") %}selected{% endif %}>United Arab Emirates</option>
+                            <optgroup label="United Kingdom of Great Britain and Northern Ireland">
+                                    <option value="England" {% if (data['origin-country'] == "England") %}selected{% endif %}>England</option>
+                                    <option value="Scotland" {% if (data['origin-country'] == "Scotland") %}selected{% endif %}>Scotland</option>
+                                    <option value="Wales" {% if (data['origin-country'] == "Wales") %}selected{% endif %}>Wales</option>
+                                    <option value="Northern Ireland" {% if (data['origin-country'] == "Northern Ireland") %}selected{% endif %}>Northern Ireland</option>
+                            </optgroup>
+                            <option value="United States Minor Outlying Islands" {% if (data['origin-country'] == "United States Minor Outlying Islands") %}selected{% endif %}>United States Minor Outlying Islands</option>
+                            <option value="United States of America" {% if (data['origin-country'] == "United States of America") %}selected{% endif %}>United States of America</option>
+                            <option value="Uruguay" {% if (data['origin-country'] == "Uruguay") %}selected{% endif %}>Uruguay</option>
+                            <option value="Uzbekistan" {% if (data['origin-country'] == "Uzbekistan") %}selected{% endif %}>Uzbekistan</option>
+                            <option value="Vanuatu" {% if (data['origin-country'] == "Vanuatu") %}selected{% endif %}>Vanuatu</option>
+                            <option value="Venezuela" {% if (data['origin-country'] == "Venezuela") %}selected{% endif %}>Venezuela</option>
+                            <option value="Viet Nam" {% if (data['origin-country'] == "Viet Nam") %}selected{% endif %}>Viet Nam</option>
+                            <option value="Virgin Islands of the United States" {% if (data['origin-country'] == "Virgin Islands of the United States") %}selected{% endif %}>Virgin Islands of the United States</option>
+                            <option value="Wallis and Futuna" {% if (data['origin-country'] == "Wallis and Futuna") %}selected{% endif %}>Wallis and Futuna</option>
+                            <option value="Western Sahara" {% if (data['origin-country'] == "Western Sahara") %}selected{% endif %}>Western Sahara</option>
+                            <option value="Yemen" {% if (data['origin-country'] == "Yemen") %}selected{% endif %}>Yemen</option>
+                            <option value="Zambia" {% if (data['origin-country'] == "Zambia") %}selected{% endif %}>Zambia</option>
+                            <option value="Zimbabwe" {% if (data['origin-country'] == "Zimbabwe") %}selected{% endif %}>Zimbabwe</option>
+              </select>
+              
+            </div>
+          </div>
+</div>
+         
+        </div>
+       
+        <div class="govuk-form-group" id="region-code-field">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Does the consignment require a region of origin code?
+            </legend>
+        
+            <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
+              This is only required if the consignment needs a health certificate that shows a region of origin code.
+            </span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-code-yes" name="region-code-option" type="radio" value="true" aria-controls="conditional-region-code-yes" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="region-code-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-region-code-yes">
+                <div class="govuk-form-group ">
+                  <label class="govuk-label govuk-label--m" for="region-code">
+                      Enter the region code
+                  </label>
+                  
+                  <span class="region-code" id="region-code-input">
+                  <span id="region-code-box" class="region-code-box">DZ</span>
+                  <strong class="region-code-divider">-</strong>
+                </span>
+                  <input class="govuk-input govuk-input--width-3 " id="region-code" name="region-code" type="text" maxlength="3" value="">
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="region-code-no" name="region-code-option" type="radio" value="false" checked="">
+                <label class="govuk-label govuk-radios__label" for="region-code-no">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+            <!-- <div class="govuk-form-group  ">
+              <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
+                    
+                    Will the consignment change vehicles or the means of transport after the Border Control Post (BCP)?
+                </legend>
+            
+                  
+            
+            
+                
+            
+                <div class="govuk-radios ">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="transport-details-required" name="transport-details-required" type="radio" value="true">
+                      <label class="govuk-label govuk-radios__label " for="transport-details-required">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="transport-details-required-2" name="transport-details-required" type="radio" value="false" checked>
+                      <label class="govuk-label govuk-radios__label " for="transport-details-required-2">
+                        No
+                      </label>
+                    </div>
+                </div>
+              </fieldset>
+            </div> -->
+            <div class="govuk-form-group  ">
+                
+                <label class="govuk-label govuk-label--m" for="local-reference-number">
+                  Add a reference number for this consignment (optional)
+                </label>
+                
+            
+                <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
+                  Enter any internal reference number you want to use to identify this consignment, or leave blank.
+                </span>
+            
+                
+            
+              <input class="govuk-input govuk-!-width-one-half" id="local-reference-number" name="local-reference-number" type="text" value="" aria-describedby="local-reference-number-hint">
+            </div>
+
+            {% if (data['from'] == "review") %}
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button">
+            {% else %}  
+            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+            {% endif %}
+      </form>
+    
+    </div>
+  </div>
+</main>
+
+{% endblock %}
