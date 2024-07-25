@@ -191,20 +191,7 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                       {% endif %}
                     </div>
                   </li>
-                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
-                    <div class="govuk-task-list__name-and-hint">
-                      <a class="govuk-link govuk-task-list__link" href="05-02-transit-port-of-exit" aria-describedby="prepare-application-2-status">Transit to the port of exit</a>
-                    </div>
-                    <div class="govuk-task-list__status" id="prepare-application-2-status">
-                      {% if (data['11-transport-to-poe'] == "visited") %}
-                        Completed
-                      {% else %}
-                      <strong class="govuk-tag-new govuk-tag--grey">
-                        Not started
-                      </strong>
-                      {% endif %}
-                    </div>
-                  </li>
+                 
                   <li class="govuk-task-list__item govuk-task-list__item--with-link">
                     <div class="govuk-task-list__name-and-hint">
                       <a class="govuk-link govuk-task-list__link" href="/chedp/2023-12-single-chedp/16-transport-after-bcp" aria-describedby="prepare-application-2-status">Transport after the Border Control Post (BCP)</a>
@@ -217,6 +204,20 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
                       Not started
                     </strong>
                     {% endif %}
+                    </div>
+                  </li>
+                  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                      <a class="govuk-link govuk-task-list__link" href="05-02-transit-port-of-exit" aria-describedby="prepare-application-2-status">Transit to the port of exit</a>
+                    </div>
+                    <div class="govuk-task-list__status" id="prepare-application-2-status">
+                      {% if (data['05-03-transit-to-poexit'] == "visited") %}
+                        Completed
+                      {% else %}
+                      <strong class="govuk-tag-new govuk-tag--grey">
+                        Not started
+                      </strong>
+                      {% endif %}
                     </div>
                   </li>
                   <li class="govuk-task-list__item govuk-task-list__item--with-link">
