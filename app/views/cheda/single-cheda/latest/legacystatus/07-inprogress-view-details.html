@@ -51,17 +51,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
     </span>
   </div>
 
-  <div class="alert-dashboard-summary" role="alert" aria-labelledby="alert-dashboard-summary-list" tabindex="-1" id="alerts-box">
-    <h2 class="govuk-heading-m alert-dashboard-summary-heading">You can no longer submit or amend this draft notification</h2>
-    <h2 class="govuk-body alert-dashboard-summary-heading"> Our import notification process has now changed, and this draft notification is no longer valid.
-      If you still want to import this consignment, you'll need to <a href="#" class="govuk-link">create a new notification</a>.       
-  
-  </h2></div>
-
-
-
-
-
 
   <main class="govuk-main-wrapper" id="main-content">
     <div class="govuk-grid-row">
@@ -98,13 +87,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             <button type="submit" name="submit_param" value="Copy as new" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">Copy as new</button>
           </form>
     
-          <form action="08-03-review-submitted-editable" method="post" class="govuk-!-display-inline">
-            <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
-            <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
-            <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
-              Amend
-            </button>
-          </form>
     
           <form action="#" method="post" class="govuk-!-display-inline">
             <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
@@ -114,9 +96,6 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
             </button>
           </form>
     
-          <a href="#" id="delete-notification" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3">
-            Delete notification
-          </a>
       </div>
 
 
@@ -965,6 +944,25 @@ Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
            
   
 
+              <table class="govuk-table presentation-table review-table" id="submission-table">
+                <caption class="govuk-table__caption govuk-heading-m">
+                  Submission information
+                </caption>
+                <tbody>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Notification submitted by</th>
+                    <td class="govuk-table__cell" id="submitted-by-name">Mark Admin-Tester</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Submission date</th>
+                    <td class="govuk-table__cell" id="submission-date"> 29 July 2024</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Submission time</th>
+                    <td class="govuk-table__cell" id="submission-time">18:29</td>
+                  </tr>
+                </tbody>
+              </table>
 
           
       </div>
