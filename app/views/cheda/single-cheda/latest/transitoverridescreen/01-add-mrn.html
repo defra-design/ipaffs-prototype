@@ -22,28 +22,12 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="bip-for-transport-page">
     <div class="govuk-grid-column-three-quarters">
-     
+      
       <h1 class="govuk-heading-xl " id="page-primary-title">Add NCTS movement reference number (MRN)</h1>
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-
-
-
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ctc">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-label--s">
-            Movement Reference Number (MRN)
-          </label>
-          <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
-            It is 18 characters, starting with 2 numbers, a 2-letter country code then 14 letters and numbers.
-            For example, 24GB123456789AB012.
-          </span>
-          <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mrn" spellcheck="false">
-        </div>
-      </div>
-
 
 
       <form action="05-04-transporter" method="post">
@@ -56,24 +40,66 @@ Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="ctc-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-grid-column-two-thirds">
-              <h1 class="govuk-fieldset__heading">
-                Movement Reference Number (MRN)
-              </h1>
+              
             </legend>
             <div class="govuk-hint govuk-!-width-two-thirds">
-              It is 18 characters, starting with 2 numbers, a 2-letter country code then 14 letters and numbers.
-            For example, 24GB123456789AB012.
+              This consignment is using the Common Transit Convention (CTC). If you don't add the NCTS Movement Reference Number it may be delayed.
             </div>
-
-            <div><input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mrn" spellcheck="false">
-          </div>
-
-          <button class="govuk-button govuk-!-margin-top-6 submit-button" type="submit" data-prevent-double-click="true" value="Submit decision" id="submit-decision">Save and continue</button>
-
-
-           
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="ctc" name="ctc" type="radio" value="Yes &ndash; add MRN now"
+                  data-aria-controls="conditional-ctc">
+                <label class="govuk-label govuk-radios__label" for="ctc">
+                  Add MRN 
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ctc">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s">
+                    Movement Reference Number (MRN)
+                  </label>
+                  <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds">
+                    It is 18 characters, starting with 2 numbers, a 2-letter country code then 14 letters and numbers.
+                    For example, 24GB123456789AB012.
+                  </span>
+                  <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mrn" spellcheck="false">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="ctc-3" name="ctc" type="radio" value="Yes &ndash; add MRN later">
+                <label class="govuk-label govuk-radios__label" for="ctc-3">
+                  The consignment is no longer using CTC
+                </label>
+              </div>
+              
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Phone number
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone"
+                    type="tel" autocomplete="tel">
+                </div>
+              </div>
+            </div>
           </fieldset>
+        
+        </div>
+
       
+
+        <div class="govuk-!-margin-top-6">
+          {% if data['from-page'] == "review" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button"
+            formaction="08-01-review">
+          {% else %}
+         
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+            name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel </a></p>
+          {% endif %}
+        </div>
         
         <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
         <input name="etag" type="hidden" value="&quot;0000000004C7A4E0&quot;">
