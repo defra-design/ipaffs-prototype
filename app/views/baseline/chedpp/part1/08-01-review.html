@@ -160,15 +160,6 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                       <a href="01-05-purpose" class="govuk-link" id="consignment-purpose-change-link">Change</a>
                 </td>
               </tr>
-              <tr class="presentation-table__row--no-border">
-                <th scope="row" class="govuk-table__header">Movement Reference Number (MRN)</th>
-                <td class="govuk-table__cell" id="purpose-of-consignment-value">
-                  23GB1234567890ABCD
-                </td>
-                <td class="govuk-table__cell change">
-                      
-                </td>
-              </tr>
               </tbody>
             </table>
           </div>
@@ -288,10 +279,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__cell" colspan="2"></td>
                   </tr>
             
-                  <tr>
-                    <td class="govuk-table__header">Will your goods be imported in shipping containers?</td>
-                    <td class="govuk-table__cell" id="imported-in-containers" colspan="2">No</td>
-                  </tr>
+                  
             
                   </tbody>
                 </table>
@@ -302,7 +290,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
           
           <div class="heading-with-change-link">
-            <h2 class="govuk-heading-m">Transport to the border control post (BCP)</h2>
+            <h2 class="govuk-heading-m">Transport to the Border Control Post (BCP)</h2>
             <a href="05-01a-transport-to-bcp-added" class="govuk-link" id="transport-to-bip-change-link">
               Change
             </a>
@@ -320,7 +308,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
               <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
               <tbody>
               <tr class="">
-                <th scope="row" class="govuk-table__header">Border Control Post</th>
+                <th scope="row" class="govuk-table__header">Entry Border Control Post</th>
                 <td class="govuk-table__cell">Dover Port (plants) - GBDOV1PP</td>
               </tr>
                 <tr class="">
@@ -329,11 +317,27 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                 </tr>
               <tr class="">
                 <th scope="row" class="govuk-table__header">Means of transport to the BCP</th>
-                <td class="govuk-table__cell">Road vehicle</td>
+                <td class="govuk-table__cell">Vessel</td>
               </tr>
               <tr class="">
                 <th scope="row" class="govuk-table__header">Transport identification</th>
-                <td class="govuk-table__cell">GHH-43789234742</td>
+                <td class="govuk-table__cell">Stena</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Using road trailers or containers?</th>
+                <td class="govuk-table__cell">Yes</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Trailer or container number</th>
+                <td class="govuk-table__cell">ABC123</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Seal number</th>
+                <td class="govuk-table__cell">GB 32457</td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="govuk-table__header">Official seal</th>
+                <td class="govuk-table__cell">Yes</td>
               </tr>
               <tr class="">
                 <th scope="row" class="govuk-table__header">Transport document reference</th>
@@ -354,6 +358,45 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
           </div>
+
+          <div class="heading-with-change-link">
+            <h2 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h2>
+            <a href="05-02-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">
+              Change
+            </a>
+          </div>
+
+          <div class="table-responsive govuk-!-margin-bottom-9">
+            <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">
+              <caption class="govuk-visually-hidden">Summary of transport to the port of entry</caption>
+
+              <tbody>
+                <tr>
+                  <td class="govuk-table__header">Using the Common Transit Convention (CTC)</td>
+                  <td class="govuk-table__cell" id="region-of-consignment-value">
+                    Yes &ndash; add MRN now
+                  </td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+                <tr>
+                  <td class="govuk-table__header">Movement Reference Number (MRN)</td>
+                  <td class="govuk-table__cell" id="region-of-consignment-value">
+                    23GB1234567890ABCD
+                  </td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="">
+                  <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)</th>
+                  <td class="govuk-table__cell">Yes</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
+
+
+
+
           <div class="heading-with-change-link">
             <h2 class="govuk-heading-m">Contact details</h2>
                 <a href="06-01-contact" class="govuk-link" id="responsible-person-contact-details-change-link">

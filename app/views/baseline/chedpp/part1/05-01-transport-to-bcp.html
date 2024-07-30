@@ -961,13 +961,88 @@
                 </label>
                 
             
-                <span id="identification-hint" class="govuk-hint">
-                  To identify the means of transport, enter (one of the following):<ul><li>flight number</li><li>train number</li><li>road vehicle registration number</li><li>vessel name (for ferries, also the road vehicle registration number)</li></ul>
-                </span>
+                <div id="identification-hint" class="govuk-hint">
+                  <p class="govuk-hint">To identify the means of transport, enter (one of the following):</p>
+                  <ul class="govuk-list govuk-list--bullet govuk-hint">
+                    <li>flight number</li>
+                    <li>train number</li>
+                    <li>road vehicle registration number</li>
+                    <li>vessel name (for ferries, also the road vehicle registration number)</li>
+                  </ul>
+                </div>
             
                 
             
               <input class="govuk-input govuk-!-width-one-half " id="identification" name="identification" type="text" value="" aria-describedby="identification-hint">
+            </div>
+
+            <div class="govuk-form-group ">
+              <fieldset class="govuk-fieldset" aria-describedby="road-trailers-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading govuk-!-width-two-thirds">
+                    Are any road trailers or shipping containers being used to transport the consignment?
+                  </h2>
+                </legend>
+                <div id="road-trailers-hint" class="govuk-hint govuk-!-width-two-thirds">
+                  Provide details of all road trailers and containers or your consignment may be delayed. You may need to contact your haulier for this.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="road-trailers" name="road-trailers" type="radio" value="yes" data-aria-controls="conditional-road-trailers">
+                    <label class="govuk-label govuk-radios__label" for="road-trailers">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-road-trailers">
+                    <div class="govuk-hint govuk-!-width-two-thirds">
+                      <!--Provide a trailer registration number or seal number.-->
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="vessel-name">
+                        Container or trailer number
+                      </label>
+                      <div class="govuk-hint govuk-!-width-two-thirds">
+                        Enter the container identification number, or the trailer registration number or number plate.
+                      </div>
+                      <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="vessel-name">
+                        Seal number
+                      </label>
+                      <div class="govuk-hint govuk-!-width-two-thirds">
+                        Enter the seal number on the official certificate or any other seal mentioned in the accompanying documents.
+                      </div>
+                      <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
+                    </div>
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                        <label class="govuk-label" for="vessel-name">
+                          Official seal
+                        </label>
+                        <div id="waste-hint" class="govuk-hint govuk-!-width-two-thirds">
+                          An official seal is affixed under the supervision of the competent authority issuing the certificate.
+                        </div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste">
+                              
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <p class="govuk-body govuk-!-margin-top-3 govuk-!-padding-bottom-3"><a href="#" class="govuk-link">Add another container or trailer</a></p>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="road-trailers-3">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
             </div>
 
             <div class="govuk-form-group  ">
@@ -977,7 +1052,7 @@
                 </label>
                 
             
-                <span id="document-hint" class="govuk-hint">
+                <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">
                   Enter the reference number on the air waybill, bill of lading, sea waybill, road consignment note (CMR) or other transport document.
                 </span>
             
@@ -1033,7 +1108,6 @@
               <div class="govuk-form-group ">
                 <fieldset class="govuk-fieldset">
                   <legend class="hidden govuk-visually-hidden">Time entry:</legend>
-                  <span class="govuk-hint"></span>
             
                   <div class="govuk-date-input" id="arrival-time">
                     <div class="govuk-date-input__item date-input-hour">
@@ -1061,7 +1135,7 @@
         <form method="POST" action="00-notification-hub" class="govuk-!-display-inline">
           <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" value="Save and return to hub" data-module="govuk-button" data-prevent-double-click="true">Save and return to hub</button>
           </form>
-          <form method="POST" action="06-01-contact" class="govuk-!-display-inline">
+          <form method="POST" action="05-02-goods-movement-services" class="govuk-!-display-inline">
           <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
           <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
   </form>
