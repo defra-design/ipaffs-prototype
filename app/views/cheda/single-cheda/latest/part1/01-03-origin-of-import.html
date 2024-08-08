@@ -300,8 +300,9 @@
                   Does the consignment require a region of origin code?
                 </legend>
                 <span id="local-reference-number-hint" class="govuk-hint">
-                  The code will be on the health certificate if required.
-                </span>
+                  If a region of origin code is required it will be 
+                  shown on your health certificate.               
+                 </span>
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="region-code-yes" name="region-code-option" type="radio" value="true" aria-controls="conditional-region-code-yes" aria-expanded="false">
@@ -315,6 +316,10 @@
                         Enter the region of origin code
                       </label>
                       
+                      <span id="local-reference-number-hint" class="govuk-hint">
+                        Enter up to 5 characters.               
+                       </span>
+
                       <span class="region-code" id="region-code-input">
                       <span id="region-code-box" class="region-code-box">IN</span>
                       <strong class="region-code-divider">-</strong>
