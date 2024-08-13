@@ -12,7 +12,28 @@
 
 {% block content %}
 
-<div class="govuk-!-padding-top-6">
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      Please fix the following errors
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+        <li>
+          <a href="#point-of-exit">Enter the point of exit</a>
+        </li>
+        <li>
+          <a href="#date-consignment-will-leave">Enter the date the consignment will leave Great Britain</a>
+        </li>
+        <li>
+          <a href="#time-consignment-will-leave">Enter the time the consignment will leave Great Britain</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-!-padding-top-3">
   <span class="heading-tertiary">
       <span id="reference-number">DRAFT.GB.2023.2987635</span>
           <span> - CHEDD</span>
@@ -70,18 +91,24 @@
                               </div>
                             </div>
                             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-landbridge-movement">
-                              <div class="govuk-form-group ">
+                              <div class="govuk-form-group govuk-form-group--error">
                                 <label class="govuk-label govuk-label--s" for="bcp-transfer-to">
                                   Point of exit
                                 </label>
                                 <div id="sign-in-hint" class="govuk-hint">
                                   Place of departure from Great Britain
                                 </div>
+                                <p id="point-of-exit" class="govuk-error-message">
+                                  <span class="govuk-visually-hidden">Error:</span> Enter the point of exit
+                                </p>
                                 <input class="govuk-input" id="event-name" name="eventName" type="text">
                               </div>
-                              <div class="govuk-form-group">
+                              <div class="govuk-form-group govuk-form-group--error">
                                 <fieldset class="govuk-fieldset" role="group">
                                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">When the consignment will leave Great Britain</legend>
+                                  <p id="date-consignment-will-leave" class="govuk-error-message">
+                                    <span class="govuk-visually-hidden">Error:</span> Enter the date the consignment will leave Great Britain
+                                  </p>
                                   <div id="sign-in-hint" class="govuk-hint">
                                     For example, 27 3 2023
                                   </div>
@@ -108,7 +135,10 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div id="passport-issued-hint" class="govuk-hint govuk-!-margin-top-6">
+                                  <p id="time-consignment-will-leave" class="govuk-error-message govuk-!-margin-top-6">
+                                    <span class="govuk-visually-hidden">Error:</span> Enter the time the consignment will leave Great Britain
+                                  </p>
+                                  <div id="passport-issued-hint" class="govuk-hint govuk-!-margin-top-3">
                                     24-hour format, for example, 14 50
                                   </div>
                                   <div class="govuk-date-input" id="passport-issued">
