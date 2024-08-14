@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What are you importing? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "x-ched/cuc-ci/ur/includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row" id="consignment-on-behalf-of-page">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl" id="page-secondary-title">About the consignment</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Which company is this notification for</h1>
+
+      <form method="post" action="01-no-check-answers">
+        <input name="crumb" type="hidden" value="lioe2I2YkWQmGxT3_2pvk5F8odSOjid-pz9MR0bF2_f">
+        <input id="notification-type" type="hidden" name="notification-type" value="CHEDPP">
+
+          <div class="govuk-form-group  ">
+              
+          
+              <div class="govuk-radios ">
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="organisation-1" name="organisation" type="radio" value="organisation-1">
+                          <label class="govuk-label govuk-radios__label " for="organisation-1">
+                              <strong>Masters of Gardens</strong><br>
+                              24 OAK LANE<br>
+                              CRENDELL<br>
+                              SP6 9NM
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="organisation-2" name="organisation" type="radio" value="organisation-2">
+                          <label class="govuk-label govuk-radios__label " for="organisation-2">
+                              <strong>Plants and Trees Nurseries</strong><br>
+                              NORTH PROSPECTS RETAIL PARK<br>
+                              DAFFODIL ROAD<br>BASINGSTOKE<br>
+                              RG21 7DB
+                          </label>
+                      </div>
+              </div>
+          </div>
+
+          <button class="govuk-button" id="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
