@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index">IPAFFS prototypes</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../start">Single CHED-A</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          UR 1st round
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Single CHED-A</h1>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Version
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UR 1st round
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <strong class="govuk-tag govuk-tag--yellow">
+            UR completed
+          </strong>
+        </dd>
+      </div>
+    </dl>
+    <div class="govuk-inset-text" style=" background-color:rgb(250, 246, 220);">
+      <p>You need to use one of these commodity codes in the search commodities field:</p>
+      <ul>
+        <li>0103 for the pigs scenario</li>
+        <li>01061900 for the dogs scenario</li>
+      </ul>
+    </div>
+    
+    <h2 class="govuk-heading-m">Part 1</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="part1/0-index">Dashboard</a></li>
+      <li><a href="part1/0-index-more-filters">Dashboard with more filters link</a> (for testing)</li>
+      <li><a href="part1/00-notification-hub">Notification hub</a></li>
+      <li><a href="part1/08-01-review">Review your notification</a></li>
+      <li><a href="part1/09-01-declaration.html">Declaration</a></li>
+      <li><a href="part1/10-01-submitted"> Confirmation - EU</a></li>
+    </ul>
+
+    {% endblock %}
