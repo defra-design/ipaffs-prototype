@@ -62,6 +62,7 @@ router.use('/part-1-chedp/iuu-final', require('./views/part-1-chedp/iuu-final/_r
 
 // ched a routes
 router.use('/cheda/part-1-latest', require('./views/cheda/part-1-latest/_routes'))
+router.use('/cheda/single-cheda/v1/part1', require('./views/cheda/single-cheda/v1/part1/_routes'))
 router.use('/cheda/single-cheda/latest/part1', require('./views/cheda/single-cheda/latest/part1/_routes'))
 
 // ched d routes

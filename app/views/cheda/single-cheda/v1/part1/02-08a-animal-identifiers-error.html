@@ -1,0 +1,144 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {%
+endblock %} {% block beforeContent %} {% include "includes/phase-banner.html" %}
+{% include "includes/back.html" %} {% endblock %} {% block content %}
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+    <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+    <span> - CHEDA</span>
+  </span>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="commodity-identifiers-page">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">There is a problem</h2>
+          <div class="govuk-error-summary__body">
+            <p class="govuk-body">
+              To enter animal identification details you must first enter the
+              number of animals.
+            </p>
+            <ul
+              class="govuk-list govuk-error-summary__list govuk-!-margin-left-0"
+            >
+              <li>
+                <a href="02-06-commodity-details"
+                  >Enter the number of animals</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <span class="govuk-caption-xl">Description of the goods</span>
+      <h1
+        class="govuk-heading-xl govuk-!-margin-bottom-4"
+        id="page-primary-title"
+      >
+        Enter animal identification details
+      </h1>
+      <div class="govuk-hint govuk-!-margin-bottom-4">
+        Enter the identification details you have for the animal. You must enter
+        these details into the notification before arrival at the port of entry.
+      </div>
+
+      <form action="03-02-latest-health-cert" method="post">
+        <div class="table-responsive">
+          <table
+            class="govuk-table commodity-overview"
+            id="commodities-overview"
+          >
+            <thead class="govuk-table__head">
+              <tr>
+                <th class="govuk-table__header commodity-code">
+                  Commodity code
+                </th>
+                <th class="govuk-table__header commodity-description">
+                  Description
+                </th>
+                <th class="govuk-table__header species">Species and type</th>
+                <th class="govuk-table__header">Number of animals</th>
+                <td class="govuk-table__header"></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="form-group govuk-table__cell">0101</td>
+                <td class="govuk-table__cell">
+                  Live horses, asses, mules and hinnies
+                </td>
+                <td class="govuk-table__cell">Equus caballus</td>
+                <td class="govuk-table__cell"></td>
+                <td class="change govuk-table__cell">
+                  <button
+                    type="submit"
+                    name="action"
+                    value="Change"
+                    class="link-button"
+                    id="Change-0101-147603"
+                    aria-label="Change quantities of Equus caballus"
+                  >
+                    Change
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="form-group govuk-table__cell">010420</td>
+                <td class="govuk-table__cell">Goats</td>
+                <td class="govuk-table__cell">Capra hircus, Domestic</td>
+                <td class="govuk-table__cell"></td>
+                <td class="change govuk-table__cell">
+                  <button
+                    type="submit"
+                    name="action"
+                    value="Change"
+                    class="link-button"
+                    id="Change-010420-276885"
+                    aria-label="Change quantities of Capra hircus"
+                  >
+                    Change
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="govuk-!-margin-top-6">
+          <input
+            class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4"
+            id="save-and-return-button"
+            name="save-and-return-button"
+            type="submit"
+            formaction="00-notification-hub"
+            value="Save and return to hub"
+            data-module="govuk-button"
+          />
+          <input
+            class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4"
+            id="button-save-and-continue"
+            name="button-save-and-continue"
+            type="submit"
+            value="Save and continue"
+            data-module="govuk-button"
+          />
+        </p>
+        <p class="govuk-body">
+          <a class="govuk-link" href="00-notification-hub"
+            >Cancel and return to hub</a
+          >
+        </p>
+        <p></p>
+        <input
+          name="crumb"
+          type="hidden"
+          value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU"
+        />
+        <input name="etag" type="hidden" value='"0000000004C7A4E0"' />
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
