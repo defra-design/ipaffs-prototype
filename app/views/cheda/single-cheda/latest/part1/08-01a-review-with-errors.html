@@ -94,6 +94,10 @@ GOV.UK Prototype Kit
                 destination</a>
             </li>
             <li>
+              <a class="" id="error-description-12" href="#organisation-branch-address-change-link">Add the contact address for
+                consignment</a>
+            </li>
+            <li>
               <a class="" id="error-description-0" href="#partone/pointofentry">Add the port of entry</a>
             </li>
             <li>
@@ -120,11 +124,6 @@ GOV.UK Prototype Kit
               <a class="" id="error-description-11" href="#meansoftransportfromentrypoint/type">Add the means of
                 transport to port of entry</a>
             </li>
-            <li>
-              <a class="" id="error-description-12" href="#personresponsible/address">Add the contact address for
-                consignment</a>
-            </li>
-            
             <li>
               <a class="" id="error-description-14" href="#partone/providectcmrn">Select if using the Common Transit
                 Convention (CTC)</a>
@@ -582,13 +581,13 @@ GOV.UK Prototype Kit
     <div class="heading-with-change-link govuk-!-margin-top-8">
       <h3 class="govuk-heading-m">Consignor or Exporter, Consignee, Importer and Place of Destination</h3>
       <a href="04-01-addresses?from-page=review" class="govuk-link" id="traders-change-link">
-        Change
+        Change<span class="govuk-visually-hidden"> the consignor or exporter, consignee, importer and place of destination</span>
       </a>
     </div>
-    <span class="govuk-error-message" id="partone/consignor">Who is the consignor or exporter</span>
-    <span class="govuk-error-message" id="partone/consignee">Who is the consignee</span>
-    <span class="govuk-error-message" id="partone/importer">Who is the importer</span>
-    <span class="govuk-error-message" id="partone/placeofdestination">What is the place of destination</span>
+    <span class="govuk-visually-hidden">Error:</span> <span class="govuk-error-message" id="partone/consignor">Who is the consignor or exporter</span>
+    <span class="govuk-visually-hidden">Error:</span> <span class="govuk-error-message" id="partone/consignee">Who is the consignee</span>
+    <span class="govuk-visually-hidden">Error:</span> <span class="govuk-error-message" id="partone/importer">Who is the importer</span>
+    <span class="govuk-visually-hidden">Error:</span> <span class="govuk-error-message" id="partone/placeofdestination">What is the place of destination</span>
     <div class="table-responsive govuk-!-margin-bottom-9">
       <table class="govuk-table presentation-table review-table" id="review-table-traders" role="presentation">
         <tbody>
@@ -704,21 +703,18 @@ GOV.UK Prototype Kit
     <div class="heading-with-change-link">
       <h3 class="govuk-heading-m" id="organisation-address-section-heading">Contact address for consignment</h3>
       <a href="06-03-contact-address?from-page=review" class="govuk-link" id="organisation-branch-address-change-link">
-        Change
+        Change<span class="govuk-visually-hidden"> contact address for consignment</span> 
       </a>
     </div>
+    <span class="govuk-visually-hidden">Error:</span> <span class="govuk-error-message" id="personresponsible/address">Add the contact address for consignment</span>
     <div class="table-responsive govuk-!-margin-bottom-9">
       <table class="govuk-table presentation-table review-table" id="review-table-organisation-address"
         role="presentation">
         <tbody>
-          <tr>
+          <tr class="table-row--error">
             <td class="govuk-table__header" id="organisation-address-header">Contact address</td>
             <td class="govuk-table__cell" id="organisation-branch-address-address">
-              {% if data['commodity-code'] == "01061900" %}
-              The Ridgeway, Linconshire, LN6 5PH, 0044 1552 463789
-              {% else %}
-              Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, 0044 1582 996774
-              {% endif %}
+              
             <td class="govuk-table__cell change">
             </td>
           </tr>
