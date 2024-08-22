@@ -15,7 +15,32 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 
-
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-full">
+        <li>
+          <a href="commodity-details.html">Select the country of origin of the certificate</a>
+        </li>
+        <li>
+          <a href="commodity-details.html">You must enter the certificate reference number</a>
+        </li>
+        <li>
+          <a href="commodity-details.html">Enter the certificate date of issue</a>
+        </li>
+        <li>
+          <a href="commodity-details.html">You must enter the first four digits of any commodity code from this consignment</a>
+        </li>
+        <li>
+          <a href="commodity-details.html">You must enter consignor, consignee or importer name</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 <main class="govuk-main-wrapper" id="main-content">
@@ -24,12 +49,15 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       <h1 class="govuk-heading-xl" id="page-primary-title">Certificate details</h1>
         <p class="govuk-hint">We will use these details to search for a 
           matching digital health certificate.</p>
-      <form action="route-validate-reference-number" method="POST">
+      <form action="04-certificate-not-found-page" method="POST">
         <input name="crumb" type="hidden" value="sRPf_jHCxvtcBJbhiwNum4T6RHL7aiD-XytFlRq3FbI">
 
-        <div class="govuk-form-group ">
+        <div class="govuk-form-group govuk-form-group--error ">
           <label class="govuk-label govuk-label--m govuk-!-margin-top-7" for="country-of-origin">Country of origin of certificate</label>
           <span class="govuk-hint">Select a country from the list of available countries</span>
+          <p id="country-of-origin-line-1-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select the country of origin of the certificate
+          </p>
           
           <select class="govuk-select govuk-!-width-one-half" id="country-of-origin" name="country-of-origin">
             <option value="">Select a country</option>
@@ -71,20 +99,22 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
           </select>
         </div>
 
-        <div class="govuk-form-group  ">
-            
-            <label class="govuk-label govuk-label--m" for="certificate-reference">
-              Certificate reference number
-            </label>
-          <input class="govuk-input govuk-!-width-one-half " id="certificate-reference" name="certificate-reference" type="text" value="" autocomplete="certificate-reference">
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label govuk-label--m" for="certificate-reference">
+            Certificate reference number
+          </label>
+          <p id="certificate-reference-line-1-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> You must enter the certificate reference number
+          </p>
+          <input class="govuk-input govuk-!-width-one-half" id="certificate-reference-line-1" name="certificate-reference-line-1" type="text" autocomplete="certificate-reference-line-1">
         </div>
-
-        
-
-       
-          <div class="govuk-form-group">
+    
+          <div class="govuk-form-group govuk-form-group--error">
             <fieldset class="govuk-fieldset" role="group">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Certificate date of issue</legend>
+              <p id="date-of-issue-line-1-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter the certificate date of issue
+              </p>
               <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
 
                 <div class="govuk-date-input__item date-input-day">
@@ -116,19 +146,17 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
             </fieldset>
           </div>
        
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label govuk-label--m" for="commodity-code">
+              Enter the first four digits of any commodity code from this consignment
+            </label>
+            <p id="commodity-code-line-1-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>You must enter the first four digits of any commodity code from this consignment
+            </p>
+            <input class="govuk-input govuk-!-width-one-half" id="commodity-code-line-1" name="commodity-code-line-1" type="text" autocomplete="commodity-code-line-1">
+          </div>
 
-
-
-      <div class="govuk-form-group  ">
-            
-        <label class="govuk-label govuk-label--m" for="certificate-reference">
-          Enter the first four digits of any commodity code from this consignment
-        </label>
-       
-      <input class="govuk-input govuk-!-width-one-quarter " id="certificate-reference" name="certificate-reference" type="text" value="" autocomplete="certificate-reference">
-    </div>
-
-    <div class="govuk-form-group  ">
+    <div class="govuk-form-group govuk-form-group--error">
             
       <label class="govuk-label govuk-label--m" for="certificate-reference">
         Enter consignor, consignee or importer name
@@ -150,15 +178,13 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
             </ul>
         </div>
       </details> -->
-
-    <input class="govuk-input govuk-!-width-one-half " id="certificate-reference" name="certificate-reference" type="text" value="" autocomplete="certificate-reference">
+      <p id="enter-consignor-line-1-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> You must enter consignor, consignee or importer name
+      </p>
+    <input class="govuk-input govuk-!-width-one-half " id="enter-consignor" name="enter-consignor">
   </div>
 
 
-
-
-
-        
         <input name="cert-type" type="hidden" value="CVEDA">
         <button class="govuk-button govuk-!-margin-top-7" type="submit" value="Search" id="search" data-prevent-double-click="true">Search</button>
       </form>
