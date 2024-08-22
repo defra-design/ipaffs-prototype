@@ -122,7 +122,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-form-group  ">
             
         <label class="govuk-label govuk-label--m" for="certificate-reference">
-          Enter the first four digits of any commodity code from this consignment
+          Enter any commodity code from this consignment
         </label>
        
       <input class="govuk-input govuk-!-width-one-quarter " id="certificate-reference" name="certificate-reference" type="text" value="" autocomplete="certificate-reference">
@@ -151,7 +151,9 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </details> -->
 
-    <input class="govuk-input govuk-!-width-one-half " id="certificate-reference" name="certificate-reference" type="text" value="" autocomplete="certificate-reference">
+
+      
+    <input class="govuk-input govuk-!-width-one-half " id="reference-search" name="reference-search" type="text" aria-describedby="reference-search" value="{{ data['reference-search'] }}">
   </div>
 
 
