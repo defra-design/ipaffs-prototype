@@ -81,6 +81,19 @@ GOV.UK Prototype Kit
                 certified for</a>
             </li>
             <li>
+              <a class="" id="error-description-5" href="#traders-change-link">Who is the consignee</a>
+            </li>
+            <li>
+              <a class="" id="error-description-6" href="#traders-change-link">Who is the consignor or exporter</a>
+            </li>
+            <li>
+              <a class="" id="error-description-7" href="#traders-change-link">Who is the importer</a>
+            </li>
+            <li>
+              <a class="" id="error-description-13" href="#traders-change-link">What is the place of
+                destination</a>
+            </li>
+            <li>
               <a class="" id="error-description-0" href="#partone/pointofentry">Add the port of entry</a>
             </li>
             <li>
@@ -90,15 +103,7 @@ GOV.UK Prototype Kit
               <a class="" id="error-description-2" href="#partone/arrivaltime">Time of estimated arrival at BCP or
                 POE</a>
             </li>
-            <li>
-              <a class="" id="error-description-5" href="#partone/consignee">Who is the consignee</a>
-            </li>
-            <li>
-              <a class="" id="error-description-6" href="#partone/consignor">Who is the consignor or exporter</a>
-            </li>
-            <li>
-              <a class="" id="error-description-7" href="#partone/importer">Who is the importer</a>
-            </li>
+            
             <li>
               <a class="" id="error-description-8" href="#partone/isgvmsroute">Select if using the Goods Vehicle
                 Movement Service (GVMS)</a>
@@ -119,10 +124,7 @@ GOV.UK Prototype Kit
               <a class="" id="error-description-12" href="#personresponsible/address">Add the contact address for
                 consignment</a>
             </li>
-            <li>
-              <a class="" id="error-description-13" href="#partone/placeofdestination">What is the place of
-                destination</a>
-            </li>
+            
             <li>
               <a class="" id="error-description-14" href="#partone/providectcmrn">Select if using the Common Transit
                 Convention (CTC)</a>
@@ -290,7 +292,7 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell change govuk-!-width-one-third">
                 <a href="02-06-commodity-details?from=review" class="govuk-link" id="commodity-change-link-1"
                   title="Change commodity details, such as species, number of animals and packages">Change<span
-                    class="govuk-visually-hidden"> commodity details, such as species, number of animals and
+                    class="govuk-visually-hidden"> commodity details, such as code, type, species, number of animals and
                     packages</span></a>
               </td>
             </tr>
@@ -472,6 +474,38 @@ GOV.UK Prototype Kit
           </tr>
         </tbody>
       </table>
+
+      <div class="heading-with-change-link govuk-!-margin-top-8">
+        <h3 class="govuk-heading-m">Additional animal details</h3>
+        <a href="02-07-additional-details?from-page=review" class="govuk-link" id="consignment-details-change-link">
+          Change
+        </a>
+      </div>
+      <span class="govuk-error-message" id="commodities/animalscertifiedas">Add what the animals are certified for</span>
+
+      <div class="table-responsive govuk-!-margin-bottom-9">
+        <table class="govuk-table presentation-table review-table" role="presentation"
+          id="review-consignment-details-table">
+          <tbody>
+            <tr class="presentation-table__section table-row--error">
+              <td class="govuk-table__header">Certified for</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+
+            {% if data['commodity-code'] != "01061900" %}
+            <tr>
+              <td class="govuk-table__header">
+                Includes unweaned animals
+              </td>
+              <td class="govuk-table__cell" colspan="2">
+                
+              </td>
+            </tr>
+            {% endif %}
+
+          </tbody>
+        </table>
+      </div>
     
 
 
@@ -503,20 +537,8 @@ GOV.UK Prototype Kit
             </thead>
             <tbody>
               <tr class="presentation-table__section ">
-                <td class="govuk-table__cell" id="latest-health-document-type">
-                  Veterinary health certificate <!-- span class="govuk-!-font-weight-bold">(cloned)</span -->
-                </td>
-                <td class="govuk-table__cell break-word" id="latest-health-document-reference">
-                  {% if data['commodity-code'] == "01061900" %}IN/03/01A/01/12{% else %}FR140333{% endif %}
-                </td>
-                <td class="govuk-table__cell" id="latest-health-document-issue-date">
-                  {% if data['commodity-code'] == "01061900" %}20 July 2024{% else %}21 July 2024{% endif %}
-                </td>
-                <td class="govuk-table__cell">
-                  <a class="govuk-link ellipsis" id="attachment-view-4d3f24e1-2ef2-42e4-bf14-da0ab37f2353"
-                    title="docs page with docs.png" rel="noopener noreferrer" target="_blank" href="#">
-                    {% if data['commodity-code'] == "01061900" %}IN-03-01A-01-12.pdf{% else %}FR140333.pdf{% endif %}
-                  </a>
+                <td class="govuk-table__cell" colspan="100%" id="latest-health-document-none-attached">
+                  No health certificate attached
                 </td>
               </tr>
             </tbody>
@@ -545,235 +567,10 @@ GOV.UK Prototype Kit
             </thead>
             <tbody>
               <tr class="presentation-table__section ">
-                <td class="govuk-table__cell" id="veterinary-document-type-1">
-                  {% if data['commodity-code'] == "01061900" %}Air waybill{% else %}Other{% endif %}
-                </td>
-                <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                  001-12345678
-                </td>
-                <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                  21 July 2024
-                </td>
-                <td class="govuk-table__cell">
-                  <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f"
-                    title="attach doc.png" rel="noopener noreferrer" target="_blank"
-                    href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                    001-12345678.pdf
-                  </a>
+                <td class="govuk-table__cell" colspan="100%" id="veterinary-document-none-attached">
+                  No documents attached
                 </td>
               </tr>
-
-              <!-- 
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            <tr class="presentation-table__section ">
-                              <td class="govuk-table__cell" id="veterinary-document-type-1">
-                                Bill of lading
-                              </td>
-                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
-                                cc-3490834
-                              </td>
-                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
-                                19 February 2024
-                              </td>
-                              <td class="govuk-table__cell">
-                                <a class="govuk-link ellipsis" id="attachment-view-98daf9b1-6b8e-4e13-bbcc-eb3c005c436f" title="attach doc.png" rel="noopener noreferrer" target="_blank" href="/notification/tst/protected/notifications/DRAFT.GB.2024.6397131/attachment/98daf9b1-6b8e-4e13-bbcc-eb3c005c436f?source=review">
-                                  attach doc.png
-                                </a>
-                              </td>
-                            </tr>
-                            -->
             </tbody>
           </table>
         </div>
@@ -788,62 +585,41 @@ GOV.UK Prototype Kit
         Change
       </a>
     </div>
+    <span class="govuk-error-message" id="partone/consignor">Who is the consignor or exporter</span>
+    <span class="govuk-error-message" id="partone/consignee">Who is the consignee</span>
+    <span class="govuk-error-message" id="partone/importer">Who is the importer</span>
+    <span class="govuk-error-message" id="partone/placeofdestination">What is the place of destination</span>
     <div class="table-responsive govuk-!-margin-bottom-9">
       <table class="govuk-table presentation-table review-table" id="review-table-traders" role="presentation">
         <tbody>
-          <tr class="">
+          <tr class="table-row--error">
             <td class="govuk-table__header govuk-!-width-one-half">Consignor or exporter</td>
             <td class="govuk-table__cell" id="consignor">
-              {% if data['commodity-code'] == "01061900" %}
-              K9 specialists<br>
-              100 Rajander Road, West Gujuptur, 114436, India, 0091 67891 8745687, K9S@yahoo.co.uk
-              {% else %}
-              MadDyr exports<br>
-              5 Rue Léon Blum, Lille, 59800, France, +33 3 12121234,
-              contact@maddyr-exports.fr
-              {% endif %}
+              
             </td>
             <td class="govuk-table__cell change">
 
             </td>
           </tr>
-          <tr class="">
+          <tr class="table-row--error">
             <td class="govuk-table__header govuk-!-width-one-half">Consignee</td>
             <td class="govuk-table__cell" id="consignee">
-              {% if data['commodity-code'] == "01061900" %}
-              Hound Welfare LTD<br>
-              The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
-              {% else %}
-              The Pig Company LTD<br>
-              Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, England, 0044 1582 996774, cow.company@yahoo.co.uk
-              {% endif %}
+              
             </td>
             <td class="govuk-table__cell"></td>
           </tr>
-          <tr class="">
+          <tr class="table-row--error">
             <td class="govuk-table__header govuk-!-width-one-half">Importer</td>
             <td class="govuk-table__cell" id="importer">
-              {% if data['commodity-code'] == "01061900" %}
-              Hound Welfare LTD<br>
-              The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
-              {% else %}
-              The Pig Company LTD<br>
-              Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, England, 0044 1582 996774, cow.company@yahoo.co.uk
-              {% endif %}
+              
             <td class="govuk-table__cell"></td>
           </tr>
-          <tr class="">
+          <tr class="table-row--error">
             <td class="govuk-table__header govuk-!-width-one-half">
               Place of destination
             </td>
             <td class="govuk-table__cell" id="final-destination">
-              {% if data['commodity-code'] == "01061900" %}
-              Hound Welfare LTD<br>
-              The Ridgeway, Linconshire, LN6 5PH, England, 0044 1552 463789, hounds.welfare@gmaill.com
-              {% else %}
-              The Pig Company LTD<br>
-              Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH, England, 0044 1582 996774, cow.company@yahoo.co.uk
-              {% endif %}
+              
             </td>
             <td class="govuk-table__cell"></td>
           </tr>
