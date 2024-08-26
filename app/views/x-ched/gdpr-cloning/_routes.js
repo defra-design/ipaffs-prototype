@@ -6,17 +6,30 @@ const router = express.Router()
 router.post('/route-validate-reference-number', function (req, res) {
   var enteredReference = req.session.data['certificate-reference-number']
   if (enteredReference == "GERMAN-IJKML68689900-13579002468") {
-    res.redirect('03-certificate-found')
+    res.redirect('03a-certificate-found')
   }
   else if (enteredReference == "") {
     res.redirect('02a-select-country-origin-all-errors')
   }
   else {
-    res.redirect('03a-certificate-not-found-page')
+    res.redirect('04a-certificate-not-found')
   }
 })
 
 module.exports = router
 
+router.post('/route-validate-reference-number', function (req, res) {
+  var enteredReference = req.session.data['certificate-reference-number']
+  if (enteredReference == "NETHER-IJKML12345678-8989664400") {
+    res.redirect('03b-phyto-certificate-found')
+  }
+  else if (enteredReference == "") {
+    res.redirect('02a-select-country-origin-all-errors')
+  }
+  else {
+    res.redirect('03b-phyto-certificate-not-found')
+  }
+})
 
+module.exports = router
 
