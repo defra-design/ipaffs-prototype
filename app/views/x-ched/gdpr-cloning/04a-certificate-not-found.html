@@ -17,10 +17,13 @@ How do you want to add your commodity details? – {{ serviceName }} – GOV.UK 
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters">
-
+      
       {{ data['certificate-reference'] }}
-   
+      {% if (data['cert-type'] == "CHEDPP") %}
+      <h1 class="govuk-heading-xl" id="page-primary-title">ePhytosanitary certificate not found</h1>
+      {% else %}
       <h1 class="govuk-heading-xl" id="page-primary-title">Digital health certificate not found</h1>
+      {% endif %}
       <p class="govuk-hint">Check your details to enter them again.</p>
       
       <form class="form" action="02-select-country-origin" method="POST">

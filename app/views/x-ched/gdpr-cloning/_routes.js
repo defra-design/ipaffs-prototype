@@ -8,13 +8,14 @@ router.post('/route-validate-reference-number', function (req, res) {
   if (enteredReference == "GERMAN-IJKML68689900-13579002468") {
     res.redirect('03a-certificate-found')
   }
-  else if (enteredReference == "NETHER-IJKML12345678-8989664400") {
-    res.redirect('another-page')
+  if (enteredReference == "NETHER-IJKML12345678-8989664400") {
+    res.redirect('03b-phyto-certificate-found')
   }
-  
+
   else if (enteredReference == "") {
     res.redirect('02a-select-country-origin-all-errors')
   }
+
   else {
     res.redirect('04a-certificate-not-found')
   }
@@ -22,19 +23,6 @@ router.post('/route-validate-reference-number', function (req, res) {
 
 module.exports = router
 
-router.post('/route-validate-reference-number', function (req, res) {
-  var enteredReference = req.session.data['certificate-reference-number']
-  if (enteredReference == "NETHER-IJKML12345678-8989664400") {
-    res.redirect('03b-phyto-certificate-found')
-  }
-  else if (enteredReference == "") {
-    res.redirect('02a-select-country-origin-all-errors')
-  }
-  else {
-    res.redirect('03b-phyto-certificate-not-found')
-  }
-})
 
-module.exports = router
 
 
