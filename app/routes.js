@@ -74,9 +74,9 @@ router.use('/chedd/part-1-chedd-single', require('./views/chedd/part-1-chedd-sin
 router.use('/chedpp/latest', require('./views/chedpp/latest/_routes'))
 
 // UX ideas routes
-router.use('/UX-ideas/same-commodity/cheda', require('./views/UX-ideas/same-commodity/cheda/_routes'))
-router.use('/UX-ideas/same-commodity/chedp', require('./views/UX-ideas/same-commodity/chedp/_routes'))
-router.use('/UX-ideas/same-commodity/chedpp', require('./views/UX-ideas/same-commodity/chedpp/_routes'))
+// router.use('/UX-ideas/same-commodity/cheda', require('./views/UX-ideas/same-commodity/cheda/_routes'))
+// router.use('/UX-ideas/same-commodity/chedp', require('./views/UX-ideas/same-commodity/chedp/_routes'))
+// router.use('/UX-ideas/same-commodity/chedpp', require('./views/UX-ideas/same-commodity/chedpp/_routes'))
 
 
 // Start folder specific routes
