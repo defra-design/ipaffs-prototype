@@ -39,7 +39,7 @@ router.post('/risk-route', function (req, res) {
   }
 
  else if (riskRoute == "low"){
-    res.redirect('07-check-answers')
+    res.redirect('00-notification-hub')
   }
   
 })
