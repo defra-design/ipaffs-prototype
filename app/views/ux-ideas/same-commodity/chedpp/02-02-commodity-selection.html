@@ -1,0 +1,309 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Commodity selected – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-6">
+  <span class="heading-tertiary">DRAFT.GB.2024.6697492 - CHEPP</span>
+  </div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="species-page">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-xl" id="page-secondary-title">Description of the goods</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
+
+      <div class="govuk-!-margin-bottom-8">
+        <div class="table-responsive">
+          <table class="govuk-table">
+            <caption class="govuk-visually-hidden">Commodity summary table</caption>
+            <thead class="govuk-table__head">
+            <tr>
+              <th scope="col" class="govuk-table__header">Commodity Code</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="govuk-table__cell" id="commodity-code-value">06011010</td>
+              <td class="govuk-table__cell">Hyacinths</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+        <fieldset class="govuk-fieldset" form="species-selection">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Select Genus (and Species) of commodity </legend>
+          <span class="govuk-hint" id="species-hint">You can add multiple Genus (and Species)</span>
+        </fieldset>
+
+
+        <form method="get" id="species-filter" class="govuk-!-margin-top-4 govuk-!-margin-bottom-6">
+          <input type="hidden" name="page" value="1">
+          <input type="hidden" name="commodity-selected-code" value="06011010">
+          <input name="commodityDetailsPage" type="hidden" value="">
+          <div class="search-panel">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">Filter</h2>
+              </legend>
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <div class="search-panel__form-group govuk-form-group govuk-!-width-full">
+                    <label class="govuk-label" for="genus">Genus (and Species)</label>
+                    <input class="govuk-input" maxlength="200" id="genus" name="genus" type="text" value="">
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="search-panel__form-group govuk-form-group govuk-!-width-full">
+                    <label class="govuk-label" for="eppo-code">EPPO code</label>
+                    <input class="govuk-input" maxlength="200" id="eppo-code" name="eppo-code" type="text" value="">
+                  </div>
+                </div>
+              </div>
+              <button class="govuk-button govuk-!-margin-bottom-0" type="submit" name="search" value="Search" id="search" data-module="govuk-button" data-prevent-double-click="true">
+                Search
+              </button>
+              <a href="#" id="clear" class="govuk-link clear-link">Clear</a>
+            </fieldset>
+          </div>
+        </form>
+
+      <form method="post" action="02-02a-genus-added">
+        <input name="crumb" type="hidden" value="IZnreMZdNimd3v1fq03M2JhLIDsA2hh38-bDNwZWsHw">
+        <input name="etag" type="hidden" value="&quot;0000000000224C4A&quot;">
+        <input name="is-last-of-page" type="hidden" value="false">
+        <input name="commodityDetailsPage" type="hidden" value="">
+          <div class="govuk-!-margin-bottom-8">
+            <div class="table-responsive">
+              <div class="" id="species">
+                
+                <table class="govuk-table">
+                  <caption class="govuk-visually-hidden">Add species table</caption>
+                  <thead class="govuk-table__head">
+                  <tr>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-half">Genus (and Species)</th>
+                    <th scope="col" class="govuk-table__header">EPPO code</th>
+                    <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Add action links</span></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="govuk-table__cell">Albuca bracteata</td>
+                    <td class="govuk-table__cell">ABWBR</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1325967" value="Add" class="link-button" id="add-species-1325967">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Albuca canadensis</td>
+                    <td class="govuk-table__cell">ABWAL</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1425416" value="Add" class="link-button" id="add-species-1425416">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Albuca fibrotunicata</td>
+                    <td class="govuk-table__cell">ABWFI</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1411703" value="Add" class="link-button" id="add-species-1411703">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Albuca sp.</td>
+                    <td class="govuk-table__cell">ABWSS</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1425910" value="Add" class="link-button" id="add-species-1425910">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Barnardia japonica</td>
+                    <td class="govuk-table__cell">SLLSC</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1385556" value="Add" class="link-button" id="add-species-1385556">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Bellevalia ciliata</td>
+                    <td class="govuk-table__cell">BLVCI</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1429613" value="Add" class="link-button" id="add-species-1429613">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Bellevalia longipes</td>
+                    <td class="govuk-table__cell">BLVLO</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1341434" value="Add" class="link-button" id="add-species-1341434">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Bellevalia sp.</td>
+                    <td class="govuk-table__cell">BLVSS</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1378801" value="Add" class="link-button" id="add-species-1378801">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Bellevalia trifoliata</td>
+                    <td class="govuk-table__cell">BLVTR</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1330320" value="Add" class="link-button" id="add-species-1330320">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Bowiea sp.</td>
+                    <td class="govuk-table__cell">BWASS</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1405992" value="Add" class="link-button" id="add-species-1405992">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Bowiea volubilis</td>
+                    <td class="govuk-table__cell">BWAVO</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1332705" value="Add" class="link-button" id="add-species-1332705">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Camassia cusickii</td>
+                    <td class="govuk-table__cell">CDSCU</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1423372" value="Add" class="link-button" id="add-species-1423372">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Camassia quamash</td>
+                    <td class="govuk-table__cell">CDSQU</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1404450" value="Add" class="link-button" id="add-species-1404450">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Camassia sp.</td>
+                    <td class="govuk-table__cell">CDSSS</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1418441" value="Add" class="link-button" id="add-species-1418441">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Chlorogalum pomeridianum</td>
+                    <td class="govuk-table__cell">CHLPO</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1410781" value="Add" class="link-button" id="add-species-1410781">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Chlorogalum sp.</td>
+                    <td class="govuk-table__cell">CHLSS</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1413747" value="Add" class="link-button" id="add-species-1413747">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Dipcadi bakeriana</td>
+                    <td class="govuk-table__cell">DPDBA</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1414645" value="Add" class="link-button" id="add-species-1414645">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Dipcadi erythraeum</td>
+                    <td class="govuk-table__cell">DPDER</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1384205" value="Add" class="link-button" id="add-species-1384205">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Dipcadi filifolium</td>
+                    <td class="govuk-table__cell">DPDFI</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1424307" value="Add" class="link-button" id="add-species-1424307">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Dipcadi glaucum</td>
+                    <td class="govuk-table__cell">DPDGL</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1414413" value="Add" class="link-button" id="add-species-1414413">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Dipcadi longifolium</td>
+                    <td class="govuk-table__cell">DPDLO</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1422265" value="Add" class="link-button" id="add-species-1422265">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Dipcadi sp.</td>
+                    <td class="govuk-table__cell">DPDSS</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1334836" value="Add" class="link-button" id="add-species-1334836">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Dipcadi viride</td>
+                    <td class="govuk-table__cell">DPDTA</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1432886" value="Add" class="link-button" id="add-species-1432886">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Drimia maritima</td>
+                    <td class="govuk-table__cell">URGMA</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1411729" value="Add" class="link-button" id="add-species-1411729">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="govuk-table__cell">Drimia sanguinea</td>
+                    <td class="govuk-table__cell">URGSA</td>
+                    <td class="govuk-table__cell text-align-right">
+                      <button type="submit" name="add-species-1336384" value="Add" class="link-button" id="add-species-1336384">Add</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                  <nav class="pagination" aria-label="Pagination">
+                    <ul class="pagination-list">
+                        <li class="pagination-item pagination-item-next">
+                            <a href="?commodity-selected-code=06011010&amp;page=2" class="pagination-link" rel="next" id="next-page">
+                              <span class="pagination-link-title">
+                                 Next page
+                                <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                                  <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                                </svg>
+                              </span>
+                              <span class="govuk-visually-hidden">:</span>
+                              <span class="pagination-link-label">2 of 3</span>
+                            </a>
+                        </li>
+                    </ul>
+                  </nav>
+                
+              </div>
+            </div>
+          </div>
+          </form>
+
+          <form method="post" action="01-05-purpose">
+        <button class="govuk-button govuk-!-margin-bottom-4" name="save-button" type="submit" value="Save and continue" id="button-save-and-continue" data-prevent-double-click="true">Save and continue</button>
+          <p class="govuk-body">
+            <a class="govuk-link" id="cancel-link" href="#">Cancel</a>
+          </p>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

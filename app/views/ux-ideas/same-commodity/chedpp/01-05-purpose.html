@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+About the consignment – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+<div class="govuk-!-padding-bottom-6">
+  <span class="heading-tertiary">DRAFT.GB.2024.6697492 - CHEDPP</span>
+  </div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="consignment-purpose-page">
+    <div class="govuk-grid-column-three-quarters">
+        <span class="govuk-caption-xl" id="page-secondary-title">About the consignment</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">What is the main reason for importing the consignment?</h1>
+      <form action="00-notification-hub" method="post">
+        <input name="crumb" type="hidden" value="IZnreMZdNimd3v1fq03M2JhLIDsA2hh38-bDNwZWsHw">
+        <input name="etag" type="hidden" value="&quot;0000000000224C45&quot;">
+
+        <div class="govuk-form-group ">
+          <fieldset class="govuk-fieldset">
+              <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                What is the purpose of the consignment?
+              </legend>-->
+            
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" id="purpose">
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-internalmarket" name="purpose" type="radio" value="internalmarket" aria-controls="internalmarket-conditional" aria-expanded="true">
+                  <label class="govuk-label govuk-radios__label" for="radio-internalmarket">
+                    <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">
+                      Internal market
+                    </h2>
+                  </label>
+                  <div class="govuk-hint govuk-radios__hint">
+                    The consignment is intended for sale or use in Great Britain (England, Scotland and Wales). Or, it is using a transit mechanism to move goods to a control point.
+                   </div>
+                </div>
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-reimport" name="purpose" type="radio" value="import">
+                  <label class="govuk-label govuk-radios__label" for="radio-reimport">
+                    <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">
+                      Re-entry
+                    </h2>
+                  </label>
+                  <div class="govuk-hint govuk-radios__hint">
+                    The consignment is authorised for re-entry or includes rejected exports that are re-entering Great Britain.
+                   </div>
+                </div>
+
+                <div class="govuk-radios__item purpose">
+                  <input class="govuk-radios__input" id="radio-reconformity" name="purpose" type="radio" value="reconformity">
+                  <label class="govuk-label govuk-radios__label" for="radio-reconformity">
+                    <h2 class="govuk-fieldset__heading govuk-heading-m govuk-!-font-weight-bold">
+                      For import re-conformity check
+                    </h2>
+                  </label>
+                </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+            <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" data-prevent-double-click="true">Save and continue</button>
+      </form>
+    </div>
+  </div>
+  <script src="/notification/vnet/public/javascripts/consignment_purpose.js?v=1.0.2945"></script>
+</main>
+
+{% endblock %}
