@@ -1,19 +1,40 @@
-@ -1,140 +0,0 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirm – {{ serviceName }} – GOV.UK Prototype Kit
+  GOV.UK Prototype Kit
 {% endblock %}
-
-{% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %}
-{% endblock %}
-
-
 
 {% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links__left-block">
+  <a href="01-select-ched-type" id="back-link-nojs" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+
+<div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+  
+</div>  </div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Hyseni</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
 
 
 
