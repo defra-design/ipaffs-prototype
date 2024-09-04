@@ -52,10 +52,10 @@ router.use('/x-ched/provision-of-billing-details/latest/billing-details', requir
 router.use('/x-ched/gdpr-cloning', require('./views//x-ched/gdpr-cloning/_routes'))
 
 // ched p rotes
-router.use('/chedp-gvms', require('./views/chedp-gvms/_routes'))
-router.use('/chedp-gvms-iteration-02', require('./views/chedp-gvms-iteration-02/_routes'))
-router.use('/chedp-gvms-iteration-03', require('./views/chedp-gvms-iteration-03/_routes'))
-router.use('/chedp-gvms-iteration-04', require('./views/chedp-gvms-iteration-04/_routes'))
+router.use('/chedp/gvms/iteration-01', require('./views/chedp/gvms/iteration-01/_routes'))
+router.use('/chedp/gvms/iteration-02', require('./views/chedp/gvms/iteration-02/_routes'))
+router.use('/chedp/gvms/iterationn-03', require('./views/chedp/gvms/iteration-03/_routes'))
+router.use('/chedp/gvms/iteration-04', require('./views/chedp/gvms/iteration-04/_routes'))
 router.use('/chedp/2023-12-single-chedp', require('./views/chedp/2023-12-single-chedp/_routes'))
 router.use('/chedp/iuu-fish/iuu-round-2', require('./views/chedp/iuu-fish/iuu-round-2/_routes'))
 router.use('/chedp/iuu-fish/iuu', require('./views/chedp/iuu-fish/iuu/_routes'))
