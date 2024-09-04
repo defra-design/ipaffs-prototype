@@ -57,9 +57,9 @@ router.use('/chedp-gvms-iteration-02', require('./views/chedp-gvms-iteration-02/
 router.use('/chedp-gvms-iteration-03', require('./views/chedp-gvms-iteration-03/_routes'))
 router.use('/chedp-gvms-iteration-04', require('./views/chedp-gvms-iteration-04/_routes'))
 router.use('/chedp/2023-12-single-chedp', require('./views/chedp/2023-12-single-chedp/_routes'))
-router.use('/part-1-chedp/iuu-round-2', require('./views/part-1-chedp/iuu-round-2/_routes'))
-router.use('/part-1-chedp/iuu', require('./views/part-1-chedp/iuu/_routes'))
-router.use('/part-1-chedp/iuu-final', require('./views/part-1-chedp/iuu-final/_routes'))
+router.use('/chedp/iuu-fish/iuu-round-2', require('./views/chedp/iuu-fish/iuu-round-2/_routes'))
+router.use('/chedp/iuu-fish/iuu', require('./views/chedp/iuu-fish/iuu/_routes'))
+router.use('/chedp/iuu-fish/iuu-final', require('./views/chedp/iuu-fish/iuu-final/_routes'))
 
 // ched a routes
 router.use('/cheda/part-1-latest', require('./views/cheda/part-1-latest/_routes'))
