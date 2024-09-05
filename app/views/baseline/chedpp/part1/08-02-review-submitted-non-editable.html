@@ -32,6 +32,8 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
     </ol>
   </div>
 
+ 
+
 
     <div id="sign-out-section" class="information-banner">
     <p class="information-banner__content">
@@ -48,11 +50,12 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
   </div>
 </div>
 
-
-
-<div class="govuk-!-padding-bottom-6 govuk-!-margin-top-6">
-  <span class="heading-tertiary">DRAFT.GB.2024.6697492 - CHEDPP</span>
-  </div>
+<div class="govuk-!-padding-top-6 govuk-!-margin-bottom-3">
+  <span class="heading-tertiary">
+      <span id="reference-number">CHEDPP.GB.2023.5925980</span>
+          <span> - V1</span>
+  </span>
+</div>
 
 
 
@@ -75,12 +78,42 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
         <div class="govuk-grid-column-one-half">
           <div class="audit-flag govuk-!-margin-bottom-2">
-            <div id="last-submission-date">Not submitted </div>
-            <div id="submitted-by"></div>
+            <div id="last-submission-date">Submitted 5 May 2024, 18:13 </div>
+            <div id="submitted-by">by Percy Hyseni</div>
           </div>
         </div>
        
     </div>
+
+    <div class="action-button-container govuk-!-margin-bottom-8 govuk-!-padding-bottom-0 govuk-!-margin-top-8">
+      
+
+      <form method="post" action="00-notification-hub" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="submit_param" value="Copy as new" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">Copy as new</button>
+      </form>
+
+      <form action="08-03-review-submitted-editable" method="post" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+          Amend
+        </button>
+      </form>
+
+      <form action="#" method="post" class="govuk-!-display-inline">
+        <input name="crumb" type="hidden" value="jm6AwVDLyEA6HWbI6UoJqmUUElfMByggA-dk5xYlH7N">
+        <input name="etag" type="hidden" value="&quot;000000000537DB03&quot;">
+        <button type="submit" name="amend" id="amend-certificate-CHEDPP.GB.2021.3476228" value="CHEDPP.GB.2021.3476228" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3" data-prevent-double-click="true">
+          View CHED
+        </button>
+      </form>
+
+      <a href="#" id="delete-notification" class="govuk-button govuk-button--secondary button-small action-button govuk-!-margin-bottom-3">
+        Delete notification
+      </a>
+  </div>
 
 
       <div class="table-responsive">
@@ -91,7 +124,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
           <tbody>
           <tr class="presentation-table__row--no-border ">
             <th scope="row" class="govuk-table__header border-top-none">CHED reference</th>
-            <td class="govuk-table__cell border-top-none" id="reference-number">DRAFT.GB.2024.6697492</td>
+            <td class="govuk-table__cell border-top-none" id="reference-number">CHEDPP.GB.2024.6697492</td>
             <td class="govuk-table__cell change border-top-none">
               <button data-prevent-double-click="true" id="copy-notification-reference-number" type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0 copy-button" data-copy-value="DRAFT.GB.2024.6697492">
                 Copy
@@ -146,7 +179,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                 <th scope="row" class="govuk-table__header">Add a reference number for this consignment</th>
                 <td class="govuk-table__cell">PP-KFSK-2023-924949</td>
                 <td class="govuk-table__cell change">
-                  <a href="01-03-origin-import" class="govuk-link" id="country-of-origin-change-link">Change</a>
+                  <!-- <a href="01-03-origin-import" class="govuk-link" id="country-of-origin-change-link">Change</a> -->
                  </td>
               </tr>
               
@@ -167,7 +200,16 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                     For internal market
                 </td>
                 <td class="govuk-table__cell change">
-                      <a href="01-05-purpose" class="govuk-link" id="consignment-purpose-change-link">Change</a>
+                      <!-- <a href="01-05-purpose" class="govuk-link" id="consignment-purpose-change-link">Change</a> -->
+                </td>
+              </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Movement Reference Number (MRN)</th>
+                <td class="govuk-table__cell" id="purpose-of-consignment-value">
+                  23GB1234567890ABCD
+                </td>
+                <td class="govuk-table__cell change">
+                      
                 </td>
               </tr>
               </tbody>
@@ -189,7 +231,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                         06011010
                       </td>
                         <td class="govuk-table__cell change">
-                              <a href="02-03a-weights-packaging-added" class="govuk-link" id="commodity-change-bulk-link-0">Change</a>
+                              <!-- <a href="02-03a-weights-packaging-added" class="govuk-link" id="commodity-change-bulk-link-0">Change</a> -->
                         </td>
                     </tr>
                       <tr class="presentation-table__row--no-border">
@@ -273,9 +315,9 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__header">Total gross weight (kg)</td>
                     <td class="govuk-table__cell">220 kg</td>
                     <td class="govuk-table__cell change">
-                        <a href="02-04-additional-details" class="govuk-link" id="consignment-details-change-link-weight">
+                        <!-- <a href="02-04-additional-details" class="govuk-link" id="consignment-details-change-link-weight">
                         Change
-                        </a>
+                        </a> -->
                     </td>
                   </tr>
             
@@ -289,7 +331,10 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                     <td class="govuk-table__cell" colspan="2"></td>
                   </tr>
             
-                  
+                  <tr>
+                    <td class="govuk-table__header">Will your goods be imported in shipping containers?</td>
+                    <td class="govuk-table__cell" id="imported-in-containers" colspan="2">No</td>
+                  </tr>
             
                   </tbody>
                 </table>
@@ -300,10 +345,10 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
           
           <div class="heading-with-change-link">
-            <h2 class="govuk-heading-m">Transport to the Border Control Post (BCP)</h2>
-            <a href="05-01a-transport-to-bcp-added" class="govuk-link" id="transport-to-bip-change-link">
+            <h2 class="govuk-heading-m">Transport to the border control post (BCP)</h2>
+            <!-- <a href="05-01a-transport-to-bcp-added" class="govuk-link" id="transport-to-bip-change-link">
               Change
-            </a>
+            </a> -->
           </div>
           
           
@@ -318,7 +363,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
               <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
               <tbody>
               <tr class="">
-                <th scope="row" class="govuk-table__header">Entry Border Control Post</th>
+                <th scope="row" class="govuk-table__header">Border Control Post</th>
                 <td class="govuk-table__cell">Dover Port (plants) - GBDOV1PP</td>
               </tr>
                 <tr class="">
@@ -327,27 +372,11 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                 </tr>
               <tr class="">
                 <th scope="row" class="govuk-table__header">Means of transport to the BCP</th>
-                <td class="govuk-table__cell">Vessel</td>
+                <td class="govuk-table__cell">Road vehicle</td>
               </tr>
               <tr class="">
                 <th scope="row" class="govuk-table__header">Transport identification</th>
-                <td class="govuk-table__cell">Stena</td>
-              </tr>
-              <tr class="">
-                <th scope="row" class="govuk-table__header">Using road trailers or containers?</th>
-                <td class="govuk-table__cell">Yes</td>
-              </tr>
-              <tr class="">
-                <th scope="row" class="govuk-table__header">Trailer or container number</th>
-                <td class="govuk-table__cell">ABC123</td>
-              </tr>
-              <tr class="">
-                <th scope="row" class="govuk-table__header">Seal number</th>
-                <td class="govuk-table__cell">GB 32457</td>
-              </tr>
-              <tr class="">
-                <th scope="row" class="govuk-table__header">Official seal</th>
-                <td class="govuk-table__cell">Yes</td>
+                <td class="govuk-table__cell">GHH-43789234742</td>
               </tr>
               <tr class="">
                 <th scope="row" class="govuk-table__header">Transport document reference</th>
@@ -368,50 +397,11 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
           </div>
-
-          <div class="heading-with-change-link">
-            <h2 id="approved-establishment-header" class="govuk-heading-m">Goods movement services</h2>
-            <a href="05-02-goods-movement-services" class="govuk-link" id="establishment-of-origin-change-link">
-              Change
-            </a>
-          </div>
-
-          <div class="table-responsive govuk-!-margin-bottom-9">
-            <table class="govuk-table review-table presentation-table" id="review-table-bip-details" role="presentation" style="border-top: 0;">
-              <caption class="govuk-visually-hidden">Summary of transport to the port of entry</caption>
-
-              <tbody>
-                <tr>
-                  <td class="govuk-table__header">Using the Common Transit Convention (CTC)</td>
-                  <td class="govuk-table__cell" id="region-of-consignment-value">
-                    Yes &ndash; add MRN now
-                  </td>
-                  <td class="govuk-table__cell"></td>
-                </tr>
-                <tr>
-                  <td class="govuk-table__header">Movement Reference Number (MRN)</td>
-                  <td class="govuk-table__cell" id="region-of-consignment-value">
-                    23GB1234567890ABCD
-                  </td>
-                  <td class="govuk-table__cell"></td>
-                </tr>
-                <tr class="">
-                  <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)</th>
-                  <td class="govuk-table__cell">Yes</td>
-                </tr>
-                </tbody>
-            </table>
-            </div>
-
-
-
-
-
           <div class="heading-with-change-link">
             <h2 class="govuk-heading-m">Contact details</h2>
-                <a href="06-01-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
+                <!-- <a href="06-01-contact" class="govuk-link" id="responsible-person-contact-details-change-link">
                 Change
-                </a>
+                </a> -->
           </div>
           
           
@@ -451,9 +441,9 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
             </table>
           </div><div class="heading-with-change-link">
             <h2 class="govuk-heading-m">Nominated contacts</h2>
-                <a href="06-02-nominated-contacts" class="govuk-link" id="nominated-contact-change-link">
+                <!-- <a href="06-02-nominated-contacts" class="govuk-link" id="nominated-contact-change-link">
                 Change
-                </a>
+                </a> -->
           </div>
           
           <div class="govuk-!-margin-bottom-9 table-responsive">
@@ -479,9 +469,9 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
             
             <div class="heading-with-change-link">
                 <h3 class="govuk-heading-s">Additional documents</h3>
-                  <a class="govuk-link" id="documents-change-link" href="03-01a-document-added">
+                  <!-- <a class="govuk-link" id="documents-change-link" href="03-01a-document-added">
                     Change
-                  </a>
+                  </a> -->
             </div>
             
               <div class="table-responsive">
@@ -528,7 +518,7 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
                   <td class="govuk-table__header govuk-!-width-one-half">Importer</td>
                   <td class="govuk-table__cell" id="importer">Percy Plants<br>Woodham Lane, New Haw, Addlestone, KT15 3NB, United Kingdom of Great Britain and Northern Ireland, 020 8225 7295, percy@percyplants.co.uk</td>
                   <td class="govuk-table__cell change">
-                        <a href="04-01-trader-addresses" class="govuk-link" id="traders-change-link">Change</a>
+                        <!-- <a href="04-01-trader-addresses" class="govuk-link" id="traders-change-link">Change</a> -->
                   </td>
                 </tr>
                 <tr class="">
@@ -548,11 +538,9 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
           </div>
+
           <div class="heading-with-change-link">
             <h2 class="govuk-heading-m">Billing details</h2>
-            <a href="07-01-billing-details.html" class="govuk-link" id="billing-details-change-link">
-              Change
-            </a>
           </div>
           <div div="" class="govuk-!-margin-bottom-9 table-responsive">
             <table class="govuk-table presentation-table govuk-!-margin-0" id="billing-details-table">
@@ -585,11 +573,13 @@ Review your notification – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
           </div>
-        <form action="09-01-declaration" method="POST">
+          
+
+        <!-- <form action="09-01-declaration" method="POST">
           <button class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue" data-prevent-double-click="true">Save and continue</button>
           <input name="crumb" type="hidden" value="keha1DOoAmmELZLuoAQXiLX4uf2H1u2amsf5rpMxz0p">
           <input name="etag" type="hidden" value="&quot;0000000000224E4E&quot;">
-        </form>
+        </form> -->
     </div>
   </div>
 </main>
