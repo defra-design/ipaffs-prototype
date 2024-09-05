@@ -17,7 +17,32 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-full">
+        
+        <li>
+          <a href="commodity-details.html">You must enter the certificate reference number</a>
+        </li>
+        <li>
+          <a href="commodity-details.html">You must enter the certificate date of issue</a>
+        </li>
+<!--- 
+        <li>
+          <a href="commodity-details.html">You must enter any commodity code from this certificate</a>
+        </li>
+--->
+        <li>
+          <a href="commodity-details.html">You must enter consignor, consignee or importer name</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="search-health-certificate">
@@ -81,6 +106,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       </fieldset>
     </div>
  
+    <!--- 
     <div class="govuk-form-group govuk-form-group--error">
       <label class="govuk-label govuk-label--m" for="commodity-code">
         Enter any commodity code from this certificate
@@ -90,6 +116,7 @@ Confirm – {{ serviceName }} – GOV.UK Prototype Kit
       </p>
       <input class="govuk-input govuk-!-width-one-half" id="commodity-code-line-1" name="commodity-code-line-1" type="text" autocomplete="commodity-code-line-1">
     </div>
+    --->
 
 <div class="govuk-form-group govuk-form-group--error">
       
