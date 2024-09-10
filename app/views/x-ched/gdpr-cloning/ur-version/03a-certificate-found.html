@@ -1,0 +1,578 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="navigation-links" style="margin-top: -46px;">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Mark Admin-Tester</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <div class="navigation-links__left-block">
+      <a href="02-select-country-origin" id="back-link-nojs" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <div class="navigation-links__divider">|</div>
+    <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="0-index">Dashboard</a>
+        </li>
+      </ol>
+    </div>  </div>
+</div>
+
+
+
+
+
+
+
+<main class="govuk-main-wrapper cloning-summary-page" id="main-content">
+  <div class="govuk-grid-row" id="cloning-summary">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl " id="page-primary-title">Digital health certificate found</h1>
+      <table class="govuk-table review-table" id="consignment-table">
+        <caption class="govuk-visually-hidden">Consignment table</caption>
+        <tbody>
+          <tr class="govuk-table__header">
+            <th class="govuk-heading-m govuk-!-width-full" id="about-consignment">About the consignment</th>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Health certificate number</th>
+            <td class="govuk-table__cell" id="health-certificate-number">GERMAN-IJKML68689900-13579002468</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Country of origin</th>
+            <td class="govuk-table__cell" id="country-of-origin">Germany</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Main reason for importing the consignment
+            </th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Human Consumption</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table review-table govuk-!-margin-bottom-0" id="consignment-table">
+        <caption class="govuk-visually-hidden">Consignment table</caption>
+        <tbody>
+        <tr class="govuk-table__header">
+          <th class="govuk-heading-m" id="description-of-goods">Description of goods</th>
+          <td class="govuk-body govuk-!-font-weight-bold text-align-right" id="num-commodity-lines">10 of 50</td>
+        </tr>
+        </tbody>
+      </table>
+
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-0">020110</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Carcases and half-carcases</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bison bison</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-0">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-1">020110</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Carcases and half-carcases</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bos taurus</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-1">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-2">020110</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Carcases and half-carcases</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bubalus bubalis</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-2">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-3">020120</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Other cuts with bone in</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bison bison</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-3">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-4">020120</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Other cuts with bone in</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bos taurus</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-4">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-5">020120</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Other cuts with bone in</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bubalus bubalis</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-5">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-6">020130</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Boneless</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bison bison</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-6">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-7">020130</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Boneless</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bos taurus</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-7">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-8">020130</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Boneless</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bubalus bubalis</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-8">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-9">020210</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Carcases and half-carcases</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Bison bison</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-9">
+          <caption class="govuk-visually-hidden">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Carton</td>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-padding-top-5" colspan="4">Temperature</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" id="temperature" colspan="4">Frozen</td>
+            </tr>
+            <tr>
+              <td class="govuk-!-padding-top-5" colspan="6">
+                <a href="/notification/vnet/protected/notifications/cloning/commodities/summary?ehcRef=NZL2021/PPCS2/999998&amp;origin=NZ&amp;certType=CVEDP" class="govuk-link" id="commodity-summary-link">
+                    View a summary of all commodity details
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="seals-table">
+          <caption class="govuk-visually-hidden">Container and seals table</caption>
+          <tbody>
+          <tr>
+            <th scope="col" class="govuk-table__header">Container</th>
+            <th scope="col" class="govuk-table__cell govuk-table__header">Seal number</th>
+          </tr>
+            <tr>
+              <td class="govuk-table__cell">C12345</td>
+              <td class="govuk-table__cell">S12345</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell">AAAU1111111</td>
+              <td class="govuk-table__cell">12345</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell">CCCZ1111111</td>
+              <td class="govuk-table__cell">54321</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell">BBBU1111111</td>
+              <td class="govuk-table__cell">23456</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell">CCCU1111111</td>
+              <td class="govuk-table__cell">34567</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell">BBBJ1111111</td>
+              <td class="govuk-table__cell">56789</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell">CCCJ1111111</td>
+              <td class="govuk-table__cell">67891</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell">AAAZ1111111</td>
+              <td class="govuk-table__cell">78912</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-0 bcp-header">
+            Transport to the port of entry
+        </h2>
+        <table class="govuk-table review-table" id="bcp-table">
+          <caption class="govuk-visually-hidden">bcp table</caption>
+          <tbody>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Port of entry
+            </th>
+            <td class="govuk-table__cell" id="bcp">London Tilbury - GBTIL1</td>
+          </tr>
+          </tbody>
+        </table>
+
+      <form action="summary" method="POST">
+        <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Clone</button>
+        <a class="govuk-link clear-link" id="search-to-clone" href="/notification/vnet/protected/notifications/cloning/search?certType=CVEDP">Cancel</a>
+        <input name="certificate-reference" type="hidden" value="NZL2021/PPCS2/999998">
+        <input name="country-of-origin-code" type="hidden" value="NZ">
+        <input name="certificate-type" type="hidden" value="CVEDP">
+        <input name="crumb" type="hidden" value="P-FaUomfy6HW73D8IRm0HZ28E9jh1PyjsGxJMzVATib">
+      </form>
+    </div>
+  </div>
+</main>
+
+</div>
+
+
+{% endblock %}
