@@ -6,6 +6,8 @@
 
 {% block content %}
 
+
+
 <div class="navigation-links" style="margin-top: -46px;">
   <div id="sign-out-section" class="information-banner">
     <p class="information-banner__content">
@@ -31,18 +33,35 @@
 </div>
 
 
+<div class="govuk-error-summary govuk-!-margin-top-7" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-full">
+        <li>
+          <a href="commodity-details.html">Select what you want to do</a>
+        </li>
+        
+ 
+      </ul>
+    </div>
+  </div>
+</div>
+
   <div class="govuk-grid-row govuk-!-margin-top-7">
     <div class="govuk-grid-column-three-quarters">
       
       {{ data['certificate-reference'] }}
       {% if (data['cert-type'] == "CHEDPP") %}
-      <h1 class="govuk-heading-xl" id="page-primary-title">Phytosanitary certificate not found</h1>
+      <h1 class="govuk-heading-xl" id="page-primary-title">ePhytosanitary certificate not found</h1>
       {% else %}
-      <h1 class="govuk-heading-xl" id="page-primary-title">Health certificate not found</h1>
+      <h1 class="govuk-heading-xl" id="page-primary-title">Digital health certificate not found</h1>
       {% endif %}
       <p class="govuk-hint">Check your details to enter them again.</p>
       
-      <form class="form" action="01-select-ched-type" method="POST">
+      <form class="form govuk-form-group--error" action="01-select-ched-type" method="POST">
         <h2 class="govuk-!govuk-heading-l"> What do you want to do?</h2>
         
         {{ data | log }}
@@ -52,7 +71,9 @@
        
 
         
-
+        <p id="certificate-reference-line-1-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> Select what you want to do
+        </p>
 
         <div class="govuk-form-group govuk-!-margin-bottom-7">
           <fieldset class="govuk-fieldset">
@@ -95,13 +116,13 @@
           </fieldset>
         </div>
 
-       
+      </form>
 
       
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+<button class="govuk-button" data-module="govuk-button">Continue</button>
 
-      </form>
+      
      
     </div>
   </div>

@@ -34,18 +34,15 @@
   <div class="govuk-grid-row govuk-!-margin-top-7">
     <div class="govuk-grid-column-three-quarters">
       
-      {{ data['certificate-reference'] }}
-      {% if (data['cert-type'] == "CHEDPP") %}
-      <h1 class="govuk-heading-xl" id="page-primary-title">Phytosanitary certificate not found</h1>
-      {% else %}
-      <h1 class="govuk-heading-xl" id="page-primary-title">Health certificate not found</h1>
-      {% endif %}
+      
+      <h1 class="govuk-heading-xl">Phytosanitary certificate not found</h1>
+      
       <p class="govuk-hint">Check your details to enter them again.</p>
       
       <form class="form" action="01-select-ched-type" method="POST">
         <h2 class="govuk-!govuk-heading-l"> What do you want to do?</h2>
         
-        {{ data | log }}
+       
         
         <!-- <p class="govuk-body ">You many save time by completing a notification using your digital health certificate.</p>
         <p class="govuk-body govuk-!-margin-bottom-4">This is also called 'Cloning'.</p> -->

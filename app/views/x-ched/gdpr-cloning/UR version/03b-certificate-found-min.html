@@ -1,0 +1,118 @@
+@ -1,140 +0,0 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<main class="govuk-main-wrapper cloning-summary-page" id="main-content">
+  <div class="govuk-grid-row" id="cloning-summary">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl " id="page-primary-title">Certificate details</h1>
+      <table class="govuk-table review-table" id="consignment-table">
+        <caption class="govuk-visually-hidden">Consignment table</caption>
+        <tbody>
+          <tr class="govuk-table__header">
+            <th class="govuk-heading-m govuk-!-width-full" id="about-consignment">About the consignment</th>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Certificate number</th>
+            <td class="govuk-table__cell" id="health-certificate-number">GERMAN-IJKML68689900-13579002468</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Country of origin</th>
+            <td class="govuk-table__cell" id="country-of-origin">Germany</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Main reason for importing the consignment
+            </th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">Human Consumption</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table review-table govuk-!-margin-bottom-0" id="consignment-table">
+        <caption class="govuk-visually-hidden">Consignment table</caption>
+        <tbody>
+        <tr class="govuk-table__header">
+          <th class="govuk-heading-m" id="description-of-goods">Description of goods</th>
+          <td class="govuk-body govuk-!-font-weight-bold text-align-right" id="num-commodity-lines">10 of 50</td>
+        </tr>
+        </tbody>
+      </table>
+
+            <tr>
+              <td class="govuk-!-padding-top-5" colspan="6">
+                <a href="/notification/vnet/protected/notifications/cloning/commodities/summary?ehcRef=NZL2021/PPCS2/999998&amp;origin=NZ&amp;certType=CVEDP" class="govuk-link" id="commodity-summary-link">
+                    View a summary of all commodity details
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table review-table govuk-!-margin-top-6" id="seals-table">
+          <caption class="govuk-visually-hidden">Container and seals table</caption>
+          <tbody>
+           
+          <tr>
+            <th scope="col" class="govuk-table__header">Container</th>
+            <th scope="col" class="govuk-table__cell govuk-table__header">Seal number</th>
+          </tr>
+          <tr>
+            <td class="govuk-!-padding-top-5" colspan="6">
+              <a href="/notification/vnet/protected/notifications/cloning/commodities/summary?ehcRef=NZL2021/PPCS2/999998&amp;origin=NZ&amp;certType=CVEDP" class="govuk-link" id="commodity-summary-link">
+                  View all container and seals details
+              </a>
+            </td>
+          </tr>
+           
+           
+           
+            
+          </tbody>
+        </table>
+
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-0 bcp-header">
+            Transport to the port of entry
+        </h2>
+        <table class="govuk-table review-table" id="bcp-table">
+          <caption class="govuk-visually-hidden">bcp table</caption>
+          <tbody>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Port of entry
+            </th>
+            <td class="govuk-table__cell" id="bcp">London Tilbury - GBTIL1</td>
+          </tr>
+          </tbody>
+        </table>
+
+      <form action="summary" method="POST">
+        <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Clone</button>
+        <a class="govuk-link clear-link" id="search-to-clone" href="/notification/vnet/protected/notifications/cloning/search?certType=CVEDP">Cancel</a>
+        <input name="certificate-reference" type="hidden" value="NZL2021/PPCS2/999998">
+        <input name="country-of-origin-code" type="hidden" value="NZ">
+        <input name="certificate-type" type="hidden" value="CVEDP">
+        <input name="crumb" type="hidden" value="P-FaUomfy6HW73D8IRm0HZ28E9jh1PyjsGxJMzVATib">
+      </form>
+    </div>
+  </div>
+</main>
+
+</div>
+
+
+{% endblock %}
