@@ -26,11 +26,11 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Transport</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Which countries will the consignment travel through?</h1>
-      <form action="06-03-contact-address" method="POST">
+      <form action="08-01-review" method="POST">
         <input name="crumb" type="hidden" value="Oc_P40viwBADQYqopIWp1PVEfgL0tapC7ExjI8jIsXA">
         <input name="etag" type="hidden" value="&quot;0000000004D0B0B5&quot;">
-
-
+        <span class="govuk-hint">Countries the consignment will travel through are countries between the country of origin and the destination country. </span>
+        <span class="govuk-hint">This does not include United Kingdom. </span>
 
         <div class="govuk-form-group govuk-!-margin-bottom-2 ">
           <label class="govuk-label govuk-label--s" for="transited-state">
@@ -299,12 +299,18 @@ GOV.UK Prototype Kit
           </tbody>
         </table>
 
+        {% if data['from-page'] == "review" %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+          name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button"
+          formaction="08-01-review">
+        {% else %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
           name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
           data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
           name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% endif %}
       </form>
     </div>
   </div>

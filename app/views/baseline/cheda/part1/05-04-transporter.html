@@ -26,8 +26,23 @@ GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl">Transport</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Transporter</h1>
-      <div class="govuk-hint govuk-!-margin-bottom-5">This is the commercial transporter authorised by the Animal and
-        Plant Health Agency (APHA) to transport live animals for commercial movements into the UK.</div>
+      <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-5 govuk-!-padding-left-0">
+        <p class="govuk-hint">
+          Your transporter must hold a valid transporter authorisation, issued by DAERA or APHA in the UK if they are:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-hint">
+          <li>transporting any live vertebrate animals in, to, from or through Great Britain (GB)</li>
+          <li>travelling on journeys of over 65 km</li>
+          <li>transporting as part of an economic (commercial) activity</li>
+        </ul>
+        <p class="govuk-hint">
+          <a href="https://www.gov.uk/guidance/animal-welfare-in-transport#transporting-animals-in-connection-with-an-economic-activity" target="_blank">Find out how to transport animals in connection with an economic activity (opens in a new tab)</a>
+        </p>
+        <p class="govuk-hint">
+          Documents issued by DAERA are valid for use in GB.<br>
+          Documents issued in any EU Member State are not valid for use in GB.
+        </p>
+      </div>
       <form action="05-06-route" method="post">
         <input name="crumb" type="hidden" value="Oc_P40viwBADQYqopIWp1PVEfgL0tapC7ExjI8jIsXA">
         <input name="etag" type="hidden" value="&quot;0000000004D0A987&quot;">
@@ -48,22 +63,19 @@ GOV.UK Prototype Kit
                 {% if data['transporter-search-page'] == "yes" %}
                 <tr>
                   <td class="govuk-table__cell vertical-align-middle name-address-and-country"
-                    headers="transporter-company-name-address-country" style="vertical-align: middle; width: 14em;">
-                    <p>Acha Transporte y Logística</p>
-                    <p>Avda. de la Estación 43, Fuentidueña De Tajo, 28597</p>
-                    <p>Spain</p>
+                    headers="transporter-company-name-address-country" style="width: 14em;">
+                    <p>CW COURIER SERVICES</p>
+                    <p>FAUVE, THE STREET, BIROBROOK, HALSTEAD, CO9 4BJ</p>
+                    <p>United Kingdom of Great Britain and Northern Ireland</p>
                   </td>
-                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-number"
-                    style="vertical-align: middle;">
-
+                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-number">
+                    UK/BURY/T1/00090182
                   </td>
-                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-type"
-                    style="vertical-align: middle;">
-                    private transporter
+                  <td class="govuk-table__cell vertical-align-middle" headers="transporter-type">
+                    commercial transporter
                   </td>
-                  <td class="govuk-table__cell vertical-align-middle" style="vertical-align: middle;">
-                    <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1002957/transport/transporter/search"
-                      class="govuk-link" id="edit-transporter-from-bip">Change</a>
+                  <td class="govuk-table__cell vertical-align-middle">
+                    <a href="05-05-transporter-search" class="govuk-link" id="edit-transporter-from-bip">Change</a>
                   </td>
                 </tr>
                 {% else %}
@@ -82,16 +94,22 @@ GOV.UK Prototype Kit
             </table>
           </div>
           {% if data['transporter-search-page'] != "yes" %}
-          <a href="05-04-transporter-search" class="govuk-link govuk-!-font-size-19" id="add-transporter-from-bip">Add a
+          <a href="05-05-transporter-search" class="govuk-link govuk-!-font-size-19" id="add-transporter-from-bip">Add a
             transporter</a>
           {% endif %}
         </div>
+        {% if data['from-page'] == "review" %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+          name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button"
+          formaction="08-01-review">
+        {% else %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
           name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
           data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
           name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% endif %}
       </form>
     </div>
   </div>

@@ -1,23 +1,22 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+{% include "includes/phase-banner.html" %}
+{% include "includes/back.html" %}
 {% endblock %}
 
 {% block content %}
 
 
 <div class="govuk-!-padding-top-6" style="margin-bottom: 30px;">
-    <span class="heading-tertiary">
-        <span id="reference-number">DRAFT.GB.2024.5501422 </span>
-            <span> - CHEDA</span>
-    </span>
+  <span class="heading-tertiary">
+    <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+    <span> - CHEDA</span>
+  </span>
 </div>
 
 
@@ -26,37 +25,63 @@
   <div class="govuk-grid-row" id="declaration-page">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl " id="page-primary-title">Declaration</h1>
-      <p class="govuk-body">In submitting this notification, I hereby declare that the information provided is true and correct.</p>
-      <p class="govuk-body">I confirm that I am:</p>
+
+      <p class="govuk-body">I am the contact for the authorities and located in the UK.</p>
+      <p class="govuk-body">I am complying with the requirements of Regulation (EU 2017/625 including on animal health
+        and welfare.</p>
+
+      <p class="govuk-body"><b>I confirm I am responsible for this consignment.</b></p>
+      <p class="govuk-body">I am responsible from the submission of this notification to when it enters Great Britain. And I am responsible until it has either:</p>
+
+      <!-- <ol class="govuk-list govuk-list--number">
+
+          
+        <ul class="govuk-list govuk-list--bullet">
+            <li>cleared official checks at the border</li>
+            <li>reached the Place of Destination as stated on the health certificate or notification</li>
+          </ul>
+        </li>
+      </ol> -->
+
       <ul class="govuk-list govuk-list--bullet">
-        <li>complying with the requirements of Regulation (EU) 2017/625</li>
-        <li>the contact for the authorities in relation to this consignment and located in the UK</li>
-        <li>
-          responsible for the consignment, from submission of this notification to it entering Great Britain and
-          until it has either cleared official checks at the border or, where no checks at the border are required
-          by the authorities, the consignment reaches the Place of Destination as stated on the health certificate
-          and/or notification
-        </li>
-        <li>
-          accountable for making payment for the official control checks completed by the authorities at the border,
-          or for making the arrangements to re-dispatch the consignment, or for the costs of quarantine/isolation of
-          consignments, or for the costs of destruction and disposal, when instructed by the authorities
-        </li>
-        <li>
-          authorised to do so if raising notifications on behalf of a third party, and legally act on their behalf
-          in relation to the conditions of this declaration
-        </li>
+        <li>any payment for the official controls at the border</li>
+        <li>any arrangements to re-dispatch the consignment</li>
       </ul>
 
-      <p class="govuk-body govuk-!-margin-bottom-2">
-        Date of declaration: <span id="date-of-declaration">20 February 2024</span>
-      </p>
+      <p class="govuk-body"><b>I confirm that I am accountable for:</b></p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>any payment for the official controls at the border</li>
+        <li>any arrangements to re-dispatch the consignment</li>
+        <li>any costs needed for quarantine or isolation of consignments</li>
+        <li>any costs needed for destruction and disposal of consignments, when instructed by the authorities</li>
+      </ul>
+      <p class="govuk-body">I am authorised as being accountable for these things if raising notifications on behalf of a third party.</p>
 
-      <form id="declaration" class="review-form" action="10-01a-submitted-inspection-required"  method="POST">
+      <p class="govuk-body">I can legally act on behalf of a third party in relation to the conditions of this declaration.</p>
+
+      <form id="declaration" class="review-form" action="10-01-submitted" method="post">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="declaration" name="declaration" type="checkbox" value="yes">
+              <label class="govuk-label govuk-checkboxes__label" for="declaration">
+                I declare that the information I have provided in this notification I am submitting is true and correct.
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <p class="govuk-body govuk-!-margin-bottom-2">
+          Date of declaration: <span id="date-of-declaration">22 July 2024</span>
+        </p>
+
+
         <input name="crumb" type="hidden" value="Ydm23FlnF8m6O6Bvn3Cnlpdf3GEtj0PtCyCKshnEUqa">
         <input name="etag" type="hidden" value="&quot;000000000006F7C6&quot;">
         <input name="submissionDate" type="hidden" value="12 October 2024">
-        <input class="govuk-button govuk-!-margin-top-7" id="accept-and-submit" type="submit" value="Submit notification">
+        <input class="govuk-button govuk-!-margin-top-7" id="accept-and-submit" type="submit"
+          value="Submit notification">
       </form>
     </div>
   </div>
