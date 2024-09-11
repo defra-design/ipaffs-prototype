@@ -51,21 +51,16 @@ GOV.UK Prototype Kit
             <tbody>
 
 
-              {% for specie in data['species'] %}
+              
               <tr>
                 <td class="form-group govuk-table__cell">
-                  {{ data['commodity-code'] or "0103" }}
+                  0102
                 </td>
                 <td class="govuk-table__cell">
-                  {% if data['commodity-code'] == "01061900" %}
-                  Other
-                  {% else %}
-                  Live swine
-                  {% endif %}
+                  Live bovine animals
                 </td>
                 <td class="govuk-table__cell">
-                  {{ specie }}{% if (data['type-of-commodity'] == "Domestic" or data['type-of-commodity'] == "Game") %},
-                  {{ data['type-of-commodity'] }}{% endif %}
+                  Bos taurus, Domestic
                 </td>
                 <td class="govuk-table__cell">
                   5
@@ -75,92 +70,50 @@ GOV.UK Prototype Kit
                     aria-label="Change quantities of Equus asinus" formaction="02-06-commodity-details">
                 </td>
               </tr>
-              {% endfor %}
+              
             </tbody>
           </table>
         </div>
 
-        {% for specie in data['species'] %}
-        <h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-margin-top-0" id="#{{ specie }}">
-          {{ specie }}{% if (data['type-of-commodity'] == "Domestic" or data['type-of-commodity'] == "Game") %}, {{
-          data['type-of-commodity'] }}{% endif %}
-          Identification details
+        
+        <h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-margin-top-0" id="">
+          Bos taurus, Domestic Identification details
         </h2>
         <div class="table-responsive">
-          {% if data['commodity-code'] == "01061900" %}
-          <table class="identifiers-table govuk-table govuk-!-margin-bottom-2" id="identifiers-table-1-502501">
-            <thead class="govuk-table__head">
-              <tr>
-                <th scope="col" class="govuk-form-group govuk-table__header">Animal</th>
-                <th scope="col" class="govuk-table__header" id="microchip-01">Microchip</th>
-                <th scope="col" class="govuk-table__header" id="passport-01">Passport</th>
-                <th scope="col" class="govuk-table__header" id="tattoo-01">Tattoo</th>
-                <td class="govuk-form-group govuk-table__header"></td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="input-row" id="3-129518-input-row">
-                <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">{{ specie }} 1</td>
-                <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="3-129518.identifiers-1-microchip" name="microchip-01" type="text"
-                    value="" aria-label="3-129518.identifiers-1-microchip">
-                </td>
-                <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="3-129518.identifiers-1-passport" name="passport-01" type="text"
-                    value="" aria-label="3-129518.identifiers-1-passport">
-                </td>
-                <td class="govuk-table__cell">
-                  <input class="govuk-input  " id="3-129518.identifiers-1-tattoo" name="tattoo-01" type="text" value=""
-                    aria-label="3-129518.identifiers-1-tattoo">
-                </td>
-                <td class="govuk-table__cell change"><span class="govuk-visually-hidden">Remove link</span></td>
-              </tr>
-            </tbody>
-          </table>
-          {% else %}
           <table class="identifiers-table govuk-table govuk-!-margin-bottom-2" id="identifiers-table-1-25761">
             <thead class="govuk-table__head">
               <tr>
                 <th scope="col" class="govuk-form-group govuk-table__header">Animal</th>
                 <th scope="col" class="govuk-table__header" id="earTag-01">Ear tag</th>
-                <!-- th scope="col" class="govuk-table__header" id="passport-01">Passport</th -->
+                <th scope="col" class="govuk-table__header" id="passport-01">Passport</th>
                 <td class="govuk-form-group govuk-table__header"></td>
               </tr>
             </thead>
             <tbody>
               <tr class="input-row" id="1-25761-input-row">
-                <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">{{ specie }} 1</td>
+                <td class="form-group govuk-table__cell govuk-!-width-one-quarter ">Bos taurus 1</td>
                 <td class="govuk-table__cell">
                   <input class="govuk-input  " id="1-25761.identifiers-1-ear_tag" name="eartag-01" type="text" value=""
                     aria-label="1-25761.identifiers-1-ear_tag">
                 </td>
-                <!-- td class="govuk-table__cell">
+                <td class="govuk-table__cell">
                   <input class="govuk-input  " id="1-25761.identifiers-1-passport" name="passport-01" type="text"
                     value="" aria-label="1-25761.identifiers-1-passport">
-                </td -->
+                </td>
                 <td class="govuk-table__cell change"><span class="govuk-visually-hidden">Remove link</span></td>
               </tr>
             </tbody>
           </table>
-          {% endif %}
         </div>
         <div>
           <fieldset class="no-border govuk-!-padding-0 govuk-!-margin-bottom-0">
             <legend class="govuk-visually-hidden">
-              Add another button for
-              {{ specie }}
+              Add another button for Bos taurus
             </legend>
-            {% if (data['species'] | length === 1) %}
-            <input type="submit" name="add-1-502501.identifiers-1" id="add-1-502501.identifiers-1" value="Add another"
-              class="link-button govuk-!-margin-bottom-8" formaction="02-08-animal-identifiers-2#{{ specie }}">
-            {% else %}
             <input type="button" name="add-1-502501.identifiers-1" id="add-1-502501.identifiers-1" value="Add another"
               class="link-button govuk-!-margin-bottom-8">
-            {% endif %}
-
           </fieldset>
         </div>
-        {% endfor %}
         <div class="govuk-!-margin-top-6">
           {% if data['from-page'] == "review" %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"

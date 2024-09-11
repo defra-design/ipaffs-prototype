@@ -52,26 +52,6 @@ GOV.UK Prototype Kit
                   Breeding and/or production
                 </label>
               </div>
-              {% if data['commodity-code'] == "01061900" %}
-              <div class="govuk-radios__item animal-certified-as">
-                <input class="govuk-radios__input" id="animalCertifiedcircus" name="animal-certified-as" value="Circus/exhibition" type="radio" {{ checked('animal-certified-as','Circus/exhibition') }}>
-                <label class="govuk-label govuk-radios__label" for="animalCertifiedcircus">
-                  Circus/exhibition
-                </label>
-              </div>
-              <div class="govuk-radios__item animal-certified-as">
-                <input class="govuk-radios__input" id="animalCertifiedpets" name="animal-certified-as" value="Pets" type="radio" {{ checked('animal-certified-as','Pets') }}>
-                <label class="govuk-label govuk-radios__label" for="animalCertifiedpets">
-                  Pets
-                </label>
-              </div>
-              <div class="govuk-radios__item animal-certified-as">
-                <input class="govuk-radios__input" id="animalCertifiedother" name="animal-certified-as" value="Other" type="radio" {{ checked('animal-certified-as','Other') }}>
-                <label class="govuk-label govuk-radios__label" for="animalCertifiedother">
-                  Other
-                </label>
-              </div>
-              {% else %}
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedslaughter" name="animal-certified-as"
                   value="Slaughter" type="radio" {{ checked('animal-certified-as','Slaughter') }}>
@@ -79,12 +59,11 @@ GOV.UK Prototype Kit
                   Slaughter
                 </label>
               </div>
-              {% endif %}
             </div>
           </fieldset>
         </div>
 
-        {% if data['commodity-code'] != "01061900" %}
+        
         <div class="govuk-form-group including-non-ablacted ">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -110,7 +89,7 @@ GOV.UK Prototype Kit
             </div>
           </fieldset>
         </div>
-        {% endif %}
+        
 
         {% if (data['from-page'] == "review") or (data['from-page'] == "commodity-details") %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review" name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review">

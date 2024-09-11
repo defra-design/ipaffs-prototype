@@ -44,13 +44,13 @@ GOV.UK Prototype Kit
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell  govuk-!-width-one-third" id="commodity-0102">
-                    {{ data['commodity-code'] or "0103" }}
+                    0102
                   </td>
                   <td class="govuk-table__cell" id="commodity-description-0102">
                     {% if data['commodity-code'] == "01061900" %}
                     Other
                     {% else %}
-                    Live swine
+                    Live bovine animals
                     {% endif %}
                   </td>
                   <td class="govuk-table__cell remove">
@@ -70,11 +70,7 @@ GOV.UK Prototype Kit
             <table class="govuk-table species-table-cheda govuk-!-margin-bottom-1">
               <caption class="govuk-table__caption">
                 <h2 class="govuk-heading-m">
-                  {% if data['commodity-code'] == "01061900" %}
-                  Other
-                  {% else %}
-                  Live swine
-                  {% endif %}
+                  Live bovine animals
                 </h2>
               </caption>
 
@@ -87,42 +83,28 @@ GOV.UK Prototype Kit
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
-                {% for specie in data['species'] %}
                 <tr class="govuk-table__row" id="species-01061900-129518-desktop">
                   <td class="govuk-table__cell govuk-!-padding-top-3" id="01061900-129518-desktop">
-                    {{ specie }}{% if (data['type-of-commodity'] == "Domestic" or data['type-of-commodity'] == "Game")
-                    %}, {{ data['type-of-commodity'] }}{% endif %}
+                    Bos taurus, Domestic
                   </td>
                   <td class="govuk-table__cell  govuk-!-padding-top-2 govuk-!-padding-bottom-2">
                     <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-
-
-
                       <input class="govuk-input number-of-animals " id="01061900-129518.num-animals-desktop"
-                        name="num-animals-{{ specie }}" type="text" value=""
-                        aria-label="Number of animals for {{ specie }}">
+                        name="num-animals" type="text" value=""
+                        aria-label="Number of animals for Bos taurus">
                     </div>
                   </td>
                   <td class="govuk-table__cell govuk-!-padding-top-2 govuk-!-padding-bottom-2">
                     <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-
-
-
                       <input class="govuk-input number-of-packages " id="01061900-129518.num-packages-desktop"
-                        name="num-packages-{{ specie }}" type="text" value=""
-                        aria-label="Number of packages for {{ specie }}">
+                        name="num-packages" type="text" value=""
+                        aria-label="Number of packages for Bos taurus">
                     </div>
                   </td>
                   <td class="govuk-table__cell remove govuk-!-padding-left-6 govuk-!-padding-top-3">
-                    {% if (data['species'] | length > 1) %}
-                    <button type="button" name="remove_01061900_129518" value="Remove"
-                      class="link-button commodities-remove" id="remove-species-01061900-129518-desktop">
-                      Remove
-                    </button>
-                    {% endif %}
+                    
                   </td>
                 </tr>
-                {% endfor %}
               </tbody>
 
               <tfoot>

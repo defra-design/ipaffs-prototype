@@ -29,7 +29,7 @@ GOV.UK Prototype Kit
       <span class="govuk-caption-xl" id="page-secondary-title">Transport</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Transport to the port of entry</h1>
 
-      <form action="means-of-transport" method="post">
+      <form action="05-02-transport-after-poe" method="post">
         <input name="crumb" type="hidden" value="rRvl8RBppH2ycmf0gXLXGeHAauhhv0ztAysA0pUak_N">
         <input name="etag" type="hidden" value="&quot;00000000057AB983&quot;">
         <input id="js-enabled-flag" name="js-enabled" type="hidden" value="true">
@@ -46,33 +46,10 @@ GOV.UK Prototype Kit
 
 
           <input class="govuk-input govuk-!-width-two-thirds " id="transport-poe" name="transport-poe" type="text"
-          value="{{ data['transport-poe'] }}" aria-describedby="identification-hint">
+            value="{{ data['transport-poe'] }}" aria-describedby="identification-hint">
 
 
-          <!-- <div>
-            <div class="autocomplete__wrapper">
-              <div
-                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                <div id="bcp__status--A" role="status" aria-atomic="true" aria-live="polite"></div>
-                <div id="bcp__status--B" role="status" aria-atomic="true" aria-live="polite"></div>
-              </div><input aria-expanded="false" aria-owns="bcp__listbox" aria-autocomplete="both"
-                aria-describedby="bcp__assistiveHint" autocomplete="off"
-                class="autocomplete__input autocomplete__input--default" id="bcp" name="" placeholder="" type="text"
-                role="combobox">
-              <ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="bcp__listbox"
-                role="listbox">
-                <li aria-selected="false" class="autocomplete__option" id="bcp__option--0" role="option" tabindex="-1"
-                  aria-posinset="1" aria-setsize="1">PORTSMOUTH (GBPME)</li>
-              </ul><span id="bcp__assistiveHint" style="display: none;">When autocomplete results are available use up
-                and down arrows to review and enter to select. Touch device users, explore by touch or with swipe
-                gestures.</span>
-            </div>
-          </div> -->
-          <!-- <select class="govuk-select govuk-!-width-one-half" id="bcp-select" name="bcp"
-            data-typeahead-field="bcp">
-            <option value="">Select port of entry</option>
-            
-          </select> -->
+
         </div>
 
 
@@ -115,8 +92,8 @@ GOV.UK Prototype Kit
 
 
 
-          <input class="govuk-input govuk-!-width-one-half " id="identification" name="transport-identification" type="text"
-            value="{{ data['transport-identification'] }}" aria-describedby="identification-hint">
+          <input class="govuk-input govuk-!-width-one-half " id="identification" name="transport-identification"
+            type="text" value="{{ data['transport-identification'] }}" aria-describedby="identification-hint">
         </div>
 
         <div class="govuk-form-group ">
@@ -149,7 +126,8 @@ GOV.UK Prototype Kit
                   <div class="govuk-hint govuk-!-width-two-thirds">
                     Enter the container identification number, or the trailer registration number or number plate.
                   </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="trailer-number" name="trailer-number" type="text" value="{{ data['trailer-number'] }}">
+                  <input class="govuk-input govuk-!-width-one-third" id="trailer-number" name="trailer-number"
+                    type="text" value="{{ data['trailer-number'] }}">
                 </div>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="seal-number">
@@ -159,7 +137,8 @@ GOV.UK Prototype Kit
                     Enter the seal number on the official certificate or any other seal mentioned in the accompanying
                     documents.
                   </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="seal-number" name="seal-number" type="text" value="{{ data['seal-number'] }}">
+                  <input class="govuk-input govuk-!-width-one-third" id="seal-number" name="seal-number" type="text"
+                    value="{{ data['seal-number'] }}">
                 </div>
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -185,7 +164,8 @@ GOV.UK Prototype Kit
                     another container or trailer</a></p>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="No" {{ checked('road-trailers','No') }}>
+                <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="No" {{
+                  checked('road-trailers','No') }}>
                 <label class="govuk-label govuk-radios__label" for="road-trailers-3">
                   No
                 </label>
@@ -208,8 +188,8 @@ GOV.UK Prototype Kit
 
 
 
-          <input class="govuk-input govuk-!-width-one-half " id="document" name="document-reference" type="text" value="{{ data['document-reference'] }}"
-            aria-describedby="document-hint">
+          <input class="govuk-input govuk-!-width-one-half " id="document" name="document-reference" type="text"
+            value="{{ data['document-reference'] }}" aria-describedby="document-hint">
 
         </div>
 
@@ -265,7 +245,8 @@ GOV.UK Prototype Kit
               Estimated total journey time of the animals
             </legend>
 
-            <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">Total journey time is from loading the animals in the country of origin to the final place of destination. This includes all rest time.</span>
+            <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">Total journey time is from loading the
+              animals in the country of origin to the final place of destination. This includes all rest time.</span>
 
 
             <div class="govuk-date-input date-input-width" id="estimated-journey-time">
@@ -302,8 +283,10 @@ GOV.UK Prototype Kit
         </div>
 
         {% if data['from-page'] == "review" %}
-        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review" name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review">
-        {% else  %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review"
+          name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button"
+          formaction="08-01-review">
+        {% else %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
           name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
           data-module="govuk-button">
