@@ -1,0 +1,309 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Addresses – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5925980</span>
+          <span> - CHEDA</span>
+  </span>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="traders-page">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Addresses</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Consignor or Exporter, Consignee, Importer and Place of Destination</h1>
+
+      <form action="04-01-addresses" method="post">
+        <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
+        <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
+        <input name="04-01-addresses" type="hidden" value="visited">
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">
+            Consignor or exporter
+          </h2>
+          <p class="govuk-hint">This is the sender of the consignment.</p>
+          {% if (data['consignor-page'] == "yes") %}
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                  <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignor-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% if data['commodity-code'] == "01061900" %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignor-name">
+                    K9 specialists
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignor-address">
+                    100 Rajander Road, West Gujuptur, 114436
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignor-country">
+                    India
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                    <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Change</a>
+                  </td>
+                </tr>
+                {% else  %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignor-name">
+                    MadDyr exports
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignor-address">
+                    5 Rue Léon Blum, Lille, 59800
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignor-country">
+                    France
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                    <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Change</a>
+                  </td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div> 
+          {% else %}
+          <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Add a consignor or exporter</a>
+          {% endif %}
+        </div>
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m">
+            Consignee
+          </h2>
+          <p class="govuk-hint">This is the receiver or buyer of the consignment being shipped or transported.</p>
+          {% if (data['consignee-page'] == "yes") %}
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignee">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignee-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignee-address">Address</th>
+                  <th class="govuk-table__header col-country" id="consignee-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignee-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% if data['commodity-code'] == "01061900" %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignee-name">
+                    Hound Welfare LTD
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignee-address">
+                    The Ridgeway, Linconshire, LN6 5PH
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignee-country">
+                    England
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                    <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  </td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignee-name">
+                    The Pig Company LTD
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignee-address">
+                    Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignee-country">
+                    England
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                    <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  </td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+          {% else %}
+          <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Add a consignee</a>
+          {% endif %}
+        </div>
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m" id="importer-heading">
+            Importer
+          </h2>
+          <p class="govuk-hint">This is usually the same as the consignee. You can select a different person if needed.</p>
+          {% if (data['importer-page'] != "yes") and (data['consignee-page'] == "yes") %}
+          <a href="04-01-addresses?importer-page=yes#importer-heading" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Same as consignee</a>
+        
+          &nbsp;
+          <a href="04-02-address-search?addressType=importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
+         
+          {% elif (data['importer-page'] != "yes") %}
+       
+          <a href="04-02-address-search?addressType=importer" class="govuk-link" id="edit-consignee" name="addressType" value="importer">Add an importer</a>
+
+          {% elif (data['importer-page'] == "yes") %}
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-importer">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="importer-name">Name</th>
+                  <th class="govuk-table__header col-address" id="importer-address">Address</th>
+                  <th class="govuk-table__header col-country" id="importer-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="importer-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% if data['commodity-code'] == "01061900" %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignee-name">
+                    Hound Welfare LTD
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignee-address">
+                    The Ridgeway, Linconshire, LN6 5PH
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignee-country">
+                    England
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                    <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  </td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignee-name">
+                    The Pig Company LTD
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignee-address">
+                    Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignee-country">
+                    England
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                    <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  </td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="govuk-!-margin-bottom-8">
+          <h2 class="govuk-heading-m" id="poc-heading">
+            Place of destination
+          </h2>
+         
+          <div class="govuk-body">
+            This is where the animals will be unloaded and accommodated for at least 48 hours. If a health certificate is required, it will show this address.
+          </div>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Providing a false address is an act of fraud.
+            </strong>
+          </div>
+          {% if (data['place-of-destination-page'] != "yes") and (data['consignee-page'] == "yes") %}
+
+          <a href="04-01-addresses?place-of-destination-page=yes#poc-heading" class="govuk-link" id="edit-consignee" name="addressType" value="place-of-destination">Same as consignee</a>
+          &nbsp;
+          <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+        
+          {% elif (data['place-of-destination-page'] != "yes") %}
+          <a href="04-02-address-search?addressType=place%20of%20destination" class="govuk-link" id="edit-importer">Add a place of destination</a>
+      
+          {% elif (data['place-of-destination-page'] == "yes") %}
+          <div class="table-responsive">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-place-of-destination">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="place-of-destination-name">Name</th>
+                  <th class="govuk-table__header col-address" id="place-of-destination-address">Address</th>
+                  <th class="govuk-table__header col-country" id="place-of-destination-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="place-of-destination-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% if data['commodity-code'] == "01061900" %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignee-name">
+                    Hound Welfare LTD
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignee-address">
+                    The Ridgeway, Linconshire, LN6 5PH
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignee-country">
+                    England
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                    <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  </td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignee-name">
+                    The Pig Company LTD
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignee-address">
+                    Roselee Farm, Stockwell Road, Hertfordshire, AL9 8BH
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignee-country">
+                    England
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignee-edit">
+                    <a href="04-02-address-search?addressType=consignee" class="govuk-link" id="edit-consignee" name="addressType" value="consignee">Change</a>
+                  </td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+        </div>
+      </form>
+
+      {% if data['commodity-code'] == "01061900" %}
+      <form action="04-04-permanent-address" method="post">
+      {% else %}
+      <form action="04-03-cph-number" method="post">
+      {% endif %}
+        <input name="04-01-addresses" type="hidden" value="visited">
+        <div class="save-and-submit-buttons">
+          {% if data['from-page'] == "review" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review" name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review">
+          {% else  %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Decision hub
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link"
+        id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve
+      it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book"
+        href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link"
+        href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link govuk" href="/chedp/2024-part-2-single-chedp/00-dashboard">Dashboard</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<form action="hub" method="POST">
+  <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+  <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+  <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+    <tbody>
+      <tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2"
+            id="Status-Label">New</strong>
+          <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+            Save and set as in progress
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="override-risk-decision-page">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="heading-tertiary">
+          <span id="reference-number">CHEDA.GB.2024.6279126</span>
+          <span id="cved-version-number"> - V2</span>
+        </span>
+        <span id="page-primary-title">Override risk decision</span>
+      </h1>
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-heading-m">Are you sure you want to override this risk decision?</h2>
+        <input name="override-decision" type="hidden" value="Not required">
+        <p class="govuk-body">
+          By overriding this risk decision the responsible person will be notified and the
+          consignment will not be brought to the BCP.
+        </p>
+        <p class="govuk-body">
+          If you override this risk decision you will be unable to change this at a later
+          date.
+        </p>
+      </div>
+      <button type="submit" value="Yes, override risk decision" id="submit-button"
+        class="govuk-button govuk-!-display-block" data-prevent-double-click="true">
+        Yes, override risk decision
+      </button>
+      <a href="/chedp/2024-part-2-single-chedp/01-dh-when-overright-inspection-required"
+        class="govuk-link govuk-!-font-size-19">
+        No, don't override risk decision
+      </a>
+    </div>
+  </div>
+</main>
+
+</div>
+
+{% endblock %}

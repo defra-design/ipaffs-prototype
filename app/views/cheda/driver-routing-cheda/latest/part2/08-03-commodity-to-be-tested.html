@@ -1,0 +1,364 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Record
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  </div>
+
+  <form action="06d-laboratory" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  
+
+    <main class="govuk-main-wrapper" id="main-content">
+      <div class="govuk-grid-row" id="choose-lab-tests-page">
+          <div class="govuk-grid-column-full">
+              <h1 class="govuk-heading-xl">
+                <span class="heading-tertiary">
+                  <span id="reference-number">CHEDA.GB.2023.5948132</span>
+                    <span id="cved-version-number"> - V1</span>
+                </span>
+                <span id="page-primary-title">Laboratory tests</span>
+              </h1>
+  
+              <div class="govuk-form-group">
+                  <h2 class="govuk-heading-s govuk-!-margin-bottom-1  ">Commodity to be tested</h2>
+                  <p class="govuk-body">03021120 Oncorhynchus mykiss </p>
+              </div>
+              <form action="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/choose-lab-test" method="GET">
+                  <div class="govuk-form-group search-panel">
+                      <fieldset class="govuk-fieldset">
+                          <legend class="govuk-heading-m">Filter</legend>
+                      </fieldset>
+                      <div class="govuk-grid-row govuk-!-margin-bottom-5">
+                          <div class="govuk-grid-column-one-third">
+                              <div class="govuk-form-group ">
+                                  <label class="govuk-label govuk-label--s" for="laboratory-test-name">Search</label>
+                                  <input class="govuk-input" id="laboratory-test-name" name="laboratory-test-name" type="text" value="">
+                              </div>
+                          </div>
+                          <div class="govuk-grid-column-one-third">
+                              <div class="govuk-form-group ">
+                                  <label class="govuk-label govuk-label--s" for="laboratory-tests-category">Laboratory test category</label>
+                                  <select class="govuk-select govuk-!-width-full" id="laboratory-tests-category" name="laboratory-tests-category">
+                                      <option value="">Select category</option>
+                                      <option value="Animal diseases">Animal diseases</option>
+                                      <option value="Miscellaneous">Miscellaneous</option>
+                                      <option value="Plant Health">Plant Health</option>
+                                      <option value="Public Health">Public Health</option>
+                                      <option value="Residues">Residues</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="govuk-grid-column-one-third">
+                              <div class="govuk-form-group ">
+                                  <label class="govuk-label govuk-label--s" for="laboratory-tests-subcategory">Laboratory test subcategory</label>
+                                  <select class="govuk-select govuk-!-width-full" id="laboratory-tests-subcategory" name="laboratory-tests-subcategory">
+                                      <option value="">Select subcategory</option>
+                                      <option value="A.1. Stilbenes,stilbene derivatives, and their salts and esters&nbsp;">A.1. Stilbenes,stilbene derivatives, and their salts and esters&nbsp;</option>
+                                      <option value="A.2. Antihyroid agents&nbsp;">A.2. Antihyroid agents&nbsp;</option>
+                                      <option value="A.3. Steroids&nbsp;">A.3. Steroids&nbsp;</option>
+                                      <option value="A.4. Resorcylic acid lactones including zeranol&nbsp;">A.4. Resorcylic acid lactones including zeranol&nbsp;</option>
+                                      <option value="A.5. Beta-agonists&nbsp;">A.5. Beta-agonists&nbsp;</option>
+                                      <option value="A.6. Compounds included in Annex IV to Council Regulation (EEC) No 2377/90 of June 1990&nbsp;">A.6. Compounds included in Annex IV to Council Regulation (EEC) No 2377/90 of June 1990&nbsp;</option>
+                                      <option value="Amphibian diseases">Amphibian diseases</option>
+                                      <option value="Animal diseases">Animal diseases</option>
+                                      <option value="Avian diseases">Avian diseases</option>
+                                      <option value="B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</option>
+                                      <option value="B.2(a) Antihelmintics&nbsp;">B.2(a) Antihelmintics&nbsp;</option>
+                                      <option value="B.2(b) Anticoccidials, including nitroimidazoles&nbsp;">B.2(b) Anticoccidials, including nitroimidazoles&nbsp;</option>
+                                      <option value="B.2(c) Carbamates and pyrethroids&nbsp;">B.2(c) Carbamates and pyrethroids&nbsp;</option>
+                                      <option value="B.2(d) Sedatives&nbsp;">B.2(d) Sedatives&nbsp;</option>
+                                      <option value="B.2(e) Non-steroidal anti-inflammatory drugs (NSAIDs)&nbsp;">B.2(e) Non-steroidal anti-inflammatory drugs (NSAIDs)&nbsp;</option>
+                                      <option value="B.2(f) Other pharmacologically actives substances&nbsp;">B.2(f) Other pharmacologically actives substances&nbsp;</option>
+                                      <option value="B.3(a) Organochlorine compounds including PCBs&nbsp;">B.3(a) Organochlorine compounds including PCBs&nbsp;</option>
+                                      <option value="B.3(b) Organophosphorus compounds&nbsp;">B.3(b) Organophosphorus compounds&nbsp;</option>
+                                      <option value="B.3(c) Chemical elements&nbsp;">B.3(c) Chemical elements&nbsp;</option>
+                                      <option value="B.3(d) Mycotoxins&nbsp;">B.3(d) Mycotoxins&nbsp;</option>
+                                      <option value="B.3(e) Dyes&nbsp;">B.3(e) Dyes&nbsp;</option>
+                                      <option value="B.3(f) Others&nbsp;">B.3(f) Others&nbsp;</option>
+                                      <option value="Bee diseases">Bee diseases</option>
+                                      <option value="Cattle diseases">Cattle diseases</option>
+                                      <option value="Crustacean diseases">Crustacean diseases</option>
+                                      <option value="Equine diseases">Equine diseases</option>
+                                      <option value="Fish diseases">Fish diseases</option>
+                                      <option value="Fungorum">Fungorum</option>
+                                      <option value="Incursio plantis/ Parasitariis plantis">Incursio plantis/ Parasitariis plantis</option>
+                                      <option value="Insecta/ Minuta">Insecta/ Minuta</option>
+                                      <option value="Lagomorph diseases">Lagomorph diseases</option>
+                                      <option value="Miscellaneous">Miscellaneous</option>
+                                      <option value="Mollusc diseases">Mollusc diseases</option>
+                                      <option value="Mollusca">Mollusca</option>
+                                      <option value="Multiple species diseases&nbsp;">Multiple species diseases&nbsp;</option>
+                                      <option value="Nematodes">Nematodes</option>
+                                      <option value="Plant Health">Plant Health</option>
+                                      <option value="Platyhelminthes">Platyhelminthes</option>
+                                      <option value="Prokaryotes">Prokaryotes</option>
+                                      <option value="Public Health">Public Health</option>
+                                      <option value="Residues">Residues</option>
+                                      <option value="Sheep and goat diseases">Sheep and goat diseases</option>
+                                      <option value="Swine diseases">Swine diseases</option>
+                                      <option value="Virus vegetalis">Virus vegetalis</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="govuk-grid-row">
+                          <div class="govuk-grid-column-full">
+                              <button class="govuk-button govuk-!-margin-0" id="search-button" type="submit" data-module="govuk-button" value="Search">Search</button>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+              <table class="govuk-table choose-lab-test-table">
+                  <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Laboratory test</th>
+                          <th scope="col" class="govuk-table__header">Laboratory test category</th>
+                          <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Select test</span></th>
+                      </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.AMINOGLYCOSIDE/AMINOSIDE</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-0">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.ANTITHYROID AGENTS</td>
+                              <td class="govuk-table__cell">A.2. Antihyroid agents&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-1">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.Beta-agonists (screening multisubstances)</td>
+                              <td class="govuk-table__cell">A.5. Beta-agonists&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-2">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.CARBAMATES</td>
+                              <td class="govuk-table__cell">B.2(c) Carbamates and pyrethroids&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-3">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.CEPHEMS</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-4">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.CHEMICAL ELEMENTS</td>
+                              <td class="govuk-table__cell">B.3(c) Chemical elements&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-5">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.CLAVAMS</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-6">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.DIAMINOPYRIMIDINES</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-7">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.DYES</td>
+                              <td class="govuk-table__cell">B.3(e) Dyes&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="06d-laboratory" id="choose-laboratory-test-8">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.Fungorum</td>
+                              <td class="govuk-table__cell">Fungorum</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/186/applicant-information?source=notests" id="choose-laboratory-test-9">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.Incursio plantis</td>
+                              <td class="govuk-table__cell">Incursio plantis/ Parasitariis plantis</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/187/applicant-information?source=notests" id="choose-laboratory-test-10">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.Insecta/Minuta</td>
+                              <td class="govuk-table__cell">Insecta/ Minuta</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/188/applicant-information?source=notests" id="choose-laboratory-test-11">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.LINCOSAMIDES</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1540/applicant-information?source=notests" id="choose-laboratory-test-12">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.MACROLIDES</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1541/applicant-information?source=notests" id="choose-laboratory-test-13">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.Mollusca</td>
+                              <td class="govuk-table__cell">Mollusca</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/189/applicant-information?source=notests" id="choose-laboratory-test-14">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.MYCOTOXINS</td>
+                              <td class="govuk-table__cell">B.3(d) Mycotoxins&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1542/applicant-information?source=notests" id="choose-laboratory-test-15">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.Nematodes vegetalis</td>
+                              <td class="govuk-table__cell">Nematodes</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/190/applicant-information?source=notests" id="choose-laboratory-test-16">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.NON STEROIDAL ANTI-INFLAMMATORY DRUGS</td>
+                              <td class="govuk-table__cell">B.2(e) Non-steroidal anti-inflammatory drugs (NSAIDs)&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1543/applicant-information?source=notests" id="choose-laboratory-test-17">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.ORGANOCHLORINE COMPOUNDS inc PCBs</td>
+                              <td class="govuk-table__cell">B.3(a) Organochlorine compounds including PCBs&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1544/applicant-information?source=notests" id="choose-laboratory-test-18">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.ORGANOPHOSPHORUS COUMPOUNDS</td>
+                              <td class="govuk-table__cell">B.3(b) Organophosphorus compounds&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1545/applicant-information?source=notests" id="choose-laboratory-test-19">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.OTHER PHARMACOLOGICALLY ACTIVES SUBSTANCES</td>
+                              <td class="govuk-table__cell">B.2(f) Other pharmacologically actives substances&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1546/applicant-information?source=notests" id="choose-laboratory-test-20">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.OTHERS</td>
+                              <td class="govuk-table__cell">B.3(f) Others&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1547/applicant-information?source=notests" id="choose-laboratory-test-21">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.Parasitariis plantis</td>
+                              <td class="govuk-table__cell">Incursio plantis/ Parasitariis plantis</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/191/applicant-information?source=notests" id="choose-laboratory-test-22">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.PENAMS</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1548/applicant-information?source=notests" id="choose-laboratory-test-23">Select</a>
+                              </td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">.PHENICOLES</td>
+                              <td class="govuk-table__cell">B.1. Antibacterial substances, including sulphonomides, quinolones&nbsp;</td>
+                              <td class="govuk-table__cell">
+                                  <a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/lab-test/0/1549/applicant-information?source=notests" id="choose-laboratory-test-24">Select</a>
+                              </td>
+                          </tr>
+                  </tbody>
+              </table>
+                  <nav class="pagination" aria-label="Pagination">
+                    <ul class="pagination-list">
+                      <li class="pagination-item pagination-item-next">
+                              <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                            <span class="pagination-link-title">
+                               Next page
+                              <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                                <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                              </svg>
+                            </span>
+                          <span class="govuk-visually-hidden">:</span>
+                          <span class="pagination-link-label">2 of 114</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p class="govuk-body"><a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/hub">Cancel</a></p>
+          </div>
+      </div>
+  </main>
+
+
+</form>
+ 
+
+{% endblock %}
