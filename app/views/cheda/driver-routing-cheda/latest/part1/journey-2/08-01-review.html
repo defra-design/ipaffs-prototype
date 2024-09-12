@@ -1174,7 +1174,7 @@ GOV.UK Prototype Kit
           </tr>
           <tr class="">
             <th scope="row" class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)</th>
-            <td class="govuk-table__cell">{{ data['gvms'] or "No" }}</td>
+            <td class="govuk-table__cell">Yes</td>
           </tr>
         </tbody>
       </table>
@@ -1237,67 +1237,7 @@ GOV.UK Prototype Kit
         </table>
       </div>
 
-      <div class="heading-with-change-link">
-        <h2 class="govuk-heading-m">Transport contacts</h2>
-        <a href="07-notify-transport-contacts?from-page=review" class="govuk-link" id="transporter-change-link">Change</a>
-      </div>
-      <div class="table-responsive govuk-!-margin-bottom-9">
-        <table class="govuk-table presentation-table review-table" id="review-table-transporter" role="presentation">
-          <tbody>
-            <tr id="review-transporter-details" class="presentation-table__section ">
-              <td class="govuk-table__header">Notify transport contacts about inspections</td>
-              <td class="govuk-table__cell" id="transporter-name">Yes</td>
-              <td class="govuk-table__cell change">
-              </td>
-            </tr>
-            <tr class="presentation-table__section">
-              <td class="govuk-table__header">Name</td>
-              <td class="govuk-table__cell" id="transporter-type">Homer Simpson</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr>
-              <td class="govuk-table__header">Email address</td>
-              <td class="govuk-table__cell" id="transporter-address">homer.simpson@hauliers.com</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr>
-              <td class="govuk-table__header">Mobile number</td>
-              <td class="govuk-table__cell" id="transporter-country">07123456789</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr class="presentation-table__section">
-              <td class="govuk-table__header">Name</td>
-              <td class="govuk-table__cell" id="transporter-type">Peter Griffin</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr>
-              <td class="govuk-table__header">Email address</td>
-              <td class="govuk-table__cell" id="transporter-address">peter.griffin@drivers.com</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr>
-              <td class="govuk-table__header">Mobile number</td>
-              <td class="govuk-table__cell" id="transporter-country">07987654321</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr class="presentation-table__section">
-              <td class="govuk-table__header">Name</td>
-              <td class="govuk-table__cell" id="transporter-type">Wade Wilson</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr>
-              <td class="govuk-table__header">Email address</td>
-              <td class="govuk-table__cell" id="transporter-address">wade.wilson@animalattendants.com</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-            <tr>
-              <td class="govuk-table__header">Mobile number</td>
-              <td class="govuk-table__cell" id="transporter-country">07192837465</td>
-              <td class="govuk-table__cell"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+     
 
       <form action="09-01-declaration" method="POST">
         <button class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue"

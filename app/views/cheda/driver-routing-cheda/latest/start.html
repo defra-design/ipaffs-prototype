@@ -26,7 +26,7 @@
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Version 1
+          Version 1 &ndash; for user research commencing 16 Sep
         </dt>
         <dd class="govuk-summary-list__actions">
           <strong class="govuk-tag govuk-tag--blue">
@@ -35,21 +35,26 @@
         </dd>
       </div>
     </dl>
-    <h2 class="govuk-heading-m">Part 1</h2>
+    <h2 class="govuk-heading-s">Journey 1 - user selects 'no' to GVMS, so does get transport contacts page. In part 1</h2>
     <ul class="govuk-list govuk-list--bullet">  
       <li><a href="part1/0-index">Dashboard</a></li>
-      <li><a href="part1/00-notification-hub">Notification hub</a></li>
-      <li><a href="part1/07-notify-transport-contacts">Notify transport contacts</a></li>
+      <li><a href="part1/00-notification-hub">Notification hub prior to selecting 'no' for GVMS question</a> &ndash; does not show Transport contacts</li>
+      <li><a href="part1/00-notification-hub-gvms-no">Notification hub after selecting 'no' for GVMS question</a> &ndash; shows Transport contacts</li>
+      <li><a href="part1/07-notify-transport-contacts">Transport contacts</a></li>
       <li><a href="part1/08-01-review">Review your notification</a></li>
-      <li><a href="part1/10-01-submitted"> Confirmation</a></li>
     </ul>
 
+    <h2 class="govuk-heading-s">Journey 2 - user selects 'yes' to GVMS, so does not get transport contacts page. In part 1</h2>
+    <ul class="govuk-list govuk-list--bullet">  
+      <li><a href="part1/journey-2/00-notification-hub">Notification hub</a> &ndash; does not show Transport contacts</li>
+      <li><a href="part1/journey-2/08-01-review">Review your notification</a></li>
+    </ul>
     
-    <h2 class="govuk-heading-m">Part 2</h2>
+    <!--<h2 class="govuk-heading-m">Part 2</h2>
     <ul class="govuk-list govuk-list--bullet">  
       <li><a href="part2/00-dashboard">Dashboard</a></li>
       <li><a href="part2/04-notification-overview">Review</a></li>
     </ul>
-    </ul>
+    </ul>-->
  
 {% endblock %}
