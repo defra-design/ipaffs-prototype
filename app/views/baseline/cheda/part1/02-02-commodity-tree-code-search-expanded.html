@@ -11,6 +11,15 @@
 {% endblock %}
 
 {% block content %}
+<style>
+  .commodity-selection-breadcrumb nav .commodity-list ul {
+    margin-left: 0;
+  }
+  .commodity-selection-breadcrumb nav .commodity-list ul li span {
+    line-height: 38px;
+    padding-bottom: 0;
+}
+</style>
 
 
 
@@ -41,12 +50,12 @@
             </h2>
             <ul class="govuk-tabs__list">
               <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                <a class="govuk-tabs__tab" id="commodity-code-search-tab-link" href="page-3?tab=commodity-code-search">
+                <a class="govuk-tabs__tab" id="commodity-code-search-tab-link" href="02-01-commodity-tree-code-search">
                   Commodity code search
                 </a>
               </li>
               <li class="govuk-tabs__list-item">
-                <a class="govuk-tabs__tab" id="species-search-tab-link" href="page-3?tab=species-search">
+                <a class="govuk-tabs__tab" id="species-search-tab-link" href="02-01-commodity-tree-species-search">
                   Species search
                 </a>
               </li>
@@ -75,12 +84,12 @@
                       
                           
                       
-                        <input class="govuk-input govuk-!-width-one-third " id="commodity-code-search" name="commodity-text-input" type="text" value="" inputmode="numeric">
+                        <input class="govuk-input govuk-!-width-one-third " id="commodity-code-search" name="commodity-code" type="text" value="" inputmode="numeric">
                       </div>
                     </fieldset>
                   </div>
-              
-                  <button class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="action" value="search" data-module="govuk-button">
+                  <button class="govuk-button govuk-!-margin-bottom-0" id="commodity-search" name="action" value="search"
+                    data-module="govuk-button">
                     Search
                   </button>
                 </div>
@@ -261,7 +270,11 @@
               </form>
             </div>
           </div>
-
+          {% if data['add-commodity'] == "true" %}
+          <p class="govuk-body">
+            <a class="govuk-link" href="javascript:history.go(-2)">Cancel</a>
+          </p>
+          {% endif %}
     </div>
   </div>
 </main>

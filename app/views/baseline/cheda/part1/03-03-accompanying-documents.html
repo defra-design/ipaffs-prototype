@@ -90,18 +90,18 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
               Attachments 
             </div>
           </div>
-          {% if data['page-03-04-upload'] == "visited" and data['additional-documents-attachment'] == "yes" %}
+          {% if data['page-03-04-upload'] == "visited" and data['accomp-doc-attachment'] == "yes" %}
             <div class="additional-documents__grid-row additional-document-info">
               <div class="additional-documents__grid-column-15 additional-document-content">
                 <div class="additional-documents__content-heading" id="additional-document-type-heading-1">Document type</div>
                 <div class="additional-documents__content-value" id="additional-document-type-value-1">
-                    Commercial invoice
+                  Other
                 </div>
               </div>
               <div class="additional-documents__grid-column-15 additional-document-content">
                 <div class="additional-documents__content-heading" id="additional-document-reference-heading-1">Document reference</div>
                 <div class="additional-documents__content-value" id="additional-document-reference-value-1">
-                  INV-202404
+                  001-12345678
                 </div>
               </div>
               <div class="additional-documents__grid-column-doc-date additional-document-content">
@@ -114,7 +114,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                     </div>
                 </div>
                 <div class="additional-documents__content-value" id="additional-document-date-value-1">
-                  15 April 2024
+                  21 July 2024
                 </div>
             
               </div>
@@ -124,7 +124,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
                 <div class="additional-documents__content-value" id="additional-document-attachment-value-1">
                     <a rel="noopener noreferrer" title="Screenshot 2024-05-06 a(1).png" href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1004657/attachment/0b4d9695-a9b2-472f-924f-100d423e16f9" class="govuk-link ellipsis" id="attachment-view-0b4d9695-a9b2-472f-924f-100d423e16f9" target="_blank" aria-label="View Screenshot 2024-05-06 a(1).png">
-                      INV-202404.png
+                      001-12345678.pdf
                     </a>
                 </div>
               </div>
@@ -231,7 +231,7 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </div>
               </div>
               <div class="additional-documents__grid-column-20 additional-documents__add-document-attachment">
-                <button type="submit" class="link-button no-wrap" id="add-attachment" name="add-attachment" value="" formaction="03-04-upload?additional-documents-attachment=yes">
+                <button type="submit" class="link-button no-wrap" id="add-attachment" name="add-attachment" value="" formaction="03-04-upload?document-type=accomp-doc">
                   Add attachment
                 </button>
               </div>
@@ -252,9 +252,13 @@ Documents – {{ serviceName }} – GOV.UK Prototype Kit
           
         <input name="current-page-number" type="hidden" value="1">
 
+        {% if data['from-page'] == "review" %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review" name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review">
+        {% else  %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% endif %}
       </form>
     </div>
   </div>

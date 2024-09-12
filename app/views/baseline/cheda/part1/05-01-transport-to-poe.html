@@ -1,13 +1,14 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
+
+
 {% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+{% include "includes/phase-banner.html" %}
+{% include "includes/back.html" %}
 {% endblock %}
 
 {% block content %}
@@ -23,127 +24,76 @@
 
 
 <main class="govuk-main-wrapper" id="main-content">
-<div class="govuk-grid-row" id="bip-for-transport-page">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-row" id="bip-for-transport-page">
+    <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl" id="page-secondary-title">Transport</span>
-    <h1 class="govuk-heading-xl " id="page-primary-title">Transport to the port of entry</h1>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Transport to the port of entry</h1>
 
-    <form action="05-02-transport-after-poe" method="post">
-      <input name="crumb" type="hidden" value="rRvl8RBppH2ycmf0gXLXGeHAauhhv0ztAysA0pUak_N">
-      <input name="etag" type="hidden" value="&quot;00000000057AB983&quot;">
-      <input id="js-enabled-flag" name="js-enabled" type="hidden" value="true">
+      <form action="05-02-transport-after-poe" method="post">
+        <input name="crumb" type="hidden" value="rRvl8RBppH2ycmf0gXLXGeHAauhhv0ztAysA0pUak_N">
+        <input name="etag" type="hidden" value="&quot;00000000057AB983&quot;">
+        <input id="js-enabled-flag" name="js-enabled" type="hidden" value="true">
+
 
 
         <div class="govuk-form-group">
-            
-            <label class="govuk-label govuk-label--m" for="bcp">
-              Port of entry
-            </label>
-            
-        
-        
-        
-          
-        
-          <div><div class="autocomplete__wrapper"><div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;"><div id="bcp__status--A" role="status" aria-atomic="true" aria-live="polite"></div><div id="bcp__status--B" role="status" aria-atomic="true" aria-live="polite"></div></div><input aria-expanded="false" aria-owns="bcp__listbox" aria-autocomplete="both" aria-describedby="bcp__assistiveHint" autocomplete="off" class="autocomplete__input autocomplete__input--default" id="bcp" name="" placeholder="" type="text" role="combobox"><ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="bcp__listbox" role="listbox"><li aria-selected="false" class="autocomplete__option" id="bcp__option--0" role="option" tabindex="-1" aria-posinset="1" aria-setsize="1">PORTSMOUTH (GBPME)</li></ul><span id="bcp__assistiveHint" style="display: none;">When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.</span></div></div><select class="govuk-select govuk-!-width-one-half" id="bcp-select" name="bcp" data-typeahead-field="bcp" style="display: none;">
-              <option value="">Select port of entry</option>
-              <option value="GBABD">ABERDEEN (GBABD)</option>
-              <option value="GBAVO">AVONMOUTH (GBAVO)</option>
-              <option value="GBBKG">BARKING (GBBKG)</option>
-              <option value="GBBRK">BIRKENHEAD (GBBRK)</option>
-              <option value="GBBHX">BIRMINGHAM (GBBHX)</option>
-              <option value="GBBLY">BLYTH (GBBLY)</option>
-              <option value="GBBRS">BRISTOL (GBBRS)</option>
-              <option value="GBCYN">CAIRNRYAN (GBCYN)</option>
-              <option value="GBCTM">CHATHAM (GBCTM)</option>
-              <option value="GBCVT">COVENTRY (GBCVT)</option>
-              <option value="GBDAG">DAGENHAM (GBDAG)</option>
-              <option value="GBDFD">DARTFORD (GBDFD)</option>
-              <option value="GBDVR">DOVER (GBDVR)</option>
-              <option value="GBEMA">EAST MIDLANDS AIRPORT (GBEMA)</option>
-              <option value="GBEDI">EDINBURGH (GBEDI)</option>
-              <option value="GBFXT">FELIXSTOWE (GBFXT)</option>
-              <option value="GBFIS">FISHGUARD (GBFIS)</option>
-              <option value="GBFOL">FOLKESTONE (EUROTUNNEL) (GBFOL)</option>
-              <option value="GBLGW">GATWICK (GBLGW)</option>
-              <option value="GBGLW">GLASGOW (GBGLW)</option>
-              <option value="GBGRG">GRANGEMOUTH (GBGRG)</option>
-              <option value="GBGRK">GREENOCK (GBGRK)</option>
-              <option value="GBGSY">GRIMSBY (GBGSY)</option>
-              <option value="GBHRW">HARWICH (GBHRW)</option>
-              <option value="GBLHR">HEATHROW (GBLHR)</option>
-              <option value="GBHYM">HEYSHAM (GBHYM)</option>
-              <option value="GBHTH">HYTHE (GBHTH)</option>
-              <option value="GBHLY">HOLYHEAD (GBHLY)</option>
-              <option value="GBHUL">HULL (GBHUL)</option>
-              <option value="GBIMM">IMMINGHAM (GBIMM)</option>
-              <option value="GBIVG">INVERGORDON (GBIVG)</option>
-              <option value="GBIOG">ISLE OF GRAIN (GBIOG)</option>
-              <option value="GBKGH">KILLINGHOLME (GBKGH)</option>
-              <option value="GBLIV">LIVERPOOL (GBLIV)</option>
-              <option value="GBLPL">LIVERPOOL AIRPORT (GBLPL)</option>
-              <option value="GBMNC">MANCHESTER (GBMNC)</option>
-              <option value="GBMAN">MANCHESTER AIRPORT (GBMAN)</option>
-              <option value="GBMID">MIDDLESBROUGH (GBMID)</option>
-              <option value="GBNHV">NEWHAVEN (GBNHV)</option>
-              <option value="GBNHP">NORTHAMPTON (GBNHP)</option>
-              <option value="GBNTG">NOTTINGHAM (GBNTG)</option>
-              <option value="GBPEM">PEMBROKE (GBPEM)</option>
-              <option value="GBPED">PEMBROKE DOCK (GBPED)</option>
-              <option value="GBPME" selected="">PORTSMOUTH (GBPME)</option>
-              <option value="GBPFT">PURFLEET (GBPFT)</option>
-              <option value="GBSHS">SHEERNESS (GBSHS)</option>
-              <option value="GBSOU">SOUTHAMPTON (GBSOU)</option>
-              <option value="GBSTN">STANSTED (GBSTN)</option>
-              <option value="GBSTR">STRANRAER (GBSTR)</option>
-              <option value="GBTEE">TEESPORT (GBTEE)</option>
-              <option value="GBTHP">THAMESPORT (GBTHP)</option>
-              <option value="GBTIL">TILBURY (GBTIL)</option>
-              <option value="GBTYN">TYNE (GBTYN)</option>
-          </select>
-        </div>
-      
-      
-      
-      <script src="/notification/vnet/public/javascripts/transport_to_bip_poe.js?v=1.0.3238"></script>
 
-      <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0">
-        Means of transport to port of entry
-      </h2>
+
+
+          <label class="govuk-label govuk-label--m" for="transport-poe">
+            Port of entry
+          </label>
+
+
+          <input class="govuk-input govuk-!-width-two-thirds " id="transport-poe" name="transport-poe" type="text"
+            value="{{ data['transport-poe'] }}" aria-describedby="identification-hint">
+
+
+
+        </div>
+
+
+
+        <script src="/public/javascripts/transport_to_bip_poe.js?v=1.0.3238"></script>
+
+        <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0">
+          Means of transport to port of entry
+        </h2>
         <div class="govuk-form-group  ">
           <label class="govuk-label govuk-label--s" for="transport-means-before">
-              <span class="govuk-visually-hidden">Choose from:</span>
+            <span class="govuk-visually-hidden">Choose from:</span>
           </label>
-          
+
           <select class="govuk-select govuk-!-width-one-half" id="transport-means-before" name="transport-means-before">
-              <option value="" selected="">Select means of transport to port of entry</option>
-                <option value="plane">Airplane</option>
-                <option value="rail">Railway</option>
-                <option value="road">Road vehicle</option>
-                <option value="ship">Vessel</option>
+            <option value="">Select means of transport to port of entry</option>
+            <option value="Airplane">Airplane</option>
+            <option value="Railway">Railway</option>
+            <option value="Road vehicle">Road vehicle</option>
+            <option value="Vessel">Vessel</option>
           </select>
         </div>
 
         <div class="govuk-form-group">
-            
-            <label class="govuk-label govuk-label--m" for="identification">
-              Transport identification
-            </label>
-            
-        
-            <div id="identification-hint" class="govuk-hint">
-              <p class="govuk-hint">To identify the means of transport, enter (one of the following):</p>
-              <ul class="govuk-list govuk-list--bullet govuk-hint">
-                <li>flight number</li>
-                <li>train number</li>
-                <li>road vehicle registration number</li>
-                <li>vessel name (for ferries, also the road vehicle registration number)</li>
-              </ul>
-            </div>
-        
-            
-        
-          <input class="govuk-input govuk-!-width-one-half " id="identification" name="identification" type="text" value="" aria-describedby="identification-hint">
+
+          <label class="govuk-label govuk-label--m" for="identification">
+            Transport identification
+          </label>
+
+
+          <div id="identification-hint" class="govuk-hint">
+            <p class="govuk-hint">To identify the means of transport, enter (one of the following):</p>
+            <ul class="govuk-list govuk-list--bullet govuk-hint">
+              <li>flight number</li>
+              <li>train number</li>
+              <li>road vehicle registration number</li>
+              <li>vessel name (for ferries, also the road vehicle registration number)</li>
+            </ul>
+          </div>
+
+
+
+          <input class="govuk-input govuk-!-width-one-half " id="identification" name="transport-identification"
+            type="text" value="{{ data['transport-identification'] }}" aria-describedby="identification-hint">
         </div>
 
         <div class="govuk-form-group ">
@@ -154,11 +104,13 @@
               </h2>
             </legend>
             <div id="road-trailers-hint" class="govuk-hint govuk-!-width-two-thirds">
-              Provide details of all road trailers and containers or your consignment may be delayed. You may need to contact your haulier for this.
+              Provide details of all road trailers and containers or your consignment may be delayed. You may need to
+              contact your haulier for this.
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="road-trailers" name="road-trailers" type="radio" value="yes" data-aria-controls="conditional-road-trailers">
+                <input class="govuk-radios__input" id="road-trailers" name="road-trailers" type="radio" value="Yes"
+                  data-aria-controls="conditional-road-trailers" {{ checked('road-trailers','Yes') }}>
                 <label class="govuk-label govuk-radios__label" for="road-trailers">
                   Yes
                 </label>
@@ -168,45 +120,52 @@
                   <!--Provide a trailer registration number or seal number.-->
                 </div>
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="vessel-name">
+                  <label class="govuk-label" for="trailer-number">
                     Container or trailer number
                   </label>
                   <div class="govuk-hint govuk-!-width-two-thirds">
                     Enter the container identification number, or the trailer registration number or number plate.
                   </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
+                  <input class="govuk-input govuk-!-width-one-third" id="trailer-number" name="trailer-number"
+                    type="text" value="{{ data['trailer-number'] }}">
                 </div>
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="vessel-name">
+                  <label class="govuk-label" for="seal-number">
                     Seal number
                   </label>
                   <div class="govuk-hint govuk-!-width-two-thirds">
-                    Enter the seal number on the official certificate or any other seal mentioned in the accompanying documents.
+                    Enter the seal number on the official certificate or any other seal mentioned in the accompanying
+                    documents.
                   </div>
-                  <input class="govuk-input govuk-!-width-one-third" id="vessel-name" name="vessel-name" type="text">
+                  <input class="govuk-input govuk-!-width-one-third" id="seal-number" name="seal-number" type="text"
+                    value="{{ data['seal-number'] }}">
                 </div>
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                    <label class="govuk-label" for="vessel-name">
+                    <label class="govuk-label" for="official-seal">
                       Official seal
                     </label>
                     <div id="waste-hint" class="govuk-hint govuk-!-width-two-thirds">
-                      An official seal is affixed under the supervision of the competent authority issuing the certificate.
+                      An official seal is affixed under the supervision of the competent authority issuing the
+                      certificate.
                     </div>
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <input class="govuk-checkboxes__input" id="official-seal" name="official-seal" type="checkbox"
+                          value="Yes" {{ checked('official-seal','Yes') }}>
                         <label class="govuk-label govuk-checkboxes__label" for="waste">
-                          
+
                         </label>
                       </div>
                     </div>
                   </fieldset>
                 </div>
-                <p class="govuk-body govuk-!-margin-top-3 govuk-!-padding-bottom-3"><a href="#" class="govuk-link">Add another container or trailer</a></p>
+                <p class="govuk-body govuk-!-margin-top-3 govuk-!-padding-bottom-3"><a href="#" class="govuk-link">Add
+                    another container or trailer</a></p>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="no">
+                <input class="govuk-radios__input" id="road-trailers-3" name="road-trailers" type="radio" value="No" {{
+                  checked('road-trailers','No') }}>
                 <label class="govuk-label govuk-radios__label" for="road-trailers-3">
                   No
                 </label>
@@ -216,37 +175,40 @@
         </div>
 
         <div class="govuk-form-group  ">
-            
+
           <label class="govuk-label govuk-label--m" for="document">
             Transport document reference
           </label>
-          
-      
+
+
           <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">
-            Enter the reference number on the air waybill, bill of lading, sea waybill, road consignment note (CMR) or other transport document.
+            Enter the reference number on the air waybill, bill of lading, sea waybill, road consignment note (CMR) or
+            other transport document.
           </span>
-      
-          
-      
-        <input class="govuk-input govuk-!-width-one-half " id="document" name="document" type="text" value="" aria-describedby="document-hint">
 
-      </div>
 
-      <div class="" id="estimated-arrival-at-bcp">
-            
-            <h2 class="govuk-heading-m">Arrival date at port of entry</h2>
+
+          <input class="govuk-input govuk-!-width-one-half " id="document" name="document-reference" type="text"
+            value="{{ data['document-reference'] }}" aria-describedby="document-hint">
+
+        </div>
+
+        <div class="" id="estimated-arrival-at-bcp">
+          <h2 class="govuk-heading-m">Arrival date at port of entry</h2>
           <div class="govuk-form-group ">
             <fieldset class="govuk-fieldset">
               <legend class="hidden govuk-visually-hidden">Date entry:</legend>
-                <span class="govuk-hint">For example, 27 3 2023</span>
-        
+              <span class="govuk-hint">For example, 27 3 2023</span>
+
               <div class="govuk-date-input" id="arrival-date" data-module="accessible-datepicker">
                 <div class="govuk-date-input__item date-input-day">
                   <div class="govuk-form-group">
                     <label class="govuk-label govuk-date-input__label" for="arrival-date-day">
                       Day
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="arrival-date-day" name="arrival-date-day" type="text" maxlength="2" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day"
+                      id="arrival-date-day" name="arrival-date-day" type="text" maxlength="2" inputmode="numeric"
+                      value="{{ data['arrival-date-day']}} ">
                   </div>
                 </div>
                 <div class="govuk-date-input__item date-input-month">
@@ -254,7 +216,9 @@
                     <label class="govuk-label govuk-date-input__label" for="arrival-date-month">
                       Month
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="arrival-date-month" name="arrival-date-month" type="text" maxlength="2" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month"
+                      id="arrival-date-month" name="arrival-date-month" type="text" maxlength="2" inputmode="numeric"
+                      value="{{ data['arrival-date-month'] }}">
                   </div>
                 </div>
                 <div class="govuk-date-input__item date-input-year">
@@ -262,23 +226,76 @@
                     <label class="govuk-label govuk-date-input__label" for="arrival-date-year">
                       Year
                     </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="arrival-date-year" name="arrival-date-year" type="text" maxlength="4" inputmode="numeric" value="">
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year"
+                      id="arrival-date-year" name="arrival-date-year" type="text" maxlength="4" inputmode="numeric"
+                      value="{{ data['arrival-date-year'] }}">
                   </div>
                 </div>
-                <div class="date-picker__container date-picker__container--icon defra-datepicker"><span class="sr-only">Choose date</span>
+                <div class="date-picker__container date-picker__container--icon defra-datepicker"><span
+                    class="sr-only">Choose date</span>
                 </div>
-            </div>
+              </div>
             </fieldset>
           </div>
+        </div>
 
-      </div>
+        <div class="govuk-form-group ">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Estimated total journey time of the animals
+            </legend>
 
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
-          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+            <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">Total journey time is from loading the
+              animals in the country of origin to the final place of destination. This includes all rest time.</span>
 
-    </form>
+
+            <div class="govuk-date-input date-input-width" id="estimated-journey-time">
+              <!-- 
+              <div class="govuk-date-input__item date-input-day">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-days">Days</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                    id="estimated-journey-time-days" name="estimated-journey-time-days" type="text" inputmode="numeric"
+                    value="">
+                </div>
+              </div>
+              -->
+
+              <div class="govuk-date-input__item date-input-hour">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-hours">Hours</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                    id="estimated-journey-time-hours" name="estimated-journey-time-hours" type="text"
+                    inputmode="numeric" value="{{ data['estimated-journey-time-hours'] }}">
+                </div>
+              </div>
+
+              <!-- 
+            <div class="govuk-date-input__item date-input-minute">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-minutes">Minutes</label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="estimated-journey-time-minutes" name="estimated-journey-time-minutes" type="text" inputmode="numeric" value="">
+              </div>
+            </div>
+          </div>
+          -->
+          </fieldset>
+        </div>
+
+        {% if data['from-page'] == "review" %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review"
+          name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button"
+          formaction="08-01-review">
+        {% else %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
+          name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
+          data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+          name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% endif %}
+      </form>
+    </div>
   </div>
-</div>
 </main>
-{% endblock %} 
+{% endblock %}

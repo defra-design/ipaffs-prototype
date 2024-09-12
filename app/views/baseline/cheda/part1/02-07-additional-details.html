@@ -25,8 +25,8 @@ GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="consignment-details-page">
     <div class="govuk-grid-column-three-quarters">
       <span class="govuk-caption-xl">Description of the goods</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Additional details</h1>
-      <form action="02-08-animal-identifiers" method="post">
+      <h1 class="govuk-heading-xl " id="page-primary-title">Additional animal details</h1>
+      <form action="03-02-latest-health-cert" method="post">
         <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU">
         <input name="etag" type="hidden" value="&quot;0000000004C7A4DE&quot;">
 
@@ -40,21 +40,21 @@ GOV.UK Prototype Kit
             <div class="govuk-radios">
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedapproved" name="animal-certified-as"
-                  value="approved" type="radio">
+                  value="Approved bodies" type="radio" {{ checked('animal-certified-as','Approved bodies') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedapproved">
                   Approved bodies
                 </label>
               </div>
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedbreeding" name="animal-certified-as"
-                  value="breeding" type="radio">
+                  value="Breeding and/or production" type="radio" {{ checked('animal-certified-as','Breeding and/or production') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedbreeding">
                   Breeding and/or production
                 </label>
               </div>
               <div class="govuk-radios__item animal-certified-as">
                 <input class="govuk-radios__input" id="animalCertifiedslaughter" name="animal-certified-as"
-                  value="slaughter" type="radio">
+                  value="Slaughter" type="radio" {{ checked('animal-certified-as','Slaughter') }}>
                 <label class="govuk-label govuk-radios__label" for="animalCertifiedslaughter">
                   Slaughter
                 </label>
@@ -63,23 +63,25 @@ GOV.UK Prototype Kit
           </fieldset>
         </div>
 
+        
         <div class="govuk-form-group including-non-ablacted ">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h3 class="govuk-fieldset__heading">Does the consignment contain any unweaned animals?</h3>
             </legend>
+            <span class="govuk-hint">These are animals that are still feeding from their mother.</span>
 
             <div class="govuk-radios">
               <div class="govuk-radios__item including-non-ablacted">
                 <input class="govuk-radios__input" id="includingNonablactedyes" name="including-non-ablacted"
-                  value="true" type="radio">
+                  value="Yes" type="radio" {{ checked('including-non-ablacted','Yes') }}>
                 <label class="govuk-label govuk-radios__label" for="includingNonablactedyes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item including-non-ablacted">
                 <input class="govuk-radios__input" id="includingNonAblactedno" name="including-non-ablacted"
-                  value="false" type="radio">
+                  value="No" type="radio" {{ checked('including-non-ablacted','No') }}>
                 <label class="govuk-label govuk-radios__label" for="includingNonAblactedno">
                   No
                 </label>
@@ -87,14 +89,18 @@ GOV.UK Prototype Kit
             </div>
           </fieldset>
         </div>
-        <p class="govuk-!-margin-top-6">
+        
+
+        {% if (data['from-page'] == "review") or (data['from-page'] == "commodity-details") %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review" name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review">
+        {% else  %}
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
             name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
             data-module="govuk-button">
           <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
             name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-        </p>
         <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% endif %}
       </form>
     </div>
   </div>

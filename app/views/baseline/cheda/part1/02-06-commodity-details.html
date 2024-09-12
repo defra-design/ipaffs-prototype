@@ -1,13 +1,12 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-    {% include "includes/phase-banner.html" %}
-    {% include "includes/back.html" %} 
+{% include "includes/phase-banner.html" %}
+{% include "includes/back.html" %}
 {% endblock %}
 
 {% block content %}
@@ -15,18 +14,18 @@
 
 
 <div class="govuk-!-padding-top-6">
-    <span class="heading-tertiary">
-      <span id="reference-number">DRAFT.GB.2024.5501422 </span>
-      <span> - CHEDA</span>
-    </span>
+  <span class="heading-tertiary">
+    <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+    <span> - CHEDA</span>
+  </span>
 </div>
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="commodity-details-page">
     <div class="govuk-grid-column-full">
-            <span class="govuk-caption-xl">Description of the goods</span>
-        <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
-      <form action="02-07-additional-details" method="post" data-gtm-form-interact-id="0">
+      <span class="govuk-caption-xl">Description of the goods</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Commodity</h1>
+      <form action="02-08-animal-identifiers" method="post" data-gtm-form-interact-id="0">
         <input name="" id="" class="js-hidden" type="submit" value="Keyboard submit">
         <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
         <input name="etag" type="hidden" value="&quot;0000000004D0A892&quot;">
@@ -37,86 +36,106 @@
           <div class="table-responsive">
             <table class="govuk-table commodity-overview govuk-!-margin-bottom-1" id="commodity-table">
               <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Commodity</th>
-                <th scope="col" class="govuk-table__header" colspan="2">Description</th>
-              </tr>
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Commodity code</th>
+                  <th scope="col" class="govuk-table__header" colspan="2">Description</th>
+                </tr>
               </thead>
               <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell " id="commodity-0102">0102</td>
-                <td class="govuk-table__cell" id="commodity-description-0102">Live bovine animals</td>
-                <td class="govuk-table__cell remove">
-                </td>
-              </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell  govuk-!-width-one-third" id="commodity-0102">
+                    0102
+                  </td>
+                  <td class="govuk-table__cell" id="commodity-description-0102">
+                    {% if data['commodity-code'] == "01061900" %}
+                    Other
+                    {% else %}
+                    Live bovine animals
+                    {% endif %}
+                  </td>
+                  <td class="govuk-table__cell remove">
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
-          
-          <input class="link-button" id="add-commodity" name="add-commodity" value="Add commodity" type="button" aria-label="Add commodity">
-          
+
+          <input class="link-button" id="add-commodity" name="add-commodity" value="Add commodity" type="submit"
+            aria-label="Add commodity" formaction="02-01-commodity-tree-code-search?add-commodity=true">
+
         </div>
 
-          <div class="govuk-!-margin-bottom-8">
-            <div class="table-responsive">
-              <table class="govuk-table species-table-cheda">
-                <caption class="govuk-table__caption">
-                  <h2 class="govuk-heading-m">Live bovine animals</h2>
-                </caption>
-      
-                <thead class="govuk-table__head">
+        <div class="govuk-!-margin-bottom-8">
+          <div class="table-responsive">
+            <table class="govuk-table species-table-cheda govuk-!-margin-bottom-1">
+              <caption class="govuk-table__caption">
+                <h2 class="govuk-heading-m">
+                  Live bovine animals
+                </h2>
+              </caption>
+
+              <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header    ">Species and type</th>
-                    <th scope="col" class="govuk-table__header">Number of animals</th>
-                  <th scope="col" class="govuk-table__header">Number of<br> packages</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-third">Species and type</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-third">Number of animals</th>
+                  <th scope="col" class="govuk-table__header govuk-!-width-one-third">Number of packages such as crates, bags or boxes</th>
                   <td class="govuk-table__header"></td>
                 </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row" id="species-0102-25761-desktop">
-                    <td class="govuk-table__cell   " id="0102-25761-desktop">Bos taurus, Domestic</td>
-                    <td class="govuk-table__cell">
-                          <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                          
-                          
-                          
-                            <input class="govuk-input number-of-animals " id="0102-25761.num-animals-desktop" name="0102-25761.num-animals" type="[object Object]" value="" aria-label="Number of animals for Bos taurus 1-1">
-                          </div>
-                    </td>
-                    <td class="govuk-table__cell">
-                        <div class="govuk-form-group govuk-!-margin-bottom-0 ">
-                        
-                        
-                        
-                          <input class="govuk-input number-of-packages " id="0102-25761.num-packages-desktop" name="0102-25761.num-packages" type="[object Object]" value="" aria-label="Number of packages for Bos taurus 1-1">
-                        </div>
-                    </td>
-                    <td class="govuk-table__cell remove govuk-!-padding-left-6">
-                    </td>
-                  </tr>
-                </tbody>
-      
-                <tfoot>
-                <tr id="subtotals-0102-desktop" class="govuk-table__row">
-                  <td class="govuk-table__header  subtotal border-bottom-none   ">Subtotal</td>
-                    <td class="govuk-table__cell subtotal border-bottom-none">
-                      0
-                    </td>
-                  <td class="govuk-table__cell subtotal border-bottom-none">
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row" id="species-01061900-129518-desktop">
+                  <td class="govuk-table__cell govuk-!-padding-top-3" id="01061900-129518-desktop">
+                    Bos taurus, Domestic
+                  </td>
+                  <td class="govuk-table__cell  govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      <input class="govuk-input number-of-animals " id="01061900-129518.num-animals-desktop"
+                        name="num-animals" type="text" value=""
+                        aria-label="Number of animals for Bos taurus">
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                    <div class="govuk-form-group govuk-!-margin-bottom-0 ">
+                      <input class="govuk-input number-of-packages " id="01061900-129518.num-packages-desktop"
+                        name="num-packages" type="text" value=""
+                        aria-label="Number of packages for Bos taurus">
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell remove govuk-!-padding-left-6 govuk-!-padding-top-3">
+                    
+                  </td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr id="subtotals-01061900-desktop" class="govuk-table__row">
+                  <td class="govuk-table__header  subtotal">Subtotal</td>
+                  <td class="govuk-table__cell subtotal">
                     0
                   </td>
-                  <td class="govuk-table__cell subtotal border-bottom-none"></td>
+                  <td class="govuk-table__cell subtotal">
+                    0
+                  </td>
+                  <td class="govuk-table__cell subtotal"></td>
                 </tr>
-                </tfoot>
-              </table>
-              <button type="button" name="add-species_0102" value="Add species" class="link-button" id="add-species-0102-desktop">Add species</button>
-            </div>
+              </tfoot>
+            </table>
+            <a href="02-03-commodity-species?add-species=true">Add species</a>
           </div>
+        </div>
 
-
-            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button">
-            <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
-            <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% if data['from-page'] == "review" %}
+        <input type="hidden" name="from-page" id="from-page" value="commodity-details">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+          name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" formaction="02-08-animal-identifiers-6">
+        {% else %}
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button"
+          name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub"
+          data-module="govuk-button">
+        <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue"
+          name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button">
+        <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+        {% endif %}
       </form>
     </div>
   </div>
