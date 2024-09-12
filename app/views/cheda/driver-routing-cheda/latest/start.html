@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index">IPAFFS prototypes</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">Driver routing CHED-A
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Driver routing  CHED-A</h1>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Version 1 &ndash; for user research commencing 16 Sep
+        </dt>
+        <dd class="govuk-summary-list__actions">
+          <strong class="govuk-tag govuk-tag--blue">
+            In progress
+          </strong>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-s">Journey 1 - user selects 'no' to GVMS, so does get transport contacts page. In part 1</h2>
+    <ul class="govuk-list govuk-list--bullet">  
+      <li><a href="part1/0-index">Dashboard</a></li>
+      <li><a href="part1/00-notification-hub">Notification hub prior to selecting 'no' for GVMS question</a> &ndash; does not show Transport contacts</li>
+      <li><a href="part1/00-notification-hub-gvms-no">Notification hub after selecting 'no' for GVMS question</a> &ndash; shows Transport contacts</li>
+      <li><a href="part1/07-notify-transport-contacts">Transport contacts</a></li>
+      <li><a href="part1/08-01-review">Review your notification</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-s">Journey 2 - user selects 'yes' to GVMS, so does not get transport contacts page. In part 1</h2>
+    <ul class="govuk-list govuk-list--bullet">  
+      <li><a href="part1/journey-2/00-notification-hub">Notification hub</a> &ndash; does not show Transport contacts</li>
+      <li><a href="part1/journey-2/08-01-review">Review your notification</a></li>
+    </ul>
+    
+    <!--<h2 class="govuk-heading-m">Part 2</h2>
+    <ul class="govuk-list govuk-list--bullet">  
+      <li><a href="part2/00-dashboard">Dashboard</a></li>
+      <li><a href="part2/04-notification-overview">Review</a></li>
+    </ul>
+    </ul>-->
+ 
+{% endblock %}
