@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="navigation-links" style="margin-top: -46px;">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Mark Admin-Tester</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <div class="navigation-links__left-block">
+      <a href="02-select-country-origin" id="back-link-nojs" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <div class="navigation-links__divider"></div>
+    <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+      
+        
+      </ol>
+    </div>  </div>
+</div>
+
+
+<div class="govuk-error-summary govuk-!-margin-top-7" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-full">
+        <li>
+          <a href="commodity-details.html">Select what you want to do</a>
+        </li>
+        
+ 
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-7">
+    <div class="govuk-grid-column-three-quarters">
+      
+      {{ data['certificate-reference'] }}
+      {% if (data['cert-type'] == "CHEDPP") %}
+      <h1 class="govuk-heading-xl" id="page-primary-title">Phytosanitary certificate not found</h1>
+      {% else %}
+      <h1 class="govuk-heading-xl" id="page-primary-title">Health certificate not found</h1>
+      {% endif %}
+      <p class="govuk-hint">Check your details to enter them again.</p>
+      
+      <form class="form govuk-form-group--error" action="01-select-ched-type" method="POST">
+        <h2 class="govuk-!govuk-heading-l"> What do you want to do?</h2>
+        
+        {{ data | log }}
+        
+        <!-- <p class="govuk-body ">You many save time by completing a notification using your digital health certificate.</p>
+        <p class="govuk-body govuk-!-margin-bottom-4">This is also called 'Cloning'.</p> -->
+       
+
+        
+        <p id="certificate-reference-line-1-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> Select what you want to do
+        </p>
+
+        <div class="govuk-form-group govuk-!-margin-bottom-7">
+          <fieldset class="govuk-fieldset">
+            
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-add-hc-2" name="addhc" type="radio" value="Manual">
+                <label class="govuk-label govuk-radios__label" for="how-add-hc-2">
+                  Search again
+                </label>
+                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Add commodities manually and copy documents from an electronic phytosanitary certificate (ePhyto).
+                </div> -->
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
+                <label class="govuk-label govuk-radios__label" for="how-add-hc">
+                  Create a new notification 
+                </label>
+                <!-- <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                 <p class="govuk-hint govuk-!-margin-bottom-1">Later you'll be asked if you want to clone:</p> 
+                  <ul class="govuk-list--bullet">
+                    <li>documents only</li>
+                    <li>information and documents</li>
+                  </ul> 
+                  
+                </div> -->
+              </div>
+              <!-- <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-add-hc" name="addhc" type="radio" value="Clone-info">
+                <label class="govuk-label govuk-radios__label d" for="how-add-hc">
+                  Clone documents only 
+                </label>
+               
+              </div> -->
+            
+             
+             
+            </div>
+          </fieldset>
+        </div>
+
+      </form>
+
+      
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      
+     
+    </div>
+  </div>
+
+{% endblock %}

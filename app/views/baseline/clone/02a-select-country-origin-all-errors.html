@@ -1,0 +1,200 @@
+@ -1,140 +0,0 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0 govuk-!-margin-bottom-2 govuk-!-width-full">
+        <li>
+          <a href="commodity-details.html">You must select the country of origin of the certificate</a>
+        </li>
+        <li>
+          <a href="commodity-details.html">You must enter the certificate reference number</a>
+        </li>
+        <li>
+          <a href="commodity-details.html">You must enter the certificate date of issue</a>
+        </li>
+<!--- 
+        <li>
+          <a href="commodity-details.html">You must enter any commodity code from this certificate</a>
+        </li>
+--->
+        <li>
+          <a href="commodity-details.html">You must enter consignor, consignee or importer name</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="search-health-certificate">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-xl" id="page-primary-title">Certificate details</h1>
+        <p class="govuk-hint">We will use these details to search for a 
+          matching digital health certificate.</p>
+      <form action="04-certificate-not-found-page" method="POST">
+        <input name="crumb" type="hidden" value="sRPf_jHCxvtcBJbhiwNum4T6RHL7aiD-XytFlRq3FbI">
+
+        <div class="govuk-form-group govuk-form-group--error ">
+          <label class="govuk-label govuk-label--m govuk-!-margin-top-7" for="country-of-origin">Country of origin of certificate</label>
+          <span class="govuk-hint">Select a country from the list of available countries</span>
+          <p id="country-of-origin-line-1-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> You must select the country of origin of the certificate
+          </p>
+          
+          <select class="govuk-select govuk-!-width-one-half" id="country-of-origin" name="country-of-origin">
+            <option value="">Select a country</option>
+                        <option value="AT">Austria</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="ES-CN">Canary Islands</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="EE">Estonia</option>
+                        <option value="FO">Faroe Islands</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="GI">Gibraltar</option>
+                        <option value="GR">Greece</option>
+                        <option value="GL">Greenland</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IT">Italy</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MT">Malta</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NO">Norway</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="IE">Republic of Ireland</option>
+                        <option value="RO">Romania</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="ES">Spain</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+          </select>
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label govuk-label--m" for="certificate-reference">
+            Certificate reference number
+          </label>
+          <span class="govuk-hint">You can get this from your export certifier.</span>
+          <p id="certificate-reference-line-1-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> You must enter the certificate reference number
+          </p>
+          <input class="govuk-input govuk-!-width-one-half" id="certificate-reference-line-1" name="certificate-reference-line-1" type="text" autocomplete="certificate-reference-line-1">
+        </div>
+    
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset" role="group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Certificate date of issue</legend>
+              <p id="date-of-issue-line-1-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> You must enter the certificate date of issue
+              </p>
+              <div class="govuk-date-input date-input--picker" data-module="accessible-datepicker" id="start-date">
+
+                <div class="govuk-date-input__item date-input-day">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="start-date-day">Day</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="start-date-day" value="" name="start-date-day" type="text" inputmode="numeric">
+                  </div>
+                </div>
+
+                <div class="govuk-date-input__item date-input-month">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="start-date-month">Month</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="start-date-month" value="" name="start-date-month" type="text" inputmode="numeric">
+                  </div>
+                </div>
+
+                <div class="govuk-date-input__item date-input-year">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="start-date-year">Year</label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="start-date-year" value="" name="start-date-year" type="text" inputmode="numeric">
+                  </div>
+                </div>
+
+              <div class="date-picker__container date-picker__container--icon defra-datepicker">
+               
+                  <span class="sr-only">Choose date</span>
+                  
+                </button><div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-24" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2024</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-24"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+            </fieldset>
+          </div>
+       
+   <!---     
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label govuk-label--m" for="commodity-code">
+              Enter any commodity code from this certificate
+            </label>
+            <p id="commodity-code-line-1-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span>You must enter any commodity code from this certificate
+            </p>
+            <input class="govuk-input govuk-!-width-one-half" id="commodity-code-line-1" name="commodity-code-line-1" type="text" autocomplete="commodity-code-line-1">
+          </div>
+--->
+    <div class="govuk-form-group govuk-form-group--error">
+            
+      <label class="govuk-label govuk-label--m" for="certificate-reference">
+        Consignor, consignee or importer name
+      </label>
+     
+      <!-- <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Check what a consignor, consignee and importer 
+            name is
+          </span>
+        </summary>
+        <div class="govuk-details__text govuk-!-width-two-thirds">
+            <p class="govuk-body">Consignor - help text here...This is the sender of the consignment.</p>
+            <ul class="govuk-list govuk-list--bullet" id="supporting-details-accordion">
+                <li>Help text here</li>
+                <li>Help text here</li>
+                <li>Help text here</li>
+            </ul>
+        </div>
+      </details> -->
+      <p id="enter-consignor-line-1-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> You must enter consignor, consignee or importer name
+      </p>
+    <input class="govuk-input govuk-!-width-one-half " id="enter-consignor" name="enter-consignor">
+  </div>
+
+
+        <input name="cert-type" type="hidden" value="CVEDA">
+        <button class="govuk-button govuk-!-margin-top-7" type="submit" value="Search" id="search" data-prevent-double-click="true">Search</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}

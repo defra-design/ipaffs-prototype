@@ -38,23 +38,14 @@
 
 
       <h1 class="govuk-heading-xl " id="page-primary-title">Your import notifications</h1>
+      {{ data | log }}
 
+    
 
-      <!-- <form action="01-ched-type.html" method="post" id="homeForm">
-        <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
-        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
-          Create a new notification
-        </button>
-        <a class="govuk-button notification-button" id="search-to-clone" href="/notification/tst/protected/notifications/cloning/type">Clone a certificate</a>
-      </form> -->
-
-      <form action="01-01-ched-type" method="post" id="homeForm">
-        <input name="crumb" type="hidden" value="cMX13CAoc7rzvhm6r-vfkBtV-YS8HehyID0wRjvNs6r">
-        <button class="govuk-button govuk-!-margin-right-3 notification-button" type="submit" form="homeForm" id="create-notification">
-          Create a new notification
-        </button>
-          <a class="govuk-button notification-button" id="search-to-clone" href="#">Clone a certificate</a>
-      </form>
+      <a class="govuk-button notification-button govuk-!-margin-right-3" id="search-to-clone" href="01-01-ched-type">Create a new notification</a>
+     
+      <a class="govuk-button notification-button" id="search-to-clone" href="/baseline/clone/01-select-ched-type">Clone a certificate</a>
+ 
 
       <div id="existing-notifications">
         <form action="#" method="post" class="search-filter-form">

@@ -3,69 +3,26 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-// console.log( 'This is the V1 _routes file' );
-
-
-/* 
-  Run this when submitting the form on 05-commodity-genus page
-    to check if user wants to add more commodities,
-    and if not,
-      then check if importing conforming or non conforming goods,
-        and redirect to appropriate Main reason for importing page
-*/
-
-//  - How to add hc
-router.post('/route-clone-how-add', function (req, res) {
-  // Make a variable and give it the value from name
-  var howAdd = req.session.data['addhc']
-  if (howAdd == "Clone-info") {
-    res.redirect('20-02-certificate-reference')
+router.post('/route-validate-reference-number', function (req, res) {
+  var enteredReference = req.session.data['certificate-reference-number']
+  if (enteredReference == "GERMAN-IJKML68689900-13579002468") {
+    res.redirect('03a-certificate-found')
   }
-  else if (howAdd == "Clone-doc") {
-    res.redirect('20-02-certificate-reference')
+  if (enteredReference == "NETHER-IJKML12345678-8989664400") {
+    res.redirect('03b-phyto-certificate-found')
   }
- else if (howAdd == "Manual") {
-    res.redirect('../cheda/03-02-latest-health-cert')
+
+  else if (enteredReference == "") {
+    res.redirect('02a-select-country-origin-all-errors')
   }
- else {
-    res.redirect('../cheda/03-03-accompanying-documents')
-  }  
+
+  else {
+    res.redirect('04a-certificate-not-found')
+  }
 })
 
-//  - Confirm radio routing - this one is for when user has already reviewed and wants to amend
-router.post('/route-clone-docs-info-amend', function (req, res) {
-  // Make a variable and give it the value from name
-  var ecertRoute = req.session.data['addhc']
-  if (ecertRoute == "Clone-info") {
-    res.redirect('07-00-review-clone-success-data')
-  }
-  else if (ecertRoute == "Clone-docs") {
-    res.redirect('07-00-review-clone-success')
-  }
-  
- else {
-    res.redirect('07-00-review-clone-success-data')
-  }  
-})
+module.exports = router
 
 
-  
-  //  - Confirm radio routing
-  router.post('/route-clone-docs-info', function (req, res) {
-    // Make a variable and give it the value from name
-    var ecertRoute = req.session.data['docs-info']
-    if   (ecertRoute == "all"){
-      res.redirect('07-00-review-clone-info-error')
-   }
-   else {
-      res.redirect('03-01-certificate-clone')
-    }  
-  })
-  
- 
-  
- 
-  
-  
-  
-  module.exports = router
+
+

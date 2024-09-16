@@ -1,0 +1,552 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="navigation-links" style="margin-top: -46px;">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Mark Admin-Tester</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <div class="navigation-links__left-block">
+      <a href="02-select-country-origin" id="back-link-nojs" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+    <div class="navigation-links__divider">|</div>
+    <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="0-index">Dashboard</a>
+        </li>
+      </ol>
+    </div>  </div>
+</div>
+
+
+<main class="govuk-main-wrapper cloning-summary-page" id="main-content">
+  <div class="govuk-grid-row" id="cloning-summary">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl " id="page-primary-title">Phytosanitary certificate details</h1>
+      <table class="govuk-table review-table" id="consignment-table">
+        <caption class="govuk-visually-hidden" style="">Consignment table</caption>
+        <tbody>
+          <tr class="govuk-table__header">
+            <th class="govuk-heading-m govuk-!-width-full" id="about-consignment">About the consignment</th>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Health certificate number</th>
+            <td class="govuk-table__cell" id="health-certificate-number">NETHER-IJKML12345678-8989664400</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">Country of origin</th>
+            <td class="govuk-table__cell" id="country-of-origin">Netherlands</td>
+          </tr>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Purpose of the consignment
+                          </th>
+            <td class="govuk-table__cell" id="purpose-of-consignment">For Import</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table review-table govuk-!-margin-bottom-0" id="consignment-table">
+        <caption class="govuk-visually-hidden" style="">Consignment table</caption>
+        <tbody>
+        <tr class="govuk-table__header">
+          <th class="govuk-heading-m" id="description-of-goods">Description of goods</th>
+          <td class="govuk-body govuk-!-font-weight-bold text-align-right" id="num-commodity-lines">10 of 500</td>
+        </tr>
+        </tbody>
+      </table>
+
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-0">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea diploperennis</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-0">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-1">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-1">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-2">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays subsp. amylacea</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-2">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-3">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays subsp. everta</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-3">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-4">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays subsp. indentata</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-4">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-5">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays subsp. indurata</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-5">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-6">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays subsp. saccharata</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-6">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-7">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays subsp. tunicata</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-7">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-8">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea mays var. ceratina</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-8">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table presentation-table review-table govuk-!-margin-bottom-0">
+            <tbody class="govuk-table__head">
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header">Commodity code</th>
+                <td class="govuk-table__cell" id="commodity-code-9">10051013</td>
+                <td class="govuk-table__cell change">
+                </td>
+            </tr>
+            <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Description</th>
+                <td class="govuk-table__cell">Three-cross hybrids</td>
+                <td class="govuk-table__cell"></td>
+            </tr>
+              <tr class="presentation-table__row--no-border">
+                <th scope="row" class="govuk-table__header ">Genus and species</th>
+                <td class="govuk-table__cell">Zea sp.</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+            </tbody>
+        </table>
+
+        <table class="govuk-table review-table" id="goods-table-9">
+          <caption class="govuk-visually-hidden" style="">Goods table</caption>
+          <tbody>
+          <tr>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Net weight</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Packages</td>
+              <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Type of package</td>
+                <td class="govuk-table__cell govuk-table__header govuk-!-width-one-quarter">Quantity</td>
+          </tr>
+          <tr>
+              <td class="govuk-table__cell">1.0 kgs/units</td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">Bag</td>
+                <td class="govuk-table__cell">1.0</td>
+          </tr>
+            <tr>
+                <td class="govuk-table__cell govuk-table__header" colspan="4">Quantity type</td>
+            </tr>
+            <tr>
+              <td class="govuk-table__cell" colspan="4">Kilograms</td>
+            </tr>
+            <tr>
+              <td class="govuk-!-padding-top-5" colspan="6">
+                <a href="/notification/vnet/protected/notifications/cloning/commodities/summary?ehcRef=999999999&amp;origin=NL&amp;certType=CHEDPP" class="govuk-link" id="commodity-summary-link">
+                    View a summary of all commodity details
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-0 bcp-header">
+            Transport to the Border Control Post (BCP)
+                  </h2>
+        <table class="govuk-table review-table" id="bcp-table">
+          <caption class="govuk-visually-hidden" style="">bcp table</caption>
+          <tbody>
+          <tr>
+            <th scope="row" class="govuk-table__header">
+                Border Control Post
+                          </th>
+            <td class="govuk-table__cell" id="bcp">Gatwick Airport (plants) - GBLGW4PP</td>
+          </tr>
+          </tbody>
+        </table>
+
+      <form action="summary" method="POST">
+        <button class="govuk-button" type="submit" value="Clone" id="clone" data-prevent-double-click="true">Clone</button>
+        <a class="govuk-link clear-link" id="search-to-clone" href="/notification/vnet/protected/notifications/cloning/search?certType=CHEDPP">Cancel</a>
+        <input name="certificate-reference" type="hidden" value="999999999">
+        <input name="country-of-origin-code" type="hidden" value="NL">
+        <input name="certificate-type" type="hidden" value="CHEDPP">
+        <input name="crumb" type="hidden" value="h7hkjUk1yNwgKl1gyKWPtTPlwwZM5g8ibUvOm6lFDDA">
+      </form>
+    </div>
+  </div>
+</main>
+
+</div>
+
+
+{% endblock %}
