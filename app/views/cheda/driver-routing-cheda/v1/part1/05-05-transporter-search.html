@@ -1,0 +1,559 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+      <span> - CHEDA</span>
+    </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="search-economic-operators-page">
+    <div class="govuk-grid-column-full">
+          <span class="govuk-caption-xl">Transport</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing transporter</h1>
+      <form class="govuk-!-margin-bottom-6" action="05-03-transporter" method="GET">
+        <div class="form-group search-panel">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Search
+            </legend>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="name">
+                        Name
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="name" name="name" type="text" value="">
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="approvalNumber">
+                        Approval Number
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="approvalNumber" name="approvalNumber" type="text" value="">
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="postcode">
+                        Post Code
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="postcode" name="postcode" type="text" value="">
+                  </div>
+                </div>
+            </div>
+          </fieldset>
+
+          <input class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search" data-module="govuk-button">
+        </div>
+      </form>
+
+      <form action="05-04-transporter" method="post">
+        <input name="crumb" type="hidden" value="Oc_P40viwBADQYqopIWp1PVEfgL0tapC7ExjI8jIsXA">
+        <input name="etag" type="hidden" value="&quot;0000000004D0A987&quot;">
+        <input type="hidden" name="transporter-search-page" value="yes">
+
+        <div class="table-responsive">
+          <table class="govuk-table traders-search-results" id="Table-SearchResults" aria-describedby="traders search results table">
+            <thead class="govuk-table__head">
+            <tr>
+                <th class="govuk-table__header" scope="col" id="transporter-company-name">Name</th>
+                <th class="govuk-table__header" scope="col" id="transporter-company-address">Address</th>
+                <th class="govuk-table__header" scope="col" id="transporter-company-country">Country</th>
+                <th class="govuk-table__header" scope="col" id="transporter-company-status">Status</th>
+                <th class="govuk-table__header" scope="col" id="transporter-approval-number">Approval Number</th>
+                <th class="govuk-table__header" scope="col" id="transporter-type">Type</th>
+              <th class="govuk-table__header">
+                <span class="govuk-visually-hidden">View</span>
+              </th>
+              <th class="govuk-table__header">
+                <span class="govuk-visually-hidden">Select</span>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    Homer Simpson
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Westbury House, 630 Woodbridge Rd, Ipswich, IP4 4PG
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/IPSW/T2/00097144
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-209b6043-fe46-48cd-9f47-55ac551039fc" value="209b6043-fe46-48cd-9f47-55ac551039fc">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="209b6043-fe46-48cd-9f47-55ac551039fc">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                  LUCY ANN EDE
+                </td>
+                <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                  MEADERS FARM, MADERS, SOUTH HILL ROAD, CALLINGTON, PL17 7LL
+                </td>
+                <td class="govuk-table__cell">
+                  United Kingdom of Great Britain and Northern Ireland
+                </td>
+                <td class="govuk-table__cell">
+                  Approved
+                </td>
+                <td class="govuk-table__cell">
+                  UK/EXETE/T1/00090579
+                </td>
+                <td class="govuk-table__cell">
+                  commercial transporter
+                </td>
+              <td class="govuk-table__cell">
+                <button type="button" class="link-button" name="view-id" id="view-button-209b6043-fe46-48cd-9f47-55ac551039fc" value="209b6043-fe46-48cd-9f47-55ac551039fc">
+                  View
+                </button>
+              </td>
+              <td class="govuk-table__cell">
+                <button type="submit" class="link-button" name="add-id" value="209b6043-fe46-48cd-9f47-55ac551039fc">
+                  Select
+                </button>
+              </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    STEPHEN GELDERD
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    27 GARDEN TERRACE, ULVERSTON, CUMBRIA, LA12 7DA
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/PREST/T1/00090577
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-fbc0950d-9e97-4df5-9522-dcd7d6aa18e3" value="fbc0950d-9e97-4df5-9522-dcd7d6aa18e3">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="fbc0950d-9e97-4df5-9522-dcd7d6aa18e3">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    T &amp; S King
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Crossrig, Hutton, Berwick Upon Tweed, TD15 1XG
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/GALAS/T1/00090193
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-dcd15628-1ac8-4ab1-afa8-f3682dae487a" value="dcd15628-1ac8-4ab1-afa8-f3682dae487a">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="dcd15628-1ac8-4ab1-afa8-f3682dae487a">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    TREVOR WILLIAM JONES
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    LLAIN Y GRUG, HERMON ROAD, MYNYDD LLANDEGAI, BETHESDA, LL57 4DZ
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/CAERN/T1/00090189
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-d3a795b5-a09d-42c2-82f8-17ac4aaaccf6" value="d3a795b5-a09d-42c2-82f8-17ac4aaaccf6">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="d3a795b5-a09d-42c2-82f8-17ac4aaaccf6">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    LNB Horse Transport
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Hargreaves Lodge, Whitmore Road, HANCHURCH, Staffordshire, ST5 4DG
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/STAFF/T1/00090190
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-e1f478ad-8335-45e6-9a97-ad6fb87a17c3" value="e1f478ad-8335-45e6-9a97-ad6fb87a17c3">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="e1f478ad-8335-45e6-9a97-ad6fb87a17c3">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    Cunningham (Cleavland) Ltd
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    2 Durham Road, Thorpe Thewles, Stockton - On - Tees, Cleveland, TS21 3JN
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/NEWCA/T1/00090184
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-a86930ab-9777-4310-ae2e-fba1d49c50e4" value="a86930ab-9777-4310-ae2e-fba1d49c50e4">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="a86930ab-9777-4310-ae2e-fba1d49c50e4">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    BRIAN FARISH
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    3 LEECHES TERRACE, MAIN ROAD, FLIMBY, MARYPORT, CA15 8RS
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/PREST/T1/00090187
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-dc25497c-b417-4179-9228-50e9838aedcc" value="dc25497c-b417-4179-9228-50e9838aedcc">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="dc25497c-b417-4179-9228-50e9838aedcc">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    RG Vickers
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Lowesby Grange, Tilton On The Water, Leicester, LE1 9LE
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/LEICE/T1/00090192
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-01422809-17d4-4860-af26-92d605f371fd" value="01422809-17d4-4860-af26-92d605f371fd">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="01422809-17d4-4860-af26-92d605f371fd">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    SIMON POPE
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    ALBANS BARNYARD, ROMFORD ROAD, PEMBURY, KENT, TN2 4BB
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/REIGA/T1/00090183
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-7910c2d5-035c-4856-985f-612ec0b04f35" value="7910c2d5-035c-4856-985f-612ec0b04f35">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="7910c2d5-035c-4856-985f-612ec0b04f35">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    J W SPILSBURY &amp; CO
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    ORISTON COURT, STANFORD BRIDGE, WORCESTER, WR6 6SU
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/STAFF/T1/00090186
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-1f160f59-89e2-4120-a6e6-4afbbdccd5c9" value="1f160f59-89e2-4120-a6e6-4afbbdccd5c9">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="1f160f59-89e2-4120-a6e6-4afbbdccd5c9">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    CW COURIER SERVICES
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    FAUVE, THE STREET, BIROBROOK, HALSTEAD, CO9 4BJ
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/BURY/T1/00090182
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-d460a4bb-b6a3-41bd-b82d-203e3c69786f" value="d460a4bb-b6a3-41bd-b82d-203e3c69786f">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="d460a4bb-b6a3-41bd-b82d-203e3c69786f">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    John Dorling
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    Blaenffynnon Fach, Clydey, Llanfyrnach, Pembrokeshire, SA35 0BH
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/CARMA/T1/00090194
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-24d0cba4-4538-40e4-a47b-89536ab3939d" value="24d0cba4-4538-40e4-a47b-89536ab3939d">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="24d0cba4-4538-40e4-a47b-89536ab3939d">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name" headers="transporter-company-name">
+                    SARAH GREEN
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address" headers="transporter-company-address">
+                    TANKERDALE FARM, TANKERDALE LANE, LISS, HANTS, GU33 7QY
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                  <td class="govuk-table__cell">
+                    Approved
+                  </td>
+                  <td class="govuk-table__cell">
+                    UK/REIGA/T1/00090185
+                  </td>
+                  <td class="govuk-table__cell">
+                    commercial transporter
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="button" class="link-button" name="view-id" id="view-button-63ccb7e3-93e0-4f67-812b-315a56ac4d4c" value="63ccb7e3-93e0-4f67-812b-315a56ac4d4c">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="63ccb7e3-93e0-4f67-812b-315a56ac4d4c">
+                    Select
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+
+      <a href="#" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
+        Create a new transporter
+      </a>
+
+        <nav class="pagination" aria-label="Pagination">
+          <ul class="pagination-list">
+              <li class="pagination-item pagination-item-next">
+                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                    <span class="pagination-link-title">
+                       Next page
+                      <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                      </svg>
+                    </span>
+                    <span class="govuk-visually-hidden">:</span>
+                    <span class="pagination-link-label">2 of 101</span>
+                  </a>
+              </li>
+          </ul>
+        </nav>
+      
+    </div>
+  </div>
+</main>
+{% endblock %}

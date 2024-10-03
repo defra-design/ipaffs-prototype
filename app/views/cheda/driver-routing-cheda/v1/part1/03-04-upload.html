@@ -1,0 +1,81 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Accompanying documents – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5925980</span>
+          <span> - CHEDA</span>
+  </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="add-attachment-page">
+      <div class="govuk-grid-column-full">
+          <span class="govuk-caption-xl">Documents</span>
+        
+        
+        {% if data['document-type'] == "health-cert" %}
+        <h1 class="govuk-heading-xl" id="page-primary-title">Latest health certificate</h1>
+        <form action="03-02-latest-health-cert?health-cert-attachment=yes" method="post">
+        {% else %}
+        <h1 class="govuk-heading-xl" id="page-primary-title">Accompanying documents</h1>
+        <form action="03-03-accompanying-documents?accomp-doc-attachment=yes" method="post">
+        {% endif %}
+          <input type="hidden" name="crumb" value="cx3ExTG-HTdv9E6-kkq797-caH_3ODMwSDPABbL9ODJ">
+          <input type="hidden" name="etag" value="&quot;000000000000DF14&quot;">
+          <input type="hidden" name="document-index" value="">
+          <input type="hidden" name="request-from" value="">
+          <input type="hidden" name="page-03-04-upload" value="visited">
+  
+          <div class="govuk-form-group ">
+            <div data-module="dropzone">
+              <label class="govuk-label govuk-label--m" for="fileUpload">
+                Select a file
+              </label>
+          
+          
+                
+              <input class="govuk-file-upload " id="fileUpload" name="fileUpload" type="file" disabled>
+            </div>
+          </div>
+  
+          <div class="govuk-body">
+            <h2 class="govuk-heading-m">
+              Your file must be:
+            </h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>smaller than 10MB</li>
+              <li>larger than 1KB</li>
+              <li>file type must be a DOC, JPEG, PDF, PNG, XLS or GIF</li>
+              <li>ZIP files are not allowed for security reasons</li>
+            </ul>
+          </div>
+  
+          <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="next-button" name="next-button" type="submit" value="Next">
+            Next
+          </button>
+  
+          <div class="govuk-body">
+            <a class="govuk-link" href="javascript:history.back()">Cancel</a>
+          </div>
+  
+        </form>
+  
+      </div>
+    </div>
+</main>
+{% endblock %}
