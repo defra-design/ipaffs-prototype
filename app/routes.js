@@ -13,6 +13,7 @@ const router = express.Router()
 router.use('/baseline/chedpp/part1', require('./views/baseline/chedpp/part1/_routes'))
 router.use('/baseline/cheda/part1', require('./views/baseline/cheda/part1/_routes'))
 router.use('/baseline/chedp/part1', require('./views/baseline/chedp/part1/_routes'))
+router.use('/baseline/chedp/part1/iuu', require('./views/baseline/chedp/part1/iuu/_routes'))
 router.use('/baseline/clone', require('./views/baseline/clone/_routes'))
 router.use('/baseline/clone/cheda-retro-clone', require('./views/baseline/clone/cheda-retro-clone/_routes'))
 
