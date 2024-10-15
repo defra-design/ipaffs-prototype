@@ -23,11 +23,11 @@ router.use('/x-ched/cuc-foundations/latest/billing-details', require('./views/x-
 router.use('/x-ched/cuc-foundations/iteration-1/billing-details', require('./views/x-ched/cuc-foundations/iteration-1/billing-details/_routes'))
 router.use('/x-ched/cuc-ci/latest/billing-details', require('./views/x-ched/cuc-ci/latest/billing-details/_routes'))
 router.use('/x-ched/cuc-ci/ur/billing-details', require('./views/x-ched/cuc-ci/ur/billing-details/_routes'))
-router.use('/x-ched/dashboard-results', require('./views/x-ched/dashboard-results/_routes'))
+//router.use('/x-ched/dashboard-results', require('./views/x-ched/dashboard-results/_routes'))
 router.use('/x-ched/provision-of-billing-details/latest/billing-details', require('./views/x-ched/provision-of-billing-details/latest/billing-details/_routes'))
-router.use('/x-ched/gdpr-cloning', require('./views//x-ched/gdpr-cloning/_routes'))
+router.use('/x-ched/gdpr-cloning', require('./views/x-ched/gdpr-cloning/_routes'))
 
-// ched p rotes
+// ched p routes
 router.use('/chedp/gvms/iteration-04', require('./views/chedp/gvms/iteration-04/_routes'))
 
 // ched a routes
@@ -37,35 +37,16 @@ router.use('/cheda/single-cheda/latest/part1', require('./views/cheda/single-che
 router.use('/cheda/cr37-clone-after/latest/chedp', require('./views/cheda/cr37-clone-after/latest/chedp/_routes'))
 router.use('/cheda/cr37-clone-after/latest/cheda', require('./views/cheda/cr37-clone-after/latest/cheda/_routes'))
 
-router.use('/cheda/cr37-clone-after/v6/chedp', require('./views/cheda/cr37-clone-after/latest/chedp/_routes'))
-router.use('/cheda/cr37-clone-after/v6/cheda', require('./views/cheda/cr37-clone-after/latest/cheda/_routes'))
-
-router.use('/cheda/cr37-clone-after/v5/chedpp', require('./views/cheda/cr37-clone-after/v5/chedpp/_routes'))
-router.use('/cheda/cr37-clone-after/v5/chedp', require('./views/cheda/cr37-clone-after/v5/chedp/_routes'))
-router.use('/cheda/cr37-clone-after/v5/cheda', require('./views/cheda/cr37-clone-after/v5/cheda/_routes'))
-
-router.use('/cheda/cr37-clone-after/v4/chedpp', require('./views/cheda/cr37-clone-after/v4/chedpp/_routes'))
-router.use('/cheda/cr37-clone-after/v4/chedp', require('./views/cheda/cr37-clone-after/v4/chedp/_routes'))
-router.use('/cheda/cr37-clone-after/v4/cheda', require('./views/cheda/cr37-clone-after/v4/cheda/_routes'))
-
-router.use('/cheda/cr37-clone-after/v3/chedpp', require('./views/cheda/cr37-clone-after/v3/chedpp/_routes'))
-router.use('/cheda/cr37-clone-after/v3/chedp', require('./views/cheda/cr37-clone-after/v3/chedp/_routes'))
-router.use('/cheda/cr37-clone-after/v3/cheda', require('./views/cheda/cr37-clone-after/v3/cheda/_routes'))
-
-router.use('/cheda/cr37-clone-after/v2/chedpp', require('./views/cheda/cr37-clone-after/v2/chedpp/_routes'))
-router.use('/cheda/cr37-clone-after/v2/chedp', require('./views/cheda/cr37-clone-after/v2/chedp/_routes'))
-router.use('/cheda/cr37-clone-after/v2/cheda', require('./views/cheda/cr37-clone-after/v2/cheda/_routes'))
-
-router.use('/cheda/cr37-clone-after/v1/chedpp', require('./views/cheda/cr37-clone-after/v1/chedpp/_routes'))
-router.use('/cheda/cr37-clone-after/v1/chedp', require('./views/cheda/cr37-clone-after/v1/chedp/_routes'))
-router.use('/chedad/cr37-clone-after/v1/cheda', require('./views/cheda/cr37-clone-after/v1/cheda/_routes'))
+//gvms routes
+router.use('/x-ched/gvms/part-1-chedp', require('./views/x-ched/gvms/part-1-chedp/_routes'))
+router.use('/x-ched/gvms/part-1-chedpp', require('./views/x-ched/gvms/part-1-chedpp/_routes'))
 
 // ched d routes
 // router.use('/chedd/imp-to-chedd', require('./views/chedd/imp-to-chedd/_routes'))
 
 
 // ched pp routes
-router.use('/chedpp/latest', require('./views/chedpp/latest/_routes'))
+//router.use('/chedpp/latest', require('./views/chedpp/latest/_routes'))
 
 // UX ideas routes
 // router.use('/UX-ideas/same-commodity/cheda', require('./views/UX-ideas/same-commodity/cheda/_routes'))

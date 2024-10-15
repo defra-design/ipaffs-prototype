@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row" id="declaration-page">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl " id="page-primary-title">Declaration</h1>
+
+    <p class="govuk-body">
+      I, the undersigned operator responsible for the consignment detailed above, certify that
+      to the best of my knowledge and belief the statements made in Part I of this document are
+      true and complete, and I agree to comply with the requirements of retained Regulation 2017/625
+      on official controls, including payment for official controls, as well as for re-dispatching
+      consignments, quarantine or isolation of consignments, or costs of destruction and disposal
+      where necessary.
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-8">
+      Date of declaration: <span id="date-of-declaration">16 July 2023</span>
+    </p>
+
+    <form class="review-form" id="declaration-form" method="POST" action="confirmation">
+      <input name="crumb" type="hidden" value="w4ED1WtIX1Ebvknho4SuSdmxQCda0whOhDh3w3Sj6M5">
+      <input name="etag" type="hidden" value="&quot;00000000001CDA17&quot;">
+      <input name="submissionDate" type="hidden" value="16 July 2023">
+      <input class="govuk-button" id="accept-and-submit" type="submit" value="Submit notification">
+    </form>
+  </div>
+</div>
+{% endblock %}

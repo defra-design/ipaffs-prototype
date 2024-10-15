@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+
+{% block content %}
+
+<span class="heading-tertiary">DRAFT.GB.2023.2987635-CHEDD</span>
+<div class="govuk-hint govuk-!-margin-bottom-6"></div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Description of the goods</span>
+
+      <form class="form" action="check-answers" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Commodity
+              </h1>
+            </legend>
+
+
+            <div class="table-responsive">
+              <table class="govuk-table" id="commodity-table">
+                <thead class="govuk-table__head">
+                <tr>
+                  <th scope="col" class="govuk-table__header">Commodity code</th>
+                  <th scope="col" class="govuk-table__header">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="govuk-table__cell" id="commodity-code-value">05119190</td>
+                  <td class="govuk-table__cell">Other</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+        <input class="link-button " id="family-button" type="submit" name="familyButton" value="Add another commodity" data-module="govuk-button">
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
