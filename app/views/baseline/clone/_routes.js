@@ -21,6 +21,22 @@ router.post('/route-validate-reference-number', function (req, res) {
   }
 })
 
+//  - radio routing - which certificate they see, dependant on ched type selected
+router.post('/route-ecerttype', function (req, res) {
+  // Make a variable and give it the value from name
+  var ecerttypeRoute = req.session.data['cert-type']
+  if (ecerttypeRoute == "CHEDA") {
+    res.redirect('03-certificate-found-cheda')
+  }
+  else if (ecerttypeRoute == "CHEDP") {
+    res.redirect('03-certificate-found-chedp')
+  }
+  
+ else if (ecerttypeRoute == "CHEDPP"){
+    res.redirect('03-certificate-found-chedpp')
+  }  
+})
+
 
 module.exports = router
 
