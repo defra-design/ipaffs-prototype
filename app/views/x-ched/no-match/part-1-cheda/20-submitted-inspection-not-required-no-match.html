@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
+Initial risk assessment – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
@@ -35,26 +35,25 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="confirmation-page">
     <div class="govuk-grid-column-two-thirds">
 
-      <div class="govuk-panel govuk-!-margin-bottom-6 panel--inspection-required" id="inspection-required-confirmation-panel">
+      <div class="govuk-panel govuk-!-margin-bottom-8 panel--inspection-may-be-required" id="inspection-may-be-required-confirmation-panel">
         <h1 class="govuk-panel__title">
-          Initial risk assessment
+          Risk assessment
         </h1>
         <div class="govuk-panel__body">
-          <div class="govuk-!-margin-bottom-0">Inspection required</div>
-          <!--Your reference number<br>
-          <strong>
-            <span id="reference-number">CHEDP.GB.2023.2001123</span>
-          </strong>-->
+          <div class="govuk-!-font-weight-bold">Border control post</div>
+          <div class="govuk-!-margin-bottom-6">No inspection required</div>
+          <div class="govuk-!-font-weight-bold">Place of destination</div>
+          <div class="govuk-!-margin-bottom-6">Inspection may be required</div>
         </div>
       </div>
 
-      <dl class="govuk-summary-list">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-1">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">
-            CHED reference number
+            CHED reference
           </dt>
           <dd class="govuk-summary-list__value">
-            CHEDP.GB.2023.6244839
+            CHEDA.GB.2023.6244839
           </dd>
           <dd class="govuk-summary-list__actions">
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -62,9 +61,9 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             </button>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
           <dt class="govuk-summary-list__key govuk-!-width-one-half">
-            CHED reference to use on your customs declaration
+            Customs declaration reference
           </dt>
           <dd class="govuk-summary-list__value">
             GBCHD2023.6244839
@@ -75,40 +74,47 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             </button>
           </dd>
         </div>
-      </dl>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+          <dt class="govuk-summary-list__key govuk-!-width-one-half">
+            Customs document code
+          </dt>
+          <dd class="govuk-summary-list__value">
+            C640
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy
+            </button>
+          </dd>
+        </div>
+      </dl>      
 
-      <div class="govuk-warning-text">
+      <div class="govuk-warning-text govuk-!-margin-bottom-1">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-warning-text__assistive">Warning</span>
-          Initial risk assessments can change.
+          You must use the correct reference and code on the customs declaration or your consignment will be delayed.
         </strong>
       </div>
+      <hr class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
 
-      <h2 class="govuk-heading-m">What you need to do</h2>
-      <p class="govuk-body">Tell the driver to go directly to [Inspection premises] with this consignment on arrival in Great Britain.</p>
-
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          If the consignment does not arrive in Great Britain at the entry point stated in this notification, it must go directly to the Border Control Post where it first arrives in Great Britain.
-        </strong>
-      </div>
+      <h2 class="govuk-heading-m">What you need to do next</h2>
+      <p class="govuk-body">Make sure the consignment goes directly to the place of destination on arriving in Great Britain.</p>
+      <p class="govuk-body">The animals or consignment may need to be inspected. The animals must stay at the place of destination for either:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the time stated on the health certificate</li>
+        <li>48 hours if no time is specified</li>
+      </ul>
       
-      <p class="govuk-body">Check that your notification details and customs declaration match or your consignment will be delayed.</p>
-      
-      <h2 class="govuk-heading-m">What happens next</h2>
-      <p class="govuk-body">An inspector may update the risk assessment.</p>
-      <p class="govuk-body">If the risk assessment changes, IPAFFS will notify you and any nominated contacts by text message or email.</p>
-
       <h2 class="govuk-heading-m">How to view or amend this notification</h2>
       <p class="govuk-body">You can access or amend this notification from your dashboard.</p>
 
     
-        <input name="crumb" type="hidden" value="Ydm23FlnF8m6O6Bvn3Cnlpdf3GEtj0PtCyCKshnEUqa">
-        <input name="etag" type="hidden" value="&quot;000000000006F7C7&quot;">
+        
 
+        <!--<div>
+          <input class="govuk-button govuk-!-margin-bottom-3" type="submit" name="new-notification" value="View or print certificate">
+        </div>-->
         <div>
           <a href="0-index" class="govuk-link govuk-!-font-size-19" id="manage-notifications">
             Return to your dashboard
@@ -116,7 +122,7 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div>
           <form action="01-ched-type" method="post" id="homeForm">
-          <input class="link-button" type="submit" name="new-notification" value="Create a new notification">
+          <input class="link-button" type="submit" name="new-notification" value="Create a new import notification">
           </form>
         </div>
 
