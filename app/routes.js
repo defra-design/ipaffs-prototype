@@ -37,9 +37,10 @@ router.use('/cheda/single-cheda/latest/part1', require('./views/cheda/single-che
 router.use('/cheda/cr37-clone-after/latest/chedp', require('./views/cheda/cr37-clone-after/latest/chedp/_routes'))
 router.use('/cheda/cr37-clone-after/latest/cheda', require('./views/cheda/cr37-clone-after/latest/cheda/_routes'))
 
-//gvms routes
+//gvms or no-match routes
 router.use('/x-ched/gvms/part-1-chedp', require('./views/x-ched/gvms/part-1-chedp/_routes'))
 router.use('/x-ched/gvms/part-1-chedpp', require('./views/x-ched/gvms/part-1-chedpp/_routes'))
+router.use('/x-ched/no-match/part-1-chedp', require('./views/x-ched/no-match/part-1-chedp/_routes'))
 
 // ched d routes
 // router.use('/chedd/imp-to-chedd', require('./views/chedd/imp-to-chedd/_routes'))
