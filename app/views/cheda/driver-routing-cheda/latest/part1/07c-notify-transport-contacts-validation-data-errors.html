@@ -1,0 +1,293 @@
+{% extends "layout.html" %} 
+{% block pageTitle %} Transport to the BCP – {{ serviceName }} – GOV.UK Prototype Kit {% endblock %} 
+{% block beforeContent %} 
+{% include "includes/phase-banner.html" %} 
+{% include "includes/back.html" %} 
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+data-module="govuk-error-summary">
+<h2 class="govuk-error-summary__title" id="error-summary-title">
+  Please fix the following errors
+</h2>
+<div class="govuk-error-summary__body">
+  <ul class="govuk-list govuk-error-summary__list govuk-!-margin-left-0">
+    <li>
+      <a class="" id="error-description-0" href="#notify-trasport-contacts-error">Name must be 32 characters or fewer</a>
+    </li>
+    <li>
+      <a class="" id="error-description-0" href="#notify-trasport-contacts-error">Enter an email address in the correct format, like name@example.coms</a>
+    </li>
+    <li>
+      <a class="" id="error-description-0" href="#notify-trasport-contacts-error">Enter a mobile number in the correct format, like 07700 900 982 or +44 7700 900 982</a>
+    </li>
+    
+  </ul>
+</div>
+</div>
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+    <span id="reference-number">DRAFT.GB.2023.5925980</span>
+    <span> - CHEDA</span>
+  </span>
+</div>
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="bip-for-transport-page">
+    <div class="govuk-grid-column-three-quarters">
+      <span class="govuk-caption-xl">Transport</span>
+      <h1 class="govuk-heading-xl" id="page-primary-title">Should we notify any transport contacts about inspections?</h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="08-01-review" method="post">
+        <input name="crumb" type="hidden" value="LY9uwrq9nmbnVpWYiHKtz_BBwrKdY7h6NmE1knMJVmy" />
+        <input name="etag" type="hidden" value='"00000000053B49D9"' />
+        <input name="11-transport-to-poe" type="hidden" value="visited" />
+        <input id="js-enabled-flag" name="js-enabled" type="hidden" value="true" />
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="tc-hint">
+            <p class="govuk-!-width-two-thirds">For non-GVMS journeys, we will notify the person responsible for this consignment about all required inspections.</p>
+            <p class="govuk-!-width-two-thirds govuk-!-margin-bottom-6">We can also notify up to 5 transport contacts, such as the haulier, driver or animal attendant.</p>
+            <div class="govuk-form-group">
+             
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="tc" name="tc" type="radio" value="Yes &ndash; add contacts" data-aria-controls="conditional-tc" />
+                  <label class="govuk-label govuk-radios__label" for="tc"> Yes &ndash; add contacts </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-tc">
+                  <p class="govuk-!-width-two-thirds">You must have someone’s permission to add a personal email address or phone number.</p>
+                  <!-- start of contact details -->
+                  <div class="container1" id="container1">
+                    <h1 class="govuk-heading-m">Transport contact 1</h1>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Name </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="name" spellcheck="false" value="Homer Simpson" />
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Email address </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" value="homer.simpson@hauliers.com" name="email" spellcheck="false" />
+                    </div>
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                      <label class="govuk-label govuk-label--s"> Mobile number (optional) </label>
+                      <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds"> For international numbers, include the country code. </span>
+                      <input class="govuk-input govuk-!-width-one-half" value="07123456789" id="contact-by-email" name="mobile" spellcheck="false" />
+                    </div>
+                    <a href="#" id="add-contact1" class="govuk-button govuk-button--secondary govuk-body govuk-!-margin-bottom-1">Add another contact</a>
+                    <hr class="govuk-!-width-two-thirds" />
+                  </div>
+                  <div class="container2" id="container2" style="display: none">
+                    <div class="header-container">
+                      <h1 class="govuk-heading-m">Transport contact 2</h1>
+                      <a href="#" class="govuk-link">Remove contact</a>
+                    </div>
+                    <div class="govuk-form-group govuk-form-group--error">
+                      <label class="govuk-label govuk-label--s"> Name </label>
+                      <p id="notify-trasport-contacts-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Name must be 32 characters or fewer
+                        </p>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="name" spellcheck="false" value="" />
+                    </div>
+                    <div class="govuk-form-group govuk-form-group--error">
+                      <label class="govuk-label govuk-label--s"> Email address </label>
+                      <p id="notify-trasport-contacts-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter an email address in the correct format, like name@example.com
+                        </p>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="email" spellcheck="false" />
+                    </div>
+                    <div class="govuk-form-group govuk-form-group--error govuk-!-margin-bottom-6">
+                      <label class="govuk-label govuk-label--s"> Mobile number (optional) </label>
+                      
+                      <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds"> For international numbers, include the country code. </span>
+                      <p id="notify-trasport-contacts-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter a mobile number in the correct format, like 07700 900 982 or +44 7700 900 982
+                        </p>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mobile" spellcheck="false" />
+                    </div>
+                    <a href="#" id="add-contact2" class="govuk-button govuk-button--secondary govuk-body govuk-!-margin-bottom-1">Add another contact</a>
+                    <hr class="govuk-!-width-two-thirds" />
+                  </div>
+                  <div class="container3" id="container3" style="display: none">
+                    <div class="header-container">
+                      <h1 class="govuk-heading-m">Transport contact 3</h1>
+                      <a href="#" class="govuk-link">Remove contact</a>
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Name </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="name" spellcheck="false" value="" />
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Email address </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="email" spellcheck="false" />
+                    </div>
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                      <label class="govuk-label govuk-label--s"> Mobile number (optional) </label>
+                      <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds"> For international numbers, include the country code. </span>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mobile" spellcheck="false" />
+                    </div>
+                    <a href="#" id="add-contact3" class="govuk-button govuk-button--secondary govuk-body govuk-!-margin-bottom-1">Add another contact</a>
+                    <hr class="govuk-!-width-two-thirds" />
+                  </div>
+                  <div class="container4" id="container4" style="display: none">
+                    <div class="header-container">
+                      <h1 class="govuk-heading-m">Transport contact 4</h1>
+                      <a href="#" class="govuk-link">Remove contact</a>
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Name </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="name" spellcheck="false" value="" />
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Email address </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="email" spellcheck="false" />
+                    </div>
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                      <label class="govuk-label govuk-label--s"> Mobile number (optional) </label>
+                      <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds"> For international numbers, include the country code. </span>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mobile" spellcheck="false" />
+                    </div>
+                    <a href="#" id="add-contact4" class="govuk-button govuk-button--secondary govuk-body govuk-!-margin-bottom-1">Add another contact</a>
+                    <hr class="govuk-!-width-two-thirds" />
+                  </div>
+                  <div class="container5" id="container5" style="display: none">
+                    <div class="header-container">
+                      <h1 class="govuk-heading-m">Transport contact 5</h1>
+                      <a href="#" class="govuk-link">Remove contact</a>
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Name </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="name" spellcheck="false" value="" />
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--s"> Email address </label>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="email" spellcheck="false" />
+                    </div>
+                    <div class="govuk-form-group govuk-!-margin-bottom-6">
+                      <label class="govuk-label govuk-label--s"> Mobile number (optional) </label>
+                      <span id="local-reference-number-hint" class="govuk-hint govuk-!-width-two-thirds"> For international numbers, include the country code. </span>
+                      <input class="govuk-input govuk-!-width-one-half" id="contact-by-email" name="mobile" spellcheck="false" />
+                    </div>
+                    <hr class="govuk-!-width-two-thirds" />
+                  </div>
+                  <!-- end of contact details -->
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="tc-2" name="tc" type="radio" value="No" />
+                  <label class="govuk-label govuk-radios__label" for="tc-2"> No </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-warning-text govuk-!-width-two-thirds">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            The person responsible for this consignment must ensure that the transporter takes the animals to all required inspections.
+          </strong>
+        </div>
+
+        <div class="govuk-!-margin-top-6">
+          {% if data['from-page'] == "review" %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review" />
+          {% else %}
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="save-and-return-button" name="save-and-return-button" type="submit" formaction="00-notification-hub" value="Save and return to hub" data-module="govuk-button" />
+          <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="button-save-and-continue" type="submit" value="Save and continue" data-module="govuk-button" />
+          <p class="govuk-body"><a class="govuk-link" href="00-notification-hub">Cancel and return to hub</a></p>
+          {% endif %}
+        </div>
+
+        <input name="crumb" type="hidden" value="sjxurCjSxaOFoFkveWyEIvJKEAlMy8CB6mIsr8UrrgU" />
+        <input name="etag" type="hidden" value='"0000000004C7A4E0"' />
+      </form>
+    </div>
+  </div>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to show the next container
+    function showNextContainer(currentContainer) {
+      const currentNumber = parseInt(currentContainer.id.replace('container', ''), 10);
+      const nextContainer = document.getElementById(`container${currentNumber + 1}`);
+
+      if (nextContainer) {
+        nextContainer.style.display = 'block';
+        updateAddContactButtons();
+      }
+    }
+
+    // Function to hide a container
+    function hideContainer(container) {
+      container.style.display = 'none';
+      updateAddContactButtons();
+    }
+
+    // Function to update the visibility of "Add another contact" buttons
+    function updateAddContactButtons() {
+      const containers = Array.from(document.querySelectorAll('[id^="container"]'));
+      let lastVisibleContainerIndex = -1;
+      
+      // Find the index of the last visible container
+      containers.forEach((container, index) => {
+        if (container.style.display !== 'none') {
+          lastVisibleContainerIndex = index;
+        }
+      });
+
+      // Update the visibility of the "Add another contact" buttons
+      containers.forEach((container, index) => {
+        const addButton = container.querySelector('.govuk-button--secondary');
+        if (addButton) {
+          if (index === lastVisibleContainerIndex) {
+            // Show the button in the last visible container
+            addButton.style.display = 'inline-block';
+          } else {
+            // Hide the button in all other containers
+            addButton.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // Event listeners for the "Add another contact" buttons
+    document.querySelectorAll('.govuk-button--secondary').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        showNextContainer(this.closest('div[id^="container"]'));
+      });
+    });
+
+    // Event listeners for the "Remove contact" links
+    document.querySelectorAll('.govuk-link').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        hideContainer(this.closest('div[id^="container"]'));
+      });
+    });
+
+    // Initial call to set up the visibility of the "Add another contact" buttons
+    updateAddContactButtons();
+  });
+</script>
+
+
+
+
+<style>
+  .header-container {
+    display: flex;
+    align-items: baseline; /* Vertically align items */
+  }
+
+  .govuk-link {
+    margin-left: 16px; /* Adjust spacing between link and heading */
+  }
+</style>
+{% endblock %}
