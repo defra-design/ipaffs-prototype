@@ -296,7 +296,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           </div> -->
 
 
-          <dl class="notification-list__row">
+          <dl class="notification-list__row" id="add-docs-fields">
             <div class="notification-list__grid-row">
               <div class="notification-list__grid-column-25">
                 <dt class="notification-list__heading additional-documents__content-heading">Document type</dt>
@@ -320,14 +320,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </select>
                 </dd>
               </div>
-              <div class="notification-list__grid-column-25">
+              <div class="notification-list__grid-column-25 additional-documents__grid-column-20">
                 <dt class="notification-list__heading additional-documents__content-heading">Document reference</dt>
                 <dd class="notification-list__value" id="commodity-id-0">
                   <input class="govuk-input govuk-!-margin-top-3" id="document-reference" name="document-reference" type="text" value="" aria-label="Document reference">
               
                 </dd>
               </div>
-              <div class="notification-list__grid-column-25">
+              <div class="notification-list__grid-column-25 additional-documents__grid-column-doc-date">
                 <dt class="notification-list__heading additional-documents__content-heading">Date of issue</dt>
                 <dd class="notification-list__value" id="arrival-date-0">
                   
@@ -399,11 +399,14 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             
           </dl>   
 
+          <a rel="noopener noreferrer" class="link-button govuk-!-padding-right-4" id="" href="#add-docs-fields">
+            Add a document
+          </a>
 
            
-          <button type="submit" class="link-button additional-documents__add-another-document" id="button-display-additional-document-row" name="display-additional-document-row" value="">
+          <!-- <button type="submit" class="link-button additional-documents__add-another-document" id="button-display-additional-document-row" name="display-additional-document-row" value="">
             Add a document
-          </button>
+          </button> -->
 
           <button type="submit" class="link-button additional-documents__add-another-document" id="button-add-multiple-documents" name="add-multiple-documents" value="">
             Add multiple documents
