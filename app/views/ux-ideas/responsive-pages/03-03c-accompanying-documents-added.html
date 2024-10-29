@@ -11,6 +11,12 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 
+<style>
+  .additional-documents__grid-row {
+    margin-bottom: 0;
+  }
+</style>
+
 
 
 <div class="govuk-!-padding-top-6">
@@ -28,7 +34,6 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl">Documents</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Accompanying documents</h1>
-
       <form action="13-01-approved-est" method="POST">
         <input name="crumb" type="hidden" value="fIzHQMhND_p99j8EJPCB-lVBKf9o9ErXzVPOk9op4pS">
         <input name="etag" type="hidden" value="&quot;000000000537DB02&quot;">
@@ -36,11 +41,13 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           <p class="govuk-body">
             Uploading documentary evidence can speed up checking.
           </p>
+
           {% if (data['risk-category'] == "low") %}
           <p class="govuk-body">
             You do not need to upload a health certificate for this consignment.
           </p>
           {% endif %}
+
           <details class="govuk-details  govuk-!-width-three-quarters">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -58,9 +65,8 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             </div>
           </details>
 
-          <p class="govuk-heading-s" id="additional-documents-number-of-documents-message">Showing 4 additional
-            documents</p>
-
+          <h2 class="govuk-heading-m" id="additional-documents-number-of-documents-message">Showing 4 additional
+            documents</h2>
           <div class="additional-documents__grid-row additional-documents__headers">
             <div class="additional-documents__grid-column-20 additional-documents__table-header">
               Document type
@@ -108,7 +114,6 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
               <dd class="additional-documents__content-value" id="additional-document-date-value-1">
                 20 August 2023
               </dd>
-
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
               <dt class="additional-documents__content-heading" id="additional-document-attachment-heading-1">
@@ -141,21 +146,21 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <dl class="additional-documents__grid-row additional-document-info">
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-type-heading-2">Document type
+              <dt class="additional-documents__content-heading" id="additional-document-type-heading-1">Document type
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-type-value-2">
+              <dd class="additional-documents__content-value" id="additional-document-type-value-1">
                 Processing statement
               </dd>
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-reference-heading-2">Document
+              <dt class="additional-documents__content-heading" id="additional-document-reference-heading-1">Document
                 reference</dt>
-              <dd class="additional-documents__content-value" id="additional-document-reference-value-2">
+              <dd class="additional-documents__content-value" id="additional-document-reference-value-1">
                 PS-4387475
               </dd>
             </div>
             <div class="additional-documents__grid-column-doc-date additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-date-heading-2">
+              <dt class="additional-documents__content-heading" id="additional-document-date-heading-1">
                 Date of issue
                 <div class="additional-documents__date-of-issue-hint">
                   <span class="additional-documents__date-of-issue-hint__day">Day</span>
@@ -163,20 +168,19 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   <span class="additional-documents__date-of-issue-hint__year">Year</span>
                 </div>
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-date-value-2">
+              <dd class="additional-documents__content-value" id="additional-document-date-value-1">
                 20 August 2023
               </dd>
-
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-attachment-heading-2">
+              <dt class="additional-documents__content-heading" id="additional-document-attachment-heading-1">
                 Attachments
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-attachment-value-2">
-                <a rel="noopener noreferrer" title="CC-4387475.pdf"
-                  href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/1595c61f-40f2-447f-8578-7a2670cd06a0"
-                  class="govuk-link ellipsis" id="attachment-view-1595c61f-40f2-447f-8578-7a2670cd06a0" target="_blank"
-                  aria-label="View CC-4387475.pdf">
+              <dd class="additional-documents__content-value" id="additional-document-attachment-value-1">
+                <a rel="noopener noreferrer" title="CC-4387474.pdf"
+                  href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90"
+                  class="govuk-link ellipsis" id="attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" target="_blank"
+                  aria-label="View CC-4387474.pdf">
                   PS-4387475.pdf
                 </a>
               </dd>
@@ -185,35 +189,35 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="additional-documents__grid-row additional-documents__content-links">
             <div class="additional-documents__grid-column-20">
               <button type="submit" class="link-button text-align-left"
-                id="remove-attachment-1595c61f-40f2-447f-8578-7a2670cd06a0" name="remove-attachment"
-                value="1595c61f-40f2-447f-8578-7a2670cd06a0" aria-label="Remove attachment CC-4387475.pdf">
+                id="remove-attachment-af6719e4-071e-4179-9ebd-d5c73b04bf90" name="remove-attachment"
+                value="af6719e4-071e-4179-9ebd-d5c73b04bf90" aria-label="Remove attachment CC-4387474.pdf">
                 Remove attachment
               </button>
             </div>
             <div class="additional-documents__grid-column-20">
               <a class="govuk-link link-button"
-                href="/upload/tst/protected/upload/DRAFT.GB.2023.5942705/2/notification/delete-row">
+                href="/upload/tst/protected/upload/DRAFT.GB.2023.5942705/1/notification/delete-row">
                 Remove row
               </a>
             </div>
           </div>
           <dl class="additional-documents__grid-row additional-document-info">
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-type-heading-3">Document type
+              <dt class="additional-documents__content-heading" id="additional-document-type-heading-1">Document type
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-type-value-3">
+              <dd class="additional-documents__content-value" id="additional-document-type-value-1">
                 Processing statement
               </dd>
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-reference-heading-3">Document
+              <dt class="additional-documents__content-heading" id="additional-document-reference-heading-1">Document
                 reference</dt>
-              <dd class="additional-documents__content-value" id="additional-document-reference-value-3">
+              <dd class="additional-documents__content-value" id="additional-document-reference-value-1">
                 PS-4387476
               </dd>
             </div>
             <div class="additional-documents__grid-column-doc-date additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-date-heading-3">
+              <dt class="additional-documents__content-heading" id="additional-document-date-heading-1">
                 Date of issue
                 <div class="additional-documents__date-of-issue-hint">
                   <span class="additional-documents__date-of-issue-hint__day">Day</span>
@@ -221,20 +225,19 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   <span class="additional-documents__date-of-issue-hint__year">Year</span>
                 </div>
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-date-value-3">
+              <dd class="additional-documents__content-value" id="additional-document-date-value-1">
                 20 August 2023
               </dd>
-
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-attachment-heading-3">
+              <dt class="additional-documents__content-heading" id="additional-document-attachment-heading-1">
                 Attachments
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-attachment-value-3">
-                <a rel="noopener noreferrer" title="CC-4387476.pdf"
-                  href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/13ba0f42-d0a5-497e-b038-4564844e7ca1"
-                  class="govuk-link ellipsis" id="attachment-view-13ba0f42-d0a5-497e-b038-4564844e7ca1" target="_blank"
-                  aria-label="View CC-4387476.pdf">
+              <dd class="additional-documents__content-value" id="additional-document-attachment-value-1">
+                <a rel="noopener noreferrer" title="CC-4387474.pdf"
+                  href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90"
+                  class="govuk-link ellipsis" id="attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" target="_blank"
+                  aria-label="View CC-4387474.pdf">
                   PS-4387476.pdf
                 </a>
               </dd>
@@ -243,35 +246,35 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="additional-documents__grid-row additional-documents__content-links">
             <div class="additional-documents__grid-column-20">
               <button type="submit" class="link-button text-align-left"
-                id="remove-attachment-13ba0f42-d0a5-497e-b038-4564844e7ca1" name="remove-attachment"
-                value="13ba0f42-d0a5-497e-b038-4564844e7ca1" aria-label="Remove attachment CC-4387476.pdf">
+                id="remove-attachment-af6719e4-071e-4179-9ebd-d5c73b04bf90" name="remove-attachment"
+                value="af6719e4-071e-4179-9ebd-d5c73b04bf90" aria-label="Remove attachment CC-4387474.pdf">
                 Remove attachment
               </button>
             </div>
             <div class="additional-documents__grid-column-20">
               <a class="govuk-link link-button"
-                href="/upload/tst/protected/upload/DRAFT.GB.2023.5942705/3/notification/delete-row">
+                href="/upload/tst/protected/upload/DRAFT.GB.2023.5942705/1/notification/delete-row">
                 Remove row
               </a>
             </div>
           </div>
           <dl class="additional-documents__grid-row additional-document-info">
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-type-heading-4">Document type
+              <dt class="additional-documents__content-heading" id="additional-document-type-heading-1">Document type
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-type-value-4">
+              <dd class="additional-documents__content-value" id="additional-document-type-value-1">
                 Processing statement
               </dd>
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-reference-heading-4">Document
+              <dt class="additional-documents__content-heading" id="additional-document-reference-heading-1">Document
                 reference</dt>
-              <dd class="additional-documents__content-value" id="additional-document-reference-value-4">
+              <dd class="additional-documents__content-value" id="additional-document-reference-value-1">
                 PS-4387477
               </dd>
             </div>
             <div class="additional-documents__grid-column-doc-date additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-date-heading-4">
+              <dt class="additional-documents__content-heading" id="additional-document-date-heading-1">
                 Date of issue
                 <div class="additional-documents__date-of-issue-hint">
                   <span class="additional-documents__date-of-issue-hint__day">Day</span>
@@ -279,20 +282,19 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   <span class="additional-documents__date-of-issue-hint__year">Year</span>
                 </div>
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-date-value-4">
-                21 August 2023
+              <dd class="additional-documents__content-value" id="additional-document-date-value-1">
+                20 August 2023
               </dd>
-
             </div>
             <div class="additional-documents__grid-column-20 additional-document-content">
-              <dt class="additional-documents__content-heading" id="additional-document-attachment-heading-4">
+              <dt class="additional-documents__content-heading" id="additional-document-attachment-heading-1">
                 Attachments
               </dt>
-              <dd class="additional-documents__content-value" id="additional-document-attachment-value-4">
-                <a rel="noopener noreferrer" title="CC-4387477.pdf"
-                  href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/5fb6acd6-bdbd-42d6-80f9-f5fc94248c20"
-                  class="govuk-link ellipsis" id="attachment-view-5fb6acd6-bdbd-42d6-80f9-f5fc94248c20" target="_blank"
-                  aria-label="View CC-4387477.pdf">
+              <dd class="additional-documents__content-value" id="additional-document-attachment-value-1">
+                <a rel="noopener noreferrer" title="CC-4387474.pdf"
+                  href="/notification/tst/protected/notifications/DRAFT.GB.2023.5942705/attachment/af6719e4-071e-4179-9ebd-d5c73b04bf90"
+                  class="govuk-link ellipsis" id="attachment-view-af6719e4-071e-4179-9ebd-d5c73b04bf90" target="_blank"
+                  aria-label="View CC-4387474.pdf">
                   PS-4387477.pdf
                 </a>
               </dd>
@@ -301,19 +303,40 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
           <div class="additional-documents__grid-row additional-documents__content-links">
             <div class="additional-documents__grid-column-20">
               <button type="submit" class="link-button text-align-left"
-                id="remove-attachment-5fb6acd6-bdbd-42d6-80f9-f5fc94248c20" name="remove-attachment"
-                value="5fb6acd6-bdbd-42d6-80f9-f5fc94248c20" aria-label="Remove attachment CC-4387477.pdf">
+                id="remove-attachment-af6719e4-071e-4179-9ebd-d5c73b04bf90" name="remove-attachment"
+                value="af6719e4-071e-4179-9ebd-d5c73b04bf90" aria-label="Remove attachment CC-4387474.pdf">
                 Remove attachment
               </button>
             </div>
             <div class="additional-documents__grid-column-20">
               <a class="govuk-link link-button"
-                href="/upload/tst/protected/upload/DRAFT.GB.2023.5942705/4/notification/delete-row">
+                href="/upload/tst/protected/upload/DRAFT.GB.2023.5942705/1/notification/delete-row">
                 Remove row
               </a>
             </div>
           </div>
 
+          <h2 class="govuk-heading-m">Add a document</h2>
+
+          <div class="additional-documents__grid-row additional-documents__headers">
+            <div class="additional-documents__grid-column-20 additional-documents__table-header">
+              Document type
+            </div>
+            <div class="additional-documents__grid-column-20 additional-documents__table-header">
+              Document reference
+            </div>
+            <div class="additional-documents__grid-column-doc-date additional-documents__table-header">
+              Date of issue
+              <div class="additional-documents__date-of-issue-hint">
+                <span class="additional-documents__date-of-issue-hint__day">Day</span>
+                <span class="additional-documents__date-of-issue-hint__month">Month</span>
+                <span class="additional-documents__date-of-issue-hint__year">Year</span>
+              </div>
+            </div>
+            <div class="additional-documents__grid-column-20 additional-documents__table-header">
+              Attachments
+            </div>
+          </div>
           <div class="additional-documents__grid-row additional-documents__add-document">
             <div class="additional-documents__grid-column-20">
               <div class="govuk-form-group govuk-!-margin-bottom-0 ">
@@ -323,7 +346,6 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                   <option value="veterinaryHealthCertificate">Veterinary health certificate</option>
                   <option value="airWaybill">Air waybill</option>
                   <option value="billOfLading">Bill of lading</option>
-
                   <option value="commercialInvoice">Commercial invoice</option>
                   <option value="customsDeclaration">Customs declaration</option>
                   <option value="importPermit">Import permit</option>
@@ -424,7 +446,6 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
 
         <input name="current-page-number" type="hidden" value="1">
-
         <input class="govuk-button govuk-button--primary govuk-!-margin-right-1" id="save-and-return-button-p"
           name="save-and-return-button-p" type="submit" value="Save and return to hub" data-module="govuk-button"
           href="07-check-answers">
