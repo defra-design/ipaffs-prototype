@@ -1,0 +1,707 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+    <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2024.5501422 </span>
+      <span> - CHEDA</span>
+    </span>
+</div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="search-economic-operators-page">
+    <div class="govuk-grid-column-full">
+          <span class="govuk-caption-xl">Transport</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing transporter</h1>
+      <form class="govuk-!-margin-bottom-6" action="05-03-transporter" method="GET">
+        <div class="form-group search-panel">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Search
+            </legend>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="name">
+                        Name
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="name" name="name" type="text" value="">
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="approvalNumber">
+                        Approval Number
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="approvalNumber" name="approvalNumber" type="text" value="">
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="postcode">
+                        Post Code
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="postcode" name="postcode" type="text" value="">
+                  </div>
+                </div>
+            </div>
+          </fieldset>
+
+          <input class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search" data-module="govuk-button">
+        </div>
+      </form>
+
+      <form action="05-04-transporter" method="post">
+        <input name="crumb" type="hidden" value="Oc_P40viwBADQYqopIWp1PVEfgL0tapC7ExjI8jIsXA">
+        <input name="etag" type="hidden" value="&quot;0000000004D0A987&quot;">
+        <input type="hidden" name="transporter-search-page" value="yes">
+
+        <div class="govuk-body">
+          <div class="addresses-search__grid-row addresses-search__headers">
+            <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Name
+            </div>
+            <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Address
+            </div>
+            <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Country
+            </div>
+            <div class="addresses-search__grid-column-10 addresses-search__table-header govuk-!-padding-right-2">
+              Status
+            </div>
+            <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Approval number
+            </div>
+            <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Type
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  LUCY ANN EDE
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address
+                </dt>
+                <dd class="addresses-search__content-value">
+                  MEADERS FARM, MADERS, SOUTH HILL ROAD, CALLINGTON, PL17 7LL
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  United Kingdom of Great Britain and Northern Ireland
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-10 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/EXETE/T1/00090579
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  commercial transporter
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  STEPHEN GELDERD
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address
+                </dt>
+                <dd class="addresses-search__content-value">
+                  27 GARDEN TERRACE, ULVERSTON, CUMBRIA, LA12 7DA
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  United Kingdom of Great Britain and Northern Ireland
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-10 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/PREST/T1/00090577
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  commercial transporter
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  T & S King
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Crossrig, Hutton, Berwick Upon Tweed, TD15 1XG
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  United Kingdom of Great Britain and Northern Ireland
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-10 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/GALAS/T1/00090193
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  commercial transporter
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  TREVOR WILLIAM JONES
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address
+                </dt>
+                <dd class="addresses-search__content-value">
+                  LLAIN Y GRUG, HERMON ROAD, MYNYDD LLANDEGAI, BETHESDA, LL57 4DZ
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  United Kingdom of Great Britain and Northern Ireland
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-10 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/CAERN/T1/00090189
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  commercial transporter
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  LNB Horse Transport
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Hargreaves Lodge, Whitmore Road, HANCHURCH, Staffordshire, ST5 4DG
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  United Kingdom of Great Britain and Northern Ireland
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-10 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/STAFF/T1/00090190
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  commercial transporter
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-body">
+          <div class="addresses-search__grid-row addresses-search__headers">
+            <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Name 
+            </div>
+            <div class="addresses-search__grid-column-30 addresses-search__table-header govuk-!-padding-right-2">
+              Address and country
+            </div>
+            <div class="addresses-search__grid-column-25 addresses-search__table-header govuk-!-padding-right-2">
+              Approval number
+            </div>
+            <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Type and status
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>LUCY ANN EDE</p>
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address and country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>MEADERS FARM, MADERS, SOUTH HILL ROAD, CALLINGTON, PL17 7LL</p>
+                  <p>United Kingdom of Great Britain and Northern Ireland</p>
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/EXETE/T1/00090579
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>commercial transporter</p>
+                  <p>Approved</p>
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  STEPHEN GELDERD
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address and country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>27 GARDEN TERRACE, ULVERSTON, CUMBRIA, LA12 7DA</p>
+                  <p>United Kingdom of Great Britain and Northern Ireland</p>
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/PREST/T1/00090577
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>commercial transporter</p>
+                  <p>Approved</p>
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  T & S King
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address and country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>Crossrig, Hutton, Berwick Upon Tweed, TD15 1XG</p>
+                  <p>United Kingdom of Great Britain and Northern Ireland</p>
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/GALAS/T1/00090193
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>commercial transporter</p>
+                  <p>Approved</p>
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  TREVOR WILLIAM JONES
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address and country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>LLAIN Y GRUG, HERMON ROAD, MYNYDD LLANDEGAI, BETHESDA, LL57 4DZ</p>
+                  <p>United Kingdom of Great Britain and Northern Ireland</p>
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/CAERN/T1/00090189
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>commercial transporter</p>
+                  <p>Approved</p>
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  LNB Horse Transport
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Address and country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>Hargreaves Lodge, Whitmore Road, HANCHURCH, Staffordshire, ST5 4DG</p>
+                  <p>United Kingdom of Great Britain and Northern Ireland</p>
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number
+                </dt>
+                <dd class="addresses-search__content-value">
+                  UK/STAFF/T1/00090190
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <p>commercial transporter</p>
+                  <p>Approved</p>
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
+              <button type="submit" class="link-button">
+                View
+              </button>
+            </div>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <a href="#" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
+        Create a new transporter
+      </a>
+
+        <nav class="pagination" aria-label="Pagination">
+          <ul class="pagination-list">
+              <li class="pagination-item pagination-item-next">
+                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                    <span class="pagination-link-title">
+                       Next page
+                      <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                      </svg>
+                    </span>
+                    <span class="govuk-visually-hidden">:</span>
+                    <span class="pagination-link-label">2 of 101</span>
+                  </a>
+              </li>
+          </ul>
+        </nav>
+      
+    </div>
+  </div>
+</main>
+{% endblock %}
