@@ -1,0 +1,626 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Approved establishment of origin – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="veterinary-establishments-page">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-xl">Documents</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an&nbsp;approved establishment</h1>
+
+      <form action="/notification/tst/protected/notifications/DRAFT.GB.2023.5925980/veterinary-establishments" method="GET">
+
+        <div class="govuk-form-group search-panel">
+          <fieldset class="govuk-fieldset govuk-!-margin-bottom-6">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Filter
+            </legend>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-6">
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group govuk-!-width-full ">
+                    
+                    <label class="govuk-label " for="establishment-country-code">
+                      Country
+                    </label>
+                    
+                
+                
+                
+                  
+                
+                  <select class="govuk-select " id="establishment-country-code" name="establishment-country-code">
+                      <option value="">Argentina (country of origin)</option>
+                      <option value="AF">Afghanistan</option>
+                      <option value="AX">Aland Islands</option>
+                      <option value="AL">Albania</option>
+                      <option value="DZ">Algeria</option>
+                      <option value="AS">American Samoa</option>
+                      <option value="AD">Andorra</option>
+                      <option value="AO">Angola</option>
+                      <option value="AI">Anguilla</option>
+                      <option value="AQ">Antarctica</option>
+                      <option value="AG">Antigua and Barbuda</option>
+                      <option value="AR">Argentina</option>
+                      <option value="AM">Armenia</option>
+                      <option value="AW">Aruba</option>
+                      <option value="AU">Australia</option>
+                      <option value="AT">Austria</option>
+                      <option value="AZ">Azerbaijan</option>
+                      <option value="BS">Bahamas</option>
+                      <option value="BH">Bahrain</option>
+                      <option value="BD">Bangladesh</option>
+                      <option value="BB">Barbados</option>
+                      <option value="BY">Belarus</option>
+                      <option value="BE">Belgium</option>
+                      <option value="BZ">Belize</option>
+                      <option value="BJ">Benin</option>
+                      <option value="BM">Bermuda</option>
+                      <option value="BT">Bhutan</option>
+                      <option value="BO">Bolivia</option>
+                      <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                      <option value="BA">Bosnia and Herzegovina</option>
+                      <option value="BW">Botswana</option>
+                      <option value="BV">Bouvet Island</option>
+                      <option value="BR">Brazil</option>
+                      <option value="IO">British Indian Ocean Territory</option>
+                      <option value="VG">British Virgin Islands</option>
+                      <option value="BN">Brunei</option>
+                      <option value="BG">Bulgaria</option>
+                      <option value="BF">Burkina Faso</option>
+                      <option value="BI">Burundi</option>
+                      <option value="KH">Cambodia</option>
+                      <option value="CM">Cameroon</option>
+                      <option value="CA">Canada</option>
+                      <option value="ES-CN">Canary Islands</option>
+                      <option value="CV">Cape Verde</option>
+                      <option value="KY">Cayman Islands</option>
+                      <option value="CF">Central African Republic</option>
+                      <option value="TD">Chad</option>
+                      <option value="CL">Chile</option>
+                      <option value="CN">China</option>
+                      <option value="CX">Christmas Island</option>
+                      <option value="CC">Cocos (Keeling) Islands</option>
+                      <option value="CO">Colombia</option>
+                      <option value="KM">Comoros</option>
+                      <option value="CG">Congo</option>
+                      <option value="CK">Cook Islands</option>
+                      <option value="CR">Costa Rica</option>
+                      <option value="CI">Côte d'Ivoire</option>
+                      <option value="HR">Croatia</option>
+                      <option value="CU">Cuba</option>
+                      <option value="CW">Curaçao</option>
+                      <option value="CY">Cyprus</option>
+                      <option value="CZ">Czech Republic</option>
+                      <option value="CD">Democratic Republic of the Congo</option>
+                      <option value="DK">Denmark</option>
+                      <option value="DJ">Djibouti</option>
+                      <option value="DM">Dominica</option>
+                      <option value="DO">Dominican Republic</option>
+                      <option value="EC">Ecuador</option>
+                      <option value="EG">Egypt</option>
+                      <option value="SV">El Salvador</option>
+                      <option value="GQ">Equatorial Guinea</option>
+                      <option value="ER">Eritrea</option>
+                      <option value="EE">Estonia</option>
+                      <option value="SZ">Eswatini</option>
+                      <option value="ET">Ethiopia</option>
+                      <option value="FK">Falkland Islands</option>
+                      <option value="FO">Faroe Islands</option>
+                      <option value="FJ">Fiji</option>
+                      <option value="FI">Finland</option>
+                      <option value="FR">France</option>
+                      <option value="GF">French Guiana</option>
+                      <option value="PF">French Polynesia</option>
+                      <option value="TF">French Southern Territories</option>
+                      <option value="GA">Gabon</option>
+                      <option value="GE">Georgia</option>
+                      <option value="DE">Germany</option>
+                      <option value="GH">Ghana</option>
+                      <option value="GI">Gibraltar</option>
+                      <option value="GR">Greece</option>
+                      <option value="GL">Greenland</option>
+                      <option value="GD">Grenada</option>
+                      <option value="GP">Guadeloupe</option>
+                      <option value="GU">Guam</option>
+                      <option value="GT">Guatemala</option>
+                      <option value="GG">Guernsey</option>
+                      <option value="GN">Guinea</option>
+                      <option value="GW">Guinea-Bissau</option>
+                      <option value="GY">Guyana</option>
+                      <option value="HT">Haiti</option>
+                      <option value="HM">Heard Island and McDonald Islands</option>
+                      <option value="VA">Holy See</option>
+                      <option value="HN">Honduras</option>
+                      <option value="HK">Hong Kong</option>
+                      <option value="HU">Hungary</option>
+                      <option value="IS">Iceland</option>
+                      <option value="IN">India</option>
+                      <option value="ID">Indonesia</option>
+                      <option value="IR">Iran</option>
+                      <option value="IQ">Iraq</option>
+                      <option value="IM">Isle of Man</option>
+                      <option value="IL">Israel</option>
+                      <option value="IT">Italy</option>
+                      <option value="JM">Jamaica</option>
+                      <option value="JP">Japan</option>
+                      <option value="JE">Jersey</option>
+                      <option value="JO">Jordan</option>
+                      <option value="KZ">Kazakhstan</option>
+                      <option value="KE">Kenya</option>
+                      <option value="KI">Kiribati</option>
+                      <option value="XK">Kosovo</option>
+                      <option value="KW">Kuwait</option>
+                      <option value="KG">Kyrgyzstan</option>
+                      <option value="LA">Laos</option>
+                      <option value="LV">Latvia</option>
+                      <option value="LB">Lebanon</option>
+                      <option value="LS">Lesotho</option>
+                      <option value="LR">Liberia</option>
+                      <option value="LY">Libya</option>
+                      <option value="LI">Liechtenstein</option>
+                      <option value="LT">Lithuania</option>
+                      <option value="LU">Luxembourg</option>
+                      <option value="MO">Macao</option>
+                      <option value="MG">Madagascar</option>
+                      <option value="MW">Malawi</option>
+                      <option value="MY">Malaysia</option>
+                      <option value="MV">Maldives</option>
+                      <option value="ML">Mali</option>
+                      <option value="MT">Malta</option>
+                      <option value="MH">Marshall Islands</option>
+                      <option value="MQ">Martinique</option>
+                      <option value="MR">Mauritania</option>
+                      <option value="MU">Mauritius</option>
+                      <option value="YT">Mayotte</option>
+                      <option value="MX">Mexico</option>
+                      <option value="FM">Micronesia</option>
+                      <option value="MD">Moldova</option>
+                      <option value="MC">Monaco</option>
+                      <option value="MN">Mongolia</option>
+                      <option value="ME">Montenegro</option>
+                      <option value="MS">Montserrat</option>
+                      <option value="MA">Morocco</option>
+                      <option value="MZ">Mozambique</option>
+                      <option value="MM">Myanmar</option>
+                      <option value="NA">Namibia</option>
+                      <option value="NR">Nauru</option>
+                      <option value="NP">Nepal</option>
+                      <option value="NL">Netherlands</option>
+                      <option value="NC">New Caledonia</option>
+                      <option value="NZ">New Zealand</option>
+                      <option value="NI">Nicaragua</option>
+                      <option value="NE">Niger</option>
+                      <option value="NG">Nigeria</option>
+                      <option value="NU">Niue</option>
+                      <option value="NF">Norfolk Island</option>
+                      <option value="KP">North Korea</option>
+                      <option value="MK">North Macedonia</option>
+                      <option value="MP">Northern Mariana Islands</option>
+                      <option value="NO">Norway</option>
+                      <option value="OM">Oman</option>
+                      <option value="PK">Pakistan</option>
+                      <option value="PW">Palau</option>
+                      <option value="PA">Panama</option>
+                      <option value="PG">Papua New Guinea</option>
+                      <option value="PY">Paraguay</option>
+                      <option value="PE">Peru</option>
+                      <option value="PH">Philippines</option>
+                      <option value="PN">Pitcairn</option>
+                      <option value="PL">Poland</option>
+                      <option value="PT">Portugal</option>
+                      <option value="PR">Puerto Rico</option>
+                      <option value="QA">Qatar</option>
+                      <option value="IE">Republic of Ireland</option>
+                      <option value="RE">Réunion</option>
+                      <option value="RO">Romania</option>
+                      <option value="RU">Russian Federation</option>
+                      <option value="RW">Rwanda</option>
+                      <option value="WS">Samoa</option>
+                      <option value="SM">San Marino</option>
+                      <option value="ST">Sao Tome and Principe</option>
+                      <option value="SA">Saudi Arabia</option>
+                      <option value="SN">Senegal</option>
+                      <option value="RS">Serbia</option>
+                      <option value="SC">Seychelles</option>
+                      <option value="SL">Sierra Leone</option>
+                      <option value="SG">Singapore</option>
+                      <option value="SK">Slovakia</option>
+                      <option value="SI">Slovenia</option>
+                      <option value="SB">Solomon Islands</option>
+                      <option value="SO">Somalia</option>
+                      <option value="ZA">South Africa</option>
+                      <option value="GS">South Georgia and the South Sandwich Islands</option>
+                      <option value="KR">South Korea</option>
+                      <option value="SS">South Sudan</option>
+                      <option value="ES">Spain</option>
+                      <option value="LK">Sri Lanka</option>
+                      <option value="BL">St Barthélemy</option>
+                      <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                      <option value="KN">St Kitts and Nevis</option>
+                      <option value="LC">St Lucia</option>
+                      <option value="SX">St Maarten (Dutch)</option>
+                      <option value="MF">St Martin (French)</option>
+                      <option value="PM">St Pierre and Miquelon</option>
+                      <option value="VC">St Vincent and the Grenadines</option>
+                      <option value="SD">Sudan</option>
+                      <option value="SR">Suriname</option>
+                      <option value="SE">Sweden</option>
+                      <option value="CH">Switzerland</option>
+                      <option value="SY">Syria</option>
+                      <option value="TW">Taiwan</option>
+                      <option value="TJ">Tajikistan</option>
+                      <option value="TZ">Tanzania</option>
+                      <option value="TH">Thailand</option>
+                      <option value="GM">The Gambia</option>
+                      <option value="PS">The Occupied Palestinian Territories</option>
+                      <option value="TL">Timor-Leste</option>
+                      <option value="TG">Togo</option>
+                      <option value="TK">Tokelau</option>
+                      <option value="TO">Tonga</option>
+                      <option value="TT">Trinidad and Tobago</option>
+                      <option value="TN">Tunisia</option>
+                      <option value="TR">Turkey</option>
+                      <option value="TM">Turkmenistan</option>
+                      <option value="TC">Turks and Caicos Islands</option>
+                      <option value="TV">Tuvalu</option>
+                      <option value="UG">Uganda</option>
+                      <option value="UA">Ukraine</option>
+                      <option value="AE">United Arab Emirates</option>
+                      <option value="GB">United Kingdom of Great Britain and Northern Ireland</option>
+                      <option value="UM">United States Minor Outlying Islands</option>
+                      <option value="US">United States of America</option>
+                      <option value="UY">Uruguay</option>
+                      <option value="UZ">Uzbekistan</option>
+                      <option value="VU">Vanuatu</option>
+                      <option value="VE">Venezuela</option>
+                      <option value="VN">Viet Nam</option>
+                      <option value="VI">Virgin Islands of the United States</option>
+                      <option value="WF">Wallis and Futuna</option>
+                      <option value="EH">Western Sahara</option>
+                      <option value="YE">Yemen</option>
+                      <option value="ZM">Zambia</option>
+                      <option value="ZW">Zimbabwe</option>
+                      <option value="XX">Not Found</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label " for="establishment-name">
+                      Name
+                    </label>
+                    
+                
+                
+                    
+                
+                  <input class="govuk-input  " id="establishment-name" name="establishment-name" type="text" value="">
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label " for="establishment-number">
+                      Approval number
+                    </label>
+                    
+                
+                
+                    
+                
+                  <input class="govuk-input  " id="establishment-number" name="establishment-number" type="text" value="">
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row">
+              
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label " for="establishment-section">
+                      Section
+                    </label>
+                    
+                
+                
+                
+                  
+                
+                  <select class="govuk-select govuk-!-width-full" id="establishment-section" name="establishment-section">
+                      <option value="">Select section</option>
+                      <option value="Blood and blood products or excluding of equidae or for technical purposes other than feed for animals">Blood and blood products or excluding of equidae or for technical purposes other than feed for animals</option>
+                      <option value="Collagen">Collagen</option>
+                      <option value="Dairy plants">Dairy plants</option>
+                      <option value="Eggs and egg products">Eggs and egg products</option>
+                      <option value="Embryo team">Embryo team</option>
+                      <option value="Fertiliser and soil improvers">Fertiliser and soil improvers</option>
+                      <option value="Fishery products">Fishery products</option>
+                      <option value="Frogs legs and snails">Frogs legs and snails</option>
+                      <option value="Game trophies plants">Game trophies plants</option>
+                      <option value="Gelatine">Gelatine</option>
+                      <option value="Live bivalve molluscs">Live bivalve molluscs</option>
+                      <option value="Meat from poultry and lagomorphs">Meat from poultry and lagomorphs</option>
+                      <option value="Meat of domestic ungulates">Meat of domestic ungulates</option>
+                      <option value="Meat of farmed game">Meat of farmed game</option>
+                      <option value="Meat products">Meat products</option>
+                      <option value="Minced meat or meat preparations and mechanically separated meat (MSM)">Minced meat or meat preparations and mechanically separated meat (MSM)</option>
+                      <option value="Not Found">Not Found</option>
+                      <option value="Other facility for the collection or handling of animal by-products(unprocessed or untreated materials)">Other facility for the collection or handling of animal by-products(unprocessed or untreated materials)</option>
+                      <option value="Petfood plants(Including plants manufacturing dogchews and flavouring innards)">Petfood plants(Including plants manufacturing dogchews and flavouring innards)</option>
+                      <option value="Plants or establishments manufacturing intermediate products">Plants or establishments manufacturing intermediate products</option>
+                      <option value="Processing plants">Processing plants</option>
+                      <option value="Raw materials for the production of gelatine and collagen">Raw materials for the production of gelatine and collagen</option>
+                      <option value="Rendered animal fats and greaves">Rendered animal fats and greaves</option>
+                      <option value="Semen centers">Semen centers</option>
+                      <option value="Slaughterhouses">Slaughterhouses</option>
+                      <option value="Storage of derived products">Storage of derived products</option>
+                      <option value="Treated raw material for the production of gelatine and collagen (TCG)">Treated raw material for the production of gelatine and collagen (TCG)</option>
+                      <option value="Treated stomachs or bladders and intestines - casing only">Treated stomachs or bladders and intestines - casing only</option>
+                      <option value="Wild game meat">Wild game meat</option>
+                      <option value="raw milk or dairy products or colostrum and colostrum-based products">raw milk or dairy products or colostrum and colostrum-based products</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group govuk-!-width-full ">
+                    
+                    <label class="govuk-label " for="establishment-type">
+                      Type
+                    </label>
+                    
+                
+                
+                
+                  
+                
+                  <select class="govuk-select " id="establishment-type" name="establishment-type">
+                      <option value="">Select type</option>
+                      <option value="Processing Plant">Processing Plant</option>
+                      <option value="Minced Meat Plant">Minced Meat Plant</option>
+                      <option value="Category 3">Category 3</option>
+                      <option value="Semen storage centre">Semen storage centre</option>
+                      <option value="Category 2">Category 2</option>
+                      <option value="Meat Preparation Plant">Meat Preparation Plant</option>
+                      <option value="Category 1">Category 1</option>
+                      <option value="Reefer Vessel">Reefer Vessel</option>
+                      <option value="Game-Handling Establishment">Game-Handling Establishment</option>
+                      <option value="Not Specified">Not Specified</option>
+                      <option value="Mechanically Separated Meat Plant">Mechanically Separated Meat Plant</option>
+                      <option value="Dispatch centre">Dispatch centre</option>
+                      <option value="Cutting Plant">Cutting Plant</option>
+                      <option value="Cold Stores">Cold Stores</option>
+                      <option value="Factory Vessel">Factory Vessel</option>
+                      <option value="Embryo production team">Embryo production team</option>
+                      <option value="Semen collection centre">Semen collection centre</option>
+                      <option value="Purification Centre">Purification Centre</option>
+                      <option value="Slaughterhouse">Slaughterhouse</option>
+                      <option value="Liquid Egg Plant">Liquid Egg Plant</option>
+                      <option value="Embryo collection team">Embryo collection team</option>
+                      <option value="Egg-packing Centre">Egg-packing Centre</option>
+                      <option value="Production Areas">Production Areas</option>
+                      <option value="Freezing Vessel">Freezing Vessel</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label " for="establishment-status">
+                      Status
+                    </label>
+                    
+                
+                
+                
+                  
+                
+                  <select class="govuk-select govuk-!-width-full" id="establishment-status" name="establishment-status">
+                      <option value="">Select status</option>
+                      <option value="Approved">Approved</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <input class="govuk-button" id="search" type="submit" value="Search" data-module="govuk-button">
+        </div>
+      </form>
+
+      <form action="03-04b-approved-establishment-added" method="POST">
+        <input name="crumb" type="hidden" value="cPWIZj5dg7pqus4I6awnUoZI-bDJyiMAQcNYgDEYOWM">
+        <input name="etag" type="hidden" value="&quot;00000000053B49C1&quot;">
+
+        <div class="table-responsive">
+          <table class="govuk-table" id="establishments-search-results">
+            <thead class="govuk-table__head">
+            <tr>
+              <th class="govuk-table__header" id="establishment-search-result-name">Name</th>
+              <th class="govuk-table__header" id="establishment-search-result-section">Section</th>
+              <th class="govuk-table__header" id="establishment-search-result-type">Type</th>
+              <th class="govuk-table__header no-wrap" id="establishment-search-result-approval-number">Approval Number</th>
+              <th class="govuk-table__header" id="establishment-search-result-status">Status</th>
+              <th class="govuk-table__header" id="establishment-search-result-country">Country</th>
+              <th class="govuk-table__header" id="establishment-search-result-id">
+                <span class="govuk-visually-hidden">Select</span>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr id="establishments-search-results-row-1">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">Agropur, inc.</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">raw milk or dairy products or colostrum and colostrum-based products</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Processing Plant</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">2116532</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="24e32d5c-bdb9-e5b1-3e9f-227af9bd49de" id="select-establishment-1">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-2">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">Land O'Lakes, Inc</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">raw milk or dairy products or colostrum and colostrum-based products</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Processing Plant</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">3009986641</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="4331fb16-f2e0-7d16-5510-f8e858039b3b" id="select-establishment-2">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-3">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">California Dairies, Inc.</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">raw milk or dairy products or colostrum and colostrum-based products</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Processing Plant</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">2910562</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="9135acb9-74b2-eda1-c8bc-44834a137aa9" id="select-establishment-3">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-4">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">Cloverleaf Cold Storage</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">Meat of domestic ungulates</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Cold Stores</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">3136</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="d671bc2d-3637-bdf5-2a73-089c3f3962b1" id="select-establishment-4">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-5">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">TYSON FRESH MEAT</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">Other facility for the collection or handling of animal by-products(unprocessed or untreated materials)</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Category 3</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">NE-RA0-0007</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="8c5dc694-b279-0695-f050-f16a55ce5804" id="select-establishment-5">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-6">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">Marfrig Global Foods S.A.</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">Minced meat or meat preparations and mechanically separated meat (MSM)</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Minced Meat Plant</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">2543</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="d31c782e-14f6-9753-3936-014b9291737e" id="select-establishment-6">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-7">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">Kyorin Food Industries Ltd., Fukusaki Factory</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">Petfood plants(Including plants manufacturing dogchews and flavouring innards)</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Category 3</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">EU PET NO.8</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="d5bfbdc7-f9a9-0d30-2e5e-e83525429da2" id="select-establishment-7">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-8">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">Saami "Saami" LTD</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">Fishery products</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Factory Vessel</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">33P</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="d3802ab5-365b-e755-31d4-b619eee697ae" id="select-establishment-8">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-9">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">Waiu Dairy Limited Partnership</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">raw milk or dairy products or colostrum and colostrum-based products</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Processing Plant</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">WDL01</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="d69fcde1-c9af-cca3-1103-67b67b77fa20" id="select-establishment-9">
+                  Select
+                </button>
+              </td>
+            </tr>
+            <tr id="establishments-search-results-row-10">
+              <td class="govuk-table__cell" headers="establishment-search-result-name">"STEPPE NOMAD" Со., Ltd</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-section">Game trophies plants</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-type">Category 3,<br>Category 2</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-approval-number">2848341</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-status">Approved</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-country">Argentina</td>
+              <td class="govuk-table__cell" headers="establishment-search-result-id">
+                <button type="submit" class="link-button" name="add-id" value="9ae2740c-bffb-9701-0ab2-3f27571dffcc" id="select-establishment-10">
+                  Select
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+
+        <nav class="pagination" aria-label="Pagination">
+          <ul class="pagination-list">
+              <li class="pagination-item pagination-item-next">
+                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                    <span class="pagination-link-title">
+                       Next page
+                      <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                      </svg>
+                    </span>
+                    <span class="govuk-visually-hidden">:</span>
+                    <span class="pagination-link-label">2 of 2638</span>
+                  </a>
+              </li>
+          </ul>
+        </nav>
+      
+    </div>
+  </div>
+</main>
+{% endblock %}

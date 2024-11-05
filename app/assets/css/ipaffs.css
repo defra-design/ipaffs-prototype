@@ -12657,8 +12657,7 @@ only screen and (min-resolution: 2dppx) {
 /* Addresses list */
 .addresses-search__grid-row {
     padding: 10px 0;
-    border-bottom: 1px solid #b1b4b6;
-    word-break: break-word
+    border-bottom: 1px solid #b1b4b6
   }
 
   .addresses-search__list {
@@ -12733,6 +12732,18 @@ only screen and (min-resolution: 2dppx) {
   @media (min-width: 40.0625em) {
     .addresses-search__grid-row .addresses-search__grid-column-15 {
       width: 15%;
+      float: left
+    }
+  }
+
+  .addresses-search__grid-row .addresses-search__grid-column-17 {
+    box-sizing: border-box;
+    width: 100%
+  }
+
+  @media (min-width: 40.0625em) {
+    .addresses-search__grid-row .addresses-search__grid-column-17 {
+      width: 17%;
       float: left
     }
   }
