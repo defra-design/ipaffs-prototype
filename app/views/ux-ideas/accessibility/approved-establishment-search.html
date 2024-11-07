@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
+Approved establishment of origin – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -10,17 +10,6 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<style>
-  .traders-search-results-form-mobile {
-    display: block;
-  }
-
-  @media (min-width: 40.0625em) {
-    .traders-search-results-form-mobile {
-      display: none;
-    }
-  }
-</style>
 
 
 
@@ -30,40 +19,27 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
     <span> - CHEDP</span>
   </span>
 </div>
-
 <main class="govuk-main-wrapper" id="main-content">
-  <div class="govuk-grid-row" id="search-economic-operators-page">
+  <div class="govuk-grid-row" id="veterinary-establishments-page">
     <div class="govuk-grid-column-full">
-      <span class="govuk-caption-xl" id="page-secondary-title">Traders</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1>
-      <form class="govuk-!-margin-bottom-6" action="search" method="GET">
-        <div class="form-group search-panel">
-          <fieldset class="govuk-fieldset">
+      <span class="govuk-caption-xl">Documents</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an&nbsp;approved establishment</h1>
+
+      <form action="/notification/tst/protected/notifications/DRAFT.GB.2023.5925980/veterinary-establishments"
+        method="GET">
+        <div class="govuk-form-group search-panel">
+          <fieldset class="govuk-fieldset govuk-!-margin-bottom-6">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Search
+              Filter
             </legend>
-            <div class="govuk-grid-row">
+            <div class="govuk-grid-row govuk-!-margin-bottom-6">
               <div class="govuk-grid-column-one-third">
-                <div class="govuk-form-group  ">
-                  <label class="govuk-label " for="name">
-                    Name
+                <div class="govuk-form-group govuk-!-width-full ">
+                  <label class="govuk-label " for="establishment-country-code">
+                    Country
                   </label>
-                  <input class="govuk-input  " id="name" name="name" type="text" value="">
-                </div>
-              </div>
-              <div class="govuk-grid-column-one-third">
-                <div class="govuk-form-group  ">
-                  <label class="govuk-label " for="address">
-                    Address
-                  </label>
-                  <input class="govuk-input  " id="address" name="address" type="text" value="">
-                </div>
-              </div>
-              <div class="govuk-grid-column-one-third">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="country">Country</label>
-                  <select class="govuk-select govuk-!-width-full" id="country" name="country">
-                    <option value="">Select country</option>
+                  <select class="govuk-select " id="establishment-country-code" name="establishment-country-code">
+                    <option value="">Argentina (country of origin)</option>
                     <option value="AF">Afghanistan</option>
                     <option value="AX">Aland Islands</option>
                     <option value="AL">Albania</option>
@@ -300,12 +276,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                     <option value="UG">Uganda</option>
                     <option value="UA">Ukraine</option>
                     <option value="AE">United Arab Emirates</option>
-                    <optgroup label="United Kingdom of Great Britain and Northern Ireland">
-                      <option value="GB-ENG">England</option>
-                      <option value="GB-NIR">Northern Ireland</option>
-                      <option value="GB-SCT">Scotland</option>
-                      <option value="GB-WLS">Wales</option>
-                    </optgroup>
+                    <option value="GB">United Kingdom of Great Britain and Northern Ireland</option>
                     <option value="UM">United States Minor Outlying Islands</option>
                     <option value="US">United States of America</option>
                     <option value="UY">Uruguay</option>
@@ -319,199 +290,229 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                     <option value="YE">Yemen</option>
                     <option value="ZM">Zambia</option>
                     <option value="ZW">Zimbabwe</option>
+                    <option value="XX">Not Found</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+
+                  <label class="govuk-label " for="establishment-name">
+                    Name
+                  </label>
+
+
+
+
+
+                  <input class="govuk-input  " id="establishment-name" name="establishment-name" type="text" value="">
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+
+                  <label class="govuk-label " for="establishment-number">
+                    Approval number and status
+                  </label>
+
+
+
+
+
+                  <input class="govuk-input  " id="establishment-number" name="establishment-number" type="text"
+                    value="">
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row">
+
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+
+                  <label class="govuk-label " for="establishment-section">
+                    Section
+                  </label>
+
+
+
+
+
+
+                  <select class="govuk-select govuk-!-width-full" id="establishment-section"
+                    name="establishment-section">
+                    <option value="">Select section</option>
+                    <option
+                      value="Blood and blood products or excluding of equidae or for technical purposes other than feed for animals">
+                      Blood and blood products or excluding of equidae or for technical purposes other than feed for
+                      animals</option>
+                    <option value="Collagen">Collagen</option>
+                    <option value="Dairy plants">Dairy plants</option>
+                    <option value="Eggs and egg products">Eggs and egg products</option>
+                    <option value="Embryo team">Embryo team</option>
+                    <option value="Fertiliser and soil improvers">Fertiliser and soil improvers</option>
+                    <option value="Fishery products">Fishery products</option>
+                    <option value="Frogs legs and snails">Frogs legs and snails</option>
+                    <option value="Game trophies plants">Game trophies plants</option>
+                    <option value="Gelatine">Gelatine</option>
+                    <option value="Live bivalve molluscs">Live bivalve molluscs</option>
+                    <option value="Meat from poultry and lagomorphs">Meat from poultry and lagomorphs</option>
+                    <option value="Meat of domestic ungulates">Meat of domestic ungulates</option>
+                    <option value="Meat of farmed game">Meat of farmed game</option>
+                    <option value="Meat products">Meat products</option>
+                    <option value="Minced meat or meat preparations and mechanically separated meat (MSM)">Minced meat
+                      or meat preparations and mechanically separated meat (MSM)</option>
+                    <option value="Not Found">Not Found</option>
+                    <option
+                      value="Other facility for the collection or handling of animal by-products(unprocessed or untreated materials)">
+                      Other facility for the collection or handling of animal by-products(unprocessed or untreated
+                      materials)</option>
+                    <option value="Petfood plants(Including plants manufacturing dogchews and flavouring innards)">
+                      Petfood plants(Including plants manufacturing dogchews and flavouring innards)</option>
+                    <option value="Plants or establishments manufacturing intermediate products">Plants or
+                      establishments manufacturing intermediate products</option>
+                    <option value="Processing plants">Processing plants</option>
+                    <option value="Raw materials for the production of gelatine and collagen">Raw materials for the
+                      production of gelatine and collagen</option>
+                    <option value="Rendered animal fats and greaves">Rendered animal fats and greaves</option>
+                    <option value="Semen centers">Semen centers</option>
+                    <option value="Slaughterhouses">Slaughterhouses</option>
+                    <option value="Storage of derived products">Storage of derived products</option>
+                    <option value="Treated raw material for the production of gelatine and collagen (TCG)">Treated raw
+                      material for the production of gelatine and collagen (TCG)</option>
+                    <option value="Treated stomachs or bladders and intestines - casing only">Treated stomachs or
+                      bladders and intestines - casing only</option>
+                    <option value="Wild game meat">Wild game meat</option>
+                    <option value="raw milk or dairy products or colostrum and colostrum-based products">raw milk or
+                      dairy products or colostrum and colostrum-based products</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group govuk-!-width-full ">
+
+                  <label class="govuk-label " for="establishment-type">
+                    Type
+                  </label>
+
+
+
+
+
+
+                  <select class="govuk-select " id="establishment-type" name="establishment-type">
+                    <option value="">Select type</option>
+                    <option value="Processing Plant">Processing Plant</option>
+                    <option value="Minced Meat Plant">Minced Meat Plant</option>
+                    <option value="Category 3">Category 3</option>
+                    <option value="Semen storage centre">Semen storage centre</option>
+                    <option value="Category 2">Category 2</option>
+                    <option value="Meat Preparation Plant">Meat Preparation Plant</option>
+                    <option value="Category 1">Category 1</option>
+                    <option value="Reefer Vessel">Reefer Vessel</option>
+                    <option value="Game-Handling Establishment">Game-Handling Establishment</option>
+                    <option value="Not Specified">Not Specified</option>
+                    <option value="Mechanically Separated Meat Plant">Mechanically Separated Meat Plant</option>
+                    <option value="Dispatch centre">Dispatch centre</option>
+                    <option value="Cutting Plant">Cutting Plant</option>
+                    <option value="Cold Stores">Cold Stores</option>
+                    <option value="Factory Vessel">Factory Vessel</option>
+                    <option value="Embryo production team">Embryo production team</option>
+                    <option value="Semen collection centre">Semen collection centre</option>
+                    <option value="Purification Centre">Purification Centre</option>
+                    <option value="Slaughterhouse">Slaughterhouse</option>
+                    <option value="Liquid Egg Plant">Liquid Egg Plant</option>
+                    <option value="Embryo collection team">Embryo collection team</option>
+                    <option value="Egg-packing Centre">Egg-packing Centre</option>
+                    <option value="Production Areas">Production Areas</option>
+                    <option value="Freezing Vessel">Freezing Vessel</option>
+                  </select>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <div class="govuk-form-group  ">
+
+                  <label class="govuk-label " for="establishment-status">
+                    Status
+                  </label>
+
+
+
+
+
+
+                  <select class="govuk-select govuk-!-width-full" id="establishment-status" name="establishment-status">
+                    <option value="">Select status</option>
+                    <option value="Approved">Approved</option>
                   </select>
                 </div>
               </div>
             </div>
           </fieldset>
-          <button class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search"
-            data-module="govuk-button" data-prevent-double-click="true">Search</button>
+
+          <input class="govuk-button" id="search" type="submit" value="Search" data-module="govuk-button">
         </div>
       </form>
-      <form action="" method="post">
+
+      <form action="03-04b-approved-establishment-added" method="POST">
+        <input name="crumb" type="hidden" value="cPWIZj5dg7pqus4I6awnUoZI-bDJyiMAQcNYgDEYOWM">
+        <input name="etag" type="hidden" value="&quot;00000000053B49C1&quot;">
+
         <div class="govuk-body">
           <div class="addresses-search__grid-row addresses-search__headers">
-            <div class="addresses-search__grid-column-30 addresses-search__table-header govuk-!-padding-right-2">
+            <div class="addresses-search__grid-column-20 addresses-search__table-header govuk-!-padding-right-2">
               Name
             </div>
-            <div class="addresses-search__grid-column-40 addresses-search__table-header govuk-!-padding-right-2">
-              Address
+            <div class="addresses-search__grid-column-25 addresses-search__table-header govuk-!-padding-right-2">
+              Section
             </div>
             <div class="addresses-search__grid-column-15 addresses-search__table-header govuk-!-padding-right-2">
+              Type
+            </div>
+            <div class="addresses-search__grid-column-20 addresses-search__table-header govuk-!-padding-right-2">
+              Approval number and status
+            </div>
+            <div class="addresses-search__grid-column-12 addresses-search__table-header govuk-!-padding-right-2">
               Country
             </div>
           </div>
           <div class="addresses-search__grid-row">
             <dl class="addresses-search__list">
-              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
                 <dt class="addresses-search__content-heading">
                   Name
                 </dt>
                 <dd class="addresses-search__content-value">
-                  Criadores de Salamanca
+                  Agropur, inc.
                 </dd>
               </div>
-              <div class="addresses-search__grid-column-40 govuk-!-padding-right-2">
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
                 <dt class="addresses-search__content-heading">
-                  Address
+                  Section
                 </dt>
                 <dd class="addresses-search__content-value">
-                  Rúa de San Pedro 87, Tordillos, 37840
+                  raw milk or dairy products or colostrum and colostrum-based products
                 </dd>
               </div>
               <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
                 <dt class="addresses-search__content-heading">
-                  Country
+                  Type
                 </dt>
                 <dd class="addresses-search__content-value">
-                  Spain
+                  Processing Plant
                 </dd>
               </div>
-            </dl>
-            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
-              <button type="submit" class="link-button">
-                View
-              </button>
-            </div>
-            <div class="addresses-search__grid-column-7">
-              <button type="submit" class="link-button">
-                Select
-              </button>
-            </div>
-          </div>
-          <div class="addresses-search__grid-row">
-            <dl class="addresses-search__list">
-              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
                 <dt class="addresses-search__content-heading">
-                  Name
+                  Approval number and status
                 </dt>
                 <dd class="addresses-search__content-value">
-                  MadDyr exports
+                  <span class="addresses-search__approval-number">2116532</span><br>
+                  Approved
                 </dd>
               </div>
-              <div class="addresses-search__grid-column-40 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Address
-                </dt>
-                <dd class="addresses-search__content-value">
-                  5 Rue Léon Blum, Lille, 59800
-                </dd>
-              </div>
-              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Country
-                </dt>
-                <dd class="addresses-search__content-value">
-                  France
-                </dd>
-              </div>
-            </dl>
-            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
-              <button type="submit" class="link-button">
-                View
-              </button>
-            </div>
-            <div class="addresses-search__grid-column-7">
-              <button type="submit" class="link-button">
-                Select
-              </button>
-            </div>
-          </div>
-          <div class="addresses-search__grid-row">
-            <dl class="addresses-search__list">
-              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Name
-                </dt>
-                <dd class="addresses-search__content-value">
-                  K9 specialists
-                </dd>
-              </div>
-              <div class="addresses-search__grid-column-40 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Address
-                </dt>
-                <dd class="addresses-search__content-value">
-                  100 Rajander Road, West Gujuptur, 114436
-                </dd>
-              </div>
-              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Country
-                </dt>
-                <dd class="addresses-search__content-value">
-                  India
-                </dd>
-              </div>
-            </dl>
-            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
-              <button type="submit" class="link-button">
-                View
-              </button>
-            </div>
-            <div class="addresses-search__grid-column-7">
-              <button type="submit" class="link-button">
-                Select
-              </button>
-            </div>
-          </div>
-          <div class="addresses-search__grid-row">
-            <dl class="addresses-search__list">
-              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Name
-                </dt>
-                <dd class="addresses-search__content-value">
-                  Bovine Deliveries
-                </dd>
-              </div>
-              <div class="addresses-search__grid-column-40 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Address
-                </dt>
-                <dd class="addresses-search__content-value">
-                  Sheldon Drive, Perth, Western Australia, WA 6000
-                </dd>
-              </div>
-              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Country
-                </dt>
-                <dd class="addresses-search__content-value">
-                  Australia
-                </dd>
-              </div>
-            </dl>
-            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
-              <button type="submit" class="link-button">
-                View
-              </button>
-            </div>
-            <div class="addresses-search__grid-column-7">
-              <button type="submit" class="link-button">
-                Select
-              </button>
-            </div>
-          </div>
-          <div class="addresses-search__grid-row">
-            <dl class="addresses-search__list">
-              <div class="addresses-search__grid-column-30 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Name
-                </dt>
-                <dd class="addresses-search__content-value">
-                  Carne del Mundo
-                </dd>
-              </div>
-              <div class="addresses-search__grid-column-40 govuk-!-padding-right-2">
-                <dt class="addresses-search__content-heading">
-                  Address
-                </dt>
-                <dd class="addresses-search__content-value">
-                  Avenida del Alma, Buenos Aires, Z1700
-                </dd>
-              </div>
-              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+              <div class="addresses-search__grid-column-12 govuk-!-padding-right-2">
                 <dt class="addresses-search__content-heading">
                   Country
                 </dt>
@@ -520,24 +521,214 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </dd>
               </div>
             </dl>
-            <div class="addresses-search__grid-column-7 govuk-!-padding-right-2">
-              <button type="submit" class="link-button">
-                View
-              </button>
-            </div>
             <div class="addresses-search__grid-column-7">
               <button type="submit" class="link-button">
-                Select
+                Select <span class="govuk-visually-hidden">Agropur, inc.</span>
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Land O'Lakes, Inc
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Section
+                </dt>
+                <dd class="addresses-search__content-value">
+                  raw milk or dairy products or colostrum and colostrum-based products
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Processing Plant
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <span class="addresses-search__approval-number">3009986641</span>
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-12 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Argentina
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select <span class="govuk-visually-hidden">Land O'Lakes, Inc</span>
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  California Dairies, Inc.
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Section
+                </dt>
+                <dd class="addresses-search__content-value">
+                  raw milk or dairy products or colostrum and colostrum-based products
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Processing Plant
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <span class="addresses-search__approval-number">2910562</span>
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-12 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Argentina
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select <span class="govuk-visually-hidden">California Dairies, Inc.</span>
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Cloverleaf Cold Storage
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Section
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Meat of domestic ungulates
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Cold Stores
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <span class="addresses-search__approval-number">3136</span><br>
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-12 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Argentina
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select <span class="govuk-visually-hidden">Cloverleaf Cold Storage</span>
+              </button>
+            </div>
+          </div>
+          <div class="addresses-search__grid-row">
+            <dl class="addresses-search__list">
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Name
+                </dt>
+                <dd class="addresses-search__content-value">
+                  TYSON FRESH MEAT
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-25 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Section
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Other facility for the collection or handling of animal by-products(unprocessed or untreated materials)
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-15 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Type
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Category 3
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-20 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Approval number and status
+                </dt>
+                <dd class="addresses-search__content-value">
+                  <span class="addresses-search__approval-number">NE-RA0-0007</span>
+                  Approved
+                </dd>
+              </div>
+              <div class="addresses-search__grid-column-12 govuk-!-padding-right-2">
+                <dt class="addresses-search__content-heading">
+                  Country
+                </dt>
+                <dd class="addresses-search__content-value">
+                  Argentina
+                </dd>
+              </div>
+            </dl>
+            <div class="addresses-search__grid-column-7">
+              <button type="submit" class="link-button">
+                Select <span class="govuk-visually-hidden">TYSON FRESH MEAT</span>
               </button>
             </div>
           </div>
         </div>
       </form>
-
-      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1048636/traders/consignor/new"
-        class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
-        Create a new consignor or exporter
-      </a>
 
       <nav class="pagination" aria-label="Pagination">
         <ul class="pagination-list">
@@ -553,7 +744,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 </svg>
               </span>
               <span class="govuk-visually-hidden">:</span>
-              <span class="pagination-link-label">2 of 434</span>
+              <span class="pagination-link-label">2 of 2638</span>
             </a>
           </li>
         </ul>
