@@ -1,0 +1,99 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Review decision
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Mark Admin-Tester</span>
+      <span aria-hidden="true">|</span>
+        <a class="govuk-link govuk-!-display-inline-block" id="bcp-admin-link" href="/bcpadmin/vnet/protected/bcp-admin">
+          Admin area
+        </a>
+        <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/vnet/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  
+  </div>
+
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row" id="confirmation-page">
+      <div class="govuk-grid-column-two-thirds">
+          <!--  IPAFFS Messaging disabled | not high risk EU | has no risk assessment  -->
+          <!--  Standard green confirmation partials  -->
+            <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6" id="eu-cheda-chedp-confirmation-panel">
+              <h1 class="govuk-panel__title">Your checks have been submitted</h1>
+                <div class="govuk-panel__body">
+                  
+                  
+                  <strong class="bold">
+                    
+                    <span id="reference-number">CHEDD.GB.2024.1007226-V2</span> <br>
+                    
+                    <br>
+                    <span class="govuk-panel__body">Outcome:</span><br>
+                    <span class="govuk-panel_confirmation">Acceptable for Internal Market</span>
+                  </strong>
+                </div>
+            </div>
+            
+            
+            
+              <h2 class="govuk-heading-m">What happens next?</h2>
+              <p class="govuk-body">
+                The outcome of this check will be updated on the IPAFFS dashboard.
+              </p>
+           
+        <div class="govuk-button-group govuk-!-display-block">
+  
+          <button class="govuk-button govuk-button--primary" data-prevent-double-click="true" data-copy-value="CHEDA.GB.2024.5501422" type="button">View or print CHED</button>
+  
+        <div class="govuk-body" id="exit-links">
+          <div>
+            <a href="00-dashboard" class="link-button govuk-!-font-size-19" id="manage-notifications">
+              Return to your dashboard
+            </a>
+          </div>
+          
+        </div>
+        <div class="govuk-grid-row govuk-!-margin-top-9 govuk-!-margin-left-0">
+            <div class="footer_feedback" style="border-top: 2px solid; color: #1d70b8;">
+                <h2 class="govuk-heading-s govuk-!-margin-top-4">Tell us what we can improve</h2>
+                <p class="govuk-body">
+                    <a href="https://defragroup.eu.qualtrics.com/jfe/form/SV_3a7O8heitk4GtWS?link_location=notification&amp;ched=a" class="govuk-link" target="_blank" id="feedbackFooterLink" rel="noopener">What did you think of this service? (opens in new tab)</a>
+                </p>
+            </div>
+        </div>    </div>
+      </div>
+    </div>
+  </main>
+  
+
+  
+
+ 
+
+{% endblock %}
