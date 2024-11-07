@@ -1,0 +1,218 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Decision hub
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link govuk" href="dashboard" id="navigation-dashboard-link">Dashboard</a>
+      </li>
+    </ol>
+  </div></div>
+
+  <form action="hub" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  </form>
+
+  <div class="action-button-container">
+    <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5942705/override" class="govuk-button govuk-button--secondary action-button" id="override-person-responsible">
+      Override Responsible Person
+    </a>
+  <a href="11-documents-spain" class="govuk-button govuk-button--secondary action-button" id="attachments-link">
+    Attachments
+  </a>
+</div>
+
+<div class="govuk-width-container app-width-container--wide">
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="hub-page">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="heading-tertiary">
+          <span id="reference-number">CHEDD.GB.2022.3604776</span>
+            <span id="cved-version-number"> - V1</span>
+        </span>
+        <span id="page-primary-title">Decision Hub</span>
+      </h1>
+
+
+      <div class="govuk-notification-banner notification-banner--warning" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+              <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title">
+                  No inspection required
+              </h2>
+          </div>
+          <div class="govuk-notification-banner__content notification-banner__content--full-width">
+                        <p class="govuk-body" id="cannot-override-message">
+                          You can no longer override this risk decision as the importer has been notified of the risk outcome.
+                        </p>
+          </div>
+      </div>
+        
+
+        <div class="govuk-body govuk-!-margin-bottom-6">
+          These sections can be completed in any order. You can save your progress and return at any
+          time.
+        </div>
+
+        <div class="govuk-body govuk-!-margin-bottom-8">
+          <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3604776/overview" class="govuk-button govuk-!-margin-bottom-0" id="view-notification">
+            View notification of consignment
+          </a>
+        </div>
+
+      <table id="validate-import-notification-table" role="presentation" class="govuk-table">
+        <thead>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__header">
+            <h2 class="govuk-heading-m">Record checks</h2>
+          </td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3604776/local-reference-number" class="govuk-link">
+                Local reference number
+              </a>
+            </td>
+            <td class="govuk-table__header badge-right">
+              <strong id="reference-number-status" class="govuk-tag tag tag--to-do">
+                TO DO
+              </strong>
+            </td>
+          </tr>
+          
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3604776/documentary-check?source=hub" class="govuk-link">
+                  Documentary check
+                </a>
+              </td>
+              <td class="govuk-table__header badge-right">
+                <strong id="doc-check-status" class="govuk-tag tag tag--submitted">
+                  STARTED
+                </strong>
+              </td>
+            </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3604776/identity-physical-checks?source=hub" class="govuk-link">
+                    Identity and physical checks
+                  </a>
+                </td>
+                <td class="govuk-table__header badge-right">
+                  <strong id="id-physical-checks-status" class="govuk-tag tag tag--submitted">
+                    STARTED
+                  </strong>
+                </td>
+              </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3604776/seals" class="govuk-link">
+                Seal numbers
+              </a>
+            </td>
+            <td class="govuk-table__header badge-right">
+              <strong id="seal-numbers" class="govuk-tag tag tag--submitted">
+                STARTED
+              </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a href="/decision/tst/protected/bip-notifications/CHEDP.GB.2022.3604776/lab-tests-required" class="govuk-link">
+                Laboratory tests
+              </a>
+            </td>
+            <td class="govuk-table__header badge-right">
+              <strong id="lab-tests" class="govuk-tag tag tag--submitted">
+                STARTED
+              </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <form action="hub" method="POST">
+                <input name="crumb" type="hidden" value="CyPHD8IrsTuL0qSmbPUXrxELZ9XJpxD3T5wfxBJl-EQ">
+                <input name="etag" type="hidden" value="&quot;0000000003F7B1FC&quot;">
+                <button type="submit" class="govuk-link link-button" name="decisionNotification" value="decision-notification" id="button-decision-notification">
+                  Decision
+                </button>
+              </form>
+            </td>
+            <td class="govuk-table__header badge-right">
+              <strong id="decision-status" class="govuk-tag tag tag--to-do">
+                TO DO
+              </strong>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <form action="hub" method="POST">
+                <input name="crumb" type="hidden" value="CyPHD8IrsTuL0qSmbPUXrxELZ9XJpxD3T5wfxBJl-EQ">
+                <input name="etag" type="hidden" value="&quot;0000000003F7B1FC&quot;">
+                <button type="submit" class="govuk-link link-button" name="reviewNotification" value="review-notification" id="button-review-notification">
+                  Review and submit
+                </button>
+              </form>
+            </td>
+            <td class="govuk-table__header badge-right">
+              <strong id="review-status" class="govuk-tag tag tag--to-do">
+                To do
+              </strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+</div>
+
+{% endblock %}

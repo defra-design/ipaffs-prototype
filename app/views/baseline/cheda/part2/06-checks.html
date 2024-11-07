@@ -1,0 +1,239 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Record
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  </div>
+
+  <form action="07-seals" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+
+
+
+
+    <main id="main-content" class="govuk-main-wrapper">
+      <div class="govuk-grid-row" id="checks-page">
+        <div class="govuk-grid-column-full">
+  
+          <h1 class="govuk-heading-xl">
+            <span class="heading-tertiary">
+              <span id="reference-number">CHEDA.GB.2024.1021267</span>
+                <span id="cved-version-number"> - V1</span>
+            </span>
+            Checks
+          </h1>
+          <div>
+            <h2 class="govuk-heading-l">Documentary check</h2>
+                <div class="govuk-form-group document-check-result  ">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend ">
+                        <span class="govuk-visually-hidden">Choose from:</span>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item document-check-result">
+                              <input id="a_dcst1" class="govuk-radios__input" type="radio" name="document-check-result" value="1">
+                              <label class="govuk-label govuk-radios__label" for="a_dcst1">Satisfactory</label>
+                            </div>
+                            <div class="govuk-radios__item document-check-result">
+                              <input id="a_dcst2" class="govuk-radios__input" type="radio" name="document-check-result" value="2">
+                              <label class="govuk-label govuk-radios__label" for="a_dcst2">Not satisfactory</label>
+                            </div>
+                    </div>
+                  </fieldset>
+                </div>
+          </div>
+          <div>
+            <h2 class="govuk-heading-l">Identity check</h2>
+                <div class="govuk-form-group identity-check-result  ">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend ">
+                        <span class="govuk-visually-hidden">Choose from:</span>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item identity-check-result">
+                              <input id="a_ic1" class="govuk-radios__input" type="radio" name="identity-check-result" value="3">
+                              <label class="govuk-label govuk-radios__label" for="a_ic1">Derogation</label>
+                            </div>
+                            <div class="govuk-radios__item identity-check-result">
+                              <input id="a_ic2" class="govuk-radios__input" type="radio" name="identity-check-result" value="1">
+                              <label class="govuk-label govuk-radios__label" for="a_ic2">Satisfactory</label>
+                            </div>
+                            <div class="govuk-radios__item identity-check-result">
+                              <input id="a_ic3" class="govuk-radios__input" type="radio" name="identity-check-result" value="2">
+                              <label class="govuk-label govuk-radios__label" for="a_ic3">Not satisfactory</label>
+                            </div>
+                    </div>
+                  </fieldset>
+                </div>
+          </div>
+          <h2 class="govuk-heading-l">Physical check</h2>
+  
+    <div class="govuk-form-group physical-check-result  ">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend ">
+            <span class="govuk-visually-hidden">Choose from:</span>
+        </legend>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item physical-check-result">
+                  <input id="a_pc1" class="govuk-radios__input" type="radio" name="physical-check-result" value="3">
+                  <label class="govuk-label govuk-radios__label" for="a_pc1">Derogation</label>
+                </div>
+                <div class="govuk-radios__item physical-check-result">
+                  <input id="a_pc2" class="govuk-radios__input" type="radio" name="physical-check-result" value="1">
+                  <label class="govuk-label govuk-radios__label" for="a_pc2">Satisfactory</label>
+                </div>
+                <div class="govuk-radios__item physical-check-result">
+                  <input id="a_pc3" class="govuk-radios__input" type="radio" name="physical-check-result" value="2">
+                  <label class="govuk-label govuk-radios__label" for="a_pc3">Not satisfactory</label>
+                </div>
+        </div>
+      </fieldset>
+    </div>
+            <div class="govuk-form-group ">
+                  <label class="govuk-label" for="number-of-animals-checked">
+                    Number of animals checked
+                  </label>
+                <input class="govuk-input govuk-!-width-one-half" aria-label=" input" id="number-of-animals-checked" name="number-of-animals-checked" type="text" "="">
+            </div>
+  
+            <div>
+              <h2 class="govuk-heading-l">Welfare check</h2>
+                <div class="govuk-form-group welfare-check-result  ">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend ">
+                        <span class="govuk-visually-hidden">Choose from:</span>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item welfare-check-result">
+                              <input id="a_wca1" class="govuk-radios__input" type="radio" name="welfare-check-result" value="3">
+                              <label class="govuk-label govuk-radios__label" for="a_wca1">Derogation</label>
+                            </div>
+                            <div class="govuk-radios__item welfare-check-result">
+                              <input id="a_wca2" class="govuk-radios__input" type="radio" name="welfare-check-result" value="1">
+                              <label class="govuk-label govuk-radios__label" for="a_wca2">Satisfactory</label>
+                            </div>
+                            <div class="govuk-radios__item welfare-check-result">
+                              <input id="a_wca3" class="govuk-radios__input" type="radio" name="welfare-check-result" value="2">
+                              <label class="govuk-label govuk-radios__label" for="a_wca3">Not satisfactory</label>
+                            </div>
+                    </div>
+                  </fieldset>
+                </div>
+            </div>
+  
+            <div>
+              <h2 class="govuk-heading-l">Impact of the transport on animals</h2>
+              <table class="govuk-table">
+                <tbody><tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-form-group ">
+                          <label class="govuk-label" for="number-of-dead-animals">
+                            Number of dead animals
+                          </label>
+                        <input class="govuk-input govuk-!-width-one-half" aria-label=" input" id="number-of-dead-animals" name="number-of-dead-animals" type="text" "="">
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                        <div class="govuk-form-group ">
+                            <label class="govuk-label govuk-label--s govuk-!-margin-bottom-6" for="number-of-dead-animals-unit">
+                                    <span class="govuk-visually-hidden">Choose from:</span>
+                                
+                            </label>
+                            <select class="govuk-select" id="number-of-dead-animals-unit" title="Select option from" name="number-of-dead-animals-unit">
+                                        <option value="percent">% (Estimate)</option>
+                                        <option value="number" selected="">Units (Accurate)</option>
+                            </select>
+                        </div>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-form-group ">
+                          <label class="govuk-label" for="number-of-unfit-animals">
+                            Number of unfit animals
+                          </label>
+                        <input class="govuk-input govuk-!-width-one-half" aria-label=" input" id="number-of-unfit-animals" name="number-of-unfit-animals" type="text" "="">
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">
+                        <div class="govuk-form-group ">
+                            <label class="govuk-label govuk-label--s govuk-!-margin-bottom-6" for="number-of-unfit-animals-unit">
+                                    <span class="govuk-visually-hidden">Choose from:</span>
+                                
+                            </label>
+                            <select class="govuk-select" id="number-of-unfit-animals-unit" title="Select option from" name="number-of-unfit-animals-unit">
+                                        <option value="percent">% (Estimate)</option>
+                                        <option value="number" selected="">Units (Accurate)</option>
+                            </select>
+                        </div>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td colspan="2" class="govuk-table__cell">
+                    <div class="govuk-form-group ">
+                          <label class="govuk-label" for="number-of-birth-or-abortion">
+                            Number of births or abortions
+                          </label>
+                        <input class="govuk-input govuk-!-width-one-half" aria-label=" input" id="number-of-birth-or-abortion" name="number-of-birth-or-abortion" type="text" "="">
+                    </div>
+                  </td>
+                </tr>
+              </tbody></table>
+  
+            </div>
+          <button class="govuk-button govuk-!-margin-top-6 govuk-!-margin-bottom-0 govuk-!-margin-right-1" name="save-button" type="submit" value="Save and return" id="button-save-and-return" data-prevent-double-click="true">
+            Save and return
+          </button>
+          <button class="govuk-button govuk-!-margin-top-6 govuk-!-margin-bottom-0 govuk-!-margin-right-1" type="submit" name="save-button" value="Save and continue" id="button-save-and-continue" data-prevent-double-click="true">
+            Save and continue
+          </button>
+          <div>
+            <p class="govuk-!-margin-top-4 govuk-body"><a class="govuk-link" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1021267/hub">Cancel</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+</form>
+{% endblock %}

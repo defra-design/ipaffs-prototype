@@ -1,0 +1,97 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Record
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+</div>
+
+  <form action="08-06-laboratory" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  
+
+
+
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row" id="seals-page">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+          <span class="heading-tertiary">
+            <span id="reference-number">CHEDD.GB.2023.5942705</span>
+              <span id="cved-version-number"> - V1</span>
+          </span>
+          <span id="page-primary-title">Seal numbers</span>
+        </h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Are new seal numbers required?</legend>
+            <span id="container-seals-hint" class="govuk-hint govuk-visually-hidden">Choose from:</span>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio-container-seals-yes" type="radio" name="sealsEntered" value="true" aria-controls="container-seals-conditional" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="radio-container-seals-yes">Yes</label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="container-seals-conditional">
+                <p class="govuk-body">There are no seal numbers as part of the original consignment.</p>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio-container-seals-no" type="radio" name="sealsEntered" value="false" checked="">
+                <label class="govuk-label govuk-radios__label" for="radio-container-seals-no">No</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+          <input class="govuk-button govuk-!-margin-bottom-4 govuk-!-margin-right-1" id="button-save-and-return" name="save-button" type="submit" value="Save and return">
+          <input class="govuk-button govuk-!-margin-bottom-4 govuk-!-margin-right-1" id="button-save-and-continue" name="save-button" type="submit" value="Save and continue">
+          <p class="govuk-body">
+            <a class="govuk-link" href="02a-decision-hub-inspection-required">
+              Cancel
+            </a>
+          </p>
+      </div>
+    </div>
+  </main>
+</form>
+{% endblock %}

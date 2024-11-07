@@ -1,0 +1,323 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Record
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  </div>
+
+  <form action="06e-laboratory" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+  
+
+    <main class="govuk-main-wrapper" id="main-content">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h1 class="govuk-heading-xl">
+                  <span class="heading-tertiary">
+                    <span id="reference-number">CHEDA.GB.2023.5948132</span>
+                      <span id="cved-version-number"> - V1</span>
+                  </span>
+                  <span id="page-primary-title">Laboratory tests</span>
+                </h1>
+
+                <div class="govuk-form-group">
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-1  ">Commodity sampled</h2>
+                    <p class="govuk-body">
+                        03021120
+                          - Of the species Oncorhynchus mykiss, with heads and gills on, gutted, weighing more than 1,2kg each, or with heads off, gilled and gutted, weighing more than 1kg each
+                          (Oncorhynchus mykiss)
+                    </p>
+                </div>
+                    <div class="govuk-form-group ">
+                        <label class="govuk-label " for="analysisType">
+                                Analysis type
+                            
+                        </label>
+                        <select class="govuk-select" id="analysisType" title="Select option from" name="analysisType">
+                                    <option value="Initial analysis" selected="">Initial analysis</option>
+                                    <option value="Counter analysis">Counter analysis</option>
+                                    <option value="Second expert analysis">Second expert analysis</option>
+                        </select>
+                    </div>
+                <div class="govuk-form-group  ">
+                    
+                    <label class="govuk-label " for="laboratory">
+                      Laboratory
+                    </label>
+                    
+                
+                
+                  
+                
+                  <select class="govuk-select govuk-!-width-one-half" id="laboratory" name="laboratory">
+                      <option value="">Select laboratory</option>
+                      <option value="1">Aberdeen Scientific Services Laboratory (AA PA FE)</option>
+                      <option value="20">Agri-Food and Bioscience Institute (AFBI)</option>
+                      <option value="22">Agri-Food and Bioscience Institute (AFBI)</option>
+                      <option value="25">Agri-Food and Bioscience Institute (AFBI)</option>
+                      <option value="30">APHA Weybridge, Sample Reception</option>
+                      <option value="26">Campden BRI</option>
+                      <option value="27">Concept Life Sciences</option>
+                      <option value="2">Edinburgh Scientific Services (AA PA FE)</option>
+                      <option value="24">Food and Environment Research Agency (FERA)</option>
+                      <option value="13">Food Water and Environmental Laboratories (FWE)PA)</option>
+                      <option value="14">FWEM Laboratory, Porton (FE)</option>
+                      <option value="15">FWEM Laboratory, York (FE)</option>
+                      <option value="3">Glasgow Scientific Services (AA PA FE)</option>
+                      <option value="4">H J Evans Division - Minton, Treharne &amp; Davies Ltd (AA PA)</option>
+                      <option value="5">Hampshire Scientific Service (AA PA FE)</option>
+                      <option value="6">Kent Scientific Services (AA PA)</option>
+                      <option value="7">Lancashire County Scientific Services (AA PA FE)</option>
+                      <option value="16">Microbiology Bangor (FE)</option>
+                      <option value="17">Microbiology Cardiff (FE)</option>
+                      <option value="18">Microbiology Carmarthenshire (FE)</option>
+                      <option value="8">Minton, Treharne &amp; Davies Ltd (see also H J Evans Division) (AA PA)</option>
+                      <option value="9">Northern Ireland Public Health Laboratory (FE)</option>
+                      <option value="10">Public Analyst Scientific Services Ltd (PASS) (AA PA FE)</option>
+                      <option value="23">SAMS (The Scottish Association of Marine Science)</option>
+                      <option value="29">Science &amp; Technology Division LGC Limited</option>
+                      <option value="11">Tayside Scientific Services&nbsp;(AA PA FE)</option>
+                      <option value="21">The Centre for Environment, Fisheries and Aquaculture Science (CEFAS)</option>
+                      <option value="19">The Centre for Environment, Fisheries and Aquaculture Science (CEFAS)</option>
+                      <option value="28">Veterinary Investigation Centre</option>
+                      <option value="12">Worcestershire County Council Scientific Services (AA PA)</option>
+                      <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="container-laboratory-other">
+                    <div class="govuk-form-group ">
+                        <label class="govuk-label" for="laboratoryName" id="label-laboratoryName">
+                            Laboratory name
+                            
+                        </label>
+                        <input class="govuk-input govuk-!-width-one-half" id="laboratoryName" name="laboratoryName" type="text" value="">
+                    </div>
+                    <div class="govuk-form-group ">
+                        <label class="govuk-label" for="laboratoryAddress" id="label-laboratoryAddress">
+                            Laboratory address
+                            
+                        </label>
+                        <input class="govuk-input  govuk-!-width-one-half" id="laboratoryAddress" name="laboratoryAddress" type="text" value="">
+                    </div>
+                </div>
+                <div class="govuk-form-group ">
+                    <label class="govuk-label" for="sampleReferenceNumber" id="label-sampleReferenceNumber">
+                        Sample reference number
+                        
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-half" id="sampleReferenceNumber" name="sampleReferenceNumber" type="text" value="">
+                </div>
+                <div class="govuk-form-group ">
+                    <label class="govuk-label" for="numberOfSamples" id="label-numberOfSamples">
+                        Number of samples
+                        
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-half" id="numberOfSamples" name="numberOfSamples" type="text" value="">
+                </div>
+                    <div class="govuk-form-group ">
+                        <label class="govuk-label " for="sampleType">
+                                Sample type
+                            
+                        </label>
+                        <select class="govuk-select" id="sampleType" title="Select option from" name="sampleType">
+                                <option value="">Select sample type</option>
+                                    <option value="Aborted matter">Aborted matter</option>
+                                    <option value="Adult">Adult</option>
+                                    <option value="Barks">Barks</option>
+                                    <option value="Beekeeping products">Beekeeping products</option>
+                                    <option value="Blood">Blood</option>
+                                    <option value="Blood sampling">Blood sampling</option>
+                                    <option value="Bones/feathers">Bones/feathers</option>
+                                    <option value="Branches, stems with leaves">Branches, stems with leaves</option>
+                                    <option value="Bud">Bud</option>
+                                    <option value="Bulbs">Bulbs</option>
+                                    <option value="Casing">Casing</option>
+                                    <option value="Cereals">Cereals</option>
+                                    <option value="Corpse">Corpse</option>
+                                    <option value="Crustacean">Crustacean</option>
+                                    <option value="Cuttings">Cuttings</option>
+                                    <option value="Different liquids">Different liquids</option>
+                                    <option value="Eggs">Eggs</option>
+                                    <option value="Embryo">Embryo</option>
+                                    <option value="Feed">Feed</option>
+                                    <option value="Fish">Fish</option>
+                                    <option value="Fish meat">Fish meat</option>
+                                    <option value="Flowers">Flowers</option>
+                                    <option value="Food contact material">Food contact material</option>
+                                    <option value="Food other">Food other</option>
+                                    <option value="Fresh herbs">Fresh herbs</option>
+                                    <option value="Fruit">Fruit</option>
+                                    <option value="Genital sampling">Genital sampling</option>
+                                    <option value="Grafts">Grafts</option>
+                                    <option value="Ground">Ground</option>
+                                    <option value="Hair">Hair</option>
+                                    <option value="Hide/skin/wool">Hide/skin/wool</option>
+                                    <option value="Larva">Larva</option>
+                                    <option value="Leaves">Leaves</option>
+                                    <option value="Live pollen">Live pollen</option>
+                                    <option value="Milk/Milk product">Milk/Milk product</option>
+                                    <option value="Molluscs">Molluscs</option>
+                                    <option value="Muscle">Muscle</option>
+                                    <option value="Needles">Needles</option>
+                                    <option value="Ocular sampling">Ocular sampling</option>
+                                    <option value="Offal">Offal</option>
+                                    <option value="Oil/fat">Oil/fat</option>
+                                    <option value="Oilseeds">Oilseeds</option>
+                                    <option value="Pharmaceutical products">Pharmaceutical products</option>
+                                    <option value="Plants">Plants</option>
+                                    <option value="Rhizomes">Rhizomes</option>
+                                    <option value="Roots">Roots</option>
+                                    <option value="Rootstock">Rootstock</option>
+                                    <option value="Seeds">Seeds</option>
+                                    <option value="Sperme">Sperme</option>
+                                    <option value="Spices">Spices</option>
+                                    <option value="Stolons">Stolons</option>
+                                    <option value="Stools">Stools</option>
+                                    <option value="Suckers">Suckers</option>
+                                    <option value="Tea">Tea</option>
+                                    <option value="Tissue culture">Tissue culture</option>
+                                    <option value="Tissue sampling">Tissue sampling</option>
+                                    <option value="Tubers">Tubers</option>
+                                    <option value="Urine">Urine</option>
+                                    <option value="Vegetable oils">Vegetable oils</option>
+                                    <option value="Vegetables">Vegetables</option>
+                                    <option value="Wood">Wood</option>
+                                    <option value="Wood packaging material">Wood packaging material</option>
+                                    <option value="Wood transport material">Wood transport material</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group ">
+                        <label class="govuk-label " for="conservationOfSample">
+                                Storage temperature
+                            
+                        </label>
+                        <select class="govuk-select" id="conservationOfSample" title="Select option from" name="conservationOfSample">
+                                <option value="">Select storage temperature</option>
+                                    <option value="Ambient">Ambient</option>
+                                    <option value="Frozen">Frozen</option>
+                                    <option value="Chilled">Chilled</option>
+                        </select>
+                    </div>
+
+              <div class="" id="sample-date-and-time">
+                <div class="govuk-form-group  ">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="sample-date-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        
+                        Sample date and time
+                        
+                      </legend>
+                
+                      <span id="sample-date-hint" class="govuk-hint">
+                        For example, DD MM YYYY
+                      </span>
+                
+                      <div class="govuk-date-input date-input--picker " id="sample-date" data-module="accessible-datepicker">
+                      <div class="govuk-date-input__item date-input-day">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="sample-date-day">
+                              Day
+                            </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-day" id="sample-date-day" name="sample-date-day" type="text" value="23" inputmode="numeric" maxlength="2">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item date-input-month">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="sample-date-month">
+                              Month
+                            </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 date-picker-month" id="sample-date-month" name="sample-date-month" type="text" value="08" inputmode="numeric" maxlength="2">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item date-input-year">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="sample-date-year">
+                              Year
+                            </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4 date-picker-year" id="sample-date-year" name="sample-date-year" type="text" value="2023" inputmode="numeric" maxlength="4">
+                        </div>
+                      </div>
+                    <div class="date-picker__container date-picker__container--icon defra-datepicker">
+                      <!-- <button class="date-picker__reveal__icon" type="button"><span class="sr-only">Choose date</span>
+            <svg aria-hidden="true" role="img"><use href="#calendar"></use></svg></button> -->
+            <div class="date-picker__dialog date-picker__dialog--hidden" role="dialog" aria-modal="true" tabindex="-1"><div class="date-picker__header govuk-clearfix"><button type="button" class="date-picker__button__previous-month">Previous month</button><h2 id="date-picker-label-14" class="date-picker__heading" aria-live="assertive" aria-atomic="true">August 2023</h2><button type="button" class="date-picker__button__next-month">Next month</button></div><table class="date-picker__date-table" role="presentation" aria-labelledby="date-picker-label-14"><thead><tr><th scope="col" abbr="Sunday" aria-label="Sunday">Su</th><th scope="col" abbr="Monday" aria-label="Monday">Mo</th><th scope="col" abbr="Tuesday" aria-label="Tuesday">Tu</th><th scope="col" abbr="Wednesday" aria-label="Wednesday">We</th><th scope="col" abbr="Thursday" aria-label="Thursday">Th</th><th scope="col" abbr="Friday" aria-label="Friday">Fr</th><th scope="col" abbr="Saturday" aria-label="Saturday">Sa</th></tr></thead><tbody></tbody></table><button class="date-picker__button__close" type="button" value="close">Cancel</button><p class="aria-live-message sr-only" aria-live="assertive"></p></div></div></div>
+                  </fieldset>
+                </div>
+
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="hidden govuk-visually-hidden">Time entry:</legend>
+                    <span class="govuk-hint">24 hour format</span>
+                
+                    <div class="govuk-date-input" id="sample-time">
+                      <div class="govuk-date-input__item date-input-hour">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="sample-time-hour">
+                            Hour
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sample-time-hour" name="sample-time-hour" type="text" maxlength="2" inputmode="numeric" value="07">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item date-input-minute">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="sample-time-minutes">
+                            Minutes
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sample-time-minutes" name="sample-time-minutes" type="text" maxlength="2" inputmode="numeric" value="30">
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>              </div>
+                <button class="govuk-button govuk-!-margin-bottom-4" id="button-save-and-continue" type="submit" data-module="govuk-button" value="Save and continue">Save and continue</button>
+                  <p class="govuk-body"><a class="govuk-link" href="/decision/tst/protected/bip-notifications/CHEDP.GB.2023.5948132/hub">Cancel</a></p>
+            </div>
+        </div>
+    </main>
+
+
+</form>
+ 
+
+{% endblock %}
