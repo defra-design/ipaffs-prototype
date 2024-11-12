@@ -1,0 +1,157 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Consignment documentary check - Import and export applications - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="01-decision-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  </div>
+
+  <form action="02-review-decision" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--fixed-width tag--in-progress govuk-!-margin-right-2" id="Status-Label">In progress</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+
+
+
+
+  <main id="main-content" class="govuk-main-wrapper">
+    <div class="govuk-grid-row" id="checks-page">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">
+          <span class="heading-tertiary">
+            <span id="reference-number">CHEDA.GB.2023.5942705</span>
+              <span id="cved-version-number"> - V1</span>
+          </span>
+          Documentary check
+        </h1>
+        <div>
+          <div class="govuk-notification-banner notification-banner--inspection-required" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title">
+                    Inspection required
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content notification-banner__content--full-width">
+                          <p class="govuk-body">
+                            This risk decision was overridden from inconclusive to inspection required.
+                            The consignment will
+                            be brought to the BCP for inspection.
+                          </p>
+            </div>
+        </div>
+          <h2 class="govuk-heading-m">Documentary check</h2>
+     
+
+  <div class="govuk-form-group physical-check-result  ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend ">
+          <span class="govuk-visually-hidden">Choose from:</span>
+      </legend>
+      <div class="govuk-radios__item physical-check-result">
+        <input id="physicalCheck1" class="govuk-radios__input" type="radio" name="physical-check-result" value="1">
+        <label class="govuk-label govuk-radios__label" for="physicalCheck1">Satisfactory</label>
+      </div>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item physical-check-result" data-target="physical-check">
+                <input id="physicalCheck7" class="govuk-radios__input" type="radio" name="physical-check-result" value="7" aria-controls="physical-check" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label" for="physicalCheck7">Satisfactory following official intervention
+                </label>
+              </div>
+              
+                          <div class="govuk-radios__conditional
+                                        govuk-radios__conditional--hidden
+                                        govuk-!-margin-left-0
+                                        govuk-!-padding-left-3" id="physical-check">
+                <div class="govuk-form-group physical-check-not-done-reason  ">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend ">
+                        <span class="govuk-visually-hidden">Choose from:</span>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-form-group">
+                        {{ govukCharacterCount({
+                          name: "withHint",
+                          id: "with-hint",
+                          maxlength: 150,
+                          label: {
+                            text: "Additional details (optional)",
+                            classes: "govuk-label--s",
+                            isPageHeading: true
+                          }
+                        }) }}                      
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                          </div>
+              <div class="govuk-radios__item physical-check-result">
+                <input id="physicalCheck1" class="govuk-radios__input" type="radio" name="physical-check-result" value="1">
+                <label class="govuk-label govuk-radios__label" for="physicalCheck1">Not satisfactory</label>
+              </div>
+              <div class="govuk-radios__item physical-check-result">
+                <input id="physicalCheck2" class="govuk-radios__input" type="radio" name="physical-check-result" value="2">
+                <label class="govuk-label govuk-radios__label" for="physicalCheck2">Not done</label>
+              </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+        <input class="govuk-button govuk-!-margin-top-6 govuk-!-margin-bottom-0 govuk-!-margin-right-1" name="save-button" type="submit" value="Save and return" id="button-save-and-return">
+        <input class="govuk-button govuk-!-margin-top-6 govuk-!-margin-bottom-0 govuk-!-margin-right-1" type="submit" name="save-button" value="Save and continue" id="button-save-and-continue">
+        <div>
+          <p class="govuk-!-margin-top-4 govuk-body"><a class="govuk-link" href="02-review-decision">Cancel</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</form>
+<style>
+  .notification-banner--inspection-required {
+    border-color: #d53880;
+}
+.notification-banner--inspection-required .govuk-notification-banner__header {
+    background-color: #d53880;
+}
+</style>
+{% endblock %}

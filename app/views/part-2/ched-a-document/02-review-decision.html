@@ -1,0 +1,366 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Consignment documentary check - Import and export applications - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Andrew Inspector-Tester</span>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/tst/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/tst/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <a href="01-decision-hub" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  </div>
+
+  <form action="05-seals" method="POST">
+    <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
+    <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
+    <table id="status-component" role="presentation" class="govuk-table govuk-!-margin-bottom-0">
+      <tbody><tr class="divider-top divider-bottom govuk-table__row">
+        <td class="govuk-table__cell">
+            <strong class="govuk-tag tag tag--fixed-width tag--in-progress govuk-!-margin-right-2" id="Status-Label">In progress</strong>
+              <button type="submit" class="link-button" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+                Save and set as in progress
+              </button>
+        </td>
+      </tr>
+    </tbody></table>
+
+
+
+
+  <main id="main-content" class="govuk-main-wrapper">
+    <div class="govuk-grid-row" id="bip-review-checks-page">
+      <form action="review" method="POST">
+    <div class="govuk-grid-column-full">
+        <input name="crumb" type="hidden" value="m0KufzPdgV0i3Q3m2X4HVoT6wFzjh_HygGKwpZNa9O8">
+        <input name="etag" type="hidden" value="&quot;00000000000CE259&quot;">
+        <div class="govuk-error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1">
+        
+          <h2 class="govuk-error-summary__title heading-medium" id="error-summary-title">
+              The following mandatory fields have not been completed
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+                  <li><a id="error-description-0" href="#identity-physical-checks-table">Animal number checked</a></li>
+            </ul>
+          </div>
+        </div>
+        <h1 class=" govuk-heading-xl heading-with-help">
+            <span class="heading-tertiary">
+              <span id="reference-number">CHEDA.GB.2024.1049654</span>
+                <span id="cved-version-number"> - V1</span>
+            </span>
+            <span class="govuk-caption-xl"></span>
+            Review outcome decision
+        </h1>      <div class="govuk-!-margin-top-6">
+          <div class="audit-flag govuk-body">
+            <div id="last-submission-date">Submitted on: 7 November 2024, 12:27</div>
+            <div id="submitted-by">Submitted by: Mark Admin-Tester</div>
+            <div id="last-updated-date">Last updated: 12 November 2024, 13:40</div>
+            <div id="last-updated-by">Last updated by: Mark Admin-Tester</div>
+          </div>
+        </div>
+  
+        <table class="govuk-table review-table " id="reference-table">
+          <caption class="govuk-visually-hidden">
+            Border Control Post reference number table
+          </caption>
+          <tbody>
+          <tr class="divider-bottom govuk-table__row" id="reference-row-1">
+            <th scope="row" class="check-type govuk-table__header">Border Control Post reference number</th>
+            <td class="check-status govuk-table__cell"></td>
+            <td class="change govuk-table__cell">
+                <a class="govuk-link" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1049654/local-reference-number" id="change-reference">Change</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+  
+  
+  
+          <h2 class="govuk-heading-m">Documentary check</h2>
+          <table class="review-table govuk-table govuk-!-margin-top-4" id="documentary-check-table">
+            <caption class="govuk-visually-hidden">
+              Documentary check table
+            </caption>
+            <tbody>
+                  <tr class="govuk-table__row documentary-check-row-0
+                   no-border divider-top" id="parttwo/consignmentcheck">
+                    <th scope="col" class="check-type govuk-table__header">Documentary check</th>
+                    <td class="check-status govuk-table__cell">Satisfactory following official intervention	</td>
+                    <td class="govuk-table__cell"></td>
+                      <td class="change govuk-table__cell">
+                          <a class="govuk-link" href="01-documents" id="change-documentary-check">Change</a>
+                      </td>
+                  </tr>
+                  <tr class="govuk-table__row documentary-check-row-0
+                    divider-bottom divider-bottom " id="parttwo/consignmentcheck">
+                    <th scope="col" class="check-type govuk-table__header">Additional details</th>
+                    <td class="check-status govuk-table__cell">Reason goes in here only if copy has been entered and "Satisfactory following official intervention" was chosen</td>
+                    <td class="govuk-table__cell"></td>
+                      
+                  </tr>
+            </tbody>
+          </table>
+  
+          <h2 class="govuk-heading-m">Identity and physical checks</h2>
+          <table class="review-table govuk-table govuk-!-margin-top-4" id="identity-physical-checks-table">
+            <caption class="govuk-visually-hidden">
+              Identity and physical checks table
+            </caption>
+            <tbody>
+                  <tr class="govuk-table__row identity-physical-checks-row-0
+                    divider-top 
+                    " id="consignmentcheck/identitycheckresult">
+                  <th scope="col" class="check-type govuk-table__header">Identity check</th>
+                  <td class="check-status govuk-table__cell">Not Done</td>
+                  <td class="govuk-table__cell"></td>
+                    <td class="change govuk-table__cell">
+                        <a class="govuk-link" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1049654/identity-physical-checks" id="change-identity-physical-checks">Change</a>
+                  </td>
+                </tr>
+                  <tr class="govuk-table__row identity-physical-checks-row-1
+                     
+                    " id="consignmentcheck/physicalcheckresult">
+                  <th scope="col" class="check-type govuk-table__header">Physical check</th>
+                  <td class="check-status govuk-table__cell">Not Done</td>
+                  <td class="govuk-table__cell"></td>
+                    <td></td>
+                </tr>
+                  <tr class="govuk-table__row identity-physical-checks-row-3
+                     
+                    " id="consignmentcheck/welfarecheck">
+                  <th scope="col" class="check-type govuk-table__header">Welfare</th>
+                  <td class="check-status govuk-table__cell">Not Done</td>
+                  <td class="govuk-table__cell"></td>
+                    <td></td>
+                </tr>
+                  <tr class="govuk-table__row identity-physical-checks-row-4
+                     
+                    " id="impactoftransportonanimals/numberofdeadanimals">
+                  <th scope="col" class="check-type govuk-table__header">Dead animals</th>
+                  <td class="check-status govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">Units</td>
+                    <td></td>
+                </tr>
+                  <tr class="govuk-table__row identity-physical-checks-row-5
+                     
+                    " id="impactoftransportonanimals/numberofunfitanimals">
+                  <th scope="col" class="check-type govuk-table__header">Unfit animals</th>
+                  <td class="check-status govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">Units</td>
+                    <td></td>
+                </tr>
+                  <tr class="govuk-table__row identity-physical-checks-row-6
+                     divider-bottom
+                    " id="impactoftransportonanimals/numberofbirthsorabortions">
+                  <th scope="col" class="check-type govuk-table__header">Births or abortions</th>
+                  <td class="check-status govuk-table__cell">2</td>
+                  <td class="govuk-table__cell">Units</td>
+                    <td></td>
+                </tr>
+            </tbody>
+          </table>
+  
+        <table class="review-table govuk-table govuk-!-margin-top-4" id="seal-numbers-table">
+          <caption class="govuk-visually-hidden">seal numbers table</caption>
+          <tbody><tr class="govuk-table__row">
+            <th scope="row"><p class="govuk-heading-m text-align-left">Seal numbers</p></th>
+            <td class="change govuk-table__cell">
+                <a class="govuk-link" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1049654/seals" id="change-seal-numbers">Change</a>
+            </td>
+          </tr>
+          <tr class="divider-bottom">
+            <td class="govuk-body govuk-!-padding-bottom-2" id="notifications-not-found">
+            No new seal numbers have been entered
+            </td>
+          </tr>
+        </tbody></table>
+  
+  
+  
+        
+        <h2 class="govuk-heading-m">Laboratory tests</h2>
+        <table class="govuk-table review-table govuk-!-margin-top-4" id="review-table-lab-tests" role="presentation">
+          <tbody>
+                <tr class="govuk-table__row divider-top divider-bottom lab-test-required " id="parttwo/laboratorytestsrequired">
+                <td class="govuk-table__cell check-type">Required</td>
+                <td class="govuk-table__cell check-status">No</td>
+                    <td class="govuk-table__cell change">
+                        <a class="govuk-link" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1049654/lab-tests-required" id="change-lab-test-required">Change</a>
+                    </td>
+                </tr>
+          </tbody>
+        </table>
+        <h2 class="govuk-heading-m" id="documents-section-heading">
+            Documents
+        </h2>
+  
+  
+          <table class="govuk-table govuk-!-margin-top-6 govuk-!-margin-bottom-4 review-table">
+            <caption class="govuk-table__caption">Importer</caption>
+              <tbody><tr class="govuk-table__row table--presentation">
+                <th scope="row" class="govuk-table__header">Latest health certificate</th>
+                  <td class="change govuk-table__cell badge-right">
+                      <a href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1049654/documents" class="govuk-link" id="documents-change-link">Change</a>
+                  </td>
+              </tr>
+          </tbody></table>
+            <div class="overflow-x-auto">
+              <table class="govuk-table table--fixed review-additional-documents-table" id="latest-health-document-table">
+                <caption class="govuk-table__caption govuk-visually-hidden">veterinary health certificate
+                  table
+                </caption>
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-!-width-quarter govuk-table__header">Document type</th>
+                    <th scope="row" class="govuk-!-width-quarter govuk-table__header">Document reference</th>
+                    <th scope="row" class="govuk-!-width-quarter govuk-table__header">Date of issue</th>
+                    <th scope="row" class="govuk-!-width-quarter govuk-table__header">Attachments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="presentation-table__section ">
+                    <td class="govuk-table__cell" id="latest-health-document-type">
+                      Veterinary health certificate
+                    </td>
+                    <td class="govuk-table__cell break-word" id="latest-health-document-reference">
+                      REF-124
+                    </td>
+                    <td class="govuk-table__cell" id="latest-health-document-issue-date">
+                      4 March 2023
+                    </td>
+                    <td class="govuk-table__cell">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          
+  
+        <div class="govuk-!-margin-bottom-6 " id="parttwo/documents">
+          <table class="govuk-table govuk-!-margin-top-4 govuk-!-margin-bottom-0">
+            <tbody><tr class="govuk-table__row table--presentation">
+                <th scope="row" class="govuk-table__header" id="additional-documents-header">0 additional documents</th>
+                <td class="change govuk-table__cell badge-right">
+                  <a href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1049654/documents" class="govuk-link" id="documents-change-link">Change</a>
+                </td>
+            </tr>
+          </tbody></table>
+            <div class="overflow-x-auto">
+              <table class="govuk-table table--fixed review-additional-documents-table" id="accompanying-documents-table">
+                <thead>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-type">Document type</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-reference">Document reference</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-date-of-issue">Date of issue</th>
+                  <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="importer-documents-table-header-document-attachments">Attachments</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" colspan="4" id="accompanying-documents-none-attached">
+                        No documents attached
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        
+          <div class="overflow-x-auto">
+            <table class="govuk-table table--fixed review-additional-documents-table govuk-!-margin-bottom-0" id="inspector-review-table-documents">
+                <caption class="govuk-table__caption">Inspector</caption>
+              <thead>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-type">Document type</th>
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-reference">Document reference</th>
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-date-of-issue">Date of issue</th>
+                <th scope="row" class="govuk-!-width-quarter govuk-table__header" id="inspector-documents-table-header-document-attachments">Attachments</th>
+              </tr>
+              </thead>
+              <tbody>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" colspan="4" id="attachment-inspector-none-attached">
+                      No documents attached
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        <table class="govuk-table presentation-table review-table" id="decision-table">
+          <caption class="govuk-table__caption govuk-heading-m">
+            Decision information
+          </caption>
+          <tbody>
+          <tr class="govuk-table__row divider-top" id="decision-row-1">
+            <th id="decision-result" scope="row" class="govuk-table__header check-type"></th>
+            <td class="govuk-table__cell check-status" id="acceptance-decision">Acceptable for internal market</td>
+            <td class="govuk-table__cell change">
+                <a class="govuk-link" href="/decision/vnet/protected/bip-notifications/CHEDA.GB.2024.1049654/decisions" id="change-decision">Change</a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        
+  
+  
+          <div>
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-0" id="review-declaration-heading">Now
+              submit your decision</h2>
+            <fieldset class="govuk-fieldset ">
+              <legend class="hidden govuk-visually-hidden">Choose from:</legend>
+              <span class="govuk-error-message"></span>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input id="signed-by-official" class="govuk-radios__input" value="signed-by-official" type="radio" name="signAndSubmit" checked="">
+                    <label class="govuk-label govuk-radios__label" for="signed-by-official">I, the
+                      undersigned certifying officer, certify that the checks on the consignment
+                      have been carried out in accordance with EU retained law.</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+  
+            <button class="govuk-button govuk-!-margin-top-6 submit-button" type="submit" data-prevent-double-click="true" value="Submit decision" id="submit-decision">Submit decision</button>
+          </div>
+      </form></div>
+  </main>
+</form>
+<style>
+.divider-bottom {
+    border-bottom: 1px solid #bfc1c3;
+}
+.divider-top {
+    border-top: 1px solid #bfc1c3;
+}
+.no-border td, .no-border th  {
+    border : 0!important;
+}
+</style>
+{% endblock %}
