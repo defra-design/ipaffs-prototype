@@ -34,17 +34,17 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="confirmation-page">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-notification-banner notification-banner--inspection-required govuk-!-margin-bottom-0" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner govuk-notification-banner--success govuk-!-margin-bottom-0" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title" style="text-align: center;">
-              Initial risk assessment
-            </h2>
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title" style="text-align: center;">
+            Initial risk assessment
+          </h2>
         </div>
       </div>
-      <div style="border-top: none;" class="govuk-panel govuk-!-margin-bottom-6 panel--inspection-required" id="inspection-may-be-required-confirmation-panel">
+      <div style="border-top: none;" class="govuk-panel govuk-!-margin-bottom-6 panel--success" id="success-confirmation-panel">
         <div class="govuk-panel__body">
-          <div class="govuk-!-margin-bottom-2">Health inspection status</div>
-          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-2">Go to place of destination</div>
+          <div class="govuk-!-margin-bottom-2">Inspection status</div>
+          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-2">Not required</div>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             CHED reference
           </dt>
           <dd class="govuk-summary-list__value">
-            CHEDA.GB.2023.6244839
+            CHEDPP.GB.2023.6244839
           </dd>
           <dd class="govuk-summary-list__actions">
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -80,7 +80,7 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
             Customs document code
           </dt>
           <dd class="govuk-summary-list__value">
-            C640
+            N853
           </dd>
           <dd class="govuk-summary-list__actions">
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -100,16 +100,15 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
       <hr class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
 
       <h2 class="govuk-heading-m">What you need to do</h2>
-      <p class="govuk-body">Tell the transporter that this consignment must go directly to the place of destination on entry to Great Britain.</p>
+      <p class="govuk-body">Tell the haulier that this consignment does not need an inspection.</p>
 
-      <p class="govuk-body"><b>The animals or consignment may need to be inspected.</b></p>
+      <div class="govuk-inset-text">
+        Initial risk assessments can change.
+      </div>
 
-      <p class="govuk-body">If so, the animals must stay at the place of destination for either:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the time stated on the health certificate</li>
-        <li>48 hours if no time is specified</li>
-      </ul>   
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">An inspector may update the risk assessment.</p>
+      <p class="govuk-body">If the risk assessment changes, IPAFFS will notify you and any nominated contacts by text message or email.</p>
 
       <h2 class="govuk-heading-m">How to view or amend this notification</h2>
       <p class="govuk-body">You can view or amend this notification from your dashboard.</p>
