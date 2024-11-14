@@ -34,19 +34,19 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="confirmation-page">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-notification-banner notification-banner--inspection-may-be-required govuk-!-margin-bottom-0" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner notification-banner--inspection-required govuk-!-margin-bottom-0" id="risk-assessment-banner" role="region" aria-labelledby="risk-assessment-banner-title" data-label="" data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title" style="text-align: center; color: #0B0C0C;">
+            <h2 class="govuk-notification-banner__title" id="risk-assessment-banner-title" style="text-align: center;">
               Initial risk assessment
             </h2>
         </div>
       </div>
-      <div style="border-top: none;" class="govuk-panel govuk-!-margin-bottom-8 panel--inspection-may-be-required" id="inspection-may-be-required-confirmation-panel">
+      <div style="border-top: none;" class="govuk-panel govuk-!-margin-bottom-8 panel--inspection-required" id="inspection-may-be-required-confirmation-panel">
         <div class="govuk-panel__body">
           <div class="govuk-!-margin-bottom-2">Entry inspection status</div>
           <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-6">Check GVMS</div>
           <div class="govuk-!-margin-bottom-2">Exit inspection status</div>
-          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-2">Not required</div>
+          <div class="govuk-!-font-weight-bold govuk-!-margin-bottom-2">Required at [inspection premises]</div>
         </div>
       </div>
 
@@ -101,15 +101,18 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
       </div>
       <hr class="govuk-!-margin-top-2 govuk-!-margin-bottom-0">
 
-      <h2 class="govuk-heading-m">What happens next?</h2>
-      <p class="govuk-body">The Goods Vehicle Movement Service (GVMS) will notify the driver of all entry inspections.</p>
+      <h2 class="govuk-heading-m">On entry to Great Britain</h2>
+      <p class="govuk-body">The Goods Vehicle Movement Service (GVMS) will notify the driver of all inspections.</p>
 
       <div class="govuk-inset-text">
         The driver must check GVMS before arriving at the border location to find out if an inspection is required.
       </div>
 
+      <h2 class="govuk-heading-m">On exit from Great Britain</h2>
+      <p class="govuk-body">The consignment must go directly to [inspection premises] before it exits Great Britain.</p>
+
       <h2 class="govuk-heading-m">How to view or amend this notification</h2>
-      <p class="govuk-body">You can access or amend this notification from your dashboard.</p>
+      <p class="govuk-body">You can view or amend this notification from your dashboard.</p>
 
     
         <input name="crumb" type="hidden" value="Ydm23FlnF8m6O6Bvn3Cnlpdf3GEtj0PtCyCKshnEUqa">
@@ -122,7 +125,7 @@ Initial risk assessment  – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
         <div>
           <form action="01-ched-type" method="post" id="homeForm">
-          <input class="link-button" type="submit" name="new-notification" value="Create a new import notification">
+          <input class="link-button" type="submit" name="new-notification" value="Create a new notification">
           </form>
         </div>
 
