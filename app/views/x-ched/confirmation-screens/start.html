@@ -30,11 +30,15 @@
     
    
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">CHED P Transits (AKA Landbridge)</caption>
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED P Transits (AKA Landbridge): Confirmation screens and Emails</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Screens</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Scenarios</th>
           <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">GVMS & <br>Non GVMS</th> 
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry <br>inspections</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit inspections</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry inspections override</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit inspections override</th> 
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -42,34 +46,50 @@
           <td class="govuk-table__cell">
             Entry inspection not required<br>
             Exit inspection not required</td>
-          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/1-submitted-entry-no-exit-no">Done</a></td>
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/1-submitted-entry-no-exit-no">Confirmation screen</a></td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-now-required">Email</a></td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             Entry inspection required<br>
             Exit inspection not required</td>
-          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/2-submitted-entry-yes-exit-no">Done</a></td>
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/2-submitted-entry-yes-exit-no">Confirmation screen</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-now-required">Email</a></td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             Entry inspection not required<br>
           Exit inspection required</td>
-          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/3-submitted-entry-no-exit-yes">Done</a></td>
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/3-submitted-entry-no-exit-yes">Confirmation screen</a></td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-no-longer-required">Email</a></td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             Entry inspection required<br>
             Exit inspection required</td>
-          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/4-submitted-entry-yes-exit-yes">Done</a></td>
-
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/4-submitted-entry-yes-exit-yes">Confirmation screen</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-no-longer-required">Email</a></td>
         </tr>
+        
        
       </tbody>
     </table>
 
      
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">CHED D, A & PP</caption>
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED D, A & PP: Confirmation screens</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header govuk-!-width-one-third">GVMS</th>
@@ -130,60 +150,9 @@
       </tbody>
     </table>
 
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Email - CHED P Transits (AKA Landbridge)</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Email</th>
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry inspections</th>
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit inspections</th>
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry inspections override</th>
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit inspections override</th> 
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            Entry inspection not required<br>
-            Exit inspection not required</td>
-          <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Done</a></td>
-          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-now-required">Done</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            Entry inspection required<br>
-            Exit inspection not required</td>
-          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-required">Done</a></td>
-          <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-no-longer-required">Done</a></td>
-          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-now-required">Done</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            Entry inspection not required<br>
-          Exit inspection required</td>
-          <td class="govuk-table__cell">N/A</td>
-          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-required">Done</a></td>
-          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Done</a></td>
-          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-no-longer-required">Done</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">
-            Entry inspection required<br>
-            Exit inspection required</td>
-          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-required">Done</a></td>
-          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Done</a></td>
-          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-no-longer-required">Done</a></td>
-          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-no-longer-required">Done</a></td>
-        </tr>
-       
-      </tbody>
-    </table>
 
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Email & SMS - CHED D,PP & P (non-transit)</caption>
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED D,PP & P (non-transit): Email & SMS</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screens</th>
@@ -246,7 +215,7 @@
     </table>
 
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Email - CHED A</caption>
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED A: Email & SMS</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screens</th>
