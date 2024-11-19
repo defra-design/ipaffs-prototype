@@ -7239,26 +7239,6 @@ only screen and (min-resolution: 2dppx) {
     }
 }
 
-@media (max-width: 40.0525em) {
-    .additional-documents-table .additional-documents__table-header {
-        display: none
-    }
-
-    .additional-documents-table .additional-documents__content-heading {
-        display: block
-    }
-}
-
-@media (min-width: 40.0625em) {
-    .additional-documents-table .additional-documents__table-header {
-        display: block
-    }
-
-    .additional-documents-table .additional-documents__content-heading {
-        display: none
-    }
-}
-
 /* millie added */
 
 .additional-documents-table .additional-documents__grid-column-10 {
@@ -12666,7 +12646,6 @@ only screen and (min-resolution: 2dppx) {
 
   @media (max-width: 40.0525em) {
     .addresses-search__headers .addresses-search__table-header {
-      font-weight: bold;
       display: none
     }
     .addresses-search__list .addresses-search__content-heading {
@@ -12680,7 +12659,17 @@ only screen and (min-resolution: 2dppx) {
       display: block
     }
     .addresses-search__list .addresses-search__content-heading {
-      display: none
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      -webkit-clip-path: inset(50%) !important;
+      clip-path: inset(50%) !important;
+      border: 0 !important;
+      white-space: nowrap !important;
     }
   }
 
@@ -12775,6 +12764,37 @@ only screen and (min-resolution: 2dppx) {
   }
 
 /* Changes to accompanying documents page */
+
+@media (max-width: 40.0525em) {
+  .additional-documents-table .additional-documents__table-header {
+      display: none
+  }
+
+  .additional-documents-table .additional-documents__content-heading {
+      display: block
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .additional-documents-table .additional-documents__table-header {
+      display: block
+  }
+
+  .additional-documents-table .additional-documents__content-heading {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      -webkit-clip-path: inset(50%) !important;
+      clip-path: inset(50%) !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+  }
+}
+
 .additional-documents-table .additional-documents__date-of-issue-hint__day {
     margin-right: 30px
 }
