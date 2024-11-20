@@ -58,9 +58,7 @@ Decision hub
   </form>
 
   <div class="action-button-container">
-    <a href="11a-dh-when-overright-inspection-required" class="govuk-button govuk-button--secondary action-button" id="override-person-responsible">
-      Override Responsible Person
-    </a>
+   
   <a href="03-documents" class="govuk-button govuk-button--secondary action-button" id="attachments-link">
     Attachments
   </a>
@@ -71,7 +69,7 @@ Decision hub
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
         <span class="heading-tertiary">
-          <span id="reference-number">CHEDD.GB.2023.5942898</span>
+          <span id="reference-number">CHEDPP.GB.2024.1054909</span>
             <span id="cved-version-number"> - V1</span>
         </span>
         <span id="page-primary-title">Decision Hub</span>
@@ -79,16 +77,26 @@ Decision hub
 
 
 
-
-        <div class="govuk-body govuk-!-margin-bottom-6">
-          These sections can be completed in any order. You can save your progress and return at any
-          time.
+        <div class="govuk-inset-text" id="chedpp-consignment-risk-decision-details">
+          <p class="govuk-!-font-weight-bold">Consignment risk decision</p>
+          <p id="risk-decision-inspection-required-text">No inspection</p>
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                <span id="warning-text-content">Can't override as no inspection required</span>
+              </strong>
+            </div>
         </div>
 
-        <div class="govuk-body govuk-!-margin-bottom-8">
-          <a href="04-notification-overview" class="govuk-button govuk-!-margin-bottom-0" id="view-notification">
-            View notification of consignment
+        <div class="govuk-!-margin-bottom-6">
+          <a href="/decision/vnet/protected/bip-notifications/CHEDPP.GB.2024.1054909/overview" class="govuk-link link-button" id="view-notification">
+            View notification overview
           </a>
+        </div>
+        <div class="govuk-body govuk-!-margin-bottom-8">
+          These sections can be completed in any order. You can save your progress and return at any
+          time.
         </div>
 
       <table id="validate-import-notification-table" role="presentation" class="govuk-table">
@@ -101,86 +109,25 @@ Decision hub
         </tr>
         </thead>
         <tbody>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="05a-local-ref-row" class="govuk-link">
-                Local reference number
-              </a>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="reference-number-status" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-           
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <a href="06-checks" class="govuk-link">
-                  Checks
-                </a>
+                  Record PHSI checks
               </td>
               <td class="govuk-table__header badge-right">
-                <strong id="checks-status" class="govuk-tag tag tag--to-do">
-                  TO DO
+                <strong id="phsi-status" class="govuk-tag tag tag--submitted">
+                  COMPLETED
                 </strong>
               </td>
             </tr>
-           
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="07-seals" class="govuk-link">
-                Seal numbers
-              </a>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="seal-numbers" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="08-06-laboratory" class="govuk-link">
-                Laboratory tests
-              </a>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="lab-tests" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <form action="09-decision" method="POST">
-                <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
-                <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
-               <button type="submit" class="govuk-link link-button" name="decisionNotification" value="decision-notification" id="button-decision-notification">
-                  Decision
+            <td class="govuk-table__cell divider-no-bottom">
+              <form action="hub" method="POST">
+                <input name="crumb" type="hidden" value="G82BtpsHGNr3OZ9G7ZJub1c16keTJENaLmqZXteWgpY">
+                <input name="etag" type="hidden" value="&quot;00000000000E1326&quot;">
+                <button type="submit" class="govuk-button govuk-!-margin-top-4" name="returnToWorkOrder" data-prevent-double-click="true" value="review-notification" id="button-return-work-order">
+                  Return to work order
                 </button>
               </form>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="decision-status" class="govuk-tag tag tag--to-do">
-                TO DO
-              </strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <form action="10-review-decision" method="POST">
-                <input name="crumb" type="hidden" value="ZXu3-G9T0eYRb0P3pwPknvFMnphp-uMc-v98aQwyCeU">
-                <input name="etag" type="hidden" value="&quot;000000000540B70D&quot;">
-                <button type="submit" class="govuk-link link-button" name="reviewNotification" value="review-notification" id="button-review-notification">
-                  Review and submit
-                </button>
-              </form>
-            </td>
-            <td class="govuk-table__header badge-right">
-              <strong id="review-status" class="govuk-tag tag tag--to-do">
-                To do
-              </strong>
             </td>
           </tr>
         </tbody>
