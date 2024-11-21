@@ -1,0 +1,475 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Review your notification  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="navigation-links">
+  <a href="javascript:history.back()" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  <div class="navigation-links__divider">|</div>
+  <div class="govuk-breadcrumbs breadcrumbs--next-to-back">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="0-index">Dashboard</a>
+      </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="00-notification-hub">Notification Hub</a>
+          </li>
+    </ol>
+  </div>  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Percy Hyseni</span>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="address-book-link" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span>|</span>
+      <a class="govuk-link govuk-link--no-visited-state" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+
+
+
+  <div class="govuk-!-padding-top-6 govuk-!-margin-bottom-3">
+    <span class="heading-tertiary">
+        <span id="reference-number">DRAFT.GB.2023.5925980</span>
+            <span> - CHEDP</span>
+    </span>
+  </div>
+
+
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+                
+                <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" data-gtm-vis-first-on-screen10427495_18="635" data-gtm-vis-recent-on-screen10427495_18="56634" data-gtm-vis-total-visible-time10427495_18="100" data-gtm-vis-has-fired10427495_18="1">
+                  <h2 class="govuk-error-summary__title" id="error-summary-title">
+                      Some information needs to be updated
+                  </h2>
+                    <p class="govuk-body" id="error-summary-help-text">It was cloned from a previous phytosanitary certificate. Some details are either missing or incorrect.</p>
+                  <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li>
+                          <a class="" id="error-description-0" href="#partone/arrivaldate">Add the estimated arrival date at BCP</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-1" href="#partone/arrivaltime">Add the estimated arrival time at BCP</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-2" href="#partone/contactdetails">Check your details on the 'Contact details' page and save them to continue</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-3" href="#partone/isgvmsroute">Select if using the Goods Vehicle Movement Service (GVMS)</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-4" href="#meansoftransportfromentrypoint/document">Add document details</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-5" href="#meansoftransportfromentrypoint/id">Add identification details</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-6" href="#meansoftransportfromentrypoint/type">Add the means of transport to the BCP</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-7" href="#partone/placeofdestination">Add a delivery address</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-8" href="#partone/pointofentrycontrolpoint">Inspection Premise</a>
+                        </li>
+                        <li>
+                          <a class="" id="error-description-9" href="#partone/providectcmrn">Select if using the Common Transit Convention (CTC)</a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+  
+  
+  
+          <h1 class="govuk-heading-xl " id="page-primary-title">Review your notification</h1>
+  
+  
+        <div class="govuk-grid-row audit-flag">
+          <div class="govuk-grid-column-one-half">
+            <p id="last-updated-date" class="audit-flag__date">Last updated 21 November 2024, 09:30</p>
+            <p id="last-updated-by" class="audit-flag__user">by Mark Admin-Tester</p>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <p id="last-submission-date" class="audit-flag__date">
+                Not Submitted
+            </p>
+          </div>
+        </div>
+  
+  
+  
+          <hr class="govuk-section-break govuk-section-break--visible">
+          <dl class="govuk-summary-list govuk-!-margin-bottom-1" id="review-table-about-notification">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-half">CHED reference</dt>
+              <dd class="govuk-summary-list__value" id="reference-number">DRAFT.GB.2024.1055857</dd>
+              <dd class="govuk-summary-list__actions">
+                <button data-prevent-double-click="true" type="submit" id="copy-customs-declaration-reference-number" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0 copy-button" data-copy-value="DRAFT.GB.2024.1055857">
+                  Copy
+                </button>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+              <dt class="govuk-summary-list__key govuk-!-width-one-half">Customs declaration reference</dt>
+              <dd class="govuk-summary-list__value" id="reference-number-customs">GBCHD2024.1055857</dd>
+              <dd class="govuk-summary-list__actions">
+                <button data-prevent-double-click="true" type="submit" id="copy-customs-declaration-reference-number" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0 copy-button" data-copy-value="GBCHD2024.1055857">
+                  Copy
+                </button>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row  govuk-summary-list__row--no-border">
+              <dt class="govuk-summary-list__key govuk-!-width-one-half">Customs document code</dt>
+              <dd class="govuk-summary-list__value" id="reference-number-document">N851</dd>
+              <dd class="govuk-summary-list__actions">
+                <button data-prevent-double-click="true" type="submit" id="copy-customs-doc-code" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0 copy-button" data-copy-value="N851">
+                  Copy
+                </button>
+              </dd>
+            </div>
+          </dl>
+          
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              You must use the correct reference and code on the customs declaration or your consignment will be delayed.
+            </strong>
+          </div>
+          
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  
+  
+  
+  
+  
+  
+  
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-9">About the consignment</h2>
+            
+            
+            <dl class="review-summary-list" id="review-table-about-notification">
+              <div class="review-summary-list__row review-summary-list__row-border-bottom  review-summary-list__row-no-action ">
+                <dt class="review-summary-list__key">What are you importing?</dt>
+                <dd class="review-summary-list__value" id="importing">Plants, plant products and other objects</dd>
+              </div>
+            
+            
+              <div class="review-summary-list__row  review-summary-list__row-with-action ">
+                <dt class="review-summary-list__key">Add a reference number for this consignment</dt>
+                <dd class="review-summary-list__value"></dd>
+                  <dd class="review-summary-list__action">
+                    <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/consignment/page-2?fromImporterReview=true" class="govuk-link" id="country-of-origin-change-link">Change</a>
+                  </dd>
+              </div>
+              <div class="review-summary-list__row  review-summary-list__row-no-action  ">
+                <dt class="review-summary-list__key">Country of origin</dt>
+                <dd class="review-summary-list__value" id="country-of-origin">Netherlands</dd>
+              </div>
+              <div class="review-summary-list__row review-summary-list__row-border-bottom  review-summary-list__row-no-action ">
+                <dt class="review-summary-list__key">Country from where consigned</dt>
+                <dd class="review-summary-list__value">Netherlands</dd>
+              </div>
+              <div class="review-summary-list__row  review-summary-list__row-with-action  ">
+                <dt class="review-summary-list__key">What is the purpose of the consignment?</dt>
+                <dd class="review-summary-list__value" id="purpose-of-consignment-value">
+                    For internal market
+                </dd>
+                  <dd class="review-summary-list__action">
+                    <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/consignment/page-5?fromImporterReview=true" class="govuk-link" id="consignment-purpose-change-link">Change</a>
+                  </dd>
+              </div>
+            </dl>
+            
+            <div class="govuk-grid-row">
+              <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-grid-column-one-half">Description of the goods</h2>
+            </div>
+            
+              <div class="govuk-!-margin-bottom-6 update-commodity-details-link ">
+                <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/commodity/details/bulk?fromImporterReview=true" class="govuk-link govuk-!-font-size-19" id="commodity-details-link">
+                  Check or update commodity details
+                </a>
+              </div>
+            
+              
+                <div class="heading-with-change-link govuk-!-margin-top-8">
+                    <h3 class="govuk-heading-s">Additional details</h3>
+                    <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/consignment/details?fromImporterReview=true" class="govuk-link" id="consignment-details-change-link">
+                      Change
+                    </a>
+                </div>
+              
+              <div class="table-responsive govuk-!-margin-bottom-9">
+                <table class="govuk-table presentation-table review-table" role="presentation" id="review-consignment-details-table">
+                  <tbody>
+              
+              
+              
+                    <tr class="presentation-table__section
+                    
+                    ">
+                      <td class="govuk-table__header border-bottom-none">Total packages</td>
+                      <td class="govuk-table__cell border-bottom-none" colspan="2">
+                        10
+                      </td>
+                    </tr>
+              
+              
+                    <tr class="presentation-table__section
+                            
+                            ">
+                      <td class="govuk-table__header" id="gross-weight-header">Total gross weight (kg/units)</td>
+                      <td class="govuk-table__cell" id="gross-weight">11 kg/units</td>
+                    </tr>
+              
+                    <tr class="">
+                      <td class="govuk-table__header">Total gross volume</td>
+                      <td class="govuk-table__cell" colspan="2">1</td>
+                    </tr>
+              
+                    <tr class="">
+                      <td class="govuk-table__header">Total gross volume unit</td>
+                      <td class="govuk-table__cell" colspan="2">m³</td>
+                    </tr>
+              
+              
+              
+                  </tbody>
+                </table>
+              
+              
+              </div>
+            
+            <h2 class="govuk-heading-l">Transport</h2>
+            <div class="heading-with-change-link">
+              <h2 class="govuk-heading-m">Transport to the Border Control Post (BCP)</h2>
+              <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/transport/before-bip?fromImporterReview=true" class="govuk-link" id="transport-to-bip-change-link">
+                Change
+              </a>
+            </div>
+            
+            <span class="govuk-error-message" id="partone/pointofentrycontrolpoint">Inspection Premise</span>
+            <span class="govuk-error-message" id="meansoftransportfromentrypoint/type">Add the means of transport to the BCP</span>
+            <span class="govuk-error-message" id="meansoftransportfromentrypoint/id">Add identification details</span>
+            <span class="govuk-error-message" id="meansoftransportfromentrypoint/document">Add document details</span>
+            <span class="govuk-error-message" id="partone/arrivaldate">Add the estimated arrival date at BCP</span>
+            <span class="govuk-error-message" id="partone/arrivaltime">Add the estimated arrival time at BCP</span>
+            
+            
+            <div class="table-responsive govuk-!-margin-bottom-9">
+              <table class="govuk-table review-table presentation-table" id="review-table-bip-details">
+                <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
+                <tbody>
+                <tr class="">
+                  <th scope="row" class="govuk-table__header">Border Control Post</th>
+                  <td class="govuk-table__cell">Gatwick Airport (plants) - GBLGW4PP</td>
+                </tr>
+                  <tr class="table-row--error">
+                    <th scope="row" class="govuk-table__header">Inspection Premises</th>
+                      <td class="govuk-table__cell"> </td>
+                  </tr>
+                <tr class="table-row--error">
+                  <th scope="row" class="govuk-table__header">Means of transport to the BCP</th>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+                  <tr class="table-row--error">
+                    <th scope="row" class="govuk-table__header">Transport identification</th>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="govuk-table__header">Using road trailers or containers?</th>
+                    <td class="govuk-table__cell" id="imported-in-containers">No</td>
+                  </tr>
+                  
+                  <tr class="table-row--error">
+                      <th scope="row" class="govuk-table__header">Transport document reference</th>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                <tr class="table-row--error">
+                  <th scope="row" class="govuk-table__header">Estimated arrival date at BCP</th>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+                  <tr class="table-row--error">
+                    <th scope="row" class="govuk-table__header">Estimated arrival time at BCP</th>
+                    <td class="govuk-table__cell"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+              <div class="heading-with-change-link">
+                <h2 class="govuk-heading-m">Goods movement services</h2>
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/goods-movement-services?fromImporterReview=true" class="govuk-link" id="goods-movement-services-change-link">Change</a>
+              </div>
+              <span class="govuk-error-message" id="partone/isgvmsroute">Select if using the Goods Vehicle Movement Service (GVMS)</span>
+              <span class="govuk-error-message" id="partone/providectcmrn">Select if using the Common Transit Convention (CTC)</span>
+              <div class="table-responsive govuk-!-margin-bottom-9">
+                <table class="govuk-table presentation-table review-table" id="review-table-goods-movement-services" role="presentation">
+                  <tbody>
+                    <tr class="table-row--error">
+                      <td class="govuk-table__header govuk-table__header--half">Using the Common Transit Convention
+                        (CTC)
+                      </td>
+                      <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="table-row--error">
+                      <td class="govuk-table__header">Using the Goods Vehicle Movement Service (GVMS)
+                      </td>
+                      <td class="govuk-table__cell" id="goods-movement-services-route"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            <div class="heading-with-change-link">
+              <h3 class="govuk-heading-m">Contact details</h3>
+                <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/responsible-person/contact-details?fromImporterReview=true" class="govuk-link" id="responsible-person-contact-details-change-link">
+                  Change
+                </a>
+            </div>
+            
+            <span class="govuk-error-message" id="partone/contactdetails">Check your details on the 'Contact details' page and save them to continue</span>
+            
+            <dl class="review-summary-list govuk-!-margin-bottom-9" id="responsible-person-contact-details-table">
+              <div class="review-summary-list__row  review-summary-list__error">
+                <dt class="review-summary-list__key">Name</dt>
+                <dd class="review-summary-list__value" id="responsible-contact-name"></dd>
+              </div>
+              <div class="review-summary-list__row  review-summary-list__error">
+                <dt class="review-summary-list__key">Email address</dt>
+                <dd class="review-summary-list__value" id="responsible-contact-email"></dd>
+              </div>
+              <div class="review-summary-list__row review-summary-list__error">
+                <dt class="review-summary-list__key">Phone number</dt>
+                <dd class="review-summary-list__value" id="responsible-contact-telephone"></dd>
+              </div>
+                <div class="review-summary-list__row review-summary-list__error">
+                  <dt class="review-summary-list__key">Agent</dt>
+                  <dd class="review-summary-list__value" id="responsible-contact-telephone"></dd>
+                </div>
+            </dl>
+            <div class="heading-with-change-link">
+              <h2 class="govuk-heading-m">Nominated contacts</h2>
+                  <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/nominated-contact?fromImporterReview=true" class="govuk-link" id="nominated-contact-change-link">
+                  Change
+                  </a>
+            </div>
+            
+            <div class="govuk-!-margin-bottom-9 table-responsive">
+              <table class="govuk-table presentation-table govuk-!-margin-0" id="nominated-contacts-table">
+                <caption class="govuk-visually-hidden">Summary of nominated contacts</caption>
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="col" id="name-header">Name</th>
+                  <th class="govuk-table__header" scope="col" id="email-header">Email address</th>
+                  <th class="govuk-table__header" scope="col" id="phone-header">Mobile number</th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                </tbody>
+              </table>
+            </div>
+            
+            
+            <div class="govuk-!-margin-bottom-9">
+                <h2 class="govuk-heading-m" id="accompanying-documents-heading">Accompanying documents</h2>
+              
+                
+              
+              <div class="heading-with-change-link">
+                  <h3 class="govuk-heading-s" id="additional-documents-sub-heading">Additional documents</h3>
+                  <a class="govuk-link" id="documents-change-link" href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/documents/page-1?fromImporterReview=true#additional-documents-header">
+                     Change
+                  </a>
+              </div>
+              
+                <div class="table-responsive">
+                  <table id="additional-documents-table" class="govuk-table presentation-table review-additional-documents-table" aria-labelledby="additional-documents-sub-heading">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document type</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document reference</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date of issue</th>
+                        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Attachments</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row presentation-table__section ">
+                              <td class="govuk-table__cell" id="veterinary-document-type-1">
+                                Phytosanitary certificate
+                              </td>
+                              <td class="govuk-table__cell break-word" id="veterinary-document-reference-1">
+                                999999997-2024
+                              </td>
+                              <td class="govuk-table__cell" id="veterinary-document-issue-date-1">
+                                2 August 2021
+                              </td>
+                              <td class="govuk-table__cell">
+                                <a class="govuk-link ellipsis" id="attachment-view-0cfecb68-c3a8-40ba-840c-56724479e7fd" title="999999997-2024.pdf" rel="noopener noreferrer" target="_blank" href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/attachment/0cfecb68-c3a8-40ba-840c-56724479e7fd?source=review">
+                                  999999997-2024.pdf
+                                </a>
+                              </td>
+                            </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+            
+            <h2 class="govuk-heading-m">Traders</h2>
+            
+            <span class="govuk-error-message" id="partone/placeofdestination">Add a delivery address</span>
+            
+            
+            <dl class="review-summary-list govuk-!-margin-bottom-9" id="review-table-traders">
+              <div class="review-summary-list__row  review-summary-list__row-with-action ">
+                <dt class="review-summary-list__key">Importer</dt>
+                <dd class="review-summary-list__value" id="importer">
+                  <p class="govuk-body">Defra Test BIP</p>
+                  <p class="govuk-body">Animal and Plant Health Agency, Woodham Lane, New Haw, Addlestone, KT15 3NB, United Kingdom of Great Britain and Northern Ireland, 020 8225 7295, DefraTestBIP@anthunt3.33mail.com</p>
+                </dd>
+                  <dd class="review-summary-list__action">
+                      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2024.1055857/traders?fromImporterReview=true" class="govuk-link" id="traders-change-link">Change</a>
+                  </dd>
+              </div>
+              <div class="review-summary-list__row  review-summary-list__row-no-action  review-summary-list__error">
+                <dt class="review-summary-list__key" aria-describedby="partone/placeofdestination">Delivery address</dt>
+                <dd class="review-summary-list__value" id="final-destination">
+                  <p class="govuk-body"></p>
+                  <p class="govuk-body"></p>
+                </dd>
+              </div>
+              <div class="review-summary-list__row  review-summary-list__row-border-bottom   review-summary-list__row-no-action  ">
+                <dt class="review-summary-list__key">Consignor or exporter</dt>
+                <dd class="review-summary-list__value" id="consignor">
+                  <p class="govuk-body">Sango Seeds B.V.</p>
+                  <p class="govuk-body">Zwartendijk 14A, Monster, 2681 LN, Netherlands, Not specified, not@specified.com</p>
+                </dd>
+              </div>
+            
+            </dl>
+            
+            <form action="review" method="POST">
+              <button class="govuk-button" type="submit" value="Save and continue" id="button-save-and-continue" data-prevent-double-click="true">Save and continue</button>
+              <input name="crumb" type="hidden" value="yH9d_dGxGLWzw0Cd08fXfYtM847T5DzLgjpcdzgADCl">
+              <input name="etag" type="hidden" value="&quot;00000000000E602C&quot;">
+            </form>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}
