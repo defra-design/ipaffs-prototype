@@ -1,0 +1,100 @@
+@import "../base/variables";
+@import "node_modules/govuk-frontend/govuk/helpers/media-queries";
+@import "node_modules/govuk-frontend/govuk/helpers/spacing";
+@import "node_modules/govuk-frontend/govuk/helpers/typography";
+@import "node_modules/govuk-frontend/govuk/settings/colours-applied";
+@import "node_modules/govuk-frontend/govuk/settings/typography-font";
+
+// The review summary list mimics the use of a table with 2 columns without using a table.
+// This has been made over using the govuk-summary-list for not only the aforementioned reason but
+// also because the elements need to work with the error styling which does not play well with the
+// govuk-summary-list.
+// Due to it mimicking the existing table interactions it does not currently collapse when the
+// screen size is reduced.
+// This is only intended to be used on review pages,
+// the govuk-summary-list should be preferred over this.
+.review-summary-list {
+  @include govuk-font($size: 19);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border-top: 1px solid $govuk-border-colour;
+  border-bottom: 1px solid $govuk-border-colour;
+
+  @include govuk-responsive-margin(4, "bottom");
+  margin-top: 0;
+
+  &__error {
+    dt {
+      border-left: $error-border-width solid $govuk-error-colour;
+      padding-left: $error-border-padding;
+    }
+  }
+
+  &-border-top-only {
+    border-bottom: 0;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &-with-action {
+      grid-template-columns: 50% 40% auto;
+
+      @include govuk-media-query($until: "tablet") {
+        grid-template-columns: 30% 50% auto;
+      }
+    }
+
+    &-border-bottom {
+      border-bottom: 1px solid $govuk-border-colour;
+    }
+
+    &-border-top {
+      border-top: 1px solid $govuk-border-colour;
+    }
+
+    &-no-action {
+      grid-template-columns: 50% 40%;
+
+      @include govuk-media-query($until: "tablet") {
+        grid-template-columns: 30% 50%;
+      }
+    }
+  }
+
+  &__key {
+    @include govuk-responsive-padding(2, "top");
+    @include govuk-responsive-padding(2, "bottom");
+    @include govuk-responsive-padding(2, "right");
+
+    font-weight: $govuk-font-weight-bold;
+  }
+
+  &__value {
+    @include govuk-responsive-padding(2, "top");
+    @include govuk-responsive-padding(2, "bottom");
+    margin: 0;
+
+    > p {
+      @include govuk-responsive-margin(2, "bottom");
+    }
+  }
+
+  &__action {
+    @include govuk-responsive-padding(2, "top");
+    @include govuk-responsive-padding(2, "bottom");
+
+    text-align: right;
+    margin: 0;
+  }
+
+  &__error-container {
+    @include govuk-responsive-padding(2, "top");
+    @include govuk-responsive-padding(2, "bottom");
+
+    > span {
+      margin-bottom: 0;
+    }
+  }
+}
