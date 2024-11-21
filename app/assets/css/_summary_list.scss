@@ -1,0 +1,80 @@
+// Added the following CSS from version 4.5.0 of summary-list component
+// When upgrading to this version, remove this class and prefix the CSS with .govuk-
+
+@import "node_modules/govuk-frontend/govuk/settings/colours-applied";
+@import "node_modules/govuk-frontend/govuk/helpers/media-queries";
+@import "node_modules/govuk-frontend/govuk/helpers/spacing";
+@import "node_modules/govuk-frontend/govuk/helpers/typography";
+
+// Provide an empty 'cell' for rows that don't have actions – otherwise the
+// bottom border is not drawn for that part of the row in some browsers.
+.summary-list__row--no-actions {
+  @include govuk-media-query($from: tablet) {
+    &:after {
+      content: "";
+      display: table-cell;
+      width: 20%;
+      border-bottom: 1px solid $govuk-border-colour;
+    }
+  }
+}
+
+// Additional block for the summary card
+.summary-card {
+  @include govuk-responsive-margin(6, "bottom");
+  border: 1px solid $govuk-border-colour;
+}
+
+.summary-card__title-wrapper {
+  padding: govuk-spacing(3);
+
+  // Ensures the card header appears separate to the summary list in forced colours mode
+  border-bottom: 1px solid transparent;
+  background-color: govuk-colour("light-grey");
+
+  @include govuk-media-query($from: "tablet") {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: govuk-spacing(3) govuk-spacing(4);
+  }
+}
+
+.summary-card__title {
+  @include govuk-font($size: 19, $weight: bold);
+  @include govuk-text-colour;
+  margin: govuk-spacing(1) govuk-spacing(4) govuk-spacing(2) 0;
+
+  @include govuk-media-query($from: "tablet") {
+    margin-bottom: govuk-spacing(1);
+  }
+}
+
+.summary-card__content {
+  padding: govuk-spacing(3) govuk-spacing(3) 0;
+
+  @include govuk-media-query($from: "tablet") {
+    padding: govuk-spacing(3) govuk-spacing(4);
+  }
+
+  .govuk-summary-list {
+    margin-bottom: 0;
+  }
+
+  .govuk-summary-list__row {
+    &:last-of-type {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+// govuk-summary-list additions/modifications
+.govuk-summary-list__value-right {
+
+  text-align: left;
+
+  @include govuk-media-query($from: "tablet") {
+    text-align: right;
+  }
+}
