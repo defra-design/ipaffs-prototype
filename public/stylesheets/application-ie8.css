@@ -6300,3 +6300,208 @@ p + .govuk-heading-s,
 .date-input--picker .govuk-date-input__item {
   margin-right: 15px;
 }
+
+.summary-section-header {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.actionable-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.actionable-header__action {
+  font-weight: 700;
+}
+
+.review-summary-list {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border-top: 1px solid #b1b4b6;
+  border-bottom: 1px solid #b1b4b6;
+  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.review-summary-list__error dt {
+  /* border-left: $error-border-width solid $govuk-error-colour;*/
+  /* padding-left: $error-border-padding; */
+}
+.review-summary-list-border-top-only {
+  border-bottom: 0;
+}
+.review-summary-list__row {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.review-summary-list__row-with-action {
+  grid-template-columns: 50% 40% auto;
+}
+.review-summary-list__row-border-bottom {
+  border-bottom: 1px solid #b1b4b6;
+}
+.review-summary-list__row-border-top {
+  border-top: 1px solid #b1b4b6;
+}
+.review-summary-list__row-no-action {
+  grid-template-columns: 50% 40%;
+}
+.review-summary-list__key {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-weight: 700;
+}
+.review-summary-list__value {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.review-summary-list__value > p {
+  margin-bottom: 10px;
+}
+.review-summary-list__action {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: right;
+  margin: 0;
+}
+.review-summary-list__error-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.review-summary-list__error-container > span {
+  margin-bottom: 0;
+}
+
+.summary-list__row--no-actions:after {
+  content: "";
+  display: table-cell;
+  width: 20%;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.summary-card {
+  margin-bottom: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #b1b4b6;
+}
+
+.summary-card__title-wrapper {
+  padding: 15px;
+  border-bottom: 1px solid transparent;
+  background-color: #f3f2f1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 15px 20px;
+}
+
+.summary-card__title {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+  color: #0b0c0c;
+  margin: 5px 20px 10px 0;
+  margin-bottom: 5px;
+}
+
+.summary-card__content {
+  padding: 15px 15px 0;
+  padding: 15px 20px;
+}
+.summary-card__content .govuk-summary-list {
+  margin-bottom: 0;
+}
+.summary-card__content .govuk-summary-list__row:last-of-type {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.govuk-summary-list__value-right {
+  text-align: left;
+  text-align: right;
+}
+
+.govuk-task-list {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.govuk-task-list__item {
+  display: table;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b1b4b6;
+}
+.govuk-task-list__item:first-child {
+  border-top: 1px solid #b1b4b6;
+}
+
+.govuk-task-list__item--with-link:hover {
+  background: #f3f2f1;
+}
+
+.govuk-task-list__name-and-hint {
+  display: table-cell;
+  vertical-align: top;
+  color: #0b0c0c;
+}
+
+.govuk-task-list__status {
+  display: table-cell;
+  padding-left: 10px;
+  text-align: right;
+  vertical-align: top;
+  color: #0b0c0c;
+}
+
+.govuk-task-list__link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.govuk-task-list__hint {
+  margin-top: 5px;
+  color: #505a5f;
+}
