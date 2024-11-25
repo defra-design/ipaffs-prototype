@@ -1,0 +1,1446 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Notification overview
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link"
+        id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve
+      it.</span>
+  </p>
+</div>
+
+
+
+
+<div class="govuk-width-container app-width-container--wide">
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Mark Admin-Tester</span>
+      <span aria-hidden="true">|</span>
+        <a class="govuk-link govuk-!-display-inline-block" id="bcp-admin-link" href="/bcpadmin/vnet/protected/bcp-admin">
+          Admin area
+        </a>
+        <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/vnet/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <div class="navigation-links__left-block">
+    <a href="#" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  </div>
+</div>
+
+<form method="POST">
+  <input name="crumb" type="hidden" value="e0jOzGzKfnPMljNK_a-4Ro8cMjGgW_BF8zgJOtOYWa8">
+  <input name="etag" type="hidden" value="&quot;00000000000EA103&quot;">
+  <input name="checks-type" type="hidden" value="">
+  
+  
+  <div id="status-component" class="govuk-grid-column-full">
+    <div class="govuk-grid-row results-div govuk-!-padding-top-2 govuk-!-padding-bottom-2 govuk-!-margin-bottom-4">
+        <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+          <button type="submit" class="link-button govuk-!-margin-top-0 govuk-!-margin-bottom-1" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+            Save and set as in progress
+          </button>
+    </div>
+  </div>
+
+  <main class="govuk-main-wrapper" id="main-content">
+    <div class="govuk-grid-row" id="checks-decision-page">
+      <div class="govuk-grid-column-full">
+        <span class="heading-tertiary">
+          <span id="reference-number">CHEDPP.GB.2024.1049186</span>
+            <span id="cved-version-number"> - V1</span>
+        </span>
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6">
+          <span class="govuk-caption-xl"></span>
+          <span id="page-primary-title">How do you want to enter your checks?</span>
+        </h1>
+
+        <div class="govuk-inset-text">
+          <span class="govuk-heading-l govuk-!-display-inline" id="number-of-checks">17</span>
+          <span class="govuk-heading-m govuk-!-display-inline govuk-!-margin-left-3">items require checks</span>
+        </div>
+
+        <div class="govuk-form-group bulk-commodities-choice  ">
+          <fieldset class="govuk-fieldset">
+        
+        
+            
+        
+            <div class="govuk-radios ">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="bulk-commodities-choice" name="bulk-commodities-choice" type="radio" value="individual-items">
+                  <label class="govuk-label govuk-radios__label " for="bulk-commodities-choice">
+                      I want to enter checks for each individual item
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="bulk-commodities-choice-2" name="bulk-commodities-choice" type="radio" value="multiple-items">
+                  <label class="govuk-label govuk-radios__label " for="bulk-commodities-choice-2">
+                      I want to enter checks for multiple items at once
+                  </label>
+                </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-continue" name="save-button" type="submit" data-module="govuk-button" value="Continue" data-prevent-double-click="true">
+          Continue
+        </button>
+
+        <div>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary id="notification-commodities" class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What commodities are in this notification?
+              </span>
+            </summary>
+            <div class="govuk-!-padding-left-5 govuk-!-margin-top-5">
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter " id="risk-decision-column">Risk decision</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter " id="genus-and-species-column">
+                        Genus, species and commodity code
+                    </th>
+                      <td class="govuk-!-width-one-half"></td>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-0" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-0" class="govuk-table__cell">
+                        Anacardium occidentale
+                          <br>
+                          0810902090
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-1" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-1" class="govuk-table__cell">
+                        Browallia sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-2" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-2" class="govuk-table__cell">
+                        Calibrachoa parviflora
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-3" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-3" class="govuk-table__cell">
+                        Datura leichhardtii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-4" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-4" class="govuk-table__cell">
+                        Duboisia leichhardtii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-5" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-5" class="govuk-table__cell">
+                        Lycium ruthenicum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-6" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-6" class="govuk-table__cell">
+                        Mandragora sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-7" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-7" class="govuk-table__cell">
+                        Nicotiana alpina
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-8" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-8" class="govuk-table__cell">
+                        Nicotiana rustica
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-9" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-9" class="govuk-table__cell">
+                        Physalis floridana
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-10" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-10" class="govuk-table__cell">
+                        Schwenckia micrantha
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-11" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-11" class="govuk-table__cell">
+                        Solanum asperolanatum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-12" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-12" class="govuk-table__cell">
+                        Solanum dulcamara
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-13" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-13" class="govuk-table__cell">
+                        Solanum hystrix
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-14" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-14" class="govuk-table__cell">
+                        Solanum stenotomum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-15" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-15" class="govuk-table__cell">
+                        Streptosolen jamesonii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-16" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--gms">
+                          gms
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-16" class="govuk-table__cell">
+                        Withania coagulans
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-17" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-17" class="govuk-table__cell">
+                        Allium cepa
+                          <br>
+                          07031019
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-18" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-18" class="govuk-table__cell">
+                        Bouchetia sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-19" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-19" class="govuk-table__cell">
+                        Brugmansia suaveolens
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-20" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-20" class="govuk-table__cell">
+                        Cacabus sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-21" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-21" class="govuk-table__cell">
+                        Cestrum calycinum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-22" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-22" class="govuk-table__cell">
+                        Cestrum elegans
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-23" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-23" class="govuk-table__cell">
+                        Cestrum fasciculatum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-24" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-24" class="govuk-table__cell">
+                        Cestrum intermedium
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-25" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-25" class="govuk-table__cell">
+                        Cestrum pallidum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-26" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-26" class="govuk-table__cell">
+                        Chamaesaracha sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-27" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-27" class="govuk-table__cell">
+                        Cyphomandra corymbiflora
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-28" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-28" class="govuk-table__cell">
+                        Cyphomandra physaloides
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-29" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-29" class="govuk-table__cell">
+                        Cyphomandra sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-30" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-30" class="govuk-table__cell">
+                        Datura metel
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-31" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-31" class="govuk-table__cell">
+                        Dunalia sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-32" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-32" class="govuk-table__cell">
+                        Fabiana sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-33" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-33" class="govuk-table__cell">
+                        Jaborosa runcinata
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-34" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-34" class="govuk-table__cell">
+                        Juanulloa aurantiaca
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-35" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-35" class="govuk-table__cell">
+                        Leucophysalis grandiflora
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-36" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-36" class="govuk-table__cell">
+                        Lycianthes biflora
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-37" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-37" class="govuk-table__cell">
+                        Lycianthes glandulosa
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-38" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-38" class="govuk-table__cell">
+                        Lycianthes multiflora
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-39" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-39" class="govuk-table__cell">
+                        Lycianthes rantonnetii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-40" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-40" class="govuk-table__cell">
+                        Lycium australe
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-41" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-41" class="govuk-table__cell">
+                        Lycium chinense
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-42" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-42" class="govuk-table__cell">
+                        Lycium ferocissimum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-43" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-43" class="govuk-table__cell">
+                        Lycium intricatum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-44" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-44" class="govuk-table__cell">
+                        Mandragora autumnalis
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-45" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-45" class="govuk-table__cell">
+                        Nicotiana alata
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-46" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-46" class="govuk-table__cell">
+                        Nicotiana benthamiana
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-47" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-47" class="govuk-table__cell">
+                        Nicotiana bonariensis
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-48" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-48" class="govuk-table__cell">
+                        Nicotiana clevelandii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-49" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-49" class="govuk-table__cell">
+                        Nicotiana debneyi
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-50" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-50" class="govuk-table__cell">
+                        Nicotiana maritima
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-51" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-51" class="govuk-table__cell">
+                        Nicotiana nesophila
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-52" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-52" class="govuk-table__cell">
+                        Nicotiana nudicaulis
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-53" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-53" class="govuk-table__cell">
+                        Nicotiana paniculata
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-54" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-54" class="govuk-table__cell">
+                        Nicotiana plumbaginifolia
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-55" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-55" class="govuk-table__cell">
+                        Nicotiana repanda
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-56" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-56" class="govuk-table__cell">
+                        Nicotiana velutina
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-57" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-57" class="govuk-table__cell">
+                        Nierembergia repens
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-58" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-58" class="govuk-table__cell">
+                        Petunia axillaris
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-59" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-59" class="govuk-table__cell">
+                        Petunia integrifolia
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-60" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-60" class="govuk-table__cell">
+                        Petunia x Calibrachoa hybrids
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-61" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-61" class="govuk-table__cell">
+                        Philesia magellanica
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-62" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-62" class="govuk-table__cell">
+                        Philesia sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-63" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-63" class="govuk-table__cell">
+                        Physalis acutifolia
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-64" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-64" class="govuk-table__cell">
+                        Physalis heterophylla
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-65" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-65" class="govuk-table__cell">
+                        Physalis lobata
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-66" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-66" class="govuk-table__cell">
+                        Physalis mendocina
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-67" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-67" class="govuk-table__cell">
+                        Physalis neesiana
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-68" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-68" class="govuk-table__cell">
+                        Physalis peruviana
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-69" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-69" class="govuk-table__cell">
+                        Physalis sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-70" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-70" class="govuk-table__cell">
+                        Physalis virginiana subsp. subglabrata
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-71" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-71" class="govuk-table__cell">
+                        Salpichroa sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-72" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-72" class="govuk-table__cell">
+                        Salpiglossis sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-73" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-73" class="govuk-table__cell">
+                        Satureja hortensis
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-74" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-74" class="govuk-table__cell">
+                        Satureja montana
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-75" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-75" class="govuk-table__cell">
+                        Schizanthus sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-76" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-76" class="govuk-table__cell">
+                        Schwenckia sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-77" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-77" class="govuk-table__cell">
+                        Solandra maxima
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-78" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-78" class="govuk-table__cell">
+                        Solanum aethiopicum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-79" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-79" class="govuk-table__cell">
+                        Solanum americanum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-80" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-80" class="govuk-table__cell">
+                        Solanum angustifolium
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-81" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-81" class="govuk-table__cell">
+                        Solanum argentinum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-82" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-82" class="govuk-table__cell">
+                        Solanum aviculare
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-83" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-83" class="govuk-table__cell">
+                        Solanum cerasiferum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-84" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-84" class="govuk-table__cell">
+                        Solanum coagulans
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-85" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-85" class="govuk-table__cell">
+                        Solanum diphyllum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-86" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-86" class="govuk-table__cell">
+                        Solanum ellipticum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-87" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-87" class="govuk-table__cell">
+                        Solanum forskalii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-88" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-88" class="govuk-table__cell">
+                        Solanum giganteum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-89" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-89" class="govuk-table__cell">
+                        Solanum glaucophyllum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-90" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-90" class="govuk-table__cell">
+                        Solanum grandiflorum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-91" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-91" class="govuk-table__cell">
+                        Solanum granuloso-leprosum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-92" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-92" class="govuk-table__cell">
+                        Solanum hasslerianum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-93" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-93" class="govuk-table__cell">
+                        Solanum hirtum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-94" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-94" class="govuk-table__cell">
+                        Solanum laxum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-95" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-95" class="govuk-table__cell">
+                        Solanum medians
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-96" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-96" class="govuk-table__cell">
+                        Solanum nigrum var. guineense
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-97" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-97" class="govuk-table__cell">
+                        Solanum petrophilum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-98" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-98" class="govuk-table__cell">
+                        Solanum physalifolium
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-99" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-99" class="govuk-table__cell">
+                        Solanum robustum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-100" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-100" class="govuk-table__cell">
+                        Solanum rostratum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-101" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-101" class="govuk-table__cell">
+                        Solanum stelligerum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-102" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-102" class="govuk-table__cell">
+                        Solanum stoloniferum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-103" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-103" class="govuk-table__cell">
+                        Solanum tampicense
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-104" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-104" class="govuk-table__cell">
+                        Solanum undatum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-105" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-105" class="govuk-table__cell">
+                        Solanum viarum
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-106" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-106" class="govuk-table__cell">
+                        Solanum wendlandii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-107" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-107" class="govuk-table__cell">
+                        Solanum wrightii
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td id="risk-decision-108" class="govuk-table__cell">
+                        <strong class="govuk-tag tag tag--no-inspection">
+                          no inspection
+                        </strong>
+                      </td>
+                      <td id="genus-and-species-108" class="govuk-table__cell">
+                        Vestia sp.
+                          <br>
+                          07099990
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>      </div>
+    </div>
+  </main>
+</form>
+
+</div>
+
+{% endblock %}

@@ -69,7 +69,7 @@ Decision hub
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
         <span class="heading-tertiary">
-          <span id="reference-number">CHEDPP.GB.2024.1054909</span>
+          <span id="reference-number">CHEDPP.GB.2024.1049186</span>
             <span id="cved-version-number"> - V1</span>
         </span>
         <span id="page-primary-title">Decision Hub</span>
@@ -79,18 +79,14 @@ Decision hub
 
         <div class="govuk-inset-text" id="chedpp-consignment-risk-decision-details">
           <p class="govuk-!-font-weight-bold">Consignment risk decision</p>
-          <p id="risk-decision-inspection-required-text">No inspection</p>
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>
-                <span id="warning-text-content">Can't override as no inspection required</span>
-              </strong>
-            </div>
+          <p id="risk-decision-inspection-required-text">To be inspected</p>
+            <a href="/decision/vnet/protected/bip-notifications/CHEDPP.GB.2024.1049186/override-risk-decision-chedpp" class="govuk-button govuk-button--secondary" id="override-button">
+              Override
+            </a>
         </div>
 
         <div class="govuk-!-margin-bottom-6">
-          <a href="/decision/vnet/protected/bip-notifications/CHEDPP.GB.2024.1054909/overview" class="govuk-link link-button" id="view-notification">
+          <a href="02-notification-overview" class="govuk-link link-button" id="view-notification">
             View notification overview
           </a>
         </div>
@@ -111,19 +107,41 @@ Decision hub
         <tbody>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                  Record PHSI checks
+                  <form action="04-phsi-checks" method="POST">
+                    <input name="crumb" type="hidden" value="ExfrBUpw266jDMXB4Zc1ZxVCHmllJ0JGKLgD9FVUat5">
+                    <input name="etag" type="hidden" value="&quot;00000000000E7731&quot;">
+                    <button type="submit" class="link-button" id="record-phsi-checks-link" name="recordChecks" value="PHSI">
+                      Record PHSI checks
+                    </button>
+                  </form>
               </td>
               <td class="govuk-table__header badge-right">
-                <strong id="phsi-status" class="govuk-tag tag tag--submitted">
-                  COMPLETED
+                <strong id="phsi-status" class="govuk-tag tag tag--to-do">
+                  TO DO
+                </strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                  <form action="05-hmi-checks" method="POST">
+                    <input name="crumb" type="hidden" value="ExfrBUpw266jDMXB4Zc1ZxVCHmllJ0JGKLgD9FVUat5">
+                    <input name="etag" type="hidden" value="&quot;00000000000E7731&quot;">
+                    <button type="submit" class="link-button" id="record-hmi-checks-link" name="recordChecks" value="HMI">
+                      Record HMI checks
+                    </button>
+                  </form>
+              </td>
+              <td class="govuk-table__header badge-right">
+                <strong id="hmi-status" class="govuk-tag tag tag--to-do">
+                  TO DO
                 </strong>
               </td>
             </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell divider-no-bottom">
               <form action="hub" method="POST">
-                <input name="crumb" type="hidden" value="G82BtpsHGNr3OZ9G7ZJub1c16keTJENaLmqZXteWgpY">
-                <input name="etag" type="hidden" value="&quot;00000000000E1326&quot;">
+                <input name="crumb" type="hidden" value="ExfrBUpw266jDMXB4Zc1ZxVCHmllJ0JGKLgD9FVUat5">
+                <input name="etag" type="hidden" value="&quot;00000000000E7731&quot;">
                 <button type="submit" class="govuk-button govuk-!-margin-top-4" name="returnToWorkOrder" data-prevent-double-click="true" value="review-notification" id="button-return-work-order">
                   Return to work order
                 </button>

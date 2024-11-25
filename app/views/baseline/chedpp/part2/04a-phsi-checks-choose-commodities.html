@@ -1,0 +1,1387 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Notification overview
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link"
+        id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve
+      it.</span>
+  </p>
+</div>
+
+
+<div class="govuk-width-container app-width-container--wide">
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Mark Admin-Tester</span>
+      <span aria-hidden="true">|</span>
+        <a class="govuk-link govuk-!-display-inline-block" id="bcp-admin-link" href="/bcpadmin/vnet/protected/bcp-admin">
+          Admin area
+        </a>
+        <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/vnet/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+  <div class="navigation-links__left-block">
+    <a href="#" id="back-link" class="govuk-back-link back-link--next-to-breadcrumbs">Back</a>
+  </div>
+</div>
+
+<form method="POST">
+  <input name="crumb" type="hidden" value="ExfrBUpw266jDMXB4Zc1ZxVCHmllJ0JGKLgD9FVUat5">
+  <input name="etag" type="hidden" value="&quot;00000000000E9539&quot;">
+  
+  
+  <div id="status-component" class="govuk-grid-column-full">
+    <div class="govuk-grid-row results-div govuk-!-padding-top-2 govuk-!-padding-bottom-2 govuk-!-margin-bottom-4">
+        <strong class="govuk-tag tag tag--submitted status-label govuk-!-margin-right-2" id="Status-Label">New</strong>
+          <button type="submit" class="link-button govuk-!-margin-top-0 govuk-!-margin-bottom-1" name="setInProgress" value="IN_PROGRESS" id="set-in-progress">
+            Save and set as in progress
+          </button>
+    </div>
+  </div>
+
+  <main class="govuk-main-wrapper phsi-checks-multiple" id="main-content">
+    <div class="govuk-grid-row" id="phsi-checks-multiple-page">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+          <span class="heading-tertiary">
+            <span id="reference-number">CHEDPP.GB.2024.1049186</span>
+              <span id="cved-version-number"> - V1</span>
+          </span>
+          <span id="page-primary-title">Record PHSI checks</span>
+        </h1>
+
+        <div>
+          <h2 class="govuk-heading-m">Checks still to do</h2>
+          <div class="govuk-!-margin-bottom-5">
+            <p class="govuk-body govuk-!-margin-bottom-1"><strong>500</strong> documentary checks</p>
+              <p class="govuk-body govuk-!-margin-bottom-1"><strong>500</strong> identity checks</p>
+              <p class="govuk-body govuk-!-margin-bottom-1"><strong>500</strong> physical checks</p>
+          </div>
+        </div>
+
+        <h2 class="govuk-heading-l">
+          Choose commodities to record decisions against
+        </h2>
+        <span class="paging-navigation-left">
+          <nav class="paging-navigation govuk-!-font-size-19" aria-label="paging navigation">
+                  <span class="govuk-!-padding-right-5">1</span>
+                  <span>
+                    <a href="?page=2&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-2">2</a>
+                  </span>
+                  <span>
+                    <a href="?page=3&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-3">3</a>
+                  </span>
+                  <span>
+                    <a href="?page=4&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-4">4</a>
+                  </span>
+                  <span>
+                    <a href="?page=5&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-5">5</a>
+                  </span>
+                  <span>
+                    <a href="?page=6&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-6">6</a>
+                  </span>
+                  <span>
+                    <a href="?page=7&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-7">7</a>
+                  </span>
+                  <span>
+                    <a href="?page=8&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-8">8</a>
+                  </span>
+                  <span>
+                    <a href="?page=9&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-9">9</a>
+                  </span>
+                  <span>
+                    <a href="?page=10&amp;documentaryChecks=true" class="paging-navigation-link govuk-!-padding-right-5" rel="next" id="page-10">10</a>
+                  </span>
+              <span>
+                <a href="/decision/vnet/protected/bip-notifications/CHEDPP.GB.2024.1049186/phsi-checks-multiple?page=2&amp;documentaryChecks=true" class="paging-navigation-link" rel="next" id="next-page">Next &gt;</a>
+              </span>
+          </nav>
+        </span>
+        <span class="results-right">
+          Showing 1 - 50 of 500 results
+        </span>
+        <div class="table-responsive">
+          <table class="govuk-table">
+            <caption class="govuk-visually-hidden">PHSI multiple checks table</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">                <td colspan="7" class="govuk-table__header" id="table-header-multiple-commodity-code"></td></tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">
+                <noscript>
+                  <button type="submit" class="link-button" name="disabled-js-checkboxes-button"
+                          value="select-all" id="disabled-js-checkboxes-button">
+                    Select all
+                  </button>
+                </noscript>
+                <div class="govuk-checkboxes__item" id="hidden-select-all-checkbox-container">
+                    <input class="govuk-checkboxes__input" id="select-all-checkbox" data-target="hidden-select-all-checkbox" type="checkbox" value="" aria-controls="select-all-checkbox-conditional">
+                    <label class="govuk-label govuk-checkboxes__label" for="select-all-checkbox">
+                        <span class="govuk-visually-hidden">Select all</span>
+                    </label>
+                </div>                <span id="select-all-text" class="govuk-!-font-size-16">Select all</span>
+              </th>
+              <th scope="col" class="govuk-table__header">Risk decision</th>
+                <th scope="col" class="govuk-table__header govuk-!-padding-left-4" id="genus-species-column">Genus, species and commodity code</th>
+
+                <th scope="col" class="govuk-table__header govuk-!-padding-left-4">Documentary check decision</th>
+
+
+            </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-1-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-1" data-target="hidden-checkbox-1" type="checkbox" value="9dcc0758-3db7-4aed-bdf0-e81734e2ce89" aria-controls="checkbox-1-conditional" name="checkbox-1">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-1">
+                          <span class="govuk-visually-hidden">commodity-1</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-0">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-0">
+                  Abies alba
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-0">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-2-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-2" data-target="hidden-checkbox-2" type="checkbox" value="36bec090-56f1-4d6a-9b7a-835ef416a963" aria-controls="checkbox-2-conditional" name="checkbox-2">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-2">
+                          <span class="govuk-visually-hidden">commodity-2</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-1">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-1">
+                  Abies concolor var. lowiana
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-1">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-3-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-3" data-target="hidden-checkbox-3" type="checkbox" value="7400f11c-bb34-4e72-9bf8-00c348ba543c" aria-controls="checkbox-3-conditional" name="checkbox-3">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-3">
+                          <span class="govuk-visually-hidden">commodity-3</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-2">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-2">
+                  Abies veitchii
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-2">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-4-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-4" data-target="hidden-checkbox-4" type="checkbox" value="4daa866d-b817-4371-86b1-6e2011d69276" aria-controls="checkbox-4-conditional" name="checkbox-4">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-4">
+                          <span class="govuk-visually-hidden">commodity-4</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-3">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-3">
+                  Acer longipes
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-3">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-5-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-5" data-target="hidden-checkbox-5" type="checkbox" value="f4141da4-9ffb-4112-b220-5c72b488f1ae" aria-controls="checkbox-5-conditional" name="checkbox-5">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-5">
+                          <span class="govuk-visually-hidden">commodity-5</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-4">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-4">
+                  Adansonia digitata
+                    <br>06042090
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-4">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-6-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-6" data-target="hidden-checkbox-6" type="checkbox" value="83c8cac1-3f38-4476-9b7f-0f7c983a368f" aria-controls="checkbox-6-conditional" name="checkbox-6">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-6">
+                          <span class="govuk-visually-hidden">commodity-6</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-5">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-5">
+                  Adenaria floribunda
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-5">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-7-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-7" data-target="hidden-checkbox-7" type="checkbox" value="556c89a6-6ffc-4558-8979-4d079cffd717" aria-controls="checkbox-7-conditional" name="checkbox-7">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-7">
+                          <span class="govuk-visually-hidden">commodity-7</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-6">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-6">
+                  Aeglopsis eggelingii
+                    <br>07099990
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-6">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-8-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-8" data-target="hidden-checkbox-8" type="checkbox" value="ed5d7ce8-8c0b-420e-aafa-0f0b70fd10f6" aria-controls="checkbox-8-conditional" name="checkbox-8">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-8">
+                          <span class="govuk-visually-hidden">commodity-8</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-7">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-7">
+                  Aeonium tabuliforme
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-7">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-9-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-9" data-target="hidden-checkbox-9" type="checkbox" value="a4839c5e-d631-4082-a67b-f7e9d095d23e" aria-controls="checkbox-9-conditional" name="checkbox-9">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-9">
+                          <span class="govuk-visually-hidden">commodity-9</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-8">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-8">
+                  Aerangis arachnopus
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-8">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-10-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-10" data-target="hidden-checkbox-10" type="checkbox" value="16f22fd0-d75b-4259-85e1-49d7576fe61d" aria-controls="checkbox-10-conditional" name="checkbox-10">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-10">
+                          <span class="govuk-visually-hidden">commodity-10</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-9">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-9">
+                  Aerides sp.
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-9">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-11-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-11" data-target="hidden-checkbox-11" type="checkbox" value="57523ec0-9a1f-4dc1-9800-3e7ec1bfa71b" aria-controls="checkbox-11-conditional" name="checkbox-11">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-11">
+                          <span class="govuk-visually-hidden">commodity-11</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-10">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-10">
+                  Afrocarpus falcatus
+                    <br>12099910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-10">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-12-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-12" data-target="hidden-checkbox-12" type="checkbox" value="9e6b445f-eb9c-43bf-9806-36e0bb9da3f7" aria-controls="checkbox-12-conditional" name="checkbox-12">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-12">
+                          <span class="govuk-visually-hidden">commodity-12</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-11">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-11">
+                  Afrocarpus mannii
+                    <br>12099910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-11">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-13-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-13" data-target="hidden-checkbox-13" type="checkbox" value="3d4e584e-83d7-43c8-b9f1-68807618c933" aria-controls="checkbox-13-conditional" name="checkbox-13">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-13">
+                          <span class="govuk-visually-hidden">commodity-13</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-12">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-12">
+                  Ajania pacifica
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-12">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-14-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-14" data-target="hidden-checkbox-14" type="checkbox" value="0efa0d78-0c7a-4835-bb10-fe23e292196a" aria-controls="checkbox-14-conditional" name="checkbox-14">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-14">
+                          <span class="govuk-visually-hidden">commodity-14</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-13">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-13">
+                  Allium cepa
+                    <br>07031019
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-13">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-15-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-15" data-target="hidden-checkbox-15" type="checkbox" value="18db7bb3-84ab-40aa-922c-c11b75f5a311" aria-controls="checkbox-15-conditional" name="checkbox-15">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-15">
+                          <span class="govuk-visually-hidden">commodity-15</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-14">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-14">
+                  Alpinia sp.
+                    <br>09101100
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-14">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-16-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-16" data-target="hidden-checkbox-16" type="checkbox" value="d3245d33-d036-412e-a773-9c42d39d6f12" aria-controls="checkbox-16-conditional" name="checkbox-16">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-16">
+                          <span class="govuk-visually-hidden">commodity-16</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-15">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-15">
+                  Amelanchier interior
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-15">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-17-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-17" data-target="hidden-checkbox-17" type="checkbox" value="fefb2bea-5031-400d-90be-b4fb1ce2fdb7" aria-controls="checkbox-17-conditional" name="checkbox-17">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-17">
+                          <span class="govuk-visually-hidden">commodity-17</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-16">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-16">
+                  Ampelocissus acetosa
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-16">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-18-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-18" data-target="hidden-checkbox-18" type="checkbox" value="2592e27e-fcc8-4725-bb08-740fb2d45588" aria-controls="checkbox-18-conditional" name="checkbox-18">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-18">
+                          <span class="govuk-visually-hidden">commodity-18</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-17">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-17">
+                  Ampelocissus africana
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-17">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-19-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-19" data-target="hidden-checkbox-19" type="checkbox" value="569df0b5-0f5b-46b7-9712-b452a7b27214" aria-controls="checkbox-19-conditional" name="checkbox-19">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-19">
+                          <span class="govuk-visually-hidden">commodity-19</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-18">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-18">
+                  Ampelocissus barbata
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-18">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-20-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-20" data-target="hidden-checkbox-20" type="checkbox" value="757e4d40-6fdc-4b43-9f7b-ba296b9a8bbd" aria-controls="checkbox-20-conditional" name="checkbox-20">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-20">
+                          <span class="govuk-visually-hidden">commodity-20</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-19">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-19">
+                  Ampelocissus gracilis
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-19">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-21-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-21" data-target="hidden-checkbox-21" type="checkbox" value="b1a2a7fb-29cf-415e-a337-2e999a6fd7db" aria-controls="checkbox-21-conditional" name="checkbox-21">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-21">
+                          <span class="govuk-visually-hidden">commodity-21</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-20">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-20">
+                  Ampelocissus latifolia
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-20">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-22-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-22" data-target="hidden-checkbox-22" type="checkbox" value="c8018701-f83c-43eb-a918-5a38ddc83dc5" aria-controls="checkbox-22-conditional" name="checkbox-22">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-22">
+                          <span class="govuk-visually-hidden">commodity-22</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-21">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-21">
+                  Ampelocissus leonensis
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-21">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-23-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-23" data-target="hidden-checkbox-23" type="checkbox" value="3eb8fce9-71ee-4e61-887b-14b3a50ab241" aria-controls="checkbox-23-conditional" name="checkbox-23">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-23">
+                          <span class="govuk-visually-hidden">commodity-23</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-22">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-22">
+                  Ampelocissus multistriata
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-22">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-24-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-24" data-target="hidden-checkbox-24" type="checkbox" value="c9a7102e-b802-4dd6-a0cd-034f9ce334e9" aria-controls="checkbox-24-conditional" name="checkbox-24">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-24">
+                          <span class="govuk-visually-hidden">commodity-24</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-23">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-23">
+                  Ampelocissus tomentosa
+                    <br>06022010
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-23">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-25-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-25" data-target="hidden-checkbox-25" type="checkbox" value="508e66c4-a494-481a-bb2a-52fa93a001de" aria-controls="checkbox-25-conditional" name="checkbox-25">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-25">
+                          <span class="govuk-visually-hidden">commodity-25</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-24">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-24">
+                  Amsonia tabernaemontana
+                    <br>06039000
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-24">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-26-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-26" data-target="hidden-checkbox-26" type="checkbox" value="ce87e9cf-32d2-48c7-a07f-b4fbdf28fc04" aria-controls="checkbox-26-conditional" name="checkbox-26">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-26">
+                          <span class="govuk-visually-hidden">commodity-26</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-25">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-25">
+                  Anacamptis coriophora subsp. martrinii
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-25">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-27-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-27" data-target="hidden-checkbox-27" type="checkbox" value="884cc3f8-d74d-41fa-9b40-65cc64372e91" aria-controls="checkbox-27-conditional" name="checkbox-27">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-27">
+                          <span class="govuk-visually-hidden">commodity-27</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-26">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-26">
+                  Anacamptis pyramidalis
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-26">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-28-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-28" data-target="hidden-checkbox-28" type="checkbox" value="5a680e54-6ea0-4f25-ad36-2ad292d3625f" aria-controls="checkbox-28-conditional" name="checkbox-28">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-28">
+                          <span class="govuk-visually-hidden">commodity-28</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-27">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-27">
+                  Anacardium occidentale
+                    <br>0810902090
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-27">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-29-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-29" data-target="hidden-checkbox-29" type="checkbox" value="d867c8d1-3b20-408b-82cf-d6c91a139e05" aria-controls="checkbox-29-conditional" name="checkbox-29">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-29">
+                          <span class="govuk-visually-hidden">commodity-29</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-28">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-28">
+                  Angraecum subulatum
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-28">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-30-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-30" data-target="hidden-checkbox-30" type="checkbox" value="2084fb8a-4d81-42e0-abc4-e581d0d9aa69" aria-controls="checkbox-30-conditional" name="checkbox-30">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-30">
+                          <span class="govuk-visually-hidden">commodity-30</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-29">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-29">
+                  Anthyllis cytisoides
+                    <br>12099910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-29">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-31-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-31" data-target="hidden-checkbox-31" type="checkbox" value="c2463781-71fc-4944-be49-f9b30eb6b4b2" aria-controls="checkbox-31-conditional" name="checkbox-31">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-31">
+                          <span class="govuk-visually-hidden">commodity-31</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-30">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-30">
+                  Antirrhinum speciosum
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-30">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-32-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-32" data-target="hidden-checkbox-32" type="checkbox" value="00f338a1-04b2-4ef8-8c66-f582b01133bb" aria-controls="checkbox-32-conditional" name="checkbox-32">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-32">
+                          <span class="govuk-visually-hidden">commodity-32</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-31">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-31">
+                  Aphelandra squarrosa
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-31">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-33-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-33" data-target="hidden-checkbox-33" type="checkbox" value="15f1f5d8-115b-4c69-99f4-f761c26c1170" aria-controls="checkbox-33-conditional" name="checkbox-33">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-33">
+                          <span class="govuk-visually-hidden">commodity-33</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-32">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-32">
+                  Apium nodiflorum
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-32">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-34-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-34" data-target="hidden-checkbox-34" type="checkbox" value="3780fc6d-782b-404a-97ba-1258fa0c0920" aria-controls="checkbox-34-conditional" name="checkbox-34">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-34">
+                          <span class="govuk-visually-hidden">commodity-34</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-33">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-33">
+                  Aranda sp.
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-33">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-35-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-35" data-target="hidden-checkbox-35" type="checkbox" value="779d3f96-c82e-421f-bbc5-5af27a4441dd" aria-controls="checkbox-35-conditional" name="checkbox-35">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-35">
+                          <span class="govuk-visually-hidden">commodity-35</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-34">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-34">
+                  Arctostaphylos nevadensis
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-34">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-36-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-36" data-target="hidden-checkbox-36" type="checkbox" value="42491bbc-198f-4e14-9cdf-d6c6a04ed9d5" aria-controls="checkbox-36-conditional" name="checkbox-36">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-36">
+                          <span class="govuk-visually-hidden">commodity-36</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-35">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-35">
+                  Artemisia californica
+                    <br>12099910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-35">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-37-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-37" data-target="hidden-checkbox-37" type="checkbox" value="ec29f9ef-23c4-4d65-b62e-c69d0d637005" aria-controls="checkbox-37-conditional" name="checkbox-37">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-37">
+                          <span class="govuk-visually-hidden">commodity-37</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-36">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-36">
+                  Asclepias ovalifolia
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-36">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-38-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-38" data-target="hidden-checkbox-38" type="checkbox" value="74916d6b-7b3b-4d85-8158-05c67109bea9" aria-controls="checkbox-38-conditional" name="checkbox-38">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-38">
+                          <span class="govuk-visually-hidden">commodity-38</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-37">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-37">
+                  Athrixia sp.
+                    <br>12099910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-37">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-39-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-39" data-target="hidden-checkbox-39" type="checkbox" value="6ad51c06-375f-46ce-9035-108b7509aaa6" aria-controls="checkbox-39-conditional" name="checkbox-39">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-39">
+                          <span class="govuk-visually-hidden">commodity-39</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-38">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-38">
+                  Avicennia officinalis
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-38">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-40-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-40" data-target="hidden-checkbox-40" type="checkbox" value="1ab03801-3dd9-4bfb-b536-4c842e782447" aria-controls="checkbox-40-conditional" name="checkbox-40">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-40">
+                          <span class="govuk-visually-hidden">commodity-40</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-39">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-39">
+                  Azolla mexicana
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-39">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-41-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-41" data-target="hidden-checkbox-41" type="checkbox" value="809f5b5a-89f6-4e13-9b74-362c36e28e85" aria-controls="checkbox-41-conditional" name="checkbox-41">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-41">
+                          <span class="govuk-visually-hidden">commodity-41</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-40">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-40">
+                  Baccaurea sp.
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-40">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-42-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-42" data-target="hidden-checkbox-42" type="checkbox" value="77f0dd41-7397-4490-9401-ee53a8451993" aria-controls="checkbox-42-conditional" name="checkbox-42">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-42">
+                          <span class="govuk-visually-hidden">commodity-42</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-41">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-41">
+                  Banksia marginata
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-41">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-43-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-43" data-target="hidden-checkbox-43" type="checkbox" value="8350f458-5bcd-4e1c-b1a5-cb8814dbf2be" aria-controls="checkbox-43-conditional" name="checkbox-43">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-43">
+                          <span class="govuk-visually-hidden">commodity-43</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-42">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-42">
+                  Bauhinia ungulata
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-42">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-44-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-44" data-target="hidden-checkbox-44" type="checkbox" value="684b18d3-3dea-4d79-91cd-5426bc65989d" aria-controls="checkbox-44-conditional" name="checkbox-44">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-44">
+                          <span class="govuk-visually-hidden">commodity-44</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-43">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-43">
+                  Begonia boliviensis
+                    <br>1209999910
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-43">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-45-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-45" data-target="hidden-checkbox-45" type="checkbox" value="5cd42cbf-2683-44a9-872a-ecfcc1024b47" aria-controls="checkbox-45-conditional" name="checkbox-45">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-45">
+                          <span class="govuk-visually-hidden">commodity-45</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-44">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-44">
+                  Begonia boliviensis
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-44">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-46-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-46" data-target="hidden-checkbox-46" type="checkbox" value="152d1f59-b426-443c-a8e4-ecd201f58b65" aria-controls="checkbox-46-conditional" name="checkbox-46">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-46">
+                          <span class="govuk-visually-hidden">commodity-46</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-45">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-45">
+                  Begonia bowerae
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-45">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-47-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-47" data-target="hidden-checkbox-47" type="checkbox" value="312c8c5e-6393-4a1c-bd5b-634d12fc7bc1" aria-controls="checkbox-47-conditional" name="checkbox-47">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-47">
+                          <span class="govuk-visually-hidden">commodity-47</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-46">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-46">
+                  Begonia cucullata var. hookeri
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-46">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-48-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-48" data-target="hidden-checkbox-48" type="checkbox" value="5f893c59-e3b5-47c0-b58e-1552f097d219" aria-controls="checkbox-48-conditional" name="checkbox-48">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-48">
+                          <span class="govuk-visually-hidden">commodity-48</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-47">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-47">
+                  Begonia decandra
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-47">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-49-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-49" data-target="hidden-checkbox-49" type="checkbox" value="cfa04068-65a1-4cd4-9c01-252944e20003" aria-controls="checkbox-49-conditional" name="checkbox-49">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-49">
+                          <span class="govuk-visually-hidden">commodity-49</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-48">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-48">
+                  Begonia incarnata
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-48">To do</td>
+
+
+              </tr>
+              <tr class="commodity-summary__row">
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3">
+                  <div class="govuk-checkboxes__item " id="hidden-checkbox-50-container">
+                      <input class="govuk-checkboxes__input" id="checkbox-50" data-target="hidden-checkbox-50" type="checkbox" value="5d4c7a92-90c6-477c-9055-ba97a164b4d0" aria-controls="checkbox-50-conditional" name="checkbox-50">
+                      <label class="govuk-label govuk-checkboxes__label" for="checkbox-50">
+                          <span class="govuk-visually-hidden">commodity-50</span>
+                      </label>
+                  </div>                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3" id="risk-decision-49">
+                  <strong class="govuk-tag tag tag--controlled">
+                    CONTROLLED
+                  </strong>
+                </td>
+                <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="genus-species-row-49">
+                  Begonia mannii
+                    <br>1212999510
+                </td>
+
+                  <td class="govuk-!-padding-top-3 govuk-!-padding-bottom-3 govuk-!-padding-left-4" id="documentary-check-row-49">To do</td>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 class="govuk-heading-m">Select and record decisions</h2>
+        <p class="govuk-body information-span">You cannot edit decisions recorded as 'Compliant', 'Non-compliant' or 'Not inspected'. All other decisions can be updated later.</p>
+        <div class="
+          
+          
+          
+          
+          ">
+            <div class="govuk-grid-row govuk-!-padding-bottom-2">
+            <div class="govuk-label--s govuk-grid-column-one-third">
+              Doc check
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+              <select class="govuk-select govuk-!-width-one-half commodity-check__input" id="document-status-0" name="document-status-0" aria-label="Status of document check">
+                  <option value="To do">
+                    To do
+                  </option>
+                  <option value="To be inspected">
+                    To be inspected
+                  </option>
+                  <option value="Compliant">
+                    Compliant
+                  </option>
+                  <option value="Non compliant">
+                    Non compliant
+                  </option>
+                  <option value="Not inspected">
+                    Not inspected
+                  </option>
+                  <option value="Hold">
+                    Hold
+                  </option>
+              </select>
+              <select class="govuk-select govuk-!-width-one-half commodity-check__input js-hidden" id="document-reason-0" name="document-reason-0" aria-label="Reason for document check status">
+                  <option data-status="Non compliant,Not inspected,Hold" value="">
+                    Select reason
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Consignee business name">
+                    Incorrect information: Consignee business name
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Consignee business address">
+                    Incorrect information: Consignee business address
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Consignor business name">
+                    Incorrect information: Consignor business name
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Consignor business address">
+                    Incorrect information: Consignor business address
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Country of origin/dispatch">
+                    Incorrect information: Country of origin/dispatch
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Method of transport">
+                    Incorrect information: Method of transport
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Airway Bill/BoL/CMR number">
+                    Incorrect information: Airway Bill/BoL/CMR number
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Incorrect inspection premises">
+                    Incorrect information: Incorrect inspection premises
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Commodity type incorrect">
+                    Incorrect information: Commodity type incorrect
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Container number incorrect">
+                    Incorrect information: Container number incorrect
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Number of packages">
+                    Incorrect information: Number of packages
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Net weight">
+                    Incorrect information: Net weight
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Branches/stems">
+                    Incorrect information: Branches/stems
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Phytosanitary certificate number">
+                    Incorrect information: Phytosanitary certificate number
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Incorrect information: Dispatch date absent">
+                    Incorrect information: Dispatch date absent
+                  </option>
+                  <option data-status="Non compliant,Hold" value="AD invalid">
+                    AD invalid
+                  </option>
+                  <option data-status="Non compliant,Hold" value="AD missing">
+                    AD missing
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Not endorsed">
+                    Not endorsed
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Phyto expired">
+                    Phyto expired
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Inspection date absent">
+                    Inspection date absent
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Suspected modified/fake/forged">
+                    Suspected modified/fake/forged
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Illegible">
+                    Illegible
+                  </option>
+                  <option data-status="Non compliant,Hold" value="Absent">
+                    Absent
+                  </option>
+                  <option data-status="Not inspected" value="Lack of resources">
+                    Lack of resources
+                  </option>
+              </select>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+          <button class="govuk-button govuk-!-marking-right-1 govuk-!-margin-bottom-4" id="button-submit-checks" name="record-and-select-more" type="submit" data-module="govuk-button" data-prevent-double-click="true" value="Record and select more">
+            Record and select more
+          </button>
+          <div class="govuk-!-display-block">
+            <button type="submit" class="govuk-link link-button" name="record-and-finish" value="Record and finish">Record and finish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</form>
+
+<script src="/decision/vnet/public/javascripts/phsi_checks_status_reason.js?v=1.0.2122"></script>
+<script src="/decision/vnet/public/javascripts/bulk_commodities.js?v=1.0.2122"></script>
+
+</div>
+
+{% endblock %}

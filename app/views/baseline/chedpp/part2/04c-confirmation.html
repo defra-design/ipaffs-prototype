@@ -1,0 +1,87 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Review decision
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner" style="margin-top: -46px;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+    <span class="govuk-phase-banner__text">This is a new service – your <a rel="noopener noreferrer" class="govuk-link" id="link-feedback" target="_blank" href="/notification/vnet/feedback">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+<div class="govuk-width-container app-width-container--wide">
+
+<div class="navigation-links">
+  <div id="sign-out-section" class="information-banner">
+    <p class="information-banner__content">
+      <span>Mark Admin-Tester</span>
+      <span aria-hidden="true">|</span>
+        <a class="govuk-link govuk-!-display-inline-block" id="bcp-admin-link" href="/bcpadmin/vnet/protected/bcp-admin">
+          Admin area
+        </a>
+        <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="address-book" href="/notification/vnet/protected/notifications/address-book">
+        Address book
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="blank-certificates-link" href="/decision/vnet/protected/bip-notifications/CHEDs/blank">
+        Blank CHEDs
+      </a>
+      <span aria-hidden="true">|</span>
+      <a class="govuk-link govuk-!-display-inline-block" id="sign-out-link" href="/protected/logout">
+        Sign out
+      </a>
+    </p>
+  </div>
+</div>
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="phsi-checks-multiple-confirmation-page">
+    <div class="govuk-grid-column-two-thirds">
+      <div id="confirmation-panel" class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-8">
+          <h1 class="govuk-panel__title">Your checks have been submitted</h1>
+        <div class="govuk-panel__body">
+          <div id="reference-number" class="govuk-!-font-size-24">
+            <strong>CHEDPP.GB.2024.1049186</strong>
+          </div>
+        </div>
+      </div>
+        <div>
+          <h2 class="govuk-heading-m">Checks still to do</h2>
+          <div class="">
+            <p class="govuk-body govuk-!-margin-bottom-1"><strong>500</strong> documentary checks</p>
+              <p class="govuk-body govuk-!-margin-bottom-1"><strong>500</strong> identity checks</p>
+              <p class="govuk-body govuk-!-margin-bottom-1"><strong>500</strong> physical checks</p>
+          </div>
+        </div>
+        <p class="govuk-!-margin-bottom-8"></p>
+        <a id="submit-more-checks-button" rel="noopener noreferrer" class="govuk-button govuk-!-margin-right-1" href="/decision/vnet/protected/bip-notifications/CHEDPP.GB.2024.1049186/select-checks" target="_self">Submit more checks</a>
+      <a id="return-work-order-button" rel="noopener noreferrer" class="govuk-button govuk-!-margin-top-5" href="https://defra-trade-int-plants.crm4.dynamics.com/main.aspx?appid=15ea79e3-2c06-eb11-a813-000d3a2c3aed" target="_self">Return to work order</a>
+      <p class="govuk-body">
+        <a id="phsi-checks-multiple-summary" class="govuk-link" href="/decision/vnet/protected/bip-notifications/CHEDPP.GB.2024.1049186/hub">
+          Return to Decision hub
+        </a>
+      </p>
+      <div class="govuk-grid-row govuk-!-margin-top-9 govuk-!-margin-left-0">
+          <div class="footer_feedback">
+              <h2 class="govuk-heading-s govuk-!-margin-top-4">Tell us what we can improve</h2>
+              <p class="govuk-body">
+                  <a href="https://defragroup.eu.qualtrics.com/jfe/form/SV_3a7O8heitk4GtWS?user=inspector&amp;link_location=decision" class="govuk-link" target="_blank" id="feedbackFooterLink" rel="noopener">What did you think of this service? (opens in new tab)</a>
+              </p>
+          </div>
+      </div>    </div>
+  </div>
+</main>
+
+</div>
+  
+
+  
+
+ 
+
+{% endblock %}
