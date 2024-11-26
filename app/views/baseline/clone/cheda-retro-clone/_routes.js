@@ -19,13 +19,11 @@ router.post('/route-cheda-how-add', function (req, res) {
   // Make a variable and give it the value from name
   var howAdd = req.session.data['addhc']
   if (howAdd == "Clone-info") {
-    res.redirect('03a-certificate-reference')
+    res.redirect('02a-cr37-which-digital-health-certificate')
   }
-  else if (howAdd == "Clone-doc") {
-    res.redirect('03a-certificate-reference')
-  }
+ 
  else if (howAdd == "Manual") {
-    res.redirect('03-01-certificate')
+    res.redirect('/baseline/cheda/part1/03-02-latest-health-cert')
   }
  else {
     res.redirect('03-02-documents')
