@@ -1,0 +1,930 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+    {% include "includes/phase-banner.html" %}
+    {% include "includes/back.html" %} 
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-!-padding-bottom-6">
+  <span class="heading-tertiary">DRAFT.GB.2024.6697492 - CHEDPP</span>
+  </div>
+
+
+<main class="govuk-main-wrapper" id="main-content">
+  <div class="govuk-grid-row" id="search-economic-operators-page">
+    <div class="govuk-grid-column-full">
+        <span class="govuk-caption-xl" id="page-secondary-title">Traders</span>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing packer</h1>
+
+      <form class="govuk-!-margin-bottom-6" action="search" method="GET">
+        <div class="form-group search-panel">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Search
+            </legend>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="name">
+                        Name
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="name" name="name" type="text" value="">
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="address">
+                        Address
+                      </label>
+                      
+                  
+                  
+                      
+                  
+                    <input class="govuk-input  " id="address" name="address" type="text" value="">
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group  ">
+                      
+                      <label class="govuk-label " for="type">
+                        Type
+                      </label>
+                      
+                  
+                  
+                  
+                    
+                  
+                    <select class="govuk-select govuk-!-width-full" id="type" name="type">
+                        <option value="">Select type</option>
+                        <option value="Balai">Balai</option>
+                        <option value="Quarantine">Quarantine</option>
+                        <option value="Bird Quarantine">Bird Quarantine</option>
+                        <option value="ABP">ABP</option>
+                        <option value="Other Controlled Destination">Other Controlled Destination</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="country">Country</label>
+                    <select class="govuk-select govuk-!-width-full" id="country" name="country">
+                      <option value="">Select country</option>
+                                  <option value="AF">Afghanistan</option>
+                                  <option value="AX">Aland Islands</option>
+                                  <option value="AL">Albania</option>
+                                  <option value="DZ">Algeria</option>
+                                  <option value="AS">American Samoa</option>
+                                  <option value="AD">Andorra</option>
+                                  <option value="AO">Angola</option>
+                                  <option value="AI">Anguilla</option>
+                                  <option value="AQ">Antarctica</option>
+                                  <option value="AG">Antigua and Barbuda</option>
+                                  <option value="AR">Argentina</option>
+                                  <option value="AM">Armenia</option>
+                                  <option value="AW">Aruba</option>
+                                  <option value="AU">Australia</option>
+                                  <option value="AT">Austria</option>
+                                  <option value="AZ">Azerbaijan</option>
+                                  <option value="BS">Bahamas</option>
+                                  <option value="BH">Bahrain</option>
+                                  <option value="BD">Bangladesh</option>
+                                  <option value="BB">Barbados</option>
+                                  <option value="BY">Belarus</option>
+                                  <option value="BE">Belgium</option>
+                                  <option value="BZ">Belize</option>
+                                  <option value="BJ">Benin</option>
+                                  <option value="BM">Bermuda</option>
+                                  <option value="BT">Bhutan</option>
+                                  <option value="BO">Bolivia</option>
+                                  <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                  <option value="BA">Bosnia and Herzegovina</option>
+                                  <option value="BW">Botswana</option>
+                                  <option value="BV">Bouvet Island</option>
+                                  <option value="BR">Brazil</option>
+                                  <option value="IO">British Indian Ocean Territory</option>
+                                  <option value="VG">British Virgin Islands</option>
+                                  <option value="BN">Brunei</option>
+                                  <option value="BG">Bulgaria</option>
+                                  <option value="BF">Burkina Faso</option>
+                                  <option value="BI">Burundi</option>
+                                  <option value="KH">Cambodia</option>
+                                  <option value="CM">Cameroon</option>
+                                  <option value="CA">Canada</option>
+                                  <option value="ES-CN">Canary Islands</option>
+                                  <option value="CV">Cape Verde</option>
+                                  <option value="KY">Cayman Islands</option>
+                                  <option value="CF">Central African Republic</option>
+                                  <option value="TD">Chad</option>
+                                  <option value="CL">Chile</option>
+                                  <option value="CN">China</option>
+                                  <option value="CX">Christmas Island</option>
+                                  <option value="CC">Cocos (Keeling) Islands</option>
+                                  <option value="CO">Colombia</option>
+                                  <option value="KM">Comoros</option>
+                                  <option value="CG">Congo</option>
+                                  <option value="CK">Cook Islands</option>
+                                  <option value="CR">Costa Rica</option>
+                                  <option value="CI">Côte d'Ivoire</option>
+                                  <option value="HR">Croatia</option>
+                                  <option value="CU">Cuba</option>
+                                  <option value="CW">Curaçao</option>
+                                  <option value="CY">Cyprus</option>
+                                  <option value="CZ">Czech Republic</option>
+                                  <option value="CD">Democratic Republic of the Congo</option>
+                                  <option value="DK">Denmark</option>
+                                  <option value="DJ">Djibouti</option>
+                                  <option value="DM">Dominica</option>
+                                  <option value="DO">Dominican Republic</option>
+                                  <option value="EC">Ecuador</option>
+                                  <option value="EG">Egypt</option>
+                                  <option value="SV">El Salvador</option>
+                                  <option value="GQ">Equatorial Guinea</option>
+                                  <option value="ER">Eritrea</option>
+                                  <option value="EE">Estonia</option>
+                                  <option value="SZ">Eswatini</option>
+                                  <option value="ET">Ethiopia</option>
+                                  <option value="FK">Falkland Islands</option>
+                                  <option value="FO">Faroe Islands</option>
+                                  <option value="FJ">Fiji</option>
+                                  <option value="FI">Finland</option>
+                                  <option value="FR">France</option>
+                                  <option value="GF">French Guiana</option>
+                                  <option value="PF">French Polynesia</option>
+                                  <option value="TF">French Southern Territories</option>
+                                  <option value="GA">Gabon</option>
+                                  <option value="GE">Georgia</option>
+                                  <option value="DE">Germany</option>
+                                  <option value="GH">Ghana</option>
+                                  <option value="GI">Gibraltar</option>
+                                  <option value="GR">Greece</option>
+                                  <option value="GL">Greenland</option>
+                                  <option value="GD">Grenada</option>
+                                  <option value="GP">Guadeloupe</option>
+                                  <option value="GU">Guam</option>
+                                  <option value="GT">Guatemala</option>
+                                  <option value="GG">Guernsey</option>
+                                  <option value="GN">Guinea</option>
+                                  <option value="GW">Guinea-Bissau</option>
+                                  <option value="GY">Guyana</option>
+                                  <option value="HT">Haiti</option>
+                                  <option value="HM">Heard Island and McDonald Islands</option>
+                                  <option value="VA">Holy See</option>
+                                  <option value="HN">Honduras</option>
+                                  <option value="HK">Hong Kong</option>
+                                  <option value="HU">Hungary</option>
+                                  <option value="IS">Iceland</option>
+                                  <option value="IN">India</option>
+                                  <option value="ID">Indonesia</option>
+                                  <option value="IR">Iran</option>
+                                  <option value="IQ">Iraq</option>
+                                  <option value="IM">Isle of Man</option>
+                                  <option value="IL">Israel</option>
+                                  <option value="IT">Italy</option>
+                                  <option value="JM">Jamaica</option>
+                                  <option value="JP">Japan</option>
+                                  <option value="JE">Jersey</option>
+                                  <option value="JO">Jordan</option>
+                                  <option value="KZ">Kazakhstan</option>
+                                  <option value="KE">Kenya</option>
+                                  <option value="KI">Kiribati</option>
+                                  <option value="XK">Kosovo</option>
+                                  <option value="KW">Kuwait</option>
+                                  <option value="KG">Kyrgyzstan</option>
+                                  <option value="LA">Laos</option>
+                                  <option value="LV">Latvia</option>
+                                  <option value="LB">Lebanon</option>
+                                  <option value="LS">Lesotho</option>
+                                  <option value="LR">Liberia</option>
+                                  <option value="LY">Libya</option>
+                                  <option value="LI">Liechtenstein</option>
+                                  <option value="LT">Lithuania</option>
+                                  <option value="LU">Luxembourg</option>
+                                  <option value="MO">Macao</option>
+                                  <option value="MG">Madagascar</option>
+                                  <option value="MW">Malawi</option>
+                                  <option value="MY">Malaysia</option>
+                                  <option value="MV">Maldives</option>
+                                  <option value="ML">Mali</option>
+                                  <option value="MT">Malta</option>
+                                  <option value="MH">Marshall Islands</option>
+                                  <option value="MQ">Martinique</option>
+                                  <option value="MR">Mauritania</option>
+                                  <option value="MU">Mauritius</option>
+                                  <option value="YT">Mayotte</option>
+                                  <option value="MX">Mexico</option>
+                                  <option value="FM">Micronesia</option>
+                                  <option value="MD">Moldova</option>
+                                  <option value="MC">Monaco</option>
+                                  <option value="MN">Mongolia</option>
+                                  <option value="ME">Montenegro</option>
+                                  <option value="MS">Montserrat</option>
+                                  <option value="MA">Morocco</option>
+                                  <option value="MZ">Mozambique</option>
+                                  <option value="MM">Myanmar</option>
+                                  <option value="NA">Namibia</option>
+                                  <option value="NR">Nauru</option>
+                                  <option value="NP">Nepal</option>
+                                  <option value="NL">Netherlands</option>
+                                  <option value="NC">New Caledonia</option>
+                                  <option value="NZ">New Zealand</option>
+                                  <option value="NI">Nicaragua</option>
+                                  <option value="NE">Niger</option>
+                                  <option value="NG">Nigeria</option>
+                                  <option value="NU">Niue</option>
+                                  <option value="NF">Norfolk Island</option>
+                                  <option value="KP">North Korea</option>
+                                  <option value="MK">North Macedonia</option>
+                                  <option value="MP">Northern Mariana Islands</option>
+                                  <option value="NO">Norway</option>
+                                  <option value="OM">Oman</option>
+                                  <option value="PK">Pakistan</option>
+                                  <option value="PW">Palau</option>
+                                  <option value="PA">Panama</option>
+                                  <option value="PG">Papua New Guinea</option>
+                                  <option value="PY">Paraguay</option>
+                                  <option value="PE">Peru</option>
+                                  <option value="PH">Philippines</option>
+                                  <option value="PN">Pitcairn</option>
+                                  <option value="PL">Poland</option>
+                                  <option value="PT">Portugal</option>
+                                  <option value="PR">Puerto Rico</option>
+                                  <option value="QA">Qatar</option>
+                                  <option value="IE">Republic of Ireland</option>
+                                  <option value="RE">Réunion</option>
+                                  <option value="RO">Romania</option>
+                                  <option value="RU">Russian Federation</option>
+                                  <option value="RW">Rwanda</option>
+                                  <option value="WS">Samoa</option>
+                                  <option value="SM">San Marino</option>
+                                  <option value="ST">Sao Tome and Principe</option>
+                                  <option value="SA">Saudi Arabia</option>
+                                  <option value="SN">Senegal</option>
+                                  <option value="RS">Serbia</option>
+                                  <option value="SC">Seychelles</option>
+                                  <option value="SL">Sierra Leone</option>
+                                  <option value="SG">Singapore</option>
+                                  <option value="SK">Slovakia</option>
+                                  <option value="SI">Slovenia</option>
+                                  <option value="SB">Solomon Islands</option>
+                                  <option value="SO">Somalia</option>
+                                  <option value="ZA">South Africa</option>
+                                  <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                  <option value="KR">South Korea</option>
+                                  <option value="SS">South Sudan</option>
+                                  <option value="ES">Spain</option>
+                                  <option value="LK">Sri Lanka</option>
+                                  <option value="BL">St Barthélemy</option>
+                                  <option value="SH">St Helena, Ascension and Tristan da Cunha</option>
+                                  <option value="KN">St Kitts and Nevis</option>
+                                  <option value="LC">St Lucia</option>
+                                  <option value="SX">St Maarten (Dutch)</option>
+                                  <option value="MF">St Martin (French)</option>
+                                  <option value="PM">St Pierre and Miquelon</option>
+                                  <option value="VC">St Vincent and the Grenadines</option>
+                                  <option value="SD">Sudan</option>
+                                  <option value="SR">Suriname</option>
+                                  <option value="SE">Sweden</option>
+                                  <option value="CH">Switzerland</option>
+                                  <option value="SY">Syria</option>
+                                  <option value="TW">Taiwan</option>
+                                  <option value="TJ">Tajikistan</option>
+                                  <option value="TZ">Tanzania</option>
+                                  <option value="TH">Thailand</option>
+                                  <option value="GM">The Gambia</option>
+                                  <option value="PS">The Occupied Palestinian Territories</option>
+                                  <option value="TL">Timor-Leste</option>
+                                  <option value="TG">Togo</option>
+                                  <option value="TK">Tokelau</option>
+                                  <option value="TO">Tonga</option>
+                                  <option value="TT">Trinidad and Tobago</option>
+                                  <option value="TN">Tunisia</option>
+                                  <option value="TR">Turkey</option>
+                                  <option value="TM">Turkmenistan</option>
+                                  <option value="TC">Turks and Caicos Islands</option>
+                                  <option value="TV">Tuvalu</option>
+                                  <option value="UG">Uganda</option>
+                                  <option value="UA">Ukraine</option>
+                                  <option value="AE">United Arab Emirates</option>
+                                  <optgroup label="United Kingdom of Great Britain and Northern Ireland">
+                                          <option value="GB-ENG">England</option>
+                                          <option value="GB-SCT">Scotland</option>
+                                          <option value="GB-WLS">Wales</option>
+                                          <option value="GB-NIR">Northern Ireland</option>
+                                  </optgroup>
+                                  <option value="UM">United States Minor Outlying Islands</option>
+                                  <option value="US">United States of America</option>
+                                  <option value="UY">Uruguay</option>
+                                  <option value="UZ">Uzbekistan</option>
+                                  <option value="VU">Vanuatu</option>
+                                  <option value="VE">Venezuela</option>
+                                  <option value="VN">Viet Nam</option>
+                                  <option value="VI">Virgin Islands of the United States</option>
+                                  <option value="WF">Wallis and Futuna</option>
+                                  <option value="EH">Western Sahara</option>
+                                  <option value="YE">Yemen</option>
+                                  <option value="ZM">Zambia</option>
+                                  <option value="ZW">Zimbabwe</option>
+                    </select>
+                  </div>
+                </div>
+            </div>
+          </fieldset>
+
+          <button class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search" data-module="govuk-button" data-prevent-double-click="true">Search</button>
+        </div>
+      </form>
+
+      <form action="04-02a-trader-addresses-added" method="POST">
+        <input name="crumb" type="hidden" value="keha1DOoAmmELZLuoAQXiLX4uf2H1u2amsf5rpMxz0p">
+        <input name="etag" type="hidden" value="&quot;0000000000224D16&quot;">
+
+        <div class="table-responsive">
+          <table class="govuk-table traders-search-results" id="Table-SearchResults">
+            <thead class="govuk-table__head">
+            <tr>
+                <th class="govuk-table__header" scope="col">Name</th>
+                <th class="govuk-table__header" scope="col">Address</th>
+                <th class="govuk-table__header" scope="col">Country</th>
+              <th class="govuk-table__header">
+                <span class="govuk-visually-hidden">View</span>
+              </th>
+              <th class="govuk-table__header">
+                <span class="govuk-visually-hidden">Select</span>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    e698637ab263481a95195cc9dacb5d98
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    285 Angelita Fort, Suite 873, North Dakota, North Amos, 88272
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-b5334368-3a09-4d70-a553-6be7ea6b2f4d" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    64d40356aba04f8c963475db81cc16ce
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    770 Dietrich Valley, Apt. 929, South Carolina, Dessiemouth, 17299
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-cb0ddeb6-76ba-4849-8b58-39a26b54f217" value="cb0ddeb6-76ba-4849-8b58-39a26b54f217">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="cb0ddeb6-76ba-4849-8b58-39a26b54f217">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    8ab92fdb792d40cfb80f36cb4ef06c65
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    7920 Wehner Fields, Apt. 599, Kansas, South Rodrigoland, 02485
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-62726451-1181-4097-b076-08f8b703b3b0" value="62726451-1181-4097-b076-08f8b703b3b0">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="62726451-1181-4097-b076-08f8b703b3b0">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    9572c7a06b9148f982262cac559d9c31
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    6989 Morgan Station, Suite 563, Colorado, Clarkchester, 68063
+                  </td>
+                  <td class="govuk-table__cell">
+                    France
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-28257d16-2000-49c5-a83e-ca271c27a729" value="28257d16-2000-49c5-a83e-ca271c27a729">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="28257d16-2000-49c5-a83e-ca271c27a729">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    9d45c0b4026d4d98ae0581895329e1df
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    51915 Dessie Center, Apt. 431, Oregon, Jamisonland, 66805
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-6f08c7ec-aa69-469b-ba9a-f8f2f3bcbcc4" value="6f08c7ec-aa69-469b-ba9a-f8f2f3bcbcc4">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="6f08c7ec-aa69-469b-ba9a-f8f2f3bcbcc4">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    77a98f7a287645a380e466f9e9ee1325
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    552 Friesen Ville, Suite 076, Oklahoma, Hyattmouth, 53196
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-ebfa23e3-d0e6-449e-ae50-f0e905b69eac" value="ebfa23e3-d0e6-449e-ae50-f0e905b69eac">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="ebfa23e3-d0e6-449e-ae50-f0e905b69eac">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    8c8735dd58994e2895da21382bada738
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    2275 Zackery Road, Apt. 982, North Dakota, Lake Kira, 84380-1
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-1092f3d1-b12b-4a33-b14e-6d7d8bedc435" value="1092f3d1-b12b-4a33-b14e-6d7d8bedc435">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="1092f3d1-b12b-4a33-b14e-6d7d8bedc435">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    4b2ba0cfc12342339c0b1e9483e97124
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    4522 Greg Lane, Suite 393, Indiana, Kozeyton, 84976
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-91aa1d0a-e2b3-4be8-9fa8-dfee3f2d8c80" value="91aa1d0a-e2b3-4be8-9fa8-dfee3f2d8c80">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="91aa1d0a-e2b3-4be8-9fa8-dfee3f2d8c80">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    3482a4d330404827878c6cb2ce74c618
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    7407 Walker Plaza, Apt. 885, Georgia, North Constancehaven, 20527-8
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-927f735f-b309-48b7-9218-55c6ae3e2f9b" value="927f735f-b309-48b7-9218-55c6ae3e2f9b">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="927f735f-b309-48b7-9218-55c6ae3e2f9b">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    41871fca9adc4cf58cc7606f146214c7
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    668 Monty Mission, Apt. 074, Nebraska, Doloresview, 45791
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-8b23f175-fd93-4bc0-abec-957fac09c9a3" value="8b23f175-fd93-4bc0-abec-957fac09c9a3">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="8b23f175-fd93-4bc0-abec-957fac09c9a3">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    206cc33072df4eafb576b188e553a149
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    0098 Jakubowski Islands, Apt. 788, Virginia, Port Daniellefort, 41535-6
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-e5029e43-eb26-4cb9-b6cc-a10ac1ca5811" value="e5029e43-eb26-4cb9-b6cc-a10ac1ca5811">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="e5029e43-eb26-4cb9-b6cc-a10ac1ca5811">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    187c7417f7444e8ab96accf054c04f9a
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    455 Schneider Ridges, Apt. 976, Minnesota, Jamarcusville, 97321-2
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-bce74e9f-5693-4792-80e4-2b37b63bc7f8" value="bce74e9f-5693-4792-80e4-2b37b63bc7f8">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="bce74e9f-5693-4792-80e4-2b37b63bc7f8">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    6a816a83db9549de9d9d89ac78fcb9c7
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    249 Luz Meadows, Suite 182, Arizona, Rosachester, 57491-3
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-ec58ae37-6216-41e1-968d-4a73b8076dce" value="ec58ae37-6216-41e1-968d-4a73b8076dce">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="ec58ae37-6216-41e1-968d-4a73b8076dce">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    d965220ed2fc4fa589c4e3013ed764d6
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    002 Medhurst Ridges, Apt. 445, Minnesota, Gusikowskimouth, 60747
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-c8c49c3e-6e5c-40da-8b7d-c070704a78ee" value="c8c49c3e-6e5c-40da-8b7d-c070704a78ee">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="c8c49c3e-6e5c-40da-8b7d-c070704a78ee">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    c3ec7639d6624a5ca84994ac7e2136e5
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    937 Morris Wall, Suite 128, Idaho, Chesleyborough, 31751
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-cf0d4edd-894f-4f97-ab1f-444b1674d049" value="cf0d4edd-894f-4f97-ab1f-444b1674d049">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="cf0d4edd-894f-4f97-ab1f-444b1674d049">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    301879fae21c4599873f37016d5c0014
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    940 Bergnaum Crescent, Suite 201, Iowa, South Kasandrastad, 73458
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-2a07c415-79c0-4060-a767-65285e5607bf" value="2a07c415-79c0-4060-a767-65285e5607bf">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="2a07c415-79c0-4060-a767-65285e5607bf">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    27dbe660c0ce48b88a6db90442350b86
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    288 Upton Station, Apt. 535, Utah, Port Benjamin, 07189
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-0c5d2f92-b047-4bc9-8a82-d29d72f270e1" value="0c5d2f92-b047-4bc9-8a82-d29d72f270e1">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="0c5d2f92-b047-4bc9-8a82-d29d72f270e1">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    e177e60d0e75424486505673d78d01db
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    6430 Dooley Landing, Suite 457, New Hampshire, Hyattside, 86651-6
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-70f052c3-0b69-4bad-a2b7-66fc6eeaa474" value="70f052c3-0b69-4bad-a2b7-66fc6eeaa474">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="70f052c3-0b69-4bad-a2b7-66fc6eeaa474">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    5b58de79855a41e7901d7d857c584fe1
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    5999 Fahey Dam, Apt. 271, Nebraska, Port Ulisesport, 61085-1
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-0cdb8c80-e43c-4669-b6f3-6a85dff1a1de" value="0cdb8c80-e43c-4669-b6f3-6a85dff1a1de">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="0cdb8c80-e43c-4669-b6f3-6a85dff1a1de">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    eb958a299cbb4f7ca779cc2e30c7f275
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    69083 Emilie Manors, Suite 131, Arkansas, Keeblerland, 18232
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-e07c5c9e-585e-43df-83dd-bb022aac0f97" value="e07c5c9e-585e-43df-83dd-bb022aac0f97">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="e07c5c9e-585e-43df-83dd-bb022aac0f97">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    6fba0132ad954ab1a2bc270ad7c9c05e
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    04242 Winfield Flats, Suite 222, South Carolina, Lake Troystad, 46860
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-85a25840-1e30-4a20-8352-7c77c2ddb540" value="85a25840-1e30-4a20-8352-7c77c2ddb540">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="85a25840-1e30-4a20-8352-7c77c2ddb540">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    7a5293e4d8a64e5c8e9f28143b0bbaec
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    63514 Diana Plaza, Apt. 644, Colorado, Lake Bellemouth, 89567
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-6e5c2abe-c163-4fa3-9dfa-d6242cd53175" value="6e5c2abe-c163-4fa3-9dfa-d6242cd53175">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="6e5c2abe-c163-4fa3-9dfa-d6242cd53175">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    d8090bdff00c4d5b8d2b28be6f59e504
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    574 Nader Glen, Suite 207, South Dakota, Trompstad, 75494-1
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-78f88803-fb4b-4a03-9c19-7ad857d389f0" value="78f88803-fb4b-4a03-9c19-7ad857d389f0">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="78f88803-fb4b-4a03-9c19-7ad857d389f0">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    1327379999024107bd913ddd18e1c069
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    022 D'Amore Landing, Suite 827, Idaho, Port Ignacio, 62137
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-923ca7f6-c190-4bb8-a6fd-1fcf1de040c9" value="923ca7f6-c190-4bb8-a6fd-1fcf1de040c9">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="923ca7f6-c190-4bb8-a6fd-1fcf1de040c9">
+                    Select
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                  <td class="govuk-table__cell economic-operator-name">
+                    baeec96b68484072890a14b15527e159
+                  </td>
+                  <td class="govuk-table__cell economic-operator-address">
+                    853 Grimes Common, Suite 039, Michigan, New Guillermo, 61298
+                  </td>
+                  <td class="govuk-table__cell">
+                    United Kingdom of Great Britain and Northern Ireland
+                  </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-90a5bbea-a43f-47f1-aaa9-8625dff93787" value="90a5bbea-a43f-47f1-aaa9-8625dff93787">
+                    View
+                  </button>
+                </td>
+                <td class="govuk-table__cell">
+                  <button type="submit" class="link-button" name="add-id" value="90a5bbea-a43f-47f1-aaa9-8625dff93787">
+                    Select
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+
+      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1088756/traders/final-destination/new" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
+        Create a new delivery address
+      </a>
+
+        <nav class="pagination" aria-label="Pagination">
+          <ul class="pagination-list">
+              <li class="pagination-item pagination-item-next">
+                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                    <span class="pagination-link-title">
+                       Next page
+                      <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                      </svg>
+                    </span>
+                    <span class="govuk-visually-hidden">:</span>
+                    <span class="pagination-link-label">2 of 451</span>
+                  </a>
+              </li>
+          </ul>
+        </nav>
+      
+    </div>
+  </div>
+</main>
+
+{% endblock %}

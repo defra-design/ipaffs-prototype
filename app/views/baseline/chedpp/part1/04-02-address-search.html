@@ -1,8 +1,7 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
+Addresses – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,24 +11,26 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
 
-
-
-<div class="govuk-!-padding-bottom-6">
-  <span class="heading-tertiary">DRAFT.GB.2024.6697492 - CHEDPP</span>
-  </div>
+<div class="govuk-!-padding-top-6">
+  <span class="heading-tertiary">
+      <span id="reference-number">DRAFT.GB.2023.5925980</span>
+          <span> - CHEDP</span>
+  </span>
+</div>
 
 
 <main class="govuk-main-wrapper" id="main-content">
   <div class="govuk-grid-row" id="search-economic-operators-page">
     <div class="govuk-grid-column-full">
-        <span class="govuk-caption-xl" id="page-secondary-title">Traders</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing delivery address</h1>
-
+          <span class="govuk-caption-xl">Traders</span>
+          <h1 class="govuk-heading-xl" id="page-primary-title">Add a{{ data['addressType'] }}</h1>
+      <!-- <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1> -->
       <form class="govuk-!-margin-bottom-6" action="search" method="GET">
+
         <div class="form-group search-panel">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Search
+              Search for an existing {{ data['addressType'] }}
             </legend>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
@@ -60,30 +61,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                     <input class="govuk-input  " id="address" name="address" type="text" value="">
                   </div>
                 </div>
-                <div class="govuk-grid-column-one-third">
-                  <div class="govuk-form-group  ">
-                      
-                      <label class="govuk-label " for="type">
-                        Type
-                      </label>
-                      
-                  
-                  
-                  
-                    
-                  
-                    <select class="govuk-select govuk-!-width-full" id="type" name="type">
-                        <option value="">Select type</option>
-                        <option value="Balai">Balai</option>
-                        <option value="Quarantine">Quarantine</option>
-                        <option value="Bird Quarantine">Bird Quarantine</option>
-                        <option value="ABP">ABP</option>
-                        <option value="Other Controlled Destination">Other Controlled Destination</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="govuk-grid-column-one-third">
-                  <div class="govuk-form-group">
+                  <div class="govuk-grid-column-one-third">
                     <label class="govuk-label" for="country">Country</label>
                     <select class="govuk-select govuk-!-width-full" id="country" name="country">
                       <option value="">Select country</option>
@@ -325,9 +303,9 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                                   <option value="AE">United Arab Emirates</option>
                                   <optgroup label="United Kingdom of Great Britain and Northern Ireland">
                                           <option value="GB-ENG">England</option>
+                                          <option value="GB-NIR">Northern Ireland</option>
                                           <option value="GB-SCT">Scotland</option>
                                           <option value="GB-WLS">Wales</option>
-                                          <option value="GB-NIR">Northern Ireland</option>
                                   </optgroup>
                                   <option value="UM">United States Minor Outlying Islands</option>
                                   <option value="US">United States of America</option>
@@ -344,17 +322,37 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                                   <option value="ZW">Zimbabwe</option>
                     </select>
                   </div>
-                </div>
             </div>
           </fieldset>
 
-          <button class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search" data-module="govuk-button" data-prevent-double-click="true">Search</button>
+          <input class="govuk-button govuk-!-margin-bottom-0" id="search" type="submit" value="Search" data-module="govuk-button">
         </div>
       </form>
 
-      <form action="04-tr-01-trader-addresses" method="POST">
-        <input name="crumb" type="hidden" value="keha1DOoAmmELZLuoAQXiLX4uf2H1u2amsf5rpMxz0p">
-        <input name="etag" type="hidden" value="&quot;0000000000224D16&quot;">
+      <form action="04-01-addresses" method="POST">
+        <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
+        <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
+        <!-- <input name="14a-address-search" type="hidden" value="visited">  -->
+        {% if (data['addressType'] == " n importer") %}
+        <input name="importer-page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
+
+        {% if (data['addressType'] == " packer") %}
+        <input name="packer-page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
+        {% if (data['addressType'] == " delivery address") %}
+         <input name="delivery-address--page" type="hidden" value="yes"> 
+        {% else %}
+        {% endif %}
+        {% if (data['addressType'] == " consignor or exporter") %}
+       <input name="consignor-page" type="hidden" value="yes"> 
+       {% else %}
+        {% endif %}
+
+
+
 
         <div class="table-responsive">
           <table class="govuk-table traders-search-results" id="Table-SearchResults">
@@ -363,6 +361,8 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                 <th class="govuk-table__header" scope="col">Name</th>
                 <th class="govuk-table__header" scope="col">Address</th>
                 <th class="govuk-table__header" scope="col">Country</th>
+                <th class="govuk-table__header" scope="col">Status</th>
+                
               <th class="govuk-table__header">
                 <span class="govuk-visually-hidden">View</span>
               </th>
@@ -374,525 +374,625 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
             <tbody>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    e698637ab263481a95195cc9dacb5d98
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    285 Angelita Fort, Suite 873, North Dakota, North Amos, 88272
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Argentina
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-b5334368-3a09-4d70-a553-6be7ea6b2f4d" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-da0cbedc-cf69-4940-a807-64a30a3fa1af" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="b5334368-3a09-4d70-a553-6be7ea6b2f4d">
+                  <button type="submit" class="link-button" name="add-id" value="da0cbedc-cf69-4940-a807-64a30a3fa1af">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    64d40356aba04f8c963475db81cc16ce
+                    UKConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    770 Dietrich Valley, Apt. 929, South Carolina, Dessiemouth, 17299
+                    UKAddressLine1, UKCity, UK12345
                   </td>
                   <td class="govuk-table__cell">
                     United Kingdom of Great Britain and Northern Ireland
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-cb0ddeb6-76ba-4849-8b58-39a26b54f217" value="cb0ddeb6-76ba-4849-8b58-39a26b54f217">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-69ce4f4c-3123-422d-ad28-f6999aadcb3b" value="69ce4f4c-3123-422d-ad28-f6999aadcb3b">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="cb0ddeb6-76ba-4849-8b58-39a26b54f217">
+                  <button type="submit" class="link-button" name="add-id" value="14b-traders-entered">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    8ab92fdb792d40cfb80f36cb4ef06c65
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    7920 Wehner Fields, Apt. 599, Kansas, South Rodrigoland, 02485
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Argentina
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-62726451-1181-4097-b076-08f8b703b3b0" value="62726451-1181-4097-b076-08f8b703b3b0">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd" value="d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="62726451-1181-4097-b076-08f8b703b3b0">
+                  <button type="submit" class="link-button" name="add-id" value="d3fb1c19-ec9f-4f90-afb1-f3876f1ab6fd">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    9572c7a06b9148f982262cac559d9c31
+                    VIConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    6989 Morgan Station, Suite 563, Colorado, Clarkchester, 68063
+                    VIAddressLine1, VICity, VI12345
                   </td>
                   <td class="govuk-table__cell">
-                    France
+                    Virgin Islands of the United States
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-28257d16-2000-49c5-a83e-ca271c27a729" value="28257d16-2000-49c5-a83e-ca271c27a729">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-306c1de8-bb60-42af-b2a1-0cddad19d1a7" value="306c1de8-bb60-42af-b2a1-0cddad19d1a7">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="28257d16-2000-49c5-a83e-ca271c27a729">
+                  <button type="submit" class="link-button" name="add-id" value="306c1de8-bb60-42af-b2a1-0cddad19d1a7">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    9d45c0b4026d4d98ae0581895329e1df
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    51915 Dessie Center, Apt. 431, Oregon, Jamisonland, 66805
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Argentina
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-6f08c7ec-aa69-469b-ba9a-f8f2f3bcbcc4" value="6f08c7ec-aa69-469b-ba9a-f8f2f3bcbcc4">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-c0db5909-6228-4795-9119-1b1f6390ed3c" value="c0db5909-6228-4795-9119-1b1f6390ed3c">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="6f08c7ec-aa69-469b-ba9a-f8f2f3bcbcc4">
+                  <button type="submit" class="link-button" name="add-id" value="c0db5909-6228-4795-9119-1b1f6390ed3c">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    77a98f7a287645a380e466f9e9ee1325
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    552 Friesen Ville, Suite 076, Oklahoma, Hyattmouth, 53196
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Argentina
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-ebfa23e3-d0e6-449e-ae50-f0e905b69eac" value="ebfa23e3-d0e6-449e-ae50-f0e905b69eac">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-cd33b9e8-e726-4bbf-8a33-a2ff8b43080b" value="cd33b9e8-e726-4bbf-8a33-a2ff8b43080b">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="ebfa23e3-d0e6-449e-ae50-f0e905b69eac">
+                  <button type="submit" class="link-button" name="add-id" value="cd33b9e8-e726-4bbf-8a33-a2ff8b43080b">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    8c8735dd58994e2895da21382bada738
+                    GMConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    2275 Zackery Road, Apt. 982, North Dakota, Lake Kira, 84380-1
+                    GMAddressLine1, GMCity, GM12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    The Gambia
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-1092f3d1-b12b-4a33-b14e-6d7d8bedc435" value="1092f3d1-b12b-4a33-b14e-6d7d8bedc435">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-1051986e-ddf6-4379-8397-f1423e4f361a" value="1051986e-ddf6-4379-8397-f1423e4f361a">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="1092f3d1-b12b-4a33-b14e-6d7d8bedc435">
+                  <button type="submit" class="link-button" name="add-id" value="1051986e-ddf6-4379-8397-f1423e4f361a">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    4b2ba0cfc12342339c0b1e9483e97124
+                    VAConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    4522 Greg Lane, Suite 393, Indiana, Kozeyton, 84976
+                    VAAddressLine1, VACity, VA12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Holy See
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-91aa1d0a-e2b3-4be8-9fa8-dfee3f2d8c80" value="91aa1d0a-e2b3-4be8-9fa8-dfee3f2d8c80">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-f9890ecf-1dd3-4264-bb16-bd43f3a70ded" value="f9890ecf-1dd3-4264-bb16-bd43f3a70ded">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="91aa1d0a-e2b3-4be8-9fa8-dfee3f2d8c80">
+                  <button type="submit" class="link-button" name="add-id" value="f9890ecf-1dd3-4264-bb16-bd43f3a70ded">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    3482a4d330404827878c6cb2ce74c618
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    7407 Walker Plaza, Apt. 885, Georgia, North Constancehaven, 20527-8
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Argentina
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-927f735f-b309-48b7-9218-55c6ae3e2f9b" value="927f735f-b309-48b7-9218-55c6ae3e2f9b">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-730a99e7-9df9-47b2-a00e-cb2f2e81f7b6" value="730a99e7-9df9-47b2-a00e-cb2f2e81f7b6">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="927f735f-b309-48b7-9218-55c6ae3e2f9b">
+                  <button type="submit" class="link-button" name="add-id" value="730a99e7-9df9-47b2-a00e-cb2f2e81f7b6">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    41871fca9adc4cf58cc7606f146214c7
+                    CGConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    668 Monty Mission, Apt. 074, Nebraska, Doloresview, 45791
+                    CGAddressLine1, CGCity, CG12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Congo
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-8b23f175-fd93-4bc0-abec-957fac09c9a3" value="8b23f175-fd93-4bc0-abec-957fac09c9a3">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-66e731c0-275e-41cd-8c2e-e9728b3a7ec9" value="66e731c0-275e-41cd-8c2e-e9728b3a7ec9">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="8b23f175-fd93-4bc0-abec-957fac09c9a3">
+                  <button type="submit" class="link-button" name="add-id" value="66e731c0-275e-41cd-8c2e-e9728b3a7ec9">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    206cc33072df4eafb576b188e553a149
+                    MKConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    0098 Jakubowski Islands, Apt. 788, Virginia, Port Daniellefort, 41535-6
+                    MKAddressLine1, MKCity, MK12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    North Macedonia
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-e5029e43-eb26-4cb9-b6cc-a10ac1ca5811" value="e5029e43-eb26-4cb9-b6cc-a10ac1ca5811">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-9cfa0bcd-0d1c-4320-8c90-1b10e40f582a" value="9cfa0bcd-0d1c-4320-8c90-1b10e40f582a">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="e5029e43-eb26-4cb9-b6cc-a10ac1ca5811">
+                  <button type="submit" class="link-button" name="add-id" value="9cfa0bcd-0d1c-4320-8c90-1b10e40f582a">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    187c7417f7444e8ab96accf054c04f9a
+                    ARConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    455 Schneider Ridges, Apt. 976, Minnesota, Jamarcusville, 97321-2
+                    ARAddressLine1, ARCity, AR12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Argentina
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-bce74e9f-5693-4792-80e4-2b37b63bc7f8" value="bce74e9f-5693-4792-80e4-2b37b63bc7f8">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-d85fb445-7b0d-419e-ab6b-2bb41cc403f4" value="d85fb445-7b0d-419e-ab6b-2bb41cc403f4">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="bce74e9f-5693-4792-80e4-2b37b63bc7f8">
+                  <button type="submit" class="link-button" name="add-id" value="d85fb445-7b0d-419e-ab6b-2bb41cc403f4">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    6a816a83db9549de9d9d89ac78fcb9c7
+                    CIConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    249 Luz Meadows, Suite 182, Arizona, Rosachester, 57491-3
+                    CIAddressLine1, CICity, CI12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Côte d'Ivoire
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-ec58ae37-6216-41e1-968d-4a73b8076dce" value="ec58ae37-6216-41e1-968d-4a73b8076dce">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-9a99bca7-49d9-44c2-b5f7-3209cda4aea5" value="9a99bca7-49d9-44c2-b5f7-3209cda4aea5">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="ec58ae37-6216-41e1-968d-4a73b8076dce">
+                  <button type="submit" class="link-button" name="add-id" value="9a99bca7-49d9-44c2-b5f7-3209cda4aea5">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    d965220ed2fc4fa589c4e3013ed764d6
+                    MOConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    002 Medhurst Ridges, Apt. 445, Minnesota, Gusikowskimouth, 60747
+                    MOAddressLine1, MOCity, MO12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Macao
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-c8c49c3e-6e5c-40da-8b7d-c070704a78ee" value="c8c49c3e-6e5c-40da-8b7d-c070704a78ee">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-e4763f30-03b5-4870-bc11-dc2d79e136b7" value="e4763f30-03b5-4870-bc11-dc2d79e136b7">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="c8c49c3e-6e5c-40da-8b7d-c070704a78ee">
+                  <button type="submit" class="link-button" name="add-id" value="e4763f30-03b5-4870-bc11-dc2d79e136b7">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    c3ec7639d6624a5ca84994ac7e2136e5
+                    VIConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    937 Morris Wall, Suite 128, Idaho, Chesleyborough, 31751
+                    VIAddressLine1, VICity, VI12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Virgin Islands of the United States
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-cf0d4edd-894f-4f97-ab1f-444b1674d049" value="cf0d4edd-894f-4f97-ab1f-444b1674d049">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-7f766549-d9a0-4d23-9609-9fa914167c21" value="7f766549-d9a0-4d23-9609-9fa914167c21">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="cf0d4edd-894f-4f97-ab1f-444b1674d049">
+                  <button type="submit" class="link-button" name="add-id" value="7f766549-d9a0-4d23-9609-9fa914167c21">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    301879fae21c4599873f37016d5c0014
+                    KGConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    940 Bergnaum Crescent, Suite 201, Iowa, South Kasandrastad, 73458
+                    KGAddressLine1, KGCity, KG12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Kyrgyzstan
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-2a07c415-79c0-4060-a767-65285e5607bf" value="2a07c415-79c0-4060-a767-65285e5607bf">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-85e2f624-4ba9-4ec1-a1f9-938676fc2ddb" value="85e2f624-4ba9-4ec1-a1f9-938676fc2ddb">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="2a07c415-79c0-4060-a767-65285e5607bf">
+                  <button type="submit" class="link-button" name="add-id" value="85e2f624-4ba9-4ec1-a1f9-938676fc2ddb">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    27dbe660c0ce48b88a6db90442350b86
+                    GYConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    288 Upton Station, Apt. 535, Utah, Port Benjamin, 07189
+                    GYAddressLine1, GYCity, GY12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Guyana
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-0c5d2f92-b047-4bc9-8a82-d29d72f270e1" value="0c5d2f92-b047-4bc9-8a82-d29d72f270e1">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-22d3a23c-c8eb-49e9-9a92-25be56586e83" value="22d3a23c-c8eb-49e9-9a92-25be56586e83">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="0c5d2f92-b047-4bc9-8a82-d29d72f270e1">
+                  <button type="submit" class="link-button" name="add-id" value="22d3a23c-c8eb-49e9-9a92-25be56586e83">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    e177e60d0e75424486505673d78d01db
+                    MSConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    6430 Dooley Landing, Suite 457, New Hampshire, Hyattside, 86651-6
+                    MSAddressLine1, MSCity, MS12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Montserrat
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-70f052c3-0b69-4bad-a2b7-66fc6eeaa474" value="70f052c3-0b69-4bad-a2b7-66fc6eeaa474">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-9a1591de-7809-4841-8183-714edb64f38b" value="9a1591de-7809-4841-8183-714edb64f38b">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="70f052c3-0b69-4bad-a2b7-66fc6eeaa474">
+                  <button type="submit" class="link-button" name="add-id" value="9a1591de-7809-4841-8183-714edb64f38b">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    5b58de79855a41e7901d7d857c584fe1
+                    PHConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    5999 Fahey Dam, Apt. 271, Nebraska, Port Ulisesport, 61085-1
+                    PHAddressLine1, PHCity, PH12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Philippines
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-0cdb8c80-e43c-4669-b6f3-6a85dff1a1de" value="0cdb8c80-e43c-4669-b6f3-6a85dff1a1de">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-244eae4f-4d71-4ced-b7b1-f407226a745f" value="244eae4f-4d71-4ced-b7b1-f407226a745f">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="0cdb8c80-e43c-4669-b6f3-6a85dff1a1de">
+                  <button type="submit" class="link-button" name="add-id" value="244eae4f-4d71-4ced-b7b1-f407226a745f">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    eb958a299cbb4f7ca779cc2e30c7f275
+                    SJConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    69083 Emilie Manors, Suite 131, Arkansas, Keeblerland, 18232
+                    SJAddressLine1, SJCity, SJ12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    SJ
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-e07c5c9e-585e-43df-83dd-bb022aac0f97" value="e07c5c9e-585e-43df-83dd-bb022aac0f97">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-a6263819-262a-492f-b16f-be90d9f947ef" value="a6263819-262a-492f-b16f-be90d9f947ef">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="e07c5c9e-585e-43df-83dd-bb022aac0f97">
+                  <button type="submit" class="link-button" name="add-id" value="a6263819-262a-492f-b16f-be90d9f947ef">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    6fba0132ad954ab1a2bc270ad7c9c05e
+                    VEConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    04242 Winfield Flats, Suite 222, South Carolina, Lake Troystad, 46860
+                    VEAddressLine1, VECity, VE12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Venezuela
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-85a25840-1e30-4a20-8352-7c77c2ddb540" value="85a25840-1e30-4a20-8352-7c77c2ddb540">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-9f4d80ae-25b5-4d64-b318-7117613cc907" value="9f4d80ae-25b5-4d64-b318-7117613cc907">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="85a25840-1e30-4a20-8352-7c77c2ddb540">
+                  <button type="submit" class="link-button" name="add-id" value="9f4d80ae-25b5-4d64-b318-7117613cc907">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    7a5293e4d8a64e5c8e9f28143b0bbaec
+                    IRConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    63514 Diana Plaza, Apt. 644, Colorado, Lake Bellemouth, 89567
+                    IRAddressLine1, IRCity, IR12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Iran
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-6e5c2abe-c163-4fa3-9dfa-d6242cd53175" value="6e5c2abe-c163-4fa3-9dfa-d6242cd53175">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-d10edae1-0529-4687-862b-2e5d74230add" value="d10edae1-0529-4687-862b-2e5d74230add">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="6e5c2abe-c163-4fa3-9dfa-d6242cd53175">
+                  <button type="submit" class="link-button" name="add-id" value="d10edae1-0529-4687-862b-2e5d74230add">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    d8090bdff00c4d5b8d2b28be6f59e504
+                    BBConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    574 Nader Glen, Suite 207, South Dakota, Trompstad, 75494-1
+                    BBAddressLine1, BBCity, BB12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Barbados
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-78f88803-fb4b-4a03-9c19-7ad857d389f0" value="78f88803-fb4b-4a03-9c19-7ad857d389f0">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-3e50c181-f27b-403c-a918-9ae2dd1056bb" value="3e50c181-f27b-403c-a918-9ae2dd1056bb">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="78f88803-fb4b-4a03-9c19-7ad857d389f0">
+                  <button type="submit" class="link-button" name="add-id" value="3e50c181-f27b-403c-a918-9ae2dd1056bb">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    1327379999024107bd913ddd18e1c069
+                    SNConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    022 D'Amore Landing, Suite 827, Idaho, Port Ignacio, 62137
+                    SNAddressLine1, SNCity, SN12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Senegal
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-923ca7f6-c190-4bb8-a6fd-1fcf1de040c9" value="923ca7f6-c190-4bb8-a6fd-1fcf1de040c9">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-a7cd80ad-c021-4940-8ae3-5dd974e69f9c" value="a7cd80ad-c021-4940-8ae3-5dd974e69f9c">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="923ca7f6-c190-4bb8-a6fd-1fcf1de040c9">
+                  <button type="submit" class="link-button" name="add-id" value="a7cd80ad-c021-4940-8ae3-5dd974e69f9c">
                     Select
                   </button>
                 </td>
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    baeec96b68484072890a14b15527e159
+                    FMConsignor
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    853 Grimes Common, Suite 039, Michigan, New Guillermo, 61298
+                    FMAddressLine1, FMCity, FM12345
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    Micronesia
                   </td>
+                  <td class="govuk-table__cell">
+                    New
+                  </td>
+                  
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="view-id" id="view-button-90a5bbea-a43f-47f1-aaa9-8625dff93787" value="90a5bbea-a43f-47f1-aaa9-8625dff93787">
+                  <button type="submit" class="link-button" name="view-id" id="view-button-d262f5c2-5333-44f7-9bda-b94905e29fac" value="d262f5c2-5333-44f7-9bda-b94905e29fac">
                     View
                   </button>
                 </td>
                 <td class="govuk-table__cell">
-                  <button type="submit" class="link-button" name="add-id" value="90a5bbea-a43f-47f1-aaa9-8625dff93787">
+                  <button type="submit" class="link-button" name="add-id" value="d262f5c2-5333-44f7-9bda-b94905e29fac">
                     Select
                   </button>
                 </td>
@@ -902,14 +1002,26 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </form>
 
-      <a href="/notification/vnet/protected/notifications/DRAFT.GB.2023.1088756/traders/final-destination/new" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
-        Create a new delivery address
+
+
+
+
+
+
+
+
+
+
+      
+
+      <a href="#" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
+        Create a new {{ data['addressType'] }}
       </a>
 
         <nav class="pagination" aria-label="Pagination">
           <ul class="pagination-list">
               <li class="pagination-item pagination-item-next">
-                  <a href="?page=2" class="pagination-link" rel="next" id="next-page">
+                  <a href="#" class="pagination-link" rel="next" id="next-page">
                     <span class="pagination-link-title">
                        Next page
                       <svg class="pagination-link-icon" xmlns="https://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
@@ -917,7 +1029,7 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
                       </svg>
                     </span>
                     <span class="govuk-visually-hidden">:</span>
-                    <span class="pagination-link-label">2 of 451</span>
+                    <span class="pagination-link-label">2 of 4000</span>
                   </a>
               </li>
           </ul>
@@ -926,5 +1038,4 @@ Accompanying Documents – {{ serviceName }} – GOV.UK Prototype Kit
     </div>
   </div>
 </main>
-
 {% endblock %}
