@@ -19,324 +19,268 @@ Notifcation hub – {{ serviceName }} – GOV.UK Prototype Kit
 </div>
 
 <main class="govuk-main-wrapper" id="main-content">
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row" id="hub-page">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl " id="page-primary-title">
-        Notification Hub</h1>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Notification Hub</h1>
+
 
       <p class="govuk-body govuk-!-margin-bottom-8">
         These sections can be completed in any order. You can save your progress and return at any time.
       </p>
 
-      <form action="overview-p" method="POST">
+      <h2 class="govuk-heading-m">About the consignment</h2>
+      <ul class="govuk-task-list">
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="01-03-origin-of-import" aria-describedby="origin-of-import" id="origin-of-the-import">
+              Origin of the import
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag " id="origin-of-import">
+              Started
+            </strong>
+          </div>
+        </li>
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="01-04a-reason-for-importing-{{ data['conform-uk-regulations'] or 'cg'}}" aria-describedby="consignment-purpose" id="purpose-of-consignment">
+                Main reason for importing the consignment
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag " id="consignment-purpose">
+              Started
+            </strong>
+          </div>
+        </li>
+      </ul>
 
-        <div class="table-responsive">
-          <table class="govuk-table govuk-!-margin-bottom-8" id="prerequisites-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              About the consignment
-            </caption>
-            <tbody>
-            <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="01-03-origin-of-import" class="govuk-link" id="origin-of-the-import">
-                  Origin of the import
+      <h2 class="govuk-heading-m">Description of the goods</h2>
+      <ul class="govuk-task-list">
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="02-06-commodity-add-packaging" id="commodity-details-link" aria-describedby="commodity">
+              Commodity
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag " id="commodity">
+              Started
+            </strong>
+          </div>
+        </li>
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="02-07-additional-details" aria-describedby="additional-details">
+              Additional details
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag " id="additional-details">
+              Started
+            </strong>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Document</h2>
+      <ul class="govuk-task-list">
+
+        <!-- if there is wild caught fish - add catch certificates - note that the iuu folder doesn't have the wholde journey -->
+       <!-- <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="iuu/09-iuu-docs" aria-describedby="documents">
+              Catch certificates
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag " id="documents">
+              Started
+            </strong>
+          </div>
+        </li> -->
+
+        {% if (data['risk-category'] != "low") %}
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="03-02-latest-health-cert" aria-describedby="latest-health-cert-status">
+                Latest health certificate
+              </a>
+            </div>
+            <div class="govuk-task-list__status">
+              <strong class="govuk-tag phase-tag " id="latest-health-cert-status">
+                Started
+              </strong>
+            </div>
+          </li>
+          {% endif %}
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="03-03-accompanying-documents" aria-describedby="documents">
+              Accompanying documents
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag " id="documents">
+              Started
+            </strong>
+          </div>
+        </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="03-04-approved-establishment" aria-describedby="establishment-of-origin">
+                Approved establishment of origin (where required)
+              </a>
+            </div>
+            <div class="govuk-task-list__status">
+              <strong class="govuk-tag phase-tag govuk-tag--grey" id="establishment-of-origin">
+                To do
+              </strong>
+            </div>
+          </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Traders</h2>
+      <ul class="govuk-task-list">
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="04-01-addresses" aria-describedby="traders">
+                Addresses
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag " id="traders">
+              Started
+            </strong>
+          </div>
+        </li>
+      </ul>
+
+
+        <h2 class="govuk-heading-m">Transport</h2>
+        <ul class="govuk-task-list">
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="05-01-transport-port-of-entry" aria-describedby="transport-before-bip">
+                  Transport to the port of entry
                 </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag " id="origin-of-import">
-                  STARTED
+              </div>
+              <div class="govuk-task-list__status">
+                <strong class="govuk-tag phase-tag " id="transport-before-bip">
+                  Started
                 </strong>
-              </td>
-            </tr>
-            <tr>
-              <td class="govuk-table__cell" id="purpose-of-consignment">
-                <a href="01-04a-reason-for-importing-{{ data['conform-uk-regulations'] or 'cg'}} " class="govuk-link">
-                  Main reason for importing the consignment
-                </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag " id="consignment-purpose">
-                  STARTED
-                </strong>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-responsive">
-          <table class="govuk-table govuk-!-margin-bottom-8" id="consignment-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              Description of the goods
-            </caption>
-            <tbody>
-            <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="02-06-commodity-add-packaging" class="govuk-link" id="commodity-details-link">
-                  Commodity
-                </a>
-              </td>
-
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-          
-            <tr>
-              <td class="govuk-table__cell">
-                <a href="02-07-additional-details" class="govuk-link">
-                  Additional details
-                </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-          
-    
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-responsive">
-          <table class="govuk-table govuk-!-margin-bottom-8" id="documents-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              Documents
-            </caption>
-            <tbody>
-            {% if (data['risk-category'] != "low") %}
-            <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="03-02-latest-health-cert" class="govuk-link">
-                  Latest health certificate
-                </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-            {% endif %}
-            <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="03-03-accompanying-documents" class="govuk-link">
-                  Accompanying documents
-                </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-
-            <!-- <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="09-catch-certificates" class="govuk-link" id="commodity-details-link">
-                  Catch certificates
-                </a>
-              </td>
-
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr> -->
-
-            <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="03-04-approved-establishment" class="govuk-link">
-                  Approved establishment of origin (where required)
-                </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-
-      
-
-
-        <div class="table-responsive">
-          <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              Traders
-            </caption>
-            <tbody>
-            <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="04-01-addresses" class="govuk-link">
-                  Addresses
-                </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-responsive">
-          <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              Transport
-            </caption>
-            <tbody>
-              <tr>
-                <td class="govuk-table__cell">
-                  <a href="05-01-transport-port-of-entry" class="govuk-link">
-                    Transport to the port of entry
+              </div>
+            </li>
+              <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                <div class="govuk-task-list__name-and-hint">
+                  <a class="govuk-link govuk-task-list__link" href="05-02-transport-after-bcp" aria-describedby="transport-details">
+                    Transport after the Border Control Post (BCP)
                   </a>
-                </td>
-                <td class="govuk-table__cell badge-right">
-                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                    TO DO
+                </div>
+                <div class="govuk-task-list__status">
+                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="transport-details">
+                    To do
                   </strong>
-                </td>
-              </tr>
-                <tr class="table__row--border-top">
-                <td class="govuk-table__cell">
-                  <a href="05-02-transport-after-bcp" class="govuk-link">
-                    Transport after the Border Control Post (BCP) 
-                  </a> 
-                </td>
-                <td class="govuk-table__cell badge-right">
-                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                    TO DO
-                  </strong>
-                </td>
-              </tr>
-              <tr class="table__row--border-top">
-                <td class="govuk-table__cell">
-                  <a href="05-03-goods-movement-services" class="govuk-link">
-                    Goods movement services 
-                  </a> 
-                </td>
-                <td class="govuk-table__cell badge-right">
-                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                    TO DO
-                  </strong>
-                </td>
-              </tr>
-              <tr class="table__row--border-top">
-                <td class="govuk-table__cell">
-                  <a href="05-04-transporter" class="govuk-link">
-                    Transporter 
+                </div>
+              </li>
+              <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                <div class="govuk-task-list__name-and-hint">
+                  <a class="govuk-link govuk-task-list__link" href="05-03-goods-movement-services" aria-describedby="goods-movement-services">
+                    Goods movement services
                   </a>
-                </td>
-                <td class="govuk-table__cell badge-right">
-                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                    TO DO
+                </div>
+                <div class="govuk-task-list__status">
+                  <strong class="govuk-tag phase-tag " id="goods-movement-services">
+                    Started
                   </strong>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                </div>
+              </li>
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                  <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="05-04-transporter" aria-describedby="transport-after-bip">
+                      Transporter
+                    </a>
+                  </div>
+                  <div class="govuk-task-list__status">
+                    <strong class="govuk-tag phase-tag govuk-tag--grey" id="transport-after-bip">
+                      To do
+                    </strong>
+                  </div>
+                </li>
+        </ul>
 
-        <div class="table-responsive">
-          <table class="govuk-table govuk-!-margin-bottom-8" id="traders-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              Contact
-            </caption>
-            <tbody>
-              <tr>
-                <td class="govuk-table__cell">
-                  <a href="06-01-contact-details.html" class="govuk-link">
-                    Contact details
-                  </a>
-                </td>
-                <td class="govuk-table__cell badge-right">
-                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                    TO DO
-                  </strong>
-                </td>
-              </tr>
-                <tr class="table__row--border-top">
-                <td class="govuk-table__cell">
-                  <a href="06-02-nominated-contacts" class="govuk-link">
-                    Nominated contacts (optional)
-                  </a> 
-                </td>
-                <td class="govuk-table__cell badge-right">
-                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                    TO DO
-                  </strong>
-                </td>
-              </tr>
-              <tr class="table__row--border-top">
-                <td class="govuk-table__cell">
-                  <a href="06-03-contact-address" class="govuk-link">
-                    Contact address for consignment
-                  </a>
-                </td>
-                <td class="govuk-table__cell badge-right">
-                  <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                    TO DO
-                  </strong>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="table-responsive">
-          <table class="govuk-table govuk-!-margin-bottom-8" id="billing-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              Billing
-            </caption>
-            <tbody>
-            <tr class="table__row--border-top">
-              <td class="govuk-table__cell">
-                <a href="07-01-billing-details" class="govuk-link" id="billing-details-link">
-                  Billing details
+        <h2 class="govuk-heading-m">
+            Contact
+        </h2>
+        
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="06-01-contact-details" aria-describedby="responsible-person-contact-details">
+                Contact details
+              </a>
+            </div>
+            <div class="govuk-task-list__status">
+              <strong class="govuk-tag phase-tag " id="responsible-person-contact-details">
+                Started
+              </strong>
+            </div>
+          </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="06-02-nominated-contacts" aria-describedby="nominated-contacts-complete-notification">
+                  Nominated contacts (optional)
                 </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="billing-details">
-                  TO DO
+              </div>
+              <div class="govuk-task-list__status">
+                <strong class="govuk-tag phase-tag govuk-tag--grey" id="nominated-contacts-complete-notification">
+                  To do
                 </strong>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="table-responsive">
-          <table class="govuk-table" id="review-table" role="presentation">
-            <caption class="govuk-table__caption govuk-heading-m">
-              Complete notification
-            </caption>
-            <tbody class="table__row--border-top">
-            
-            <tr>
-              <td class="govuk-table__cell">
-                <a href="08-01-review" class="govuk-link" id="review-link">
-                  Review and submit
-                </a>
-              </td>
-              <td class="govuk-table__cell badge-right">
-                <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
-                  TO DO
-                </strong>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </form>
+              </div>
+            </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="06-03-contact-address" aria-describedby="branch-address" id="organisation-branch-address">
+                Contact address for consignment
+              </a>
+            </div>
+            <div class="govuk-task-list__status">
+              <strong class="govuk-tag phase-tag " id="branch-address">
+                Started
+              </strong>
+            </div>
+          </li>
+        </ul>
+
+
+      <h2 class="govuk-heading-m">Complete notification</h2>
+      <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-task-list__link" href="07-01-billing-details" aria-describedby="details-of-billing" id="billing-details">
+                Billing details
+              </a>
+            </div>
+            <div class="govuk-task-list__status">
+              <strong class="govuk-tag phase-tag " id="details-of-billing">
+                Started
+              </strong>
+            </div>
+          </li>
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="08-01-review" aria-describedby="review" id="review-link">
+              Review and submit
+            </a>
+          </div>
+          <div class="govuk-task-list__status">
+            <strong class="govuk-tag phase-tag govuk-tag--grey" id="review">
+              To do
+            </strong>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </main>
