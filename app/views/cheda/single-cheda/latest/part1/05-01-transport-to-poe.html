@@ -27,7 +27,7 @@ GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="bip-for-transport-page">
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl" id="page-secondary-title">Transport</span>
-      <h1 class="govuk-heading-xl " id="page-primary-title">Transport to the port of entry</h1>
+      <h1 class="govuk-heading-xl " id="page-primary-title">Transport to the port of entry or BCP</h1>
 
       <form action="means-of-transport" method="post">
         <input name="crumb" type="hidden" value="rRvl8RBppH2ycmf0gXLXGeHAauhhv0ztAysA0pUak_N">
@@ -41,7 +41,7 @@ GOV.UK Prototype Kit
 
 
           <label class="govuk-label govuk-label--m" for="transport-poe">
-            Port of entry
+            Port of entry or BCP
           </label>
 
 
@@ -80,7 +80,7 @@ GOV.UK Prototype Kit
         <script src="/public/javascripts/transport_to_bip_poe.js?v=1.0.3238"></script>
 
         <h2 class="govuk-heading-m heading-with-help govuk-!-margin-top-0">
-          Means of transport to port of entry
+          Means of transport to port of entry or BCP
         </h2>
         <div class="govuk-form-group  ">
           <label class="govuk-label govuk-label--s" for="transport-means-before">
@@ -214,7 +214,7 @@ GOV.UK Prototype Kit
         </div>
 
         <div class="" id="estimated-arrival-at-bcp">
-          <h2 class="govuk-heading-m">Arrival date at port of entry</h2>
+          <h2 class="govuk-heading-m">Arrival date at port of entry or BCP</h2>
           <div class="govuk-form-group ">
             <fieldset class="govuk-fieldset">
               <legend class="hidden govuk-visually-hidden">Date entry:</legend>
@@ -259,47 +259,32 @@ GOV.UK Prototype Kit
           </div>
         </div>
 
-        <div class="govuk-form-group ">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Estimated total journey time of the animals
-            </legend>
-
-            <span id="document-hint" class="govuk-hint govuk-!-width-two-thirds">Total journey time is from loading the animals in the country of origin to the final place of destination. This includes all rest time.</span>
-
-
-            <div class="govuk-date-input date-input-width" id="estimated-journey-time">
-              <!-- 
-              <div class="govuk-date-input__item date-input-day">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-days">Days</label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                    id="estimated-journey-time-days" name="estimated-journey-time-days" type="text" inputmode="numeric"
-                    value="">
+        <div class="govuk-heading-m">Arrival time at port of entry or BCP</div>
+          <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset">
+              <legend class="hidden govuk-visually-hidden">Time entry:</legend>
+              <span class="govuk-hint">24 hour format, for example, 14 50</span>
+        
+              <div class="govuk-date-input" id="departure-time">
+                <div class="govuk-date-input__item date-input-hour">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="departure-time-hour">
+                      Hour
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="departure-time-hour" name="departure-time-hour" type="text" maxlength="2" inputmode="numeric" value="{{ data['departure-time-hour'] }}">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item date-input-minute">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="departure-time-minutes">
+                      Minutes
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="departure-time-minutes" name="departure-time-minutes" type="text" maxlength="2" inputmode="numeric" value="{{ data['departure-time-minutes'] }}">
+                  </div>
                 </div>
               </div>
-              -->
-
-              <div class="govuk-date-input__item date-input-hour">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-hours">Hours</label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                    id="estimated-journey-time-hours" name="estimated-journey-time-hours" type="text"
-                    inputmode="numeric" value="{{ data['estimated-journey-time-hours'] }}">
-                </div>
-              </div>
-
-              <!-- 
-            <div class="govuk-date-input__item date-input-minute">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="estimated-journey-time-minutes">Minutes</label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="estimated-journey-time-minutes" name="estimated-journey-time-minutes" type="text" inputmode="numeric" value="">
-              </div>
-            </div>
+            </fieldset>
           </div>
-          -->
-          </fieldset>
-        </div>
 
         {% if data['from-page'] == "review" %}
         <input class="govuk-button govuk-!-margin-right-1 govuk-!-margin-bottom-4" id="button-save-and-review" name="button-save-and-review" type="submit" value="Save and review" data-module="govuk-button" formaction="08-01-review">
