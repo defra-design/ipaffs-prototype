@@ -14,7 +14,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-!-padding-top-6">
   <span class="heading-tertiary">
       <span id="reference-number">DRAFT.GB.2023.5925980</span>
-          <span> - CHEDP</span>
+          <span> - CHEDPP</span>
   </span>
 </div>
 
@@ -23,14 +23,15 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="search-economic-operators-page">
     <div class="govuk-grid-column-full">
           <span class="govuk-caption-xl">Traders</span>
-          <h1 class="govuk-heading-xl" id="page-primary-title">Add a{{ data['addressType'] }}</h1>
+          <h1 class="govuk-heading-xl" id="page-primary-title">Search for an existing {{ data['addressType'] }}</h1>
+          {{ data | log }}
       <!-- <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1> -->
       <form class="govuk-!-margin-bottom-6" action="search" method="GET">
 
         <div class="form-group search-panel">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Search for an existing {{ data['addressType'] }}
+              Search 
             </legend>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
@@ -330,25 +331,16 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
       </form>
 
       <form action="04-01-addresses" method="POST">
-        <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
-        <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
+        
         <!-- <input name="14a-address-search" type="hidden" value="visited">  -->
-        {% if (data['addressType'] == " n importer") %}
-        <input name="importer-page" type="hidden" value="yes"> 
-        {% else %}
-        {% endif %}
+        {% if (data['addressType'] == "consignor or exporter") %}
+        <input type="hidden" name="consignor-page" value="yes">
 
-        {% if (data['addressType'] == " packer") %}
-        <input name="packer-page" type="hidden" value="yes"> 
-        {% else %}
-        {% endif %}
-        {% if (data['addressType'] == " delivery address") %}
-         <input name="delivery-address--page" type="hidden" value="yes"> 
-        {% else %}
-        {% endif %}
-        {% if (data['addressType'] == " consignor or exporter") %}
-       <input name="consignor-page" type="hidden" value="yes"> 
-       {% else %}
+        {% elseif (data['addressType'] == "packer") %}
+        <input type="hidden" name="packer-page" value="yes">
+      
+        {% elseif (data['addressType'] == "delivery address") %}
+        <input type="hidden" name="delivery-address-page" value="yes">
         {% endif %}
 
 
@@ -374,13 +366,13 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
             <tbody>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    ARConsignor
+                    Plant Imports Direct
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    ARAddressLine1, ARCity, AR12345
+                    213 Woodham Lane, New Haw, Addlestone, KT15 3NB
                   </td>
                   <td class="govuk-table__cell">
-                    Argentina
+                    United Kingdom of Great Britain and Northern Ireland
                   </td>
                   <td class="govuk-table__cell">
                     New
@@ -399,13 +391,13 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    UKConsignor
+                    Maddyr packers
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    UKAddressLine1, UKCity, UK12345
+                    5 Rue Léon Blum, Lille, 59800
                   </td>
                   <td class="govuk-table__cell">
-                    United Kingdom of Great Britain and Northern Ireland
+                    France
                   </td>
                   <td class="govuk-table__cell">
                     New
@@ -424,13 +416,13 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    ARConsignor
+                    Fresh markets
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    ARAddressLine1, ARCity, AR12345
+                    46 Market Lane, Guildford, Surrey, GU9 3NB
                   </td>
                   <td class="govuk-table__cell">
-                    Argentina
+                    United Kingdom of Great Britain and Northern Ireland
                   </td>
                   <td class="govuk-table__cell">
                     New
@@ -449,13 +441,13 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tr>
               <tr>
                   <td class="govuk-table__cell economic-operator-name">
-                    VIConsignor
+                    Maddyr exports
                   </td>
                   <td class="govuk-table__cell economic-operator-address">
-                    VIAddressLine1, VICity, VI12345
+                    5 Rue Léon Blum, Lille, 59800
                   </td>
                   <td class="govuk-table__cell">
-                    Virgin Islands of the United States
+                    France
                   </td>
                   <td class="govuk-table__cell">
                     New

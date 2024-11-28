@@ -22,10 +22,9 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl">Traders</span>
       <h1 class="govuk-heading-xl " id="page-primary-title">Importer, Packer, Delivery address and Consignor</h1>
-
+      {{ data | log }}
       <form action="04-01-addresses" method="POST">
-        <input name="crumb" type="hidden" value="MKlgX3kJ5bPIPG6HyHA6BPjwAtohTtCDBMSiNd7pnoF">
-        <input name="etag" type="hidden" value="&quot;00000000001C247F&quot;">
+        
         <input name="14-addresses" type="hidden" value="visited">
 
         <div class="govuk-!-margin-bottom-8">
@@ -48,10 +47,10 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               <tbody>
                   <tr>
                       <td class="govuk-table__cell col-name" headers="importer-name">
-                        Defra Test BIP
+                        Plant Imports Direct
                       </td>
                       <td class="govuk-table__cell col-address" headers="importer-address">
-                        Animal and Plant Health Agency, Woodham Lane, New Haw, Addlestone, KT15 3NB
+                        213 Woodham Lane, New Haw, Addlestone, KT15 3NB
                       </td>
                         <td class="govuk-table__cell col-country" headers="importer-country">
                           United Kingdom of Great Britain and Northern Ireland
@@ -65,7 +64,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         
         </div>
 
-        <div class="govuk-!-margin-bottom-8">
+        <!-- <div class="govuk-!-margin-bottom-8" id="packer">
           <h2 class="govuk-heading-m">
             Packer (optional)
           </h2>
@@ -94,9 +93,9 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
         
             <a href="04-02d-packer" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a packer (optional) </a>
-        </div>
+        </div> -->
 
-        <div class="govuk-!-margin-bottom-8">
+        <!-- <div class="govuk-!-margin-bottom-8" id="delivery">
           <h2 class="govuk-heading-m">
             Delivery address 
           </h2>
@@ -126,14 +125,47 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           
       
             <a href="04-02b-delivery-address" class="govuk-link govuk-!-font-size-19" id="add-place-of-destination">Add a delivery address </a>
-        </div>
+        </div> -->
 
-        <div class="govuk-!-margin-bottom-8">
+        <div class="govuk-!-margin-bottom-8" id="packer">
           <h2 class="govuk-heading-m">
-            Consignor or exporter 
+            Packer (optional)
           </h2>
+          {% if (data['packer-page'] == "yes") %}
           <p class="govuk-hint"></p>
-          <div class="table-responsive">
+          <div class="table-responsive" id="p-address-added">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                  <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignor-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignor-name">
+                    Maddyr packers
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignor-address">
+                    5 Rue Léon Blum, Lille, 59800
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignor-country">
+                    France
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                    <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Change</a>
+                    <a href="04-01-addresses?packer-page=no" class="govuk-link" id="edit-consignor">Remove</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>  
+          {% else %}
+          <div class="table-responsive" id="p-address-blank">
             <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
               <thead class="govuk-table__head">
                 <tr>
@@ -155,8 +187,182 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
               </tbody>
             </table>
           </div>
-        
-            <a href="04-02c-consignor-exporter" class="govuk-link govuk-!-font-size-19" id="add-consignor">Add a consignor or exporter </a>
+          <a href="04-02-address-search?addressType=packer" class="govuk-link" id="edit-packer">Add a packer (optional)</a>
+          {% endif %}
+        </div>
+
+
+        <div class="govuk-!-margin-bottom-8" id="delivery-address-heading">
+          <h2 class="govuk-heading-m">
+            Delivery address
+          </h2>
+          
+          {% if (data['delivery-address-importer'] != "yes") and (data['delivery-address-page'] == "yes") %}
+          <!-- When not the same as importer -->
+          <p class="govuk-hint"></p>
+          <div class="table-responsive" id="d-address-added">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                  <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignor-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignor-name">
+                    Fresh markets
+                  </td>
+                 
+                  <td class="govuk-table__cell col-address" headers="importer-address">
+                    46 Market Lane, Guildford, Surrey, GU9 3NB
+                  </td>
+                    <td class="govuk-table__cell col-country" headers="importer-country">
+                      United Kingdom of Great Britain and Northern Ireland
+                    </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                   
+                     &nbsp; <a href="04-02-address-search?addressType=delivery%20address&delivery-address-importer=no" class="govuk-link" id="edit-consignor">Change</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="04-01-addresses?delivery-address-importer=yes&delivery-address-page=no#delivery-address-heading" class="govuk-link" id="edit-consignor">Same as consignee</a>
+          </div> 
+          {% elseif (data['delivery-address-importer'] == "yes") %}
+                    <!-- When the same as importer -->
+          <div class="table-responsive" id="d-address-added">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                  <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignor-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignor-name">
+                    Plant Imports Direct
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="importer-address">
+                    213 Woodham Lane, New Haw, Addlestone, KT15 3NB
+                  </td>
+                    <td class="govuk-table__cell col-country" headers="importer-country">
+                      United Kingdom of Great Britain and Northern Ireland
+                    </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                    
+                      <a href="04-02-address-search?delivery-address-importer=no&delivery-address-page=yes" class="govuk-link" id="edit-consignor">Change</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div> 
+          {% else %}
+          <div class="table-responsive" id="d-address-blank">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                    <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignor-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="govuk-table__cell" headers="consignor-name">&nbsp;</td>
+                      <td class="govuk-table__cell" headers="consignor-address"></td>
+                      <td class="govuk-table__cell" headers="consignor-country"></td>
+                      <td class="govuk-table__cell" headers="consignor-edit"></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <a href="04-01-addresses?delivery-address-importer=yes#delivery-address-heading" class="govuk-link" id="edit-consignor">Same as consignee</a>
+          &nbsp; <a href="04-02-address-search?addressType=delivery%20address" class="govuk-link" id="edit-packer">Add a delivery address</a>
+          {% endif %}
+
+
+ 
+
+        </div>
+      
+      
+      
+      
+        <div class="govuk-!-margin-bottom-8" id="consignor">
+          <h2 class="govuk-heading-m">
+            Consignor or exporter 
+          </h2>
+          {% if (data['consignor-page'] == "yes") %}
+          <p class="govuk-hint"></p>
+          <div class="table-responsive" id="c-address-added">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                  <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignor-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="govuk-table__cell col-name" headers="consignor-name">
+                    Maddyr exports
+                  </td>
+                  <td class="govuk-table__cell col-address" headers="consignor-address">
+                    5 Rue Léon Blum, Lille, 59800
+                  </td>
+                  <td class="govuk-table__cell col-country" headers="consignor-country">
+                    France
+                  </td>
+                  <td class="govuk-table__cell col-edit text-align-right" headers="consignor-edit">
+                    <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Change</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>  
+          {% else %}
+          <div class="table-responsive" id="c-address-blank">
+            <table class="govuk-table govuk-!-margin-bottom-2 trader-table" id="traders-table-consignor">
+              <thead class="govuk-table__head">
+                <tr>
+                  <th class="govuk-table__header col-name" id="consignor-name">Name</th>
+                  <th class="govuk-table__header col-address" id="consignor-address">Address</th>
+                    <th class="govuk-table__header col-country" id="consignor-country">Country</th>
+                  <th class="govuk-table__header col-edit" id="consignor-edit">
+                    <span class="govuk-visually-hidden">Change link</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="govuk-table__cell" headers="consignor-name">&nbsp;</td>
+                      <td class="govuk-table__cell" headers="consignor-address"></td>
+                      <td class="govuk-table__cell" headers="consignor-country"></td>
+                      <td class="govuk-table__cell" headers="consignor-edit"></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="04-02-address-search?addressType=consignor%20or%20exporter" class="govuk-link" id="edit-consignor">Add a consignor or exporter</a>
+          {% endif %}
         </div>
 
         </form>
