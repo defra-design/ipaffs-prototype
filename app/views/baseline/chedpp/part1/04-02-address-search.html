@@ -14,7 +14,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-!-padding-top-6">
   <span class="heading-tertiary">
       <span id="reference-number">DRAFT.GB.2023.5925980</span>
-          <span> - CHEDP</span>
+          <span> - CHEDPP</span>
   </span>
 </div>
 
@@ -23,7 +23,7 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-row" id="search-economic-operators-page">
     <div class="govuk-grid-column-full">
           <span class="govuk-caption-xl">Traders</span>
-          <h1 class="govuk-heading-xl" id="page-primary-title">Add a{{ data['addressType'] }}</h1>
+          <h1 class="govuk-heading-xl" id="page-primary-title">Search for an existing{{ data['addressType'] }}</h1>
       <!-- <h1 class="govuk-heading-xl " id="page-primary-title">Search for an existing consignor or exporter</h1> -->
       <form class="govuk-!-margin-bottom-6" action="search" method="GET">
 
@@ -333,8 +333,8 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="crumb" type="hidden" value="-VfPSPY-Pz0oCb_HSCcMy0a4M0WJEPpREBWYA3EGjci">
         <input name="etag" type="hidden" value="&quot;0000000004C8AA25&quot;">
         <!-- <input name="14a-address-search" type="hidden" value="visited">  -->
-        {% if (data['addressType'] == " n importer") %}
-        <input name="importer-page" type="hidden" value="yes"> 
+        {% if (data['addressType'] == " importer") %}
+        <input name="impoter-page" type="hidden" value="yes"> 
         {% else %}
         {% endif %}
 
@@ -342,17 +342,14 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
         <input name="packer-page" type="hidden" value="yes"> 
         {% else %}
         {% endif %}
-        {% if (data['addressType'] == " delivery address") %}
-         <input name="delivery-address--page" type="hidden" value="yes"> 
+        {% if (data['addressType'] == "delivery address") %}
+         <input name="deliver-address-page" type="hidden" value="yes"> 
         {% else %}
         {% endif %}
         {% if (data['addressType'] == " consignor or exporter") %}
-       <input name="consignor-page" type="hidden" value="yes"> 
+       <input name="consingor-page" type="hidden" value="yes"> 
        {% else %}
         {% endif %}
-
-
-
 
         <div class="table-responsive">
           <table class="govuk-table traders-search-results" id="Table-SearchResults">
@@ -1001,18 +998,6 @@ Addresses – {{ serviceName }} – GOV.UK Prototype Kit
           </table>
         </div>
       </form>
-
-
-
-
-
-
-
-
-
-
-
-      
 
       <a href="#" class="govuk-link govuk-!-font-size-19" id="add-economic-operator">
         Create a new {{ data['addressType'] }}
