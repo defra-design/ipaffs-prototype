@@ -141,7 +141,7 @@ GOV.UK Prototype Kit
               </td>
             </tr>
             <tr class="presentation-table__section">
-              <th scope="row" class="govuk-table__header">Customs declaration reference</th>
+              <th scope="row" class="govuk-table__header">Reference for customs declaration</th>
               <td class="govuk-table__cell" id="reference-number-customs">GBCHD2024.5501422</td>
               <td class="govuk-table__cell change">
                 <button data-prevent-double-click="true" type="submit" id="copy-customs-declaration-reference-number"
@@ -925,7 +925,7 @@ GOV.UK Prototype Kit
 
       <h2 class="govuk-heading-l">Transport</h2>
       <div class="heading-with-change-link">
-        <h3 class="govuk-heading-m">Transport to the port of entry</h3>
+        <h3 class="govuk-heading-m">Transport to the BCP or Port of entry</h3>
         <a href="05-01-transport-to-poe?from-page=review" class="govuk-link" id="transport-to-bip-change-link">
           Change
         </a>
@@ -936,11 +936,11 @@ GOV.UK Prototype Kit
           <caption class="govuk-visually-hidden">Summary of transport to border control post</caption>
           <tbody>
             <tr class="">
-              <th scope="row" class="govuk-table__header">Port of entry</th>
+              <th scope="row" class="govuk-table__header">BCP or Port of entry</th>
               <td class="govuk-table__cell">{{ data['bcp'] or "HEATHROW (GBLHR)" }}</td>
             </tr>
             <tr class="">
-              <th scope="row" class="govuk-table__header">Means of transport to port of entry</th>
+              <th scope="row" class="govuk-table__header">Means of transport to BCP or Port of entry</th>
               <td class="govuk-table__cell">{{ data['transport-means-before'] or "Airplane" }}</td>
             </tr>
             <tr class="">
@@ -968,7 +968,7 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">{{ data['document-reference'] or "Air waybill N-CVB-098" }}</td>
             </tr>
             <tr class="">
-              <th scope="row" class="govuk-table__header">Estimated arrival date at port of entry</th>
+              <th scope="row" class="govuk-table__header">Estimated arrival date at BCP or Port of entry</th>
               <td class="govuk-table__cell">24 July 2024</td>
             </tr>
             <!-- <tr class="">
@@ -976,11 +976,8 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell">11:00</td>
             </tr> -->
             <tr>
-              <th scope="row" class="govuk-table__header">Estimated total journey time of the animals</th>
-              <td class="govuk-table__cell">
-                <!-- {{ data['estimated-journey-time-days'] }} days -->
-                {{ data['estimated-journey-time-hours'] or "48" }} hrs
-              </td>
+              <th scope="row" class="govuk-table__header">Estimated arrival time at BCP</th>
+              <td class="govuk-table__cell">{{ data['departure-time-hour'] or "15" }}:{{ data['departure-time-minutes'] or "00" }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
           </tbody>
@@ -988,7 +985,7 @@ GOV.UK Prototype Kit
       </div>
 
       <div class="heading-with-change-link">
-        <h3 class="govuk-heading-m">Transport after the port of entry</h3>
+        <h3 class="govuk-heading-m">Transport after the BCP or Port of entry</h3>
         <a href="05-02-transport-after-poe?from-page=review" class="govuk-link"
           id="transport-details-change-link">Change</a>
       </div>
@@ -997,7 +994,7 @@ GOV.UK Prototype Kit
           aria-describedby="Transport after the port of entry">
           <tbody>
             <tr class=" presentation-table__section">
-              <th scope="row" class="govuk-table__header">Means of transport after port of entry
+              <th scope="row" class="govuk-table__header">Means of transport after BCP or Port of entry
               </th>
               <td>{{ data['transport-means-after'] or "Road vehicle" }}</td>
               <td class="change">
@@ -1014,12 +1011,12 @@ GOV.UK Prototype Kit
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
-              <th scope="row" class="govuk-table__header">Departure date from port of entry</th>
+              <th scope="row" class="govuk-table__header">Departure date from BCP or Port of entry</th>
               <td class="govuk-table__cell">24 July 2024</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr>
-              <th scope="row" class="govuk-table__header">Departure time from port of entry</th>
+              <th scope="row" class="govuk-table__header">Departure time from BCP or Port of entry</th>
               <td class="govuk-table__cell">{{ data['departure-time-hour'] or "15" }}:{{ data['departure-time-minutes']
                 or "00" }}</td>
               <td class="govuk-table__cell"></td>
