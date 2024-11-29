@@ -1,0 +1,499 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index">IPAFFS prototypes</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../start">Confirmation screens</a>
+        </li>
+       
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    
+    <h1 class="govuk-heading-xl">Confirmation Screens</h1>
+    
+    <div class="govuk-!-margin-bottom-4 govuk-!-padding-4 govuk-!-width-one-third" style="background-color: #f6f6f6;">
+          
+      <p>November 2024</p>
+      
+      <p><a href="https://app.mural.co/t/kainossoftware4412/m/kainossoftware4412/1726154895293/1b50593481d027546a8679e0719da56931a452d9" target="_blank">Mural board flow</a></p>
+    </div>
+
+
+    <h2 class="govuk-heading-l">CHED P</h2>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED P Transits (AKA Landbridge): Confirmation screens and Emails</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Scenarios</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">GVMS & <br>Non GVMS</th> 
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry <br>inspections</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit inspections</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry inspections override</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit inspections override</th> 
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection not required<br>
+            Exit inspection not required</td>
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/1-submitted-entry-no-exit-no">Confirmation</a></td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-now-required">Email</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection required<br>
+            Exit inspection not required</td>
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/2-submitted-entry-yes-exit-no">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-now-required">Email</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection not required<br>
+          Exit inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/3-submitted-entry-no-exit-yes">Confirmation</a></td>
+          <td class="govuk-table__cell">N/A</td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-no-longer-required">Email</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection required<br>
+            Exit inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/2-chedp-transit/2-non-gvms/4-submitted-entry-yes-exit-yes">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-exit-seal-check-override-no-longer-required">Email</a></td>
+        </tr>
+        
+       
+      </tbody>
+    </table>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED P Transits (AKA Landbridge): SMS</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Scenarios</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry <br>inspections</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit <br>inspections</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Entry inspections override</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Exit inspections override</th> 
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection not required<br>
+            Exit inspection not required</td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-exit-seal-no-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection required<br>
+            Exit inspection not required</td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-no-required">SMS</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-exit-seal-no-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection not required<br>
+          Exit inspection required</td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-exit-seal-override-no-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            Entry inspection required<br>
+            Exit inspection required</td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-no-required">SMS</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-exit-seal-override-no-required">SMS</a></td>
+        </tr>
+        
+       
+      </tbody>
+    </table>
+
+   
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED P (Non-transit) : Confirmation screens, Emails & SMS</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Initial screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Override screens</th>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">GVMS</th>
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+        </tr>
+        
+
+        
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes & CTC No</td>
+          <td class="govuk-table__cell"><a href="confirmation/1-chedp-non-transit/1-gvms/1-check-gvms-ched-d-p">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+  
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes & CTC Yes <br> No inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/1-chedp-non-transit/2-non-gvms/1-no-inspection">No inspection</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes & CTC Yes <br> Inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/1-chedp-non-transit/2-non-gvms/2-inspection-required">Yes inspection</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-no-required">SMS</a></td>
+        </tr>
+      </tbody>
+
+
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Non GVMS</th>
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+         
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+        </tr>
+        
+
+        
+      </thead>
+      <tbody class="govuk-table__body">
+      
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS No & CTC Yes/No <br> No inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/1-chedp-non-transit/2-non-gvms/1-no-inspection">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS No & CTC Yes/No <br>Inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/1-chedp-non-transit/2-non-gvms/2-inspection-required">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-no-required">SMS</a></td>
+        </tr>
+      </tbody>
+    
+    </table>
+
+
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9">CHED D</h2>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED D : Confirmation screens, Emails & SMS</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Initial screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Override screens</th>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">GVMS</th>
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+        </tr>
+        
+
+        
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes & CTC No</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/1-gvms/1-chedd-check-gvms">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+  
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+        </tr>
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes & CTC Yes<br>No inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/1-chedd-no-inspection">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes & CTC Yes<br>Inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/2-chedd-yes-inspection">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-no-required">SMS</a></td>
+        </tr>
+      </tbody>
+
+
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Non GVMS</th>
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+         
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+        </tr>
+        
+
+        
+      </thead>
+      <tbody class="govuk-table__body">
+      
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS No & CTC Yes/No <br>No inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/1-chedd-no-inspection">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS No & CTC Yes/No <br>Inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/2-chedd-yes-inspection">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-no-required">SMS</a></td>
+        </tr>
+      </tbody>
+    
+    </table>
+
+    
+
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9">CHED PP</h2>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED PP : Confirmation, Email and SMS</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Initial screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Override screens</th>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">GVMS/Non GVMS</th>
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+        </tr>
+      </thead>
+    
+     
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes/No & CTC Yes/No <br>No inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/1b-chedpp-no-inspection">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">GVMS Yes/No & CTC Yes/No <br>Inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/2b-chedpp-inspection-required">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-no-longer-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-no-required">SMS</a></td>
+        </tr>
+      </tbody>   
+    </table>
+    
+
+
+  
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9">CHED A</h2>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">CHED A : Confirmation, Email and SMS</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Initial screens</th>
+          <th scope="col" class="govuk-table__header" colspan="3">Override screens</th>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">GVMS</th>
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">No inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/1-gvms/1a-cheda-go-to-place-of-destination">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/1-gvms/2a-cheda-inspection-required">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-override-go-to-place-of-destination">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-override-go-to-place-of-destination">SMS</a></td>
+        </tr>
+      </tbody>
+
+
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-third">Non GVMS</th>
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+         
+          <th scope="col" class="govuk-table__header">Screen</th>
+          <th scope="col" class="govuk-table__header">Email</th>
+          <th scope="col" class="govuk-table__header">SMS</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">No inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/1a-cheda-go-to-place-of-destination">Confirmation</a></td>
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell">n/a</td>
+          
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-override-now-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-override-now-required">SMS</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Inspection required</td>
+          <td class="govuk-table__cell"><a href="confirmation/3-ched-d-a-pp/2-non-gvms/2a-cheda-inspection-required">Confirmation</a></td>
+          <td class="govuk-table__cell"><a href="emails/email-health-inspection-required">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-health-inspection-required">SMS</a></td>
+         
+          <td class="govuk-table__cell">n/a</td>
+          <td class="govuk-table__cell"><a href="emails/email-entry-override-go-to-place-of-destination">Email</a></td>
+          <td class="govuk-table__cell"><a href="sms/sms-entry-override-go-to-place-of-destination">SMS</a></td>
+        </tr>
+      </tbody>   
+    </table>
+   
+  </div>
+    
+  </div>
+
+
+  </div>
+</div>  
+{% endblock %}
