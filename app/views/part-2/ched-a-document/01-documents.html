@@ -97,16 +97,12 @@ Consignment documentary check - Import and export applications - GOV.UK
                 </label>
               </div>
               
-                          <div class="govuk-radios__conditional
-                                        govuk-radios__conditional--hidden
-                                        govuk-!-margin-left-0
-                                        govuk-!-padding-left-3" id="physical-check">
-                <div class="govuk-form-group physical-check-not-done-reason  ">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-!-margin-left-0  govuk-!-padding-left-3" id="physical-check">
+                
+               <div class="govuk-form-group physical-check-not-done-reason  ">
                   <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend ">
-                        <span class="govuk-visually-hidden">Choose from:</span>
-                    </legend>
-                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+               
+                    <!-- <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                       <div class="govuk-form-group">
                         {{ govukCharacterCount({
                           name: "withHint",
@@ -119,10 +115,46 @@ Consignment documentary check - Import and export applications - GOV.UK
                           }
                         }) }}                      
                       </div>
+                    </div> -->
+
+                    <div class="govuk-radios__item sat-physical-check-result">
+                      <input id="sat-physicalCheck1" class="govuk-radios__input" type="radio" name="sat-physical-check-result" value="1">
+                      <label class="govuk-label govuk-radios__label" for="sat-physicalCheck1">Further clarification sought from a private vet in the country of origin.                      </label>
+                    </div>
+                    <div class="govuk-radios__item sat-physical-check-result">
+                      <input id="sat-physicalCheck2" class="govuk-radios__input" type="radio" name="sat-physical-check-result" value="2">
+                      <label class="govuk-label govuk-radios__label" for="sat-physicalCheck2">Replacement health certificate provided.</label>
+                    </div>
+                    <div class="govuk-radios__item sat-physical-check-result">
+                      <input id="sat-physicalCheck3" class="govuk-radios__input" type="radio" name="sat-physical-check-result" value="3">
+                      <label class="govuk-label govuk-radios__label" for="sat-physicalCheck3">Further evidence provided by the responsible person.</label>
+                    </div>
+                    <div class="govuk-radios__item sat-physical-check-result">
+                      <input id="sat-physicalCheck4" class="govuk-radios__input" type="radio" name="sat-physical-check-result" aria-controls="other" value="4">
+                      <label class="govuk-label govuk-radios__label" for="sat-physicalCheck4">Other</label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-!-margin-left-0  govuk-!-padding-left-3" id="other">
+                      
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                        <div class="govuk-form-group">
+                          {{ govukCharacterCount({
+                            name: "withHint",
+                            id: "with-hint",
+                            maxlength: 150,
+                            label: {
+                              text: "Additional details (optional)",
+                              classes: "govuk-label--s",
+                              isPageHeading: true
+                            }
+                          }) }}                      
+                        </div>
+                      </div>
+                    
                     </div>
                   </fieldset>
-                </div>
-                          </div>
+                </div> 
+
+              </div>
               <div class="govuk-radios__item physical-check-result">
                 <input id="physicalCheck1" class="govuk-radios__input" type="radio" name="physical-check-result" value="1">
                 <label class="govuk-label govuk-radios__label" for="physicalCheck1">Not satisfactory</label>
