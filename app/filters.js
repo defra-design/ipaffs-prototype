@@ -8,7 +8,7 @@ module.exports = function (env) {
   var filters = {}
 
   /* ------------------------------------------------------------------
-    add your methods to the filters obj below this comment block:
+    Add your methods to the filters obj below this comment block:
     @example:
 
     filters.sayHi = function(name) {
@@ -18,28 +18,49 @@ module.exports = function (env) {
     Which in your templates would be used as:
 
     {{ 'Paul' | sayHi }} => 'Hi Paul'
+  ------------------------------------------------------------------ */
 
-    Notice the first argument of your filters method is whatever
-    gets 'piped' via '|' to the filter.
+  // Add your twoDaysFromNow filter here
+  filters.mrnTime = function() {
+    try {
+      const today = new Date();
+      // Add 2 days to the current date
+      const twoDaysLater = new Date(today.setDate(today.getDate() - 1));
+      // Subtract 3 hours from the current time
+      twoDaysLater.setHours(twoDaysLater.getHours() - 2);
 
-    Filters can take additional arguments, for example:
+      // Format the date
+      const formattedDate = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }).format(twoDaysLater);
+      // Format the time
+      const formattedTime = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit' }).format(twoDaysLater);
 
-    filters.sayHi = function(name,tone) {
-      return (tone == 'formal' ? 'Greetings' : 'Hi') + ' ' + name + '!'
+      // Combine date and time with a comma
+      return `${formattedDate}, ${formattedTime}`;
+    } catch (error) {
+      return error.message.split(':')[0];
     }
+  };
+  filters.chedTime = function() {
+    try {
+      const today = new Date();
+      // Add 2 days to the current date
+      const twoDaysLater = new Date(today.setDate(today.getDate() - 2));
+      // Subtract 3 hours from the current time
+      twoDaysLater.setHours(twoDaysLater.getHours() - 3);
 
-    Which would be used like this:
+      // Format the date
+      const formattedDate = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }).format(twoDaysLater);
+      // Format the time
+      const formattedTime = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit' }).format(twoDaysLater);
 
-    {{ 'Joel' | sayHi('formal') }} => 'Greetings Joel!'
-    {{ 'Gemma' | sayHi }} => 'Hi Gemma!'
-
-    For more on filters and how to write them see the Nunjucks
-    documentation.
-
-  ------------------------------------------------------------------ */
-
+      // Combine date and time with a comma
+      return `${formattedDate}, ${formattedTime}`;
+    } catch (error) {
+      return error.message.split(':')[0];
+    }
+  };
   /* ------------------------------------------------------------------
-    keep the following line to return your filters to the app
+    Keep the following line to return your filters to the app
   ------------------------------------------------------------------ */
-  return filters
+  return filters;
 }
